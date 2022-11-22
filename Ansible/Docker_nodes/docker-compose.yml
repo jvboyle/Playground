@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  node1:
+    image: ubuntu:latest
+#    ports:
+#      - "8000:80"
+#    volumes:
+#      - ./app:/usr/share/nginx/html
