@@ -1,0 +1,77 @@
+ Error: Resource with id TCP-8443 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-8443"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-9443 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-9443"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-8081 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-8081"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-5986 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-5986"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-122 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-122"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-5985 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-5985"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-6443 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-6443"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-9043 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-9043"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id TCP-50000 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["TCP-50000"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {
+│ 
+╵
+╷
+│ Error: Resource with id BDS-8081 already exists
+│ 
+│   with module.nsxt-tf-cm-svc.nsxt_policy_service.svc["BDS-8081"],
+│   on ../../../../../modules/nsxt/svc-map-svc/main.tf line 10, in resource "nsxt_policy_service" "svc":
+│   10: resource "nsxt_policy_service" "svc" {

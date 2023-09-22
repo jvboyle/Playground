@@ -1,0 +1,15 @@
+services:
+  sshuttle:
+    image: sshuttle-docker-container
+    stdin_open: true # docker run -i
+    network_mode: host
+    tty: true        # docker run -t
+    privileged: true
+    volumes:
+      - type: bind
+        source: $PWD/../
+        target: /SOURCE
+    environment:
+      - USER_ID=jboyle
+    ports:
+      - 41194

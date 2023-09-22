@@ -1,0 +1,17 @@
+services:
+  terraform-deploy:
+    image: kstp-docker-terraform-deploy
+    stdin_open: true # docker run -i
+    network_mode: host
+    tty: true        # docker run -t
+    privileged: true
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /SOURCE
+    environment:
+      - USER_ID=usc-tad4 # id to login to Jumphost 
+      - NSXT_MANAGER_HOST=host.docker.internal:1080
+      - NSXT_USERNAME=jboyle@ag1.sp.ibm.local
+      - NSXT_PASSWORD=X4cJ.Gf1c4+w4*U
+# docker-compose run --rm terraform-deploy

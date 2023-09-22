@@ -1,0 +1,11 @@
+services:
+  phpipam-web:
+    image: jvb_phpipam
+    container_name: phpipam-web
+    environment:
+      - MARIADB_USER=phpipam
+      - MARIADB_PASSWORD=test123
+      - MARIADB_DATABASE_HOST=phpipam-db
+      - MARIADB_DATABASE=phpipam
+    ports:
+     - 80

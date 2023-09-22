@@ -1,0 +1,1 @@
+docker build -t jvb_phpipam . 
