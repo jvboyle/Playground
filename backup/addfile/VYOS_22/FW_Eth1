@@ -1,0 +1,10 @@
+#!/bin/vbash
+source /config/scripts/script-template
+
+configure
+set service ssh port '2222'
+set firewall name ETH1_IN default-action 'drop'
+set firewall name ETH1_IN 'enable-default-log'
+set interfaces ethernet eth1 firewall in name 'ETH1_IN'
+commit && save; exit
+

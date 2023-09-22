@@ -1,0 +1,5 @@
+2nd run of route add script against all servers that had logged repo errs of some sort
+
+23-mar - SoftLayer had fixed many servers that were initially reported out of the 56 initially reported.
+
+Running again against all the servers found to see which ones we may still have issues with & changing wait time for yum to run - extending time a bit to hopefully avoid marking some as errors that actually completed successfully.

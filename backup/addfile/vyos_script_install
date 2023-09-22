@@ -1,0 +1,4 @@
+cd /tmp
+wget http://10.148.11.145/jvboyle/script-template -O /tmp/script-template
+cp /tmp/script-template /config/scripts/
+ls -la /config/scripts/script-template

@@ -1,0 +1,124 @@
+
+---------------------------------------- 10.142.128.81 ----------------------------------------------------------
+
+**********************WARNING********************************
+            This is a restricted server.
+  Unauthorized access to this system is strictly prohibited.
+If you do not have proper authorization, log out immediately.
+*************************************************************
+
+Fri Nov  3 14:40:04 CDT 2017
+sla-p-na004-vyos.dal09.sdad.sl.ibm.com
+* * * * * /sasg/bin/start_tlsmon.sh &>/dev/null
+# Chef Name: cc-chef-client
+0 0 * * * /bin/sleep 5854 ; /opt/IBM/cobalt/etc/chef/run_chef_client.sh -c /opt/IBM/cobalt/etc/chef/client.rb   -o recipe[cc_helpers],role[cc_policy_enforcer] --node-name `/usr/bin/cat /opt/IBM/cobalt/etc/chef/fqdn` > /dev/null 2>&1
+*/5 * * * * /sasg/MRTG/scripts/generic.pl >/dev/null 2>/dev/null
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+total 0
+d????????? ? ? ? ?            ? .
+d????????? ? ? ? ?            ? ..
+d????????? ? ? ? ?            ? bin
+d????????? ? ? ? ?            ? conf
+d????????? ? ? ? ?            ? include
+d????????? ? ? ? ?            ? lib
+-????????? ? ? ? ?            ? lock
+d????????? ? ? ? ?            ? scripts
+d????????? ? ? ? ?            ? stats
+ls: cannot access /sasg/MRTG/lib: Permission denied
+ls: cannot access /sasg/MRTG/include: Permission denied
+ls: cannot access /sasg/MRTG/scripts: Permission denied
+ls: cannot access /sasg/MRTG/lock: Permission denied
+ls: cannot access /sasg/MRTG/..: Permission denied
+ls: cannot access /sasg/MRTG/stats: Permission denied
+ls: cannot access /sasg/MRTG/.: Permission denied
+ls: cannot access /sasg/MRTG/bin: Permission denied
+ls: cannot access /sasg/MRTG/conf: Permission denied
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.70.150.214 ----------------------------------------------------------
+
+**********************WARNING********************************
+            This is a restricted server.
+  Unauthorized access to this system is strictly prohibited.
+If you do not have proper authorization, log out immediately.
+*************************************************************
+ 
+Fri Nov  3 14:39:45 CDT 2017
+sla-p-emea035-vyos-ams01.sdad.sl.ibm.com
+* * * * * /sasg/bin/start_tlsmon.sh &>/dev/null
+*/5 * * * * /sasg/MRTG/scripts/generic.pl >/dev/null 2>/dev/null
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+total 0
+d????????? ? ? ? ?            ? .
+d????????? ? ? ? ?            ? ..
+d????????? ? ? ? ?            ? bin
+d????????? ? ? ? ?            ? conf
+d????????? ? ? ? ?            ? include
+d????????? ? ? ? ?            ? lib
+-????????? ? ? ? ?            ? lock
+d????????? ? ? ? ?            ? scripts
+d????????? ? ? ? ?            ? stats
+ls: cannot access /sasg/MRTG/lib: Permission denied
+ls: cannot access /sasg/MRTG/include: Permission denied
+ls: cannot access /sasg/MRTG/scripts: Permission denied
+ls: cannot access /sasg/MRTG/lock: Permission denied
+ls: cannot access /sasg/MRTG/..: Permission denied
+ls: cannot access /sasg/MRTG/stats: Permission denied
+ls: cannot access /sasg/MRTG/.: Permission denied
+ls: cannot access /sasg/MRTG/bin: Permission denied
+ls: cannot access /sasg/MRTG/conf: Permission denied
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.113.45.206 ----------------------------------------------------------
+
+**********************WARNING********************************
+            This is a restricted server.
+  Unauthorized access to this system is strictly prohibited.
+If you do not have proper authorization, log out immediately.
+*************************************************************
+
+Fri Nov  3 14:39:46 CDT 2017
+sla-p-emea006-vyos-lon02.sdad.sl.ibm.com
+* * * * * /sasg/bin/start_tlsmon.sh &>/dev/null
+# Chef Name: cc-chef-client
+0 0 * * * /bin/sleep 1183 ; /opt/IBM/cobalt/etc/chef/run_chef_client.sh -c /opt/IBM/cobalt/etc/chef/client.rb   -o recipe[cc_helpers],role[cc_policy_enforcer] --node-name `/usr/bin/cat /opt/IBM/cobalt/etc/chef/fqdn` > /dev/null 2>&1
+*/5 * * * * /sasg/MRTG/scripts/generic.pl >/dev/null 2>/dev/null
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+total 0
+d????????? ? ? ? ?            ? .
+d????????? ? ? ? ?            ? ..
+d????????? ? ? ? ?            ? bin
+d????????? ? ? ? ?            ? conf
+d????????? ? ? ? ?            ? include
+d????????? ? ? ? ?            ? lib
+-????????? ? ? ? ?            ? lock
+d????????? ? ? ? ?            ? scripts
+d????????? ? ? ? ?            ? stats
+ls: cannot access /sasg/MRTG/lib: Permission denied
+ls: cannot access /sasg/MRTG/include: Permission denied
+ls: cannot access /sasg/MRTG/scripts: Permission denied
+ls: cannot access /sasg/MRTG/lock: Permission denied
+ls: cannot access /sasg/MRTG/..: Permission denied
+ls: cannot access /sasg/MRTG/stats: Permission denied
+ls: cannot access /sasg/MRTG/.: Permission denied
+ls: cannot access /sasg/MRTG/bin: Permission denied
+ls: cannot access /sasg/MRTG/conf: Permission denied
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.142.128.66 ----------------------------------------------------------
+
+**********************WARNING********************************
+            This is a restricted server.
+  Unauthorized access to this system is strictly prohibited.
+If you do not have proper authorization, log out immediately.
+*************************************************************
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+THIS=$(/usr/sbin/ip addr |grep -n2 "inet 10." |grep "inet 10."|awk '{print $3}'|cut -f1 -d'/'|head -1)
+SHNAME=`hostname -s`
+
+#OUTPUT=$(sudo docker images |egrep -i "sidecar|upload")
+OUTPUT=$(rpm -qa|egrep "docker-engine|docker-ce"|grep -v "selinux")
+if [ -z "$OUTPUT" ];then
+   echo -e "\nERROR,$SHNAME,$THIS,Docker_Not_Installed,,,"
+else
+  FORWARDCHECK=$(sudo iptables-save |egrep "\-A FORWARD -j DOCKER-USER|\-A FORWARD -j DOCKER-ISOLATION")
+  DOCKERPROCESSCNT=$(sudo docker ps |grep -v "CONT"|wc -l)
+
+  if [ -z "$FORWARDCHECK" ];then
+    FOUNDFORWARD="NO"
+  else
+    FOUNDFORWARD="YES"
+  fi
+
+  [[ ! -z "$OUTPUT" ]] &&  echo -e "\nSUCCESS,$SHNAME,$THIS,$OUTPUT,$FOUNDFORWARD,$FORWARDCHECK,$DOCKERPROCESSCNT"
+fi

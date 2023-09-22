@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# run query on ee servers to see what port chef is really configured to listen on  -some old ones still
+# on 443, not 8443.   If on 443, need to make sure new vars file has both 443 & 8443 listed or else sasfw
+# ipset list ENDPOINTS_CDS_CHEF  and chef server ipset list CHEF_Port   will only have 8443 listed & acct
+# will get errors when doing endpoint validations like:  "Unable to connect to CHEF at IP 10.36.18.14 on port 443"
+
+THIS=$(/usr/sbin/ip addr |grep -n2 "inet 10." |grep "inet 10."|awk '{print $3}'|cut -f1 -d'/'|head -1)
+SHNAME=`hostname -s`
+
+KNIFE=$(sudo docker exec -it -u cobalt xeng bash -l -c 'knife ssl check'| grep -i "Connecting to host")
+
+if [ -z "$KNIFE" ];then
+  #knife command must've failed - look in two files for the cobalt chef server ip tho told not as accurate
+  
+  if [ -f "/usr/ccssd/ee/execution_engine.env" ];then
+   KNIFE=$(grep COBALT_CHEF_SERVER_IP_PORT /usr/ccssd/ee/execution_engine.env) 
+   echo -e "\nSUCCESS,$SHNAME,$THIS,$KNIFE"
+  else
+    if [ -f "/cobalt/execution_engine.env" ];then
+      KNIFE=$(grep COBALT_CHEF_SERVER_IP_PORT /cobalt/execution_engine.env)
+      echo -e "\nSUCCESS,$SHNAME,$THIS,$KNIFE"
+    else
+      echo -e "\nERROR,$SHNAME,$THIS,knife cmd failed, no execution_engine.env files found..possibly not configured yet."
+    fi
+  fi
+else
+  echo -e "\nSUCCESS,$SHNAME,$THIS,$KNIFE"
+fi
+   

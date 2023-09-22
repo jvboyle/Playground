@@ -1,0 +1,26 @@
+#!/bin/bash
+
+THIS=$(/usr/sbin/ip addr |grep -n2 "inet 10." |grep "inet 10."|awk '{print $3}'|cut -f1 -d'/'|head -1)
+SHNAME=`hostname -s`
+
+
+sudo cat /etc/hosts|grep -qw "10.148.211.52"
+if [ "$?" -eq 0 ];then
+   DATE=$(date +"%d%m%Y")
+  sudo su - root -c "cp -p /etc/hosts /etc/hosts.bak.${DATE}"
+  sudo su - root -c "sed -r --in-place \"s/10.148.211.52\s+sla/10.148.11.161\tsla/g\" /etc/hosts"
+  NEWIP=$(cat /etc/hosts|grep -w "10.148.11.161")
+  if [ ! -z "$NEWIP" ];then
+    echo -e "\nSUCCESS,$SHNAME,$THIS,New DTR Set: $NEWIP"
+  else
+    echo -e "\nERROR,$SHNAME,$THIS,New DTR Not in /etc/hosts."
+  fi
+else
+  NEWIP=$(cat /etc/hosts|grep -w "10.148.11.161")
+  if [ ! -z "$NEWIP" ];then
+    echo -e "\nSUCCESS,$SHNAME,$THIS,New DTR Already Set: $NEWIP"
+  else
+    echo -e "\nSUCCESS,$SHNAME,$THIS,neither old dtr ip 10.148.211.252 or new 10.148.11.161 ip are in /etc/hosts - nothing to change."
+  fi
+fi
+   

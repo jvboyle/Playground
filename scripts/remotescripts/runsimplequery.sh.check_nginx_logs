@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# check for existence of /var/log/nginx/access*   on bpm servers
+
+THIS=$(/usr/sbin/ip addr |grep -n2 "inet 10." |grep "inet 10."|awk '{print $3}'|cut -f1 -d'/'|head -1)
+SHNAME=`hostname -s`
+
+
+WARNFILE="/sasg/logs/warnings.jhfwlogpull"
+
+if [ -f "$WARNFILE" ];then
+  rm -f $WARNFILE
+  echo -e "\nSUCCESS,$SHNAME,$THIS,removed $WARNFILE"
+else
+  echo -e "\nSUCCESS,$SHNAME,$THIS,no $WARNFILE found."
+fi
+   

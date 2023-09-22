@@ -1,0 +1,727 @@
+
+---------------------------------------- 10.155.93.131 ----------------------------------------------------------
+
+Connected to 10.155.93.131.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.155.93.131...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:ed:4f:64:e6:ab brd ff:ff:ff:ff:ff:ff
+    inet 10.155.93.131/25 brd 10.155.93.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::4ed:4fff:fe64:e6ab/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:13:39  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.155.93.129
+  ..Adding route (10.2.113.230 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.230 via 10.155.93.129
+
+  ..running: ip route add 172.19.129.160 via 10.155.93.129
+  ..Adding route (172.19.129.160 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.155.93.129
+
+  ..running: ip route add 10.2.113.126 via 10.155.93.129
+  ..Adding route (10.2.113.126 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.155.93.129
+
+  ..running: ip route add 172.17.1.22 via 10.155.93.129
+  ..Adding route (172.17.1.22 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.155.93.129
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na027-asb-dal09.sdad.sl.ibm.com (10.155.93.131/25): yum test successful!
+------------------------------------------
+
+Connection to 10.155.93.131 closed.
+
+successfully executed add_RepoRoute.sh script on 10.155.93.131 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.155.93.147 ----------------------------------------------------------
+
+Connected to 10.155.93.147.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.155.93.147...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:9d:0f:0b:de:80 brd ff:ff:ff:ff:ff:ff
+    inet 10.155.93.147/25 brd 10.155.93.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::49d:fff:fe0b:de80/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:13:56  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.155.93.129
+  ..Adding route (10.2.113.230 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.230 via 10.155.93.129
+
+  ..running: ip route add 172.19.129.160 via 10.155.93.129
+  ..Adding route (172.19.129.160 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.155.93.129
+
+  ..running: ip route add 10.2.113.126 via 10.155.93.129
+  ..Adding route (10.2.113.126 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.155.93.129
+
+  ..running: ip route add 172.17.1.22 via 10.155.93.129
+  ..Adding route (172.17.1.22 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.155.93.129
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+..yum still running...sleeping & checking again...
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Repodata is over 2 weeks old. Install yum-cron? Or run: yum makecache fast
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na027-bpm-dal09.sdad.sl.ibm.com (10.155.93.147/25): yum test successful!
+------------------------------------------
+
+Connection to 10.155.93.147 closed.
+
+successfully executed add_RepoRoute.sh script on 10.155.93.147 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.155.93.215 ----------------------------------------------------------
+
+Connected to 10.155.93.215.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.155.93.215...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:65:39:6e:42:27 brd ff:ff:ff:ff:ff:ff
+    inet 10.155.93.215/25 brd 10.155.93.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::465:39ff:fe6e:4227/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:12:58  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.155.93.129
+  ..Adding route (10.2.113.230 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.230 via 10.155.93.129
+
+  ..running: ip route add 172.19.129.160 via 10.155.93.129
+  ..Adding route (172.19.129.160 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.155.93.129
+
+  ..running: ip route add 10.2.113.126 via 10.155.93.129
+  ..Adding route (10.2.113.126 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.155.93.129
+
+  ..running: ip route add 172.17.1.22 via 10.155.93.129
+  ..Adding route (172.17.1.22 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.155.93.129
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na027-chef-dal09.sdad.sl.ibm.com (10.155.93.215/25): yum test successful!
+------------------------------------------
+
+Connection to 10.155.93.215 closed.
+
+successfully executed add_RepoRoute.sh script on 10.155.93.215 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.155.93.175 ----------------------------------------------------------
+
+Connected to 10.155.93.175.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.155.93.175...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:9f:d0:ec:ea:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.155.93.175/25 brd 10.155.93.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::49f:d0ff:feec:ea2d/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:09:14  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.155.93.129
+  ..Adding route (10.2.113.230 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.230 via 10.155.93.129
+
+  ..running: ip route add 172.19.129.160 via 10.155.93.129
+  ..Adding route (172.19.129.160 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.155.93.129
+
+  ..running: ip route add 10.2.113.126 via 10.155.93.129
+  ..Adding route (10.2.113.126 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.155.93.129
+
+  ..running: ip route add 172.17.1.22 via 10.155.93.129
+  ..Adding route (172.17.1.22 via 10.155.93.129) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.155.93.129
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+..yum still running...sleeping & checking again...
+..yum still running...sleeping & checking again...
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Repodata is over 2 weeks old. Install yum-cron? Or run: yum makecache fast
+Resolving Dependencies
+--> Running transaction check
+---> Package nmap-ncat.x86_64 2:6.40-7.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package         Arch         Version            Repository                Size
+================================================================================
+Installing:
+ nmap-ncat       x86_64       2:6.40-7.el7       rhel-7-server-rpms       201 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 201 k
+Installed size: 414 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 2:nmap-ncat-6.40-7.el7.x86_64                                1/1 
+  Verifying  : 2:nmap-ncat-6.40-7.el7.x86_64                                1/1 
+
+Installed:
+  nmap-ncat.x86_64 2:6.40-7.el7                                                 
+
+Complete!
+
+------------------------------------------------------------
+SUCCESS: sla-p-na027-ee-dal09.sdad.sl.ibm.com (10.155.93.175/25): yum test successful!
+------------------------------------------
+
+Connection to 10.155.93.175 closed.
+
+successfully executed add_RepoRoute.sh script on 10.155.93.175 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.121.41.95 ----------------------------------------------------------
+
+Connected to 10.121.41.95.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.121.41.95...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:a9:d3:e1:1f:09 brd ff:ff:ff:ff:ff:ff
+    inet 10.121.41.95/26 brd 10.121.41.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::4a9:d3ff:fee1:1f09/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN 
+    link/ether 02:42:78:bd:9a:52 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:78ff:febd:9a52/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:08:48  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.121.41.65
+    ..route already exists:  RTNETLINK answers: File exists  
+
+  ..route (10.2.113.230 via 10.121.41.65) already exists in /etc/sysconfig/network-scripts/route-eth0
+
+  ..running: ip route add 172.19.129.160 via 10.121.41.65
+  ..Adding route (172.19.129.160 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.121.41.65
+
+  ..running: ip route add 10.2.113.126 via 10.121.41.65
+  ..Adding route (10.2.113.126 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.121.41.65
+
+  ..running: ip route add 172.17.1.22 via 10.121.41.65
+  ..Adding route (172.17.1.22 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.121.41.65
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na030-asb-dal09.sdad.sl.ibm.com (10.121.41.95/26): yum test successful!
+------------------------------------------
+
+Connection to 10.121.41.95 closed.
+
+successfully executed add_RepoRoute.sh script on 10.121.41.95 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.121.41.93 ----------------------------------------------------------
+
+Connected to 10.121.41.93.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.121.41.93...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:40:c2:dc:fc:3e brd ff:ff:ff:ff:ff:ff
+    inet 10.121.41.93/26 brd 10.121.41.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::440:c2ff:fedc:fc3e/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP 
+    link/ether 02:42:72:9f:05:45 brd ff:ff:ff:ff:ff:ff
+    inet 4.0.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:72ff:fe9f:545/64 scope link 
+       valid_lft forever preferred_lft forever
+4: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN 
+    link/ether 52:54:00:e6:81:e3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+5: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc pfifo_fast master virbr0 state DOWN qlen 500
+    link/ether 52:54:00:e6:81:e3 brd ff:ff:ff:ff:ff:ff
+7: veth9a436e7@if6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether fe:8d:8d:8f:80:07 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::fc8d:8dff:fe8f:8007/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:09:05  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.121.41.65
+    ..route already exists:  RTNETLINK answers: File exists  
+
+  ..route (10.2.113.230 via 10.121.41.65) already exists in /etc/sysconfig/network-scripts/route-eth0
+
+  ..running: ip route add 172.19.129.160 via 10.121.41.65
+  ..Adding route (172.19.129.160 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.121.41.65
+
+  ..running: ip route add 10.2.113.126 via 10.121.41.65
+  ..Adding route (10.2.113.126 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.121.41.65
+
+  ..running: ip route add 172.17.1.22 via 10.121.41.65
+  ..Adding route (172.17.1.22 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.121.41.65
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na030-bpm-dal09.sdad.sl.ibm.com (10.121.41.93/26): yum test successful!
+------------------------------------------
+
+Connection to 10.121.41.93 closed.
+
+successfully executed add_RepoRoute.sh script on 10.121.41.93 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.121.41.89 ----------------------------------------------------------
+
+Connected to 10.121.41.89.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.121.41.89...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:11:0f:cd:31:b3 brd ff:ff:ff:ff:ff:ff
+    inet 10.121.41.89/26 brd 10.121.41.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::411:fff:fecd:31b3/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP 
+    link/ether 02:42:7e:31:f5:6e brd ff:ff:ff:ff:ff:ff
+    inet 4.0.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:7eff:fe31:f56e/64 scope link 
+       valid_lft forever preferred_lft forever
+7: vethd01a0dc@if6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether 7e:da:ab:a7:d9:4d brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::7cda:abff:fea7:d94d/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:09:22  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.121.41.65
+    ..route already exists:  RTNETLINK answers: File exists  
+
+  ..route (10.2.113.230 via 10.121.41.65) already exists in /etc/sysconfig/network-scripts/route-eth0
+
+  ..running: ip route add 172.19.129.160 via 10.121.41.65
+  ..Adding route (172.19.129.160 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.121.41.65
+
+  ..running: ip route add 10.2.113.126 via 10.121.41.65
+  ..Adding route (10.2.113.126 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.121.41.65
+
+  ..running: ip route add 172.17.1.22 via 10.121.41.65
+  ..Adding route (172.17.1.22 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.121.41.65
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na030-chef-dal09.sdad.sl.ibm.com (10.121.41.89/26): yum test successful!
+------------------------------------------
+
+Connection to 10.121.41.89 closed.
+
+successfully executed add_RepoRoute.sh script on 10.121.41.89 !
+
+-------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------- 10.121.41.73 ----------------------------------------------------------
+
+Connected to 10.121.41.73.
+sftp> put add_RepoRoute.sh /tmp/add_RepoRoute.sh
+Uploading add_RepoRoute.sh to /tmp/add_RepoRoute.sh
+
+sftp'd add_RepoRoute.sh script to 10.121.41.73...now executing script & capturing results.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 06:48:53:1d:ab:12 brd ff:ff:ff:ff:ff:ff
+    inet 10.121.41.73/26 brd 10.121.41.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::448:53ff:fe1d:ab12/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP 
+    link/ether 02:42:3b:b3:30:05 brd ff:ff:ff:ff:ff:ff
+    inet 4.0.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:3bff:feb3:3005/64 scope link 
+       valid_lft forever preferred_lft forever
+61: vetha10264e@if60: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether 7a:f7:3f:93:07:70 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::78f7:3fff:fe93:770/64 scope link 
+       valid_lft forever preferred_lft forever
+63: vethb013790@if62: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether 7e:d5:ee:7c:da:bc brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::7cd5:eeff:fe7c:dabc/64 scope link 
+       valid_lft forever preferred_lft forever
+65: veth2362559@if64: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether de:09:fb:bc:0f:8f brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::dc09:fbff:febc:f8f/64 scope link 
+       valid_lft forever preferred_lft forever
+67: vethe285794@if66: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether b2:c4:90:bd:60:f4 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet6 fe80::b0c4:90ff:febd:60f4/64 scope link 
+       valid_lft forever preferred_lft forever
+---------------  2017-04-05_15:09:39  ---------------------------
+..Creating backup of /etc/sysconfig/network-scripts/route-eth0
+
+..Getting repo server hostname/ip from baseurl in /etc/yum.repos.d/redhat.repo
+
+Looping thru each repo dns, getting ip & adding route...
+--------------------------------------------------------
+
+Found repo: rhnsatdal0901.service.networklayer.com
+10.2.113.230    rhnsatdal0901.service.networklayer.com
+  checking <10.2.113.230> to see which repo sites to add
+
+In addrhnsite. rhnsite=DAL, rfile=/etc/sysconfig/network-scripts/route-eth0
+-------------------------------------
+adding routes for DAL repos
+  ..adding # SL RHN Servers - DAL09 to /etc/sysconfig/network-scripts/route-eth0
+# SL RHN Servers - DAL09
+
+  ..running: ip route add 10.2.113.230 via 10.121.41.65
+    ..route already exists:  RTNETLINK answers: File exists  
+
+  ..route (10.2.113.230 via 10.121.41.65) already exists in /etc/sysconfig/network-scripts/route-eth0
+
+  ..running: ip route add 172.19.129.160 via 10.121.41.65
+  ..Adding route (172.19.129.160 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.19.129.160 via 10.121.41.65
+
+  ..running: ip route add 10.2.113.126 via 10.121.41.65
+  ..Adding route (10.2.113.126 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+10.2.113.126 via 10.121.41.65
+
+  ..running: ip route add 172.17.1.22 via 10.121.41.65
+  ..Adding route (172.17.1.22 via 10.121.41.65) to /etc/sysconfig/network-scripts/route-eth0
+172.17.1.22 via 10.121.41.65
+  ..running: ping 10.2.113.230 ....
+  ..Ping ok - 10.2.113.230
+------------------------------------------
+
+..done looping through repository names.
+
+..running yum -y install nmap-ncat > /tmp/yum.out 2>&1 ..will display all output in log file after completion
+..yum still running...sleeping & checking again...
+  ..Yum process no longer running.
+
+----------------------- YUM Output -------------------------
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Package 2:nmap-ncat-6.40-7.el7.x86_64 already installed and latest version
+Nothing to do
+
+------------------------------------------------------------
+SUCCESS: sla-p-na030-ee-dal09.sdad.sl.ibm.com (10.121.41.73/26): yum test successful!
+------------------------------------------
+
+Connection to 10.121.41.73 closed.
+
+successfully executed add_RepoRoute.sh script on 10.121.41.73 !
+
+-------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+THIS=$(/usr/sbin/ip addr |grep -n2 "inet 10." |grep "inet 10."|awk '{print $3}'|cut -f1 -d'/'|head -1)
+SHNAME=`hostname -s`
+
+df -h|grep -v "Mounted on"|while read LINE
+do
+  # get %used from next to last column - if greater than or equal to threshold, show warning
+  EXCEEDED=$(echo "$LINE"|tr '%' ' '|awk '{if($(NF-1) >=95){printf("FS percent used high: %s %s %s\n",$1,$(NF-1),$NF)}}')
+  [[ -z "$EXCEEDED" ]] && echo -e "\nSUCCESS,$SHNAME,$THIS,No filesys greater than 95 percent used."
+  [[ ! -z "$EXCEEDED" ]] && echo -e "\nERROR,$SHNAME,$THIS,$EXCEEDED"
+done

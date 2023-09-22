@@ -1,0 +1,7 @@
+# simple script to run against all vyos & vyatta servers to get tonic ITCS 104 health check bundle from mgmt web server, untar & run the installer
+# install.sh in the bundle installs the tonic .deb, sets up cronjob for the automate id to run sudo tonic w3   monthly & only keep last 12 months 
+# of logs.  Can be run more than once on a system without causing a problem - .deb will reinstall, no duplicate cron entries will be made
+cd /tmp
+wget http://10.148.11.145/stan/tonic.tar.z -O /tmp/tonic.tar.z
+tar -zxvf tonic.tar.z
+tonic/install.sh

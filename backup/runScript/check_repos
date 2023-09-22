@@ -1,0 +1,5 @@
+HNAME=`hostname`
+grep baseurl /etc/yum.repos.d/redhat.repo
+if [[ $? -ne 0 ]];then
+  echo -e "$HNAME - no baseurls"
+fi

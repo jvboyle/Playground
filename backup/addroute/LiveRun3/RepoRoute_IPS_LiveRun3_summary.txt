@@ -1,0 +1,82 @@
+
+SUCCESS: aas-p-kp01-ee-sea.sdad.ibm.com (10.28.113.5/26): yum test successful!
+
+ERROR: sla-p-a027-rcp-bpm-sea01.sdad.ibm.com (10.28.113.18/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-a027-rcp-ror-sea01.sdad.ibm.com (10.28.113.21/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+SUCCESS: sla-p-ap001-asb-sng01.sdad.sl.ibm.com (10.117.181.173/26): yum test successful!
+
+SUCCESS: sla-p-ap001-bpm-sng01.sdad.sl.ibm.com (10.117.181.143/26): yum test successful!
+
+SUCCESS: sla-p-ap001-chef-sng01.sdad.sl.ibm.com (10.117.181.154/26): yum test successful!
+
+SUCCESS: sla-p-ap001-ee-sng01.sdad.sl.ibm.com (10.117.181.165/26): yum test successful!
+
+ERROR: sla-p-ap003-asb-seo01.sdad.sl.ibm.com (10.178.78.203/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-ap003-bpm-seo01.sdad.sl.ibm.com (10.178.78.220/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-ap003-chef-seo01.sdad.sl.ibm.com (10.178.78.234/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-ap003-ee-seo01.sdad.sl.ibm.com (10.178.78.232/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-b001-rcp-ror-sea01.sdad.sl.ibm.com (10.28.113.12/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+SUCCESS: sla-p-emea002-asb-lon02.sdad.sl.ibm.com (10.113.45.247/26): yum test successful!
+
+ERROR: sla-p-emea003-asb-lon02.sdad.sl.ibm.com (10.113.45.218/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+SUCCESS: sla-p-emea003-chef-lon02.sdad.sl.ibm.com (10.113.45.230/26): yum test successful!
+
+SUCCESS: sla-p-emea005-asb-lon02.sdad.sl.ibm.com (10.113.45.207/26): yum test successful!
+
+SUCCESS: sla-p-emea006-asb-lon02.sdad.sl.ibm.com (10.113.45.205/26): Yum stopped on it's own but didn't find the normal "Nothing to do" or "Complete!" messages - possible problem. **SJB OK - YUM Works fine.
+
+SUCCESS: sla-p-emea008-asb-lon02.sdad.sl.ibm.com (10.113.45.253/26): Yum stopped on it's own but didn't find the normal "Nothing to do" or "Complete!" messages - possible problem. **SJB OK - YUM Works fine.
+
+SUCCESS: sla-p-emea008-bpm-lon02.sdad.sl.ibm.com (10.113.45.221/26): yum test successful!
+
+SUCCESS: sla-p-emea008-ee-lon02.sdad.sl.ibm.com (10.113.45.227/26): yum test successful!
+
+SUCCESS: sla-p-emea009-asb-lon02.sdad.sl.ibm.com (10.113.45.246/26): yum test successful!
+
+SUCCESS: sla-p-emea009-bpm-lon02.sdad.sl.ibm.com (10.113.45.249/26): yum test successful!
+
+SUCCESS: sla-p-emea009-chef-lon02.sdad.sl.ibm.com (10.113.45.215/26): yum test successful!
+
+SUCCESS: sla-p-emea009-ee-lon02.sdad.sl.ibm.com (10.113.45.223/26): Yum stopped on it's own but didn't find the normal "Nothing to do" or "Complete!" messages - possible problem. **SJB OK - YUM Works fine.
+
+SUCCESS: sla-p-emea012-asb-lon02.sdad.sl.ibm.com (10.164.129.248/26): Yum stopped on it's own but didn't find the normal "Nothing to do" or "Complete!" messages - possible problem. **SJB OK - YUM Works fine.
+
+SUCCESS: sla-p-emea012-chef-lon02.sdad.sl.ibm.com (10.164.129.250/26): yum test successful!
+
+SUCCESS: sla-p-emea013-asb-lon02.sdad.sl.ibm.com (10.164.129.199/26): yum test successful!
+
+SUCCESS: sla-p-emea013-chef-lon02.sdad.sl.ibm.com (10.164.129.241/26): yum test successful!
+
+ERROR: sla-p-emea029-bpm-lon02.sdad.sl.ibm.com (10.113.6.176/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-emea029-chef-lon02.sdad.sl.ibm.com (10.113.6.252/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-emea029-ee-lon02.sdad.sl.ibm.com (10.113.6.211/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-jp001-asb-tok02.sdad.sl.ibm.com (10.133.152.74/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-jp001-bpm-tok02.sdad.sl.ibm.com (10.133.152.120/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-jp001-chef-tok02.sdad.sl.ibm.com (10.133.152.104/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-jp001-ee-tok02.sdad.sl.ibm.com (10.133.152.123/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-na003-asb.dal09.sdad.sl.ibm.com (10.142.128.93/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+SUCCESS: sla-p-na007-bpm-dal09.sdad.sl.ibm.com (10.142.128.118/26): yum test successful!
+
+SUCCESS: sla-p-na007-chef-dal09.sdad.sl.ibm.com (10.142.128.117/26): yum test successful!
+
+ERROR: sla-p-na018-rcp-ror-dal09.sdad.sl.ibm.com (10.121.41.117/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-na024-rcp-bpm-dal09.sdad.sl.ibm.com (10.155.93.225/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+
+ERROR: sla-p-na024-rcp-ror-dal09.sdad.sl.ibm.com (10.155.93.214/25): /etc/yum.repos.d/redhat.repo config error - no baseurls

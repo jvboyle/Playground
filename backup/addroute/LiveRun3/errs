@@ -1,0 +1,23 @@
+ERROR: sla-p-a027-rcp-bpm-sea01.sdad.ibm.com (10.28.113.18/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-a027-rcp-ror-sea01.sdad.ibm.com (10.28.113.21/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-ap003-asb-seo01.sdad.sl.ibm.com (10.178.78.203/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-ap003-bpm-seo01.sdad.sl.ibm.com (10.178.78.220/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-ap003-chef-seo01.sdad.sl.ibm.com (10.178.78.234/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-ap003-ee-seo01.sdad.sl.ibm.com (10.178.78.232/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-b001-rcp-ror-sea01.sdad.sl.ibm.com (10.28.113.12/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-emea003-asb-lon02.sdad.sl.ibm.com (10.113.45.218/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-emea029-bpm-lon02.sdad.sl.ibm.com (10.113.6.176/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-emea029-chef-lon02.sdad.sl.ibm.com (10.113.6.252/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-emea029-ee-lon02.sdad.sl.ibm.com (10.113.6.211/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-jp001-asb-tok02.sdad.sl.ibm.com (10.133.152.74/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-jp001-bpm-tok02.sdad.sl.ibm.com (10.133.152.120/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-jp001-chef-tok02.sdad.sl.ibm.com (10.133.152.104/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-jp001-ee-tok02.sdad.sl.ibm.com (10.133.152.123/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-na003-asb.dal09.sdad.sl.ibm.com (10.142.128.93/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-na018-rcp-ror-dal09.sdad.sl.ibm.com (10.121.41.117/26): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-na024-rcp-bpm-dal09.sdad.sl.ibm.com (10.155.93.225/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-na024-rcp-ror-dal09.sdad.sl.ibm.com (10.155.93.214/25): /etc/yum.repos.d/redhat.repo config error - no baseurls
+ERROR: sla-p-a027-asb-sea01.sdad.ibm.com (10.28.113.59/26):  One of the configured repositories failed (R1Soft Repository Server), and yum doesn't have enough cached data to continue.
+ERROR: sla-p-ap002-chef-sng01.sdad.sl.ibm.com (10.117.181.134/26):  SSL peer rejected your certificate as expired.
+ERROR: sla-p-ap002-ee-sng01.sdad.sl.ibm.com (10.117.181.186/26):  SSL peer rejected your certificate as expired.
+ERROR: sla-p-b001-rcp-bpm-sea01.sdad.sl.ibm.com (10.28.113.36/26):  One of the configured repositories failed (R1Soft Repository Server), and yum doesn't have enough cached data to continue.

@@ -1,0 +1,7 @@
+sudo rm /config/auth/client/cds_vyos_setup.sh
+
+source /config/scripts/script-template
+configure
+delete system login user mrtg authentication encrypted-password
+commit
+save

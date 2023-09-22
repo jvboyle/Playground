@@ -1,0 +1,87 @@
+
+SUCCESS: sla-p-ad001-bpm-ams03.sdad.sl.ibm.com (10.175.10.90/26): yum test successful!
+
+SUCCESS: sla-p-ad001-chef-ams03.sdad.sl.ibm.com (10.175.10.85/26): yum test successful!
+
+SUCCESS: sla-p-ad001-ee-ams03.sdad.sl.ibm.com (10.175.10.82/26): yum test successful!
+
+SUCCESS: sla-p-ap004-asb-syd01.sdad.sl.ibm.com (10.139.75.91/26): yum test successful!
+
+SUCCESS: sla-p-ap004-bpm-syd01.sdad.sl.ibm.com (10.139.75.74/26): yum test successful!
+
+SUCCESS: sla-p-ap004-chef-syd01.sdad.sl.ibm.com (10.139.75.89/26): yum test successful!
+
+ERROR: sla-p-ap004-ee-syd01.sdad.sl.ibm.com (10.139.75.90/26): /etc/yum.repos.d/redhat.repo config error - no baseurls adding routes for all SL Repos
+ERROR: sla-p-ap004-ee-syd01.sdad.sl.ibm.com (10.139.75.90/26): Yum stopped on it's own but didn't find the normal "Nothing to do" or "Complete!" messages - possible problem.
+
+SUCCESS: sla-p-emea020-bpm-lon02.sdad.sl.ibm.com (10.164.129.214/26): yum test successful!
+
+SUCCESS: sla-p-emea020-chef-lon02.sdad.sl.ibm.com (10.164.129.203/26): yum test successful!
+
+SUCCESS: sla-p-emea020-ee-lon02.sdad.sl.ibm.com (10.164.129.235/26): yum test successful!
+
+SUCCESS: sla-p-emea021-bpm-lon02.sdad.sl.ibm.com (10.164.129.206/26): yum test successful!
+
+SUCCESS: sla-p-emea021-chef-lon02.sdad.sl.ibm.com (10.164.129.202/26): yum test successful!
+
+SUCCESS: sla-p-emea021-ee-lon02.sdad.sl.ibm.com (10.164.129.217/26): yum test successful!
+
+SUCCESS: sla-p-emea022-bpm-lon02.sdad.sl.ibm.com (10.164.129.194/26): yum test successful!
+
+SUCCESS: sla-p-emea022-chef-lon02.sdad.sl.ibm.com (10.164.129.233/26): yum test successful!
+
+SUCCESS: sla-p-emea022-ee-lon02.sdad.sl.ibm.com (10.164.129.226/26): yum test successful!
+
+SUCCESS: sla-p-emea023-bpm-lon02.sdad.sl.ibm.com (10.164.129.212/26): yum test successful!
+
+SUCCESS: sla-p-emea023-chef-lon02.sdad.sl.ibm.com (10.164.129.208/26): yum test successful!
+
+SUCCESS: sla-p-emea023-ee-lon02.sdad.sl.ibm.com (10.164.129.232/26): yum test successful!
+
+SUCCESS: sla-p-emea025-bpm-lon02.sdad.sl.ibm.com (10.113.6.146/25): yum test successful!
+
+SUCCESS: sla-p-emea025-chef-lon02.sdad.sl.ibm.com (10.113.6.167/25): yum test successful!
+
+SUCCESS: sla-p-emea025-ee-lon02.sdad.sl.ibm.com (10.113.6.174/25): yum test successful!
+
+SUCCESS: sla-p-emea026-bpm-lon02.sdad.sl.ibm.com (10.113.6.168/25): yum test successful!
+
+SUCCESS: sla-p-emea026-chef-lon02.sdad.sl.ibm.com (10.113.6.170/25): yum test successful!
+
+SUCCESS: sla-p-emea026-ee-lon02.sdad.sl.ibm.com (10.113.6.154/25): yum test successful!
+
+SUCCESS: sla-p-emea027-bpm-lon02.sdad.sl.ibm.com (10.113.6.160/25): yum test successful!
+
+SUCCESS: sla-p-emea027-chef-lon02.sdad.sl.ibm.com (10.113.6.246/25): yum test successful!
+
+SUCCESS: sla-p-emea027-ee-lon02.sdad.sl.ibm.com (10.113.6.180/25): yum test successful!
+
+SUCCESS: sla-p-emea028-bpm-lon02.sdad.sl.ibm.com (10.113.6.238/25): yum test successful!
+
+SUCCESS: sla-p-emea028-chef-lon02.sdad.sl.ibm.com (10.113.6.185/25): yum test successful!
+
+SUCCESS: sla-p-emea028-ee-lon02.sdad.sl.ibm.com (10.113.6.164/25): yum test successful!
+
+SUCCESS: sla-p-na032-bpm-dal09.sdad.sl.ibm.com (10.155.93.133/25): yum test successful!
+
+SUCCESS: sla-p-na032-chef-dal09.sdad.sl.ibm.com (10.155.93.204/25): yum test successful!
+
+SUCCESS: sla-p-na032-ee-dal09.sdad.sl.ibm.com (10.155.93.249/25): yum test successful!
+
+SUCCESS: sla-p-na033-bpm-dal09.sdad.sl.ibm.com (10.155.93.182/25): yum test successful!
+
+SUCCESS: sla-p-na033-chef-dal09.sdad.sl.ibm.com (10.155.93.180/25): yum test successful!
+
+SUCCESS: sla-p-na033-ee-dal09.sdad.sl.ibm.com (10.155.93.232/25): yum test successful!
+
+SUCCESS: sla-p-na034-bpm-dal09.sdad.sl.ibm.com (10.155.93.203/25): yum test successful!
+
+SUCCESS: sla-p-na034-chef-dal09.sdad.sl.ibm.com (10.155.93.212/25): yum test successful!
+
+SUCCESS: sla-p-na034-ee-dal09.sdad.sl.ibm.com (10.155.93.169/25): yum test successful!
+
+SUCCESS: sla-p-na035-bpm-dal09.sdad.sl.ibm.com (10.155.93.191/25): yum test successful!
+
+SUCCESS: sla-p-na035-chef-dal09.sdad.sl.ibm.com (10.155.93.227/25): yum test successful!
+
+SUCCESS: sla-p-na035-ee-dal09.sdad.sl.ibm.com (10.155.93.210/25): yum test successful!

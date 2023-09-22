@@ -1,0 +1,28 @@
+#sudo wget http://10.148.11.169/downloads/sasgMRTG_rh7.tar.gz -O /sasg/sasgMRTG_rh7.tar.gz
+#sudo gzip -d /sasg/sasgMRTG_rh7.tar.gz
+#sudo tar -xvf /sasg/sasgMRTG_rh7.tar -C /sasg/
+#sudo ls -la /sasg/MRTG
+#sudo rm -rf /sasg/sasgMRTG_rh7.tar 
+
+sudo crontab -l &>/dev/null
+if [ $? -ne 0 ];then
+echo -e "\nno current root crontab, creating new crontab with keepalived monitors and mrtg tool...."
+# no current crontab - create new crontab file to load
+sudo cat > /tmp/root.cron <<EOL
+  * * * * * . /root/.bash_profile;/sasg/bin/start_tlsmon.sh &>/dev/null
+  */5 * * * * /sasg/MRTG/scripts/generic.pl >/dev/null 2>/dev/null
+EOL
+  crontab /tmp/root.cron
+  else
+# already an existing crontab
+  echo -e "\ncurrent root crontab, keeping any existing entries & just replacing keepalived and mrtg entries..."
+sudo  crontab -l >/tmp/root.cron
+sudo   grep -q "keepalived_cron.sh" /tmp/root.cron
+  if [ "$?" -eq 0 ];then
+# already have a keepalived_cron entry - create new root.cron without the keepalived or MRTG lines
+sudo chmod 777 /tmp/root.cron
+sudo crontab -l | egrep -v "keepalived_cron|keepalived_restart|sasg\/MRTG" >/tmp/root.cron
+  fi
+sudo echo "*/5 * * * * /sasg/MRTG/scripts/generic.pl >/dev/null 2>/dev/null" >>/tmp/root.cron
+sudo crontab /tmp/root.cron
+fi
