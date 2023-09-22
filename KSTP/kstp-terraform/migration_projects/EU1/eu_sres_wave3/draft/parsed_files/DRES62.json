@@ -1,0 +1,140 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-eu1srlpm1epnp3",
+            "TF-EU1-HOST-eu1d62lpecntnp1",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-SG-DR62-eu1d62lpecnsmc",
+            "TF-EU1-HOST-eu1d62wprkeswo1",
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-IPSET-DR62-SolarwindsOrion-VIP",
+            "TF-EU1-HOST-eu1srlpm1ecnp3",
+            "TF-EU1-HOST-nlascno000m1ermp",
+            "TF-EU1-HOST-eu1d62wprkeswo2",
+            "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+            "TF-EU1-HOST-eu1d62lpecntnp2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES62": {
+            "category": "Application",
+            "rules": {
+                "4126": {
+                    "display_name": "TF-4126-Solarwinds-DR62-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-DR62-SolarwindsOrion-VIP",
+                        "TF-EU1-HOST-eu1d62wprkeswo1",
+                        "TF-EU1-HOST-eu1d62wprkeswo2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-IPSET-DR62-SolarwindsOrion-VIP",
+                        "TF-EU1-HOST-eu1d62wprkeswo1",
+                        "TF-EU1-HOST-eu1d62wprkeswo2"
+                    ]
+                },
+                "4620": {
+                    "display_name": "TF-4620-Firewall-Rules-for-SolarWinds",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-DR62-SolarwindsOrion-VIP",
+                        "TF-EU1-HOST-eu1d62wprkeswo1",
+                        "TF-EU1-HOST-eu1d62wprkeswo2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-IPSET-DR62-SolarwindsOrion-VIP",
+                        "TF-EU1-HOST-eu1d62wprkeswo1",
+                        "TF-EU1-HOST-eu1d62wprkeswo2"
+                    ]
+                },
+                "5100": {
+                    "display_name": "TF-5100-Netcool-Probe-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d62lpecntnp1",
+                        "TF-EU1-HOST-eu1d62lpecntnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d62lpecntnp1",
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-eu1d62lpecntnp2",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                },
+                "9142": {
+                    "display_name": "TF-9142-SL1-Netcool-MsgBus-Probe",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-HOST-eu1srlpm1epnp3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0143541",
+                    "scope": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc",
+                        "TF-EU1-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-eu1srlpm1ecnp3"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+#
+- name: Provision NFS Server
+  vmware_guest:
+    hostname: "{{ vsphere_host }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    validate_certs: False
+    name: '{{ inventory_hostname }}'
+    template: '{{ vmtemplate }}'
+    datacenter: '{{ vsphere_datacenter }}'
+    folder: '{{ folder }}'
+    annotation: "{{ guest_notes }}"
+    guest_id: '{{ guest_id }}'
+    state: '{{ requested_state }}'
+    cluster: "{{ vsphere_cluster }}"
+    hardware:
+      memory_mb: 8192
+      num_cpus: 2
+    disk:
+      # This is the Default disk.... 
+    - size_gb: 50     #  This will be disk /dev/sda  in Ubuntu
+      type: thin
+      datastore: '{{ datastore }}'
+      # The following Disk is where the mounted File systems go for the Consumable service
+      # Hence, it needs to match the size required.
+      # Of course there can be more disks provisioned.. e.g. /dev/sdc ...
+    - size_gb: 40     #  This will be disk /dev/sdb   in Ubuntu
+      type: thin
+      datastore: '{{ datastore }}'
+    networks:
+    - name: '{{ network_label }}'
+      ip: '{{ custom_ip }}'
+      netmask: '{{ region_netmask }}'
+      gateway: '{{ region_gateway }}'   # unique Per region
+      dns_servers:
+      - '{{ region_dns_servers }}'         # unique Per region
+    customization:
+      dns_servers:
+      - '{{ region_dns_servers }}'
+      domain : '{{ domain }}'
+    wait_for_ip_address: yes
+  delegate_to: localhost
+
+
+- name: accept new ssh fingerprints
+  shell: ssh-keyscan {{ custom_ip }},{{inventory_hostname}} >> ~/.ssh/known_hosts
+  with_items: '{{play_hosts}}'
+  when: "hostvars[item].inventory_hostname == inventory_hostname"
+  delegate_to: localhost
+
+- name: Run a command
+  shell: echo `date` > /tmp/gz
+
+- name: Run a command
+  shell: whoami >> /tmp/gz
+
+#- name: add to ansible hosts file
+#  lineinfile:
+#    dest: /etc/ansible/hosts
+#    insertafter: '^\[{{ ansible_host_group }}\]'
+#    line: '{{ item }}'
+#  with_items: '{{control-node}}'
+#  run_once: true
+
+
+# - name: Create a login user
+#  user:
+ #    name: gzeien
+#    groups: # Empty by default, here we give it some groups
+#    state: present

@@ -1,0 +1,70 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-30000",
+            "TCP-20000-20999"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d252lpisibph",
+            "TF-EU1-SG-SRES-ISIM-IAM06-WAS",
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES252": {
+            "category": "Application",
+            "rules": {
+                "7932": {
+                    "display_name": "TF-7932-ISIM-proxy-listeners",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAM06-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d252lpisibph"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20000-20999"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097772",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d252lpisibph",
+                        "TF-EU1-SG-SRES-ISIM-IAM06-WAS"
+                    ]
+                },
+                "7933": {
+                    "display_name": "TF-7933-IAM-ISIM-proxy-mgmt",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d252lpisibph"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-30000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097772",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d252lpisibph",
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ]
+                }
+            }
+        }
+    }
+}

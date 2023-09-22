@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-16351"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Pen-Testing",
+            "TF-EU1-HOST-nlaspnw000m1ermp"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES-Pen-Testing": {
+            "category": "Application",
+            "rules": {
+                "1090": {
+                    "display_name": "TF-1090-Pentesters-to-TestedVM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Pen-Testing"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ],
+                    "destination_ips": [
+                        "158.87.52.31"
+                    ],
+                    "services": [
+                        "TCP-16351"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Pen-Testing",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ]
+                }
+            }
+        }
+    }
+}

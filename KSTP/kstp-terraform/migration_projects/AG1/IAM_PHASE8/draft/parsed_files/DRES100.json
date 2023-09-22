@@ -1,0 +1,79 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-16443-17443",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-ag1d100lpcacpr1-vip",
+            "TF-AG1-SG-SRES01-OCP-Cluster05",
+            "TF-AG1-HOST-ag1d100lpcacpr2",
+            "TF-AG1-HOST-ag1d100lpcacpr1",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES100": {
+            "category": "Application",
+            "rules": {
+                "1898": {
+                    "display_name": "TF-1898-OCP1-OCP5-to-CACF-Proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-ag1d100lpcacpr1-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-16443-17443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-ag1d100lpcacpr1-vip",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-HOST-ag1d100lpcacpr2",
+                        "TF-AG1-HOST-ag1d100lpcacpr1",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "1905": {
+                    "display_name": "TF-1905-CACF-Proxy-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d100lpcacpr2",
+                        "TF-AG1-HOST-ag1d100lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d100lpcacpr2",
+                        "TF-AG1-HOST-ag1d100lpcacpr1",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

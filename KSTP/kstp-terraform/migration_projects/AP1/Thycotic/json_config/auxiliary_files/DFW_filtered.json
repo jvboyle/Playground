@@ -1,0 +1,1403 @@
+{
+    "SRES": {
+        "category": "Application",
+        "section_id": 1005,
+        "rules": {
+            "rule_1373": {
+                "display_name": "IAM PROD \u2013 Remote Access Server to Proxies",
+                "apply": true,
+                "rule_id": 1373,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS",
+                    "TCP/9000",
+                    "TCP/9343",
+                    "TCP/5672",
+                    "TCP/9443"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1372": {
+                "display_name": "IAM PROD \u2013 Remote Access Server to SVG",
+                "apply": true,
+                "rule_id": 1372,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/9343",
+                    "TCP/9443"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1371": {
+                "display_name": "IAM PROD \u2013 Remote Access Server to Windows VMs",
+                "apply": true,
+                "rule_id": 1371,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-WINDOWS-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "LDAP",
+                    "LDAP-UDP"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-WINDOWS-PROD-AD",
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1370": {
+                "display_name": "IAM PROD \u2013 Remote Access Server to Linux VMs",
+                "apply": true,
+                "rule_id": 1370,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-LINUX-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS",
+                    "RDP",
+                    "HTTP",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-LINUX-PROD",
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1385": {
+                "display_name": "IAM PROD \u2013 Proxies to Secret",
+                "apply": true,
+                "rule_id": 1385,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1384": {
+                "display_name": "IAM PROD \u2013 Proxies to SVG",
+                "apply": true,
+                "rule_id": 1384,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/9343",
+                    "TCP/10444",
+                    "TCP/11443",
+                    "TCP/9443"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1383": {
+                "display_name": "IAM PROD \u2013 Proxies to Rabbit MQ",
+                "apply": true,
+                "rule_id": 1383,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5672",
+                    "TCP/5671"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1382": {
+                "display_name": "IAM PROD \u2013 Proxies to SDI",
+                "apply": true,
+                "rule_id": 1382,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SDI-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/9000",
+                    "NetBios Session Service (TCP)",
+                    "SNMP",
+                    "TCP/1098-1099",
+                    "TCP/9437-9439",
+                    "UDP/2821",
+                    "UDP/1098-1099",
+                    "MS_RPC_TCP",
+                    "TCP/9112",
+                    "TCP/9443",
+                    "SMB",
+                    "TCP/5671-5672",
+                    "HTTPS",
+                    "TCP/9343",
+                    "TCP/2821",
+                    "TCP/8892",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SDI-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1381": {
+                "display_name": "ISM PROD - All but DB to Proxies",
+                "apply": true,
+                "rule_id": 1381,
+                "source_groups": [
+                    "SG-SRES-IAM-NODB-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/9000",
+                    "NetBios Session Service (TCP)",
+                    "SNMP",
+                    "TCP/1098-1099",
+                    "UDP/2821",
+                    "TCP/50010",
+                    "TCP/5672",
+                    "UDP/1098-1099",
+                    "TCP/51010",
+                    "MS_RPC_TCP",
+                    "TCP/9443",
+                    "SMB",
+                    "UDP/51010",
+                    "TCP/9343",
+                    "UDP/50010",
+                    "TCP/2821",
+                    "TCP/8892"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-NODB-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1380": {
+                "display_name": "IAM PROD \u2013 Secret to MS SQL",
+                "apply": true,
+                "rule_id": 1380,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "NetBios Session Service (TCP)",
+                    "MS_RPC_TCP",
+                    "TCP/1433",
+                    "SMB"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1379": {
+                "display_name": "IAM PROD \u2013 Secret to Rabbit MQ",
+                "apply": true,
+                "rule_id": 1379,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5671-5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1378": {
+                "display_name": "IAM PROD \u2013 Secret to Session Server",
+                "apply": true,
+                "rule_id": 1378,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1sr1wpiamprfs"
+                ],
+                "services": [
+                    "SMB"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "ap1sr1wpiamprfs"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1377": {
+                "display_name": "IAM PROD \u2013 Secret to Proxy",
+                "apply": true,
+                "rule_id": 1377,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5671-5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1376": {
+                "display_name": "IAM PROD \u2013 Distrib Engine to Secret",
+                "apply": true,
+                "rule_id": 1376,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1375": {
+                "display_name": "IAM PROD \u2013 Distrib Engine to Rabbit MQ",
+                "apply": true,
+                "rule_id": 1375,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5671-5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1374": {
+                "display_name": "IAM PROD \u2013 Distrib Engine to Windows VMs",
+                "apply": true,
+                "rule_id": 1374,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-WINDOWS-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "UDP/5985-5986",
+                    "TCP/3389-3390",
+                    "TCP/49152-65535",
+                    "UDP/3389-3390",
+                    "UDP/49152-65535",
+                    "TCP/5985-5986"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-WINDOWS-PROD-AD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1399": {
+                "display_name": "IAM PROD \u2013 Distrib Engine to Linux VMs",
+                "apply": true,
+                "rule_id": 1399,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-LINUX-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-LINUX-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1398": {
+                "display_name": "IAM PROD \u2013 SVG to DB2",
+                "apply": true,
+                "rule_id": 1398,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "UDP/51010",
+                    "UDP/50010",
+                    "TCP/50010",
+                    "TCP/51010"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-DB2-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1397": {
+                "display_name": "IAM PROD \u2013 SVG to SDI and SDI to SVG",
+                "apply": true,
+                "rule_id": 1397,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/9343",
+                    "SNMP",
+                    "TCP/9437-9439",
+                    "TCP/1098-1099",
+                    "TCP/2821",
+                    "UDP/2821",
+                    "TCP/8892",
+                    "UDP/1098-1099",
+                    "TCP/9443",
+                    "TCP/9112",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1396": {
+                "display_name": "IAM PROD \u2013 SVG to Secret, Rabbit, SQL",
+                "apply": true,
+                "rule_id": 1396,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/45580",
+                    "UDP/45580"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1395": {
+                "display_name": "IAM PROD \u2013 SDI to DB2",
+                "apply": true,
+                "rule_id": 1395,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SDI-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "UDP/51010",
+                    "UDP/50010",
+                    "TCP/50010",
+                    "TCP/51010",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1394": {
+                "display_name": "IAM PROD \u2013 SVG to Proxies",
+                "apply": true,
+                "rule_id": 1394,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "SNMP",
+                    "TCP/1098-1099",
+                    "TCP/9437-9439",
+                    "UDP/2821",
+                    "UDP/1098-1099",
+                    "TCP/9112",
+                    "TCP/9443",
+                    "TCP/9343",
+                    "TCP/45580",
+                    "TCP/2821",
+                    "UDP/45580",
+                    "TCP/8892",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1393": {
+                "display_name": "IAM PROD \u2013 Proxies to Proxies",
+                "apply": true,
+                "rule_id": 1393,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1392": {
+                "display_name": "IAM PROD \u2013 Secret to Secret",
+                "apply": true,
+                "rule_id": 1392,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1391": {
+                "display_name": "IAM PROD \u2013 SVG to SVG",
+                "apply": true,
+                "rule_id": 1391,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1390": {
+                "display_name": "IAM PROD \u2013 SQL to SQL",
+                "apply": true,
+                "rule_id": 1390,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1389": {
+                "display_name": "IAM PROD \u2013 DB2 to DB2",
+                "apply": true,
+                "rule_id": 1389,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-DB2-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1388": {
+                "display_name": "IAM PROD \u2013 Rabbit MQ to Rabbit MQ",
+                "apply": true,
+                "rule_id": 1388,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1386": {
+                "display_name": "IAM \u2013 All Thycotic VMs to NFS",
+                "apply": true,
+                "rule_id": 1386,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-All-VMs"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1sr1lpiamnfs"
+                ],
+                "services": [
+                    "ANY"
+                ],
+                "applied_to": [
+                    "ap1sr1lpiamnfs",
+                    "SG-SRES-IAM-THY-All-VMs"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1412": {
+                "display_name": "IAM IBM Blue to prod",
+                "apply": true,
+                "rule_id": 1412,
+                "source_groups": [],
+                "source_ipsets": [
+                    "NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RAS-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "RDP"
+                ],
+                "applied_to": [
+                    "ap1-agg-esg1",
+                    "SG-SRES-IAM-THY-RAS-PROD",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1413": {
+                "display_name": "IAM RAS to IAM Servers",
+                "apply": true,
+                "rule_id": 1413,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1sr1wpiamprra"
+                ],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RDP-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "RDP",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-RDP-PROD",
+                    "ap1sr1wpiamprra"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1424": {
+                "display_name": "RAS to IAMAAS",
+                "apply": true,
+                "rule_id": 1424,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1sr1wpiamprra"
+                ],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/22",
+                    "TCP/9343",
+                    "TCP/9443"
+                ],
+                "applied_to": [
+                    "ap1sr1wpiamprra",
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1423": {
+                "display_name": "IAMAAS All to RAS",
+                "apply": true,
+                "rule_id": 1423,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1sr1wpiamprra"
+                ],
+                "services": [
+                    "TCP/22",
+                    "TCP/9343",
+                    "TCP/9443"
+                ],
+                "applied_to": [
+                    "ap1sr1wpiamprra",
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1427": {
+                "display_name": "Thycotic SVG to PDR SMTP",
+                "apply": true,
+                "rule_id": 1427,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [
+                    "158.87.54.199",
+                    "158.87.54.186"
+                ],
+                "source_vms": [
+                    "ap1sr1apiamprsvg1"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [
+                    "100.80.69.5"
+                ],
+                "destination_vms": [
+                    "ap1pdr1smtp01"
+                ],
+                "services": [
+                    "SMTP"
+                ],
+                "applied_to": [
+                    "ap1-pdr-esg1",
+                    "ap1pdr1smtp01",
+                    "ap1sr1apiamprsvg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1428": {
+                "display_name": "Thycotic Secret to PDR SMTP",
+                "apply": true,
+                "rule_id": 1428,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [
+                    "158.87.54.199",
+                    "158.87.54.201",
+                    "158.87.54.200"
+                ],
+                "source_vms": [
+                    "ap1sr1wpiamprt3",
+                    "ap1sr1wpiamprt2",
+                    "ap1sr1wpiamprt1"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [
+                    "100.80.69.5"
+                ],
+                "destination_vms": [
+                    "ap1pdr1smtp01"
+                ],
+                "services": [
+                    "SMTP"
+                ],
+                "applied_to": [
+                    "ap1-pdr-esg1",
+                    "ap1sr1wpiamprt1",
+                    "ap1sr1wpiamprt3",
+                    "ap1sr1wpiamprt2",
+                    "ap1pdr1smtp01",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1430": {
+                "display_name": "IAMAAS to blue pages",
+                "apply": true,
+                "rule_id": 1430,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-IBM-Bluepages"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "LDAP-over-SSL"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SDI-PROD",
+                    "ap1-agg-esg1",
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1432": {
+                "display_name": "IAMAAS PROD-DE,RMQ,SECRET to proxy",
+                "apply": true,
+                "rule_id": 1432,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5672",
+                    "TCP/5671"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1431": {
+                "display_name": " IAMAAS PROD- proxy to DE,RMQ,SECRET ",
+                "apply": true,
+                "rule_id": 1431,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5671"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD",
+                    "SG-SRES-IAM-THY-DE-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1439": {
+                "display_name": "IAM Rabbit MQ to THY Proxy",
+                "apply": true,
+                "rule_id": 1439,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1438": {
+                "display_name": "IAM THY Proxy to Rabbit MQ",
+                "apply": true,
+                "rule_id": 1438,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-RMQ-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1437": {
+                "display_name": "IAM THY Secret to Proxy",
+                "apply": true,
+                "rule_id": 1437,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5672"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "SG-SRES-IAM-THY-SECRET-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1445": {
+                "display_name": "Prod to Quorom",
+                "apply": true,
+                "rule_id": 1445,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1sr1wpiamprfs"
+                ],
+                "services": [
+                    "UDP/137,138",
+                    "TCP/445,139"
+                ],
+                "applied_to": [
+                    "ap1sr1wpiamprfs",
+                    "SG-SRES-IAM-THY-MSSQL-PROD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1446": {
+                "display_name": "Thycotic DE to proxy",
+                "apply": true,
+                "rule_id": 1446,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1sr1wpiampre2",
+                    "ap1sr1wpiampre1"
+                ],
+                "destination_groups": [
+                    "SG-SRES-IAM-THY-PROXY-PROD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [
+                    "158.87.54.190"
+                ],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-PROXY-PROD",
+                    "ap1sr1wpiampre2",
+                    "ap1sr1wpiampre1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1472": {
+                "display_name": "THY Prod to DNS",
+                "apply": true,
+                "rule_id": 1472,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-WIN-DNS-NTP"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "DNS-UDP",
+                    "DNS"
+                ],
+                "applied_to": [
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "SG-SRES-WIN-DNS-NTP"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            }
+        }
+    },
+    "PDR": {
+        "category": "Application",
+        "section_id": 1006,
+        "rules": {
+            "rule_1462": {
+                "display_name": "IAMaaS SVG direct to IBMID",
+                "apply": true,
+                "rule_id": 1462,
+                "source_groups": [
+                    "SG-SRES-IAM-THY-SVG-PROD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "NET-Akamai-IBMID"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ap1-pdr-esg1",
+                    "SG-SRES-IAM-THY-SVG-PROD",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            }
+        }
+    }
+}

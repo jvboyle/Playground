@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-EDR-CarbonBlack",
+            "TF-EU1-IPSET-EDR-CarbonBlack"
+        ]
+    },
+    "map_policies": {
+        "TF-EDR-CarbonBlack": {
+            "category": "Application",
+            "rules": {
+                "1126": {
+                    "display_name": "TF-1126-Systems-to-CarbonBlack-servers",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-EDR-CarbonBlack"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-EDR-CarbonBlack"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-EDR-CarbonBlack",
+                        "TF-EU1-IPSET-EDR-CarbonBlack"
+                    ]
+                }
+            }
+        }
+    }
+}

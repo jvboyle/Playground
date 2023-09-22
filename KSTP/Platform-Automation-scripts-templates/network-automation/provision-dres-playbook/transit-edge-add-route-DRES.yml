@@ -1,0 +1,46 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars_files:
+    - ../../region-configs/{{ region_type }}/{{ region }}/region-answerfile.yml
+    - ../../network-config/{{ region_type }}/{{ region }}/{{ dres_name }}-network-answerfile.yml
+    - ../provision-dres-playbook/DRES-std-answerfile.yml
+# Dev vars:
+    # - dev-DRES-std-answerfile.yml
+    # - dev-region-answerfile.yml
+    # - dev94-network-answerfile.yml
+  vars_prompt:
+      - name: "vcenter_user"
+        prompt: "vCenter User"
+        private: no
+      - name: "vcenter_pwd"
+        prompt: "vCenter Password"
+        private: yes
+      - name: "region"
+        prompt: "Specify Region (ag1, eu1, ap1)"
+        private: no
+      - name: "region_type"
+        prompt: "Region Type? (prod, non-prod)"
+        private: no
+        default: "non-prod"
+      - name: "dres_name"
+        prompt: "DRES Name"
+        private: no
+
+  roles:
+##########################################
+#Gather details about the infrastructure
+##########################################
+     - generate-vcenter-login-token
+     - gather-network-edges-all
+     - gather-network-edges-agg-esg-id
+     - gather-network-edges-pdr-esg-id
+     - gather-network-edges-sl-svc-esg-id
+     - gather-network-edges-sres-esg-id
+     - add-route-debug
+     - add-route-dres-to-pdr-esg
+     - add-route-dres-to-agg-esg
+     - add-route-dres-to-sres-esg
+     - add-route-dres-to-sl-svc-esg

@@ -1,0 +1,116 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "UDP-137",
+            "TCP-138",
+            "SSH",
+            "TCP-7705",
+            "UDP-139",
+            "TCP-137",
+            "UDP-138",
+            "UDP-455",
+            "TCP-455",
+            "TCP-139"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlasabuildm1e00p",
+            "TF-EU1-HOST-eu1d307lpdantnp2",
+            "TF-EU1-EU-SG-SRES-eu1srlpm1esd3-vip",
+            "TF-EU1-HOST-eu1srlpm1esbk3",
+            "TF-EU1-HOST-eu1d307lpdantnp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES307": {
+            "category": "Application",
+            "rules": {
+                "9057": {
+                    "display_name": "TF-9057-SSH-Autobuild",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0198493",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ]
+                },
+                "9058": {
+                    "display_name": "TF-9058-Samba",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-137",
+                        "TCP-139",
+                        "UDP-138",
+                        "UDP-139",
+                        "UDP-455",
+                        "UDP-137",
+                        "TCP-138",
+                        "TCP-455"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0198493",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ]
+                },
+                "9060": {
+                    "display_name": "TF-9060-ScienceLogic-Phonehome",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-EU-SG-SRES-eu1srlpm1esd3-vip",
+                        "TF-EU1-HOST-eu1srlpm1esbk3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7705"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0198493",
+                    "scope": [
+                        "TF-EU1-EU-SG-SRES-eu1srlpm1esd3-vip",
+                        "TF-EU1-HOST-eu1d307lpdantnp1",
+                        "TF-EU1-HOST-eu1srlpm1esbk3",
+                        "TF-EU1-HOST-eu1d307lpdantnp2"
+                    ]
+                }
+            }
+        }
+    }
+}

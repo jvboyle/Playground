@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR329-PROXY",
+            "TF-AG1-HOST-ag1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES334": {
+            "category": "Application",
+            "rules": {
+                "3887": {
+                    "display_name": "TF-3887-PROXY-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-DR329-PROXY"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0151221",
+                    "scope": [
+                        "TF-AG1-IPSET-DR329-PROXY",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

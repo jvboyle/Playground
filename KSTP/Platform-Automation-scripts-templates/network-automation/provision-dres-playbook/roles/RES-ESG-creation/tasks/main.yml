@@ -1,0 +1,70 @@
+---
+- name: RES ESG creation
+  nsx_edge_router:
+    nsxmanager_spec: "{{ nsxmanager_spec }}"
+    state: "{{ requested_state }}"
+    name: "{{ res_esg_name }}"
+    description: 'This ESG is created by nsxansible'
+    appliance_size: "{{ res_esg_size }}"
+    resourcepool_moid: "{{ gather_moids_cl.object_id }}"
+    datastore_moid: "{{ gather_moids_ds.object_id }}"
+    datacenter_moid: "{{ gather_moids_cl.datacenter_moid }}"
+    interfaces:
+      vnic0:
+        ip: "{{ res_esg_vnic0.ip }}"
+        prefix_len: "{{ res_esg_vnic0.prefix }}"
+        logical_switch: "{{ res_esg_vnic0.logical_switch }}"
+        name: "{{ res_esg_vnic0.name }}"
+        iftype: "{{ res_esg_vnic0.iftype }}"
+      vnic1:
+        ip: "{{ res_esg_vnic1.ip }}"
+        prefix_len: "{{ res_esg_vnic1.prefix }}"
+        logical_switch: "{{ res_esg_vnic1.logical_switch }}"
+        name: "{{ res_esg_vnic1.name }}"
+        iftype: "{{ res_esg_vnic1.iftype }}"
+      vnic2:
+        ip: "{{ res_esg_vnic2.ip }}"
+        prefix_len: "{{ res_esg_vnic2.prefix }}"
+        logical_switch: "{{ res_esg_vnic2.logical_switch }}"
+        name: "{{ res_esg_vnic2.name }}"
+        iftype: "{{ res_esg_vnic2.iftype }}"
+    routes:
+      - "{{ res_esg_route1 }}"
+      - "{{ res_esg_route2 }}"
+      - "{{ res_esg_route3 }}"
+      - "{{ res_esg_route4 }}"
+      - "{{ res_esg_route5 }}"
+      - "{{ res_esg_route6 }}"
+      - "{{ res_esg_route7 }}"
+      - "{{ res_esg_route8 }}"
+    remote_access: 'true'
+    # username: "{{ res_esg_admin_username }}"
+    # password: "{{ res_esg_admin_password }}"
+    username: "{{ esg_admin_username }}"
+    password: "{{ esg_admin_password }}"
+    firewall: "{{ res_esg_firewall_on_off }}"
+    ha_enabled: "{{ res_esg_ha_enable }}"
+  register: create_res_esg
+  tags: res_esg_create
+
+# The following tasks were commented out on 26-Aug-2020 to workaround Issue #3
+# https://github.ibm.com/CtspArchitecture/Platform-Automation-scripts-templates/issues/3
+# - name: Remove default OSPF Configuration
+#   nsx_ospf:
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     state: absent
+#     edge_name: "{{ res_esg_name }}"
+#     router_id: ''
+#     areas: ''
+#     area_map: ''
+#   register: ospf_remove
+#   tags: ospf_remove
+#
+# - name: Remove default Route Redistribution Configuration
+#   nsx_redistribution:
+#     ospf_state: absent
+#     bgp_state: absent
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     edge_name: "{{ res_esg_name }}"
+#   register: route_redist_remove
+#   tags: route_redist_remove

@@ -1,0 +1,137 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-138",
+            "SSH",
+            "TCP-7916",
+            "TCP-137",
+            "TCP-20080",
+            "TCP-20081",
+            "TCP-445",
+            "TCP-139"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlasabuildm1e00p",
+            "TF-EU1-HOST-nlaspre00bgeerm",
+            "TF-EU1-SG-SRES01-ICp-Cluster01",
+            "TF-EU1-HOST-nlaspnp000bgerm"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES20": {
+            "category": "Application",
+            "rules": {
+                "1236": {
+                    "display_name": "TF-1236-Netcool-Ping-Probe-Autobuild-UCD-Relay",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspnp000bgerm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-137",
+                        "TCP-20080",
+                        "TCP-139",
+                        "TCP-20081",
+                        "TCP-138",
+                        "TCP-445",
+                        "TCP-7916"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-nlaspnp000bgerm"
+                    ]
+                },
+                "1237": {
+                    "display_name": "TF-1237-M-EaaS-Shared-Portal-Autobuild-Netcool-Ping-Probe",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01",
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnp000bgerm"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01",
+                        "TF-EU1-HOST-nlaspnp000bgerm",
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ]
+                },
+                "1400": {
+                    "display_name": "TF-1400-Netcool-Ping-Probe-Autobuild-UCD-Relay",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspre00bgeerm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-137",
+                        "TCP-20080",
+                        "TCP-139",
+                        "TCP-20081",
+                        "TCP-138",
+                        "TCP-445",
+                        "TCP-7916"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-nlaspre00bgeerm"
+                    ]
+                },
+                "1401": {
+                    "display_name": "TF-1401-M-EaaS-Shared-Portal-Autobuild-Netcool-Ping-Probe",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01",
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspre00bgeerm"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01",
+                        "TF-EU1-HOST-nlaspre00bgeerm",
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ]
+                }
+            }
+        }
+    }
+}

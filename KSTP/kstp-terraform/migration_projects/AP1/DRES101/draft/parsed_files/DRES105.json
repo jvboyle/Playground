@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "Syslog (TCP)",
+            "Syslog (UDP)"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-HOST-ap1d101lpcacprx1",
+            "TF-AP1-IPSET-IRES-QRADAR-NAT-IP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES105": {
+            "category": "Application",
+            "rules": {
+                "1429": {
+                    "display_name": "TF-1429-test",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-IRES-QRADAR-NAT-IP"
+                    ],
+                    "destination_ips": [
+                        "10.63.9.81"
+                    ],
+                    "services": [
+                        "Syslog (TCP)",
+                        "Syslog (UDP)"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-IPSET-IRES-QRADAR-NAT-IP"
+                    ]
+                }
+            }
+        }
+    }
+}

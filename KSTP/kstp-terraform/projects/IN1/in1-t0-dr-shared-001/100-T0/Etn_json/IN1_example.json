@@ -1,0 +1,179 @@
+{
+  "node_id": "3c2a57e7-be3e-4c56-ad1c-ab30fc29b7e0",
+  "host_switch_spec": {
+    "host_switches": [
+      {
+        "host_switch_name": "nvds-edge-private",
+        "host_switch_id": "74c0e6dc-2d7c-4946-8355-28243cbf136d",
+        "host_switch_type": "NVDS",
+        "host_switch_mode": "STANDARD",
+        "host_switch_profile_ids": [
+          {
+            "key": "UplinkHostSwitchProfile",
+            "value": "303403a0-3b1a-444c-8f7e-4dde443c8985"
+          }
+        ],
+        "pnics": [
+          {
+            "device_name": "fp-eth0",
+            "uplink_name": "uplink-1"
+          },
+          {
+            "device_name": "fp-eth1",
+            "uplink_name": "uplink-2"
+          }
+        ],
+        "is_migrate_pnics": false,
+        "ip_assignment_spec": {
+          "ip_pool_id": "bc03d6d9-af16-448d-9f15-3dca76b255fc",
+          "resource_type": "StaticIpPoolSpec"
+        },
+        "cpu_config": [],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "560d0068-7623-48c8-b66c-f0787b636de3",
+            "transport_zone_profile_ids": [
+              {
+                "resource_type": "BfdHealthMonitoringProfile",
+                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+              }
+            ]
+          },
+          {
+            "transport_zone_id": "4f87910f-9cf3-4a32-97b0-ce9cbcbaaa7f",
+            "transport_zone_profile_ids": [
+              {
+                "resource_type": "BfdHealthMonitoringProfile",
+                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+              }
+            ]
+          }
+        ],
+        "pnics_uninstall_migration": [],
+        "vmk_uninstall_migration": [],
+        "not_ready": false
+      },
+      {
+        "host_switch_name": "nvds-edge-public",
+        "host_switch_id": "ae7f8a8e-ae60-409e-8168-669846f5ac50",
+        "host_switch_type": "NVDS",
+        "host_switch_mode": "STANDARD",
+        "host_switch_profile_ids": [
+          {
+            "key": "UplinkHostSwitchProfile",
+            "value": "6bc550f5-6e56-4a83-b88d-78618cc8ff0a"
+          }
+        ],
+        "pnics": [
+          {
+            "device_name": "fp-eth2",
+            "uplink_name": "uplink-1"
+          }
+        ],
+        "is_migrate_pnics": false,
+        "ip_assignment_spec": {
+          "resource_type": "AssignedByDhcp"
+        },
+        "cpu_config": [],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "9912edd8-15ec-40c0-8ef4-b0e5d96ff1ba",
+            "transport_zone_profile_ids": [
+              {
+                "resource_type": "BfdHealthMonitoringProfile",
+                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+              }
+            ]
+          }
+        ],
+        "pnics_uninstall_migration": [],
+        "vmk_uninstall_migration": [],
+        "not_ready": false
+      }
+    ],
+    "resource_type": "StandardHostSwitchSpec"
+  },
+  "maintenance_mode": "DISABLED",
+  "node_deployment_info": {
+    "deployment_type": "VIRTUAL_MACHINE",
+    "deployment_config": {
+      "vm_deployment_config": {
+        "vc_id": "e3f3eff3-3b35-444c-be2b-8f95294bf5bf",
+        "compute_id": "domain-c1006",
+        "storage_id": "datastore-1012",
+        "management_network_id": "dvportgroup-1028",
+        "management_port_subnets": [
+          {
+            "ip_addresses": [
+              "10.162.152.210"
+            ],
+            "prefix_length": 26
+          }
+        ],
+        "default_gateway_addresses": [
+          "10.162.152.193"
+        ],
+        "data_network_ids": [
+          "dvportgroup-2010",
+          "dvportgroup-2011",
+          "dvportgroup-2021"
+        ],
+        "reservation_info": {
+          "memory_reservation": {
+            "reservation_percentage": 100
+          },
+          "cpu_reservation": {
+            "reservation_in_shares": "HIGH_PRIORITY",
+            "reservation_in_mhz": 0
+          }
+        },
+        "resource_allocation": {
+          "cpu_count": 8,
+          "memory_allocation_in_mb": 32768
+        },
+        "placement_type": "VsphereDeploymentConfig"
+      },
+      "form_factor": "LARGE",
+      "node_user_settings": {
+        "cli_username": "admin"
+      }
+    },
+    "node_settings": {
+      "hostname": "in1-etn-010.kstp.kyndryl.net",
+      "search_domains": [
+        "kstp.kyndryl.net"
+      ],
+      "ntp_servers": [
+        "10.0.77.54"
+      ],
+      "dns_servers": [
+        "10.162.101.194",
+        "10.162.101.195"
+      ],
+      "enable_ssh": true,
+      "allow_ssh_root_login": true
+    },
+    "resource_type": "EdgeNode",
+    "external_id": "3c2a57e7-be3e-4c56-ad1c-ab30fc29b7e0",
+    "ip_addresses": [
+      "10.162.152.210"
+    ],
+    "id": "3c2a57e7-be3e-4c56-ad1c-ab30fc29b7e0",
+    "display_name": "in1-etn-010",
+    "tags": [],
+    "_revision": 3
+  },
+  "is_overridden": false,
+  "failure_domain_id": "4fc1e3b0-1cd4-4339-86c8-f76baddbaafb",
+  "resource_type": "TransportNode",
+  "id": "3c2a57e7-be3e-4c56-ad1c-ab30fc29b7e0",
+  "display_name": "in1-etn-010",
+  "tags": [],
+  "_create_time": 1667481690303,
+  "_create_user": "admin",
+  "_last_modified_time": 1667485119243,
+  "_last_modified_user": "admin",
+  "_system_owned": false,
+  "_protection": "NOT_PROTECTED",
+  "_revision": 3
+}

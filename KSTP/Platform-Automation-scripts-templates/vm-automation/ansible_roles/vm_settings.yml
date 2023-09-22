@@ -1,0 +1,65 @@
+vsphere_hostname: 'ag1vc1.ag1.sp.ibm.local'
+vsphere_datacenter: 'AG1-WDC04'
+vsphere_cluster: 'AG1-N1'
+vsphere_folder: 'Ansible'
+vsphere_datastore: 'ag1-n1-vsan'
+dns_servers: 
+  - 158.87.48.2
+  - 158.87.48.3
+dns_domain: "sr1.ag1.sp.ibm.local"
+virtual_machines: 
+        - name: 'agnsrlnicp1testvm01'
+          template: 'ubuntu1604_latest'
+          vswitch: 'vxw-dvs-25019-virtualwire-5-sid-5005-ag1-sres1-app-internal1'
+          ip: '158.87.48.66'
+          netmask: '255.255.254.0'
+          gateway: '158.87.48.1'
+          vcpus: '2'
+          mem_mb: '8192'
+        - name: 'agnsrlnicp1testvm02'
+          template: 'ubuntu1604_latest'
+          vswitch: 'vxw-dvs-25019-virtualwire-5-sid-5005-ag1-sres1-app-internal1'
+          ip: '158.87.48.67'
+          netmask: '255.255.254.0'
+          gateway: '158.87.48.1'
+          vcpus: '2'
+          mem_mb: '8192'
+        - name: 'agnsrlnicp1testvm03'
+          template: 'ubuntu1604_latest'
+          vswitch: 'vxw-dvs-25019-virtualwire-5-sid-5005-ag1-sres1-app-internal1'
+          ip: '158.87.48.68'
+          netmask: '255.255.254.0'
+          gateway: '158.87.48.1'
+          vcpus: '2'
+          mem_mb: '8192'
+
+virtual_machines_additional_disks:
+        - name: 'agnsrlnicp1testvm01'
+          disks:
+                - size_gb: 10
+                  state: present
+                  unit_number: 1
+                  scsi_type: '{{ scsi_type }}' # defaults from role
+                  datastore: '{{ vsphere_datastore }}'
+                  scsi_controller: '{{ scsi_controller }}' # defaults from role
+                  type: '{{ disk_provisioning_type }}' # defaults from role
+        - name: 'agnsrlnicp1testvm02'
+          disks:
+                - size_gb: 10
+                  state: present
+                  unit_number: 1
+                  scsi_type: '{{ scsi_type }}' # defaults from role
+                  datastore: '{{ vsphere_datastore }}' 
+                  scsi_controller: '{{ scsi_controller }}' # defaults from role
+                  type: '{{ disk_provisioning_type }}' # defaults from role
+        - name: 'agnsrlnicp1testvm03'
+          disks:
+                - size_gb: 10
+                  state: present
+                  unit_number: 1
+                  scsi_type: '{{ scsi_type }}' # defaults from role
+                  datastore: '{{ vsphere_datastore }}' 
+                  scsi_controller: '{{ scsi_controller }}' # defaults from role
+                  type: '{{ disk_provisioning_type }}' # defaults from role
+        
+

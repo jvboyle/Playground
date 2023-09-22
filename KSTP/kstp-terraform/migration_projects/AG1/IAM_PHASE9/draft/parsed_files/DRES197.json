@@ -1,0 +1,424 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-9083",
+            "LDAP-UDP",
+            "NBSS",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "DNS",
+            "WINS-UDP",
+            "Active Directory Server UDP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "SOAP",
+            "TCP-5985",
+            "TCP-5696",
+            "NBNS-Unicast",
+            "SMTP",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "TCP-123",
+            "NBDG-Broadcast",
+            "UDP-123",
+            "MS-DS-TCP",
+            "DHCP-Server",
+            "NBNS-Broadcast",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL",
+            "MS-DS-UDP",
+            "TCP-53",
+            "TCP-443",
+            "TCP-8443",
+            "MS_RPC_TCP",
+            "Windows-Global-Catalog",
+            "TCP-22",
+            "KERBEROS",
+            "LDAP",
+            "DNS-UDP",
+            "UDP-53"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dr197stw",
+            "TF-AG1-SG-SRES-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1sr1lpansb",
+            "TF-AG1-HOST-ag1dr197lpskl",
+            "TF-AG1-HOST-ag1sr1staas4",
+            "TF-AG1-HOST-ag1dr197lparx",
+            "TF-AG1-IPSET-STaaS-DR197-Storage-All",
+            "TF-AG1-SG-DR197-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1dr197lpocum",
+            "TF-AG1-HOST-ag1sr1staas3",
+            "TF-AG1-HOST-ag1dr197lpstl",
+            "TF-AG1-IPSET-NET-CPREM-GSNI-NAT-Range",
+            "TF-AG1-HOST-ag1srlpdefmstr"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES197": {
+            "category": "Application",
+            "rules": {
+                "2639": {
+                    "display_name": "TF-2639-SKLM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr197stw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "TCP-443",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ]
+                },
+                "2640": {
+                    "display_name": "TF-2640-SRES-AD-DNS-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "2643": {
+                    "display_name": "TF-2643-MicroStrategy-Desktop",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr197lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1dr197lparx"
+                    ]
+                },
+                "2644": {
+                    "display_name": "TF-2644-MicroStrategy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr197lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr197lparx",
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "2651": {
+                    "display_name": "TF-2651-DRES-to-SRES-AD-DNS-",
+                    "disabled": true,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51023175",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "2677": {
+                    "display_name": "TF-2677-DNS-to-CPREM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-STaaS-DR197-Storage-All"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "UDP-53",
+                        "UDP-123",
+                        "TCP-53",
+                        "TCP-123"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-IPSET-STaaS-DR197-Storage-All"
+                    ]
+                },
+                "2688": {
+                    "display_name": "TF-2688-CPREM-o-DNS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-STaaS-DR197-Storage-All"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-IPSET-NET-CPREM-GSNI-NAT-Range"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "UDP-53",
+                        "UDP-123",
+                        "TCP-53",
+                        "TCP-123"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51026013",
+                    "scope": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-IPSET-NET-CPREM-GSNI-NAT-Range",
+                        "TF-AG1-IPSET-STaaS-DR197-Storage-All"
+                    ]
+                },
+                "2700": {
+                    "display_name": "TF-2700-DRES-AD-DNS-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR197-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "2701": {
+                    "display_name": "TF-2701-SKLM-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr197stw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "TCP-443",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ]
+                },
+                "2702": {
+                    "display_name": "TF-2702-MicroStrategy-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr197lparx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpdefmstr",
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1dr197lparx"
+                    ]
+                },
+                "2794": {
+                    "display_name": "TF-2794-Ansible",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1lpansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-HOST-ag1dr197lpskl",
+                        "TF-AG1-HOST-ag1dr197lparx",
+                        "TF-AG1-HOST-ag1dr197lpocum",
+                        "TF-AG1-HOST-ag1dr197lpstl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-22",
+                        "TCP-5985"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr197stw",
+                        "TF-AG1-HOST-ag1sr1lpansb",
+                        "TF-AG1-HOST-ag1dr197lpskl",
+                        "TF-AG1-HOST-ag1dr197lparx",
+                        "TF-AG1-HOST-ag1dr197lpocum",
+                        "TF-AG1-HOST-ag1dr197lpstl"
+                    ]
+                }
+            }
+        }
+    }
+}

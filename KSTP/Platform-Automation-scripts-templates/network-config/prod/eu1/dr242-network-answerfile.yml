@@ -1,0 +1,26 @@
+customer_name: Telefonica
+blue_id: TLF
+dres_name: dr242
+app_internal_name: "dr242-app-internal1"
+app_internal_subnet: 100.73.130.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.73.130.1
+dres_transit_subnet: 100.72.9.240
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr242-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.72.9.240
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.72.9.242
+vpn_esg_vnic1_ip: 100.72.9.241
+esg_dlr_transit_name: "dr242-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.72.9.248
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.72.9.249
+dlr_uplink1_ip: 100.72.9.250
+res_esg_vnic0_ip: 100.72.64.162
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: eu1-e-dvs1-pub-dvpg-edge-pub-ns-1137
+vpn_esg_vnic0_ip: 169.51.163.82
+vpn_esg_vnic0_ip_prefix: 24

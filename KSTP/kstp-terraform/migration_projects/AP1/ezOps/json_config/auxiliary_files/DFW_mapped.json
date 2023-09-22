@@ -1,0 +1,216 @@
+{
+    "ezOps": {
+        "category": "Application",
+        "rules": {
+            "rule_1548": {
+                "display_name": "JH_to_EZOPS",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-Linux-Jump-Servers",
+                    "AP1-SG-SRES-JHs"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.88"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-5000-50000",
+                    "SSH"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-Linux-Jump-Servers",
+                    "AP1-SG-SRES-JHs"
+                ]
+            },
+            "rule_1547": {
+                "display_name": "Blue to EZOPS",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.88"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-5000-50000"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-IBM-Blue"
+                ]
+            },
+            "rule_1552": {
+                "display_name": "EZOPS TO CACF",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-ap1sr1lpta1-vip"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-ap1sr1lpta1-vip"
+                ]
+            },
+            "rule_1551": {
+                "display_name": "EZOPS to BluePages",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-IBM-Bluepages"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "LDAP-over-SSL"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-IBM-Bluepages"
+                ]
+            },
+            "rule_1550": {
+                "display_name": "EZOPS to BMS",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-bldbmsa-boulder-ibm-com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-5508"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-bldbmsa-boulder-ibm-com"
+                ]
+            },
+            "rule_1549": {
+                "display_name": "EZOPS to SRM",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-w3-ibm-com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-w3-ibm-com"
+                ]
+            },
+            "rule_1555": {
+                "display_name": "EZOPS to ITM",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-EZOPS-ITM-hkgsni"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-3631",
+                    "TCP-8080",
+                    "TCP-9090",
+                    "TCP-1920"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-EZOPS-ITM-hkgsni"
+                ]
+            },
+            "rule_1554": {
+                "display_name": "EZOPS TO SMTP",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "SMTP"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ]
+            },
+            "rule_1553": {
+                "display_name": "EZOPS TO DEV",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.88"
+                ],
+                "destination_groups": [
+                    "AP1-SG-HOST-EZOPS-DEV"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "TCP-50000",
+                    "TCP-5000"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-HOST-EZOPS-DEV"
+                ]
+            }
+        }
+    }
+}

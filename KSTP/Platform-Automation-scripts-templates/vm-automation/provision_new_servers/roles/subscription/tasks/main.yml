@@ -1,0 +1,26 @@
+---
+    - name: register proxy
+      shell: grep Proxy /var/lib/cb/sensorsettings.ini |sed 's/=/ /g;s/:/ /g' | awk '{print $2}' 
+      register: proxy
+
+    - name: auto-subscribe to redhat.
+      redhat_subscription:
+        server_proxy_hostname: '{{ proxy.stdout }}'
+        server_proxy_port: 8080
+        state: present
+        username: '{{ rhuser }}'
+        password: '{{ rhpass }}'
+        auto_attach: true
+        force_register: true
+
+    - name: Enable a RHSM repository
+      rhsm_repository:
+        name: rhel-7-server-rpms
+
+    - name: upgrade server
+      yum:
+        update_cache=yes
+        name=*
+        state=latest
+        update_cache=yes
+...

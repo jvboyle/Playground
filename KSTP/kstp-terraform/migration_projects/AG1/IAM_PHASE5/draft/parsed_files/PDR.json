@@ -1,0 +1,151 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "DNS",
+            "ICP-Kubernetes API-Server",
+            "ICP-Docker Registry",
+            "ICP-Ingress Service",
+            "DNS-UDP",
+            "SMTP",
+            "NTP",
+            "ICP-Management Console",
+            "SMTP_TLS",
+            "ICP-WebSphere Application Server Liberty",
+            "ICP-Kubernetes NodePort"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-PDR01-ICp-agnplicp1",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-PDR01-ICp-Cluster01",
+            "TF-AG1-SG-PDR-SMTP-Server"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "1103": {
+                    "display_name": "TF-1103-PDR-to-SRES-DNS",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1104": {
+                    "display_name": "TF-1104-pdr-app-internal1",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1192": {
+                    "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP",
+                        "SMTP_TLS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ]
+                },
+                "1213": {
+                    "display_name": "TF-1213-ICp-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR01-ICp-Cluster01",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1321": {
+                    "display_name": "TF-1321-SRES-JH-to-ICP",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR01-ICp-agnplicp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR01-ICp-agnplicp1",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

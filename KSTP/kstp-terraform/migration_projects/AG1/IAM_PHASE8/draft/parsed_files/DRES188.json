@@ -1,0 +1,72 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-HOST-ag1d188lpcacpr2",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1d188lpcacpr1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES188": {
+            "category": "Application",
+            "rules": {
+                "2543": {
+                    "display_name": "TF-2543-OCP-to-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "100.64.162.50"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50079954",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d188lpcacpr2",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-HOST-ag1d188lpcacpr1"
+                    ]
+                },
+                "2551": {
+                    "display_name": "TF-2551-Proxy-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d188lpcacpr2",
+                        "TF-AG1-HOST-ag1d188lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-HOST-ag1d188lpcacpr2",
+                        "TF-AG1-HOST-ag1d188lpcacpr1"
+                    ]
+                }
+            }
+        }
+    }
+}

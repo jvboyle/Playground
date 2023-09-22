@@ -1,0 +1,42 @@
+######################################################
+# migration: IAM_PHASE5_renato
+######################################################
+   rule {
+         display_name = "TF-2818-Access-to-VPC"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1-nat",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-csc-subnet1-nat"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1-nat",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-csc-subnet1-nat"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-AG1"
+            }
+      }

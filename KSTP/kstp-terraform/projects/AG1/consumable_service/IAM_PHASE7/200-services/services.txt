@@ -1,0 +1,60 @@
+resource "nsxt_policy_service" "svc_tcp-1025" {
+      display_name = "TCP-1025"
+      nsx_id = "TCP-1025"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-1025"
+                  protocol = "TCP"
+                  destination_ports = ["1025"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-1035" {
+      display_name = "TCP-1035"
+      nsx_id = "TCP-1035"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-1035"
+                  protocol = "TCP"
+                  destination_ports = ["1035"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-1024" {
+      display_name = "TCP-1024"
+      nsx_id = "TCP-1024"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-1024"
+                  protocol = "TCP"
+                  destination_ports = ["1024"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-1027" {
+      display_name = "TCP-1027"
+      nsx_id = "TCP-1027"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-1027"
+                  protocol = "TCP"
+                  destination_ports = ["1027"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-1026" {
+      display_name = "TCP-1026"
+      nsx_id = "TCP-1026"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-1026"
+                  protocol = "TCP"
+                  destination_ports = ["1026"]
+            }
+      }
+}
+

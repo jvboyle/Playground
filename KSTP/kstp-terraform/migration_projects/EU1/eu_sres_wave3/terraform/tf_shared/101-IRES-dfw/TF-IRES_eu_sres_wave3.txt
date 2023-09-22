@@ -1,0 +1,188 @@
+######################################################
+# migration: eu_sres_wave3
+######################################################
+   rule {
+         display_name = "TF-5951-SL1-to-DB2-Servers"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-SL1-Collectors"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspdb000m1erms",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1erms",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlaspdb000iswrm",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlascdb000iswrm"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000-50006"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspdb000m1erms",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1erms",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-SL1-Collectors",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlaspdb000iswrm",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlascdb000iswrm"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-6338-SL1-DC-DB2-Server"
+         notes        = "SR50945970 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-SL1-Collectors"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-Portable"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000-50006"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspdb000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-SL1-Collectors",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-Portable"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-6340-SL1-monitoring-for-WebGUI"
+         notes        = "SR50946721"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr4-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr2-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr3-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr1-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr5-NAT"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnw000m1erms",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnw000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlaspnw000iswrm"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-16310-16311"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr4-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr2-NAT",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnw000m1erms",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr3-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr1-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlaspnw000iswrm",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr5-NAT",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnw000m1ermp"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7382-SL1-Prod-to-MnEaaS-Pre-Prod"
+         notes        = "SR51128536 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr4-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr2-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr3-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr1-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr5-NAT"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnp000m1erms"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr4-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr2-NAT",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnp000m1erms",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr3-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr1-NAT",
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-nlaspsl1dcr5-NAT"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7543-Qradar-log-collection-by-SFTP-"
+         notes        = "SR51187985"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-EU-MSS-QRADAR-DC"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-OTHER-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-DRES-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-OTHER-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-DRES-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-MNEAAS-EU-NWG"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-SG-OTHER-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-EU-MSS-QRADAR-DC",
+               "/infra/domains/default/groups/TF-EU1-SG-OTHER-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-DRES-MNEAAS-EU-NCI",
+               "/infra/domains/default/groups/TF-EU1-SG-DRES-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNEAAS-EU-NWG",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNEAAS-EU-NCI"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }

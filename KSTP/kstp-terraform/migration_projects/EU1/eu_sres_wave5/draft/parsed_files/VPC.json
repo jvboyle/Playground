@@ -1,0 +1,295 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-16311",
+            "TCP-6969",
+            "HTTPS",
+            "TCP-50000",
+            "TCP-31673",
+            "TCP-31480",
+            "TCP-4500",
+            "TCP-31220"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-HOST-nlascni000m1ermp",
+            "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+            "TF-EU1-SG-SRES-HOST-nlaspno000m1ermp",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+            "TF-EU1-HOST-eu1srwphwcgrfdb",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-nlascno000m1ermp",
+            "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+            "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES01-MEaaS-PreProd",
+            "TF-EU1-HOST-nlaspdb000m1erms",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+            "TF-EU1-SG-SRES-HOST-nlaspni000m1erms",
+            "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1",
+            "TF-EU1-IPSET-NET-IBM-Blue",
+            "TF-EU1-IPSET-nlasabuildisw00",
+            "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+            "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp",
+            "TF-EU1-HOST-nlasabuildm1e00p",
+            "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+            "TF-EU1-IPSET-AG1-SRES-ag-work01",
+            "TF-EU1-HOST-eu1srwdhwcgrfds",
+            "TF-EU1-SG-SRES-HOST-nlaspni000m1ermp",
+            "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "7065": {
+                    "display_name": "TF-7065-NOI-ROKS-to-SRES-MnE",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-MEaaS-PreProd",
+                        "TF-EU1-SG-SRES-HOST-nlascni000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1erms",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-SG-SRES-HOST-nlaspno000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-16311",
+                        "TCP-6969",
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50975710\nSR51101872",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-MEaaS-PreProd",
+                        "TF-EU1-SG-SRES-HOST-nlascni000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1erms",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-SG-SRES-HOST-nlaspno000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp"
+                    ]
+                },
+                "7099": {
+                    "display_name": "TF-7099-TEMP-AG1-Shared-NonProd-IKS-to-MnE",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-nlasabuildisw00",
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-nlasabuildisw00",
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-31673",
+                        "HTTPS",
+                        "TCP-31480"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51014093",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-nlasabuildisw00",
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ]
+                },
+                "7159": {
+                    "display_name": "TF-7159-Access-to-VPC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-NET-IBM-Blue"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51327244",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat",
+                        "TF-EU1-IPSET-NET-IBM-Blue",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat"
+                    ]
+                },
+                "8126": {
+                    "display_name": "TF-8126-AG1-Shared-NonProd-IKS-to-MnE-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srwdhwcgrfds"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51369687, SR51398149",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srwdhwcgrfds",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ]
+                },
+                "8254": {
+                    "display_name": "TF-8254-HWSW-GRF-VPC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srwphwcgrfdb"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51415692",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srwphwcgrfdb",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ]
+                },
+                "8264": {
+                    "display_name": "TF-8264-SRES-to-Softlayer-Private-Service-endpoints",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-nlasabuildisw00",
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-31220"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51379271 ",
+                    "scope": [
+                        "TF-EU1-IPSET-nlasabuildisw00",
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+                    ]
+                },
+                "8700": {
+                    "display_name": "TF-8700-AIOPS-VPC-NA-to-EU-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-HOST-nlaspdb000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0121556",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ]
+                },
+                "9114": {
+                    "display_name": "TF-9114-AG-VPC-to-Netcool-LDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-HOST-nlaspdb000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148555",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ]
+                }
+            }
+        }
+    }
+}

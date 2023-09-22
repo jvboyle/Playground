@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+            "TF-EU1-HOST-eu1d229lpcacprx2",
+            "TF-EU1-HOST-eu1d229lpcacprx1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES229": {
+            "category": "Application",
+            "rules": {
+                "7603": {
+                    "display_name": "TF-7603-ISIM-IAM-automation",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d229lpcacprx2",
+                        "TF-EU1-HOST-eu1d229lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50089604",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                        "TF-EU1-HOST-eu1d229lpcacprx2",
+                        "TF-EU1-HOST-eu1d229lpcacprx1"
+                    ]
+                }
+            }
+        }
+    }
+}

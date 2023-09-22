@@ -1,0 +1,77 @@
+{{- if .Values.prometheus.enabled }}
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: {{ .Release.Name }}-dash-node-exporter
+  namespace: kube-system
+  labels:
+    app: dash-node-exporter
+spec:
+  updateStrategy:
+    type: OnDelete
+  template:
+    metadata:
+      labels:
+        app: dash-node-exporter
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: {{ .Values.nodeExporter.port | quote }}
+    spec:
+      #serviceAccountName: {{ .Release.Name }}-dash-node-exporter
+      containers:
+        - name: dash-node-exporter
+          image: "ibmcb-docker-local.artifactory.swg-devops.com/node-exporter"
+          imagePullPolicy: "IfNotPresent"
+          args:
+            - {{- printf " --web.listen-address=:%s" .Values.nodeExporter.port }}
+            - --path.procfs=/host/proc
+            - --path.sysfs=/host/sys
+            - --collector.filesystem.ignored-mount-points
+            - '^(\/rootfs\/var\/lib\/|\/rootfs\/run\/docker\/|\/rootfs/sys/kernel\/|\/var\/run\/docker\/netns\/|\/(host|root)\/sys\/kernel\/debug\/).*'
+          ports:
+            - containerPort: {{ .Values.nodeExporter.port }}
+              name: metrics
+              protocol: TCP
+          volumeMounts:
+            - name: dev
+              mountPath: /host/dev
+              readOnly:  true
+            - name: proc
+              mountPath: /host/proc
+              readOnly:  true
+            - name: sys
+              mountPath: /host/sys
+              readOnly: true
+            - name: rootfs
+              mountPath: /rootfs
+              readOnly:  true
+          resources:
+            limits:
+              cpu: 10m
+              memory: 50Mi
+            requests:
+              cpu: 10m
+              memory: 50Mi
+          securityContext:
+              privileged: true
+      hostNetwork: true
+      hostPID: true
+      hostIPC: true
+      volumes:
+        - name: proc
+          hostPath:
+            path: /proc
+        - name: dev
+          hostPath:
+            path: /dev
+        - name: sys
+          hostPath:
+            path: /sys
+        - name: rootfs
+          hostPath:
+            path: /
+      {{- if .Values.imageCredentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}-node-exporter-regcred
+      {{- end }}
+{{- end }}

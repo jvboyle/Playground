@@ -1,0 +1,363 @@
+{
+    "TF-EU1-SG-DR24-RPA-AA-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nld24cambpdgb",
+                "starts_with:nld24canbpdsb",
+                "starts_with:nld24canbpdbb",
+                "starts_with:nld24canbpdgb",
+                "starts_with:nld24cambpdbb",
+                "starts_with:nld24cambpdsb"
+            ]
+        }
+    },
+    "TF-EU1-SG-DR24-RPA-AA-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nld24canbppsb",
+                "starts_with:nld24canbppbb",
+                "starts_with:nld24cambppgb",
+                "starts_with:nld24canbppgb",
+                "starts_with:nld24cambppsb",
+                "starts_with:nld24cambppbb"
+            ]
+        }
+    },
+    "TF-EU1-SG-DR24-RPA-AA-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nld24cambpusb",
+                "starts_with:nld24cambpubb",
+                "starts_with:nld24canbpusb",
+                "starts_with:nld24canbpubb",
+                "starts_with:nld24canbpugb",
+                "starts_with:nld24cambpugb"
+            ]
+        }
+    },
+    "TF-EU1-SG-DRES-MNEAAS-EU-NCI": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:eu1dr",
+                "contains:lp",
+                "contains:ni"
+            ]
+        }
+    },
+    "TF-EU1-SG-DRES-MNEAAS-EU-NWG": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:eu1dr",
+                "contains:lp",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:aadgb",
+                "contains:aadsb",
+                "contains:aadbb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:aapbb",
+                "contains:aapsb",
+                "contains:aapgb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:aaugb",
+                "contains:aaubb",
+                "contains:aausb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-AA-ALL-Pool-Images": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:aagld"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-BP-ALL-AppServers": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:bpdap",
+                "contains:bppap",
+                "contains:bpuap"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:bpdbb",
+                "contains:bpdsb",
+                "contains:bpdgb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:bppgb",
+                "contains:bppsb",
+                "contains:bppbb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:bpubb",
+                "contains:bpugb",
+                "contains:bpusb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-BP-ALL-Pool-Images": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:bpgld"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-UP-ALL-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:updgb",
+                "contains:updbb",
+                "contains:updsb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-UP-ALL-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:uppgb",
+                "contains:uppbb",
+                "contains:uppsb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-UP-ALL-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:upugb",
+                "contains:upubb",
+                "contains:upusb"
+            ]
+        }
+    },
+    "TF-EU1-SG-RPA-UP-ALL-Pool-Images": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nl",
+                "contains:upgld"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-MNEAAS-EU-NCI": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:ni"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-MNEAAS-EU-NWG": {
+        "Issue": {
+            "Error": "Multiple criteria, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-DWS-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-DWS-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-DWS-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-DWS-Pool-Images": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-SPA-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-SPA-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-SPA-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-AA-SPA-Pool-Images": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GBS-GBS-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GBS-GBS-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GBS-GBS-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GBS-GBS-Pool-Images": {
+        "Issue": {
+            "Error": "There are duplicated VMs within the same group, that is not allowed.",
+            "Dynamic_query": [
+                "starts_with:eu1srlpm1e",
+                "contains:wg"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GTS-SPA-Desktop-Pool_DEV": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nls01ECIbpdgb",
+                "starts_with:nls01ECIbpdbb",
+                "starts_with:nls01ECIbpdsb",
+                "starts_with:nls01SPAbpdgb",
+                "starts_with:nls01SPAbpdbb",
+                "starts_with:nls01SPAbpdsb"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GTS-SPA-Desktop-Pool_PROD": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nls01ECIbppgb",
+                "starts_with:nls01ECIbppbb",
+                "starts_with:nls01ECIbppsb",
+                "starts_with:nls01SPAbppsb",
+                "starts_with:nls01SPAbppgb",
+                "starts_with:nls01SPAbppbb"
+            ]
+        }
+    },
+    "TF-EU1-SG-SRES-RPA-BP-GTS-SPA-Desktop-Pool_UAT": {
+        "Issue": {
+            "Error": "More than 5 conditional blocks were identified which is not allowed, must be manually checked/migrated.",
+            "Dynamic_query": [
+                "starts_with:nls01ECIbpugb",
+                "starts_with:nls01ECIbpusb",
+                "starts_with:nls01ECIbpubb",
+                "starts_with:nls01SPAbpusb",
+                "starts_with:nls01SPAbpubb",
+                "starts_with:nls01SPAbpugb"
+            ]
+        }
+    }
+}

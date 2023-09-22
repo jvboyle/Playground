@@ -1,0 +1,121 @@
+{
+    "display_name": "in1-etn-013",
+    "node_deployment_info": {
+        "deployment_type": "VIRTUAL_MACHINE",
+        "deployment_config": {
+            "vm_deployment_config": {
+                "vc_id": "e3f3eff3-3b35-444c-be2b-8f95294bf5bf",
+                "compute_id": "domain-c1006",
+                "storage_id": "datastore-1012",
+                "management_network_id": "dvportgroup-1028",
+                "management_port_subnets": [
+                    {
+                        "ip_addresses": [
+                            "10.162.152.213"
+                        ],
+                        "prefix_length": "26"
+                    }
+                ],
+                "default_gateway_addresses": [
+                    "10.162.152.193"
+                ],
+                "data_network_ids": [
+                    "dvportgroup-2010",
+                    "dvportgroup-2011",
+                    "dvportgroup-2021"
+                ],
+                "placement_type": "VsphereDeploymentConfig"
+            },
+            "form_factor": "MEDIUM",
+            "node_user_settings": {
+                "cli_username": "admin",
+                "root_password": "F+pXAbnhnF&C>X3",
+                "cli_password": "F+pXAbnhnF&C>X3"
+            }
+        },
+        "resource_type": "EdgeNode",
+        "display_name": "in1-etn-013",
+        "node_settings": {
+            "hostname": "in1-etn-013.in1.sp.ibm.local",
+            "search_domains": [
+                "in1.sp.ibm.local"
+            ],
+            "ntp_servers": [
+                "10.0.77.54"
+            ],
+            "dns_servers": [
+                "10.162.101.194",
+                "10.162.101.195"
+            ],
+            "enable_ssh": true,
+            "allow_ssh_root_login": false,
+            "syslog_servers": [
+                {
+                    "server": "10.175.236.77",
+                    "port": "514",
+                    "protocol": "UDP",
+                    "log_level": "INFO"
+                }
+            ]
+        },
+        "ip_addresses": [
+            "10.162.152.213"
+        ]
+    },
+    "host_switch_spec": {
+        "resource_type": "StandardHostSwitchSpec",
+        "host_switches": [
+            {
+                "host_switch_profile_ids": [
+                    {
+                        "key": "UplinkHostSwitchProfile",
+                        "value": "303403a0-3b1a-444c-8f7e-4dde443c8985"
+                    }
+                ],
+                "host_switch_name": "nvds-edge-private",
+                "pnics": [
+                    {
+                        "device_name": "fp-eth0",
+                        "uplink_name": "uplink-1"
+                    },
+                    {
+                        "device_name": "fp-eth1",
+                        "uplink_name": "uplink-2"
+                    }
+                ],
+                "ip_assignment_spec": {
+                    "resource_type": "StaticIpPoolSpec",
+                    "ip_pool_id": "bc03d6d9-af16-448d-9f15-3dca76b255fc"
+                },
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "560d0068-7623-48c8-b66c-f0787b636de3"
+                    },
+                    {
+                        "transport_zone_id": "4f87910f-9cf3-4a32-97b0-ce9cbcbaaa7f"
+                    }
+                ]
+            },
+            {
+                "host_switch_profile_ids": [
+                    {
+                        "value": "6bc550f5-6e56-4a83-b88d-78618cc8ff0a",
+                        "key": "UplinkHostSwitchProfile"
+                    }
+                ],
+                "host_switch_name": "nvds-edge-public",
+                "pnics": [
+                    {
+                        "device_name": "fp-eth2",
+                        "uplink_name": "uplink-1"
+                    }
+                ],
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "9912edd8-15ec-40c0-8ef4-b0e5d96ff1ba"
+                    }
+                ]
+            }
+        ]
+    }
+}

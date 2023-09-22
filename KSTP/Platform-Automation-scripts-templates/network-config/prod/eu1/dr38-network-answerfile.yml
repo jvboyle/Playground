@@ -1,0 +1,41 @@
+---
+#Specific Subnet and IP assignemnts for DRES NSX network elements
+app_internal_name: '{{ dres_name }}-app-internal01'
+esg_dlr_transit_name: ‘{{ dres_name }}-esg-vpn-transit1’
+esg_vpn_transit_name: ‘{{ dres_name }}-esg-dlr-transit1’
+
+app_internal_subnet: '100.72.126.0'
+app_internal_subnet_prefix: 24
+
+dres_transit_subnet: '100.72.1.208'
+dres_transit_subnet_prefix: 28
+
+esg_dlr_transit_subnet: '100.72.1.216'
+esg_dlr_transit_subnet_prefix: 29
+
+esg_vpn_transit_subnet: '100.72.1.208'
+esg_vpn_transit_subnet_prefix: 29
+
+#res_esg interface details
+res_esg_vnic0_ip: '100.72.64.32'
+res_esg_vnic0_ip_prefix: 24
+
+res_esg_vnic1_ip: '100.72.1.210'
+res_esg_vnic1_ip_prefix: 29
+
+res_esg_vnic2_ip: '100.72.1.217'
+res_esg_vnic2_ip_prefix: 29
+
+##vpn_esg interface details
+vpn_esg_vnic0_ip: '169.50.185.98'
+vpn_esg_vnic0_ip_prefix: 27
+
+vpn_esg_vnic1_ip: '100.72.1.209'
+vpn_esg_vnic1_ip_prefix: 29
+
+#dlr interface details
+dlr_uplink1_ip: '100.72.1.218'
+dlr_uplink1_ip_prefix: 29
+
+dlr_internal1_ip: '100.72.126.1'
+dlr_internal1_ip_prefix: 24

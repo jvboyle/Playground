@@ -1,0 +1,10 @@
+- name: Extract APM agent archive
+  unarchive:
+   copy: no
+   src: "{{ os_repo_path }}/MEaaS/IAPM_LNX_Agent_Install_8.1.4.0_GTS.tar.gz"
+   dest: "{{ os_repo_path }}/MEaaS"
+  tags: apm
+- name: Install APM agent
+  shell: "/bin/bash {{ os_repo_path }}/MEaaS/{{ APM_installation_path }}/{{ APM_installation_script }} -inst_dir /opt/ibm/apm/agent -img_dir {{ os_repo_path }}/MEaaS/{{ APM_installation_path }} -inst_type IPM8CLOUD -pc lz -tenant 41B8-4B51-AD3C-DF8D-E688-79D1-3B76-F9B0 -keyfiles {{ os_repo_path }}/MEaaS/keyfiles -valid_port NO -upgr NO -keep_conf NO -pr NO -subscr 41b84b51ad3cdf8de68879d13b76f9b0 -dc eu  -proxy YES -ip {{ proxy_host }} -port {{ proxy_port }} -append YES -cus i2p"
+  ignore_errors: yes
+  tags: apm

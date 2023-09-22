@@ -1,0 +1,31 @@
+######################################################
+# migration: eu_sres_wave6
+######################################################
+   rule {
+         display_name = "TF-9180-ASA-GW-to-Windows-JH"
+         notes        = "RITM0150241 RITM0157024"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-PDR-OKTA-ASA-GW"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-RPA-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1sr1wpiamprra",
+               "/infra/domains/default/groups/TF-EU1-IPSET-sres-esg1-rpards-lb-vip-2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/RDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-EU1"
+            }
+      }

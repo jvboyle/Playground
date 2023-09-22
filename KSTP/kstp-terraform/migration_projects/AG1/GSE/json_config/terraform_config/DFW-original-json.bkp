@@ -1,0 +1,224 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-5693",
+            "SMTP",
+            "UDP-5693",
+            "ICMP Echo Reply",
+            "HTTPS",
+            "ICMP Echo Request",
+            "SSH",
+            "TCP-27017",
+            "LDAP-over-SSL"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF_AG1-AG1-Host-ag1srlpgse1000",
+            "TF_AG1-NET-IBM-Blue",
+            "TF_AG1-HOST-AP-ap1srlpgsehst01",
+            "TF_AG1-HOST-IBM-Bluepages",
+            "TF_AG1-HOST-ag1srlpgse1000",
+            "TF_AG1-HOST-ag1pdr1smtp01"
+        ]
+    },
+    "map_policies": {
+        "TF_GSE": {
+            "category": "Application",
+            "rules": {
+                "TF_rule_2330": {
+                    "display_name": "2330_IBM_Blue__to_SRES",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-NET-IBM-Blue"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF_AG1-NET-IBM-Blue",
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_2335": {
+                    "display_name": "2335_SRES_GSE_Host_to_IBM_BluePages",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-HOST-IBM-Bluepages"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "LDAP-over-SSL",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR50951941",
+                    "scope": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-IBM-Bluepages",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_2334": {
+                    "display_name": "2334_SRE_GSE_Host_to_PDR_SNMP_Relay",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-HOST-ag1pdr1smtp01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR50958760",
+                    "scope": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1pdr1smtp01",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_2361": {
+                    "display_name": "2361_IBM_Blue_to_GSE",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-NET-IBM-Blue"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR50952031",
+                    "scope": [
+                        "TF_AG1-NET-IBM-Blue",
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_2949": {
+                    "display_name": "2949_AP_HST_to_NA_GSENNA",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-HOST-AP-ap1srlpgsehst01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICMP Echo Request",
+                        "TCP-5693",
+                        "ICMP Echo Reply",
+                        "SSH",
+                        "HTTPS",
+                        "UDP-5693",
+                        "TCP-27017"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR51187586",
+                    "scope": [
+                        "TF_AG1-HOST-AP-ap1srlpgsehst01",
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_2950": {
+                    "display_name": "2950_NA_GSENNA_to_AP_HST",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-HOST-AP-ap1srlpgsehst01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5693",
+                        "SSH",
+                        "HTTPS",
+                        "TCP-27017"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR51187586",
+                    "scope": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-AP-ap1srlpgsehst01",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                },
+                "TF_rule_3311": {
+                    "display_name": "3311_Blue_to_SDDC_Prod_DB_",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AG1-NET-IBM-Blue"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-27017"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "SR51383025",
+                    "scope": [
+                        "TF_AG1-NET-IBM-Blue",
+                        "TF_AG1-AG1-Host-ag1srlpgse1000",
+                        "TF_AG1-HOST-ag1srlpgse1000"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+  - name: GET all regional edges
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges?pageSize=560"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: get_edges

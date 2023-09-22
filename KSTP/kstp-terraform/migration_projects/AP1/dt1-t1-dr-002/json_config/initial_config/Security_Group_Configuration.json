@@ -1,0 +1,665 @@
+{
+    "SG-SRES-IAM-THY-MSSQL-PROD": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES-IAM-THY-MSSQL-PROD-VIP",
+            "IPSET-SRES-IAM-THY-MSSQL-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-PDR-SMTP-Relay": {
+        "vms": [
+            "ap1pdr1smtp01"
+        ],
+        "ipset": [
+            "HOST-ap1pdr1smtp01-IRES-NAT"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-DRES114-OCP-Cluster01": {
+        "vms": [],
+        "ipset": [
+            "HOST-DRES114-LB-OCP-Cluster1-VIP-2",
+            "HOST-DR114-LB1-PrimaryIP",
+            "HOST-DRES114-LB-OCP-Cluster1-VIP-1"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-WIN-SQL": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1sr1sql01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "EU1-SRES-SEPM": {
+        "vms": [],
+        "ipset": [
+            "eu1sr1sepm1"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-RAS-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-RAS-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SMTP-Clients": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": [
+            "SG-SRES-IAM-THY-PROXY-PROD"
+        ]
+    },
+    "SG-DRES110-OCP-Cluster01": {
+        "vms": [],
+        "ipset": [
+            "HOST-DR110-LB1-PrimaryIP",
+            "HOST-DRES110-LB-OCP-Cluster1-VIP-1",
+            "HOST-DRES110-LB-OCP-Cluster1-VIP-2"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES01-OCP-Build": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1sr1wdns01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-SVG-PROD": {
+        "vms": [],
+        "ipset": [
+            "HOST-ap1sr1apiamprsvg1-secondary-IP",
+            "HOST-SRES-IAM-THY-SVG-PROD",
+            "HOST-ap1sr1apiamprsvg2-secondary-IP",
+            "IPSET-SRES-IAM-THY-SVG-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES01-OCP-Cluster01": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES1-LB-OCP-Cluster1-VIP",
+            "HOST-SRES-OCP-Cluster04-SNAT",
+            "HOST-SRES1-LB-VIP-OCP1",
+            "HOST-SRES01-ICP-Cluster01",
+            "HOST-SRES1-LB1-PrimaryIP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-HRES-HA-Proxy-OUT": {
+        "vms": [
+            "ap1h1lpta2hap2",
+            "ap1h1lpta2hap1"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-DE-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-DE-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SL-IRES-Internet-Proxy-Clients": {
+        "vms": [],
+        "ipset": [
+            "NET-SL-IRES-Portable"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES01-OCP-Cluster03": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES-LB-OCP-Cluster03-VIP",
+            "HOST-SRES-LB-OCP-Cluster03-VIP1",
+            "HOST-SRES1-LB1-PrimaryIP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-STaaS-AD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-STaaS-AD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-Network-Automation-Server-Group": {
+        "vms": [],
+        "ipset": [
+            "HOST-IRES-ap1irlptfa01",
+            "HOST-IRES-ap1irlpipam01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-SDI-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-SDI-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-DRES110-OCP-Cluster02": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-LIN-MSS-Qradar-EC": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-DRES-ALL-CACF-Proxy": {
+        "vms": [
+            "ap1d130lpcacpr1",
+            "ap1sr1lpcacprx2",
+            "ap1d107lpcacpr2",
+            "ap1d127lpcacpr1",
+            "ap1d110lpcacpr1",
+            "ap1d110lpcacpr2",
+            "ap1d108lpcacpr1",
+            "ap1d107lpcacpr1",
+            "ap1d103lpcacprx1",
+            "ap1pdr1prx02",
+            "ap1pdr1prx01",
+            "ap1d105lpcacpr2",
+            "ap1d105lpcacpr1",
+            "ap1d141lpcacpr1",
+            "ap1d114lpcacpr1",
+            "ap1h1lpta1ssh2",
+            "ap1d128lpcacpr1",
+            "ap1d114lpcacpr2",
+            "ap1d101lpcacprx1",
+            "ap1d129lpcacpr1",
+            "ap1h1lpta1ssh1",
+            "ap1sr1lpcacprx1"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-DRES-Proxy-Servers": {
+        "vms": [
+            "ap1d107lpcacpr1",
+            "ap1d103lpcacprx1",
+            "ap1d130lpcacpr1",
+            "ap1d105lpcacpr2",
+            "ap1d141lpcacpr1",
+            "ap1d105lpcacpr1",
+            "ap1d128lpcacpr1",
+            "ap1d127lpcacpr1",
+            "ap1d110lpcacpr1",
+            "ap1d101lpcacprx1",
+            "ap1d108lpcacpr1"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "DRES264 CACF Proxy": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-WIN-WSUS": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1sr1wsus01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-Linux-Jump-Servers": {
+        "vms": [],
+        "ipset": [
+            "HOST-dnat-to-ap1sr1ljmp01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-WIN-SEPM": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-Windows-Servers": {
+        "vms": [],
+        "ipset": [
+            "NET-SYD-SRES-GSNI-subnet"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-STaaS-AD-Clients": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-STaaS-AD-Clients"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SL-IRES-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ap1dc2",
+            "ap1dc1"
+        ],
+        "ipset": [
+            "IPSET-SL-IRES-WIN-AD-DNS-NTP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SL-IRES-NSX-Management": {
+        "vms": [],
+        "ipset": [
+            "HOST-SL-IRES-NSXM"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-WINDOWS-PROD-AD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-WINDOWS-PROD-AD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-DRES164-OCP-Cluster01": {
+        "vms": [],
+        "ipset": [
+            "HOST-DRES164-LB-OCP-Cluster1-VIP-1",
+            "HOST-DRES164-LB-OCP-Cluster1-VIP-2"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-WIN-VMware-Monitoring": {
+        "vms": [
+            "ap1vmon"
+        ],
+        "ipset": [
+            "HOST-ap1vmon"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-NODB-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-NODB-PROD"
+        ],
+        "ips": [],
+        "sg": [
+            "SG-SRES-IAM-THY-DE-PROD",
+            "SG-SRES-IAM-THY-SECRET-PROD",
+            "SG-SRES-IAM-THY-SDI-PROD",
+            "SG-SRES-IAM-THY-RMQ-PROD"
+        ]
+    },
+    "SG-SL-IRES-WIN-Jump-Servers": {
+        "vms": [
+            "ap1jump02"
+        ],
+        "ipset": [
+            "HOST-SL-IRES-VSI-WIN-Jump-Servers"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "TEST-SG-SRES01-Icp-Cluster01": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES01-OCP-Cluster02": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES1-LB-OCP-Cluster2-VIP",
+            "HOST-SRES1-LB1-PrimaryIP",
+            "HOST-SRES1-LB-VIP-OCP2"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SMTP-sendgrid-net": {
+        "vms": [],
+        "ipset": [
+            "HOST-smtp-sendgrid-net"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-MNEAAS-AP-NCI": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1srlpm1epni",
+            "Host-ap1srlpm1ecni"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-LIN-SFTP-Backup": {
+        "vms": [],
+        "ipset": [
+            "HOST-ap1sftp02-IRES-NAT"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-SECRET-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-SECRET-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-MNEAAS-AP-NWG": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1srlpm1epwg"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-HRES-HA-Proxy-IN": {
+        "vms": [
+            "ap1h1lpta1hap2",
+            "ap1h1lpta1hap1"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-Sciencelogic-DB-servers": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-STaaS-AD-DNS": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-STaaS-AD-DNS"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-RHEL-Licensing": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SL-IRES-VMWARE-Management": {
+        "vms": [],
+        "ipset": [
+            "HOST-SL-IRES-vCenter"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-PDR-Internet-Proxy-Server": {
+        "vms": [
+            "ap1pdr1prx02",
+            "ap1pdr1prx01"
+        ],
+        "ipset": [
+            "HOST-PDR-Proxy-VIP",
+            "HOST-dnat-to-PDR-Proxy-from-IRES"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "EU1-SR1-Server": {
+        "vms": [],
+        "ipset": [
+            "eu1sr1lparmsisi"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES01-Icp-Cluster01": {
+        "vms": [],
+        "ipset": [
+            "NET-ICp-Pod-Network",
+            "NET-ICp-ClusterIP-Service-Network",
+            "HOST-ICp-VRRP-IP",
+            "HOST-SRES01-ICP-Cluster01"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-SPPLUS": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-NAB-RDP-PROD": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES-NAB-RDP-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-WINDOWS-PROD": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": [
+            "SG-SRES-IAM-THY-MSSQL-PROD",
+            "SG-SRES-IAM-THY-RAS-PROD",
+            "SG-SRES-IAM-THY-DE-PROD",
+            "SG-SRES-IAM-THY-SECRET-PROD",
+            "SG-SRES-IAM-THY-RMQ-PROD"
+        ]
+    },
+    "SG-SRES-WIN-DNS-NTP": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-WIN-DNS-NTP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "HOST-SRES-HWSW-PROD": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES-HWSW-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SL-VCS-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ADNSap11",
+            "ADNSap12"
+        ],
+        "ipset": [
+            "HOST-SL-VCS-WIN-AD-DNS-NTP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-LINUX-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-LINUX-PROD"
+        ],
+        "ips": [],
+        "sg": [
+            "SG-SRES-IAM-THY-SDI-PROD",
+            "SG-SRES-IAM-THY-SVG-PROD",
+            "SG-SRES-IAM-THY-DB2-PROD",
+            "SG-SRES-IAM-THY-PROXY-PROD"
+        ]
+    },
+    "SG-BigFix-Relay": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1sr1bfrelay2",
+            "Host-ap1sr1bfrelay1"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-RDP-PROD": {
+        "vms": [],
+        "ipset": [
+            "HOST-SRES-IAM-THY-PROXY-PROD-VIP",
+            "HOST-SRES-IAM-THY-RMQ-PROD-VIP",
+            "HOST-SRES-IAM-THY-MSSQL-PROD-VIP",
+            "HOST-SRES-IAM-THY-SVG-PROD",
+            "IPSET-SRES-IAM-THY-RDP-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-WIN-VMware-vROPS": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-RMQ-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-RMQ-PROD",
+            "HOST-SRES-IAM-THY-RMQ-PROD-VIP"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-Automation-Control-Node": {
+        "vms": [
+            "ap1sr1cntrl1_old"
+        ],
+        "ipset": [
+            "Host-ap1sr1cntrl1"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-All-VMs": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-All-VMs"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-WIN-Jump-Servers": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1sr1wjmp02",
+            "HOST-SRES-WIN-Jump-Servers-VIP",
+            "Host-ap1sr1wjmp01",
+            "HOST-dnat-to-ap1sr1wjmp00"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-WIN-TS-Licensing": {
+        "vms": [
+            "ap1wtslic01"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-WIN-VMware-vLI": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-AP-MSS-QRADAR-DC": {
+        "vms": [
+            "ap1lmssqr01"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-ap1sr1wppd": {
+        "vms": [],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-HRES-TALOS-SSHProxy": {
+        "vms": [
+            "ap1h1lpta1ssh2",
+            "ap1h1lpta1ssh1"
+        ],
+        "ipset": [
+            "HOST-SNAT-to-DA"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-IRES-WIN-VMware-vRO": {
+        "vms": [
+            "ap1vro01"
+        ],
+        "ipset": [],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-DB2-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-DB2-PROD"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-Sciencelogic-servers": {
+        "vms": [],
+        "ipset": [
+            "Host-ap1srlpm1esc1",
+            "Host-ap1srlpm1esbk1"
+        ],
+        "ips": [],
+        "sg": []
+    },
+    "SG-SRES-IAM-THY-PROXY-PROD": {
+        "vms": [],
+        "ipset": [
+            "IPSET-SRES-IAM-THY-PROXY-PROD",
+            "HOST-SRES-IAM-THY-PROXY-PROD-VIP"
+        ],
+        "ips": [],
+        "sg": []
+    }
+}

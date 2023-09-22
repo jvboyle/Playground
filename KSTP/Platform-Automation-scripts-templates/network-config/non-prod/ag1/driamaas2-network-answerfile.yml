@@ -1,0 +1,26 @@
+customer_name: IAMaaS Thycotic POC
+blue_id: N/A
+dres_name: driamaas2
+app_internal_name: "driamaas2-app-internal1"
+app_internal_subnet: 100.64.130.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.64.130.1
+dres_transit_subnet: 100.64.1.240
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "driamaas2-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.64.1.240
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.64.1.242
+vpn_esg_vnic1_ip: 100.64.1.241
+esg_dlr_transit_name: "driamaas2-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.64.1.248
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.64.1.249
+dlr_uplink1_ip: 100.64.1.250
+res_esg_vnic0_ip: 100.64.64.34
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: ag1-e-dvs1-pub-dvpg-pub-ns-874
+vpn_esg_vnic0_ip: 52.116.104.73
+vpn_esg_vnic0_ip_prefix: 27

@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DRES18-MNEAAS-BOI-NCPP",
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+            "TF-EU1-HOST-eu1srlpm1easbcp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES18": {
+            "category": "Application",
+            "rules": {
+                "4985": {
+                    "display_name": "TF-4985-HTEMS-event-forward-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES18-MNEAAS-BOI-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DRES18-MNEAAS-BOI-NCPP",
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ]
+                },
+                "4988": {
+                    "display_name": "TF-4988-BlueCare-sync-HTEMS-post-migration-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES18-MNEAAS-BOI-NCPP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DRES18-MNEAAS-BOI-NCPP",
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ]
+                }
+            }
+        }
+    }
+}

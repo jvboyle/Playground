@@ -1,0 +1,10 @@
+  - name: generate vcenter login token for rest api authentication
+    uri:
+      url: "https://{{ vcenter }}/rest/com/vmware/cis/session"
+      force_basic_auth: yes
+      method: POST
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code: 200
+      validate_certs: no
+    register: vc_login

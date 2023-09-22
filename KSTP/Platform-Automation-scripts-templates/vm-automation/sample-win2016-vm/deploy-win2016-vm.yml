@@ -1,0 +1,22 @@
+- hosts: localhost
+  connection: local
+  vars_prompt:
+#    - name: "vmName"
+#      prompt: "Enter VM name"
+#      private: no
+#
+#    - name: "region_type"
+#      prompt: "Enter Region type (prod, non-prod) `# Case sensitive`"
+#      private: no
+#
+#    - name: "region"
+#      prompt: "Enter Region (ag1,eu1) `# Case sensitive`"
+#      private: no
+
+
+  vars_files:
+    - ../../region-configs/{{ region_type }}/{{ region }}/region-answerfile.yml
+
+  roles:
+      - check-vmExist
+      - provision-vm

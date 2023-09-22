@@ -1,0 +1,84 @@
+---
+
+#NSX Manager connection details and RMAL spec location.
+nsxmanager_spec:
+  raml_file: './nsxraml/nsxvapi.raml'
+  host: '{{ nsx_manager }}'
+  user: '{{ vcenter_user }}'
+  password: '{{ vcenter_pwd }}'
+
+#New DRES logical switch (VXLAN)
+new_ls:
+    app_internal: {network: '{{ app_internal_subnet }}', prefix_len: '{{ app_internal_subnet_prefix }}', name: '{{ app_internal_name }}'}
+    esg_dlr_transit: {network: '{{ esg_dlr_transit_subnet }}', prefix_len: '{{ esg_dlr_transit_subnet_prefix }}', name: '{{ esg_dlr_transit_name }}'}
+    esg_vpn_transit: {network: '{{ esg_vpn_transit_subnet }}', prefix_len: '{{ esg_vpn_transit_subnet_prefix }}', name: '{{ esg_vpn_transit_name }}'}
+
+#res_esg interface details
+res_esg_vnic0: {ip: '{{ res_esg_vnic0_ip }}', prefix: '{{ res_esg_vnic0_ip_prefix }}', name: '{{ provider_transit }}', logical_switch: '{{ provider_transit }}', iftype: 'uplink'}
+res_esg_vnic1: {ip: '{{ res_esg_vnic1_ip }}', prefix: '{{ new_ls.esg_vpn_transit.prefix_len }}', name: '{{ new_ls.esg_vpn_transit.name }}', logical_switch: '{{ new_ls.esg_vpn_transit.name }}', iftype: 'uplink'}
+res_esg_vnic2: {ip: '{{ res_esg_vnic2_ip }}', prefix: '{{ new_ls.esg_dlr_transit.prefix_len }}', name: '{{ new_ls.esg_dlr_transit.name }}', logical_switch: '{{ new_ls.esg_dlr_transit.name }}', iftype: 'internal'}
+
+##vpn_esg interface details
+vpn_esg_vnic0: {ip: '{{ vpn_esg_vnic0_ip }}', prefix: '{{ vpn_esg_vnic0_ip_prefix }}', name: '{{ pub_ns_portgroup }}', portgroup_id: "{{ gather_moids_pub_pg.object_id }}", iftype: 'uplink'}
+vpn_esg_vnic1: {ip: '{{ vpn_esg_vnic1_ip }}', prefix: '{{ new_ls.esg_vpn_transit.prefix_len }}', name: '{{ new_ls.esg_vpn_transit.name }}', logical_switch: '{{ new_ls.esg_vpn_transit.name }}', iftype: 'internal'}
+
+#dlr interface details
+dlr_uplink1: {ip: '{{ dlr_uplink1_ip }}', prefix: '{{ new_ls.esg_dlr_transit.prefix_len }}', name: '{{ new_ls.esg_dlr_transit.name }}', logical_switch: '{{ new_ls.esg_dlr_transit.name }}', iftype: 'uplink'}
+dlr_internal1: {ip: '{{ dlr_internal1_ip }}', prefix: '{{ new_ls.app_internal.prefix_len }}', name: '{{ new_ls.app_internal.name }}', logical_switch: '{{ new_ls.app_internal.name }}', iftype: 'internal'}
+
+########
+#ROUTING
+########
+#res_esg Routes
+res_esg_route1: {network: '0.0.0.0/0', next_hop: '{{ agg_esg_provider_ip }}', description: 'default via agg-esg'}
+res_esg_route2: {network: '10.0.0.0/8', next_hop: '{{ vpn_esg_vnic1.ip }}', description: 'RFC1918 via VPN to Customer'}
+res_esg_route3: {network: '192.168.0.0/16', next_hop: '{{ vpn_esg_vnic1.ip }}', description: 'RFC1918 via VPN to Customer'}
+res_esg_route4: {network: '172.16.0.0/12', next_hop: '{{ vpn_esg_vnic1.ip }}', description: 'RFC1918 via VPN to Customer'}
+res_esg_route5: {network: '{{ sres_gsni_routeable_net }}', next_hop: '{{ sres_esg_provider_ip }}', description: 'SRES subnet via sres-esg'}
+res_esg_route6: {network: '{{ ires_sl_nat_net }}', next_hop: '{{ svc_esg_provider_ip }}', description: 'NAT for SL and IRES Secondary via svc-esg'}
+res_esg_route7: {network: '{{ pdr_net }}', next_hop: '{{ pdr_esg_provider_ip }}', description: 'PDR subnet via pdr-esg'}
+res_esg_route8: {network: '{{ new_ls.app_internal.network }}/{{ new_ls.app_internal.prefix_len }}', next_hop: '{{ dlr_uplink1.ip }}', description: '{{ new_ls.app_internal.name }} via {{ dlr_name }}'}
+#vpn_esg Routes
+vpn_esg_route1: {network: '{{ sres_gsni_routeable_net }}', next_hop: '{{ res_esg_vnic1.ip }}', description: 'SRES subnet via {{ res_esg_name }}'}
+vpn_esg_route2: {network: '{{ ires_sl_nat_net }}', next_hop: '{{ res_esg_vnic1.ip }}', description: 'NAT for SL and IRES Secondary via svc-esg'}
+vpn_esg_route3: {network: '{{ cp_gsni_routeable_net }}', next_hop: '{{ res_esg_vnic1.ip }}', description: 'Customer Premise NAT subnet via {{ res_esg_name }} (pmtu fix)'}
+vpn_esg_route4: {network: '{{ new_ls.app_internal.network }}/{{ new_ls.app_internal.prefix_len }}', next_hop: '{{ res_esg_vnic1.ip }}', description: '{{ new_ls.app_internal.name }} via {{ res_esg_name }}'}
+#DLR Routes
+dlr_esg_route1: {network: '0.0.0.0/0', next_hop: '{{ res_esg_vnic2.ip }}', description: 'default via {{ res_esg_name }}'}
+
+############################
+#Network Address Translation
+############################
+#VPN ESG default SNAT to GSNI routable subnet for outbound traffic to Customer Premises
+vpn_esg_snat_rule: {
+  description: 'SNAT DRES to CPREM GSNI Routeable',
+  loggingEnabled: 'true',
+  nat_enabled: 'true',
+  rule_type: 'snat',
+  vnic: '0',
+  originalAddress: '{{ new_ls.app_internal.network }}/{{ new_ls.app_internal.prefix_len }}',
+  originalPort: 'any',
+  protocol: 'any',
+  translatedAddress: '{{ cp_gsni_routeable_net }}',
+  translatedPort: 'any'
+  }
+
+#############################
+#Edge and DLR appliance specs
+#############################
+#res_esg details
+res_esg_name: '{{ region }}-{{ dres_name }}-esg1'
+res_esg_firewall_on_off: 'true'
+res_esg_ha_enable: 'true'
+res_esg_size: 'quadlarge'
+
+# VPN-ESG details
+vpn_esg_name: '{{ region }}-{{ dres_name }}-vpn1'
+vpn_esg_firewall_on_off: 'true'
+vpn_esg_ha_enable: 'true'
+vpn_esg_size: 'quadlarge'
+
+#DLR details
+dlr_name: '{{ region }}-{{ dres_name }}-dlr1'
+dlr_ha: 'false'
+dlr_mgmt_portgroup_id: "{{ gather_moids_priv_dlr_mgmt_pg.object_id }}"

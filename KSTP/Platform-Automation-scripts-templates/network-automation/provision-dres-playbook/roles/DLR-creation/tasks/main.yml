@@ -1,0 +1,54 @@
+---
+- name: DLR creation
+  nsx_dlr:
+    nsxmanager_spec: "{{ nsxmanager_spec }}"
+    state: "{{ requested_state }}"
+    name: "{{ dlr_name }}"
+    description: 'This DLR is created by nsxansible'
+    resourcepool_moid: "{{ gather_moids_cl.object_id }}"
+    datastore_moid: "{{ gather_moids_ds.object_id }}"
+    datacenter_moid: "{{ gather_moids_cl.datacenter_moid }}"
+    mgmt_portgroup_moid: "{{ dlr_mgmt_portgroup_id }}"
+    interfaces:
+      - ip: "{{ dlr_uplink1.ip }}"
+        prefix_len: "{{ dlr_uplink1.prefix }}"
+        name: "{{ dlr_uplink1.name }}"
+        logical_switch: "{{ dlr_uplink1.logical_switch }}"
+        iftype: "{{ dlr_uplink1.iftype }}"
+      - ip: "{{ dlr_internal1.ip }}"
+        prefix_len: "{{ dlr_internal1.prefix }}"
+        name: "{{ dlr_internal1.name }}"
+        logical_switch: "{{ dlr_internal1.logical_switch }}"
+        iftype: "{{ dlr_internal1.iftype }}"
+    routes:
+      - "{{ dlr_esg_route1 }}"
+    remote_access: 'true'
+    # username: "{{ dlr_admin_username }}"
+    # password: "{{ dlr_admin_password }}"
+    username: "{{ esg_admin_username }}"
+    password: "{{ esg_admin_password }}"
+    ha_enabled: "{{ dlr_ha }}"
+  register: create_dlr
+  tags: dlr_create
+
+# The following tasks were commented out on 26-Aug-2020 to workaround Issue #3
+# https://github.ibm.com/CtspArchitecture/Platform-Automation-scripts-templates/issues/3
+# - name: Remove default OSPF Configuration
+#   nsx_ospf:
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     state: absent
+#     edge_name: "{{ dlr_name }}"
+#     router_id: ''
+#     areas: ''
+#     area_map: ''
+#   register: ospf_remove
+#   tags: ospf_remove
+#
+# - name: Remove default Route Redistribution Configuration
+#   nsx_redistribution:
+#     ospf_state: absent
+#     bgp_state: absent
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     edge_name: "{{ dlr_name }}"
+#   register: route_redist_remove
+#   tags: route_redist_remove

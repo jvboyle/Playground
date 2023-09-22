@@ -1,0 +1,72 @@
+# Begin Global ID Admin Linux standard template Ver 1.3.0  Date 2015-12-03 * Master * Refer xxxxxx Begin #
+# Description Linux Manual ID admin 
+# Software products and versions
+# Supported OS platforms
+# local functional ID
+# local path changes
+# local OS groups for the Master MANIAM
+# self serve access permitted for all sub templates except Special for groups ABC, DEF and MNO only
+#
+# Version control
+#
+# See changelog on Global sudo wiki https://ibm.biz/ChlogMiddlewareTemplates for previous changes
+#
+# Updates in this version:
+#
+# V1.3 - ksunberg@us.ibm.com - functional update: fix userdel negation, enhance usermod, add pam_tally2,
+# add setpw.<os> binary (AUTOHEAL), add Notes.
+#
+# - /usr/sbin/userdel, !/usr/sbin/userdel root, \
+# + /usr/sbin/userdel, !/usr/sbin/userdel * root, \
+#
+# + /usr/sbin/usermod -c * root, !/usr/sbin/usermod -c * -* root, \
+#
+# + /sbin/pam_tally2, \
+#
+# + <:local_path>/setpw.linux, !<:local_path>/setpw.linux * -p *, \
+# + !<:local_path>/setpw.linux * root, !<:local_path>/setpw.linux * root *, \
+#
+# + Notes:
+# + Use of usermod on the root ID is limited to modification of the gecos attribute.  Usermod will be blocked if the specified gecos
+# + contains " -".  If gecos must contain " -" then it must be set by a System Administrator.
+# + The recommended/preferred value for <:local_path> is /opt/IBM/IAMmanual/bin.
+# + All directories in <:local_path>, as well as setpw.<os>, iam_acct_provision.sh must have ownership (typically uid=0, gid=0) and
+# + permissions such that the ability to update is restricted to the System Administrators and their automation agents.
+#
+#=====================================================================================
+#
+# Notes:
+#
+# Use of usermod on the root ID is limited to modification of the gecos attribute.  Usermod will be blocked if the specified gecos
+# contains " -".  If gecos must contain " -" then it must be set by a System Administrator.
+#
+# The recommended/preferred value for <:local_path> is /opt/IBM/IAMmanual/bin.
+# All directories in <:local_path>, as well as setpw.<os>, iam_acct_provision.sh must have ownership (typically uid=0, gid=0) and
+# permissions such that the ability to update is restricted to the System Administrators and their automation agents.
+#
+#=====================================================================================
+#
+# Replace sample group names with real group names for your account
+# 
+User_Alias      IBM_MANIAM_LINUX_BAU = %toweradm 
+#
+Host_Alias	MANIAM_LINUX_HOSTS = ALL # in this case, we want this defined on all hosts, indicate subsets as appropriate.
+#
+# --------------Do not change anything below this line, excepting to replace <:path *> content with local pathing. ------------------
+#
+Cmnd_Alias IBM_MANIAM_LINUX_BAU_CMDS = \
+	/usr/bin/passwd, !/usr/bin/passwd * root, \
+	/usr/sbin/useradd, \
+	/usr/sbin/usermod, !/usr/sbin/usermod * root, \
+	/usr/sbin/usermod -c * root, !/usr/sbin/usermod -c * -* root, \
+	/usr/sbin/userdel, !/usr/sbin/userdel * root, \
+	/usr/bin/chage, \
+	/usr/bin/logins, \
+	/usr/bin/faillog, \
+	/sbin/pam_tally, \
+	/sbin/pam_tally2
+
+IBM_MANIAM_LINUX_BAU MANIAM_LINUX_HOSTS = IBM_MANIAM_LINUX_BAU_CMDS
+
+# End  Global ID Admin Linux standard template Ver 1.3.0  Date 2015-12-03 *Master * Refer xxxxxx End #
+

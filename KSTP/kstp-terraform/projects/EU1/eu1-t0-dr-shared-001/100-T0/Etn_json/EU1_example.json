@@ -1,0 +1,207 @@
+{
+    "node_id": "8264fa2f-2690-4663-b7d8-6df965e20847",
+    "host_switch_spec": {
+        "host_switches": [
+            {
+                "host_switch_name": "nvds-edge-private",
+                "host_switch_id": "61daa0e6-b500-40c2-b5e1-b56af4d9e0d0",
+                "host_switch_type": "NVDS",
+                "host_switch_mode": "STANDARD",
+                "host_switch_profile_ids": [
+                    {
+                        "key": "UplinkHostSwitchProfile",
+                        "value": "88b7a908-1500-4cc8-9b0f-1dfe9770c786"
+                    },
+                    {
+                        "key": "LldpHostSwitchProfile",
+                        "value": "9e0b4d2d-d155-4b4b-8947-fbfe5b79f7cb"
+                    }
+                ],
+                "pnics": [
+                    {
+                        "device_name": "fp-eth0",
+                        "uplink_name": "uplink-1"
+                    },
+                    {
+                        "device_name": "fp-eth1",
+                        "uplink_name": "uplink-2"
+                    }
+                ],
+                "is_migrate_pnics": false,
+                "ip_assignment_spec": {
+                    "ip_pool_id": "9d8c377c-6ca1-4c1a-ba07-52a83e4f7aae",
+                    "resource_type": "StaticIpPoolSpec"
+                },
+                "cpu_config": [],
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "83969265-1c0a-42b3-b060-b2fd82da7312",
+                        "transport_zone_profile_ids": [
+                            {
+                                "resource_type": "BfdHealthMonitoringProfile",
+                                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+                            }
+                        ]
+                    },
+                    {
+                        "transport_zone_id": "9c91f09d-30ba-4fd7-a34c-642fa30d3468",
+                        "transport_zone_profile_ids": [
+                            {
+                                "resource_type": "BfdHealthMonitoringProfile",
+                                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+                            }
+                        ]
+                    }
+                ],
+                "pnics_uninstall_migration": [],
+                "vmk_uninstall_migration": [],
+                "not_ready": false
+            },
+            {
+                "host_switch_name": "nvds-edge-puplic",
+                "host_switch_id": "4e5906d7-2db8-498d-820f-ecb11fb6088c",
+                "host_switch_type": "NVDS",
+                "host_switch_mode": "STANDARD",
+                "host_switch_profile_ids": [
+                    {
+                        "key": "UplinkHostSwitchProfile",
+                        "value": "a87f3659-f741-4ea5-8712-8c15253b65d7"
+                    },
+                    {
+                        "key": "LldpHostSwitchProfile",
+                        "value": "9e0b4d2d-d155-4b4b-8947-fbfe5b79f7cb"
+                    }
+                ],
+                "pnics": [
+                    {
+                        "device_name": "fp-eth2",
+                        "uplink_name": "uplink-1"
+                    }
+                ],
+                "is_migrate_pnics": false,
+                "ip_assignment_spec": {
+                    "resource_type": "AssignedByDhcp"
+                },
+                "cpu_config": [],
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "7d8a302b-8bae-45ec-b203-07d8279a396a",
+                        "transport_zone_profile_ids": [
+                            {
+                                "resource_type": "BfdHealthMonitoringProfile",
+                                "profile_id": "52035bb3-ab02-4a08-9884-18631312e50a"
+                            }
+                        ]
+                    }
+                ],
+                "pnics_uninstall_migration": [],
+                "vmk_uninstall_migration": [],
+                "not_ready": false
+            }
+        ],
+        "resource_type": "StandardHostSwitchSpec"
+    },
+    "maintenance_mode": "DISABLED",
+    "node_deployment_info": {
+        "deployment_type": "VIRTUAL_MACHINE",
+        "deployment_config": {
+            "vm_deployment_config": {
+                "vc_id": "9de9c907-714d-494a-8916-14ee755024e5",
+                "compute_id": "domain-c2004",
+                "storage_id": "datastore-2036",
+                "host_id": "host-2043",
+                "management_network_id": "dvportgroup-2059",
+                "management_port_subnets": [
+                    {
+                        "ip_addresses": [
+                            "10.214.31.9"
+                        ],
+                        "prefix_length": 24
+                    }
+                ],
+                "default_gateway_addresses": [
+                    "10.214.31.1"
+                ],
+                "data_network_ids": [
+                    "dvportgroup-4001",
+                    "dvportgroup-4002",
+                    "dvportgroup-4017"
+                ],
+                "reservation_info": {
+                    "memory_reservation": {
+                        "reservation_percentage": 100
+                    },
+                    "cpu_reservation": {
+                        "reservation_in_shares": "HIGH_PRIORITY",
+                        "reservation_in_mhz": 0
+                    }
+                },
+                "resource_allocation": {
+                    "cpu_count": 8,
+                    "memory_allocation_in_mb": 32768
+                },
+                "placement_type": "VsphereDeploymentConfig"
+            },
+            "form_factor": "LARGE",
+            "node_user_settings": {
+                "cli_username": "admin"
+            }
+        },
+        "node_settings": {
+            "hostname": "eu1-etn-008.eu1.sp.ibm.local",
+            "search_domains": [
+                "eu1.sp.ibm.local"
+            ],
+            "ntp_servers": [
+                "10.175.10.130",
+                "10.175.10.131"
+            ],
+            "dns_servers": [
+                "10.175.10.130",
+                "10.175.10.131"
+            ],
+            "enable_ssh": true,
+            "allow_ssh_root_login": false,
+            "syslog_servers": [
+                {
+                    "server": "10.175.236.77",
+                    "port": "514",
+                    "protocol": "UDP",
+                    "log_level": "INFO"
+                }
+            ]
+        },
+        "resource_type": "EdgeNode",
+        "external_id": "8264fa2f-2690-4663-b7d8-6df965e20847",
+        "ip_addresses": [
+            "10.214.31.9"
+        ],
+        "id": "8264fa2f-2690-4663-b7d8-6df965e20847",
+        "display_name": "eu1-etn-008",
+        "tags": [
+            {
+                "scope": "policyPath",
+                "tag": "/infra/sites/default/enforcement-points/default/edge-transport-node/8264fa2f-2690-4663-b7d8-6df965e20847"
+            }
+        ],
+        "_revision": 9
+    },
+    "is_overridden": false,
+    "failure_domain_id": "4fc1e3b0-1cd4-4339-86c8-f76baddbaafb",
+    "resource_type": "TransportNode",
+    "id": "8264fa2f-2690-4663-b7d8-6df965e20847",
+    "display_name": "eu1-etn-008",
+    "tags": [
+        {
+            "scope": "policyPath",
+            "tag": "/infra/sites/default/enforcement-points/default/edge-transport-node/8264fa2f-2690-4663-b7d8-6df965e20847"
+        }
+    ],
+    "_create_time": 1634113360348,
+    "_create_user": "admin",
+    "_last_modified_time": 1676472335124,
+    "_last_modified_user": "Yevgeniy.Steblyanko@ocean.ibm.com",
+    "_system_owned": false,
+    "_protection": "NOT_PROTECTED",
+    "_revision": 9
+}

@@ -1,0 +1,86 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SMTP_TLS",
+            "SMTP",
+            "NTP",
+            "DNS-UDP",
+            "DNS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-SG-PDR-SMTP-Server"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "1103": {
+                    "display_name": "TF-1103-PDR-to-SRES-DNS",
+                    "disabled": false,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1104": {
+                    "display_name": "TF-1104-pdr-app-internal1",
+                    "disabled": false,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1192": {
+                    "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                    "disabled": true,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ]
+                }
+            }
+        }
+    }
+}

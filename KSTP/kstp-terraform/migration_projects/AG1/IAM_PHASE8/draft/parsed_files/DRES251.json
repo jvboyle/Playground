@@ -1,0 +1,69 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR251-CACF-Proxy-VIP",
+            "TF-AG1-SG-DR251-CACF-Proxy",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES251": {
+            "category": "Application",
+            "rules": {
+                "3206": {
+                    "display_name": "TF-3206-Tower-to-DRES-Proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR251-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097112/SR51284903",
+                    "scope": [
+                        "TF-AG1-IPSET-DR251-CACF-Proxy-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "3208": {
+                    "display_name": "TF-3208-DRES-Proxy-to-SRES-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR251-CACF-Proxy"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097112/SR51284903",
+                    "scope": [
+                        "TF-AG1-SG-DR251-CACF-Proxy",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

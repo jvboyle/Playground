@@ -1,0 +1,741 @@
+{
+    "migration_date": "05/16/2023 13:49",
+    "geography": "EU1",
+    "wave": "eu_sres_wave2",
+    "rules": {
+        "total": 327,
+        "rules": [
+            "6148",
+            "2056",
+            "2057",
+            "2058",
+            "2059",
+            "2060",
+            "8205",
+            "8206",
+            "8207",
+            "4136",
+            "8249",
+            "4157",
+            "4158",
+            "8272",
+            "6248",
+            "6258",
+            "8309",
+            "6270",
+            "8319",
+            "8333",
+            "8349",
+            "8365",
+            "8393",
+            "8395",
+            "8399",
+            "8410",
+            "8411",
+            "6377",
+            "6380",
+            "6381",
+            "6382",
+            "6383",
+            "6385",
+            "6394",
+            "6399",
+            "6402",
+            "6403",
+            "6414",
+            "8462",
+            "8480",
+            "8483",
+            "8484",
+            "8486",
+            "8487",
+            "8489",
+            "8490",
+            "8494",
+            "8524",
+            "8545",
+            "4522",
+            "4523",
+            "6572",
+            "4525",
+            "8618",
+            "8619",
+            "8620",
+            "8622",
+            "6581",
+            "4537",
+            "6617",
+            "8667",
+            "4581",
+            "4600",
+            "4601",
+            "8702",
+            "8713",
+            "8714",
+            "8715",
+            "6678",
+            "6679",
+            "6680",
+            "6681",
+            "6684",
+            "6685",
+            "6686",
+            "6687",
+            "6688",
+            "8736",
+            "6691",
+            "6692",
+            "6701",
+            "4663",
+            "6729",
+            "8780",
+            "4688",
+            "8791",
+            "6751",
+            "8801",
+            "8813",
+            "6766",
+            "4720",
+            "6785",
+            "6786",
+            "6787",
+            "6788",
+            "6791",
+            "6792",
+            "6793",
+            "6795",
+            "8845",
+            "6798",
+            "6799",
+            "6800",
+            "4753",
+            "4754",
+            "4755",
+            "4756",
+            "4757",
+            "6802",
+            "6832",
+            "4786",
+            "8896",
+            "2768",
+            "2769",
+            "6873",
+            "8934",
+            "8944",
+            "4854",
+            "8950",
+            "4860",
+            "4864",
+            "6927",
+            "4881",
+            "4888",
+            "8988",
+            "8989",
+            "4896",
+            "4897",
+            "4915",
+            "9012",
+            "9013",
+            "9015",
+            "9020",
+            "9030",
+            "9036",
+            "4949",
+            "4950",
+            "9074",
+            "4994",
+            "7050",
+            "7056",
+            "5029",
+            "5041",
+            "5057",
+            "7110",
+            "5063",
+            "5067",
+            "5070",
+            "5071",
+            "7123",
+            "7124",
+            "7125",
+            "7126",
+            "7127",
+            "7128",
+            "7134",
+            "7135",
+            "7141",
+            "5095",
+            "5115",
+            "5116",
+            "5117",
+            "5118",
+            "5125",
+            "7179",
+            "7183",
+            "3122",
+            "7224",
+            "5179",
+            "5185",
+            "7236",
+            "5190",
+            "5196",
+            "7244",
+            "3153",
+            "3154",
+            "3155",
+            "3156",
+            "3159",
+            "5207",
+            "7256",
+            "5212",
+            "1147",
+            "1148",
+            "1149",
+            "5244",
+            "7297",
+            "5250",
+            "1160",
+            "3212",
+            "7325",
+            "5358",
+            "7407",
+            "7408",
+            "7409",
+            "7410",
+            "7411",
+            "7412",
+            "7413",
+            "7419",
+            "5380",
+            "5403",
+            "7469",
+            "3403",
+            "3404",
+            "3405",
+            "3406",
+            "5457",
+            "7505",
+            "7521",
+            "7527",
+            "5483",
+            "7538",
+            "5498",
+            "5505",
+            "5506",
+            "5507",
+            "5508",
+            "5515",
+            "5516",
+            "7568",
+            "5523",
+            "5526",
+            "5527",
+            "5530",
+            "5531",
+            "5532",
+            "5533",
+            "7585",
+            "7586",
+            "7587",
+            "5546",
+            "7600",
+            "5554",
+            "7615",
+            "7621",
+            "7624",
+            "7625",
+            "5601",
+            "5608",
+            "7656",
+            "5610",
+            "5611",
+            "5612",
+            "5613",
+            "5614",
+            "5621",
+            "5622",
+            "5689",
+            "5708",
+            "7763",
+            "7768",
+            "7769",
+            "7770",
+            "7771",
+            "7772",
+            "7775",
+            "5731",
+            "5732",
+            "5735",
+            "5739",
+            "5752",
+            "5761",
+            "5762",
+            "5765",
+            "5766",
+            "5767",
+            "5770",
+            "5771",
+            "5772",
+            "5773",
+            "5774",
+            "5775",
+            "7821",
+            "7822",
+            "7828",
+            "5790",
+            "5791",
+            "7839",
+            "5794",
+            "7843",
+            "7845",
+            "5798",
+            "7846",
+            "7847",
+            "7851",
+            "5806",
+            "7873",
+            "5832",
+            "7881",
+            "7896",
+            "7901",
+            "7916",
+            "5869",
+            "5886",
+            "7980",
+            "3890",
+            "3891",
+            "3892",
+            "3894",
+            "3895",
+            "3910",
+            "3913",
+            "3914",
+            "3915",
+            "3916",
+            "8011",
+            "8018",
+            "3925",
+            "3926",
+            "5975",
+            "5981",
+            "8032",
+            "5998",
+            "3974",
+            "3975",
+            "8072",
+            "6042",
+            "6043",
+            "8124",
+            "8136",
+            "8140",
+            "8141",
+            "4077",
+            "4085",
+            "4086",
+            "8185"
+        ]
+    },
+    "vms": {
+        "eu1srlplmt5": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt5",
+            "ip": "158.87.52.49",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt5"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "lmt-wizard": {
+            "new_vm_group": "TF-EU1-HOST-lmt-wizard",
+            "ip": "158.87.52.226",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Linux-ILMT-BigFixServer",
+                "TF-EU1-SG-SRES-Linux-ILMT-GatewayService",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-lmt-wizard"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Linux-ILMT-BigFixServer",
+                "SG-SRES-Linux-ILMT-GatewayService",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "eu1srlpmcdansdb2": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdansdb2",
+            "ip": "158.87.53.205",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-SG-SRES-Ansible-STW-DB-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdansdb2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS",
+                "SG-SRES-Ansible-STW-DB-MCDS"
+            ]
+        },
+        "eu1srlpmcdanstw3": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdanstw3",
+            "ip": "158.87.53.203",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-SG-SRES-Ansible-STW-DB-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdanstw3"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS",
+                "SG-SRES-Ansible-STW-DB-MCDS"
+            ]
+        },
+        "eu1srlpmcdjump": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdjump",
+            "ip": "158.87.53.229",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-HOST-eu1srlpmcdjump"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH"
+            ]
+        },
+        "eu1srlpmcdansdb1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdansdb1",
+            "ip": "158.87.53.204",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-SG-SRES-Ansible-STW-DB-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdansdb1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS",
+                "SG-SRES-Ansible-STW-DB-MCDS"
+            ]
+        },
+        "eu1srlpmcdanstw2": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdanstw2",
+            "ip": "158.87.53.202",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-SG-SRES-Ansible-STW-DB-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdanstw2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS",
+                "SG-SRES-Ansible-STW-DB-MCDS"
+            ]
+        },
+        "eu1srlpmcdjenkns": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdjenkns",
+            "ip": "158.87.53.208",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdjenkns"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS"
+            ]
+        },
+        "eu1srlpmcdexec": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdexec",
+            "ip": "158.87.53.210",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdexec"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS"
+            ]
+        },
+        "eu1srlpmcdhapxy1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdhapxy1",
+            "ip": "158.87.53.206",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdhapxy1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS"
+            ]
+        },
+        "eu1srlpmcdhapxy2": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdhapxy2",
+            "ip": "158.87.53.207",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdhapxy2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS"
+            ]
+        },
+        "eu1srlpmcdnexus": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdnexus",
+            "ip": "158.87.53.209",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdnexus"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS"
+            ]
+        },
+        "eu1srlpmcdanstw1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpmcdanstw1",
+            "ip": "158.87.53.201",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Ansible-ALL-MCDS",
+                "TF-EU1-SG-SRES-Ansible-STW-DB-MCDS",
+                "TF-EU1-HOST-eu1srlpmcdanstw1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Ansible-ALL-MCDS",
+                "SG-SRES-Ansible-STW-DB-MCDS"
+            ]
+        },
+        "eu1srlpcacfbds1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpcacfbds1",
+            "ip": "158.87.52.225",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-EU-CACF-BDS",
+                "TF-EU1-HOST-eu1srlpcacfbds1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-EU-CACF-BDS"
+            ]
+        },
+        "eu1srlplmt3": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt3",
+            "ip": "158.87.52.230",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt3"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "eu1srlplmt4": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt4",
+            "ip": "158.87.52.160",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt4"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "eu1srlplmt0": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt0",
+            "ip": "158.87.52.227",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-Linux-ILMT-BigFixServer",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt0"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-Linux-ILMT-BigFixServer",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "eu1srlPdshbrd": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlPdshbrd",
+            "ip": "158.87.52.77",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-STAAS-Netcool-Dashboard",
+                "TF-EU1-HOST-eu1srlPdshbrd"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-STAAS-Netcool-Dashboard"
+            ]
+        },
+        "eu1srlpabcmstr": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpabcmstr",
+            "ip": "158.87.52.115",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-STaaS-MSTR",
+                "TF-EU1-HOST-eu1srlpabcmstr"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-STaaS-MSTR"
+            ]
+        },
+        "eu1sr1staas17": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1staas17",
+            "ip": "158.87.52.48",
+            "groups": [
+                "TF-EU1-HOSTS-WindowsOS-All",
+                "TF-EU1-SG-ISIM-EUSTaaS-SRES-Members",
+                "TF-EU1-SG-SRES-STaaS-AD-Clients",
+                "TF-EU1-HOST-eu1sr1staas17"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-WindowsOS-All",
+                "SG-ISIM-EUSTaaS-SRES-Members",
+                "SG-SRES-STaaS-AD-Clients"
+            ]
+        },
+        "eu1srlPtmmch": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlPtmmch",
+            "ip": "158.87.52.78",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-STAAS-Netcool-Dashboard",
+                "TF-EU1-HOST-eu1srlPtmmch"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-STAAS-Netcool-Dashboard"
+            ]
+        },
+        "eu1sr1lpdefmstr": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1lpdefmstr",
+            "ip": "158.87.52.119",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-STaaS-MSTR",
+                "TF-EU1-HOST-eu1sr1lpdefmstr"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-STaaS-MSTR"
+            ]
+        },
+        "eu1sr1lpmpcansb": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1lpmpcansb",
+            "ip": "158.87.53.34",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-STaaS-eu1sr1lpmpcansb",
+                "TF-EU1-HOST-eu1sr1lpmpcansb"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-STaaS-eu1sr1lpmpcansb"
+            ]
+        },
+        "eu1sr1staas14": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1staas14",
+            "ip": "158.87.52.45",
+            "groups": [
+                "TF-EU1-HOSTS-WindowsOS-All",
+                "TF-EU1-SG-ISIM-EUSTaaS-SRES-Members",
+                "TF-EU1-SG-SRES-STaaS-AD-Clients",
+                "TF-EU1-HOST-eu1sr1staas14"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-WindowsOS-All",
+                "SG-ISIM-EUSTaaS-SRES-Members",
+                "SG-SRES-STaaS-AD-Clients"
+            ]
+        },
+        "eu1sr1staas15": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1staas15",
+            "ip": "158.87.52.46",
+            "groups": [
+                "TF-EU1-HOSTS-WindowsOS-All",
+                "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                "TF-EU1-HOST-eu1sr1staas15"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-WindowsOS-All",
+                "SG-SRES-STaaS-AD-DNS"
+            ]
+        },
+        "eu1sr1staas16": {
+            "new_vm_group": "TF-EU1-HOST-eu1sr1staas16",
+            "ip": "158.87.52.47",
+            "groups": [
+                "TF-EU1-HOSTS-WindowsOS-All",
+                "TF-EU1-SG-SR50974892-DPT-10890-VM-List",
+                "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                "TF-EU1-HOST-eu1sr1staas16"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-WindowsOS-All",
+                "SG-SR50974892-DPT-10890-VM-List",
+                "SG-SRES-STaaS-AD-DNS"
+            ]
+        },
+        "eu1srlplmt1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt1",
+            "ip": "158.87.52.228",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        },
+        "eu1srlplmt2": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlplmt2",
+            "ip": "158.87.52.229",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                "TF-EU1-HOST-eu1srlplmt2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-Linux-ILMT-Servers"
+            ]
+        }
+    }
+}

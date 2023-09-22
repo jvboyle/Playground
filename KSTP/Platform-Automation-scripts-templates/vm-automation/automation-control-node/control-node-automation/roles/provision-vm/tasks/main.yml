@@ -1,0 +1,66 @@
+#
+- name: Provision Control Node VM
+  vmware_guest:
+    hostname: "{{ vsphere_host }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    validate_certs: False
+    name: '{{ inventory_hostname }}'
+    template: '{{ vmtemplate }}'
+    datacenter: '{{ vsphere_datacenter }}'
+    folder: '{{ folder }}'
+    annotation: "{{ guest_notes }}"
+    guest_id: '{{ guest_id }}'
+    state: '{{ requested_state }}'
+    cluster: "{{ vsphere_cluster }}"
+    hardware:
+      memory_mb: 8192
+      num_cpus: 3
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: '{{ datastore }}'
+    - size_gb: 20
+      type: thin
+      datastore: '{{ datastore }}'
+    networks:
+    - name: '{{ network_label }}'
+      ip: '{{ custom_ip }}'
+      netmask: 255.255.255.192
+      gateway: 158.87.63.1
+      dns_servers:
+      - 158.87.63.3
+    customization:
+      dns_servers:
+      - 158.87.63.3
+      domain : '{{ domain }}'
+    wait_for_ip_address: yes
+  delegate_to: localhost
+
+
+- name: accept new ssh fingerprints
+  shell: ssh-keyscan {{ custom_ip }},{{inventory_hostname}} >> ~/.ssh/known_hosts
+  with_items: '{{play_hosts}}'
+  when: "hostvars[item].inventory_hostname == inventory_hostname"
+  delegate_to: localhost
+
+- name: Run a command
+  shell: echo `date` > /tmp/gz
+
+- name: Run a command
+  shell: whoami >> /tmp/gz
+
+#- name: add to ansible hosts file
+#  lineinfile:
+#    dest: /etc/ansible/hosts
+#    insertafter: '^\[{{ ansible_host_group }}\]'
+#    line: '{{ item }}'
+#  with_items: '{{control-node}}'
+#  run_once: true
+
+
+# - name: Create a login user
+#  user:
+ #    name: gzeien
+#    groups: # Empty by default, here we give it some groups
+#    state: present

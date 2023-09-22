@@ -1,0 +1,5582 @@
+{
+    "Allow Any - MUST BE DISABLED": {
+        "id": 2030,
+        "created_time": "2021-10-28 10:18:00",
+        "disabled": true,
+        "section": "Emergency"
+    },
+    "IRES DNS and NTP": {
+        "id": 2024,
+        "created_time": "2021-10-28 09:42:44",
+        "disabled": false,
+        "section": "GENERIC_RULES"
+    },
+    "NV-Automation-2": {
+        "id": 2025,
+        "created_time": "2021-10-28 10:04:19",
+        "disabled": false,
+        "section": "AUTOMATION"
+    },
+    "NV-Automation-1": {
+        "id": 2026,
+        "created_time": "2021-10-28 10:04:19",
+        "disabled": false,
+        "section": "AUTOMATION"
+    },
+    "TKG Workload clusters to Management Cluster": {
+        "id": 8255,
+        "created_time": "2023-05-15 09:29:27",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Mangement Cluster to Workload Clusters": {
+        "id": 8256,
+        "created_time": "2023-05-15 10:08:52",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Workload 1 to Workload 1": {
+        "id": 4287,
+        "created_time": "2022-03-24 11:26:42",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG Management to TKG Management": {
+        "id": 4288,
+        "created_time": "2022-03-24 11:26:42",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG Clusters to vCenter": {
+        "id": 8258,
+        "created_time": "2023-05-15 10:08:52",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Clusters to Bluepages/AD": {
+        "id": 4290,
+        "created_time": "2022-03-24 11:26:42",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG Clusters to Netcool Probes": {
+        "id": 8260,
+        "created_time": "2023-05-15 10:58:33",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Clusters to Qradar collector": {
+        "id": 4292,
+        "created_time": "2022-03-24 11:26:42",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "Auth login to TKG clusters": {
+        "id": 8261,
+        "created_time": "2023-05-15 10:58:33",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "Access the installer interface.": {
+        "id": 4294,
+        "created_time": "2022-03-24 11:26:43",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "SRES to Tanxu cluster access": {
+        "id": 4295,
+        "created_time": "2022-03-24 11:26:43",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG-18": {
+        "id": 4311,
+        "created_time": "2022-04-21 13:16:06",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG 03 UAT Intra-cluster Communication": {
+        "id": 8186,
+        "created_time": "2023-04-25 11:16:02",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "TKG 02 UAT Intra-cluster Communication": {
+        "id": 4465,
+        "created_time": "2022-09-08 13:46:53",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "Tanzu to vRealize Log Insight": {
+        "id": 5097,
+        "created_time": "2022-10-25 12:14:29",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "IBM Cloud Private Endpoints": {
+        "id": 5111,
+        "created_time": "2022-11-16 12:07:42",
+        "disabled": false,
+        "section": "TKG"
+    },
+    "AVI-1": {
+        "id": 2027,
+        "created_time": "2021-10-28 10:10:57",
+        "disabled": false,
+        "section": "AVI"
+    },
+    "AVI-2": {
+        "id": 2028,
+        "created_time": "2021-10-28 10:10:57",
+        "disabled": false,
+        "section": "AVI"
+    },
+    "AVI-3": {
+        "id": 2029,
+        "created_time": "2021-10-28 10:10:57",
+        "disabled": false,
+        "section": "AVI"
+    },
+    "vROPs Intra cluster communication": {
+        "id": 3048,
+        "created_time": "2021-12-14 14:56:17",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "VC to AD": {
+        "id": 4494,
+        "created_time": "2022-10-05 12:18:01",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "vROPs to AD authentication": {
+        "id": 3049,
+        "created_time": "2021-12-14 15:43:26",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "Blue to PHPiPAM": {
+        "id": 4307,
+        "created_time": "2022-04-12 08:47:19",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "All WindowsOS VMs to WSUS": {
+        "id": 4461,
+        "created_time": "2022-09-07 12:12:23",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "RDS licenses on nsxt": {
+        "id": 4463,
+        "created_time": "2022-09-08 09:44:20",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "VCenter to IRES Proxy": {
+        "id": 7161,
+        "created_time": "2023-03-13 08:48:59",
+        "disabled": false,
+        "section": "Infra"
+    },
+    "SL1 Data Collectors to all KSTP Managed Devices": {
+        "id": 4424,
+        "created_time": "2022-08-31 12:37:23",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "all KSTP Managed Devices to SL1 Data Collectors": {
+        "id": 4425,
+        "created_time": "2022-08-31 12:48:33",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "SL1 Data Collectors to All Linux": {
+        "id": 4426,
+        "created_time": "2022-08-31 12:58:49",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "SL1 Data Collectors to all Windows": {
+        "id": 4427,
+        "created_time": "2022-08-31 12:58:49",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "SL1 Data Collectors to ADNS": {
+        "id": 4430,
+        "created_time": "2022-09-01 12:03:25",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "JHs to SL1 Data Collectors": {
+        "id": 4432,
+        "created_time": "2022-09-01 12:35:09",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "Prometheus Alertmanage to KSTP Netcool Probe": {
+        "id": 4433,
+        "created_time": "2022-09-01 12:51:05",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "vROPs to KSTP Netcool Probe": {
+        "id": 4434,
+        "created_time": "2022-09-01 13:00:17",
+        "disabled": false,
+        "section": "Monitoring"
+    },
+    "SSH proxies to All Windows VMs": {
+        "id": 4451,
+        "created_time": "2022-09-07 09:33:10",
+        "disabled": false,
+        "section": "Ansible"
+    },
+    "All Windows and Linux VMs to CACF-Proxy-VIP": {
+        "id": 4452,
+        "created_time": "2022-09-07 09:33:11",
+        "disabled": false,
+        "section": "Ansible"
+    },
+    "ISIM Relays to AD DCs on NSX-T": {
+        "id": 4455,
+        "created_time": "2022-09-07 09:56:01",
+        "disabled": false,
+        "section": "ISIM--7U1TBq_v"
+    },
+    "ISIM Relays to All WindowsOS VMs": {
+        "id": 4456,
+        "created_time": "2022-09-07 09:59:28",
+        "disabled": false,
+        "section": "ISIM--7U1TBq_v"
+    },
+    "Qualys to All WindowsOS VMs": {
+        "id": 4460,
+        "created_time": "2022-09-07 11:59:52",
+        "disabled": false,
+        "section": "New_Policy"
+    },
+    "ICMP Allow": {
+        "id": 2034,
+        "created_time": "2021-10-28 10:20:49",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "SRES JHs Access": {
+        "id": 2031,
+        "created_time": "2021-10-28 10:20:49",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "Access to PDR Proxy": {
+        "id": 2032,
+        "created_time": "2021-10-28 10:20:49",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "Access to MnEaaS Netcool Probes": {
+        "id": 2035,
+        "created_time": "2021-10-28 10:20:49",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "All Endpoints to BDS": {
+        "id": 4251,
+        "created_time": "2022-01-24 14:03:03",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "Syslog to Qradar": {
+        "id": 2164,
+        "created_time": "2021-12-02 15:19:03",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "All Endpoints to WSUS": {
+        "id": 4390,
+        "created_time": "2022-07-27 09:20:01",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "ISPW SSH Proxies to All ISPW": {
+        "id": 4396,
+        "created_time": "2022-07-28 14:20:28",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "All WindowsOS VMs to IRES Proxy": {
+        "id": 4454,
+        "created_time": "2022-09-07 09:49:02",
+        "disabled": false,
+        "section": "Generic_Access"
+    },
+    "Access to DNS and NTP": {
+        "id": 4449,
+        "created_time": "2022-09-07 09:04:31",
+        "disabled": false,
+        "section": "Active_Directory"
+    },
+    "All Windows VMs to AD DCs": {
+        "id": 4450,
+        "created_time": "2022-09-07 09:08:26",
+        "disabled": false,
+        "section": "Active_Directory"
+    },
+    "Domain Controllers Replication": {
+        "id": 4495,
+        "created_time": "2022-10-05 12:24:47",
+        "disabled": false,
+        "section": "Active_Directory"
+    },
+    "Domain CTRL to IRES Proxy": {
+        "id": 4496,
+        "created_time": "2022-10-05 12:29:31",
+        "disabled": false,
+        "section": "Active_Directory"
+    },
+    "Domain CTRL to QRadar": {
+        "id": 4497,
+        "created_time": "2022-10-05 12:29:31",
+        "disabled": false,
+        "section": "Active_Directory"
+    },
+    "TF-8194-Chatops": {
+        "id": 7297,
+        "created_time": "2023-03-21 14:53:09",
+        "disabled": false,
+        "section": "TF-VPC"
+    },
+    "TF-8359-KSI-Logstash-Cluster": {
+        "id": 7298,
+        "created_time": "2023-03-21 14:53:09",
+        "disabled": false,
+        "section": "TF-VPC"
+    },
+    "TF-5952-CAR-APP-internal-to-RPA": {
+        "id": 8695,
+        "created_time": "2023-05-19 14:51:59",
+        "disabled": false,
+        "section": "TF-SRES-RPA"
+    },
+    "TF-7505-RPA-Madrid-to-SRES-RPA": {
+        "id": 8696,
+        "created_time": "2023-05-19 14:51:59",
+        "disabled": false,
+        "section": "TF-SRES-RPA"
+    },
+    "TF-1634-Automation-Control-Node-to-Provider": {
+        "id": 8048,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-1722-RHEL-Licensing-servers-to-VC": {
+        "id": 8049,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-3120-SQL-to-BaaS-TSM": {
+        "id": 8050,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4149-Blue-IBM-BlueZzz": {
+        "id": 8051,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4161-Blue-IBM-BlueZzz": {
+        "id": 8052,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4162-JUmp-to-WSUS": {
+        "id": 8053,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4562-BLUE-To-IBM-BlueZzz": {
+        "id": 8054,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4856-BC->-BP": {
+        "id": 8055,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5108-EU-CACF-GIT-to-PDR-Proxy": {
+        "id": 8056,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5110-SRES-access-to-EU-CACF-GIT": {
+        "id": 8057,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5112-PDR-Proxy-to-CACF-GIT": {
+        "id": 8058,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5225-CAR-Network-flows-for-DB2": {
+        "id": 8059,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5226-CAR-Network-flows-for-HTTPS": {
+        "id": 8060,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5227-CAR-Network-flows-for-SMTP": {
+        "id": 8061,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5239-IBM-Blue-to-CAR-": {
+        "id": 8062,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5240-IBM-Blue-to-CAR": {
+        "id": 8063,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5280-network-flows-for-application-db2": {
+        "id": 8064,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5285-LDAP-over-SSL/BP-API-over-https": {
+        "id": 8065,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5399-IBM-Blue-to-Local-Github": {
+        "id": 8066,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5526-SRES-STaaS-AD-to-SRES": {
+        "id": 8611,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5527-SRES-to-SRES-STaaS-AD": {
+        "id": 8612,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5530-STaaS-Ansible-to-PDR-SMTP": {
+        "id": 8613,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5531-STaaS-Ansible-to-PDR-Proxy": {
+        "id": 8614,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5686-For-Pre-processing-of-elasticsearch-data-for-Reporting-Solution-(Digital-Dashboard)": {
+        "id": 8071,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5687-For-Pre-processing-of-elasticsearch-data-for-Reporting-Solution-(Digital-Dashboard)-": {
+        "id": 8072,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5738-ISPW-SSH-Proxies": {
+        "id": 8073,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5739-ISPW-SSH-Proxies-to-BDS-Master": {
+        "id": 8621,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5741-ISPW-SSH-Proxies-to-All-ISPW": {
+        "id": 8075,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5742-Tower-to-ISPW-SSH-Proxy-VIP": {
+        "id": 8076,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5855-CAR-EMEA-instance-automation-API-Europe-DACH": {
+        "id": 8077,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5890-Elasticsearch-Dev-to-PDR-Socks": {
+        "id": 8078,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5965-ISIM-Mailing": {
+        "id": 8079,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6108-CAR-API-for-Danone": {
+        "id": 8080,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6166-Enduser-->-ISIM-Applicatoin/GSE": {
+        "id": 8081,
+        "created_time": "2023-04-18 15:26:08",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6332-DX-to-ISPW-DB": {
+        "id": 8082,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6570-GSE-to-Bluepages": {
+        "id": 8083,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6622-ARMS-to-Blue": {
+        "id": 8084,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6774-CACF-EU1-&-EU2-CAR-EMEA": {
+        "id": 8085,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6781-BlueZzz-": {
+        "id": 8086,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6782-BlueZzz": {
+        "id": 8087,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6783-BlueZzz-": {
+        "id": 8088,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6800-ISIM-connect-to-server": {
+        "id": 8634,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6811-CACF-AP-to-CAR-EMEA": {
+        "id": 8090,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6919-Jump-Servers-to-CAR": {
+        "id": 8091,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6920-CAR-Network-flows-for-HTTPS": {
+        "id": 8092,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6921-CAR-Network-flows-for-HTTPS": {
+        "id": 8093,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7055-SAT-GUI-Access": {
+        "id": 8094,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7056-Ansible": {
+        "id": 8636,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7057-SAT-HTTPS-GUI-Access": {
+        "id": 8096,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7068-SAT-HTTPS-GUI-Access": {
+        "id": 8097,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7430-SSH-Proxy-to-IRES-eu1sftp02-": {
+        "id": 8098,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7540-nagios-agent": {
+        "id": 8099,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7541-nagios-server": {
+        "id": 8100,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7542-GSE-to-GSNI-LDAP": {
+        "id": 8101,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7578-MCMP-AIOps": {
+        "id": 8102,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7599-Ansible": {
+        "id": 8103,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7647-ISIM": {
+        "id": 8104,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7777-HcaaS-SAT-/-WebSphere-Application-Server": {
+        "id": 8105,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7778-HcaaS-SAT-/-WebSphere-Application-Server": {
+        "id": 8106,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7779-HcaaS-SAT": {
+        "id": 8107,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7780-HcaaS-SAT": {
+        "id": 8108,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7786-HWSW-GRF": {
+        "id": 8109,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7787-HWSW-GRF-to-OCP": {
+        "id": 8110,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7891-access-to-NetBox-api-": {
+        "id": 8111,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7892-Squid": {
+        "id": 8112,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7910-access-to-GUI-of-nexGen-APP": {
+        "id": 8113,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7911-access-to-GSE-HST-VM": {
+        "id": 8114,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7912-access-to-ldap-to-autheticate-users-": {
+        "id": 8115,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7925-GSE-NEXGEN-LAB": {
+        "id": 8116,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8015-SAT-Data-collection-for-health-check-": {
+        "id": 8117,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8016-SAT-Data-collection-for-health-check": {
+        "id": 8118,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8065-GSE-Nexgen-to-GSNI": {
+        "id": 8119,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8164-SAT": {
+        "id": 8120,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8171-Zcloud": {
+        "id": 8121,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8181-AP-to-EU-for-HWSW-C": {
+        "id": 8122,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8249-Mysql-DB-connection": {
+        "id": 8668,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8256-MCMS-Syd-Prod-to-CAR-EMEA-": {
+        "id": 8124,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8312-KSI-BAS-SMIW": {
+        "id": 8125,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8394-HWSW-Canada-to-CAR-EU": {
+        "id": 8126,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8515-EU-Automation-server-to-AP-AIOPS-(unidirection)": {
+        "id": 8127,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8540-Automation-server-to-HWSW-DB2-EU/NA": {
+        "id": 8128,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8652-Connect-from-Automation-server-to-prod-EU-HWSW-DB2": {
+        "id": 8129,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8832-CAR": {
+        "id": 8130,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8836-EU-CAR-DB2-instance-to-EU-Logstash": {
+        "id": 8131,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8837-EU-Logstash-to-EU-CAR-DB2-instance": {
+        "id": 8132,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8849-Access-for-Backend-Flows-required": {
+        "id": 8133,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8871-CACF-tower-EU3-SFS": {
+        "id": 8134,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8872-CACF-tower-EU3-SFS": {
+        "id": 8135,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8880-AP-DR110-to-EU-CAR-": {
+        "id": 8136,
+        "created_time": "2023-04-18 15:26:09",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-1160-SRES-clinets-to-SRES-AD,DNS": {
+        "id": 8583,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-2768-StaaS-General-Services-and-Access": {
+        "id": 8584,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-3122-StaaS-General-Services-and-Access": {
+        "id": 8585,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-3212-to-SMTP-server": {
+        "id": 8586,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-3974-STAAS-Microstratergy-DRES-to-SRES": {
+        "id": 8587,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-3975-STAAS-Microstratergy-SRES-to-DRES": {
+        "id": 8588,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4077-STAAS-for-ISIM": {
+        "id": 8589,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4600-BDS-Master-Repo-to-PDR-proxy": {
+        "id": 8590,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4601-SRES-Linux-Jump-to-BDS-Master-Repo": {
+        "id": 8591,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4663-ISPW-SRES-Jump-servers-to-BDS-Master-Repo-VM": {
+        "id": 8592,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4688-BDS-Master-Repo-to-IBM-Bluepages": {
+        "id": 8593,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4753-ILMT-to-bluepages": {
+        "id": 8594,
+        "created_time": "2023-05-19 14:26:55",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4754-Windows-&-Linux-Jump-to-ILMT-BigFix": {
+        "id": 8595,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4755-Linux-&-Windows-Jump-to-ILMT": {
+        "id": 8596,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4756-ILMT-BigFix-to-ILMT": {
+        "id": 8597,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4757-ILMT-to-ILMT+BigFix": {
+        "id": 8598,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4854-IBM-Cloud-to-CACF-BDS": {
+        "id": 8599,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4864-IBM-Blue-to-SRES": {
+        "id": 8600,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4896-9-x-to-ILMT-": {
+        "id": 8601,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-4897-9-x-to-ILMT-BigFix": {
+        "id": 8602,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5070-SRES-PDR-Proxy": {
+        "id": 8603,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5071-SRES-PDR-Proxy": {
+        "id": 8604,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5115-ILMT-Bigfix-to-SFS": {
+        "id": 8605,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5116-ILMT-to-GW": {
+        "id": 8606,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5117-GW-to-ILMT": {
+        "id": 8607,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5118-ILMT/GW-Bigfix-to-CEDP/BRAVO": {
+        "id": 8608,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5457-ILMT-Bigfix-to-github-ibm-com": {
+        "id": 8609,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5523-ILMT1,2,3-,-Bigfix-to-SFS": {
+        "id": 8610,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5532-STaaS-Ansible-to-DRES": {
+        "id": 8615,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5533-STaaS-Ansible-to-DRES": {
+        "id": 8616,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5608-Ansible-SRES-Flows": {
+        "id": 8617,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5731-DNS-resolution-of-CS-domains": {
+        "id": 8618,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5732-to-obtain-computer-certificate-from-CA": {
+        "id": 8619,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5735-to-validate-Certificates-on-CA-(via-LDAP)": {
+        "id": 8620,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5766-Ansible-": {
+        "id": 8622,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5767-Ansible": {
+        "id": 8623,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5886-ILMT-to-Bravo": {
+        "id": 8624,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5998-Ansible-endpoint-communications": {
+        "id": 8625,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6380-Linux-&-Windows-Jump-to-ILMT4": {
+        "id": 8626,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6381-ILMT,-ILMT-BigFix-to-GW": {
+        "id": 8627,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6382-ILMT4-to-ILMT-BigFix": {
+        "id": 8628,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6383-ILMT4,-GW,-ILMT-Bigfix-to-SFS": {
+        "id": 8629,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6385-ILMT3-to-SFS": {
+        "id": 8630,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6394-ILMT-to-Blue-HTTPS": {
+        "id": 8631,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6414-ILMT3-to-SFS": {
+        "id": 8632,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6617-STaaS-SRES-for-Ansible-": {
+        "id": 8633,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-6802-ISIM-connect-to-server-": {
+        "id": 8635,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7244-ISIM": {
+        "id": 8637,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7407-IBM-Blue-to-STaaS-SRES-Netcool": {
+        "id": 8638,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7408-Windows-JH-to-STaaS-Netcool": {
+        "id": 8639,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7409-STAAS-to-PDR-Proxy": {
+        "id": 8640,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7410-STAAS-Sendmail": {
+        "id": 8641,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7411-Ansible-to-STAAS": {
+        "id": 8642,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7412-SRES-->SRES-DC-Internal": {
+        "id": 8643,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7413-SRES-->SRES-DC-Internal": {
+        "id": 8644,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7527-MCDS-UKI-CACF": {
+        "id": 8645,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7538-Isim-ssh": {
+        "id": 8646,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7587-Ansible--STaaS-DRES": {
+        "id": 8647,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7624-STaaS-AD-integration-": {
+        "id": 8648,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7625-STaaS-AD-integration": {
+        "id": 8649,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7656-ILMT-Bravoopening": {
+        "id": 8650,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7768-ANSIBLE-MCDS-toAD": {
+        "id": 8651,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7769-ANSIBLE-MCDS-to-NTP-DNS": {
+        "id": 8652,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7770-Ansible-MCDS": {
+        "id": 8653,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7771-MCDS-proxy-to-Ansible": {
+        "id": 8654,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7772-Ansible-MCDS": {
+        "id": 8655,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7775-ISIM-to-Ansible": {
+        "id": 8656,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7843-Access-between-dashboard-server": {
+        "id": 8657,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7845-Jump-MCDS": {
+        "id": 8658,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7846-Jump-MCDS": {
+        "id": 8659,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7847-MCDS": {
+        "id": 8660,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-7901-MCDS-to-AP-and-AG": {
+        "id": 8661,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8072-MCDS-NA-to-EU-SRES": {
+        "id": 8662,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8140-MCDS-EU-to-AP/AG1-BDS": {
+        "id": 8663,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8141-MCDS--Execute-Playbooks-on-jumphost": {
+        "id": 8664,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8205-MCDS-dedicated-jump-host-": {
+        "id": 8665,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8206-MCDS-dedicated-jump-host-": {
+        "id": 8666,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8207-Ansible-tower->-new-dedicated-jumphost": {
+        "id": 8667,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8333-Microstrategy-KSTP-EU-to-MCMS-EU-DB-Server": {
+        "id": 8669,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8365-MCDS-": {
+        "id": 8670,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8393-IQ-server": {
+        "id": 8671,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8395-Nexus": {
+        "id": 8672,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8494-MCDS-dedicated-jump-host-to-nexus": {
+        "id": 8673,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8545-HWSW--ILMT-API-Connectivity": {
+        "id": 8674,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8618-ILMT-to-IBM-BLUE-servers": {
+        "id": 8675,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8619-ILMT-SMTP": {
+        "id": 8676,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8620-ILMT-to-SFS-": {
+        "id": 8677,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8622-MCDS": {
+        "id": 8678,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8702-STaaS-SSH-": {
+        "id": 8679,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-8791-HTTPS-Exec-node-to-AT-node": {
+        "id": 8680,
+        "created_time": "2023-05-19 14:26:56",
+        "disabled": false,
+        "section": "TF-SRES"
+    },
+    "TF-5063-INTERNET-IN-to-BDS-master": {
+        "id": 8485,
+        "created_time": "2023-05-19 14:19:39",
+        "disabled": false,
+        "section": "TF-PDR"
+    },
+    "TF-5752-Connectivity-between-SL-and-domain-controllers": {
+        "id": 8483,
+        "created_time": "2023-05-19 14:17:10",
+        "disabled": false,
+        "section": "TF-IRES"
+    },
+    "TF-7600-JDBC-Integration-for-STaaS-Dashboard": {
+        "id": 8484,
+        "created_time": "2023-05-19 14:17:10",
+        "disabled": false,
+        "section": "TF-IRES"
+    },
+    "TF-8411-SL1-Data-Collectors-to-All-Linux-VMs": {
+        "id": 8698,
+        "created_time": "2023-05-19 14:54:41",
+        "disabled": false,
+        "section": "TF-Monitoring"
+    },
+    "TF-8410-SL1-Data-Collector-to-All-Windows-VMs": {
+        "id": 8697,
+        "created_time": "2023-05-19 14:54:41",
+        "disabled": false,
+        "section": "TF-Monitoring"
+    },
+    "TF-4053-DA1-0-Nessus-to-CACF": {
+        "id": 8139,
+        "created_time": "2023-04-18 15:50:40",
+        "disabled": false,
+        "section": "TF-TMP-Section"
+    },
+    "TF-6003-HRES-LB-to-CAR": {
+        "id": 8168,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3702-LB-to-SSH-Proxy-nodes": {
+        "id": 8148,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3703-WIN-Jump-&-EU-AT-to-HRES-SSH-Proxy-for-EU-Shared-&-FSS-Prod-Instance": {
+        "id": 8149,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3704-SSH-Proxy-EU-Shared-nodes-to-DA-EU-Shared": {
+        "id": 8150,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3876-WIN-Jump-&-JP-AT-to-HRES-SSH-Proxy-for-JP-Shared-Instance": {
+        "id": 8151,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3880-SSH-Proxy-EU-FSS-nodes-to-DA-EU-FSS": {
+        "id": 8152,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3881-SSH-Proxy-JP-Shared-nodes-to-DA-JP": {
+        "id": 8153,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4536-BDS-Flow-from-Clients": {
+        "id": 8154,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4537-HA-Proxy-to-Master-BDS-Repo": {
+        "id": 8681,
+        "created_time": "2023-05-19 14:37:28",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4538-LB-to-HA-Proxy-nodes": {
+        "id": 8156,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4664-SRES-jump-to-hres-proxy": {
+        "id": 8157,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4682-DA-OVPN-Servers-to-HRES-In-Proxy": {
+        "id": 8158,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4684-HA-Proxy-to-NEXT": {
+        "id": 8159,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4709-Rule-for-BDS-Onboarding-": {
+        "id": 8160,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4728-OCP-to-http-proxy-2-vip": {
+        "id": 8161,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4729-hres-lb1-to-http-proxy-2": {
+        "id": 8162,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4730-Http-proxy-vip-to-http-proxy-2": {
+        "id": 8163,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4731-Copy-of-Http-proxy-vip-to-http-proxy-2-": {
+        "id": 8164,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4771-CPrem-Netcool-to-HA-Proxy-IN": {
+        "id": 8165,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4777-HA-Proxy-OUT-to-CPrem-Netcool": {
+        "id": 8166,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-4778-NEXT-to-HA-Proxy-OUT": {
+        "id": 8167,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-6004-CMOS-to-HRES-LB-(CAR)": {
+        "id": 8169,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-6391-ISPW-JH1->-GSW-JH2": {
+        "id": 8170,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-7094-<NOT-DEFINED>": {
+        "id": 8171,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-7095-HRES-to-SRES": {
+        "id": 8172,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-8361-HA-Proxy-OUT-to-DA-BDS-Child": {
+        "id": 8173,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-8959-SRES-to-HRES-BDS-child": {
+        "id": 8174,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3881-SSH-Proxy-JP-Shared-nodes-to-DA-JP-2": {
+        "id": 8175,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-3704-SSH-Proxy-EU-Shared-nodes-to-DA-EU-Shared-2": {
+        "id": 8176,
+        "created_time": "2023-04-20 15:00:20",
+        "disabled": false,
+        "section": "TF-HRES"
+    },
+    "TF-5887-DRES-ESG-to-CAR": {
+        "id": 7179,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-6033-DRES-ESG-to-CAR-": {
+        "id": 7180,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-7507-CAR-Flow": {
+        "id": 7181,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-7511-DRES-ESG-to-SFS-RELAY": {
+        "id": 7182,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-7513-DRES-ESG-to-CAR": {
+        "id": 7183,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-7935-DRES-ESG-to-OCP-SFS-Relay": {
+        "id": 7184,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-8328-DRES-to-VIP": {
+        "id": 7185,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-8331-DRES-to-vip": {
+        "id": 7186,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-8572-HTTP-Proxy-(vRO-to-M&EaaS-Portal-API)": {
+        "id": 7187,
+        "created_time": "2023-03-20 17:37:06",
+        "disabled": false,
+        "section": "TF-wave1"
+    },
+    "TF-5125-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8268,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5610-DRES-<->-SRES-Flows": {
+        "id": 8269,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5611-DRES-<->-SRES-Flows": {
+        "id": 8270,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5612-DRES-<->-SRES-Flows": {
+        "id": 8271,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5613-DRES-<->-SRES-Flows": {
+        "id": 8272,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5614-DRES-<->-SRES-Flows": {
+        "id": 8273,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5621-DRES-->-Internet-Flows": {
+        "id": 8274,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5622-DRES-->-Internet-Flows": {
+        "id": 8275,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5798-SRES-to-DRES": {
+        "id": 8276,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5869-DRES-to-SRES": {
+        "id": 8277,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6402-Ansible": {
+        "id": 8278,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8185-Ansible-": {
+        "id": 8279,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5196-BDS-CACF-Proxy": {
+        "id": 8280,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5057-BDS-from-CACF-Proxy": {
+        "id": 8281,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8524-BSD-Flow": {
+        "id": 8282,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5358-CACF-Proxy-to-SRES-BDS": {
+        "id": 8283,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-1147-Wbshepree,-Rest,-Key-management": {
+        "id": 8284,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-1148-Arxview": {
+        "id": 8285,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-1149-AD/DNS/NTP": {
+        "id": 8286,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2769-StaaS-General-Services-and-Access": {
+        "id": 8287,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4522-DRES-to-SRES": {
+        "id": 8288,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4523-SRES-to-DRES": {
+        "id": 8289,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4994-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8290,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6701-Ansible": {
+        "id": 8291,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5483-CACF-Proxy-to-SRES-BDS": {
+        "id": 8292,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5403-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8293,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5832-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8294,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5981-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8295,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6270-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8296,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6248-CACF-Proxy-to-SRES-BDS": {
+        "id": 8297,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6377-CACF-Proxy-to-SRES-BDS": {
+        "id": 8298,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6729-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8299,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6927-CACF-Proxy-to-SRES-BDS": {
+        "id": 8300,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5505-Microsoft-Active-Directory": {
+        "id": 8301,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5506-Microsoft-Active-Directory": {
+        "id": 8302,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5507-Websphere,-Rest,-Key-management": {
+        "id": 8303,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5508-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP": {
+        "id": 8304,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5515-Microstrategy": {
+        "id": 8305,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5516-Microstrategy": {
+        "id": 8306,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6148-CACF-Proxy-to-SRES-BDS": {
+        "id": 8307,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5554-CACF-Proxy-to-SRES-BDS": {
+        "id": 8308,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5689-CACF-Proxy-to-SRES-BDS": {
+        "id": 8309,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7851-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8310,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5761-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP": {
+        "id": 8311,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5762-Websphere,-Rest,-Key-management": {
+        "id": 8312,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5765-Ansible": {
+        "id": 8313,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5770-AD,-Win-2008": {
+        "id": 8314,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5771-AD,-Win-2008": {
+        "id": 8315,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5772-Microstrategy-Desktop": {
+        "id": 8316,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5773-Microstrategy-Desktop": {
+        "id": 8317,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5774-Microstrategy": {
+        "id": 8318,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5775-Microstrategy": {
+        "id": 8319,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5790-SRES-to-DRES": {
+        "id": 8320,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5791-DRES-to-SRES": {
+        "id": 8321,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6042-eu1srlpabcmstr-SSH": {
+        "id": 8322,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6043-eu1srlpabcmstr-HTTPS": {
+        "id": 8323,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6403-Ansible-": {
+        "id": 8324,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4888-CACF-Proxy-to-BDS": {
+        "id": 8325,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5794-CACF-Proxy-to-SRES-BDS": {
+        "id": 8326,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5806-CACF-Proxy-to-SRES-BDS": {
+        "id": 8327,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6258-CACF-Proxy-to-SRES-BDS": {
+        "id": 8328,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8845-CACF-Proxy-to-SRES-BDS": {
+        "id": 8329,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6766-SRES-to-LB-VIP": {
+        "id": 8330,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7256-SRES-to-LB-to-CPREM": {
+        "id": 8331,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7568-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8332,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6678-AD/DNS/NTP": {
+        "id": 8333,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6679-AD/DNS/NTP": {
+        "id": 8334,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6680-SKLM": {
+        "id": 8335,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6681-SKLM-": {
+        "id": 8336,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6684-Ansible": {
+        "id": 8337,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6685-Ansible": {
+        "id": 8338,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6686-Ansible": {
+        "id": 8339,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6687-SMB": {
+        "id": 8340,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6688-MS_RPC_TCP-Win-2008-RPC-DCOM": {
+        "id": 8341,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6691-Microstrategy": {
+        "id": 8342,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6692-Microstrategy-": {
+        "id": 8343,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7585-Ansible": {
+        "id": 8344,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5380-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8345,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6785-AD/DNS/NTP": {
+        "id": 8346,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6786-AD/DNS/NTP": {
+        "id": 8347,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6787-DRES181": {
+        "id": 8348,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6788-DRES181-": {
+        "id": 8349,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6791-Ansible": {
+        "id": 8350,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6792-Ansible": {
+        "id": 8351,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6793-Microstrategy": {
+        "id": 8352,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6795-Microstrategy-": {
+        "id": 8353,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6798-SMB": {
+        "id": 8354,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6799-MS_RPC_TCP-Win-2008-RPC-DCOM": {
+        "id": 8355,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7586-Ansible-": {
+        "id": 8356,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7621-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8357,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6873-CACF-Proxy-to-SRES-BDS-": {
+        "id": 8358,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8480-Obtain-certificates-from-certification-authority": {
+        "id": 8359,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8483-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP": {
+        "id": 8360,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8484-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP": {
+        "id": 8361,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8486-DRES->SRES-DC-Internal": {
+        "id": 8362,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8487-SRES-->DRES-DC-Internal": {
+        "id": 8363,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8489-Microstrategy-Desktop": {
+        "id": 8364,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8490-Microstrategy": {
+        "id": 8365,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8713-SRES-to-DRES": {
+        "id": 8366,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8714-SRES-to-DRES": {
+        "id": 8367,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8715-DRES-to-SRES": {
+        "id": 8368,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5498-CACF-Proxy-to-SRES-BDS": {
+        "id": 8369,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7179-CACF-Proxy-to-SRES-BDS": {
+        "id": 8370,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7419-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8371,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7297-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8372,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7141-Dres-to-Sres-8080": {
+        "id": 8373,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7110-CACF-Proxy-to-SRES-BDS": {
+        "id": 8374,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7183-CACF-Proxy-to-SRES-BDS": {
+        "id": 8375,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7224-CACF-Proxy-to-SRES-BDS-": {
+        "id": 8376,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7896-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8377,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7236-CACF-Proxy-to-SRES-BDS": {
+        "id": 8378,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7828-BDS-backend": {
+        "id": 8379,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7469-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8380,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7521-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8381,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7980-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8382,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7763-BDS-flow": {
+        "id": 8383,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7873-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8384,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7839-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8385,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7881-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8386,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7916-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8387,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8011-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8388,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8349-DRES-ESG-to-SRES-BDS": {
+        "id": 8389,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8136-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8390,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8462-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8391,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8272-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8392,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8399-DRES-to-SRES-BDS-Flow": {
+        "id": 8393,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8319-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8394,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8309-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8395,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8667-Client-DRES-CACF-Proxy": {
+        "id": 8396,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8988-STaaS-AD-to-Reverse-Proxy": {
+        "id": 8397,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8989-CLS-PAM-DDE-and-reverse-proxy-to-STaaS-AD": {
+        "id": 8398,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9012-DRES-ESG-to-SRES-STaaS-AD": {
+        "id": 8399,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9013-SRES-STaaS-AD-to-NSX-LB-VIP": {
+        "id": 8400,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9015-Microstrategy-to-NSX-LB-VIP": {
+        "id": 8401,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9020-DRES-ESG-to-CACF-BDS": {
+        "id": 8402,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8736-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8403,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8801-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8404,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8813-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8405,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8896-CACF-Proxy-to-SRES-BDS": {
+        "id": 8406,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9074-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8407,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8934-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8408,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-8950-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8409,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9036-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8410,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-9030-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8411,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7050-CACF-Proxy-to-SRES-BDS": {
+        "id": 8412,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5975-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8413,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7123-Websphere,-Rest,-Key-management": {
+        "id": 8414,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7124-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP": {
+        "id": 8415,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7125-DRES->SRES-DC-Internal": {
+        "id": 8416,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7126-SRES-->DRES-DC-Internal": {
+        "id": 8417,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7127-Ansible": {
+        "id": 8418,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7128-Ansible": {
+        "id": 8419,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7134-Microstrategy": {
+        "id": 8420,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7135-Microstrategy": {
+        "id": 8421,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5250-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8422,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2056-Websphere,-Rest,-Key-management": {
+        "id": 8423,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2057-Websphere,-Rest,-Key-management": {
+        "id": 8424,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2058-SRES-to-DR35": {
+        "id": 8425,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2059-DR35-AD-to-SRES-STaaS-AD": {
+        "id": 8426,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-2060-SRES-STaaS-AD-to-DR35-AD": {
+        "id": 8427,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3403-DR35-ARX-to-SRES-SRL": {
+        "id": 8428,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3404-SRES-SRL-to-DR35-ARX": {
+        "id": 8429,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4525-DR35-to-SRES": {
+        "id": 8430,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6572-Ansible": {
+        "id": 8431,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3153-SRES->-DRES-DC-Internal": {
+        "id": 8432,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3154-DRES->-SRES-DC-Internal": {
+        "id": 8433,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3155-Websphere,-Rest,-Key-management": {
+        "id": 8434,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3156-Stl-to-SRES-AD": {
+        "id": 8435,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3159-Websphere,-Rest,-Key-management": {
+        "id": 8436,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3405-DR48-STL-to-SRES-SRL": {
+        "id": 8437,
+        "created_time": "2023-05-19 13:54:10",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3406-SRES-SRL-to-DR48-STL": {
+        "id": 8438,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3925-DR48-ARX-to-SRES-SRL": {
+        "id": 8439,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3926-SRES-SRL-to-DR48-ARX": {
+        "id": 8440,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6581-Ansible": {
+        "id": 8441,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6751-CACF-Proxy-to-SRES-BDS": {
+        "id": 8442,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7325-BDS-Flow-DRES-to-SRES": {
+        "id": 8443,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7615-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8444,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4136-DRES-proxies->-SRES-Binary-repository-server": {
+        "id": 8445,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3890-To-DRES64-DNS": {
+        "id": 8446,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3891-DRES64-to-SRES-DNS": {
+        "id": 8447,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3892-DRES64-AD/DNS-to-SRES": {
+        "id": 8448,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3894-DRES64-Websphere-man": {
+        "id": 8449,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3895-DRES64-Websphere-man-": {
+        "id": 8450,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4085-SRES-to-ARX": {
+        "id": 8451,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4086-ARX-to-SRES": {
+        "id": 8452,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4157-ARX-to-SRES": {
+        "id": 8453,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4158-SRES-to-ARX": {
+        "id": 8454,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6399-CACF-Proxy-to-SRES-BDS": {
+        "id": 8455,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-6832-Ansible": {
+        "id": 8456,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3910-DRES-STL-TO-SRES": {
+        "id": 8457,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3913-SRES-to-DRES-STW": {
+        "id": 8458,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3914-DRES-STW-to-SRES": {
+        "id": 8459,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3915-DRES66-AD-to-SRES": {
+        "id": 8460,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-3916-SRES-to-DRES66-AD": {
+        "id": 8461,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4949-Microstrategy": {
+        "id": 8462,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4950-Copy-of-SRES-to-DRES-STW-": {
+        "id": 8463,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5708-CACF-Proxy-to-SRES-BDS": {
+        "id": 8464,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4581-CACF-Proxy-to-SRES-BDS": {
+        "id": 8465,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4720-cacf-proxy-to-BDS-Master-Repo": {
+        "id": 8466,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4786-SRES-to-CACF-Proxy-BDS": {
+        "id": 8467,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4860-CACF-Proxy-to-SRES-BDS-": {
+        "id": 8468,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4881-CACF-Proxy-to-SRES-BDS-": {
+        "id": 8469,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-4915-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8470,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5029-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8471,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5041-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8472,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5067-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8473,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5095-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8474,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5179-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8475,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5185-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8476,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5190-CACF-Proxy-to-SRES-BDS": {
+        "id": 8477,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5207-CACF-Proxy-to-SRES-BDS": {
+        "id": 8478,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5212-CACF-Proxy-to-SRES-BDS-": {
+        "id": 8479,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5244-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8480,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5546-CACF-Proxy-VIP-to-SRES-BDS": {
+        "id": 8481,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-5601-CACF-Proxy-to-SRES-BDS": {
+        "id": 8482,
+        "created_time": "2023-05-19 13:54:11",
+        "disabled": false,
+        "section": "TF-eu_sres_wave2"
+    },
+    "TF-7445-NSX-V-to-T-GSE-Temporary-RULES": {
+        "id": 7360,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-7555-MOM-to-EU,-JP-Towers": {
+        "id": 7361,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-7556-MOM-Proxy-to-AP,-NA-Proxy": {
+        "id": 7362,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8100-MOM-Proxy-to-TKG/NFS": {
+        "id": 7363,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8101--TKG/NFS-to-MOM-Proxy": {
+        "id": 7364,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8277-PEN-TEST-NEXGEN": {
+        "id": 7365,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8278-infra---all-nsxt-sres-win-to-nsxv-sres-ansible-load-balancer-VIP": {
+        "id": 7366,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8279-infra---ansible-proxies-to-nsxt-sres-win-servers": {
+        "id": 7367,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8334-SAT-MT": {
+        "id": 7368,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8521-SCP": {
+        "id": 7369,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8767-SAT-MT": {
+        "id": 7370,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8770-SAT-MT": {
+        "id": 7371,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8781-RH-licensing-on-the-NSXT": {
+        "id": 7372,
+        "created_time": "2023-04-18 14:12:50",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8944-Ansible-to-BDS-child": {
+        "id": 8694,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-7821-MCDS-V-to-T": {
+        "id": 8688,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-7822-Dedicated-vSphere-cluster": {
+        "id": 8689,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8018-Dedicated-vSphere-cluster-to-exec": {
+        "id": 8690,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8032-MCDS-Execution-Node-to-ESXi": {
+        "id": 8691,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8124-MCDS-Kali-Linux": {
+        "id": 8692,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "TF-8780-MCDS-to-NSXT": {
+        "id": 8693,
+        "created_time": "2023-05-19 14:43:27",
+        "disabled": false,
+        "section": "TF-NSX-V2T"
+    },
+    "HWSWS - for secure file transfer": {
+        "id": 4344,
+        "created_time": "2022-05-27 07:38:22",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW - database connectivity": {
+        "id": 4345,
+        "created_time": "2022-05-27 07:38:22",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW- sfs portal": {
+        "id": 4346,
+        "created_time": "2022-05-27 07:38:22",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW - For SSS File loading": {
+        "id": 4404,
+        "created_time": "2022-08-05 12:05:44",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW -SMTP": {
+        "id": 4365,
+        "created_time": "2022-06-29 14:48:51",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW - for secure file transfer": {
+        "id": 4348,
+        "created_time": "2022-05-27 07:38:22",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW SDMS": {
+        "id": 7308,
+        "created_time": "2023-03-27 10:07:20",
+        "disabled": false,
+        "section": "HWSW"
+    },
+    "Autobuild over SSH": {
+        "id": 4350,
+        "created_time": "2022-06-02 07:54:44",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "WAS Console (HTTPS) BlueCARE API (HTTPS)": {
+        "id": 4351,
+        "created_time": "2022-06-02 07:54:44",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "BDS repo for ISPW onboarding to Ansible Tower": {
+        "id": 4354,
+        "created_time": "2022-06-08 10:23:18",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "PEN TEST CORE RULE - Internet X-Force Red": {
+        "id": 4355,
+        "created_time": "2022-06-14 13:12:02",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "PEN TEST VM to x-force RED vault": {
+        "id": 4358,
+        "created_time": "2022-06-24 08:13:06",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "PEN TEST VM to DR62": {
+        "id": 4357,
+        "created_time": "2022-06-24 08:10:58",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "PEN TEST NEXGEN": {
+        "id": 4389,
+        "created_time": "2022-07-26 17:50:58",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MNE BNL": {
+        "id": 4394,
+        "created_time": "2022-07-27 11:36:36",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IBM Blue to MNE": {
+        "id": 4356,
+        "created_time": "2022-06-20 13:56:23",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "data sync operation": {
+        "id": 4366,
+        "created_time": "2022-07-07 11:33:59",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Proxies to Proxies": {
+        "id": 4372,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Secret to Secret": {
+        "id": 4373,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 SQL to SQL": {
+        "id": 4374,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Rabbit MQ to Rabbit MQ": {
+        "id": 4375,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD - All VMs to Session Server": {
+        "id": 5119,
+        "created_time": "2022-11-29 09:00:32",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD - Bulkloader to Proxies": {
+        "id": 4377,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Secret to Session Server": {
+        "id": 4378,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Remote Access Server to Proxies": {
+        "id": 5113,
+        "created_time": "2022-11-22 08:42:41",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Remote Access Server to Windows VMs": {
+        "id": 4380,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Remote Access Server to Linux VMs": {
+        "id": 4381,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Proxies to Secret": {
+        "id": 4382,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Secret to MS SQL": {
+        "id": 4383,
+        "created_time": "2022-07-18 14:23:14",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Distrib Engine to Secret": {
+        "id": 5112,
+        "created_time": "2022-11-22 08:42:41",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Thycotic Secret to SMTP": {
+        "id": 4420,
+        "created_time": "2022-08-29 08:32:41",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 Rabbit MQ communication on tcp/5671": {
+        "id": 5114,
+        "created_time": "2022-11-22 08:42:41",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD \u2013 IBM Blue to Remote Access Server": {
+        "id": 4435,
+        "created_time": "2022-09-01 13:19:46",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD - Secret to QRADAR": {
+        "id": 4473,
+        "created_time": "2022-09-13 08:28:03",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD - All but DB to Proxies": {
+        "id": 4386,
+        "created_time": "2022-07-18 14:30:19",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "infra - all nsxt sres win to nsxv sres domain controllers": {
+        "id": 4391,
+        "created_time": "2022-07-27 09:29:45",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "infra - ansible proxies to nsxt sres win servers": {
+        "id": 4392,
+        "created_time": "2022-07-27 09:29:45",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "infra - all nsxt sres win to nsxv sres ansible load balancer VIP": {
+        "id": 4393,
+        "created_time": "2022-07-27 09:29:45",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "BlueCare Server to PORTAL DB": {
+        "id": 4407,
+        "created_time": "2022-08-09 12:33:42",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS VMs to Bluepages": {
+        "id": 4410,
+        "created_time": "2022-08-18 08:25:32",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS VMs to Kyndryl PDR SMTP relay": {
+        "id": 4411,
+        "created_time": "2022-08-18 08:30:43",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS VMs to PDR PROXIES": {
+        "id": 4412,
+        "created_time": "2022-08-18 08:30:43",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS  Linux Jump servers to VMs": {
+        "id": 4413,
+        "created_time": "2022-08-18 08:34:38",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS VM to VM unlimited": {
+        "id": 4414,
+        "created_time": "2022-08-18 08:36:43",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Confluence to ARMS": {
+        "id": 4409,
+        "created_time": "2022-08-17 11:44:11",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS to SRES LB vip8": {
+        "id": 4457,
+        "created_time": "2022-09-07 10:12:43",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SRES LB to ARMS": {
+        "id": 4418,
+        "created_time": "2022-08-24 14:28:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS ISI to ARMS": {
+        "id": 4415,
+        "created_time": "2022-08-23 08:45:17",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS ISI to HWSW EU": {
+        "id": 4416,
+        "created_time": "2022-08-23 08:48:11",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 Web Conf Utility": {
+        "id": 4439,
+        "created_time": "2022-09-02 09:19:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 UI": {
+        "id": 4440,
+        "created_time": "2022-09-02 09:19:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 Phonehome": {
+        "id": 4441,
+        "created_time": "2022-09-02 09:19:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Sync Deamon -> SL1": {
+        "id": 4442,
+        "created_time": "2022-09-02 09:19:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 event forwarding": {
+        "id": 4443,
+        "created_time": "2022-09-02 09:19:05",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1-MnEaaS-Shared9": {
+        "id": 4436,
+        "created_time": "2022-09-02 07:40:12",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 -> Netcool Probes": {
+        "id": 4446,
+        "created_time": "2022-09-05 14:17:06",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SL1 Self-Mon": {
+        "id": 4447,
+        "created_time": "2022-09-05 14:17:06",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Sync Daemon (shared) -> SL1": {
+        "id": 4476,
+        "created_time": "2022-09-22 13:33:53",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW": {
+        "id": 6120,
+        "created_time": "2023-02-13 10:51:44",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ISIM - DSS batch loader": {
+        "id": 4493,
+        "created_time": "2022-10-03 09:06:34",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ARMS": {
+        "id": 4500,
+        "created_time": "2022-10-19 08:30:22",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SRES -> Kyndryl Network": {
+        "id": 5096,
+        "created_time": "2022-10-25 07:36:28",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAMaaS": {
+        "id": 5108,
+        "created_time": "2022-11-15 09:16:12",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "M&EaaS Integration (Netcool)": {
+        "id": 5105,
+        "created_time": "2022-11-11 09:23:55",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IAM PROD - BulkLoader to BluePages": {
+        "id": 5116,
+        "created_time": "2022-11-28 13:58:17",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IBM Blue to SRES eu1srlpm1esd9": {
+        "id": 5118,
+        "created_time": "2022-11-29 08:53:53",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "DSS Distributed Engine test": {
+        "id": 5122,
+        "created_time": "2022-12-05 12:24:24",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "KSTP UAT Prod. reporting data transfer": {
+        "id": 5123,
+        "created_time": "2022-12-05 12:24:24",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "UAT to DSS EUR": {
+        "id": 5132,
+        "created_time": "2022-12-08 10:43:52",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Event Forwarding": {
+        "id": 5133,
+        "created_time": "2022-12-13 14:56:33",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Database access": {
+        "id": 5136,
+        "created_time": "2022-12-14 08:25:20",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Bluepages": {
+        "id": 5139,
+        "created_time": "2022-12-14 08:46:54",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SMTP relay": {
+        "id": 5144,
+        "created_time": "2023-01-03 10:21:03",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SRM -> SRM Proxy": {
+        "id": 5151,
+        "created_time": "2023-01-13 09:39:59",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "DSS automation test": {
+        "id": 7322,
+        "created_time": "2023-04-03 10:51:02",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Kyndryl intranet to DSS": {
+        "id": 5157,
+        "created_time": "2023-01-20 12:50:33",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw PROD - Intra VMs any/any": {
+        "id": 5160,
+        "created_time": "2023-01-27 07:58:38",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw DEV - Intra VMs any/any": {
+        "id": 5161,
+        "created_time": "2023-01-27 07:58:38",
+        "disabled": true,
+        "section": "SRES"
+    },
+    "Tenable to ALL EU Network Segments": {
+        "id": 5162,
+        "created_time": "2023-01-30 12:42:37",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw - VMs to HWSW AG and CA": {
+        "id": 5163,
+        "created_time": "2023-01-31 13:21:31",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw DEV - DB VM to AG GACDW Prod DB": {
+        "id": 5164,
+        "created_time": "2023-01-31 13:21:31",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw DEV to ag1srlphwcsss01": {
+        "id": 5165,
+        "created_time": "2023-01-31 13:21:31",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "HWSW Global to Application Sync": {
+        "id": 5168,
+        "created_time": "2023-02-08 08:27:18",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SAT-NEXT_GEN": {
+        "id": 5171,
+        "created_time": "2023-02-08 09:33:49",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw DEV - ECM to DB VM": {
+        "id": 5173,
+        "created_time": "2023-02-13 07:56:51",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDw DEV - VMs to BP": {
+        "id": 5174,
+        "created_time": "2023-02-13 07:56:51",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SRES clinets to SRES AD,DNS": {
+        "id": 6122,
+        "created_time": "2023-02-14 12:29:47",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MCMS to EU1": {
+        "id": 7152,
+        "created_time": "2023-03-02 10:44:21",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU1 to MCMS": {
+        "id": 4313,
+        "created_time": "2022-04-28 09:48:53",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "GACDW - HwSWw EU ETL Server to GACDW EU Prod DB": {
+        "id": 7147,
+        "created_time": "2023-02-24 09:03:59",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDW - EU ETL server to HwSWw EU PROD DB": {
+        "id": 7148,
+        "created_time": "2023-02-24 09:03:59",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDW to SMTP relay": {
+        "id": 7324,
+        "created_time": "2023-04-05 08:45:07",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Copy of GACDW": {
+        "id": 7157,
+        "created_time": "2023-03-07 11:41:17",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDW": {
+        "id": 7156,
+        "created_time": "2023-03-07 11:31:06",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SWIT Gateway Azure to CACF": {
+        "id": 7169,
+        "created_time": "2023-03-16 08:51:46",
+        "disabled": true,
+        "section": "SRES"
+    },
+    "RPA to India Payroll Azure": {
+        "id": 7170,
+        "created_time": "2023-03-16 08:51:46",
+        "disabled": true,
+        "section": "SRES"
+    },
+    "HWSW to BlueID Azure": {
+        "id": 7171,
+        "created_time": "2023-03-16 08:51:46",
+        "disabled": true,
+        "section": "SRES"
+    },
+    "ANSIBLE TW/CAR/ChatOPS": {
+        "id": 7305,
+        "created_time": "2023-03-24 12:17:07",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Automation server to DB2 AP prod": {
+        "id": 7312,
+        "created_time": "2023-03-28 10:50:13",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MNE Autobuild SSH": {
+        "id": 7318,
+        "created_time": "2023-04-03 09:32:19",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MNE Autobuild Samba": {
+        "id": 7319,
+        "created_time": "2023-04-03 09:32:19",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MNE Autobuild VM intecommunication": {
+        "id": 7321,
+        "created_time": "2023-04-03 09:32:19",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ECM for UAT": {
+        "id": 7323,
+        "created_time": "2023-04-03 10:55:02",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "EU Automation server to IN AIOPS (unidirection)": {
+        "id": 7326,
+        "created_time": "2023-04-07 06:13:41",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "MnE event sync to SL1": {
+        "id": 7327,
+        "created_time": "2023-04-07 09:09:49",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "AIOPS DB2 BlueID": {
+        "id": 7332,
+        "created_time": "2023-04-11 14:20:33",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SAT-NEXT_GEN - SAT3&4 to EU AT VIP": {
+        "id": 7337,
+        "created_time": "2023-04-13 12:42:25",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SAT-NEXT_GEN intercomm": {
+        "id": 8249,
+        "created_time": "2023-05-03 12:23:31",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "To access SAT-MT GUI from 9.x network": {
+        "id": 8141,
+        "created_time": "2023-04-19 07:03:07",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GRF secure file server": {
+        "id": 8244,
+        "created_time": "2023-05-02 12:12:32",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GSNI to Netbox": {
+        "id": 8247,
+        "created_time": "2023-05-03 11:39:59",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "WSUS": {
+        "id": 8254,
+        "created_time": "2023-05-12 13:27:31",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "ISIM Relays to All LinuxOS VMs": {
+        "id": 8267,
+        "created_time": "2023-05-18 11:50:50",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "IBM Blue to ILMT": {
+        "id": 8703,
+        "created_time": "2023-05-29 07:48:50",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GSE NFS": {
+        "id": 8704,
+        "created_time": "2023-05-30 08:18:39",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "BAS EMEA DB2 connection": {
+        "id": 8706,
+        "created_time": "2023-05-30 12:28:53",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "BAS": {
+        "id": 8727,
+        "created_time": "2023-06-19 10:42:06",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "eTOC - KSTP EU VMs to KSTP AG VMs": {
+        "id": 8715,
+        "created_time": "2023-06-06 13:09:32",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDW SDMS": {
+        "id": 8717,
+        "created_time": "2023-06-07 08:59:52",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "CISO-TOOLS-AWS": {
+        "id": 8142,
+        "created_time": "2023-04-19 08:19:18",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "Internet connectivity for HFs->Splunkcloud": {
+        "id": 8722,
+        "created_time": "2023-06-13 12:26:58",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "GACDW DB2 to RADIX dataloads": {
+        "id": 8723,
+        "created_time": "2023-06-13 15:09:10",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "Netbox_to_GSNI": {
+        "id": 8731,
+        "created_time": "2023-06-21 13:28:36",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "cacf -> Sciencelogic (M&EaaS)": {
+        "id": 8732,
+        "created_time": "2023-06-22 08:41:56",
+        "disabled": false,
+        "section": "SRES"
+    },
+    "SRES-RPA to Azure TRAM": {
+        "id": 8701,
+        "created_time": "2023-05-26 07:39:22",
+        "disabled": false,
+        "section": "SRES-RPA"
+    },
+    "MCDS to VM Subnet": {
+        "id": 5148,
+        "created_time": "2023-01-06 09:56:07",
+        "disabled": false,
+        "section": "SRES-MCDS"
+    },
+    "Prometheus Alertmanager -> ISPwW SRES Netcool Message Probe": {
+        "id": 4157,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP to Netcool": {
+        "id": 4159,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Blue to OCP": {
+        "id": 4162,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF - OCP1 EU Shared NEXT to Netcools": {
+        "id": 4164,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF - EU Netcools to OCP1 NEXT": {
+        "id": 4166,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF - OCP2 JP SharedNEXT to JP Netcools": {
+        "id": 4168,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF - JP Netcool to OCP2 JP Shared": {
+        "id": 4169,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRES to SRES OCP Cluters1&3": {
+        "id": 4170,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP Cluters1&3 to SRES": {
+        "id": 4171,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP to CDI": {
+        "id": 4172,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "HWSW to OCP-Cluster1,3": {
+        "id": 4173,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "HWSW currency": {
+        "id": 4174,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "EU2 OCP Cluste  to IS Hub": {
+        "id": 4175,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "IS Hub   to EU2 OCP Cluster": {
+        "id": 4178,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "EU2 OCP Cluster in ISPW EU to IS Hub": {
+        "id": 4177,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF to M&EaaS AMS UKI Shared ISPwW": {
+        "id": 4180,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "M&EaaS AMS UKI Shared ISPwW to CACF": {
+        "id": 4181,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRES OCP3 to IBM Cloud": {
+        "id": 4182,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "EU1 OCP Cluster in ISPW EU to IS Hub nonProd NA": {
+        "id": 4183,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "IS Hub NonProd NA to EU1 OCP cluster VIP in ISPW EU": {
+        "id": 4184,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "TEMP OCP to PDR-ESG-VIP-2 ": {
+        "id": 4185,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "AP ECM to OCP2-ISPW": {
+        "id": 4309,
+        "created_time": "2022-04-19 12:20:54",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Connectivity from Japan Tower to CDI Japan instance": {
+        "id": 4187,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Connectivity for SSS In Region": {
+        "id": 4188,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRES access to EU CACF GIT": {
+        "id": 4194,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ILMT Bigfix to SFS": {
+        "id": 4196,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF data into Elasticsearch cluster": {
+        "id": 4198,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRM to OCP Cluster": {
+        "id": 4199,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SLA(RCP) to CACF AT1&2": {
+        "id": 4201,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "NEXT to JP M&E SR": {
+        "id": 4202,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "JP M&E SR to NEXT": {
+        "id": 4203,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ISIM France to Tower": {
+        "id": 4205,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF to M&EaaS ISPwW": {
+        "id": 4206,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "M&EaaS ISPwW to CACF": {
+        "id": 4207,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP EU1 cluster to OCP EU2 cluster": {
+        "id": 4208,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRES resources to IBM Cloud Private Service Endpoints": {
+        "id": 4210,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ILMT1,2,3 , Bigfix to SFS": {
+        "id": 4212,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "IBM GSNI MIL Citrix to OCP3": {
+        "id": 4214,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ISIM from Enhingen to ISPW EU": {
+        "id": 4215,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Download Extract from Ansible": {
+        "id": 4245,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Tower to ISPW SSH Proxy VIP": {
+        "id": 4217,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CAR EMEA instance automation API-Europe-DACH": {
+        "id": 4218,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP Clusters to IBM BlueID": {
+        "id": 4219,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Ansible endpoint communications": {
+        "id": 4221,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ILMT4, GW, ILMT Bigfix to SFS": {
+        "id": 4223,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP Clusters to IBM BlueID ": {
+        "id": 4224,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF MCMS Synapps": {
+        "id": 4226,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF MCMS ROCK LON": {
+        "id": 4299,
+        "created_time": "2022-03-31 11:01:10",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Netcool MnE to Next/CACF": {
+        "id": 4227,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF-EU1 & EU2 \u2192CAR-NA": {
+        "id": 4234,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF-EU1 & EU2 \u2192CAR-EMEA": {
+        "id": 4235,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ISIM connect to server": {
+        "id": 4236,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF SD OCP3 to SMTP": {
+        "id": 4237,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF-EU1 & EU2 \u2192 HCI-LAB": {
+        "id": 4238,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "IBM SL DC Amsterdam via IIIS EHN": {
+        "id": 4239,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF 3Scale integration": {
+        "id": 4135,
+        "created_time": "2022-01-24 10:55:43",
+        "disabled": false,
+        "section": "DRES136"
+    },
+    "CACF Japan NFS filesystems": {
+        "id": 4243,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ISIM 6 Download Extract from Ansible": {
+        "id": 4244,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Shared 3 EM to CACF": {
+        "id": 4246,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF to SHARED 3 EM": {
+        "id": 4247,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ISIM 5 Download Extract from Ansible": {
+        "id": 4248,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "ICP cluster 2 to OCP cluster 3": {
+        "id": 4249,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Ansible CACF EU2 toward M&EaaS Portal for API calls": {
+        "id": 4250,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "BDS repo onboarding for Ansible": {
+        "id": 4255,
+        "created_time": "2022-01-26 15:37:58",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Qualys": {
+        "id": 4254,
+        "created_time": "2022-01-26 15:35:54",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "EU1 SRES HWSW GRF to OCP 1 Cluster": {
+        "id": 4259,
+        "created_time": "2022-02-03 09:12:48",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "AG1 HWSE GRF to OCP Clusters VIPs": {
+        "id": 4262,
+        "created_time": "2022-02-22 10:27:38",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF MnE integration": {
+        "id": 4303,
+        "created_time": "2022-04-05 08:15:49",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "Strategic Markets Infra EU to CACF SFS EU": {
+        "id": 4349,
+        "created_time": "2022-05-31 09:13:35",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "EU CACF Prod to STaaS CACF proxy at MCMS AMS": {
+        "id": 4419,
+        "created_time": "2022-08-25 11:27:54",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SOSM29SNI.sni.ch.ibm.com": {
+        "id": 5115,
+        "created_time": "2022-11-22 12:24:05",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SAT-MT": {
+        "id": 5143,
+        "created_time": "2022-12-28 12:49:55",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "NA Tanzu workload 04 to EU OCP7/8": {
+        "id": 5120,
+        "created_time": "2022-11-29 14:35:50",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "MCMS Ansible Jump Connectvity": {
+        "id": 5135,
+        "created_time": "2022-12-14 07:58:32",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "CACF (Next) to M&EaaS SHARED EMs (1,2 and 3)": {
+        "id": 5149,
+        "created_time": "2023-01-09 10:36:58",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "M&EaaS SHARED EMs (1,2 and 3) to CACF (Next)": {
+        "id": 5150,
+        "created_time": "2023-01-09 10:36:58",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "IS Hub to JP OCP Cluster": {
+        "id": 7300,
+        "created_time": "2023-03-23 12:24:31",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "JP OCP Cluster to IS Hub": {
+        "id": 7301,
+        "created_time": "2023-03-23 12:24:32",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "E2E RCM Order Build -  Ansible Tower": {
+        "id": 7314,
+        "created_time": "2023-03-29 08:52:35",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "SRM Application sync customers data from this SFS repos": {
+        "id": 8264,
+        "created_time": "2023-05-15 12:15:18",
+        "disabled": false,
+        "section": "CACF"
+    },
+    "OCP 6 Internal Communication": {
+        "id": 1014,
+        "created_time": "2021-10-20 13:51:04",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP 7 Internal Communication": {
+        "id": 1022,
+        "created_time": "2021-10-26 07:24:58",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP 8 Internal Communication": {
+        "id": 1023,
+        "created_time": "2021-10-26 07:35:53",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP 5 Internal Communication": {
+        "id": 1024,
+        "created_time": "2021-10-26 07:35:53",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP 9 Internal Communication": {
+        "id": 4364,
+        "created_time": "2022-06-29 09:46:44",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP 10 Internal Communication": {
+        "id": 4397,
+        "created_time": "2022-08-01 11:50:21",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "AVI SRES SEs to OCP": {
+        "id": 2045,
+        "created_time": "2021-11-02 09:47:22",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Blue and SRES JH to OCP": {
+        "id": 1016,
+        "created_time": "2021-10-20 14:13:26",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP to IBM Blue": {
+        "id": 1017,
+        "created_time": "2021-10-20 14:18:46",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP to SRES AD Servers": {
+        "id": 1019,
+        "created_time": "2021-10-20 14:18:46",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP to NSX-T Controllers": {
+        "id": 1015,
+        "created_time": "2021-10-20 13:56:56",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP CLuster 1 to EU1": {
+        "id": 2046,
+        "created_time": "2021-11-09 16:13:38",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU1 to OCP Cluster-1": {
+        "id": 2047,
+        "created_time": "2021-11-09 16:13:38",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU2 Cluster <> SRES01-OCP-CLuster03": {
+        "id": 2050,
+        "created_time": "2021-11-18 08:06:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "SRES01-OCP-CLuster03 <> EU2 Cluster": {
+        "id": 2051,
+        "created_time": "2021-11-18 08:06:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP CLuster 1 to JP": {
+        "id": 4257,
+        "created_time": "2022-02-03 08:23:23",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "JP to OCP Cluster-1": {
+        "id": 4258,
+        "created_time": "2022-02-03 08:23:23",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Qradar system": {
+        "id": 2165,
+        "created_time": "2021-12-02 21:46:49",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "ISIM is an automated IAM tool": {
+        "id": 2166,
+        "created_time": "2021-12-02 22:11:24",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Netcool Monitoring Solution": {
+        "id": 2167,
+        "created_time": "2021-12-02 22:19:09",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM to EU, JP Towers": {
+        "id": 4107,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "NSX-V2T"
+    },
+    "MOM to PDR SMTP Proxy": {
+        "id": 4256,
+        "created_time": "2022-01-31 10:10:00",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Service Desk Monitoring from OCP7": {
+        "id": 4260,
+        "created_time": "2022-02-09 13:17:22",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "CACF 3Scale JP": {
+        "id": 4278,
+        "created_time": "2022-03-16 13:17:57",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU1 NFS Mounts": {
+        "id": 4281,
+        "created_time": "2022-03-24 10:49:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU2 NFS Mounts": {
+        "id": 4282,
+        "created_time": "2022-03-24 10:49:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "JP NFS Mounts": {
+        "id": 4283,
+        "created_time": "2022-03-24 10:49:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM EU1 NFS Mounts": {
+        "id": 4284,
+        "created_time": "2022-03-24 10:49:30",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM Proxy to TKG/NFS": {
+        "id": 4317,
+        "created_time": "2022-05-10 09:27:07",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "New Rule": {
+        "id": 4340,
+        "created_time": "2022-05-13 13:56:39",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "OCP Cluster 8 JP to IBM Blue": {
+        "id": 4352,
+        "created_time": "2022-06-08 08:02:53",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MoM Cluster to NA1 Prod/AP Prod": {
+        "id": 4367,
+        "created_time": "2022-07-12 09:24:34",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP to COS Private Endpoint": {
+        "id": 4399,
+        "created_time": "2022-08-05 09:21:46",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "AP/NA/EU OCP Clusters to MOM": {
+        "id": 4405,
+        "created_time": "2022-08-05 12:44:43",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP9 to OCP7,6": {
+        "id": 4444,
+        "created_time": "2022-09-02 11:07:06",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP7 to OCP9": {
+        "id": 4445,
+        "created_time": "2022-09-02 11:07:06",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Integ AIOPS IKS Prod to OCP": {
+        "id": 4448,
+        "created_time": "2022-09-07 07:14:14",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "SCP": {
+        "id": 4484,
+        "created_time": "2022-09-29 07:40:05",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "HWSW Currency Management": {
+        "id": 4475,
+        "created_time": "2022-09-13 10:12:12",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MCMS Ansible primary Jump Connectvity": {
+        "id": 4491,
+        "created_time": "2022-09-30 08:55:26",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MCMS Netcool Connectivity": {
+        "id": 4492,
+        "created_time": "2022-09-30 08:55:26",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Kyndryl shared tool zone": {
+        "id": 4498,
+        "created_time": "2022-10-10 07:33:51",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "AMS Ansible jumphost to OCP9": {
+        "id": 5146,
+        "created_time": "2023-01-04 11:07:21",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM OCP Cluster to EU3": {
+        "id": 5107,
+        "created_time": "2022-11-15 09:06:54",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "SLA RCP to OCP9": {
+        "id": 5153,
+        "created_time": "2023-01-16 14:12:15",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Eu1srlpmsatcld1 to OCP9 VIP": {
+        "id": 6123,
+        "created_time": "2023-02-14 15:33:13",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP9 VIP to Eu1srlpmsatcld1": {
+        "id": 6124,
+        "created_time": "2023-02-14 15:33:13",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM to EU3": {
+        "id": 7149,
+        "created_time": "2023-02-28 10:43:18",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "MOM to AG1": {
+        "id": 7311,
+        "created_time": "2023-03-28 10:22:34",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "CACF -->STaaS": {
+        "id": 7151,
+        "created_time": "2023-03-02 08:29:23",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "EU3 to ECM": {
+        "id": 7153,
+        "created_time": "2023-03-02 11:21:18",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "OCP to AD Servers in SRES": {
+        "id": 7302,
+        "created_time": "2023-03-23 13:51:37",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Ansible to BDS child": {
+        "id": 7303,
+        "created_time": "2023-03-24 08:10:02",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "CACF India to MOM": {
+        "id": 7325,
+        "created_time": "2023-04-06 11:17:42",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "UKI-CACF": {
+        "id": 7336,
+        "created_time": "2023-04-12 12:11:35",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "TSM backup": {
+        "id": 8250,
+        "created_time": "2023-05-08 06:46:05",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "Car Tools": {
+        "id": 8265,
+        "created_time": "2023-05-15 13:27:31",
+        "disabled": false,
+        "section": "OCP"
+    },
+    "AG1 Synapps consumer": {
+        "id": 7154,
+        "created_time": "2023-03-03 07:27:48",
+        "disabled": false,
+        "section": "HWSW"
+    },
+    "EU HWSW to BlueID Azure": {
+        "id": 8714,
+        "created_time": "2023-06-06 10:14:27",
+        "disabled": false,
+        "section": "HWSW"
+    },
+    "JH Access": {
+        "id": 4466,
+        "created_time": "2022-09-09 07:26:02",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "EU1 PDR to Tanzu Workload 1 - KSI": {
+        "id": 4315,
+        "created_time": "2022-04-29 09:22:42",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to IKS": {
+        "id": 4319,
+        "created_time": "2022-05-12 08:26:57",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "M&EaaS Netcool to ELK Cluster from I-AIOPs": {
+        "id": 4422,
+        "created_time": "2022-08-30 09:11:38",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "IKS to Tanzu": {
+        "id": 4320,
+        "created_time": "2022-05-12 08:26:57",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to ICP": {
+        "id": 4321,
+        "created_time": "2022-05-12 08:37:30",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "ICP to Tanzu": {
+        "id": 4322,
+        "created_time": "2022-05-12 08:37:30",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "IBM Blue to Tanzu": {
+        "id": 4467,
+        "created_time": "2022-09-09 07:26:02",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "Tanzu to CDI EU": {
+        "id": 4324,
+        "created_time": "2022-05-12 08:37:30",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to M&EaaS": {
+        "id": 4325,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to IRES build": {
+        "id": 4326,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to DX Dev": {
+        "id": 4327,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to HWSW Currency": {
+        "id": 4328,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to OCP": {
+        "id": 4329,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to RCP": {
+        "id": 4330,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "OCP to Tanzu": {
+        "id": 4331,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "DX Dev to Tanzu": {
+        "id": 4332,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "HWSW Currency to Tanzu": {
+        "id": 4333,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "DX ELK to Tanzu": {
+        "id": 4334,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "EU DE Elastic to Tanzu": {
+        "id": 4335,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "GRF to Tanzu": {
+        "id": 4336,
+        "created_time": "2022-05-12 09:17:12",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "CDI EU to Tanzu": {
+        "id": 4337,
+        "created_time": "2022-05-12 10:29:39",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "TKG to COS Private Endpoint": {
+        "id": 4400,
+        "created_time": "2022-08-05 09:23:37",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu Workload 1 to CDI JP": {
+        "id": 4472,
+        "created_time": "2022-09-12 08:20:03",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu Workload 1 to CDI": {
+        "id": 4453,
+        "created_time": "2022-09-07 09:43:37",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Tanzu to IBM Blue": {
+        "id": 4462,
+        "created_time": "2022-09-08 09:22:18",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "PDR SMTP": {
+        "id": 4471,
+        "created_time": "2022-09-09 07:54:25",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "MCMS London - Tanzu WKLD01": {
+        "id": 5098,
+        "created_time": "2022-10-27 08:38:10",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "Test bypass avi": {
+        "id": 5104,
+        "created_time": "2022-11-07 14:55:47",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "IKS to TKG Workload 01": {
+        "id": 5102,
+        "created_time": "2022-11-04 15:18:46",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "ChatOps to IBM Cloud EventStreams Kafka": {
+        "id": 5124,
+        "created_time": "2022-12-06 10:43:48",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "ChatOps and MCMS ICD": {
+        "id": 5126,
+        "created_time": "2022-12-06 10:43:48",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "RADIX to AIOPS dataloade": {
+        "id": 5125,
+        "created_time": "2022-12-06 10:43:48",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "OCPCluster->AIOps": {
+        "id": 8724,
+        "created_time": "2023-06-14 07:01:32",
+        "disabled": false,
+        "section": "TKG-WKLD-01-Prod"
+    },
+    "UAT DBs and Backup vice versa": {
+        "id": 4477,
+        "created_time": "2022-09-26 06:55:35",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "TKG02": {
+        "id": 7340,
+        "created_time": "2023-04-18 10:50:45",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "TKG02 to DBs and NFS": {
+        "id": 4478,
+        "created_time": "2022-09-26 06:55:35",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "TKG02, DBs and Backup to NFS": {
+        "id": 4479,
+        "created_time": "2022-09-26 06:55:35",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "All VMs to TKG02": {
+        "id": 4480,
+        "created_time": "2022-09-26 06:55:35",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "TKG02 to DSS HA proxy VIP": {
+        "id": 4481,
+        "created_time": "2022-09-26 06:55:35",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "UAT-DSS integration": {
+        "id": 7310,
+        "created_time": "2023-03-27 11:07:10",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "Fathom metrics": {
+        "id": 5137,
+        "created_time": "2022-12-14 08:26:50",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "Mailing for UAT": {
+        "id": 7328,
+        "created_time": "2023-04-07 09:15:21",
+        "disabled": false,
+        "section": "TKG-WKLD-02-Prod"
+    },
+    "TKG Workload03 to Workload03": {
+        "id": 8257,
+        "created_time": "2023-05-15 10:08:52",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Clusters to Active Directory": {
+        "id": 8259,
+        "created_time": "2023-05-15 10:08:52",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "Access the installer interface": {
+        "id": 8262,
+        "created_time": "2023-05-15 10:58:33",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "TKG Clusters to AVI controller": {
+        "id": 8263,
+        "created_time": "2023-05-15 10:58:33",
+        "disabled": false,
+        "section": "TKG-WKLD-03-Prod"
+    },
+    "MOM Proxy to AP, NA Proxy": {
+        "id": 4108,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "NSX-V2T"
+    },
+    "PostgreSQL to IBM Cloud": {
+        "id": 5131,
+        "created_time": "2022-12-08 10:11:29",
+        "disabled": false,
+        "section": "NSX-V2T"
+    },
+    "OCP Clusters1&3 to IRES": {
+        "id": 4113,
+        "created_time": "2022-01-24 10:55:42",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "IRES to SRES OCP Clusters1&3": {
+        "id": 4114,
+        "created_time": "2022-01-24 10:55:42",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "AD to WSUS": {
+        "id": 4301,
+        "created_time": "2022-04-04 12:11:02",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "SG-IRES-SL1-Collectors to all VMs": {
+        "id": 4342,
+        "created_time": "2022-05-16 13:30:09",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "HWSW scanning tool to IRES": {
+        "id": 8245,
+        "created_time": "2023-05-02 12:18:28",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "Splunk monitoring": {
+        "id": 8248,
+        "created_time": "2023-05-03 12:11:49",
+        "disabled": false,
+        "section": "IRES"
+    },
+    "WIN Jump & EU AT to HRES SSH Proxy for EU Shared & FSS Prod Instance": {
+        "id": 4094,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "WIN Jump & JP AT to HRES SSH Proxy for JP Shared Instance": {
+        "id": 4095,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "HA Proxy to NEXT": {
+        "id": 4096,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "OCP to http proxy 2 vip": {
+        "id": 4098,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "NEXT to HA Proxy OUT": {
+        "id": 4100,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "LB HRES to CAR": {
+        "id": 7359,
+        "created_time": "2023-04-18 14:12:44",
+        "disabled": false,
+        "section": "HRES"
+    },
+    "SRES sync Daemon -> VPC": {
+        "id": 8733,
+        "created_time": "2023-06-22 10:33:59",
+        "disabled": false,
+        "section": "VPC"
+    },
+    "INTERNET-IN PDR-ESG-LB to ICP-Proxy-HA-VIP-Ingress-Edge": {
+        "id": 4087,
+        "created_time": "2022-01-24 10:55:39",
+        "disabled": false,
+        "section": "PDR"
+    },
+    "Github to ARMS via  PDR LB": {
+        "id": 4417,
+        "created_time": "2022-08-24 13:26:18",
+        "disabled": false,
+        "section": "PDR"
+    },
+    "PDR SMTP Relay": {
+        "id": 4437,
+        "created_time": "2022-09-02 08:29:17",
+        "disabled": false,
+        "section": "PDR"
+    },
+    "BAS - VM to SMTP": {
+        "id": 8728,
+        "created_time": "2023-06-21 10:55:03",
+        "disabled": false,
+        "section": "PDR"
+    },
+    "SRES OCP to CACF Proxy VIP SSH": {
+        "id": 4150,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES84"
+    },
+    "3scale flow": {
+        "id": 4211,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "DRES13"
+    },
+    "DRES15 ro SRES OCP Clusters1&3": {
+        "id": 4161,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES15"
+    },
+    "OCP Clusters1&3 to DRES15": {
+        "id": 4163,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES15"
+    },
+    "OCP3 to CACF Proxy - Ansible": {
+        "id": 4165,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES15"
+    },
+    "CACF to Netcool DB": {
+        "id": 7159,
+        "created_time": "2023-03-13 08:11:37",
+        "disabled": false,
+        "section": "DRES15"
+    },
+    "SRES OCP3 to CACF Proxy VIP SSH": {
+        "id": 4228,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "DRES226"
+    },
+    "ISPwW DRES Amsterdam (BGE) - DR20": {
+        "id": 4197,
+        "created_time": "2022-01-24 10:55:46",
+        "disabled": false,
+        "section": "DRES20"
+    },
+    "OCP Cluster to proxy VIP": {
+        "id": 4387,
+        "created_time": "2022-07-26 08:40:33",
+        "disabled": false,
+        "section": "DRES263"
+    },
+    "DRES ESG to OCP-SFS Relay": {
+        "id": 5117,
+        "created_time": "2022-11-28 17:57:36",
+        "disabled": false,
+        "section": "DRES276"
+    },
+    "CACF Proxy to SRES OCP VIP - Netcool": {
+        "id": 4149,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES84"
+    },
+    "SRES OCP1 to CACF Proxy VIP SSH": {
+        "id": 4231,
+        "created_time": "2022-01-24 10:55:47",
+        "disabled": false,
+        "section": "DRES229"
+    },
+    "DRES LB to CACF OCP EU1": {
+        "id": 7331,
+        "created_time": "2023-04-07 10:53:07",
+        "disabled": false,
+        "section": "DRES34"
+    },
+    "OCP Clusters3 to CACF Proxy": {
+        "id": 4101,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "DRES35"
+    },
+    "CACF Proxy to OCP3 ": {
+        "id": 4104,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "DRES35"
+    },
+    "Client DRES CACF Proxy to EU2": {
+        "id": 4482,
+        "created_time": "2022-09-26 07:16:18",
+        "disabled": false,
+        "section": "DRES48"
+    },
+    "SRES01-OCP-Cluster02 to eu1d57lpjfecac": {
+        "id": 4117,
+        "created_time": "2022-01-24 10:55:42",
+        "disabled": false,
+        "section": "DRES57"
+    },
+    "DR62 CACF proxy to EU3 OCP9": {
+        "id": 7304,
+        "created_time": "2023-03-24 11:08:38",
+        "disabled": false,
+        "section": "DRES62"
+    },
+    "NOP to APICs API access": {
+        "id": 8718,
+        "created_time": "2023-06-08 14:52:20",
+        "disabled": false,
+        "section": "DRES62"
+    },
+    "CACF > DRES proxies": {
+        "id": 4116,
+        "created_time": "2022-01-24 10:55:42",
+        "disabled": false,
+        "section": "DRES63"
+    },
+    "CACF > DRES": {
+        "id": 5147,
+        "created_time": "2023-01-06 09:22:33",
+        "disabled": false,
+        "section": "DRES63"
+    },
+    "CACF to M&EaaS AMS Carrefour dedicated ISPwW": {
+        "id": 4137,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES64"
+    },
+    "M&EaaS AMS Carrefour ISPwW to CACF": {
+        "id": 4138,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES64"
+    },
+    "SRES OCP   to CACF VIP": {
+        "id": 4128,
+        "created_time": "2022-01-24 10:55:43",
+        "disabled": false,
+        "section": "DRES67"
+    },
+    "Sres co CPREM": {
+        "id": 4144,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES68"
+    },
+    "CACF Proxy communication to VIP": {
+        "id": 4145,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES68"
+    },
+    "SRES OCP cluster to cacf proxy VIP": {
+        "id": 4132,
+        "created_time": "2022-01-24 10:55:43",
+        "disabled": false,
+        "section": "DRES72"
+    },
+    "cacf proxyto OCP Proxy VIP": {
+        "id": 4090,
+        "created_time": "2022-01-24 10:55:40",
+        "disabled": false,
+        "section": "DRES69"
+    },
+    "SRES OCP to CACF Proxy": {
+        "id": 4079,
+        "created_time": "2022-01-24 10:55:39",
+        "disabled": false,
+        "section": "DRES73"
+    },
+    "DRES CACF Proxy to SRES OCP3": {
+        "id": 4102,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "DRES80"
+    },
+    "SRES OCP3 to DR80 CACF Proxy": {
+        "id": 4105,
+        "created_time": "2022-01-24 10:55:41",
+        "disabled": false,
+        "section": "DRES80"
+    },
+    "SRES OCP3 to DR80 CACF Proxy ": {
+        "id": 4140,
+        "created_time": "2022-01-24 10:55:44",
+        "disabled": false,
+        "section": "DRES81"
+    },
+    "OCP Cluster to proxy VIP ": {
+        "id": 4152,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES190"
+    },
+    "OCP 3 to CACF Proxy": {
+        "id": 4093,
+        "created_time": "2022-01-24 10:55:40",
+        "disabled": false,
+        "section": "DRES109"
+    },
+    "OCP 3 to proxy": {
+        "id": 4133,
+        "created_time": "2022-01-24 10:55:43",
+        "disabled": false,
+        "section": "DRES113"
+    },
+    "CACF Proxy to OCP3 VIP": {
+        "id": 4134,
+        "created_time": "2022-01-24 10:55:43",
+        "disabled": false,
+        "section": "DRES113"
+    },
+    "DRES ESG to SRES": {
+        "id": 8699,
+        "created_time": "2023-05-22 10:13:31",
+        "disabled": false,
+        "section": "DRES328"
+    },
+    "OCP7-EU2 to DRES Proxy": {
+        "id": 4398,
+        "created_time": "2022-08-04 08:49:43",
+        "disabled": false,
+        "section": "DRES267"
+    },
+    "CACF proxy to 3scale integration": {
+        "id": 8243,
+        "created_time": "2023-04-28 12:17:38",
+        "disabled": false,
+        "section": "DRES137"
+    },
+    "LB to SRES": {
+        "id": 4086,
+        "created_time": "2022-01-24 10:55:39",
+        "disabled": false,
+        "section": "DRES176"
+    },
+    "EU3 to DR191": {
+        "id": 8707,
+        "created_time": "2023-05-31 09:26:15",
+        "disabled": false,
+        "section": "DRES191"
+    },
+    "DRES ESG to OCP": {
+        "id": 5159,
+        "created_time": "2023-01-23 11:06:32",
+        "disabled": false,
+        "section": "DRES289"
+    },
+    "Sres to proxy dres": {
+        "id": 4155,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES206"
+    },
+    "OCP to DRES VIP": {
+        "id": 4156,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES206"
+    },
+    " OCP Cluster to proxy VIP ": {
+        "id": 4085,
+        "created_time": "2022-01-24 10:55:39",
+        "disabled": false,
+        "section": "DRES210"
+    },
+    "DRES ESG to SFS RELAY": {
+        "id": 4151,
+        "created_time": "2022-01-24 10:55:45",
+        "disabled": false,
+        "section": "DRES221"
+    },
+    "OCP8-JP to DRES Proxy VIP": {
+        "id": 4304,
+        "created_time": "2022-04-07 09:29:19",
+        "disabled": false,
+        "section": "DRES249"
+    },
+    "OCP7-EU2 to DRES Proxy VIP": {
+        "id": 4488,
+        "created_time": "2022-09-30 06:09:56",
+        "disabled": false,
+        "section": "DRES262"
+    },
+    "OCP7-EU2 to DRES proxy": {
+        "id": 4423,
+        "created_time": "2022-08-30 11:15:17",
+        "disabled": false,
+        "section": "DRES265"
+    },
+    "API": {
+        "id": 5145,
+        "created_time": "2023-01-03 10:28:20",
+        "disabled": false,
+        "section": "DRES265"
+    },
+    "OCP8-EU1 to DRES Proxy": {
+        "id": 4406,
+        "created_time": "2022-08-08 13:25:05",
+        "disabled": false,
+        "section": "DRES266"
+    },
+    "OCP6-EU1 to DRES Proxy": {
+        "id": 4474,
+        "created_time": "2022-09-13 08:32:56",
+        "disabled": false,
+        "section": "DRES269"
+    },
+    "OCP9-EU3 to DRES Proxy": {
+        "id": 5134,
+        "created_time": "2022-12-13 14:57:22",
+        "disabled": false,
+        "section": "DRES272"
+    },
+    "DRES ESG to SRES STaaS Syslog": {
+        "id": 8177,
+        "created_time": "2023-04-21 08:21:18",
+        "disabled": false,
+        "section": "DRES276"
+    },
+    "EU1 to NSX LB VIP": {
+        "id": 8178,
+        "created_time": "2023-04-21 08:21:18",
+        "disabled": false,
+        "section": "DRES276"
+    },
+    "EU3 to DR280": {
+        "id": 5140,
+        "created_time": "2022-12-14 10:25:09",
+        "disabled": false,
+        "section": "DRES280"
+    },
+    "EU3 to DR287": {
+        "id": 5154,
+        "created_time": "2023-01-17 12:18:37",
+        "disabled": false,
+        "section": "DRES287"
+    },
+    "EU3 to DR289": {
+        "id": 5158,
+        "created_time": "2023-01-23 11:06:32",
+        "disabled": false,
+        "section": "DRES289"
+    },
+    "EU2 to DR291": {
+        "id": 7150,
+        "created_time": "2023-03-01 11:56:16",
+        "disabled": false,
+        "section": "DRES291"
+    },
+    "OCP EU3 to DR296": {
+        "id": 8253,
+        "created_time": "2023-05-08 08:51:20",
+        "disabled": false,
+        "section": "DRES296"
+    },
+    "OCP EU1 to DR297": {
+        "id": 7299,
+        "created_time": "2023-03-22 09:41:24",
+        "disabled": false,
+        "section": "DRES297"
+    },
+    "OCP JP to DR298": {
+        "id": 7177,
+        "created_time": "2023-03-17 11:19:36",
+        "disabled": false,
+        "section": "DRES298"
+    },
+    "OCP7 EU2 to DR301": {
+        "id": 7317,
+        "created_time": "2023-04-03 09:09:33",
+        "disabled": false,
+        "section": "DRES301"
+    },
+    "OCP1 EU2 to DR305": {
+        "id": 8182,
+        "created_time": "2023-04-24 09:17:42",
+        "disabled": false,
+        "section": "DRES305"
+    },
+    "OCP9 EU2 to DR306": {
+        "id": 8179,
+        "created_time": "2023-04-21 10:27:34",
+        "disabled": false,
+        "section": "DRES306"
+    },
+    "OCP6 EU1 to DR333": {
+        "id": 8734,
+        "created_time": "2023-06-26 08:49:07",
+        "disabled": false,
+        "section": "DRES333"
+    },
+    "ISIM-to all win domain CTRL": {
+        "id": 4487,
+        "created_time": "2022-09-29 14:38:42",
+        "disabled": false,
+        "section": "ISIM"
+    },
+    "ISIM-IAMInfra-WAS": {
+        "id": 3055,
+        "created_time": "2022-01-17 21:28:40",
+        "disabled": false,
+        "section": "ISIM"
+    },
+    "TFcreatedTesrule1": {
+        "id": 2153,
+        "created_time": "2021-11-24 13:54:28",
+        "disabled": true,
+        "section": "TFcreated-test"
+    },
+    "TFcreated test rule 2": {
+        "id": 2154,
+        "created_time": "2021-11-24 13:54:28",
+        "disabled": true,
+        "section": "TFcreated-test"
+    },
+    "TFcreated test rule 3": {
+        "id": 2155,
+        "created_time": "2021-11-24 13:54:28",
+        "disabled": true,
+        "section": "TFcreated-test"
+    },
+    "SRES CACF Jump Host to NSX Manager": {
+        "id": 1025,
+        "created_time": "2021-10-27 09:36:26",
+        "disabled": false,
+        "section": "GSE_Tool"
+    },
+    "Jenkins": {
+        "id": 4265,
+        "created_time": "2022-02-24 13:37:08",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "execution-node": {
+        "id": 4305,
+        "created_time": "2022-04-08 13:45:52",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "MCDS ESXi cluster VM subnets to Nexus": {
+        "id": 4267,
+        "created_time": "2022-02-24 13:40:56",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "Ansible Node1, Ansible Node2, Ansible Node3 to VC, MCDS cluster": {
+        "id": 4268,
+        "created_time": "2022-02-24 13:40:56",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "CACF Ansible Tower to VC, MCDS cluster, ESXi MCDS hosts": {
+        "id": 4269,
+        "created_time": "2022-02-24 13:40:56",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "NSX-V Jumphost to VCenter": {
+        "id": 4316,
+        "created_time": "2022-05-03 12:27:34",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "Execution Node to ESXi": {
+        "id": 4310,
+        "created_time": "2022-04-21 07:04:15",
+        "disabled": false,
+        "section": "MCDS"
+    },
+    "temporary-test-hres": {
+        "id": 8185,
+        "created_time": "2023-04-24 12:42:27",
+        "disabled": true,
+        "section": "temporary-test-hres-yev"
+    }
+}

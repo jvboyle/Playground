@@ -1,0 +1,26 @@
+customer_name: MCMS Health Service Executive (HSE)
+blue_id: BAC0000CA5
+dres_name: dr283
+app_internal_name: "dr283-app-internal1"
+app_internal_subnet: 100.73.186.0
+app_internal_subnet_prefix: 23
+dlr_internal1_ip: 100.73.186.1
+dres_transit_subnet: 100.72.11.176
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr283-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.72.11.176
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.72.11.178
+vpn_esg_vnic1_ip: 100.72.11.177
+esg_dlr_transit_name: "dr283-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.72.11.184
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.72.11.185
+dlr_uplink1_ip: 100.72.11.186
+res_esg_vnic0_ip: 100.72.64.190
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: eu1-e-dvs1-pub-dvpg-edge-pub-ns-1137
+vpn_esg_vnic0_ip: 169.51.163.158
+vpn_esg_vnic0_ip_prefix: 24

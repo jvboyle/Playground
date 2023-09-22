@@ -1,0 +1,430 @@
+{
+    "NET-SL-Services": {
+        "new_name": "AP1-SG-SL-Services",
+        "note": "IP"
+    },
+    "SG-SL-IRES-WIN-AD-DNS-NTP": {
+        "new_name": "AP1-SG-SL-IRES-WIN-AD-DNS-NTP",
+        "note": "IP"
+    },
+    "HOST-GACDW-Blue": {
+        "new_name": "AP1-HOST-GACDW-Blue",
+        "note": "IP"
+    },
+    "SG-SRES01-OCP-Cluster02": {
+        "new_name": "AP1-SG-SRES01-OCP-Cluster02",
+        "note": "Exists"
+    },
+    "SG-BigFix-Relay": {
+        "new_name": "AP1-SG-BigFix-Relay",
+        "note": "IP"
+    },
+    "NET-SL-IRES-VCS-MGMT": {
+        "new_name": "AP1-SG-SL-IRES-VCS-MGMT",
+        "note": "IP"
+    },
+    "HOST-SL-IRES-VSI-WIN-Jump-Servers": {
+        "new_name": "AP1-HOST-SL-IRES-VSI-WIN-Jump-Servers",
+        "note": "IP"
+    },
+    "HOST-Fortigate10G": {
+        "new_name": "AP1-HOST-Fortigate10G",
+        "note": "IP"
+    },
+    "SG-SRES-IAM-THY-SVG-PROD": {
+        "new_name": "AP1-SG-SRES-IAM-THY-SVG-PROD",
+        "note": "IP"
+    },
+    "HOST-DRES114-OCP-Cluster01-Temp": {
+        "new_name": "AP1-HOST-DRES114-OCP-Cluster01-Temp",
+        "note": "IP"
+    },
+    "HOST-DRES164-OCP-Cluster01-Temp": {
+        "new_name": "AP1-HOST-DRES164-OCP-Cluster01-Temp",
+        "note": "IP"
+    },
+    "TEST-SG-SRES01-Icp-Cluster01": {
+        "new_name": "AP1-SG-SRES01-Icp-Cluster01",
+        "note": "IP"
+    },
+    "HOST-sres1-esg1-inside": {
+        "new_name": "AP1-HOST-sres1-esg1-inside",
+        "note": "IP"
+    },
+    "SG-SL-VCS-WIN-AD-DNS-NTP": {
+        "new_name": "AP1-SG-SL-VCS-WIN-AD-DNS-NTP",
+        "note": "IP"
+    },
+    "HOST-IBM-Blue-Sendmail": {
+        "new_name": "AP1-HOST-IBM-Blue-Sendmail",
+        "note": "IP"
+    },
+    "SG-SRES-Linux-Jump-Servers": {
+        "new_name": "AP1-SG-SRES-Linux-Jump-Servers",
+        "note": "IP"
+    },
+    "NET-SL-IRES-Portable": {
+        "new_name": "AP1-SG-SL-IRES-Portable",
+        "note": "IP"
+    },
+    "SG-SL-IRES-WIN-Jump-Servers": {
+        "new_name": "AP1-SG-SL-IRES-WIN-Jump-Servers",
+        "note": "IP"
+    },
+    "vpc-ap1-30-mneaas-prod-subnet1": {
+        "new_name": "AP1-vpc-30-mneaas-prod-subAP1-SG1",
+        "note": "IP"
+    },
+    "SG-SRES-IAM-THY-RAS-PROD": {
+        "new_name": "AP1-SG-SRES-IAM-THY-RAS-PROD",
+        "note": "IP"
+    },
+    "NET-SYD-SRES-GSNI-subnet": {
+        "new_name": "AP1-SG-SYD-SRES-GSNI-subAP1-SG",
+        "note": "IP"
+    },
+    "SG-SRES01-OCP-Cluster01": {
+        "new_name": "AP1-SG-SRES01-OCP-Cluster01",
+        "note": "=VLOOKUP(A23,'[2]Object Mapping'!$A$2:$C$35,3,0)"
+    },
+    "HOST-esxc_esxm_CloudDevices": {
+        "new_name": "AP1-HOST-esxc_esxm_CloudDevices",
+        "note": "IP"
+    },
+    "SG-DRES164-OCP-Cluster01": {
+        "new_name": "AP1-SG-DRES164-OCP-Cluster01",
+        "note": "IP"
+    },
+    "SG-SRES01-OCP-Cluster03": {
+        "new_name": "AP1-SG-SRES01-OCP-Cluster03",
+        "note": "IP"
+    },
+    "HOST-DRES110-OCP04-Cluster02": {
+        "new_name": "AP1-HOST-DRES110-OCP04-Cluster02",
+        "note": "IP"
+    },
+    "HOST-SNAT-to-SL-SVC": {
+        "new_name": "AP1-HOST-SNAT-to-SL-SVC",
+        "note": "IP"
+    },
+    "HOST-ap1d101lpcacprx1-vip": {
+        "new_name": "AP1-HOST-ap1d101lpcacprx1-vip",
+        "note": "IP"
+    },
+    "HOST-SL-IRES-NSXM": {
+        "new_name": "AP1-HOST-SL-IRES-NSXM",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1epwg": {
+        "new_name": "AP1-Host-ap1srlpm1epwg",
+        "note": "IP"
+    },
+    "SG-SRES-WIN-Jump-Servers": {
+        "new_name": "AP1-SG-SRES-WIN-Jump-Servers",
+        "note": "IP"
+    },
+    "HOST-SL-NTP": {
+        "new_name": "AP1-HOST-SL-NTP",
+        "note": "IP"
+    },
+    "HOST-AP1-AVI-NS1": {
+        "new_name": "AP1-HOST-AP1-AVI-NS1",
+        "note": "IP"
+    },
+    "SG-SRES-WIN-WSUS": {
+        "new_name": "AP1-SG-SRES-WIN-WSUS",
+        "note": "IP"
+    },
+    "SG-SRES01-Icp-Cluster01": {
+        "new_name": "AP1-SG-SRES01-Icp-Cluster01",
+        "note": "Exists"
+    },
+    "SG-SRES-WIN-SQL": {
+        "new_name": "AP1-SG-SRES-WIN-SQL",
+        "note": "IP"
+    },
+    "NET-SL-IRES-vCenter-HA": {
+        "new_name": "AP1-SG-SL-IRES-vCenter-HA",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1ecni": {
+        "new_name": "AP1-Host-ap1srlpm1ecni",
+        "note": "IP"
+    },
+    "HOST-SRES1-LB-VIP-OCP2": {
+        "new_name": "AP1-HOST-SRES1-LB-VIP-OCP2",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1epno": {
+        "new_name": "AP1-Host-ap1srlpm1epno",
+        "note": "IP"
+    },
+    "SG-SRES-Sciencelogic-DB-servers": {
+        "new_name": "AP1-SG-SRES-Sciencelogic-DB-servers",
+        "note": "IP"
+    },
+    "NET-SYD-GSNI-subnet": {
+        "new_name": "AP1-SG-SYD-GSNI-subAP1-SG",
+        "note": "IP"
+    },
+    "HOST-DRES256-Proxy-VIP": {
+        "new_name": "AP1-HOST-DRES256-Proxy-VIP",
+        "note": "IP"
+    },
+    "SG-DRES110-OCP-Cluster01": {
+        "new_name": "AP1-SG-DRES110-OCP-Cluster01",
+        "note": "Exists"
+    },
+    "SG-SRES-WIN-SEPM": {
+        "new_name": "AP1-SG-SRES-WIN-SEPM",
+        "note": "IP"
+    },
+    "HOST-DRES110-OCP-Cluster01-Temp": {
+        "new_name": "AP1-HOST-DRES110-OCP-Cluster01-Temp",
+        "note": "IP"
+    },
+    "HOST-ap1irlpm1esldc02-secondary-IP": {
+        "new_name": "AP1-HOST-ap1irlpm1esldc02-secondary-IP",
+        "note": "IP"
+    },
+    "HOST-ap1d130lpcacpr-vip": {
+        "new_name": "AP1-HOST-ap1d130lpcacpr-vip",
+        "note": "IP"
+    },
+    "HOST-SRES-OCP-Cluster03-Temp": {
+        "new_name": "AP1-HOST-SRES-OCP-Cluster03-Temp",
+        "note": "IP"
+    },
+    "HOST-Tanzu-Workload-01": {
+        "new_name": "AP1-HOST-Tanzu-Workload-01",
+        "note": "IP"
+    },
+    "HOST-SRES1-LB-VIP-OCP1": {
+        "new_name": "AP1-HOST-SRES1-LB-VIP-OCP1",
+        "note": "IP"
+    },
+    "NET-SL-Private-Service-Endpoints": {
+        "new_name": "AP1-SG-SL-Private-Service-Endpoints",
+        "note": "IP"
+    },
+    "SG-SRES-IAM-THY-All-VMs": {
+        "new_name": "AP1-SG-SRES-IAM-THY-All-VMs",
+        "note": "IP"
+    },
+    "SG-HRES-TALOS-SSHProxy": {
+        "new_name": "AP1-SG-HRES-TALOS-SSHProxy",
+        "note": "Exists"
+    },
+    "SG-DRES-Proxy-Servers": {
+        "new_name": "AP1-SG-DRES-Proxy-Servers",
+        "note": "IP"
+    },
+    "HOST-SRES-HWSW-PROD": {
+        "new_name": "AP1-HOST-SRES-HWSW-PROD",
+        "note": "IP"
+    },
+    "NET-SYD-CGN-subnet": {
+        "new_name": "AP1-SG-SYD-CGN-subAP1-SG",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1epni": {
+        "new_name": "AP1-Host-ap1srlpm1epni",
+        "note": "IP"
+    },
+    "HOST-ap1irlpm1esldc02": {
+        "new_name": "AP1-HOST-ap1irlpm1esldc02",
+        "note": "IP"
+    },
+    "SG-SRES-WIN-DNS-NTP": {
+        "new_name": "AP1-SG-SRES-WIN-DNS-NTP",
+        "note": "IP"
+    },
+    "HOST-Tanzu-mgmt-subnet": {
+        "new_name": "AP1-HOST-Tanzu-mgmt-subAP1-SG",
+        "note": "IP"
+    },
+    "HOST-ap1d127lpcacpr-vip": {
+        "new_name": "AP1-HOST-ap1d127lpcacpr-vip",
+        "note": "IP"
+    },
+    "HOST-NSXT-VC2-MGMT-Subnet": {
+        "new_name": "AP1-HOST-NSXT-VC2-MGMT-SubAP1-SG",
+        "note": "IP"
+    },
+    "SG-SRES-Automation-Control-Node": {
+        "new_name": "AP1-SG-SRES-Automation-Control-Node",
+        "note": "IP"
+    },
+    "HOST-Fortigate": {
+        "new_name": "AP1-HOST-Fortigate",
+        "note": "IP"
+    },
+    "host-ap1srlpm1esdp1": {
+        "new_name": "AP1-host-ap1srlpm1esdp1",
+        "note": "IP"
+    },
+    "HOST-ANZ_ICD_instance": {
+        "new_name": "AP1-HOST-ANZ_ICD_instance",
+        "note": "IP"
+    },
+    "HOST-SL-IRES-ALL-SNAT": {
+        "new_name": "AP1-HOST-SL-IRES-ALL-SNAT",
+        "note": "IP"
+    },
+    "HOST-ap1spplusvsnap": {
+        "new_name": "AP1-HOST-ap1spplusvsnap",
+        "note": "IP"
+    },
+    "SG-IRES-Network-Automation-Server-Group": {
+        "new_name": "AP1-SG-IRES-AP1-AP1-SGwork-Automation-Server-Group",
+        "note": "IP"
+    },
+    "HOST-SL-IRES-vCenter": {
+        "new_name": "AP1-HOST-SL-IRES-vCenter",
+        "note": "IP"
+    },
+    "HOST-ap1spplusvsnap-secondary-IP": {
+        "new_name": "AP1-HOST-ap1spplusvsnap-secondary-IP",
+        "note": "IP"
+    },
+    "Host-ap1srlphsts1ntcl": {
+        "new_name": "AP1-Host-ap1srlphsts1ntcl",
+        "note": "IP"
+    },
+    "SG-IRES-WIN-TS-Licensing": {
+        "new_name": "AP1-SG-IRES-WIN-TS-Licensing",
+        "note": "IP"
+    },
+    "SG-DRES114-OCP-Cluster01": {
+        "new_name": "AP1-SG-DRES114-OCP-Cluster01",
+        "note": "Exists"
+    },
+    "HOST-IBM-DNS": {
+        "new_name": "AP1-HOST-IBM-DNS",
+        "note": "IP"
+    },
+    "Host-ap1srlphstp1ntcl": {
+        "new_name": "AP1-Host-ap1srlphstp1ntcl",
+        "note": "IP"
+    },
+    "HOST-ap1sr1bfrelay1-IRES-NAT": {
+        "new_name": "AP1-HOST-ap1sr1bfrelay1-IRES-NAT",
+        "note": "IP"
+    },
+    "HOST-HRES-ap1h1lpta1ssh-VIP": {
+        "new_name": "AP1-HOST-HRES-ap1h1lpta1ssh-VIP",
+        "note": "IP"
+    },
+    "HOST-ap1srlpm1esd1-vip": {
+        "new_name": "AP1-HOST-ap1srlpm1esd1-vip",
+        "note": "IP"
+    },
+    "NSXT-DRES114-OCP4-CLUSTER02": {
+        "new_name": "AP1-NSXT-DRES114-OCP4-CLUSTER02",
+        "note": "IP"
+    },
+    "SG-IRES-LIN-SFTP-Backup": {
+        "new_name": "AP1-SG-IRES-LIN-SFTP-Backup",
+        "note": "IP"
+    },
+    "HOST-DRES258-Proxy-VIP": {
+        "new_name": "AP1-HOST-DRES258-Proxy-VIP",
+        "note": "IP"
+    },
+    "HOST-DRES110-LB-OCP-Cluster1-VIP-TEMP": {
+        "new_name": "AP1-HOST-DRES110-LB-OCP-Cluster1-VIP-TEMP",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1esc1": {
+        "new_name": "AP1-Host-ap1srlpm1esc1",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1ecno": {
+        "new_name": "AP1-Host-ap1srlpm1ecno",
+        "note": "IP"
+    },
+    "Host-ap1srlpgsehst01": {
+        "new_name": "AP1-Host-ap1srlpgsehst01",
+        "note": "IP"
+    },
+    "Host-ap1srlpm1esdc1": {
+        "new_name": "AP1-Host-ap1srlpm1esdc1",
+        "note": "IP"
+    },
+    "SG-PDR-SMTP-Relay": {
+        "new_name": "AP1-SG-PDR-SMTP-Relay",
+        "note": "IP"
+    },
+    "HOST-ap1d107lpcacpr-vip": {
+        "new_name": "AP1-HOST-ap1d107lpcacpr-vip",
+        "note": "IP"
+    },
+    "HOST-ap1irlpm1esldc01": {
+        "new_name": "AP1-HOST-ap1irlpm1esldc01",
+        "note": "IP"
+    },
+    "HOST-IBM-Bluepages": {
+        "new_name": "AP1-HOST-IBM-Bluepages",
+        "note": "IP"
+    },
+    "HOST-BigFix-Server": {
+        "new_name": "AP1-HOST-BigFix-Server",
+        "note": "IP"
+    },
+    "HOST-SL-WSUS": {
+        "new_name": "AP1-HOST-SL-WSUS",
+        "note": "IP"
+    },
+    "HOST-HOST-OCP4.3-Cluster": {
+        "new_name": "AP1-HOST-AP1-HOST-OCP4.3-Cluster",
+        "note": "IP"
+    },
+    "HOST-s3.private.au-syd.cloud-object-storage.appdomain.cloud": {
+        "new_name": "AP1-HOST-s3.private.au-syd.cloud-object-storage.appdomain.cloud",
+        "note": "IP"
+    },
+    "NET-IBM-Blue": {
+        "new_name": "AP1-SG-IBM-Blue",
+        "note": "Exists"
+    },
+    "SG-SRES01-OCP-Build": {
+        "new_name": "AP1-SG-SRES01-OCP-Build",
+        "note": "IP"
+    },
+    "NET-SYD-PDR-subnet": {
+        "new_name": "AP1-SG-SYD-PDR-subAP1-SG",
+        "note": "IP"
+    },
+    "HOST-IBM-Blue-API-Connect": {
+        "new_name": "AP1-HOST-IBM-Blue-API-Connect",
+        "note": "IP"
+    },
+    "SG-SRES-NAB-RDP-PROD": {
+        "new_name": "AP1-SG-SRES-NAB-RDP-PROD",
+        "note": "IP"
+    },
+    "HOST-ap1sr1bfrelay2-IRES-NAT": {
+        "new_name": "AP1-HOST-ap1sr1bfrelay2-IRES-NAT",
+        "note": "IP"
+    },
+    "HOST-ap1irlpm1esldc01-secondary-IP": {
+        "new_name": "AP1-HOST-ap1irlpm1esldc01-secondary-IP",
+        "note": "IP"
+    },
+    "HOST-ap1h1lpta2hap-vip": {
+        "new_name": "AP1-HOST-ap1h1lpta2hap-vip",
+        "note": "IP"
+    },
+    "SG-PDR-Internet-Proxy-Server": {
+        "new_name": "AP1-SG-PDR-InterAP1-AP1-SG-Proxy-Server",
+        "note": "IP"
+    },
+    "HOST-SL1-DB-Shared-VIP": {
+        "new_name": "AP1-HOST-SL1-DB-Shared-VIP",
+        "note": "IP"
+    },
+    "HOST-SL-DNS": {
+        "new_name": "AP1-HOST-SL-DNS",
+        "note": "IP"
+    }
+}

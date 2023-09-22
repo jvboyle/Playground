@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DRES125-MNEAAS-ULL-NCPP",
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES125": {
+            "category": "Application",
+            "rules": {
+                "5352": {
+                    "display_name": "TF-5352-BlueCare-sync-HTEMS-post-migration-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES125-MNEAAS-ULL-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DRES125-MNEAAS-ULL-NCPP",
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,287 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "HTTPS_16443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP",
+            "TF-EU1-HOST-eu1srlpm1epni2",
+            "TF-EU1-HOST-eu1srltm1esdc",
+            "TF-EU1-HOST-nlaspni000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1epni3",
+            "TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+            "TF-EU1-HOST-eu1sr1wphwcetl",
+            "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP",
+            "TF-EU1-HOST-nlascni000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1ecni2",
+            "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+            "TF-EU1-HOST-eu1srlpm1ecni3",
+            "TF-EU1-HOST-eu1srlpm1easpni",
+            "TF-EU1-SG-SRES-MNE-AMS3-Shared",
+            "TF-EU1-HOST-eu1srltm1esdp",
+            "TF-EU1-HOST-eu1srlpm1eascni",
+            "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+            "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+            "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+            "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+            "TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "8168": {
+                    "display_name": "TF-8168-Integration-AMS-Shared3-with-CACF-Shared",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51383546",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP"
+                    ]
+                },
+                "8169": {
+                    "display_name": "TF-8169-Integration-AMS-Shared3-with-CACF-Shared",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS_16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51383546",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ]
+                },
+                "8786": {
+                    "display_name": "TF-8786-M-EaaS-SHARED-EMs-1-2-and-3-to-CACF-Next-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3",
+                        "TF-EU1-HOST-eu1sr1wphwcetl"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0125712\nRITM0135695",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP",
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3",
+                        "TF-EU1-HOST-eu1sr1wphwcetl"
+                    ]
+                },
+                "8787": {
+                    "display_name": "TF-8787-CACF-Next-to-M-EaaS-SHARED-EMs-1-2-and-3-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS_16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0125712",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-HOST-eu1srlpm1epni3"
+                    ]
+                },
+                "8966": {
+                    "display_name": "TF-8966-MNE-Autobuild-VM-intecommunication",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-MNE-AMS3-Shared"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CHGEU0192744",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecnp4",
+                        "TF-EU1-SG-SRES-MNE-AMS3-Shared"
+                    ]
+                },
+                "8967": {
+                    "display_name": "TF-8967-MNE-Autobuild-VM-intecommunication",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNE-AMS3-Shared"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CHGEU0192744",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+                        "TF-EU1-SG-SRES-MNE-AMS3-Shared",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+                    ]
+                },
+                "8997": {
+                    "display_name": "TF-8997-UKI-CACF",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascni",
+                        "TF-EU1-HOST-eu1srlpm1easpni"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0141555",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1eascni",
+                        "TF-EU1-HOST-eu1srlpm1easpni",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP"
+                    ]
+                },
+                "8998": {
+                    "display_name": "TF-8998-UKI-CACF",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascni",
+                        "TF-EU1-HOST-eu1srlpm1easpni"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS_16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0141555",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1eascni",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-HOST-eu1srlpm1easpni",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ]
+                },
+                "9149": {
+                    "display_name": "TF-9149-cacf-Sciencelogic-M-EaaS-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0151562",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP",
+                        "TF-EU1-HOST-eu1srltm1esdp",
+                        "TF-EU1-HOST-eu1srltm1esdc"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+# The following is optional... the registered variable "vm_information" has all this vm_information
+# I'm keeping this in here as an FYI
+#- name: gather the VM facts
+#  vmware_guest:
+#    hostname: "{{ vcenter }}"
+#    username: "{{ lookup('env','vsphere_user') }}"
+#    password: "{{ lookup('env','vsphere_password') }}"
+#    validate_certs: False
+#    name: '{{ inventory_hostname }}'
+#  delegate_to: localhost
+#  register: facts
+
+- debug:
+    var: vm_information
+
+- name: Save information on VMs provisioned
+  local_action: lineinfile line=vm_information:{{ vm_information | to_yaml}} insertafter=EOF dest=/tmp/vms_provisioned.yaml
+  delegate_to: localhost
+  
+#- debug:
+#    var: facts

@@ -1,0 +1,57 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTPS",
+            "HTTP",
+            "RDP",
+            "BDS-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-eu1h1lpta1hap-Proxy"
+        ]
+    },
+    "map_policies": {
+        "TF-HRES": {
+            "category": "Application",
+            "rules": {
+                "4664": {
+                    "display_name": "TF-4664-SRES-jump-to-hres-proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                        "TF-EU1-SG-eu1h1lpta1hap-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "RDP",
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-eu1h1lpta1hap-Proxy"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+## This is the inventory that itemizes the VMs that need to be deployed.
+## While this solution only has one VM, multiple VMs can be added using
+## a line for each one.
+# Walkthrough of the items on the line below:
+# The first item (automation-control-node) is the host name of the VM that will be provisioned
+# "ansible_host":  is the IP address of the provisioned VM. This is needed
+#    so that Ansible knows how to access "automation-control-node".
+# "custom_ip":  is the IP address to be used. See the "control-node-answerfile.yml"
+# "ansible_host_group":
+# "guest_notes" : a note to tell Ansible what this is.
+
+[control-node-group]
+eu1sr1cntrl1.sr1.eu1.sp.ibm.local ansible_host=158.87.52.60 custom_ip='158.87.52.60' guest_notes='Control Node #1' ansible_host_group='control-node-group'
+  

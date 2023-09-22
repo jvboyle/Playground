@@ -1,0 +1,74 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-ag1d116lpcacpr-vip",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-HOST-ag1d116lpcacpr2",
+            "TF-AG1-HOST-ag1d116lpcacpr1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES116": {
+            "category": "Application",
+            "rules": {
+                "1881": {
+                    "display_name": "TF-1881-DRES-CACF-Proxy-to-BDS-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d116lpcacpr2",
+                        "TF-AG1-HOST-ag1d116lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d116lpcacpr2",
+                        "TF-AG1-HOST-ag1d116lpcacpr1",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                },
+                "1883": {
+                    "display_name": "TF-1883-SRES-OCP-Cluster1-to-CACF-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-ag1d116lpcacpr-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d116lpcacpr2",
+                        "TF-AG1-HOST-ag1d116lpcacpr1",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-IPSET-ag1d116lpcacpr-vip"
+                    ]
+                }
+            }
+        }
+    }
+}

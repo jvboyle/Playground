@@ -1,0 +1,50 @@
+{
+    "TF-DRES255": {
+        "map_services": {
+            "SERVICES": [
+                "SSH"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-HOST-ap1d254lpcacpr1",
+                "TF-AP1-HOST-ap1d254lpcacpr2",
+                "TF-AP1-IPSET-ap1irlpm1esldc01",
+                "TF-AP1-IPSET-ap1irlpm1esldc02"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES255": {
+                "category": "Application",
+                "rules": {
+                    "1601": {
+                        "display_name": "TF-1601-To-esldc",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d254lpcacpr1",
+                            "TF-AP1-HOST-ap1d254lpcacpr2"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1irlpm1esldc01",
+                            "TF-AP1-IPSET-ap1irlpm1esldc02"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d254lpcacpr1",
+                            "TF-AP1-HOST-ap1d254lpcacpr2",
+                            "TF-AP1-IPSET-ap1irlpm1esldc01",
+                            "TF-AP1-IPSET-ap1irlpm1esldc02"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

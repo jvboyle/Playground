@@ -1,0 +1,247 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-UDP",
+            "NBSS",
+            "HTTPS",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "DNS",
+            "WINS-UDP",
+            "Active Directory Server UDP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "SOAP",
+            "NBNS-Unicast",
+            "SMTP",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "NBDG-Broadcast",
+            "MS-DS-TCP",
+            "DHCP-Server",
+            "NBNS-Broadcast",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL",
+            "MS-DS-UDP",
+            "TCP-8443",
+            "MS_RPC_TCP",
+            "Windows-Global-Catalog",
+            "KERBEROS",
+            "LDAP",
+            "DNS-UDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DR11-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1dr11lpskl",
+            "TF-AG1-SG-SRES-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1sr1staas4",
+            "TF-AG1-SG-DR11-STaaS-Arxview",
+            "TF-AG1-HOST-ag1srlpdefmstr"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES11": {
+            "category": "Application",
+            "rules": {
+                "1547": {
+                    "display_name": "TF-1547-Staas-to-DRES11",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR11-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR11-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR11-STaaS-AD-DNS"
+                    ]
+                },
+                "1552": {
+                    "display_name": "TF-1552-DRES11-to-Staas",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR11-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR11-STaaS-AD-DNS"
+                    ]
+                },
+                "1783": {
+                    "display_name": "TF-1783-MicroStrategy-DRES11-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR11-STaaS-Arxview"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR11-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "1784": {
+                    "display_name": "TF-1784-MicroStrategy-DRES11",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR11-STaaS-Arxview"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR11-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1sr1staas4",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "3575": {
+                    "display_name": "TF-3575-ag1dr11lpskl-to-LDAP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr11lpskl"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0121957",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr11lpskl",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                }
+            }
+        }
+    }
+}

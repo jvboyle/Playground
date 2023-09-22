@@ -1,0 +1,74 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-HOST-ag1d182lpcacpr2",
+            "TF-AG1-HOST-ag1d182lpcacpr1",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-IPSET-ag1d182lpcacpr-VIP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES182": {
+            "category": "Application",
+            "rules": {
+                "2437": {
+                    "display_name": "TF-2437-DRES182-to-SRES-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d182lpcacpr2",
+                        "TF-AG1-HOST-ag1d182lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50078148\nSR50959031",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d182lpcacpr2",
+                        "TF-AG1-HOST-ag1d182lpcacpr1",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                },
+                "2439": {
+                    "display_name": "TF-2439-SRES-to-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-ag1d182lpcacpr-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50078148\nSR50959031",
+                    "scope": [
+                        "TF-AG1-IPSET-ag1d182lpcacpr-VIP",
+                        "TF-AG1-HOST-ag1d182lpcacpr2",
+                        "TF-AG1-HOST-ag1d182lpcacpr1",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                }
+            }
+        }
+    }
+}

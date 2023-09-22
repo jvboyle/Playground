@@ -1,0 +1,40 @@
+{
+    "source and destination": [
+        "ap1pdr1smtp01",
+        "HOST-GSENEU",
+        "SG-SRES-WIN-Jump-Servers",
+        "ap1srlpgse1000",
+        "SG-SRES-Linux-Jump-Servers",
+        "ap1srlpgsehst01",
+        "HOST-IBM-Bluepages",
+        "HOST-GSENNA",
+        "HOST-ag1srlpgse1000",
+        "HOST-GSENBEU",
+        "NET-IBM-Blue"
+    ],
+    "groups and ipsets": [
+        "HOST-GSENEU",
+        "SG-SRES-WIN-Jump-Servers",
+        "SG-SRES-Linux-Jump-Servers",
+        "HOST-IBM-Bluepages",
+        "HOST-GSENNA",
+        "HOST-ag1srlpgse1000",
+        "HOST-GSENBEU",
+        "NET-IBM-Blue"
+    ],
+    "source and destination ips": [
+        "158.87.54.5",
+        "ap1sr1wjmp02",
+        "158.87.54.4",
+        "9.57.182.78",
+        "158.87.48.235",
+        "9.0.0.0/8",
+        "158.87.52.244",
+        "9.17.186.253",
+        "10.63.9.69",
+        "158.87.52.243",
+        "9.23.210.79",
+        "158.87.54.7",
+        "10.63.9.68"
+    ]
+}

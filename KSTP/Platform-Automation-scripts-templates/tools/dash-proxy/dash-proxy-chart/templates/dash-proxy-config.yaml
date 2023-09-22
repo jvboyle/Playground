@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: dash-proxy-conf
+  namespace: {{ .Release.Namespace }}
+data:
+  DASH_HOST: {{ .Values.dash_proxy.dashHost }}
+  CLUSTER_ID: {{ .Values.dash_proxy.clusterID }}
+  CLUSTER_NAME: {{ .Values.dash_proxy.clusterName }}
+  PROVIDER: {{ .Values.dash_proxy.provider }}
+  CLUSTER_LOCATION: {{ .Values.dash_proxy.clusterLocation }}

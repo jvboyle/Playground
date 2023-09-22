@@ -1,0 +1,16 @@
+---
+- name: Create default outbound SNAT rule on VPN ESG
+  nsx_edge_nat:
+    nsxmanager_spec: '{{ nsxmanager_spec }}'
+    mode: 'append'
+    name: '{{ vpn_esg_name }}'
+    description: '{{ vpn_esg_snat_rule.description }}'
+    loggingEnabled: '{{ vpn_esg_snat_rule.loggingEnabled }}'
+    nat_enabled: '{{ vpn_esg_snat_rule.nat_enabled }}'
+    rule_type: '{{ vpn_esg_snat_rule.rule_type }}'
+    vnic: '{{ vpn_esg_snat_rule.vnic }}'
+    originalAddress: '{{ vpn_esg_snat_rule.originalAddress }}'
+    originalPort: '{{ vpn_esg_snat_rule.originalPort }}'
+    protocol: '{{ vpn_esg_snat_rule.protocol }}'
+    translatedAddress: '{{ vpn_esg_snat_rule.translatedAddress }}'
+    translatedPort: '{{ vpn_esg_snat_rule.translatedPort }}'

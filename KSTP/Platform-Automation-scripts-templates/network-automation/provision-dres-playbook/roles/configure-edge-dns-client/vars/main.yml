@@ -1,0 +1,2 @@
+---
+edge_dns_client_config: "{{ lookup('template', 'edge_dns_client_config.json.j2') }}"

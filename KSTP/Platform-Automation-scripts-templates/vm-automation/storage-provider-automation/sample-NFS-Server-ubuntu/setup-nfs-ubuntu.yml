@@ -1,0 +1,26 @@
+---
+# This is the file the drives the orchestration of the steps ( i.e. roles and tasks)
+# the 'hosts' variable references the elements of the inventory that will
+# be provisions
+- hosts: all
+  gather_facts: false
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+  vars_files:
+  # the following should be changed based on the region running in.
+    - non-prod-region-answerfile.yml
+  # the following should be changed based on the target segment
+    - non-prod-answerfile.yml
+  # the following represent the tasks that will be executed to provision this VM
+  # each of these roles is associated to a subdirectory under the roles directory
+  # These are executed in the order they are listed.
+  roles:
+# Note the following step will also create the disks required to support the consumable service
+     - provision-vm
+     - configure-vm
+#     - check-proxy
+     - install-nfs
+# The following will create the consumable service specific filesystems
+#     - create-filesystems

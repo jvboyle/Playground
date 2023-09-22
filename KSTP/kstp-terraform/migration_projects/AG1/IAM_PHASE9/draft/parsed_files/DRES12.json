@@ -1,0 +1,225 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-9083",
+            "TCP-8080",
+            "LDAP-UDP",
+            "NBSS",
+            "HTTP",
+            "HTTPS",
+            "TCP-2233",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "TCP-3729",
+            "DNS",
+            "WINS-UDP",
+            "Active Directory Server UDP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "FTP",
+            "SOAP",
+            "TCP-5696",
+            "NBNS-Unicast",
+            "SMTP",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "SNMP-Recieve",
+            "NBDG-Broadcast",
+            "MS-DS-TCP",
+            "DHCP-Server",
+            "NBNS-Broadcast",
+            "SNMP-Send",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL",
+            "MS-DS-UDP",
+            "SSH",
+            "TCP-8443",
+            "MS_RPC_TCP",
+            "Windows-Global-Catalog",
+            "TCP-27000-27009",
+            "KERBEROS",
+            "LDAP",
+            "DNS-UDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DR12-STaaS-Arxview",
+            "TF-AG1-SG-DR12-STaaS-AD-DNS",
+            "TF-AG1-SG-SRES-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1sr1staas4",
+            "TF-AG1-HOST-ag1dr12stw",
+            "TF-AG1-HOST-ag1sr1staas3",
+            "TF-AG1-HOST-ag1srlpdefmstr"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES12": {
+            "category": "Application",
+            "rules": {
+                "1143": {
+                    "display_name": "TF-1143-Wbshepree-Rest-Key-management",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5696",
+                        "TCP-9083",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ]
+                },
+                "1144": {
+                    "display_name": "TF-1144-Arxview",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3729",
+                        "TCP-2233",
+                        "TCP-27000-27009",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas3",
+                        "TF-AG1-SG-DR12-STaaS-Arxview"
+                    ]
+                },
+                "1145": {
+                    "display_name": "TF-1145-SRES-DRES-STaaS-AD-DNS-NTP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR12-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR12-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-SG-DR12-STaaS-AD-DNS"
+                    ]
+                },
+                "1302": {
+                    "display_name": "TF-1302-StaaS-General-Services-and-Access-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTP",
+                        "SSH",
+                        "HTTPS",
+                        "SMTP",
+                        "SNMP-Send",
+                        "SNMP-Recieve",
+                        "FTP",
+                        "TCP-8080",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "1619": {
+                    "display_name": "TF-1619-Microstrategy-Desktop",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR12-STaaS-Arxview",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ]
+                }
+            }
+        }
+    }
+}

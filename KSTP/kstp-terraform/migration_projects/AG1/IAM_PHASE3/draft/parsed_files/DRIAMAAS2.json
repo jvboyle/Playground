@@ -1,0 +1,64 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dlniamjpfua2",
+            "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT"
+        ]
+    },
+    "map_policies": {
+        "TF-DRIAMAAS2": {
+            "category": "Application",
+            "rules": {
+                "2982": {
+                    "display_name": "TF-2982-JPF-to-EPL2",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198745",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT"
+                    ]
+                },
+                "2985": {
+                    "display_name": "TF-2985-EPL2-to-JPF",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198745",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT"
+                    ]
+                }
+            }
+        }
+    }
+}

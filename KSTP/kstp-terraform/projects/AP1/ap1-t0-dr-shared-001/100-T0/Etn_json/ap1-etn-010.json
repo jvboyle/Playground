@@ -1,0 +1,112 @@
+{
+    "display_name": "ap1-etn-010",
+    "node_deployment_info": {
+        "deployment_type": "VIRTUAL_MACHINE",
+        "deployment_config": {
+            "vm_deployment_config": {
+                "vc_id": "27f7f15e-216a-42e4-bb3b-5c8c991cae1f",
+                "compute_id": "domain-c3001",
+                "storage_id": "datastore-3008",
+                "host_id": "host-3012",
+                "management_network_id": "dvportgroup-3016",
+                "management_port_subnets": [
+                    {
+                        "ip_addresses": [
+                            "10.63.153.19"
+                        ],
+                        "prefix_length": "24"
+                    }
+                ],
+                "default_gateway_addresses": [
+                    "10.63.153.1"
+                ],
+                "data_network_ids": [
+                    "dvportgroup-3079",
+                    "dvportgroup-3080",
+                    "dvportgroup-3078"
+                ],
+                "placement_type": "VsphereDeploymentConfig"
+            },
+            "form_factor": "LARGE",
+            "node_user_settings": {
+                "cli_username": "admin",
+                "root_password": "F+pXAbnhnF&C>X3",
+                "cli_password": "F+pXAbnhnF&C>X3"
+            }
+        },
+        "resource_type": "EdgeNode",
+        "display_name": "ap1-etn-010",
+        "node_settings": {
+            "hostname": "ap1-etn-010.ap1.kstp.kyndryl.net",
+            "search_domains": [
+                "ap1.kstp.kyndryl.net"
+            ],
+            "ntp_servers": [
+                "10.63.70.194",
+                "10.63.70.195"
+            ],
+            "dns_servers": [
+                "10.63.70.194",
+                "10.63.70.195"
+            ],
+            "enable_ssh": true,
+            "allow_ssh_root_login": false
+        },
+        "ip_addresses": [
+            "10.63.153.19"
+        ]
+    },
+    "host_switch_spec": {
+        "resource_type": "StandardHostSwitchSpec",
+        "host_switches": [
+            {
+                "host_switch_profile_ids": [
+                    {
+                        "value": "6dc17480-0287-418a-9ecd-21d6fa80aeb2",
+                        "key": "UplinkHostSwitchProfile"
+                    }
+                ],
+                "host_switch_name": "nvds-edge-private",
+                "pnics": [
+                    {
+                        "device_name": "fp-eth0",
+                        "uplink_name": "uplink-1"
+                    },
+                    {
+                        "device_name": "fp-eth1",
+                        "uplink_name": "uplink-2"
+                    }
+                ],
+                "ip_assignment_spec": {
+                    "resource_type": "StaticIpPoolSpec",
+                    "ip_pool_id": "c672c737-c299-47e4-a0a0-d5813c7a796c"
+                },
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "fc53799c-bbe9-4115-a246-8b956b8a8079"
+                    }
+                ]
+            },
+            {
+                "host_switch_profile_ids": [
+                    {
+                        "value": "8a8f29b1-9db2-4fc9-96fd-97e407808346",
+                        "key": "UplinkHostSwitchProfile"
+                    }
+                ],
+                "host_switch_name": "nvds-edge-public",
+                "pnics": [
+                    {
+                        "device_name": "fp-eth2",
+                        "uplink_name": "uplink-1"
+                    }
+                ],
+                "transport_zone_endpoints": [
+                    {
+                        "transport_zone_id": "f328dccd-3010-4f6f-b5e4-74526eaa2cd6"
+                    }
+                ]
+            }
+        ]
+    }
+}

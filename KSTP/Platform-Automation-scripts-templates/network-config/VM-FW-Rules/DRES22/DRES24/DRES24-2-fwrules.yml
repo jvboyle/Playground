@@ -1,0 +1,14 @@
+section_name: DR24
+rule_name: BP SRES GTS Jumpserver -> BP DRES GTS robots
+source: SG-SRES-RPA-GTS-Jump-Servers
+destination: SG-DR24-RPA-AA-Desktop-Pool
+service: RDP,
+tcp/135, 445, 8181, 9427, 22443
+udp/22443
+action: allow
+logging: yes
+direction: In/Out
+applied_to: eu1-sres-esg1,
+eu1-dr24-esg1,
+SG-SRES-RPA-GTS-Jump-Servers,
+SG-DR24-RPA-AA-Desktop-Pool

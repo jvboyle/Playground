@@ -1,0 +1,91 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "TCP-16311"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+            "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-IPSET-NET-IBM-Blue",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+            "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "7159": {
+                    "display_name": "TF-7159-Access-to-VPC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-IBM-Blue",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51327244",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-IBM-Blue",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat"
+                    ]
+                },
+                "9279": {
+                    "display_name": "TF-9279-WebGui-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0157623",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

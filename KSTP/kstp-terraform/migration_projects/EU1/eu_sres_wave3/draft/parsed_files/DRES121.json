@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+            "TF-EU1-SG-DRES121-MNEAAS-AEX-NCPP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES121": {
+            "category": "Application",
+            "rules": {
+                "5350": {
+                    "display_name": "TF-5350-Probes-event-forward-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES121-MNEAAS-AEX-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+                        "TF-EU1-SG-DRES121-MNEAAS-AEX-NCPP"
+                    ]
+                }
+            }
+        }
+    }
+}

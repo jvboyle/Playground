@@ -1,0 +1,166 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-88",
+            "TCP-135",
+            "NetBios Name Service (UDP)",
+            "TCP-3128",
+            "SSH",
+            "SMB",
+            "MS_RPC_TCP",
+            "TCP-7700",
+            "NetBios Datagram (UDP)",
+            "TCP-5986",
+            "TCP-8888",
+            "TCP-445",
+            "TCP-5985",
+            "NetBios Session Service (TCP)",
+            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-NET-SL-IRES-Portable",
+            "TF-EU1-SG-TS-Session-Hosts",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-IRES-TS-License-SErver",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-eu1sr1ljmp01",
+            "TF-EU1-IPSET-NET-SL-IRES-Primary-ESXi-vmk0",
+            "TF-EU1-SG-SL-IRES-Internet-Proxy-Clients",
+            "TF-EU1-SG-IRES-SL1-Collectors",
+            "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+            "TF-EU1-SG-SL-IRES-Internet-Proxy-Server"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "1028": {
+                    "display_name": "TF-1028-Internet-Proxy-Clients-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-IPSET-NET-SL-IRES-Primary-ESXi-vmk0",
+                        "TF-EU1-SG-SL-IRES-Internet-Proxy-Clients"
+                    ],
+                    "source_ips": [
+                        "10.175.10.130-10.175.10.136"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-SG-SL-IRES-Internet-Proxy-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3128"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-IPSET-NET-SL-IRES-Primary-ESXi-vmk0",
+                        "TF-EU1-SG-SL-IRES-Internet-Proxy-Clients",
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                        "TF-EU1-SG-SL-IRES-Internet-Proxy-Server"
+                    ]
+                },
+                "1124": {
+                    "display_name": "TF-1124-Terminal-Servers-to-Licensing-Server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-TS-Session-Hosts",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-IRES-TS-License-SErver"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NetBios Name Service (UDP)",
+                        "TCP-5986",
+                        "TCP-5985",
+                        "SMB",
+                        "MS_RPC_TCP",
+                        "NetBios Datagram (UDP)",
+                        "NetBios Session Service (TCP)",
+                        "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-TS-Session-Hosts",
+                        "TF-EU1-SG-IRES-TS-License-SErver",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable"
+                    ]
+                },
+                "5681": {
+                    "display_name": "TF-5681-SRES-Jump-to-SG-IRES-SL1-Collectors-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-IRES-SL1-Collectors",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "7855": {
+                    "display_name": "TF-7855-test",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1ljmp01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [
+                        "10.175.10.130",
+                        "10.175.10.131"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1ljmp01"
+                    ],
+                    "destination_ips": [
+                        "10.175.10.130",
+                        "10.175.10.131"
+                    ],
+                    "services": [
+                        "TCP-8888",
+                        "TCP-135",
+                        "SSH",
+                        "TCP-88",
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1ljmp01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+
+- name: Install Python 1
+  apt: name="python2.7" state=present
+  become: yes
+
+- name: Install Ansible
+  apt: name="ansible" state=present
+  become: yes
+
+#### NEED TO TEST THESE
+#- name: Install Python PIP
+#  apt: name="python-pip" state=present
+#  become: yes
+
+#- name: Install ansible
+#  pip: name="ansible" state=present
+#  become: yes
+
+#- name: Install pyVmomi
+#  pip: name="pyVmomi" state=present
+#  become: yes
+
+#- name: Install pyVmomi
+#  pip: name="nsxramlclient" state=present
+#  become: yes

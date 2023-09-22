@@ -1,0 +1,427 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-5555",
+            "HTTP",
+            "TCP-4789",
+            "TCP-30167",
+            "ICMP Destination Unreachable",
+            "TCP-8500",
+            "TCP-8181",
+            "ICMP Time Exceeded",
+            "TCP-6443",
+            "LDAP",
+            "TCP-8080",
+            "NTP",
+            "TCP-30000-32767",
+            "TCP-10250",
+            "TCP-31531",
+            "TCP-8443",
+            "TCP-8001",
+            "SSH",
+            "ICMP Echo Reply",
+            "DNS",
+            "TCP-22623",
+            "DNS-UDP",
+            "TCP-31234",
+            "ICMP Echo",
+            "HTTPS",
+            "TCP-31637",
+            "TCP-8053",
+            "TCP-9000",
+            "TCP-18080",
+            "TCP-636",
+            "ICMP Redirect"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-AVI-NS1",
+            "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet",
+            "TF-AG1-IPSET-ag1d308-AD",
+            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+            "TF-AG1-IPSET-SRES-TKG-MGMTs",
+            "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+            "TF-AG1-IPSET-sres-tanzu-workload-06",
+            "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+            "TF-AG1-HOST-ag1sr1lpi1pprx2",
+            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+            "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-SG-SRES01-OCP-Cluster05",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+            "TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+            "TF-AG1-IPSET-sres-tanzu-workload-05",
+            "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+            "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-IPSET-SRES-OCP-Cluster7-VIP",
+            "TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+            "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "2650": {
+                    "display_name": "TF-2650-V2T-Test-rule-1",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SL-IRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "100.65.2.0/23",
+                        "100.71.234.0/23",
+                        "100.64.65.0/24",
+                        "10.211.161.0/24",
+                        "100.71.242.0/24",
+                        "100.71.243.0/24",
+                        "100.71.244.0/27",
+                        "10.211.12.192/26",
+                        "100.65.0.0/23"
+                    ],
+                    "services": [
+                        "ICMP Echo Reply",
+                        "SSH",
+                        "ICMP Time Exceeded",
+                        "HTTPS",
+                        "HTTP",
+                        "ICMP Echo",
+                        "ICMP Destination Unreachable",
+                        "ICMP Redirect"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51025105",
+                    "scope": [
+                        "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "2660": {
+                    "display_name": "TF-2660-Access-Installer-Interface-from-SRES-WIN-JH",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-IPSET-SRES-TKG-MGMTs"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-31234",
+                        "TCP-5555",
+                        "TCP-30167",
+                        "TCP-6443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51098996\nTo Access the installer interface from SRES Windows Jump servers",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-TKG-MGMTs",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2778": {
+                    "display_name": "TF-2778-Tanzu-Mgmt-to-IRES-LDAP",
+                    "source_groups": [
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-sres-tanzu-workload-06",
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                        "TF-AG1-IPSET-sres-tanzu-workload-05",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP",
+                        "LDAP",
+                        "TCP-636"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "NSX-T POC/Migration",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-sres-tanzu-workload-06",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                        "TF-AG1-IPSET-sres-tanzu-workload-05",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT"
+                    ]
+                },
+                "2834": {
+                    "display_name": "TF-2834-SRES-JH-to-TKG-Cluster-Access",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-6443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51098996\nSRES JH to TKG cluster access",
+                    "scope": [
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+                    ]
+                },
+                "2835": {
+                    "display_name": "TF-2835-AUTH-Login-to-TKG-Clusters-from-Jumphosts",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-31531",
+                        "TCP-31637",
+                        "TCP-30167",
+                        "TCP-31234"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51098996\nAllow Login to the TKG Clusters",
+                    "scope": [
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+                    ]
+                },
+                "2889": {
+                    "display_name": "TF-2889-DNS-delegation-to-AVI",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-AVI-NS1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-AVI-NS1",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "2896": {
+                    "display_name": "TF-2896-OCP-4-6-build",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster7-VIP"
+                    ],
+                    "destination_ips": [
+                        "100.71.244.0/24"
+                    ],
+                    "services": [
+                        "TCP-8181",
+                        "SSH",
+                        "DNS",
+                        "HTTPS",
+                        "TCP-8053",
+                        "TCP-6443",
+                        "TCP-9000",
+                        "TCP-8080",
+                        "HTTP",
+                        "TCP-4789",
+                        "TCP-22623",
+                        "DNS-UDP",
+                        "TCP-18080",
+                        "TCP-10250",
+                        "TCP-8443",
+                        "TCP-8001",
+                        "TCP-30000-32767",
+                        "TCP-8500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster7-VIP",
+                        "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP"
+                    ]
+                },
+                "2952": {
+                    "display_name": "TF-2952-MoM-Jump-server-AG-to-CACF-NA-DevTest-cluster",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1lpi1pprx2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP"
+                    ],
+                    "destination_ips": [
+                        "100.71.244.2",
+                        "100.71.244.4"
+                    ],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS",
+                        "TCP-6443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-HOST-ag1sr1lpi1pprx2"
+                    ]
+                },
+                "2969": {
+                    "display_name": "TF-2969-NSXV_Windows_JH_to_NSXT_OCP4",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-6443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51195107",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "3023": {
+                    "display_name": "TF-3023-OCP5-to-CACF-Jump",
+                    "source_groups": [
+                        "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+                        "TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+                        "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet",
+                        "TF-AG1-HOST-ag1sr1lpi1pprx2",
+                        "TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+                    ]
+                },
+                "3870": {
+                    "display_name": "TF-3870-DRES308-NTP-DNS",
+                    "source_groups": [
+                        "TF-AG1-IPSET-ag1d308-AD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0149324",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-IPSET-ag1d308-AD"
+                    ]
+                }
+            }
+        }
+    }
+}

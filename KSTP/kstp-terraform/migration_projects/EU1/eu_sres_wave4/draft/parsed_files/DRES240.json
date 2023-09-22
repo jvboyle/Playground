@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+            "TF-EU1-HOST-eu1d240lpcacprx1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES240": {
+            "category": "Application",
+            "rules": {
+                "7759": {
+                    "display_name": "TF-7759-ISIM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d240lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50095414",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                        "TF-EU1-HOST-eu1d240lpcacprx1"
+                    ]
+                }
+            }
+        }
+    }
+}

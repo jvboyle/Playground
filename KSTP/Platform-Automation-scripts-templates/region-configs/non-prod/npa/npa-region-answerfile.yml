@@ -1,0 +1,55 @@
+---
+
+#################
+#vCenter Details
+#################
+vcenter: 'ag1vc1.ag1.sp.ibm.local'
+vcenter_dc: 'AG1-WDC04'
+vcenter_compute_cluster: 'AG1-C1'
+vcenter_compute_datastore: 'ag1-c1-vsan'
+vcenter_mgmt_cluster: 'AG1-M1'
+vcenter_mgmt_datastore: 'ag1-m1-vsan'
+vcenter_edge_cluster: 'AG1-E1'
+vcenter_edge_datastore: 'ag1-e1-vsan'
+
+vsphere_clusters:
+  compute_cluster: {name: 'AG1-C1', dvswitch: 'ag1-c-priv-dvs1', datastore: 'ag1-c1-vsan'}
+  mgmt_cluster: {name: 'AG1-M1', dvswitch: 'ag1-m-priv-dvs1', datastore: 'ag1-m1-vsan'}
+  edge_cluster: {name: 'AG1-E1', dvswitch: 'ag1-e-priv-dvs1', datastore: 'ag1-e1-vsan'}
+
+####################
+#NSX Manager details
+####################
+nsx_manager: 'ag1nsxm1.ag1.sp.ibm.local'
+
+#Regional Provider Transit Edge IP's
+agg_esg_provider_ip: '100.64.64.1'
+svc_esg_provider_ip: '100.64.64.2'
+sres_esg_provider_ip: '100.64.64.3'
+gres_esg_provider_ip: '100.64.64.4'
+vdr_esg_provider_ip: 'NA'
+pdr_esg_provider_ip: '100.64.64.253'
+ext1_vpn_provider_ip: '100.64.64.254'
+
+#Regional ISPW Infrastructure Networks
+gres_gsni_routeable_net: '158.87.50.0/24'
+sres_gsni_routeable_net: '158.87.48.0/23'
+ires_sl_nat_net: '100.64.68.0/24'
+pdr_net: '100.64.69.0/24'
+vdr_net: '100.64.70.0/24'
+
+#Customer Premises GSNI Routable NAT Network
+cp_gsni_routeable_net: '158.87.104.0/24'
+
+#Regional Pre-existing Public, Private, and Provider Transit uplink porgtroups
+provider_transit: 'ag1-provider-agg-transit1'
+pub_ns_portgroup: 'ag1-e-dvs1-pub-dvpg-pub-ns-874'
+priv_ns_portgroup: 'ag1-e-dvs1-priv-dvpg-edge-sl-svc-909'
+priv_dlr_mgmt_portgroup: 'ag1-e-dvs1-priv-dvpg-edge-sl-svc-909'
+
+# Transport Zone for logical switches (VXLAN's)
+transport_zone: 'AG1-GlobalTZ'
+cp_mode: 'UNICAST_MODE'
+
+## .... END
+############################################################################

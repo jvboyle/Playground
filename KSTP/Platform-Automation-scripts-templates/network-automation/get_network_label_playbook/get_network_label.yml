@@ -1,0 +1,20 @@
+---
+# This is the file the drives the orchestration of the steps ( i.e. roles and tasks)
+# the 'hosts' variable references the elements of the inventory that will
+# be provisions
+- hosts: localhost
+  gather_facts: false
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+  vars_files:
+  # the following should be changed based on the region running in.
+    - ../../region-configs/{{ region_type }}/{{ region }}/region-answerfile.yml
+    ## NOTE: added this to aid in getting the network_label
+    - ../../network-config/{{ region_type }}/{{ region }}/{{ segmentID }}-network-answerfile.yml
+
+
+  roles:
+     - get_network_label
+#     - record-information

@@ -1,0 +1,26 @@
+customer_name: Mayr-Melnhof Service GmbH (MM0)
+blue_id: N/A
+dres_name: dr235
+app_internal_name: "dr235-app-internal1"
+app_internal_subnet: 100.73.118.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.73.118.1
+dres_transit_subnet: 100.72.9.144
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr235-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.72.9.144
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.72.9.146
+vpn_esg_vnic1_ip: 100.72.9.145
+esg_dlr_transit_name: "dr235-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.72.9.152
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.72.9.153
+dlr_uplink1_ip: 100.72.9.154
+res_esg_vnic0_ip: 100.72.64.156
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: eu1-e-dvs1-pub-dvpg-edge-pub-ns-1137
+vpn_esg_vnic0_ip: 169.51.163.30
+vpn_esg_vnic0_ip_prefix: 24

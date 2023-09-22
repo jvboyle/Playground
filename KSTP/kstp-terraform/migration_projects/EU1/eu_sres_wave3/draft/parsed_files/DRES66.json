@@ -1,0 +1,129 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-8443",
+            "HTTPS",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-IPSET-DR66-eu1d66lpcpksldb-vip",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-SG-DRES66-MNEAAS-CFS-NCPP",
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+            "TF-EU1-HOST-eu1d66lpcpksldb1",
+            "TF-EU1-HOST-eu1srlpm1easbcp",
+            "TF-EU1-HOST-eu1d66lpcpksldb2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES66": {
+            "category": "Application",
+            "rules": {
+                "5259": {
+                    "display_name": "TF-5259-HTEMS-event-forward-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES66-MNEAAS-CFS-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+                        "TF-EU1-SG-DRES66-MNEAAS-CFS-NCPP"
+                    ]
+                },
+                "5261": {
+                    "display_name": "TF-5261-BlueCare-sync-HTEMS-post-migration-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES66-MNEAAS-CFS-NCPP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp",
+                        "TF-EU1-SG-DRES66-MNEAAS-CFS-NCPP"
+                    ]
+                },
+                "8974": {
+                    "display_name": "TF-8974-Copy-of-SL1-API-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR66-eu1d66lpcpksldb-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0139957",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-IPSET-DR66-eu1d66lpcpksldb-vip",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d66lpcpksldb1",
+                        "TF-EU1-HOST-eu1d66lpcpksldb2"
+                    ]
+                },
+                "9065": {
+                    "display_name": "TF-9065-Copy-of-Copy-of-SL1-API-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-DR66-eu1d66lpcpksldb-vip"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144845",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-IPSET-DR66-eu1d66lpcpksldb-vip",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d66lpcpksldb1",
+                        "TF-EU1-HOST-eu1d66lpcpksldb2"
+                    ]
+                }
+            }
+        }
+    }
+}

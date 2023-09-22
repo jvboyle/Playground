@@ -1,0 +1,49 @@
+{{- if .Values.alertManager.enabled }}
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-dash-alertmanager
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dash-alertmanager
+    spec:
+      containers:
+        - name: prometheus-alertmanager
+          image: "ibmcb-docker-local.artifactory.swg-devops.com/alertmanager"
+          imagePullPolicy: "IfNotPresent"
+          args:
+            - --config.file=/etc/config/alertmanager.yml
+            - --storage.path=/alertmanager
+            - --web.external-url=/
+          ports:
+            - containerPort: 9093
+          securityContext:
+            runAsUser: 65534
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+            - name: alertmanager
+              mountPath: "/alertmanager"
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+            #limits:
+            #  cpu: 10m
+            #  memory: 50Mi
+      volumes:
+        - name: config-volume
+          configMap:
+            defaultMode: 420
+            name: {{ .Release.Name }}-alertmanager-config
+        - name: alertmanager
+          emptyDir: {}
+      {{- if .Values.imageCredentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}-registrykey
+      {{- end }}
+{{- end }}      

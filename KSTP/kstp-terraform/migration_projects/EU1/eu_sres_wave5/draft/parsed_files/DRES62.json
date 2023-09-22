@@ -1,0 +1,109 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "HTTP",
+            "SSH",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-DR62-SolarWinds",
+            "TF-EU1-SG-DR62-BlueCat",
+            "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+            "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES62": {
+            "category": "Application",
+            "rules": {
+                "4059": {
+                    "display_name": "TF-4059-Linux-Jump-DR62-solar-winds-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTP",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat"
+                    ]
+                },
+                "4110": {
+                    "display_name": "TF-4110-Win-Linux-Jump-DR62-solar-winds-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTP",
+                        "SSH",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat"
+                    ]
+                },
+                "9141": {
+                    "display_name": "TF-9141-ScienceLogic-SL1-Admin-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0143541",
+                    "scope": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+---
+- rhsm_repository:
+    name:
+      - rhel-7-server-ose-3.11-rpms
+      - rhel-7-server-ansible-2.6-rpms
+    state: present

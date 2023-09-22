@@ -1,0 +1,123 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "TCP-5986",
+            "SSH",
+            "TCP-5985"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+            "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-IPSET-SRES-eu1rhellic01",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+            "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+            "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+            "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+            "TF-EU1-HOSTS-WindowsOS-All",
+            "TF-EU1-HOSTS-LinuxOS-All"
+        ]
+    },
+    "map_policies": {
+        "TF-Monitoring": {
+            "category": "Application",
+            "rules": {
+                "8410": {
+                    "display_name": "TF-8410-SL1-Data-Collector-to-All-Windows-VMs",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOSTS-WindowsOS-All"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985",
+                        "TCP-5986"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+                        "TF-EU1-HOSTS-WindowsOS-All"
+                    ]
+                },
+                "8411": {
+                    "display_name": "TF-8411-SL1-Data-Collectors-to-All-Linux-VMs",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-HOSTS-LinuxOS-All"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+                        "TF-EU1-HOSTS-LinuxOS-All"
+                    ]
+                },
+                "8415": {
+                    "display_name": "TF-8415-JHs-to-SL1-Data-Collectors",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ]
+                }
+            }
+        }
+    }
+}

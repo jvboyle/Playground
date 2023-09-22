@@ -1,0 +1,26 @@
+customer_name: Direct Energy
+blue_id: N/A
+dres_name: dr182
+app_internal_name: "dr182-app-internal1"
+app_internal_subnet: 100.64.154.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.64.154.1
+dres_transit_subnet: 100.64.2.176
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr182-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.64.2.176
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.64.2.178
+vpn_esg_vnic1_ip: 100.64.2.177
+esg_dlr_transit_name: "dr182-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.64.2.184
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.64.2.185
+dlr_uplink1_ip: 100.64.2.186
+res_esg_vnic0_ip: 100.64.64.46
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: ag1-e-dvs1-pub-dvpg-pub-ns-874
+vpn_esg_vnic0_ip: 52.116.104.86
+vpn_esg_vnic0_ip_prefix: 27

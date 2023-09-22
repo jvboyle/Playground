@@ -1,0 +1,92 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-16311",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+            "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+            "TF-EU1-HOSTS-LinuxOS-All",
+            "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+            "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+            "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+            "TF-EU1-IPSET-SRES-eu1rhellic01",
+            "TF-EU1-SG-SRES-Netcool-WebGUI"
+        ]
+    },
+    "map_policies": {
+        "TF-Monitoring": {
+            "category": "Application",
+            "rules": {
+                "8411": {
+                    "display_name": "TF-8411-SL1-Data-Collectors-to-All-Linux-VMs",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-HOSTS-LinuxOS-All",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-HOSTS-LinuxOS-All",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01"
+                    ]
+                },
+                "8419": {
+                    "display_name": "TF-8419-SL1-Data-Collectors-to-Netcool-WebGUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-Netcool-WebGUI"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector",
+                        "TF-EU1-SG-SRES-Netcool-WebGUI"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "TF-DRES114": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-8081"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-HOST-ap1d114lpcacpr1",
+                "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                "TF-AP1-HOST-ap1d114lpcacpr2",
+                "TF-AP1-IPSET-Host-ap1srlpcacfbds1",
+                "TF-AP1-IPSET-ap1d114lpcacpr-vip"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES114": {
+                "category": "Application",
+                "rules": {
+                    "1255": {
+                        "display_name": "TF-1255-BDS_CPREM_to_DRES114",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [
+                            "10.47.122.198",
+                            "10.47.122.200",
+                            "10.47.156.139",
+                            "10.47.156.138"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1d114lpcacpr-vip",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-ap1d114lpcacpr-vip",
+                            "TF-AP1-HOST-ap1d114lpcacpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-HOST-ap1d114lpcacpr2"
+                        ]
+                    },
+                    "1256": {
+                        "display_name": "TF-1256-DRES114cluster_to_BDS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d114lpcacpr1",
+                            "TF-AP1-HOST-ap1d114lpcacpr2"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1",
+                            "TF-AP1-HOST-ap1d114lpcacpr1",
+                            "TF-AP1-HOST-ap1d114lpcacpr2"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

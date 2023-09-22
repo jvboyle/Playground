@@ -1,0 +1,301 @@
+{
+    "SG-PDR-SMTP-Relay": {
+        "vms": [
+            "ap1pdr1smtp01"
+        ]
+    },
+    "SG-IRES-WIN-VMware-Monitoring": {
+        "vms": [
+            "ap1vmon"
+        ]
+    },
+    "SG-SRES-NAB-RDP-PROD": {
+        "vms": [
+            "ap1sr1wnabjmp01",
+            "ap1sr1wnabjmp02"
+        ]
+    },
+    "SG-BigFix-Relay": {
+        "vms": [
+            "ap1sr1bfrelay1",
+            "ap1sr1bfrelay2"
+        ]
+    },
+    "SG-HRES-HA-Proxy-OUT": {
+        "vms": [
+            "ap1h1lpta2hap2",
+            "ap1h1lpta2hap1"
+        ]
+    },
+    "SG-SRES-WIN-Jump-Servers": {
+        "vms": [
+            "ap1sr1wjmp02",
+            "ap1sr1wjmp01"
+        ]
+    },
+    "SG-SRES01-Icp-Cluster01": {
+        "vms": [
+            "ap1sr1icp1m02",
+            "ap1sr1icp1n04",
+            "ap1sr1icp1p03",
+            "ap1sr1icp1n06",
+            "ap1sr1icp1m01",
+            "ap1sr1icp1nfs01",
+            "ap1sr1icp1n05",
+            "ap1sr1icp1x01",
+            "ap1sr1icp1p02",
+            "ap1sr1icp1va01",
+            "ap1sr1icp1n01",
+            "ap1sr1icp1m03",
+            "ap1sr1icp1x02",
+            "ap1sr1icp1x03",
+            "ap1sr1icp1n02",
+            "ap1sr1icp1n07"
+        ]
+    },
+    "SG-DRES-ALL-CACF-Proxy": {
+        "vms": [
+            "ap1d114lpcacpr1",
+            "ap1pdr1prx02",
+            "ap1d130lpcacpr1",
+            "ap1d108lpcacpr1",
+            "ap1pdr1prx01",
+            "ap1d107lpcacpr1",
+            "ap1h1lpta1ssh2",
+            "ap1d128lpcacpr1",
+            "ap1d105lpcacpr1",
+            "ap1h1lpta1ssh1",
+            "ap1d129lpcacpr1",
+            "ap1d105lpcacpr2",
+            "ap1d127lpcacpr1",
+            "ap1d107lpcacpr2",
+            "ap1sr1lpcacprx1",
+            "ap1d141lpcacpr1",
+            "ap1d101lpcacprx1",
+            "ap1d110lpcacpr2",
+            "ap1d114lpcacpr2",
+            "ap1d103lpcacpr1",
+            "ap1sr1lpcacprx2",
+            "ap1d110lpcacpr1"
+        ]
+    },
+    "SG-DRES-Proxy-Servers": {
+        "vms": [
+            "ap1d108lpcacpr1",
+            "ap1d110lpcacpr1",
+            "ap1d128lpcacpr1",
+            "ap1d141lpcacpr1",
+            "ap1d130lpcacpr1",
+            "ap1d103lpcacpr1",
+            "ap1d127lpcacpr1",
+            "ap1d101lpcacprx1",
+            "ap1d105lpcacpr1",
+            "ap1d105lpcacpr2",
+            "ap1d107lpcacpr1"
+        ]
+    },
+    "SG-SL-VCS-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ADNSap12",
+            "ADNSap11"
+        ]
+    },
+    "SG-SRES01-OCP-Build": {
+        "vms": [
+            "ap1sr1wdns01"
+        ]
+    },
+    "SG-SRES-Automation-Control-Node": {
+        "vms": [
+            "ap1sr1cntrl1",
+            "ap1sr1cntrl1_old"
+        ]
+    },
+    "SG-SRES-Linux-Jump-Servers": {
+        "vms": [
+            "ap1sr1ljmp01"
+        ]
+    },
+    "SG-SRES-WIN-SEPM": {
+        "vms": [
+            "ap1sr1sepm1"
+        ]
+    },
+    "SG-SL-IRES-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ap1dc1",
+            "ap1dc2"
+        ]
+    },
+    "SG-SL-IRES-WIN-Jump-Servers": {
+        "vms": [
+            "ap1jump02"
+        ]
+    },
+    "TEST-SG-SRES01-Icp-Cluster01": {
+        "vms": [
+            "ap1sr1ljmp01",
+            "ap1sr1icp1x01",
+            "ap1sr1ptr1_test",
+            "ap1sr1lpnessus",
+            "ap1sr1sepm1",
+            "ap1sr1lpcacprx2",
+            "ap1sr1lpcacprx1",
+            "ap1sr1icp1nfs01",
+            "ap1sr1wnabjmp01",
+            "ap1sr1icp1p03",
+            "ap1sr1cntrl1_old",
+            "ap1sr1wjmp02",
+            "ap1sftp01",
+            "ap1sr1wdns01",
+            "ap1sr1icp1x02",
+            "ap1sr1icp1p02",
+            "ap1-etn-v2t-03a",
+            "ap1Comp",
+            "ap1sr1wsus01",
+            "ap1sr1icp1n02",
+            "VM 2016-test",
+            "Windows 2019 Template",
+            "ap1sr1icp1x03",
+            "ap1rhel08",
+            "ap1sr1icp1n06",
+            "ap1sr1bfrelay1",
+            "ap1sr1lncacibtep",
+            "RHEL8_template_DO Not Use",
+            "ag1sr1utkgbase",
+            "ap1sr1lncacibtjh",
+            "ap1sr1cntrl1",
+            "ap1sr1icp1m02",
+            "test VM",
+            "ap1sr1wjmp01",
+            "ap1rhelreposerver",
+            "ap1sftp02",
+            "New RHEL_Template 7",
+            "ap1sr1icp1n04",
+            "ap1srlpcacfbds1",
+            "ap1sr1wnabjmp02",
+            "WIN2016SQLTemplate",
+            "ap1sr1icp1m03",
+            "ap1sr1wdns02",
+            "ap1sppappliance",
+            "ap1sr1icp1m01",
+            "ap1sr1icp1n07",
+            "WIN2016stdApr_template_Base",
+            "ap1sr1lcacfjump01",
+            "ap1sr1lpocpnfs1",
+            "ap1sr1icp1n05",
+            "ap1sr1icp1va01",
+            "ap1sr1lcacfjump02",
+            "rhel7 2022 -Latest Version",
+            "ap1sr1bfrelay2",
+            "ap1sr1wrptest",
+            "ap1-etn-v2t-03b",
+            "ap1sr1wppd",
+            "ap1sr1sql01",
+            "ap1sr1icp1n01"
+        ]
+    },
+    "SG-IRES-LIN-SFTP-Backup": {
+        "vms": [
+            "ap1sftp02"
+        ]
+    },
+    "SG-SRES-WIN-SQL": {
+        "vms": [
+            "ap1sr1sql01"
+        ]
+    },
+    "SG-HRES-HA-Proxy-IN": {
+        "vms": [
+            "ap1h1lpta1hap2",
+            "ap1h1lpta1hap1"
+        ]
+    },
+    "SG-SRES-WIN-WSUS": {
+        "vms": [
+            "ap1sr1wsus01"
+        ]
+    },
+    "SG-PDR-Internet-Proxy-Server": {
+        "vms": [
+            "ap1pdr1prx01",
+            "ap1pdr1prx02"
+        ]
+    },
+    "SG-SRES-WIN-DNS-NTP": {
+        "vms": [
+            "ap1sr1wdns02",
+            "ap1sr1wdns01"
+        ]
+    },
+    "SG-IRES-WIN-TS-Licensing": {
+        "vms": [
+            "ap1wtslic01"
+        ]
+    },
+    "SG-AP-MSS-QRADAR-DC": {
+        "vms": [
+            "ap1lmssqr01"
+        ]
+    },
+    "SG-ap1sr1wppd": {
+        "vms": [
+            "ap1sr1lncacibtjh",
+            "ap1sr1wnabjmp02",
+            "ap1sr1wdns01",
+            "ap1sr1lpcacprx2",
+            "ap1sr1lpcacprx1",
+            "ap1sr1icp1n01",
+            "ap1sr1icp1m01",
+            "ap1sr1icp1x02",
+            "ap1sr1wnabjmp01",
+            "ap1sr1wppd",
+            "ap1sr1icp1m03",
+            "ap1sr1icp1n06",
+            "ap1sr1lcacfjump01",
+            "ap1sr1cntrl1_old",
+            "ap1sr1icp1x03",
+            "ap1sr1sql01",
+            "ap1sr1icp1nfs01",
+            "ap1sr1icp1n05",
+            "ap1sr1icp1p03",
+            "ap1sr1sepm1",
+            "ap1sr1ptr1_test",
+            "ap1sr1lpocpnfs1",
+            "ap1sr1ljmp01",
+            "Ap1sr1wisotest",
+            "ap1sr1icp1m02",
+            "ap1sr1bfrelay2",
+            "ap1sr1wdns02",
+            "ap1sr1lpnessus",
+            "ap1sr1cntrl1",
+            "ap1sr1wsus01",
+            "ap1sr1icp1n07",
+            "ap1sr1lcacfjump02",
+            "ap1sr1lncacibtep",
+            "ap1sr1wjmp02",
+            "ap1sr1icp1n04",
+            "ap1sr1bfrelay1",
+            "ap1sr1wrptest",
+            "ap1sr1icp1x01",
+            "ap1sr1icp1p02",
+            "ap1sr1wjmp01",
+            "ap1sr1icp1va01",
+            "ap1sr1icp1n02"
+        ]
+    },
+    "SG-HRES-TALOS-SSHProxy": {
+        "vms": [
+            "ap1h1lpta1ssh1",
+            "ap1h1lpta1ssh2"
+        ]
+    },
+    "SG-IRES-WIN-VMware-vRO": {
+        "vms": [
+            "ap1vro01"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-PROD": {
+        "vms": []
+    }
+}

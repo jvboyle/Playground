@@ -1,0 +1,15 @@
+  - name: Collect DLR VM Folder ID
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/folder?filter.names={{ vcenter_dlrvm_folder }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_dlrvm_folder
+
+  - name: Save DLR VM Folder ID to Variable
+    set_fact:
+      dlrvm_folder_id: "{{ output_dlrvm_folder.json.value[0].folder }}"

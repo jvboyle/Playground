@@ -1,0 +1,52 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpisiwai04",
+            "TF-EU1-HOST-eu1srlpisiwai02",
+            "TF-EU1-HOST-eu1srlpisiwai01",
+            "TF-EU1-HOST-eu1srlpisiwai03",
+            "TF-EU1-HOST-eu1d51lpcacprx1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES51": {
+            "category": "Application",
+            "rules": {
+                "6869": {
+                    "display_name": "TF-6869-IAM-automation",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpisiwai02",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1srlpisiwai03",
+                        "TF-EU1-HOST-eu1srlpisiwai04"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d51lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50994786\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpisiwai04",
+                        "TF-EU1-HOST-eu1srlpisiwai02",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1srlpisiwai03",
+                        "TF-EU1-HOST-eu1d51lpcacprx1"
+                    ]
+                }
+            }
+        }
+    }
+}

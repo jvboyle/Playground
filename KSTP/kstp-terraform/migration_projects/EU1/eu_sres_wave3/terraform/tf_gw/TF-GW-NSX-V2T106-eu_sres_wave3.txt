@@ -1,0 +1,240 @@
+######################################################
+# migration: eu_sres_wave3
+######################################################
+   rule {
+         display_name = "TF-8168-Integration-AMS-Shared3-with-CACF-Shared"
+         notes        = "SR51383546"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni3",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni3"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8169-Integration-AMS-Shared3-with-CACF-Shared"
+         notes        = "SR51383546"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni3",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni3"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS_16443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8786-M-EaaS-SHARED-EMs-1-2-and-3-to-CACF-Next-"
+         notes        = "RITM0125712 RITM0135695"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascni000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni2",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni2",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspni000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni3",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni3",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1wphwcetl"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8787-CACF-Next-to-M-EaaS-SHARED-EMs-1-2-and-3-"
+         notes        = "RITM0125712"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlascni000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni2",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni2",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspni000m1ermp",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1ecni3",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1epni3"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS_16443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8966-MNE-Autobuild-VM-intecommunication"
+         notes        = "CHGEU0192744"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNE-AMS3-Shared"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8967-MNE-Autobuild-VM-intecommunication"
+         notes        = "CHGEU0192744"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MNE-AMS3-Shared"
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8997-UKI-CACF"
+         notes        = "RITM0141555"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1eascni",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1easpni"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8998-UKI-CACF"
+         notes        = "RITM0141555"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1eascni",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpm1easpni"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS_16443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9149-cacf-Sciencelogic-M-EaaS-"
+         notes        = "RITM0151562"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }

@@ -1,0 +1,132 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "RDP",
+            "HTTPS",
+            "TCP-2000",
+            "HTTP",
+            "UDP-123",
+            "TCP-2000-3000",
+            "TCP-6014"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-2",
+            "TF-EU1-HOST-eu1d23lngnpptst",
+            "TF-EU1-IPSET-DR23-esg-lb-main-IP-100-72-64-17",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-3"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES23": {
+            "category": "Application",
+            "rules": {
+                "5727": {
+                    "display_name": "TF-5727-JZ-Test",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d23lngnpptst"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP",
+                        "UDP-123",
+                        "HTTPS",
+                        "TCP-2000",
+                        "HTTP",
+                        "TCP-6014"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d23lngnpptst",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5729": {
+                    "display_name": "TF-5729-JZ-LB-Test",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-2",
+                        "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP",
+                        "UDP-123",
+                        "HTTPS",
+                        "TCP-2000",
+                        "HTTP",
+                        "TCP-6014"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-2",
+                        "TF-EU1-IPSET-DR23-esg-lb-vip-100-72-63-3",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5743": {
+                    "display_name": "TF-5743-JZ-LB-Test-4",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-DR23-esg-lb-main-IP-100-72-64-17"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-DR23-esg-lb-main-IP-100-72-64-17",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "6843": {
+                    "display_name": "TF-6843-JZ-PAT-Test-1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "100.72.0.225"
+                    ],
+                    "services": [
+                        "TCP-2000-3000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

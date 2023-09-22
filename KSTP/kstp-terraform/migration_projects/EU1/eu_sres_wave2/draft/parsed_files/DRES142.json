@@ -1,0 +1,273 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "LDAP",
+            "WINS",
+            "BDS-8081",
+            "KERBEROS-UDP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "LDAP-UDP",
+            "NBDG-Broadcast",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "Windows-Global-Catalog",
+            "NBDG-Unicast",
+            "DHCP-Server",
+            "SOAP",
+            "TCP-9083",
+            "KERBEROS",
+            "Active Directory Server UDP",
+            "DNS",
+            "DNS-UDP",
+            "MS-DS-UDP",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "TCP-5696",
+            "HTTPS",
+            "NTP Time Server",
+            "Active Directory Server",
+            "Windows-Global-Catalog-over-SSL",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d142lpcacprx2",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-SG-DR142-STaaS-Arxview",
+            "TF-EU1-HOST-eu1sr1staas17",
+            "TF-EU1-HOST-eu1dr142wphbstw",
+            "TF-EU1-SG-DR142-STaaS-AD-DNS",
+            "TF-EU1-SG-SRES-STaaS-MSTR",
+            "TF-EU1-HOST-eu1d142lpcacprx1",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES142": {
+            "category": "Application",
+            "rules": {
+                "5505": {
+                    "display_name": "TF-5505-Microsoft-Active-Directory",
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR142-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR142-STaaS-AD-DNS"
+                    ]
+                },
+                "5506": {
+                    "display_name": "TF-5506-Microsoft-Active-Directory",
+                    "source_groups": [
+                        "TF-EU1-SG-DR142-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR142-STaaS-AD-DNS"
+                    ]
+                },
+                "5507": {
+                    "display_name": "TF-5507-Websphere,-Rest,-Key-management",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr142wphbstw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr142wphbstw"
+                    ]
+                },
+                "5508": {
+                    "display_name": "TF-5508-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr142wphbstw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr142wphbstw"
+                    ]
+                },
+                "5515": {
+                    "display_name": "TF-5515-Microstrategy",
+                    "source_groups": [
+                        "TF-EU1-SG-DR142-STaaS-Arxview"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-SG-SRES-STaaS-MSTR"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-SG-SRES-STaaS-MSTR",
+                        "TF-EU1-SG-DR142-STaaS-Arxview"
+                    ]
+                },
+                "5516": {
+                    "display_name": "TF-5516-Microstrategy",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-SG-SRES-STaaS-MSTR"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR142-STaaS-Arxview"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-SG-SRES-STaaS-MSTR",
+                        "TF-EU1-SG-DR142-STaaS-Arxview"
+                    ]
+                },
+                "6148": {
+                    "display_name": "TF-6148-CACF-Proxy-to-SRES-BDS",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d142lpcacprx2",
+                        "TF-EU1-HOST-eu1d142lpcacprx1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d142lpcacprx2",
+                        "TF-EU1-HOST-eu1d142lpcacprx1",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

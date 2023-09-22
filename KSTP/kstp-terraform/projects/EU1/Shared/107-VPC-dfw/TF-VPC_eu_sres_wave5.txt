@@ -1,0 +1,169 @@
+######################################################
+# migration: eu_sres_wave5
+######################################################
+   rule {
+         display_name = "TF-7099-TEMP-AG1-Shared-NonProd-IKS-to-MnE"
+         notes        = "SR51014093"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlasabuildisw00",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlasabuildisw00",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-31673",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-31480"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlasabuildisw00",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7159-Access-to-VPC"
+         notes        = "SR51327244"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-sh-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1-nat"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8126-AG1-Shared-NonProd-IKS-to-MnE-"
+         notes        = "SR51369687 SR51398149"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srwdhwcgrfds"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srwdhwcgrfds",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8254-HWSW-GRF-VPC"
+         notes        = "SR51415692"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srwphwcgrfdb"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srwphwcgrfdb",
+               "/infra/domains/default/groups/TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8264-SRES-to-Softlayer-Private-Service-endpoints"
+         notes        = "SR51379271 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlasabuildisw00",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-31220"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-nlasabuildisw00",
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-EU1"
+            }
+      }

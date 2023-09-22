@@ -1,0 +1,11 @@
+#!/bin/bash
+HAPROXY_STATUS=$(/bin/ps ax | grep -w [h]aproxy)
+
+if [ "$HAPROXY_STATUS" != "" ]
+then
+  exit 0
+else
+  logger "HAProxy is NOT running. Setting keepalived state to FAULT."
+  exit 1
+fi
+

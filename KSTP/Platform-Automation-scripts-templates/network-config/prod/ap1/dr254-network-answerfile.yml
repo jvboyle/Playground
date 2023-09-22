@@ -1,0 +1,26 @@
+customer_name: Telstra
+blue_id: N/A
+dres_name: dr254
+app_internal_name: "dr254-app-internal1"
+app_internal_subnet: 100.80.114.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.80.114.1
+dres_transit_subnet: 100.80.1.112
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr254-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.80.1.112
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.80.1.114
+vpn_esg_vnic1_ip: 100.80.1.113
+esg_dlr_transit_name: "dr254-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.80.1.120
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.80.1.121
+dlr_uplink1_ip: 100.80.1.122
+res_esg_vnic0_ip: 100.80.64.26
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: ap1-e-dvs1-pub-dvpg-edge-pub-ns-1113
+vpn_esg_vnic0_ip: 168.1.103.235
+vpn_esg_vnic0_ip_prefix: 26

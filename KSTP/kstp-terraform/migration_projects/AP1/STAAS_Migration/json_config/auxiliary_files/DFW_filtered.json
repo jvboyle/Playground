@@ -1,0 +1,140 @@
+{
+    "IRES": {
+        "category": "Application",
+        "section_id": 1007,
+        "rules": {
+            "rule_1402": {
+                "display_name": " IRES DNS_to_SRES_AD",
+                "apply": true,
+                "rule_id": 1402,
+                "source_groups": [
+                    "SG-SL-IRES-WIN-AD-DNS-NTP"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-STaaS-AD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "DNS-UDP",
+                    "DNS"
+                ],
+                "applied_to": [
+                    "ap1-sl-svc-esg1",
+                    "SG-SRES-STaaS-AD",
+                    "SG-SL-IRES-WIN-AD-DNS-NTP",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1401": {
+                "display_name": "SRES AD_to_IRES_DNS",
+                "apply": true,
+                "rule_id": 1401,
+                "source_groups": [
+                    "SG-SRES-STaaS-AD"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SL-IRES-WIN-AD-DNS-NTP"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "ICMP Echo",
+                    "DNS-UDP",
+                    "DNS",
+                    "ICMP Echo Reply"
+                ],
+                "applied_to": [
+                    "ap1-sl-svc-esg1",
+                    "SG-SRES-STaaS-AD",
+                    "SG-SL-IRES-WIN-AD-DNS-NTP",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            }
+        }
+    },
+    "SRES": {
+        "category": "Application",
+        "section_id": 1005,
+        "rules": {
+            "rule_1312": {
+                "display_name": "SRES STaaS AD to SRES STaaS AD, DNS",
+                "apply": true,
+                "rule_id": 1312,
+                "source_groups": [
+                    "SG-SRES-STaaS-AD-Clients",
+                    "SG-SRES-STaaS-AD",
+                    "SG-SRES-STaaS-AD-DNS"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-STaaS-AD",
+                    "SG-SRES-STaaS-AD-DNS"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "Microsoft Active Directory V1",
+                    "TCP/42",
+                    "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+                ],
+                "applied_to": [
+                    "SG-SRES-STaaS-AD-DNS",
+                    "SG-SRES-STaaS-AD-Clients",
+                    "SG-SRES-STaaS-AD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1319": {
+                "display_name": "SRES_AD_Clients_to_AD",
+                "apply": true,
+                "rule_id": 1319,
+                "source_groups": [
+                    "SG-SRES-STaaS-AD-Clients"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [
+                    "SG-SRES-STaaS-AD"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/53,389,636,88,464,3268,3269"
+                ],
+                "applied_to": [
+                    "SG-SRES-STaaS-AD-Clients",
+                    "SG-SRES-STaaS-AD"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            }
+        }
+    }
+}

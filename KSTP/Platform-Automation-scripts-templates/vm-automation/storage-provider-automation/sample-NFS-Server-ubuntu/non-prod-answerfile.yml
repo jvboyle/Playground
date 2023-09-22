@@ -1,0 +1,21 @@
+# Folder to provision the new VMs in, does not need to exist in vSphere
+# This is the folder in vCenter into which the VM will appear
+folder: ""
+
+####  The available VM Template from which this solution will be based.
+vmtemplate: "icp31_30012019"
+
+ansible_ssh_user: 'icpenable'
+
+### Network Information . The Segment information..
+# The domain name that represents the NSX Segment
+domain: "sres01.poc.ispw.ibm.local"
+# The NSX Network identifier into which the VM will be provisioned.
+network_label: "vxw-dvs-31-virtualwire-3-sid-5003-sres-app-internal01"
+#network_label: "vxw-dvs-31-virtualwire-190-sid-5025-dr500-app-internal01"
+
+### Other .. these are items that are being tested
+notes1: " this is a"
+notes2: "note"
+guest_id: ubuntu64Guest
+vmprefix: "gz"

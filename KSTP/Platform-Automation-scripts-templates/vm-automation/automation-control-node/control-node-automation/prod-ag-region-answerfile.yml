@@ -1,0 +1,7 @@
+## vSphere Specific
+vsphere_host: "ag1vc1.ag1.sp.ibm.local"
+vsphere_cluster: "AG1-C1"
+vsphere_datacenter: "AG1-WDC04"
+
+### The store of the VMsi vSPhere.
+datastore: ag1-c1-vsan

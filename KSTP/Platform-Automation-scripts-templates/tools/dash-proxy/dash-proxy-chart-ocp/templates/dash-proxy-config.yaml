@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: dash-proxy-conf
+  namespace: {{ .Release.Namespace }}
+  {{- if not .Values.dash_proxy.clusterID }}
+  annotations:
+    # CLUSTER_ID is automatically generated
+    # This ConfigMap will live outside of the helm release's lifecycle
+    "helm.sh/hook": "pre-install"
+    "helm.sh/hook-delete-policy": "before-hook-creation"
+  {{- end }}
+data:
+  DASH_HOST: {{ required "dash_proxy.dashHost" .Values.dash_proxy.dashHost }}
+  {{- if not .Values.dash_proxy.clusterID }}
+  # automatically generate a uuidv4 CLUSTER_ID
+  CLUSTER_ID: {{ uuidv4 }}
+  {{- else }}
+  CLUSTER_ID: {{ .Values.dash_proxy.clusterID }}
+  {{- end }}
+  CLUSTER_NAME: {{ required "dash_proxy.clusterName" .Values.dash_proxy.clusterName }}
+  PROVIDER: {{ required "dash_proxy.provider" .Values.dash_proxy.provider }}
+  CLUSTER_LOCATION: {{ required "dash_proxy.clusterLocation" .Values.dash_proxy.clusterLocation }}

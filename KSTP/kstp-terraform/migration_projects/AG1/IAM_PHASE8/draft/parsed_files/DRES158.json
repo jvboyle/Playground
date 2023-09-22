@@ -1,0 +1,206 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-16443",
+            "TCP-8081",
+            "TCP-17778",
+            "HTTPS",
+            "TCP-16445",
+            "TCP-2051-2054",
+            "TCP-2056-2060",
+            "TCP-16444"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1d158lpcacpr1",
+            "TF-AG1-IPSET-DR158-LB-VIP1",
+            "TF-AG1-SG-DR158-ESG-LB-Source",
+            "TF-AG1-IPSET-NET-DR158-ESG-VPN-transit1",
+            "TF-AG1-IPSET-DR158-CACF-Proxy-VIP",
+            "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-HOST-ag1d158lpcacpr2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES158": {
+            "category": "Application",
+            "rules": {
+                "2574": {
+                    "display_name": "TF-2574-OCP-Next-to-DRES-LB-VIP-CACF",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR158-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16444",
+                        "TCP-16443",
+                        "TCP-17778",
+                        "TCP-16445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801",
+                    "scope": [
+                        "TF-AG1-IPSET-DR158-LB-VIP1",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "2575": {
+                    "display_name": "TF-2575-DRES-ESG-to-OCP-Next",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR158-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+                        "TF-AG1-SG-DR158-ESG-LB-Source"
+                    ]
+                },
+                "2589": {
+                    "display_name": "TF-2589-DRES-ESG-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR158-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-SG-DR158-ESG-LB-Source"
+                    ]
+                },
+                "2596": {
+                    "display_name": "TF-2596-OCP-Tower-to-DRES-LB-VIP-CACF",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-NET-DR158-ESG-VPN-transit1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2051-2054",
+                        "TCP-2056-2060"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801\n\n",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-IPSET-NET-DR158-ESG-VPN-transit1"
+                    ]
+                },
+                "3237": {
+                    "display_name": "TF-3237-CACF-DOW-BDS-Ansible-Flow-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d158lpcacpr1",
+                        "TF-AG1-HOST-ag1d158lpcacpr2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097891",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d158lpcacpr1",
+                        "TF-AG1-HOST-ag1d158lpcacpr2",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                },
+                "3239": {
+                    "display_name": "TF-3239-DOW-Ansible-Flow",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d158lpcacpr1",
+                        "TF-AG1-HOST-ag1d158lpcacpr2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097891",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d158lpcacpr1",
+                        "TF-AG1-HOST-ag1d158lpcacpr2",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                },
+                "3254": {
+                    "display_name": "TF-3254-CACF-Dow-Ansible-flow-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR158-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097891",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d158lpcacpr1",
+                        "TF-AG1-IPSET-DR158-CACF-Proxy-VIP",
+                        "TF-AG1-HOST-ag1d158lpcacpr2",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                }
+            }
+        }
+    }
+}

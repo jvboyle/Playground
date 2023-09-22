@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-HOST-ap1d232lpwnzpr1",
+            "TF-AP1-SG-SRES01-OCP-Cluster01",
+            "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES": {
+            "category": "Application",
+            "rules": {
+                "1583": {
+                    "display_name": "TF-1583-OCP-to-CACF-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AP1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d232lpwnzpr1",
+                        "TF-AP1-SG-SRES01-OCP-Cluster01",
+                        "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                    ]
+                }
+            }
+        }
+    }
+}

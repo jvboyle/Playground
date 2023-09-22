@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-30000",
+            "TCP-20000-20999"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+            "TF-EU1-SG-DR63-SSH-Proxy"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES63": {
+            "category": "Application",
+            "rules": {
+                "7995": {
+                    "display_name": "TF-7995-ISIM-proxy-mgmt-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAM08-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR63-SSH-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20000-20999"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51305292",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+                        "TF-EU1-SG-DR63-SSH-Proxy"
+                    ]
+                },
+                "7996": {
+                    "display_name": "TF-7996-ISIM-proxy-mgmt",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR63-SSH-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-30000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51305292",
+                    "scope": [
+                        "TF-EU1-SG-DR63-SSH-Proxy",
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+---
+    - name: install packages
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+#        - squid
+#        - bind
+#        - httpd
+#        - postfix
+        - ntp
+#        - pacemaker
+#        - pcs
+#        - fence-agents-all
+    - name: start services if not started
+      service:
+        name: "{{ item }}"
+        state: started
+      with_items:
+#        - squid
+#        - named
+#        - postfix
+        - ntpd
+
+#    - name: configure firewalld
+#      firewalld: 
+#        zone: public
+#        service: "{{ item }}"
+#        permanent: yes
+#        state: enabled
+#      notify: reload firewalld
+#      with_items:
+#        - ssh
+#        - squid
+#        - http
+#        - https
+#        - smtp
+#        - ntp
+#         - high-availability
+
+#    - name: copy squid config file
+#      copy:
+#        src: files/squid.conf
+#        dest: /etc/squid/squid.conf
+#        owner: root
+#        group: root
+#        mode: '0644'
+#        backup: yes
+
+#    - name: copy squid sites whitelist file
+#      copy:
+#        src: files/sites_whitelist.txt
+#        dest: /etc/squid/sites_whitelist.txt
+#        owner: root
+#        group: root
+#        mode: '0644'
+#        backup: yes
+
+#    - name: add url to whitelist file
+#      blockinfile:
+#        path: /etc/squid/sites_whitelist.txt
+#        block: |
+#          {{ item.url }}
+#        marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.url }}"
+#      loop:
+#       - { url: '.test.local' }
+#       - { url: '.yahoo.com' }
+#       - { url: '.google.com' }
+
+#    - name: copy squid sites network file
+#      copy:
+#        src: files/networks_whitelist.txt
+#        dest: /etc/squid/networks_whitelist.txt
+#        owner: root
+#        group: root
+#        mode: '0644'
+#        backup: yes
+
+#    - name: add network to whitelist file
+#      blockinfile:
+#        path: /etc/squid/networks_whitelist.txt
+#        block: |
+#          {{ item.network }}
+#        marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.network }}"
+#      loop:
+#       - { network: '10.10.1.10/24' }
+#       - { network: '10.10.1.11/24' }
+#       - { network: '10.10.1.12/24' }
+
+#    - name: set postfix conf
+#      template:
+#        src: templates/main.cf.j2
+#        dest: /etc/postfix/main.cf
+
+    - name: copy ntp config file
+      template:
+        src: templates/ntp.conf.j2
+        dest: /etc/ntp.conf
+
+    - name: restart services
+      service:
+        name: "{{ item }}"
+        state: restarted
+      with_items:
+#        - squid
+#        - postfix
+        - ntpd
+...

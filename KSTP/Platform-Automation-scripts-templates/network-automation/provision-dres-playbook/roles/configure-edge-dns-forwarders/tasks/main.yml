@@ -1,0 +1,53 @@
+  - name: PUT DLR DNS Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ dlr_id }}/dns/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_dns_forwarder_config }}"
+      return_content: no
+
+  - name: PUT RES-ESG Edge DNS Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ res_esg_id }}/dns/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_dns_forwarder_config }}"
+      return_content: no
+
+  - name: PUT VPN-ESG Edge DNS Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/dns/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_dns_forwarder_config }}"
+      return_content: no

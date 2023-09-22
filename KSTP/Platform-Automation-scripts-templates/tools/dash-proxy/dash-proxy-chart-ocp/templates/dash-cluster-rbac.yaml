@@ -1,0 +1,73 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Release.Name }}-dash-proxy-role
+rules:
+- apiGroups:
+    - "*"
+  verbs:
+    - get
+    - list
+    - watch
+  resources:
+    - bindings
+    - configmaps
+    - cronjobs
+    - daemonsets
+    - deployments
+    - deployments/scale
+    - endpoints
+    - events
+    - horizontalpodautoscalers
+    - ingresses
+    - jobs
+    - limitranges
+    - namespaces
+    - namespaces/status
+    - nodes
+    - nodes/log
+    - nodes/metrics
+    - nodes/proxy
+    - nodes/spec
+    - nodes/stats
+    - persistentvolumeclaims
+    - persistentvolumes
+    - persistentvolumes/status
+    - poddisruptionbudgets
+    - pods
+    - pods/log
+    - pods/status
+    - proxy
+    - replicasets
+    - replicasets/scale
+    - replicationcontrollers
+    - replicationcontrollers/scale
+    - replicationcontrollers/status
+    - resourcequotas
+    - resourcequotas/status
+    - serviceaccounts
+    - services
+    - statefulsets
+    - storageclasses
+    - services/proxy
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - list
+
+---
+apiVersion: "rbac.authorization.k8s.io/v1"
+kind: ClusterRoleBinding
+metadata: 
+ name: {{ .Release.Name }}-dash-proxy-role-binding
+roleRef: 
+ apiGroup: "rbac.authorization.k8s.io"
+ kind: ClusterRole
+ name: {{ .Release.Name }}-dash-proxy-role
+subjects: 
+- kind: ServiceAccount
+  name: default
+  namespace: {{ .Release.Namespace }}
+

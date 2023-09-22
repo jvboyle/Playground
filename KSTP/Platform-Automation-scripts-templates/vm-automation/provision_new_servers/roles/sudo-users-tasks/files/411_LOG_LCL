@@ -1,0 +1,35 @@
+# Begin ISPW account specific template Ver 1.0.0  Date 2019-11-27   * Master * Refer xxxxxx Begin #
+# Description: Sudoers file for Cloud resiliency orchestrator  team
+# Software products and versions: Ver 1.0, 20190516 by Igor Vucenovic
+# Supported OS platforms: Linux
+#
+# Version control
+# V 1.0.0 - 2019-11-27 - igor_vucenovic@cz.ibm.com - new template
+#
+#################################################################################################
+
+# Environment related entries
+Host_Alias IBM_LOG_HOSTS = ALL
+
+# User Alias Entries
+User_Alias IBM_LOG = %toweradm
+
+# Line below must be uncommented on Linux
+Defaults:IBM_LOG !requiretty
+
+# Command Aliases entries
+Cmnd_Alias IBM_LOG_CMDS = \
+     /usr/bin/journalctl, \
+     /usr/bin/cat /var/log/messages, \
+     /usr/bin/zcat /var/log/messages-*.gz, \
+     /usr/bin/cat /var/log/secure, \
+     /usr/bin/zcat /var/log/secure-*.gz, \  
+     /bin/cat /etc/keepalived/*, \
+     /bin/vi /etc/haproxy/*, \
+     /bin/vi /etc/keepalived/*, \
+     /usr/sbin/service haproxy stop, /usr/sbin/service haproxy start, /usr/sbin/service haproxy restart, /usr/sbin/service haproxy status, \ 
+     /usr/sbin/service keepalived stop, /usr/sbin/service keepalived start, /usr/sbin/service keepalived restart, /usr/sbin/service keepalived status
+
+IBM_LOG IBM_LOG_HOSTS = (root) IBM_LOG_CMDS,!IBM_SHELLESCAPE_ALL,!IBM_NONE_EDITOR,IBM_ALL_NEG
+
+# End ISPW account specific template Ver 1.0.0  Date 2019-11-27   * Master * Refer xxxxxx End #

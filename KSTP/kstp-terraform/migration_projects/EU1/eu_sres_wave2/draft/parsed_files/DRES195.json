@@ -1,0 +1,344 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "LDAP",
+            "WINS",
+            "SSH",
+            "KERBEROS-UDP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "LDAP-UDP",
+            "NBDG-Broadcast",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "Windows-Global-Catalog",
+            "TCP-9083",
+            "NBDG-Unicast",
+            "DHCP-Server",
+            "SOAP",
+            "TCP-135",
+            "KERBEROS",
+            "Active Directory Server UDP",
+            "DNS",
+            "DNS-UDP",
+            "MS-DS-UDP",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "TCP-49152-65535",
+            "TCP-5696",
+            "HTTPS",
+            "NTP Time Server",
+            "Active Directory Server",
+            "Windows-Global-Catalog-over-SSL",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DR195-STaaS-AD-Clients",
+            "TF-EU1-HOST-eu1sr1lpmpcansb",
+            "TF-EU1-HOST-eu1dr195lpSLarx",
+            "TF-EU1-HOST-eu1srlpabcmstr",
+            "TF-EU1-HOST-eu1dr195wpSLstw",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-HOST-eu1sr1staas16",
+            "TF-EU1-HOST-eu1sr1staas17",
+            "TF-EU1-SG-DR195-STaaS-AD-DNS",
+            "TF-EU1-HOST-eu1dr195lpSLskl"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES195": {
+            "category": "Application",
+            "rules": {
+                "8480": {
+                    "display_name": "TF-8480-Obtain-certificates-from-certification-authority",
+                    "source_groups": [
+                        "TF-EU1-SG-DR195-STaaS-AD-Clients"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas16"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-135",
+                        "TCP-49152-65535"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-SG-DR195-STaaS-AD-Clients",
+                        "TF-EU1-HOST-eu1sr1staas16"
+                    ]
+                },
+                "8483": {
+                    "display_name": "TF-8483-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr195wpSLstw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr195wpSLstw"
+                    ]
+                },
+                "8484": {
+                    "display_name": "TF-8484-DNS,-DNS-UDP,-LDAP,-Kerberos,-LDAP-Global-Catalog,-NTP",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr195wpSLstw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr195wpSLstw"
+                    ]
+                },
+                "8486": {
+                    "display_name": "TF-8486-DRES->SRES-DC-Internal",
+                    "source_groups": [
+                        "TF-EU1-SG-DR195-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR195-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-SG-DR195-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "8487": {
+                    "display_name": "TF-8487-SRES-->DRES-DC-Internal",
+                    "source_groups": [
+                        "TF-EU1-SG-DR195-STaaS-AD-Clients",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR195-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-SG-DR195-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR195-STaaS-AD-Clients",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "8489": {
+                    "display_name": "TF-8489-Microstrategy-Desktop",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr195lpSLarx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr195lpSLarx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr195lpSLarx"
+                    ]
+                },
+                "8490": {
+                    "display_name": "TF-8490-Microstrategy",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0135456",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                },
+                "8713": {
+                    "display_name": "TF-8713-SRES-to-DRES",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr195lpSLskl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0122619",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr195lpSLskl",
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ]
+                },
+                "8714": {
+                    "display_name": "TF-8714-SRES-to-DRES",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0122619",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                },
+                "8715": {
+                    "display_name": "TF-8715-DRES-to-SRES",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0122619",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr195lpSLarx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                }
+            }
+        }
+    }
+}

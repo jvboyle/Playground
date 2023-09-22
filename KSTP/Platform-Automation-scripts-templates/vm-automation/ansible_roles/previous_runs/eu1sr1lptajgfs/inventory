@@ -1,0 +1,7 @@
+[gluster_peers]
+eu1sr1lptajgfs1 ansible_host=158.87.52.211
+eu1sr1lptajgfs2 ansible_host=158.87.52.212
+eu1sr1lptajgfs3 ansible_host=158.87.52.213
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3

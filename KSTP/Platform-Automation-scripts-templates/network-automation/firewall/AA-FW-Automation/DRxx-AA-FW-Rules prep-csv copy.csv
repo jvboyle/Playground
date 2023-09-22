@@ -1,0 +1,74 @@
+﻿segment_name,rule_name,source,destination,protocol,xxx,yyy,in_out,targets
+DRxx,AA DRES robots TO  AA DRES robots,SG-DR22-RPA-AA-Desktop-Pool,SG-DRxx-RPA-AA-Desktop-Pool,tcp/445,allow,no,In/Out,SG-DRxx-RPA-AA-Desktop-Pool
+DRxx,BP SRES GTS Jumpserver TO  BP DRES GTS robots,SG-SRES-RPA-GTS-Jump-Servers,SG-DRxx-RPA-AA-Desktop-Pool,"RDP
+tcp/135 445 8181 9427 22443
+udp/22443",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-GTS-Jump-Servers
+SG-DRxx-RPA-AA-Desktop-Pool"
+DRxx,BP SRES GTS Horizon server TO  BP DRES GTS robots,SG-SRES-RPA-Horizon-Servers,SG-DRxx-RPA-AA-Desktop-Pool,"RDP
+tcp/22443",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-Horizon-Servers
+SG-DRxx-RPA-AA-Desktop-Pool"
+DRxx,RPA SRES Horizon Server TO BP DRES  GTS GoldenImages,SG-SRES-RPA-Horizon-Servers,SG-DRxx-RPA-AA-Pool-Images,RDP,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-Horizon-Servers
+SG-DRxx-RPA-AA-Pool-Images"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robots-  TO RPA SRES FileServer,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",SG-SRES-RPA-FileServers,"tcp/445
+udp/445",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-SRES-RPA-FileServers"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robots TO RPA SRES AD,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",SG-SRES-RPA-AD-DNS,"Microsoft Active Directory
+Win 2008 - RPC  DCOM  EPM  DRSUAPI  NetLogonR  SamR  FRS",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-SRES-RPA-AD-DNS"
+DRxx,RPA SRES AD TO BP DRES  GTS GoldenImages BP DRES  GTS robots,SG-SRES-RPA-AD-DNS,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool","Microsoft Active Directory
+Win 2008 - RPC  DCOM  EPM  DRSUAPI  NetLogonR  SamR  FRS",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-AD-DNS
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robots  TO RPA SRES AppVol Manager,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",SG-SRES-RPA-AppVol-Manager,"HTTPS
+tcp/5985",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-SRES-RPA-AppVol-Manager"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robots TO RPA SRES Horizon Server,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",SG-SRES-RPA-Horizon-Servers,tcp/4001 4002,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-SRES-RPA-Horizon-Servers"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robot TO RPA SRES KMS server,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",eu1sr1rpakms ,tcp/1688,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+eu1sr1rpakms"
+DRxx,BP DRES  robots TO smtprelay,SG-DRxx-RPA-AA-Desktop-Pool,SG-PDR-SMTP-Relay,tcp/465 578,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-PDR-SMTP-Relay"
+DRxx,RPA ControlroomTO BP DRES GTS robots,SG-SRES-RPA-AA-Controlroom,SG-DRxx-RPA-AA-Desktop-Pool,HTTPS,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-AA-Controlroom
+SG-DRxx-RPA-AA-Desktop-Pool"
+DRxx,BP DRES  GTS GoldenImages BP DRES  GTS robot TO RPA Controlroom,"SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool",SG-SRES-RPA-AA-Controlroom,HTTPS,allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Pool-Images
+SG-DRxx-RPA-AA-Desktop-Pool
+SG-SRES-RPA-AA-Controlroom"
+DRxx,Bots to AA Central Analytics Server,SG-DRxx-RPA-AA-Desktop-Pool,HOST-wssportal.in.ibm.com,HTTPS,allow,yes,In/Out,"eu1-agg-esg1
+eu1-drxx-esg1
+SG-DRxx-RPA-AA-Desktop-Pool"

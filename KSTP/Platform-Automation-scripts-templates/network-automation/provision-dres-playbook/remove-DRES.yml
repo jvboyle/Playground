@@ -1,0 +1,42 @@
+---
+# This is the file the drives the orchestration of the steps ( i.e. roles and tasks)
+# the 'hosts' variable references the elements of the inventory that will
+# be provisions
+- hosts: localhost
+  connection: local
+  gather_facts: False
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+  vars_files:
+    - ../../region-configs/{{ region_type }}/{{ region }}/region-answerfile.yml
+    - ../../network-config/{{ region_type }}/{{ region }}/{{ dres_name }}-network-answerfile.yml
+    - DRES-std-answerfile.yml
+
+  vars_prompt:
+      - name: "vcenter_user"
+        prompt: "vCenter User"
+        private: no
+      - name: "vcenter_pwd"
+        prompt: "vCenter Password"
+        private: yes
+      - name: "region"
+        prompt: "Region: (eu1, ag1, ap1)"
+        private: no
+      - name: "region_type"
+        prompt: "Region Type: (prod, non-prod)"
+        private: no
+      - name: "dres_name"
+        prompt: "DRES Name"
+        private: no
+      - name: "confirm_dres_remove"
+        prompt: "Are you sure you want to remove the DRES? Answer: yes or no"
+        default: "no"
+        confirm: yes
+        private: no
+  # the following represent the tasks that will be executed to provision this VM
+  # each of these roles is associated to a subdirectory under the roles directory
+  # These are executed in the order they are listed.
+  roles:
+     - remove-dres

@@ -1,0 +1,130 @@
+######################################################
+# migration: IAM_PHASE8
+######################################################
+   rule {
+         display_name = "TF-2966-SRES_ocp_5_to_NSXT_NFS"
+         notes        = "SR51198268"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpocpnfs01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NFS-Server-TCP",
+               "/infra/services/NFS_Client_UDP",
+               "/infra/services/NFS-Server-UDP",
+               "/infra/services/NFS_Client",
+               "/infra/services/TCP-"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpocpnfs01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2967-NSXT_SRES_OCP4_to_OCP2vip"
+         notes        = "SR51195107"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP04-Subnet"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP04-Subnet"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3183-SRES_ocp_6_to_NSXT_NFS-"
+         notes        = "SR51198268"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpocpnfs01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NFS-Server-TCP",
+               "/infra/services/NFS_Client_UDP",
+               "/infra/services/NFS-Server-UDP",
+               "/infra/services/NFS_Client",
+               "/infra/services/TCP-"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpocpnfs01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3372-NA-to-EU-MoM"
+         notes        = "SR51426553"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }

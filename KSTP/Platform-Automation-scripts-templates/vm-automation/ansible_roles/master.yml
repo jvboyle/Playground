@@ -1,0 +1,44 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+        - include_role:
+                name: newvm
+        - include_role:
+                name: adddisk
+          when: virtual_machine_state == "poweredon"
+
+- hosts: gluster_peers
+  become: true
+  vars:
+        pkg: glusterfs-server
+        service: glusterfs-server
+        block_dev: "/dev/sdb"
+        host_count: "{{ groups['gluster_peers'] | length }}"
+  tasks:
+        - fail:
+            msg: "Number of hosts to prepare Gluster is less than 3, {{ host_count }}."
+          when: host_count|int < 3
+        - apt:
+                name: '{{ pkg }}'
+                update_cache: true
+        - service:
+                name: '{{ service }}'
+                state: started
+                enabled: true
+        - command: gluster peer probe {{ item }}
+          loop: "{{ groups['gluster_peers'] }}"
+          run_once: true
+        - lvg:
+                vg: glustervg
+                pvs: '{{ block_dev }}'
+          when: ansible_facts['devices']['sdb'] is defined and ansible_facts['lvm']['vgs']['glustervg'] is undefined
+        - file:
+                path: "/gluster_vols"
+                state: directory
+                owner: root
+                group: root
+                mode: 0755
+#        - command: gluster volume create '{{ volume_name }}' replica '{{ ansible_play_hosts | length }}' transport tcp
+
+...

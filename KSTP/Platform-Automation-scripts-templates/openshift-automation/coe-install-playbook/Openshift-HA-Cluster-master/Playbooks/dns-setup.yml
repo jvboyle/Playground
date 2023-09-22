@@ -1,0 +1,38 @@
+---
+- name: Adding a wildcard Entry for apps on subdomain
+  lineinfile:
+    path: /etc/dnsmasq.conf
+    insertafter: EOF
+    line: address=/{{domain_name}}/{{load_balancer_ip}}
+
+- name: Set NM_CONTROLLED=yes
+  command: sed -i -e "s/^NM\_CONTROLLED=no/NM\_CONTROLLED=yes/" /etc/sysconfig/network-scripts/ifcfg-eth0
+  command: sed -i -e "s/^NM\_CONTROLLED=no/NM\_CONTROLLED=yes/" /etc/sysconfig/network-scripts/ifcfg-eth1
+
+- name: Set PEERDNS=yes
+  command: sed -i -e "s/^PEERDNS=no/PEERDNS=yes/" /etc/sysconfig/network-scripts/ifcfg-eth0
+  command: sed -i -e "s/^PEERDNS=no/PEERDNS=yes/" /etc/sysconfig/network-scripts/ifcfg-eth1
+
+- name: Set nameservers in file for interface 0
+  blockinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth0
+    insertafter: EOF
+    block: |
+      DNS1={{ns1_ip}}
+      DNS2={{ns2_ip}}
+      
+- name: Set nameservers in file for interface 1
+  blockinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth1
+    insertafter: EOF
+    block: |
+      DNS1={{ns1_ip}}
+      DNS2={{ns2_ip}}
+
+- name: Set nameservers in dnsmasq.conf
+  blockinfile:
+    path: /etc/dnsmasq.conf
+    insertafter: EOF
+    block: |
+      server={{ns1_ip}}
+      server={{ns2_ip}}

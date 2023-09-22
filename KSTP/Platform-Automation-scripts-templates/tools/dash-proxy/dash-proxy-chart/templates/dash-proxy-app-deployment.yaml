@@ -1,0 +1,66 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    dash.service: dash-proxy-app
+  name: dash-proxy-app
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.dash_proxy.replicaCount }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        dash.service: dash-proxy-app
+    spec:
+{{-  if .Values.dash_proxy_go_path }}
+{{- else}}
+      securityContext:
+        runAsNonRoot: true
+        fsGroup: 1000
+{{- end }}
+    {{- if .Values.hostAliases }}
+      hostAliases:
+{{ toYaml .Values.hostAliases | indent 8 }}
+    {{- end }}
+      containers:
+      - name: dash-proxy-app
+        image: "{{- .Values.dash_proxy.repository }}"
+        imagePullPolicy: {{ .Values.dash_proxy.pullPolicy }}
+{{-  if .Values.dash_proxy_go_path }}
+{{- else}}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsUser: 1000
+{{- end }}
+        env:
+        - name: DASH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-dash-token
+              key: dash-token-key
+        {{- if .Values.proxyEnvs }}
+{{ toYaml .Values.proxyEnvs | indent 8 }}
+        {{- end }}
+        envFrom:
+        - configMapRef:
+            name: dash-proxy-conf
+        resources:
+        volumeMounts:
+        {{- if .Values.dash_proxy_go_path }}
+          - name: home
+            mountPath: /go
+        {{- end }}
+      restartPolicy: Always
+      {{- if .Values.imageCredentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}-registrykey
+      {{- end }}
+      volumes:
+      {{- if .Values.dash_proxy_go_path }}
+      - name: home
+        hostPath:
+          path: {{ .Values.dash_proxy_go_path }}
+      {{- end }}

@@ -1,0 +1,2475 @@
+{
+    "SG-DRES96-CRO-All-Servers": {
+        "vms": [
+            "ag1d96croizdrmm",
+            "ag1d96croizdrmp"
+        ]
+    },
+    "SG-SRES-IAM-CIO-WINDOWS-PROD": {
+        "vms": [
+            "ag1sr1wpiamcir3",
+            "ag1sr1wpiamcie1",
+            "ag1sr1wpiamcit3",
+            "ag1sr1wpiamciq1",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wpiamciq2",
+            "ag1sr1wpiamcie3",
+            "ag1sr1wpiamcit1",
+            "ag1sr1wpiamcit2",
+            "ag1sr1wpiamcir2",
+            "ag1sr1wpiamcie2"
+        ]
+    },
+    "SG-SRES-IAM-THY-EPL1-UAT": {
+        "vms": [
+            "ag1sr1lpiamuep5"
+        ]
+    },
+    "SG-SRES-Automation-Control-Node": {
+        "vms": [
+            "ag1sr1cntrl1"
+        ]
+    },
+    "SG-DRES-PEN-IAM-THY-JPF": {
+        "vms": [
+            "ag1dit3lniamjpf"
+        ]
+    },
+    "SG-DR74-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr74dc1",
+            "ag1dr74dc2"
+        ]
+    },
+    "SG-SRES-EntAuto-VMs-POK": {
+        "vms": [
+            "ag1srwpenapok1",
+            "ag1srwpenapok2"
+        ]
+    },
+    "SG-DR223-CACF-Proxy": {
+        "vms": [
+            "ag1d223lpcacpr1",
+            "ag1d223lpcacpr2"
+        ]
+    },
+    "SG-DR112-STaaS-AD-DNS": {
+        "vms": [
+            "ag1d112dc1",
+            "ag1d112dc2"
+        ]
+    },
+    "SG-SMTP-Clients": {
+        "vms": [
+            "ag1sr1wniamptfs",
+            "ag1sr1lniamuaprx2",
+            "ag1sr1wniamptt1",
+            "ag1sr1lniamptprx2",
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1lniamuasdi",
+            "ag1sr1lniamtsprx1",
+            "ag1sr1wniamuat2",
+            "ag1vmon",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1wpiamprt3",
+            "ag1sr1lpta1str1",
+            "ag1sr1lpiamprsdi1",
+            "ag1sr1lpiamprprx1",
+            "ag1sr1lniamdvsdi3",
+            "ag1sr1lniamptsdi",
+            "ag1sr1lniamtssdi1",
+            "ag1sr1aniamtssvg1",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamdvfs",
+            "ag1sr1wniamptt2",
+            "ag1sr1icp2m01",
+            "agnsrlnicp1m01",
+            "ag1sr1wniamtst1",
+            "ag1sr1wniamtsfs",
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamuaprx1",
+            "ag1sr1lniamtssdi2",
+            "ag1sr1wpiamprt1",
+            "ag1sr1lniamdvprx1",
+            "ag1sr1lpiamprprx2",
+            "ag1sr1wpiamprt2",
+            "ag1sr1wniamuafs",
+            "ag1sr1wniamuat1",
+            "ag1sr1lniamptprx1"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersWinDR": {
+        "vms": [
+            "ag1d40crotescw1"
+        ]
+    },
+    "SG-DR19-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr19stl",
+            "ag1dr19sklm",
+            "ag1dr19stw"
+        ]
+    },
+    "SG-DR151-STaaS-Arxview": {
+        "vms": [
+            "ag1d151lparxtmp",
+            "ag1dr151lparx"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-All-VMs": {
+        "vms": [
+            "ag1sr1wpiamcit3",
+            "ag1sr1lpiamciprx2",
+            "ag1sr1wpiamcit1",
+            "ag1sr1wpiamciq1",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wpiamcie2",
+            "ag1sr1wpiamcira",
+            "ag1sr1wpiamcir2",
+            "ag1sr1wpiamcie1",
+            "ag1sr1wpiamcifs",
+            "ag1sr1wpiamcie3",
+            "ag1sr1lpiamcibkl1",
+            "ag1sr1wpiamciq2",
+            "ag1sr1wpiamcit2",
+            "ag1sr1lpiamciprx1",
+            "ag1sr1wpiamcir3"
+        ]
+    },
+    "SG-DR234-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr234lpfm",
+            "ag1dr234lparx",
+            "ag1dr234lpskl",
+            "ag1dr234lpstl",
+            "ag1dr234stw"
+        ]
+    },
+    "SG-DR53-STaaS-Arxview": {
+        "vms": [
+            "AG1D53APIGAARX1",
+            "ag1d53lparxtmp"
+        ]
+    },
+    "SG-DR77-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr77fm",
+            "ag1dr77stl",
+            "ag1dr77stw"
+        ]
+    },
+    "SG-STaas-DRES-Ansible-port-5985": {
+        "vms": [
+            "ag1d100dc1",
+            "ag1dr147dc2",
+            "ag1dr151dc2",
+            "ag1d112dc2",
+            "ag1dr12dc2",
+            "ag1d112fm",
+            "AG1D53WPIGADCD2",
+            "ag1dr197dc2",
+            "ag1dr19sklm",
+            "AG1D53WPIGADCD1",
+            "ag1dr162dc2",
+            "ag1dr197dc1",
+            "ag1dr144dc2",
+            "ag1dr59dc1",
+            "ag1dr151dc1",
+            "ag1dr19dc1",
+            "ag1dr77dc1",
+            "ag1dr147dc1",
+            "ag1dr156dc1",
+            "ag1sr1staas4",
+            "ag1dr65dc1",
+            "ag1d112dc1",
+            "ag1d100dc2",
+            "ag1dr156dc2",
+            "ag1dr19dc2",
+            "ag1dr11dc1",
+            "ag1dr65dc2",
+            "ag1dr12dc1",
+            "ag1dr156stw",
+            "ag1dr77dc2",
+            "ag1dr74dc2",
+            "ag1dr74dc1",
+            "ag1dr59dc2",
+            "ag1dr162stw",
+            "ag1dr144dc1",
+            "ag1dr162dc1",
+            "ag1dr11dc2"
+        ]
+    },
+    "SG-DR162-STaaS-Arxview": {
+        "vms": [
+            "ag1dr162lparx",
+            "ag1d162lparxtmp"
+        ]
+    },
+    "SG-DR77-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr77fm",
+            "ag1dr77stw"
+        ]
+    },
+    "SG-DR156-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr156lparx",
+            "ag1dr156stw",
+            "ag1dr156lpstl",
+            "ag1dr156lpskl",
+            "ag1dr156lpfm"
+        ]
+    },
+    "SG-DR112-STaaS-AD-Clients": {
+        "vms": [
+            "ag1d112fm",
+            "ag1d112stw",
+            "ag1d112stl"
+        ]
+    },
+    "SG-SRES-WIN-SQL": {
+        "vms": [
+            "ag1sr1sql01"
+        ]
+    },
+    "SG-DR198-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr198dc1",
+            "ag1dr198dc2"
+        ]
+    },
+    "SG-SRES-IAM-NODB-UAT": {
+        "vms": [
+            "ag1sr1wniamuar1",
+            "ag1sr1wniamuar2",
+            "ag1sr1lniamuasdi",
+            "ag1sr1wniamuafs",
+            "ag1sr1wniamuat2",
+            "ag1sr1wniamuae1",
+            "ag1sr1wniamuat1"
+        ]
+    },
+    "SG-DR77-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr77dc2",
+            "ag1dr77dc1"
+        ]
+    },
+    "SG-All-Windows-Hosts": {
+        "vms": [
+            "ag1dr151dc1",
+            "ag1sr1wpiampre1",
+            "ag1dr74fm",
+            "ag1sr1wpiamprr1",
+            "agnsrwndvaapp02",
+            "ag1sr1wniamptr1",
+            "ag1dr147dc2",
+            "ag1dr59dc2",
+            "ag1wtslic01",
+            "ag1sr1wniamuaq2",
+            "WIN2016stdLatest",
+            "ag1vmon",
+            "ag1d112fm",
+            "ag1d112dc1",
+            "ag1dr59fm",
+            "ag1dr234dc2",
+            "ag1sr1wniamdve2",
+            "ag1sr1wpiamprt1",
+            "ag1sr1wpiamciq1",
+            "WIN2016SQLTemplate",
+            "agnsrwnccmwsus",
+            "ag1srwphwcweb01",
+            "ag1d112stw",
+            "ag1dr156dc2",
+            "ag1dr65skl",
+            "ag1dr156stw",
+            "ag1sr1daipwin01",
+            "ag1sr1wpiampre2",
+            "ag1sr1wpiamuep2",
+            "ag1dr198stw",
+            "ag1dr12sfm",
+            "ag1dr77fm",
+            "ag1dr59stw",
+            "ag1sr1wpiamuep1",
+            "ag1sr1wpiamprfs",
+            "ag1dr19dc2",
+            "ag1sr1wpiamcit1",
+            "ag1d75wphwcdb",
+            "ag1sr1wpiamprra",
+            "ag1srwphwcdb01",
+            "ag1srwphwcsrv01",
+            "ag1dr59dc1",
+            "ag1sr1wniamuat1",
+            "ag1d100dc2",
+            "ag1srwpenapok2",
+            "ag1sr1wniamuar1",
+            "ag1dr147stw",
+            "ag1sr1wjmp01",
+            "ag1d75wphwcweb",
+            "ag1sr1wdns02",
+            "ag1sr1wpiamcie3",
+            "agnsrwnccmwin16",
+            "ag1sr1wniamsbt1",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wniamtsfs",
+            "ag1dr74stw",
+            "ag1srwphwcstr01",
+            "ag1sr1wpiamuep3",
+            "ag1dr144dc2",
+            "ag1dr65dc2",
+            "AG1D53WPIGASTW1",
+            "ag1sr1wniamptra",
+            "ag1srwphwcgrfds",
+            "ag1sr1wniamuafs",
+            "ag1srwphwcstl01",
+            "ag1sr1wniamsbr1",
+            "ag1dr197stw",
+            "ag1dr65dc1",
+            "ag1dr162dc1",
+            "ag1dr151stw",
+            "ag1dr198dc2",
+            "ag1sr1w19lic01",
+            "ag1sr1sepm1",
+            "ag1srwphwcetl01",
+            "ag1sr1wpiamprq2",
+            "ag1dr237dc1",
+            "ag1sr1w2019test",
+            "ag1dr156dc1",
+            "ag1jump02",
+            "ag1sr1wniamdve1",
+            "ag1dr151dc2",
+            "ag1dr144stw",
+            "ag1srwphwcodb01",
+            "agnsrwndvadeva2",
+            "ag1sr1wpiamprt3",
+            "ag1srwpdvaapp02",
+            "ag1dr234stw",
+            "ag1sr1win19test",
+            "ag1sr1wniamuar2",
+            "ag1sr1wniampte1",
+            "ag1d40crotescw2",
+            "ag1sr1sql01",
+            "AG1D53WPIGADCD2",
+            "ag1dr12dc1",
+            "ag1sr1wniamdvq1",
+            "AG1D53WPIGADCD1",
+            "ag1sr1wpiamprt2",
+            "ag1dr11dc2",
+            "ag1sr1wniamsbe1",
+            "ag1dr19stw",
+            "ag1sr1wniamtsq1",
+            "ag1TemplWin2016standard",
+            "WIN2016stdApr_template",
+            "ag1sr1staas1",
+            "ag1sr1wpiamprq1",
+            "ag1dr12stw",
+            "ag1sr1wniamsbq1",
+            "ag1dr74dc1",
+            "ag1sr1wniamptt1",
+            "ag1dr19sklm",
+            "ag1sr1wpiamcie1",
+            "ag1sr1wniamptq1",
+            "ag1sr1staas2",
+            "ag1twin01",
+            "ag1dr77dc2",
+            "ag1dc1",
+            "ag1sr1wniamtse1",
+            "ag1sr1daipwin02",
+            "ag1sr1wpiamcira",
+            "ag1sr1wpiamcifs",
+            "ag1sr1wpiamcit3",
+            "ag1srwpetpd1000",
+            "ag1dr197dc1",
+            "ag1sr1wniamdvfs",
+            "ag1dr147dc1",
+            "ag1sr1wniamptfs",
+            "ag1sr1wdns01",
+            "ag1sr1staas3",
+            "ag1sr1wjmp02",
+            "ag1sr1wniamuae1",
+            "ag1sr1wniamptr2",
+            "ag1sr1wniamtse2",
+            "ag1d100dc1",
+            "ag1dr65stw",
+            "ag1dr74dc2",
+            "ag1win2019temp",
+            "ag1dr237dc2",
+            "ag1dr237stw",
+            "ag1sr1wpiamcir3",
+            "ag1sr1wpiamprr3",
+            "ag1sr1wniamuaq1",
+            "ag1dr11sat",
+            "ag1sr1wniamdvt1",
+            "AG1D53WPIGASFM1",
+            "AG1D53WPIGATPC1",
+            "ag1dr11dc1",
+            "ag1srwpenapok1",
+            "ag1dr19dc1",
+            "ag1dr12dc2",
+            "ag1sr1wpiampre3",
+            "ag1d112dc2",
+            "ag1dr77dc1",
+            "ag1sr1wpiamcir2",
+            "ag1srwpetpp1000",
+            "ag1dc2",
+            "ag1d75wphwcetl",
+            "ag1dr234dc1",
+            "ag1sr1wpiamuep4",
+            "ag1sr1w19lic01_old",
+            "ag1dr77stw",
+            "ag1sr1staas4",
+            "ag1dr162dc2",
+            "ag1sr1wniamtst1",
+            "ag1dr197dc2",
+            "ag1sr1wniamuat2",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamptt2",
+            "ag1sr1wpiamcit2",
+            "ag1sr1wniamptq2",
+            "ag1sr1wsus01",
+            "ag1d100stw",
+            "ag1dr162stw",
+            "ag1d40crotescw1",
+            "ag1sr1wnlocal",
+            "ag1srwphwcgrfdb",
+            "ag1dr198dc1",
+            "ag1sr1wpiamciq2",
+            "ag1dr144dc1",
+            "ag1sr1wpiampre4",
+            "ag1sr1wpiamcie2"
+        ]
+    },
+    "SG-SL-IRES-Internet-Proxy-Server": {
+        "vms": [
+            "ag1prx01",
+            "ag1prx01n"
+        ]
+    },
+    "SG-DR40-CRO-SiteControllersW": {
+        "vms": [
+            "ag1d40crotescw1",
+            "ag1d40crotescw2"
+        ]
+    },
+    "SG-DR75-HWSW-Win-Servers": {
+        "vms": [
+            "ag1d75wphwcetl",
+            "ag1d75wphwcdb",
+            "ag1d75wphwcweb"
+        ]
+    },
+    "SG-SRES-IAM-THY-SECRET-UAT": {
+        "vms": [
+            "ag1sr1wniamuat2",
+            "ag1sr1wniamuat1",
+            "ag1sr1wniamuafs"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-POC": {
+        "vms": [
+            "ag1sr1lniamdb01",
+            "ag1sr1lniamdb02"
+        ]
+    },
+    "SG-DR151-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr151dc1",
+            "ag1dr151dc2"
+        ]
+    },
+    "SG-SRES-IAM-THY-MSSQL-PROD": {
+        "vms": [
+            "ag1sr1wpiamprq1",
+            "ag1sr1wpiamprq2"
+        ]
+    },
+    "SG-SRES-IAMAAS-THY-UAT": {
+        "vms": [
+            "ag1sr1wniamuaq1",
+            "ag1sr1wniamuaq2",
+            "ag1sr1wniamuat2",
+            "ag1sr1wniamuar1",
+            "ag1sr1wniamuar2",
+            "ag1sr1wniamuat1",
+            "ag1sr1wniamuae1"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllers": {
+        "vms": [
+            "ag1d40crotescw2",
+            "ag1d40crotescw1"
+        ]
+    },
+    "SG-DR156-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr156stw",
+            "ag1dr156lpskl",
+            "ag1dr156lpfm",
+            "ag1dr156lparx"
+        ]
+    },
+    "SG-DR40-CRO-SiteControllers": {
+        "vms": [
+            "ag1dr40crotescld2",
+            "ag1dr40crotesclp1",
+            "ag1dr40crotescld1",
+            "ag1dr40crotesclp2",
+            "ag1d40crotescw1",
+            "ag1d40crotescw2"
+        ]
+    },
+    "SG-DR11-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr11dc2",
+            "ag1dr11dc1"
+        ]
+    },
+    "SG-DR197-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr197dc1",
+            "ag1dr197dc2"
+        ]
+    },
+    "SG-SRES01-ICp-Cluster02-WorkerNodes": {
+        "vms": [
+            "ag1sr1icp2n08",
+            "ag1sr1icp2n09",
+            "ag1sr1icp2n03",
+            "ag1sr1icp2n07",
+            "ag1sr1icp2nfs01",
+            "ag1sr1icp2n04",
+            "ag1sr1icp2n05",
+            "ag1sr1icp2n01",
+            "ag1sr1icp2n06",
+            "ag1sr1icp2elk2",
+            "ag1sr1icp2elk1",
+            "ag1sr1icp2n02",
+            "ag1sr1icp2elk3"
+        ]
+    },
+    "SG-SRES-IAM-THY-MSSQL-UAT": {
+        "vms": [
+            "ag1sr1wniamuaq1",
+            "ag1sr1wniamuaq2",
+            "ag1sr1wniamuafs"
+        ]
+    },
+    "AG1-SG-SRES-IAM-SANDBOX-All-VMs": {
+        "vms": [
+            "ag1sr1wniamsbq1",
+            "ag1sr1wniamsbt1",
+            "ag1sr1lniamsbbkl1",
+            "ag1sr1wniamsbr1",
+            "ag1sr1wniamsbfs",
+            "ag1sr1lniamsbprx1",
+            "ag1sr1wniamsbe1"
+        ]
+    },
+    "SG-DR144-STaaS-Arxview": {
+        "vms": [
+            "ag1dr144lparx",
+            "ag1d144lparxtmp"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-UAT": {
+        "vms": [
+            "ag1sr1lniamuaprx2",
+            "ag1sr1lniamuaprx1"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-PEN": {
+        "vms": [
+            "ag1sr1wniampte1",
+            "ag1sr1wniamdvfs",
+            "ag1sr1wniamptq2",
+            "ag1sr1wniamptr1",
+            "ag1sr1wniamptr2",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamdvq1",
+            "ag1sr1wniamptt2",
+            "ag1sr1wniamtst1",
+            "ag1sr1wniamptt1",
+            "ag1sr1wniamdve1",
+            "ag1sr1wniamptfs",
+            "ag1sr1wniamtse2",
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamptq1",
+            "ag1sr1wniamtsq1",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wniamtsfs"
+        ]
+    },
+    "SG-SRES-IAM-THY-RAS-PROD": {
+        "vms": [
+            "ag1sr1wpiamprra"
+        ]
+    },
+    "SG-SRES-IAM-THY-RAS-NONPROD": {
+        "vms": [
+            "ag1sr1wniamptra"
+        ]
+    },
+    "SG-DR19-STaaS-AD": {
+        "vms": [
+            "ag1dr19dc2",
+            "ag1dr19dc1"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-RMQ-PROD": {
+        "vms": [
+            "ag1sr1wpiamcir2",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wpiamcir3"
+        ]
+    },
+    "SG-SRES-IAM-THY-SDI-PEN": {
+        "vms": [
+            "ag1sr1lniamptsdi"
+        ]
+    },
+    "SG-SRES-WIN-DNS-NTP": {
+        "vms": [
+            "ag1sr1wdns02",
+            "ag1sr1wdns01"
+        ]
+    },
+    "SG-ag1d95lpjllprx-Proxy-VIP": {
+        "vms": [
+            "ag1d95lpjllprx1",
+            "ag1d95lpjllprx2"
+        ]
+    },
+    "SG-SRES-WIN-WSUS": {
+        "vms": [
+            "ag1sr1wsus01"
+        ]
+    },
+    "SG-SRES-IAM-THY-DE-UAT": {
+        "vms": [
+            "ag1sr1wniamuae1"
+        ]
+    },
+    "AG1-SG-IRES-Qradar": {
+        "vms": [
+            "ag1lsplunkfwd01"
+        ]
+    },
+    "SG-SRES01-OCP-Cluster01": {
+        "vms": [
+            "ag1sr1lpta1str1"
+        ]
+    },
+    "SG-SRES-IAM-THY-SDI-SIDT": {
+        "vms": [
+            "ag1sr1lniamtssdi1",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1lniamtssdi2",
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamdvsdi3"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersLinuxPR": {
+        "vms": [
+            "ag1dr40crotescld2",
+            "ag1dr40crotescld1"
+        ]
+    },
+    "SG-DR198-STaaS-Arxview": {
+        "vms": [
+            "ag1d198lparxtmp",
+            "ag1dr198lparx"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersW": {
+        "vms": [
+            "ag1d40crotescw2",
+            "ag1d40crotescw1"
+        ]
+    },
+    "SG-IRES-vROps-Nodes": {
+        "vms": [
+            "ag1vrops01"
+        ]
+    },
+    "SG-DR234-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr234dc1",
+            "ag1dr234dc2"
+        ]
+    },
+    "SG-DR197-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr197stw",
+            "ag1dr197lpskl",
+            "ag1dr197lparx"
+        ]
+    },
+    "SG-SRES-IAM-NODB-PROD": {
+        "vms": [
+            "ag1sr1wpiamprr3",
+            "ag1sr1wpiamprr1",
+            "ag1sr1wpiamprt3",
+            "ag1sr1wpiampre3",
+            "ag1sr1lpiamprsdi1",
+            "ag1sr1wpiamprt2",
+            "ag1sr1wpiamprt1",
+            "ag1sr1wpiampre2",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiampre4",
+            "ag1sr1wpiampre1"
+        ]
+    },
+    "SG-DR147-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr147stw",
+            "ag1dr147lpocum",
+            "ag1dr147lpskl",
+            "ag1dr147lparx"
+        ]
+    },
+    "SG-DR53-PSIS-AD-Clients": {
+        "vms": [
+            "AG1D53LPIGASTL1",
+            "AG1D53WPIGASFM1",
+            "AG1D53WPIGASTW1",
+            "AG1D53WPIGATPC1"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-SIDT": {
+        "vms": [
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamtssdi1",
+            "ag1sr1lniamtssdi2",
+            "ag1sr1lniamdvsdi3",
+            "ag1sr1lniamtsprx1",
+            "ag1sr1lniamdvprx1"
+        ]
+    },
+    "SG-SRES01-ICp-Cluster02": {
+        "vms": [
+            "ag1sr1icp2va01",
+            "ag1sr1icp2elk3",
+            "ag1sr1icp2n06",
+            "ag1sr1icp2p01",
+            "ag1sr1icp2n04",
+            "ag1sr1icp2n07",
+            "ag1sr1icp2elk2",
+            "ag1sr1icp2m03",
+            "ag1sr1nfs02",
+            "ag1sr1icp2m02",
+            "ag1sr1icp2n08",
+            "ag1sr1icp2elk1",
+            "ag1sr1nfs02n",
+            "ag1sr1icp2x02",
+            "ag1sr1icp2x01",
+            "ag1sr1icp2p02",
+            "ag1sr1icp2n09",
+            "ag1sr1icp2n02",
+            "ag1sr1icp2n05",
+            "ag1sr1nfs01n",
+            "ag1sr1icp2m01",
+            "ag1sr1icp2n03",
+            "ag1sr1nfs01",
+            "ag1sr1icp2n01",
+            "ag1sr1icp2nfs01",
+            "ag1sr1icp2x03"
+        ]
+    },
+    "SG-DR147-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr147lpskl",
+            "ag1dr147lpocum",
+            "ag1dr147stw",
+            "ag1dr147lpstl"
+        ]
+    },
+    "SG-DR147-STaaS-Arxview": {
+        "vms": [
+            "ag1dr147lparx",
+            "ag1d147lparxtmp"
+        ]
+    },
+    "SG-DR156-STaaS-Arxview": {
+        "vms": [
+            "ag1dr156lparx",
+            "ag1d156lparxtmp"
+        ]
+    },
+    "SG-ag1h1lpta2hapProxy": {
+        "vms": [
+            "ag1h1lpta2hap2",
+            "ag1h1lpta2hap1"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-DE-PROD": {
+        "vms": [
+            "ag1sr1wpiamcie3",
+            "ag1sr1wpiamcie2",
+            "ag1sr1wpiamcie1"
+        ]
+    },
+    "SG-SRES-IAM-THY-RMQ-PROD": {
+        "vms": [
+            "ag1sr1wpiamprr3",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiamprr1"
+        ]
+    },
+    "SG-TS-Session-Hosts": {
+        "vms": [
+            "ag1sr1wjmp01",
+            "ag1sr1wjmp02"
+        ]
+    },
+    "SG-DR77-STaaS-Arxview": {
+        "vms": [
+            "ag1d77lparxtmp",
+            "ag1dr77arx"
+        ]
+    },
+    "DRES IPS": {
+        "vms": [
+            "ag1d223lpcacpr2",
+            "ag1d212lpcacpr1",
+            "ag1d116lpcacpr2",
+            "ag1d227lpcacpr2",
+            "ag1d224lpcacpr1",
+            "ag1d182lpcacpr1",
+            "ag1d95lpjllprx2",
+            "ag1d192lpcacpr1",
+            "ag1d182lpcacpr2",
+            "ag1d203lpcacpr2",
+            "ag1d251lpcacpr2",
+            "ag1d111lpcacpr2",
+            "ag1d212lpcacpr2",
+            "ag1d95lpjllprx1",
+            "ag1h1lpta2hap2",
+            "ag1d116lpcacpr1",
+            "ag1d233lpcacpr2",
+            "ag1d201lpcacpr1",
+            "ag1d224lpcacpr2",
+            "ag1d187lpcacpr1",
+            "ag1d188lpcacpr2",
+            "ag1d217lpcacpr2",
+            "ag1d223lpcacpr1",
+            "ag1d251lpcacpr1",
+            "ag1d227lpcacpr1",
+            "ag1d188lpcacpr1",
+            "ag1d217lpcacpr1",
+            "ag1d201lpcacpr2",
+            "ag1d203lpcacpr1",
+            "ag1h1lpta2hap1",
+            "ag1d144lpcacpr2",
+            "ag1d144lpcacpr1",
+            "ag1d192lpcacpr2",
+            "ag1d111lpcacpr1",
+            "ag1d187lpcacpr2",
+            "ag1d233lpcacpr1"
+        ]
+    },
+    "SG-DR11-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr11sat",
+            "ag1dr11slog",
+            "ag1dr11fm"
+        ]
+    },
+    "AG1-SG-AG1SR1CP2P0": {
+        "vms": [
+            "ag1sr1icp2p02",
+            "ag1sr1icp2p01"
+        ]
+    },
+    "SG-SRES-Linux-Jump-Servers": {
+        "vms": [
+            "ag1sr1ljmp02",
+            "ag1sr1ljmp01",
+            "ag1sr1ljmp01n"
+        ]
+    },
+    "SG-DR112-STaaS-Arxview": {
+        "vms": [
+            "ag1d112lparxtmp",
+            "ag1d112arx"
+        ]
+    },
+    "AG1-SG-AG1SRWPHWC": {
+        "vms": [
+            "ag1srwphwcetl01",
+            "ag1srwphwcsrv01",
+            "ag1srwphwcstr01",
+            "ag1srwphwcdb01",
+            "ag1srwphwcstl01"
+        ]
+    },
+    "SG-SRES-IAM-THY-SDI-PROD": {
+        "vms": [
+            "ag1sr1lpiamprsdi1"
+        ]
+    },
+    "SG-SRES-IAM-THY-SDI-UAT": {
+        "vms": [
+            "ag1sr1lniamuasdi"
+        ]
+    },
+    "SG-SRES-IAM-THY-SVG-SIDT": {
+        "vms": [
+            "ag1sr1aniamtssvg1"
+        ]
+    },
+    "SG-DR162-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr162lparx",
+            "ag1dr162lpskl",
+            "ag1dr162stw",
+            "ag1dr162lpfm"
+        ]
+    },
+    "SG-DR59-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr59stw",
+            "ag1dr59stl",
+            "ag1dr59fm"
+        ]
+    },
+    "SG-DR237-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr237lparx",
+            "ag1dr237lpfm",
+            "ag1dr237stw"
+        ]
+    },
+    "SG-SRES-IAM-THY-DE-SIDT": {
+        "vms": [
+            "ag1sr1wniamtse2",
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamdve1"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-SECRET-PROD": {
+        "vms": [
+            "ag1sr1wpiamcit3",
+            "ag1sr1wpiamcit1",
+            "ag1sr1wpiamcit2"
+        ]
+    },
+    "SG-DRES96-CRO-SiteControllersLinuxDr": {
+        "vms": [
+            "ag1d96croizdrmp"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-UAT": {
+        "vms": [
+            "ag1sr1lniamuasdi3",
+            "ag1sr1lniamuaprx1",
+            "ag1sr1lniamuaprx2",
+            "ag1sr1lniamuasdi2",
+            "ag1sr1lniamuasdi"
+        ]
+    },
+    "SG-SRES-IAM-CIO-LINUX-PROD": {
+        "vms": [
+            "ag1sr1lpiamciprx1",
+            "ag1sr1lpiamciprx2"
+        ]
+    },
+    "SG-EDR-CarbonBlack": {
+        "vms": [
+            "ag1sr1wdns02",
+            "ag1sr1wdns01",
+            "ag1sr1wjmp01"
+        ]
+    },
+    "SG-SRES-IAM-THY-DE-PEN": {
+        "vms": [
+            "ag1sr1wniampte1"
+        ]
+    },
+    "SG-SL-IRES-WIN-Jump-Servers": {
+        "vms": [
+            "ag1jump02"
+        ]
+    },
+    "SG-DR227-CACF-Proxy": {
+        "vms": [
+            "ag1d227lpcacpr2",
+            "ag1d227lpcacpr1"
+        ]
+    },
+    "SG-DR162-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr162dc2",
+            "ag1dr162dc1"
+        ]
+    },
+    "SG-DR65-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr65stw",
+            "ag1dr65skl"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-PEN": {
+        "vms": [
+            "ag1sr1lniamptsdi2",
+            "ag1sr1lniamptprx1",
+            "ag1sr1lniamptsdi",
+            "ag1sr1lniamptprx2",
+            "ag1sr1lniamptd2",
+            "ag1sr1lniamptsdi3",
+            "ag1sr1lniamptd1"
+        ]
+    },
+    "SG-SRES-IAM-THY-MSSQL-PEN": {
+        "vms": [
+            "ag1sr1wniamptq1",
+            "ag1sr1wniamptfs",
+            "ag1sr1wniamptq2"
+        ]
+    },
+    "SG-SRES-CACM-Netcool-Test-Servers": {
+        "vms": [
+            "agnsr1lnccmimpt",
+            "agnsr1lnccmomni"
+        ]
+    },
+    "SG-DR151-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr151lparx",
+            "ag1dr151lpstl",
+            "ag1dr151lpskl",
+            "ag1dr151stw",
+            "ag1dr151lpfm_rhel7"
+        ]
+    },
+    "SG-PDR-SMTP-Server": {
+        "vms": [
+            "ag1pdr1smtp01"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-PEN": {
+        "vms": [
+            "ag1sr1lniamptprx1",
+            "ag1sr1lniamptprx2"
+        ]
+    },
+    "SG-DR100-STaaS-Arxview": {
+        "vms": [
+            "ag1d100lparxtmp",
+            "ag1d100arx"
+        ]
+    },
+    "AG1-SG-SRES-IAM-SANDBOX-LINUX": {
+        "vms": [
+            "ag1sr1lniamsbprx1",
+            "ag1sr1lniamsbbkl1"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-PROXY-PROD": {
+        "vms": [
+            "ag1sr1lpiamciprx2",
+            "ag1sr1lpiamciprx1"
+        ]
+    },
+    "SG-SRES-AGNSRLNICP1-ICP": {
+        "vms": [
+            "agnsrlnicp1m02",
+            "agnsrlnicp1m01",
+            "agnsrlnicp1m03"
+        ]
+    },
+    "SG-HRES-TALOS-SSHProxy-SharedProd": {
+        "vms": [
+            "ag1h1lpta1ssh1",
+            "ag1h1lpta1ssh2"
+        ]
+    },
+    "SG-SL-IRES-Internet-Proxy-Clients": {
+        "vms": [
+            "ag1sftp01",
+            "ag1prx01",
+            "templCentOS7",
+            "ag1TemplWin2016standard",
+            "ag1wtslic01",
+            "ag1prx01n",
+            "ag1jump02",
+            "ag1sftp01n"
+        ]
+    },
+    "SG-ISIM-WDCISPW-SRES-Members": {
+        "vms": [
+            "ag1sr1sepm1",
+            "ag1sr1wdns02",
+            "ag1sr1wsus01",
+            "ag1sr1wdns01",
+            "ag1sr1wjmp02",
+            "ag1sr1sql01",
+            "ag1sr1daipwin01",
+            "ag1sr1daipwin02",
+            "ag1sr1wjmp01"
+        ]
+    },
+    "AG1-SG-SRES-IAM-SANDBOX-WINDOWS": {
+        "vms": [
+            "ag1sr1wniamsbt1",
+            "ag1sr1wniamsbq1",
+            "ag1sr1wniamsbfs",
+            "ag1sr1wniamsbe1",
+            "ag1sr1wniamsbr1"
+        ]
+    },
+    "SG-DRES96-CRO-DRM-Servers": {
+        "vms": [
+            "ag1d96croizdrmm",
+            "ag1d96croizdrmp"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-SIDT": {
+        "vms": [
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamtse2",
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamtsfs",
+            "ag1sr1wniamdve1",
+            "ag1sr1wniamtsq1",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamdvq1",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wniamdvfs",
+            "ag1sr1wniamtst1"
+        ]
+    },
+    "SG-DR162-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr162lpstl",
+            "ag1dr162lparx",
+            "ag1dr162stw",
+            "ag1dr162lpocum",
+            "ag1dr162lpskl",
+            "ag1dr162lpfm"
+        ]
+    },
+    "SG-DR203-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d203lpcacpr1",
+            "ag1d203lpcacpr2"
+        ]
+    },
+    "SG-DR234-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr234lpskl",
+            "ag1dr234lparx",
+            "ag1dr234lpfm",
+            "ag1dr234stw"
+        ]
+    },
+    "SG-DR12-STaaS-Arxview": {
+        "vms": [
+            "ag1d12lparxtmp",
+            "ag1dr12arx"
+        ]
+    },
+    "SG-agnsrlnicp1p-vip": {
+        "vms": [
+            "agnsrlnicp1p03",
+            "agnsrlnicp1p01",
+            "agnsrlnicp1p02"
+        ]
+    },
+    "SG-ISIM-WDC-SRES-Standalone": {
+        "vms": [
+            "agnsrwnccmwin16",
+            "agnsrwnccmwsus"
+        ]
+    },
+    "SG-DR11-STaaS-Arxview": {
+        "vms": [
+            "ag1d11lparxtmp",
+            "ag1dr11arx"
+        ]
+    },
+    "SG-DR156-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr156dc1",
+            "ag1dr156dc2"
+        ]
+    },
+    "SG-SRES-IAM-THY-All-VMs": {
+        "vms": [
+            "ag1sr1wniamptt2",
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1wpiampre2",
+            "ag1sr1wpiamprr3",
+            "ag1sr1wniamptq1",
+            "ag1sr1wniamdvr1",
+            "ag1sr1lniamtssdi2",
+            "ag1sr1wpiampre3",
+            "ag1sr1wniamdvfs",
+            "ag1sr1lpiamprsdi1",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1lniamptprx1",
+            "ag1sr1wniamptt1",
+            "ag1sr1wpiamprfs",
+            "ag1sr1lniamuasdi3",
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamptsdi",
+            "ag1sr1wniamtsq1",
+            "ag1sr1wniamptq2",
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamdve1",
+            "ag1sr1wniamuar1",
+            "ag1sr1wniamuaq2",
+            "ag1sr1lniamptd2",
+            "ag1sr1wniamuae1",
+            "ag1sr1wpiamprq1",
+            "ag1sr1wniamuat1",
+            "ag1sr1wniamuar2",
+            "ag1sr1lniamuaprx1",
+            "ag1sr1lniamptsdi2",
+            "ag1sr1aniamtssvg1",
+            "ag1sr1lniamptprx2",
+            "ag1sr1wpiamprt1",
+            "ag1sr1wpiampre1",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wpiamprt3",
+            "ag1sr1lniamuaprx2",
+            "ag1sr1lniamuasdi2",
+            "ag1sr1wniamptr2",
+            "ag1sr1wniamptra",
+            "ag1sr1lniamdb01",
+            "ag1sr1wniamptr1",
+            "ag1sr1lniamdvprx1",
+            "ag1sr1wniamtse2",
+            "ag1sr1wpiampre4",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamtst1",
+            "ag1sr1lpiamprprx1",
+            "ag1sr1wniamuaq1",
+            "ag1sr1wpiamprra",
+            "ag1sr1lpiamprprx2",
+            "ag1sr1lniamtsprx1",
+            "ag1sr1wniamtsfs",
+            "ag1sr1wniamtsr1",
+            "ag1sr1lniamptsdi3",
+            "ag1sr1lniamdvsdi3",
+            "ag1sr1wniamuat2",
+            "ag1sr1lniamdb02",
+            "ag1sr1wpiamprr1",
+            "ag1sr1lniamptd1",
+            "ag1sr1wniampte1",
+            "ag1sr1lniamuasdi",
+            "ag1sr1wniamdvq1",
+            "ag1sr1lniamtssdi1",
+            "ag1sr1wniamuafs",
+            "ag1sr1wpiamprq2",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiamprt2",
+            "ag1sr1wniamptfs"
+        ]
+    },
+    "SG-DR187-CACF-Proxy": {
+        "vms": [
+            "ag1d187lpcacpr1",
+            "ag1d187lpcacpr2"
+        ]
+    },
+    "SG-DR53-PSIS-AD-DNS": {
+        "vms": [
+            "AG1D53WPIGADCD1",
+            "AG1D53WPIGADCD2"
+        ]
+    },
+    "SG-DRES96-CRO-SiteControllers": {
+        "vms": [
+            "ag1d96croizdrmp",
+            "ag1d96croizdrmm"
+        ]
+    },
+    "SG-SRES-CACM-Test-Servers": {
+        "vms": [
+            "agnsrwnccmwin16",
+            "agnsrwnccmwsus",
+            "agnsrlnccmtower",
+            "agnsrlnccmrhrepo",
+            "agnsrlnccmlxjmp",
+            "agnsrlnccmrhel7"
+        ]
+    },
+    "SG-SRES-agnsrlnicp1p-vip": {
+        "vms": [
+            "agnsrlnicp1x02",
+            "agnsrlnicp1x03",
+            "agnsrlnicp1x01"
+        ]
+    },
+    "SG-SRES-IAM-NODB-PEN": {
+        "vms": [
+            "ag1sr1wniamptr2",
+            "ag1sr1wniamptr1",
+            "ag1sr1wniampte1",
+            "ag1sr1wniamptfs",
+            "ag1sr1lniamptsdi",
+            "ag1sr1wniamptt1",
+            "ag1sr1wniamptt2"
+        ]
+    },
+    "SG-LPW-TEST": {
+        "vms": [
+            "ag1sr1lpi1pprx2",
+            "ag1sr1lpiamciprx2",
+            "ag1sr1lpiamprprx1",
+            "ag1d78lpaecprx2",
+            "ag1sr1lniamtsprx1",
+            "ag1pdr1prx02",
+            "ag1dr158lpprx1",
+            "ag1d95lpjllprx1",
+            "ag1dr159lnprx1",
+            "ag1d78lpaecprx1",
+            "ag1sr1lniamdvprx1",
+            "ag1dr158lpprx2",
+            "ag1sr1lniamptprx2",
+            "ag1sr1lpiamciprx1",
+            "ag1sr1lniamuaprx2",
+            "ag1pdr1prx01",
+            "ag1sr1lpi1pprx1",
+            "ag1prx01n",
+            "ag1sr1lniamsbprx1",
+            "ag1sr1lpiamprprx2",
+            "ag1d95lpjllprx2",
+            "ag1prx01",
+            "ag1sr1lniamptprx1",
+            "ag1sr1lniamuaprx1"
+        ]
+    },
+    "SG-DR224-CACF-Proxy": {
+        "vms": [
+            "ag1d224lpcacpr1",
+            "ag1d224lpcacpr2"
+        ]
+    },
+    "SG-DR100-STaaS-AD-DNS": {
+        "vms": [
+            "ag1d100dc2",
+            "ag1d100dc1"
+        ]
+    },
+    "SG-DR201-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d201lpcacpr2",
+            "ag1d201lpcacpr1"
+        ]
+    },
+    "SG-DR112-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1d112stw",
+            "ag1d112fm"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-MSSQL-PROD": {
+        "vms": [
+            "ag1sr1wpiamciq2",
+            "ag1sr1wpiamciq1"
+        ]
+    },
+    "SG-SRES-DVAA-Test-Servers-All": {
+        "vms": [
+            "agnsrlndvadb01",
+            "agnsrwndvaapp02",
+            "agnsrlndvaweb01",
+            "agnsrlndvaapp01"
+        ]
+    },
+    "SG-DR217-CACF-Proxy": {
+        "vms": [
+            "ag1d217lpcacpr2",
+            "ag1d217lpcacpr1"
+        ]
+    },
+    "SG-DR162-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d162lpcacpr1",
+            "ag1d162lpcacpr2"
+        ]
+    },
+    "SG-DR65-STaaS-Arxview": {
+        "vms": [
+            "ag1d65lparxtmp",
+            "ag1dr65arx"
+        ]
+    },
+    "SG-SRES-IAM-THY-MSSQL-SIDT": {
+        "vms": [
+            "ag1sr1wniamdvfs",
+            "ag1sr1wniamtsfs",
+            "ag1sr1wniamdvq1",
+            "ag1sr1wniamtsq1"
+        ]
+    },
+    "SG-SRES-DVAA-Test-Servers-Back": {
+        "vms": [
+            "agnsrwndvaapp02",
+            "agnsrlndvadb01",
+            "agnsrlndvaapp01"
+        ]
+    },
+    "SG-BigFix-Relay": {
+        "vms": [
+            "ag1sr1bfrelay2",
+            "ag1sr1bfrelay1"
+        ]
+    },
+    "SG-SRES-DVAA-Prod-Servers-All": {
+        "vms": [
+            "ag1srwpdvaapp02",
+            "ag1srlpdvaweb01",
+            "ag1srlpdvaapp01",
+            "ag1srlpdvadb01"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-RAS-PROD": {
+        "vms": [
+            "ag1sr1wpiamcira"
+        ]
+    },
+    "SG-DR40-CRO-DRM-Servers": {
+        "vms": [
+            "ag1dr40crotedrmm",
+            "ag1dr40crotedrmp"
+        ]
+    },
+    "SG-DR251-CACF-Proxy": {
+        "vms": [
+            "ag1d251lpcacpr2",
+            "ag1d251lpcacpr1"
+        ]
+    },
+    "AG1-SG-SRES-IAM-CIO-BLKLD-PROD": {
+        "vms": [
+            "ag1sr1lpiamcibkl1"
+        ]
+    },
+    "SG-DR100-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1d100fm",
+            "ag1d100stw"
+        ]
+    },
+    "SG-SRES-LINUX-Jump-Server-CACF": {
+        "vms": [
+            "ag1sr1lcacfjump01"
+        ]
+    },
+    "SG-IRES-TS-License-Server": {
+        "vms": [
+            "ag1wtslic01"
+        ]
+    },
+    "SG-SRES01-ICp-agnsrlnicp1": {
+        "vms": [
+            "agnsrlnicp1n08",
+            "agnsrlnicp1m02",
+            "agnsrlnicp1nfs02",
+            "agnsrlnicp1n02",
+            "agnsrlnicp1p01",
+            "agnsrlnicp1va01",
+            "agnsrlnicp1x03",
+            "agnsrlnicp1x02",
+            "agnsrlnicp1p02",
+            "agnsrlnicp1n01",
+            "agnsrlnicp1n10",
+            "agnsrlnicp1x01",
+            "agnsrlnicp1n07",
+            "agnsrlnicp1nfs01",
+            "agnsrlnicp1p03",
+            "agnsrlnicp1n06",
+            "agnsrlnicp1n05",
+            "agnsrlnicp1m03",
+            "agnsrlnicp1n09",
+            "agnsrlnicp1n04",
+            "agnsrlnicp1m01",
+            "agnsrlnicp1n03"
+        ]
+    },
+    "SG-DR12-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr12dc1",
+            "ag1dr12dc2"
+        ]
+    },
+    "SG-ag1h1lpta1hapProxy": {
+        "vms": [
+            "ag1h1lpta1hap1",
+            "ag1h1lpta1hap2"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-SIDT": {
+        "vms": [
+            "ag1sr1lniamtsprx1",
+            "ag1sr1lniamdvprx1"
+        ]
+    },
+    "SG-SRES-CACF-BDS": {
+        "vms": [
+            "ag1srlpcacfbds1"
+        ]
+    },
+    "SG-SRES-WIN-DA": {
+        "vms": [
+            "ag1sr1daipwin02",
+            "ag1sr1daipwin01"
+        ]
+    },
+    "SG-DR74-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr74stl",
+            "ag1dr74stw",
+            "ag1dr74fm"
+        ]
+    },
+    "SG-DR237-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr237lpfm",
+            "ag1dr237lparx",
+            "ag1dr237lpstl",
+            "ag1dr237stw"
+        ]
+    },
+    "SG-DR59-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr59dc1",
+            "ag1dr59dc2"
+        ]
+    },
+    "SG-dr65-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr65stw",
+            "ag1dr65stl",
+            "ag1dr65skl"
+        ]
+    },
+    "SG-SRES-IAM-NODB-SIDT": {
+        "vms": [
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1lniamtssdi1",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wniamtse2",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamtst1",
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamdve1",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamtsfs",
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1wniamdvfs",
+            "ag1sr1lniamtssdi2",
+            "ag1sr1lniamdvsdi3"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-PROD": {
+        "vms": [
+            "ag1sr1wpiamprr1",
+            "ag1sr1wpiamprra",
+            "ag1sr1wpiamprt1",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiampre1",
+            "ag1sr1wpiamprr3",
+            "ag1sr1wpiamprt2",
+            "ag1sr1wpiampre3",
+            "ag1sr1wpiampre2",
+            "ag1sr1wpiamprfs",
+            "ag1sr1wpiamprt3",
+            "ag1sr1wpiampre4",
+            "ag1sr1wpiamprq1",
+            "ag1sr1wpiamprq2"
+        ]
+    },
+    "SG-DRES40-CRO-DRM-Servers": {
+        "vms": [
+            "ag1dr40crotedrmm",
+            "ag1dr40crotedrmp"
+        ]
+    },
+    "SG_IAMAAS_Thycotic_Windows_EP": {
+        "vms": [
+            "ag1sr1wpiamuep3",
+            "ag1sr1wpiamuep1"
+        ]
+    },
+    "SG-DR74-STaaS-Arxview": {
+        "vms": [
+            "ag1dr74arx",
+            "ag1d74lparxtmp"
+        ]
+    },
+    "SG-DR100-STaaS-AD-Clients": {
+        "vms": [
+            "ag1d100stl",
+            "ag1d100stw",
+            "ag1d100fm"
+        ]
+    },
+    "SG-DR11-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr11sat"
+        ]
+    },
+    "SG-SRES-IAM-THY-RMQ-PEN": {
+        "vms": [
+            "ag1sr1wniamptr1",
+            "ag1sr1wniamptr2"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersLinuxDR": {
+        "vms": [
+            "ag1dr40crotesclp2",
+            "ag1dr40crotesclp1"
+        ]
+    },
+    "SG-SRES-STaaS-AD": {
+        "vms": [
+            "ag1sr1staas2",
+            "ag1sr1staas1"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-PROD": {
+        "vms": [
+            "ag1sr1lpiamprsdi1",
+            "ag1sr1lpiamprprx2",
+            "ag1sr1lpiamprprx1"
+        ]
+    },
+    "SG-DR147-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr147dc1",
+            "ag1dr147dc2"
+        ]
+    },
+    "SG-CIO-WIN-LIN-Servers": {
+        "vms": [
+            "ag1sr1wpiamcir3",
+            "ag1sr1wpiamcit2",
+            "ag1sr1wpiamcifs",
+            "ag1sr1wpiamcira",
+            "ag1sr1wpiamcit1",
+            "ag1sr1wpiamcit3",
+            "ag1sr1wpiamcie3",
+            "ag1sr1wpiamciq2",
+            "ag1sr1wpiamcir2",
+            "ag1sr1wpiamcie2",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wpiamciq1",
+            "ag1sr1wpiamcie1"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-UAT": {
+        "vms": [
+            "ag1sr1wniamuafs",
+            "ag1sr1wniamuat1",
+            "ag1sr1wniamuar2",
+            "ag1sr1wniamuat2",
+            "ag1sr1wniamuaq1",
+            "ag1sr1wniamuae1",
+            "ag1sr1wniamuaq2",
+            "ag1sr1wniamuar1"
+        ]
+    },
+    "SG-DR197-STaaS-Arxview": {
+        "vms": [
+            "ag1d197lparxtmp",
+            "ag1dr197lparx"
+        ]
+    },
+    "SG-DRES96-CRO-SiteControllersLinuxPR": {
+        "vms": [
+            "ag1d96croizdrmm"
+        ]
+    },
+    "AG1-SG-SRES-IAM-SANDBOX-NODB": {
+        "vms": [
+            "ag1sr1wniamsbe1",
+            "ag1sr1wniamsbr1",
+            "ag1sr1wniamsbt1"
+        ]
+    },
+    "SG-Thycotic-UAT LA": {
+        "vms": [
+            "ag1sr1lniamtssdi2",
+            "ag1sr1lniamdvsdi3",
+            "ag1sr1lniamdvsdi1",
+            "ag1sr1lniamtssdi1",
+            "ag1sr1lniamuasdi",
+            "ag1sr1lniamptsdi",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1lpiamprsdi1",
+            "ag1sr1lniamdvsdi2"
+        ]
+    },
+    "SG-HRES-HAProxy-OUT": {
+        "vms": [
+            "ag1h1lpta2hap1",
+            "ag1h1lpta2hap2"
+        ]
+    },
+    "SG-PDR-Internet-Proxy-Server": {
+        "vms": [
+            "ag1pdr1prx02",
+            "ag1pdr1prx01"
+        ]
+    },
+    "SG-HRES-HAProxy-IN": {
+        "vms": [
+            "ag1h1lpta1hap2",
+            "ag1h1lpta1hap1"
+        ]
+    },
+    "SG-DR278-CACF-Proxy": {
+        "vms": [
+            "ag1d278lpcacpr2",
+            "ag1d278lpcacpr1"
+        ]
+    },
+    "SG-SRES-CACF-JumpHost-Test-Servers": {
+        "vms": [
+            "agnsr1lnccmjmp3",
+            "agnsr1lnccmjmp1",
+            "agnsr1lnccmjmp4",
+            "agnsr1lnccmimpt",
+            "agnsr1lnccmjmp2",
+            "agnsr1lnccmjmp6",
+            "agnsr1lnccmjmp5"
+        ]
+    },
+    "SG-SRES-DVAA-Prod-Servers-Back": {
+        "vms": [
+            "ag1srlpdvadb01",
+            "ag1srwpdvaapp02",
+            "ag1srlpdvaapp01"
+        ]
+    },
+    "SG-PDR-UCDRelay": {
+        "vms": [
+            "ag1pdr1ucdrly01"
+        ]
+    },
+    "SG-ISIM-WDCSTaaS-DRES-Members": {
+        "vms": [
+            "ag1dr12sfm",
+            "ag1dr65stw",
+            "ag1dr59fm",
+            "ag1dr74fm",
+            "ag1dr12stw",
+            "ag1dr77fm",
+            "ag1dr11sat",
+            "AG1D53WPIGASFM1",
+            "ag1dr74stw",
+            "ag1d100stw",
+            "ag1dr19sklm",
+            "ag1dr59stw",
+            "ag1dr77stw",
+            "ag1dr65skl",
+            "AG1D53WPIGATPC1",
+            "ag1dr19stw",
+            "AG1D53WPIGASTW1"
+        ]
+    },
+    "SG-DR237-STaaS-Arxview": {
+        "vms": [
+            "ag1dr237lparx",
+            "ag1d237lparxtmp"
+        ]
+    },
+    "SG-ISIM-WDC-DRES-Standalone": {
+        "vms": [
+            "ag1d75wphwcetl",
+            "ag1d75wphwcweb",
+            "ag1d40crotescw1",
+            "ag1d75wphwcdb",
+            "agnsrwndvaapp02",
+            "ag1d40crotescw2"
+        ]
+    },
+    "SG-DR74-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr74fm",
+            "ag1dr74stw"
+        ]
+    },
+    "SG-DR65-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr65dc1",
+            "ag1dr65dc2"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-DevOps": {
+        "vms": [
+            "ag1sr1lniamdb02",
+            "ag1sr1lniamdb01"
+        ]
+    },
+    "SG-DR151-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr151lpfm_rhel7",
+            "ag1dr151stw",
+            "ag1dr151lparx",
+            "ag1dr151lpskl"
+        ]
+    },
+    "SG-DR19-STaaS-Arxview": {
+        "vms": [
+            "ag1dr19arx",
+            "ag1d19lparxtmp"
+        ]
+    },
+    "HWSW-DB-VM": {
+        "vms": [
+            "ag1srwphwcgrfds",
+            "ag1srwphwcgrfdb"
+        ]
+    },
+    "SG-SRES-IAM-THY-SECRET-PEN": {
+        "vms": [
+            "ag1sr1wniamptt1",
+            "ag1sr1wniamptfs",
+            "ag1sr1wniamptt2"
+        ]
+    },
+    "SG-DR198-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr198lpstl",
+            "ag1dr198lpskl",
+            "ag1dr198stw",
+            "ag1dr198lparx"
+        ]
+    },
+    "SG-SRES01-CACF-LDAP": {
+        "vms": [
+            "ag1d204lpcacpr1",
+            "ag1d217lpcacpr1",
+            "ag1d227lpcacpr1",
+            "ag1d183lpcacpr1",
+            "ag1d203lpcacpr2",
+            "ag1h1lpta2hap2",
+            "ag1d211lpcacpr2",
+            "ag1d227lpcacpr2",
+            "ag1d203lpcacpr1",
+            "ag1dr59lppr2",
+            "ag1d223lpcacpr1",
+            "ag1d278lpcacpr1",
+            "ag1d100lpcacpr2",
+            "ag1d182lpcacpr1",
+            "ag1d124lpcacpr2",
+            "ag1d124lpcacpr1",
+            "ag1d212lpcacpr2",
+            "ag1d111lpcacpr2",
+            "ag1d211lpcacpr1",
+            "ag1d162lpcacpr2",
+            "ag1d259lpcacpr2",
+            "ag1d201lpcacpr1",
+            "ag1d192lpcacpr2",
+            "ag1d116lpcacpr1",
+            "ag1d233lpcacpr1",
+            "ag1d188lpcacpr1",
+            "ag1d201lpcacpr2",
+            "ag1d111lpcacpr1",
+            "ag1h1lpta1hap1",
+            "ag1dr59lppr1",
+            "ag1d78lpaecprx1",
+            "ag1d182lpcacpr2",
+            "ag1d144lpcacpr1",
+            "ag1d144lpcacpr2",
+            "ag1d100lpcacpr1",
+            "ag1d187lpcacpr2",
+            "ag1d251lpcacpr2",
+            "ag1d95lpjllprx2",
+            "ag1d78lpaecprx2",
+            "ag1srlpcacfbds1",
+            "ag1d188lpcacpr2",
+            "ag1d259lpcacpr1",
+            "ag1d224lpcacpr1",
+            "ag1d224lpcacpr2",
+            "ag1d116lpcacpr2",
+            "ag1d223lpcacpr2",
+            "ag1d217lpcacpr2",
+            "ag1d183lpcacpr2",
+            "ag1d251lpcacpr1",
+            "ag1d233lpcacpr2",
+            "ag1d278lpcacpr2",
+            "ag1h1lpta1hap2",
+            "ag1d162lpcacpr1",
+            "ag1d158lpcacpr1",
+            "ag1d204lpcacpr2",
+            "ag1d95lpjllprx1",
+            "ag1d158lpcacpr2",
+            "ag1d187lpcacpr1",
+            "ag1d212lpcacpr1",
+            "ag1h1lpta2hap1",
+            "ag1d192lpcacpr1"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersLinux": {
+        "vms": [
+            "ag1dr40crotescld1",
+            "ag1dr40crotesclp2",
+            "ag1dr40crotesclp1",
+            "ag1dr40crotescld2"
+        ]
+    },
+    "SG-ISIM-WDCSTaaS-SRES-Members": {
+        "vms": [
+            "ag1sr1staas4",
+            "ag1sr1staas3"
+        ]
+    },
+    "SG-SRES-WIN-Jump-Servers": {
+        "vms": [
+            "ag1sr1wjmp01",
+            "ag1sr1wjmp02"
+        ]
+    },
+    "SG-SRES-DVAA-Dev-Servers": {
+        "vms": [
+            "agnsrlndvadevdb",
+            "agnsrlndvadeva1",
+            "agnsrwndvadeva2"
+        ]
+    },
+    "SG-SRES-IAMAAS-THY-PT-Test-Dev": {
+        "vms": [
+            "ag1sr1wniamdve1",
+            "ag1sr1wniamtse1",
+            "ag1sr1wniamdvq1",
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wniamdve2",
+            "ag1sr1wniamtse2",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamtsq1",
+            "ag1sr1wniamtst1"
+        ]
+    },
+    "SG-DR59-STaaS-Arxview": {
+        "vms": [
+            "ag1d59lparxtmp",
+            "ag1dr59arx"
+        ]
+    },
+    "SG-SRES-IAM-THY-EPL2-UAT": {
+        "vms": [
+            "ag1sr1lpiamuep6"
+        ]
+    },
+    "SG-SRES-WIN-SEPM": {
+        "vms": [
+            "ag1sr1sepm1"
+        ]
+    },
+    "SG-SRES-IAM-THY-RMQ-SIDT": {
+        "vms": [
+            "ag1sr1wniamdvr1",
+            "ag1sr1wniamtsr1"
+        ]
+    },
+    "SG-SRES-DVAA-Prod-Servers-Front": {
+        "vms": [
+            "ag1srlpdvaweb01"
+        ]
+    },
+    "SG-DR212-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d212lpcacpr2",
+            "ag1d212lpcacpr1"
+        ]
+    },
+    "SG-DR12-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr12stw",
+            "ag1dr12stl",
+            "ag1dr12sfm"
+        ]
+    },
+    "SG-DR144-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr144lpOrch",
+            "ag1dr144lpipq2",
+            "ag1dr144stw",
+            "ag1dr144lpfm",
+            "ag1dr144lpipq1",
+            "ag1dr144lpstl",
+            "ag1dr144lpskl"
+        ]
+    },
+    "SG-ISIM-WDCISPW-IRES-Members": {
+        "vms": [
+            "ag1jump02",
+            "ag1twin01",
+            "ag1wtslic01",
+            "ag1vmon"
+        ]
+    },
+    "SG-SRES-HWSW-OPENSSH-SERVERS": {
+        "vms": [
+            "ag1srwphwcetl01",
+            "ag1srwphwcdb01",
+            "ag1srwphwcsrv01",
+            "ag1srwphwcstr01",
+            "ag1srwphwcweb01",
+            "ag1srwphwcstl01",
+            "ag1srwphwcodb01"
+        ]
+    },
+    "SG-DRES40-CRO-SiteControllersWinPR": {
+        "vms": [
+            "ag1d40crotescw2"
+        ]
+    },
+    "SG-SRES-IAM-THY-SECRET-PROD": {
+        "vms": [
+            "ag1sr1wpiamprt2",
+            "ag1sr1wpiamprt3",
+            "ag1sr1wpiamprt1"
+        ]
+    },
+    "SG-SRES-IAM-THY-DE-PROD": {
+        "vms": [
+            "ag1sr1wpiampre3",
+            "ag1sr1wpiampre2",
+            "ag1sr1wpiampre1",
+            "ag1sr1wpiampre4"
+        ]
+    },
+    "SG-DR211-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d211lpcacpr2",
+            "ag1d211lpcacpr1"
+        ]
+    },
+    "SG-SRES-IAM-THY-EPW2-UAT": {
+        "vms": [
+            "ag1sr1wpiamuep3"
+        ]
+    },
+    "SG-SRES-IAM-THY-DB2-DevOps": {
+        "vms": [
+            "ag1sr1lniamdb02",
+            "ag1sr1lniamdb01"
+        ]
+    },
+    "SG-DR144-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr144dc2",
+            "ag1dr144dc1"
+        ]
+    },
+    "SG-DR192-CACF-Proxy-VIP": {
+        "vms": [
+            "ag1d192lpcacpr1",
+            "ag1d192lpcacpr2"
+        ]
+    },
+    "SG-SRES-HWSW-SERVERS": {
+        "vms": [
+            "ag1srwphwcetl01",
+            "ag1srwphwcstl01",
+            "ag1srlphwcsss01"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-PROD": {
+        "vms": [
+            "ag1sr1lpiamprprx1",
+            "ag1sr1lpiamprprx2"
+        ]
+    },
+    "SG-DR197-STaaS-AD-Clients": {
+        "vms": [
+            "ag1dr197lpocum",
+            "ag1dr197lparx",
+            "ag1dr197stw",
+            "ag1dr197lpskl",
+            "ag1dr197lpstl"
+        ]
+    },
+    "SG-SRES-IAM-THY-SECRET-SIDT": {
+        "vms": [
+            "ag1sr1wniamtsfs",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wniamdvfs",
+            "ag1sr1wniamtst1"
+        ]
+    },
+    "SG-Ansible Tower": {
+        "vms": [
+            "ag1sr1lpta1str1"
+        ]
+    },
+    "SG-DR237-STaaS-AD-DNS": {
+        "vms": [
+            "ag1dr237dc1",
+            "ag1dr237dc2"
+        ]
+    },
+    "SG-DR144-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr144lpfm",
+            "ag1dr144lpipq1",
+            "ag1dr144stw",
+            "ag1dr144lpipq2",
+            "ag1dr144lpskl"
+        ]
+    },
+    "SG-SRES-IAM-THY-EPW1-UAT": {
+        "vms": [
+            "ag1sr1wpiamuep1"
+        ]
+    },
+    "SG-SRES-STaaS-AD-DNS": {
+        "vms": [
+            "ag1sr1staas2",
+            "ag1sr1staas1"
+        ]
+    },
+    "SG-SRES-DVAA-Test-Servers-Front": {
+        "vms": [
+            "agnsrlndvaweb01"
+        ]
+    },
+    "SG-DRES259-CACF-Proxy": {
+        "vms": [
+            "ag1d259lpcacpr1",
+            "ag1d259lpcacpr2"
+        ]
+    },
+    "SG-DR198-STaaS-Mail-Clients": {
+        "vms": [
+            "ag1dr198stw",
+            "ag1dr198lparx",
+            "ag1dr198lpskl"
+        ]
+    },
+    "SG-STaas-DRES-Ansible-port-22": {
+        "vms": [
+            "ag1dr162lparx",
+            "ag1dr162lpocum",
+            "ag1dr162lpskl",
+            "ag1dr151lpstl",
+            "ag1dr151lparx",
+            "ag1dr151lpfm",
+            "ag1dr162lpfm",
+            "ag1dr156lpstl",
+            "ag1dr156lparx",
+            "ag1dr144lpOrch",
+            "ag1dr162lpstl"
+        ]
+    },
+    "SG-SRES-IAM-THY-RMQ-UAT": {
+        "vms": [
+            "ag1sr1wniamuar1",
+            "ag1sr1wniamuar2"
+        ]
+    },
+    "SG-SRES-STaaS-AD-Clients": {
+        "vms": [
+            "ag1sr1staas4",
+            "ag1sr1staas3"
+        ]
+    },
+    "SG-DR53-PSIS-SKLM": {
+        "vms": [
+            "AG1D53LPIGAKLM2",
+            "AG1D53LPIGAKLM1"
+        ]
+    },
+    "SG-SL-IRES-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ag1dc2",
+            "ag1dc1"
+        ]
+    },
+    "SG-SRES01-ICp-Cluster01": {
+        "vms": [
+            "ag1sr1icp2n04",
+            "agnsrlnicp1p01",
+            "ag1sr1bfrelay2",
+            "ag1sr1lpiamprprx2",
+            "ag1sr1wpiamprr2",
+            "ag1sr1wpiamprq2",
+            "ag1sr1lniamtssdi2",
+            "rhel7_latest_2020",
+            "ag1sr1wniamdvr1",
+            "ag1sr1icp2elk2",
+            "vm0120-pt",
+            "ag1srwphwcstl01",
+            "ag1sr1icp2n06",
+            "ag1sr1lniamdvsdi2",
+            "ag1sr1icp2elk1",
+            "ag1sr1wjmp01",
+            "ag1srlpsatpxy1",
+            "ag1sr1wpiamuep4",
+            "ag1sr1icp2n09",
+            "ag1sr1staas1",
+            "rhel-template1.sr1.ag1.sp.ibm.local",
+            "agnsrlndvaweb01",
+            "ag1srwpdvaapp02",
+            "ag1sr1wniamuaq1",
+            "agnsrlndvadb01",
+            "ag1sr1nfs01",
+            "agnsrlnetocdwas",
+            "ag1sr1wpiampre4",
+            "ag1sr1lpi1pprx1",
+            "ag1sr1wpiamprfs",
+            "agnsr1lnccmimpt",
+            "ag1sr1dajh01",
+            "ag1srwpenapok1",
+            "ag1sr1wniamsbe1",
+            "ag1sr1wpiamcie1",
+            "agnsr1lnaiodev1",
+            "ag1sr1lcacfjump01",
+            "ag1srlphcs0001",
+            "ag1srlpcarwas1000",
+            "agnsrlnrckvm1",
+            "ag1sr1wniamsbq1",
+            "Ag1srlpSATZcld_rhel8new",
+            "ag1sr1lpocnnfs02",
+            "ag1sr1wpiamprq1",
+            "ag1sr1staas2",
+            "ag1-etn-v2t-01a",
+            "ag1srwphwcstr01",
+            "rhel-template2.sr1.ag1.sp.ibm.local",
+            "agnsr1lnccmjmp1",
+            "ag1sr1wpiamcie2",
+            "ag1sr1lniamuasdi",
+            "ag1sr1lpansb",
+            "ag1sr1dajh02",
+            "ag1sr1ljmp02",
+            "ubuntu1604_vm",
+            "agnsr1lnccmjmp5",
+            "ag1sr1aniamtssvg1",
+            "ag1sr1cntrl1",
+            "ag1sr1lniamsbprx1",
+            "ag1srlncacfxfr_old",
+            "ag1sr1wpiamcifs",
+            "ag1sr1icp2nfs01",
+            "agnsrlnccmrhrepo",
+            "ag1sr1wniamptr1",
+            "agnsrlndvaapp01",
+            "ag1sr1wniamdve2",
+            "ag1sr1lniamtssdi3",
+            "ag1sr1nfs02n",
+            "ag1sr1nfs02",
+            "ag1sr1lniamsbbkl1",
+            "ag1srlncacfxfr",
+            "ag1srwpetpp1000",
+            "ag1sr1wpiamprt2",
+            "ag1sr1icp2p01",
+            "ag1srwphwcweb01",
+            "ag1sr1wniamuafs",
+            "ag1srlpetocdb1011",
+            "rhel-hc",
+            "agnsrwndvadeva2",
+            "ag1sr1wpiamcira",
+            "ag1sr1wdns01",
+            "ag1sr1lniamtssdi1",
+            "agnsrwnccmwsus",
+            "ag1sr1wniamtse1",
+            "agnsrlnccmtower",
+            "ag1sr1wniampte1",
+            "ag1sr1rhel72021Apr_template",
+            "ag1srapjfwkalif2",
+            "ag1sr1wpiamcir1",
+            "ag1sr1wpiampre3",
+            "agnsrlnicp1n05",
+            "ag1sr1lpta1str1",
+            "ag1sr1wniamptq1",
+            "ag1sr1lniamtsprx1",
+            "ag1sr1lpiamprsdi1",
+            "agnsrlndvadevdb",
+            "ag1srwphwcodb01",
+            "ag1sr1lpiamciprx2",
+            "ag1sr1lniamptprx1",
+            "ag1sr1icp2n08",
+            "ag1sr1rhel2022",
+            "ag1sr1wniamptt2",
+            "ag1sr1wniamptfs",
+            "ag1sr1wpiamciq2",
+            "ag1srlpsatpxy2",
+            "ag1sr1sql01",
+            "ag1sr1staas3",
+            "agnsr1lnccmjmp3",
+            "ag1sr1ljmp01n",
+            "ag1sr1wniamsbfs",
+            "ag1sr1wniamptt1",
+            "agnsr1lnccmjmp6",
+            "ag1sr1sltestvm",
+            "ag1sr1w19lic01",
+            "agnsrlnccmrhel7",
+            "ag1sr1bfrelay1",
+            "ag1sr1icp2x02",
+            "ag1srlpcacfbds1",
+            "ag1sr1wnlocal",
+            "ag1sr1lniamptsdi",
+            "ag1sr1wpiampre1",
+            "ag1sr1wpiamcit1",
+            "ag1srwphwcdb01",
+            "ag1sr1wniamsbr1",
+            "ag1srlpcardb1000",
+            "ag1sr1wniamuar2",
+            "ag1sr1wniamtsq1",
+            "ag1srlpchatixf1",
+            "agnsrlnicp1n06",
+            "ag1sr1icp2m02",
+            "agnsrlnicp1nfs01",
+            "ag1-etn-v2t-01b",
+            "ag1sr1wpiamprr1",
+            "agnsrwnccmwin16",
+            "agnsrwndvaapp02",
+            "ag1sr1icp2n03",
+            "ag1sr1wniamptq2",
+            "agnsrlnicp1x02",
+            "ag1sr1wniamdvfs",
+            "agnsrlnetocddb",
+            "ag1sr1wpiamcie3",
+            "ag1sr1lpocpnfs01",
+            "ag1sr1icp2n02",
+            "agnsrlnicp1n01",
+            "ag1sr1wpiamcit3",
+            "ag1sr1wniamdvt1",
+            "ag1sr1wpiamcir2",
+            "ag1sr1wniamdve1",
+            "ag1srwpetpd1000",
+            "ag1sr1wpiamuep2",
+            "ag1srwphwcetl01",
+            "ag1sr1wniamuat2",
+            "ag1sr1lpiamciprx1",
+            "ag1sr1wsus01",
+            "ag1sr1wniamuae1",
+            "agnsrlnmnepen1_old",
+            "agnsrlnicp1n10",
+            "ag1sr1lniamdvprx1",
+            "ag1sr1basetemp2019_old",
+            "ag1sr1lpiamuep6",
+            "ag1sr1wniamptra",
+            "ag1srapjfwkali1",
+            "ag1sr1lnocpnfs02",
+            "agnsrlnicp1n07",
+            "agnsr1lnccmjmp2",
+            "agnsr1lnccmomni",
+            "WIN2016stdLatest",
+            "ag1sr1lpcactest",
+            "ag1sr1icp2elk3",
+            "ag1sr1lniamdvsdi1",
+            "ag1dr40crotedrmm_test",
+            "ag1sr1wpiampre2",
+            "ag1sr1LDAPTEST",
+            "ag1srwphwcgrfdb",
+            "ag1sr1wpiamprr3",
+            "ag1sr1icp2va01",
+            "ag1srwphwcgrfds",
+            "agnsrlnicp1va01",
+            "ubuntu1804_template",
+            "ag1sr1lniamdvsdi3",
+            "rhel7_testvm",
+            "rhel8_test2",
+            "ag1sr1lpiamcibkl1",
+            "ag1sr1wjmp02",
+            "ag1sr1w2019test",
+            "ag1sr1ljmp01",
+            "ag1srlpdvaapp01",
+            "ag1sr1wniamsbt1",
+            "ag1srlpgse1000",
+            "ag1srlpdvaweb01",
+            "ag1sr1wpiamuep1",
+            "ag1sr1lpiamprprx1",
+            "agnsrlnicp1p02",
+            "ag1sr1wniamtse2",
+            "agnsrlnicp1n03",
+            "agnsrlnicp1nfs02",
+            "ag1sr1wniamtst1",
+            "ag1sr1icp2x01",
+            "agnsrlnicp1m01",
+            "ag1sr1wniamuar1",
+            "agnsrlnicp1n08",
+            "ag1sr1wdns02",
+            "ag1sr1nfs01n",
+            "ag1srwpenapok2",
+            "WIN2016stdApr_template",
+            "ag1sr1qualy1",
+            "agnsrlndvadeva1",
+            "WIN2016SQLTemplate",
+            "photon-custom-lsilogic-hw11-2.0-304b817",
+            "ag1sr1icp2m01",
+            "ag1sr1w19lic01_old",
+            "ag1sr1icp2n05",
+            "ag1srlpSATZcld",
+            "agnsrlnccmlxjmp",
+            "ag1sr1wniamptr2",
+            "ag1sr1wpiamcit2",
+            "ag1sr1wpiamuep3",
+            "ag1sr1lpsecgw1",
+            "ag1srlphwcsss01",
+            "agnsrlnicp1x01",
+            "ubuntu1804_vm",
+            "agnsrlnicp1x03",
+            "ag1sr1wniamtsfs",
+            "ag1sr1wniamuaq2",
+            "ag1sr1wniamuat1",
+            "ag1sr1lpi1pprx2",
+            "ag1win2019temp",
+            "agnsrlnicp1n09",
+            "ag1sr1daipwin02",
+            "ag1sr1sepm1",
+            "ag1sr1lniamuaprx1",
+            "agnsrlnicp1n04",
+            "ag1srlpdefmstr",
+            "ag1srwphwcgrfds-clone",
+            "RHEL8_template",
+            "ag1srlnetocwas1021",
+            "ag1sr1icp2n01",
+            "ag1sr1lpiamuep5",
+            "agnsrlnicp1m02",
+            "agnsr1lnccmjmp4",
+            "ag1sr1wniamtsr1",
+            "ag1sr1wpiamprra",
+            "ag1srlnetocdb1021",
+            "ag1sr1rhellic01",
+            "ag1srlpSATZcld_old",
+            "ag1sr1wpiamcir3",
+            "agnsrlnicp1n02",
+            "agnsrlnicp1p03",
+            "ag1sr1wpiamprt1",
+            "ag1srlphwcls01",
+            "ag1sr1icp2p02",
+            "rhel8_test1",
+            "ag1sr1rhel82022",
+            "ag1srlpdvadb01",
+            "ag1sr1daipwin01",
+            "ag1sr1icp2n07",
+            "ag1sr1icp2x03",
+            "agnsrlndvaapp01_restore",
+            "agnsrlnmnepen1",
+            "ag1srlphwcmon01",
+            "ag1srwphwcsrv01",
+            "ag1sr1staas4",
+            "ag1sr1wpiamciq1",
+            "ag1sr1lniamuaprx2",
+            "ag1sr1wpiamprt3",
+            "ag1sr1win19test",
+            "ag1sr1lniamptprx2",
+            "ag1sr1wniamdvq1",
+            "ag1srlpetocwas1011",
+            "agnsrlnicp1m03",
+            "ag1sr1icp2m03"
+        ]
+    },
+    "SG-DR162-ESG-LB-Source": {
+        "vms": []
+    }
+}

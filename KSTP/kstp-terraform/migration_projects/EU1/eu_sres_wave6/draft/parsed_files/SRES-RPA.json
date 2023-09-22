@@ -1,0 +1,178 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-2001",
+            "SSH",
+            "HTTPS",
+            "TCP-3200-3399"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool",
+            "TF-EU1-IPSET-India-Payroll-zw2uspriv-app-kyndryl-net",
+            "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Pool-Images",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Desktop-Pool",
+            "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool",
+            "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+            "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images",
+            "TF-EU1-HOST-eu1sr1wjmp01"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES-RPA": {
+            "category": "Application",
+            "rules": {
+                "5367": {
+                    "display_name": "TF-5367-SRES-RPA-to-IBM-Blue",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool",
+                        "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "9.63.66.23"
+                    ],
+                    "services": [
+                        "TCP-2001"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-RPA-BP-ALL-Desktop-Pool",
+                        "TF-EU1-SG-RPA-AA-ALL-Desktop-Pool",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "8921": {
+                    "display_name": "TF-8921-RPA-to-India-Payroll-Azure",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-HOST-eu1sr1wjmp01",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images"
+                    ],
+                    "source_ips": [
+                        "158.87.60.2"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-India-Payroll-zw2uspriv-app-kyndryl-net"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0136146 ",
+                    "scope": [
+                        "TF-EU1-IPSET-India-Payroll-zw2uspriv-app-kyndryl-net",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9006": {
+                    "display_name": "TF-9006-RPA-to-Azure-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1wjmp01",
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Pool-Images",
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Desktop-Pool"
+                    ],
+                    "source_ips": [
+                        "158.87.60.2"
+                    ],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "138.95.238.8"
+                    ],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0141335",
+                    "scope": [
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Desktop-Pool",
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Pool-Images",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9105": {
+                    "display_name": "TF-9105-Copy-of-RPA-to-Azure-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Pool-Images",
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Desktop-Pool",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "138.95.95.30",
+                        "138.95.96.26",
+                        "138.95.103.5",
+                        "138.95.101.5",
+                        "138.95.96.24",
+                        "138.95.96.25",
+                        "138.95.94.30",
+                        "138.95.102.5",
+                        "138.95.93.30"
+                    ],
+                    "services": [
+                        "HTTPS",
+                        "TCP-3200-3399"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0147990\nRITM0152303",
+                    "scope": [
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Pool-Images",
+                        "TF-EU1-SG-SRES-RPA-BP-GTS-WLA-Desktop-Pool",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9273": {
+                    "display_name": "TF-9273-India-Offboarding-bots-upload-reports-at-this-SFTP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-HOST-eu1sr1wjmp01",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "138.95.89.73"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0158187",
+                    "scope": [
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Pool-Images",
+                        "TF-EU1-SG-SRES-RPA-AA-PH2-Desktop-Pool",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                }
+            }
+        }
+    }
+}

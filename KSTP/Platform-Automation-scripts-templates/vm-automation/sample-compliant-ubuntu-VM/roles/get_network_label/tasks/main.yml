@@ -1,0 +1,88 @@
+
+- name: generate vcenter login token for rest api authentication
+  uri:
+    url: "https://{{ vcenter }}/rest/com/vmware/cis/session"
+    force_basic_auth: yes
+    method: POST
+    user: "{{ lookup('env','vsphere_user') }}"   ## NOTE: modified to pull from Env Variables
+    password: "{{ lookup('env','vsphere_password') }}"
+    status_code: 200
+    validate_certs: no
+  register: vc_login
+  ### NOTE:  modified to run on Control Node
+  delegate_to: localhost
+
+- name: get dvportgroups via vcenter rest api
+  uri:
+    url: "https://{{ vcenter }}/rest/vcenter/network?filter.types=DISTRIBUTED_PORTGROUP"
+    force_basic_auth: yes
+    method: GET
+    user: "{{ lookup('env','vsphere_user') }}" ## NOTE: modified to pull from Env Variables
+    password: "{{ lookup('env','vsphere_password') }}"
+    status_code:
+      - 200
+    validate_certs: no
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+      Cookie: "{{vc_login.set_cookie}}"
+    return_content: yes
+  register: get_portgroups
+  delegate_to: localhost
+
+- name: gather moids for dvswitchs using nsxansible vcenter_gather_moids module
+## NOTE: modified to reference variable from the inventory file `target_cluster`
+  when: target_cluster == item.value.name
+#  when: vsphere_clusters.compute_cluster.name == item.value.name
+  vcenter_gather_moids:
+    hostname: "{{ vcenter }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    datacenter_name: "{{ vcenter_dc }}"
+    dvs_name: "{{ item.value.dvswitch }}"
+    validate_certs: False
+  with_dict: "{{ vsphere_clusters }}"
+  register: gather_moids_dvswitch
+  delegate_to: localhost
+
+- name: Get dvswitch id for specified cluster
+  set_fact:
+    dvs_id: "{{ gather_moids_dvswitch | to_json | from_json | json_query(query_dvs_id) }}"
+  vars:
+    ## NOTE: modified to reference variable from the inventory file `target_cluster`
+    query_dvs_id: "results[?item.value.name.contains(@,'{{ target_cluster }}')].object_id"
+    #query_dvs_id: "results[?item.value.name.contains(@,'{{ vsphere_clusters.compute_cluster.name }}')].object_id"
+    #query_dvs_id: "results[?item.value.name.contains(@,'{{ gather_moids_dvswitch.results[0].item.value.name }}')].object_id"
+    #query_dvs_id: "results[?item.value.name.contains(@,'{{ cluster }}')].object_id"
+  register: get_dvswitch_id
+  delegate_to: localhost
+
+- debug:
+    var: dvs_id
+
+- fail:
+    msg: No matching cluster or dvswitch not found
+  when: dvs_id == []
+
+- name: Get Distributed vSwitch PortGroup Name for DRES VXLAN (network_label)
+  set_fact:
+    network_label: "{{ get_portgroups | to_json | from_json | json_query(query_dvs_pgs) }}"
+  vars:
+    query_dvs_pgs: "json.value[?name.contains(@,'{{ dvs_id[0] }}')].name[?contains(@,'{{ app_internal_name }}')]"
+  register: get_network_label
+  delegate_to: localhost
+
+## Debug ouput below here:
+- debug:
+    var: get_network_label
+
+- debug:
+    ## NOTE... you need to reference an element in the Array returned.
+    var: network_label.0
+
+#- name: create network label env var
+#  lineinfile: >
+#   dest=/etc/environment
+#   state=present
+#   line="NETWORK_LABEL={{ network_label.0 }}"
+#  delegate_to: localhost

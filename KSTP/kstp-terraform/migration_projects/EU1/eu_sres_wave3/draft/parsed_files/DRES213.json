@@ -1,0 +1,80 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-7705"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d213lpsprtnp2",
+            "TF-EU1-HOST-eu1srltm1esdc",
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-nlascno000m1ermp",
+            "TF-EU1-HOST-eu1srltm1esdp",
+            "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP",
+            "TF-EU1-HOST-eu1d213lpsprtnp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES213": {
+            "category": "Application",
+            "rules": {
+                "7241": {
+                    "display_name": "TF-7241-Event-Forwarding",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d213lpsprtnp2",
+                        "TF-EU1-HOST-eu1d213lpsprtnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51076359\n",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-eu1d213lpsprtnp2",
+                        "TF-EU1-HOST-eu1d213lpsprtnp1",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                },
+                "8442": {
+                    "display_name": "TF-8442-PhoneHome",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d213lpsprtnp2",
+                        "TF-EU1-HOST-eu1d213lpsprtnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7705"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0077995",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d213lpsprtnp2",
+                        "TF-EU1-HOST-eu1srltm1esdc",
+                        "TF-EU1-HOST-eu1srltm1esdp",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP",
+                        "TF-EU1-HOST-eu1d213lpsprtnp1"
+                    ]
+                }
+            }
+        }
+    }
+}

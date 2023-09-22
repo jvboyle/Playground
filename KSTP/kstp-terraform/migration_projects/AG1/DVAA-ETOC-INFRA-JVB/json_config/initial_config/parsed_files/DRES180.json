@@ -1,0 +1,44 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-995",
+            "TCP-110"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR180-LB-VIP1",
+            "TF-AG1-SG-SRES-Automation-Control-Node"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES180": {
+            "category": "Application",
+            "rules": {
+                "2620": {
+                    "display_name": "TF-2620-temp",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Automation-Control-Node"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR180-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-995",
+                        "TCP-110"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-DR180-LB-VIP1",
+                        "TF-AG1-SG-SRES-Automation-Control-Node"
+                    ]
+                }
+            }
+        }
+    }
+}

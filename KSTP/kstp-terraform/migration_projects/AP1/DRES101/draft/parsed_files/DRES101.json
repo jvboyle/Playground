@@ -1,0 +1,218 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081",
+            "HTTPS",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+            "TF-AP1-SG-SRES01-OCP-Cluster01",
+            "TF-AP1-IPSET-ap1irlpm1esldc02-secondary-IP",
+            "TF-AP1-HOST-ap1srlpcacfbds1",
+            "TF-AP1-HOST-ap1d101lpcacprx1",
+            "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+            "TF-AP1-SG-SRES-Linux-Jump-Servers",
+            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+            "TF-AP1-IPSET-ap1irlpm1esldc01-secondary-IP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES101": {
+            "category": "Application",
+            "rules": {
+                "1137": {
+                    "display_name": "TF-1137-CPREM-to-DRES",
+                    "source_groups": [],
+                    "source_ips": [
+                        "10.118.53.141",
+                        "10.138.92.53",
+                        "168.1.110.7"
+                    ],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ]
+                },
+                "1138": {
+                    "display_name": "TF-1138-CACF-Proxy-to-BDS",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ]
+                },
+                "1139": {
+                    "display_name": "TF-1139-DRES-to-CPREM",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "10.138.92.53",
+                        "10.118.53.141",
+                        "168.1.110.7"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ]
+                },
+                "1140": {
+                    "display_name": "TF-1140-OCP-Cluster1-to-CACF-Proxy",
+                    "source_groups": [
+                        "TF-AP1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "1257": {
+                    "display_name": "TF-1257-DRES101-to-NewCPREM-",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "10.138.92.53"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ]
+                },
+                "1258": {
+                    "display_name": "TF-1258-New-CPREM-to-DRES-101",
+                    "source_groups": [],
+                    "source_ips": [
+                        "10.138.92.53"
+                    ],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ]
+                },
+                "1259": {
+                    "display_name": "TF-1259--SRES-Jumpservers-to-CACF-Proxy-DRES101-",
+                    "source_groups": [
+                        "TF-AP1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AP1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-IPSET-ap1d101lpcacprx1-vip"
+                    ]
+                },
+                "1715": {
+                    "display_name": "TF-1715-Collecters-to-DRES",
+                    "source_groups": [
+                        "TF-AP1-IPSET-ap1irlpm1esldc01-secondary-IP",
+                        "TF-AP1-IPSET-ap1irlpm1esldc02-secondary-IP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d101lpcacprx1",
+                        "TF-AP1-IPSET-ap1irlpm1esldc01-secondary-IP",
+                        "TF-AP1-IPSET-ap1irlpm1esldc02-secondary-IP"
+                    ]
+                }
+            }
+        }
+    }
+}

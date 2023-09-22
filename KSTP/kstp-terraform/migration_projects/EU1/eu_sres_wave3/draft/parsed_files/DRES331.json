@@ -1,0 +1,49 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d331lpsi7tnp1",
+            "TF-EU1-HOST-eu1srlpm1epno3",
+            "TF-EU1-HOST-eu1d331lpsi7tnp2",
+            "TF-EU1-HOST-eu1srlpm1ecno3"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES331": {
+            "category": "Application",
+            "rules": {
+                "9129": {
+                    "display_name": "TF-9129-SL1-Event-Forwarding",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d331lpsi7tnp1",
+                        "TF-EU1-HOST-eu1d331lpsi7tnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0203392",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d331lpsi7tnp1",
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1d331lpsi7tnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ]
+                }
+            }
+        }
+    }
+}

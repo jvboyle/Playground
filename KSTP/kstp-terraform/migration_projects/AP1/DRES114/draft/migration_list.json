@@ -1,0 +1,33 @@
+{
+    "migration_date": "07/14/2023 08:59",
+    "geography": "AP1",
+    "wave": "DRES114",
+    "rules": {
+        "total": 2,
+        "rules": [
+            "1256",
+            "1255"
+        ]
+    },
+    "vms": {
+        "ap1d114lpcacpr2": {
+            "new_vm_group": "TF-AP1-HOST-ap1d114lpcacpr2",
+            "ip": "100.80.92.52",
+            "groups": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-HOST-ap1d114lpcacpr2"
+            ],
+            "original_groups": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ]
+        },
+        "ap1d114lpcacpr": {
+            "new_vm_group": "TF-AP1-HOST-ap1d114lpcacpr",
+            "ip": "100.80.92.50",
+            "groups": [
+                "TF-AP1-HOST-ap1d114lpcacpr"
+            ],
+            "original_groups": []
+        }
+    }
+}

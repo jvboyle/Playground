@@ -1,0 +1,159 @@
+######################################################
+# migration: eu_sres_wave4
+######################################################
+   rule {
+         display_name = "TF-7536-ISIM-is-an-automated-IAM-tool"
+         notes        = "SR51201010 SR51400220 SR51400229"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-CS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP5-Cluster-MOM",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP5-Cluster-MOM",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-CS"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7648-ISIM"
+         notes        = "SR51239185 SR51400220 SR51400229"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta6base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta8base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta9base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta7base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta5base"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta6base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta8base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta9base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta7base",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-ISIM-eu1sr1lpta5base"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8444-RDS-licenses-from-nsxv-to-nsxt"
+         notes        = "CHGEU0134714"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-ClientTerminals"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-TS-License-2019"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-1025-65535",
+               "/infra/services/UDP-138",
+               "/infra/services/TCP-445",
+               "/infra/services/UDP-137",
+               "/infra/services/TCP-139",
+               "/infra/services/TCP-135"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-ClientTerminals",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-TS-License-2019"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8795-DSS-automation-test"
+         notes        = "RITM0126473"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-IAM-THY-DE-PROD"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpisiwas01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-20003"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-IAM-THY-DE-PROD",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srlpisiwas01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8992-Mailing-for-UAT"
+         notes        = "RITM0140070"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-02-Subnet"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-MAIL"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-2525"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-ISIM-MAIL"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }

@@ -1,0 +1,53 @@
+  - name: PUT DLR Edge SYSLOG Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ dlr_id }}/syslog/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_syslog_config }}"
+      return_content: no
+
+  - name: PUT RES-ESG Edge SYSLOG Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ res_esg_id }}/syslog/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_syslog_config }}"
+      return_content: no
+
+  - name: PUT VPN-ESG Edge SYSLOG Configuration
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/syslog/config"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_syslog_config }}"
+      return_content: no

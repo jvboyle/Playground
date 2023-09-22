@@ -1,0 +1,401 @@
+resource "nsxt_policy_service" "svc_tcp-9998" {
+      display_name = "TCP-9998"
+      nsx_id = "TCP-9998"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-9998"
+                  protocol = "TCP"
+                  destination_ports = ["9998"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-16311" {
+      display_name = "TCP-16311"
+      nsx_id = "TCP-16311"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-16311"
+                  protocol = "TCP"
+                  destination_ports = ["16311"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-10443" {
+      display_name = "TCP-10443"
+      nsx_id = "TCP-10443"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-10443"
+                  protocol = "TCP"
+                  destination_ports = ["10443"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_pentest-16351" {
+      display_name = "Pentest-16351"
+      nsx_id = "Pentest-16351"
+}
+
+resource "nsxt_policy_service" "svc_tcp-9999" {
+      display_name = "TCP-9999"
+      nsx_id = "TCP-9999"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-9999"
+                  protocol = "TCP"
+                  destination_ports = ["9999"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-7916" {
+      display_name = "TCP-7916"
+      nsx_id = "TCP-7916"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-7916"
+                  protocol = "TCP"
+                  destination_ports = ["7916"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-9996-9999" {
+      display_name = "TCP-9996-9999"
+      nsx_id = "TCP-9996-9999"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-9996-9999"
+                  protocol = "TCP"
+                  destination_ports = ["9996-9999"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-455" {
+      display_name = "UDP-455"
+      nsx_id = "UDP-455"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-455"
+                  protocol = "UDP"
+                  destination_ports = ["455"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-8099" {
+      display_name = "TCP-8099"
+      nsx_id = "TCP-8099"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8099"
+                  protocol = "TCP"
+                  destination_ports = ["8099"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-6969" {
+      display_name = "TCP-6969"
+      nsx_id = "TCP-6969"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-6969"
+                  protocol = "TCP"
+                  destination_ports = ["6969"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-8091" {
+      display_name = "TCP-8091"
+      nsx_id = "TCP-8091"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8091"
+                  protocol = "TCP"
+                  destination_ports = ["8091"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-3661" {
+      display_name = "TCP-3661"
+      nsx_id = "TCP-3661"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-3661"
+                  protocol = "TCP"
+                  destination_ports = ["3661"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-137" {
+      display_name = "UDP-137"
+      nsx_id = "UDP-137"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-137"
+                  protocol = "UDP"
+                  destination_ports = ["137"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-161" {
+      display_name = "UDP-161"
+      nsx_id = "UDP-161"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-161"
+                  protocol = "UDP"
+                  destination_ports = ["161"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-16351" {
+      display_name = "UDP-16351"
+      nsx_id = "UDP-16351"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-16351"
+                  protocol = "UDP"
+                  destination_ports = ["16351"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-8092" {
+      display_name = "TCP-8092"
+      nsx_id = "TCP-8092"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8092"
+                  protocol = "TCP"
+                  destination_ports = ["8092"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-138" {
+      display_name = "TCP-138"
+      nsx_id = "TCP-138"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-138"
+                  protocol = "TCP"
+                  destination_ports = ["138"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-16316" {
+      display_name = "TCP-16316"
+      nsx_id = "TCP-16316"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-16316"
+                  protocol = "TCP"
+                  destination_ports = ["16316"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-20080-20081" {
+      display_name = "TCP-20080-20081"
+      nsx_id = "TCP-20080-20081"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-20080-20081"
+                  protocol = "TCP"
+                  destination_ports = ["20080-20081"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-455" {
+      display_name = "TCP-455"
+      nsx_id = "TCP-455"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-455"
+                  protocol = "TCP"
+                  destination_ports = ["455"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-20081" {
+      display_name = "TCP-20081"
+      nsx_id = "TCP-20081"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-20081"
+                  protocol = "TCP"
+                  destination_ports = ["20081"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-16310-16311" {
+      display_name = "TCP-16310-16311"
+      nsx_id = "TCP-16310-16311"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-16310-16311"
+                  protocol = "TCP"
+                  destination_ports = ["16310-16311"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-9987" {
+      display_name = "TCP-9987"
+      nsx_id = "TCP-9987"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-9987"
+                  protocol = "TCP"
+                  destination_ports = ["9987"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-5529" {
+      display_name = "TCP-5529"
+      nsx_id = "TCP-5529"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-5529"
+                  protocol = "TCP"
+                  destination_ports = ["5529"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-20080" {
+      display_name = "TCP-20080"
+      nsx_id = "TCP-20080"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-20080"
+                  protocol = "TCP"
+                  destination_ports = ["20080"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-50000-50006" {
+      display_name = "TCP-50000-50006"
+      nsx_id = "TCP-50000-50006"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-50000-50006"
+                  protocol = "TCP"
+                  destination_ports = ["50000-50006"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-138" {
+      display_name = "UDP-138"
+      nsx_id = "UDP-138"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-138"
+                  protocol = "UDP"
+                  destination_ports = ["138"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-4100" {
+      display_name = "TCP-4100"
+      nsx_id = "TCP-4100"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-4100"
+                  protocol = "TCP"
+                  destination_ports = ["4100"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-137-139" {
+      display_name = "TCP-137-139"
+      nsx_id = "TCP-137-139"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-137-139"
+                  protocol = "TCP"
+                  destination_ports = ["137-139"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-7707" {
+      display_name = "TCP-7707"
+      nsx_id = "TCP-7707"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-7707"
+                  protocol = "TCP"
+                  destination_ports = ["7707"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-137" {
+      display_name = "TCP-137"
+      nsx_id = "TCP-137"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-137"
+                  protocol = "TCP"
+                  destination_ports = ["137"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-8093" {
+      display_name = "TCP-8093"
+      nsx_id = "TCP-8093"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8093"
+                  protocol = "TCP"
+                  destination_ports = ["8093"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-16351" {
+      display_name = "TCP-16351"
+      nsx_id = "TCP-16351"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-16351"
+                  protocol = "TCP"
+                  destination_ports = ["16351"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-137-139" {
+      display_name = "UDP-137-139"
+      nsx_id = "UDP-137-139"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-137-139"
+                  protocol = "UDP"
+                  destination_ports = ["137-139"]
+            }
+      }
+}
+

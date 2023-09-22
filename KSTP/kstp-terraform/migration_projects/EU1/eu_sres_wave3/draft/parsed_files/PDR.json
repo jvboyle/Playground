@@ -1,0 +1,69 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8443",
+            "HTTPS_9443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlaspnp000m1erms",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-IPSET-pdr-esg01-inside"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "8859": {
+                    "display_name": "TF-8859-NewRelic-Pre-Prod-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-pdr-esg01-inside"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnp000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50855491\nRITM0129564",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1erms",
+                        "TF-EU1-IPSET-pdr-esg01-inside"
+                    ]
+                },
+                "8925": {
+                    "display_name": "TF-8925-M-EaaS-Frontier-LogicMonitor",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-pdr-esg01-inside"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0137141",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-IPSET-pdr-esg01-inside"
+                    ]
+                }
+            }
+        }
+    }
+}

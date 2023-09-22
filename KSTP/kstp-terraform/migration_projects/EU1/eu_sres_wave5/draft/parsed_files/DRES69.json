@@ -1,0 +1,50 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "HTTP",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-CACF-eu1d69lpeawprx-vip"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES69": {
+            "category": "Application",
+            "rules": {
+                "4713": {
+                    "display_name": "TF-4713-SRES-jump-to-cacf-proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-CACF-eu1d69lpeawprx-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTP",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-CACF-eu1d69lpeawprx-vip",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

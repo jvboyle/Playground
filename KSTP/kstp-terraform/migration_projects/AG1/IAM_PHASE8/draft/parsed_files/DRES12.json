@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1dr12stl"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES12": {
+            "category": "Application",
+            "rules": {
+                "3425": {
+                    "display_name": "TF-3425-SRES-OCP-to-ag1dr12stl",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr12stl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SCTASK0014140 (RITM0078600)",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-HOST-ag1dr12stl"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3293 @@
+{
+    "APP_MSSQL_TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "APP_TFTP": {
+        "protocol": "UDP",
+        "port": [
+            "69"
+        ],
+        "init": true
+    },
+    "APP_ORACLE": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-advertisement"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Report": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-report"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Duplicate Address Request": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "duplicate-address-request"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Time Exceeded": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "time-exceeded"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Certification Path Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "certification-path-solicitation"
+        ],
+        "init": true
+    },
+    "TKG-Access-Ports": {
+        "protocol": "TCP",
+        "port": [
+            "30167",
+            "31234",
+            "6443",
+            "5555",
+            "30164",
+            "30176"
+        ],
+        "init": true
+    },
+    "TCP-8081": {
+        "protocol": "TCP",
+        "port": [
+            "8081"
+        ],
+        "init": true
+    },
+    "TCP-50000": {
+        "protocol": "TCP",
+        "port": [
+            "50000"
+        ],
+        "init": true
+    },
+    "TCP_9443": {
+        "protocol": "TCP",
+        "port": [
+            "9443"
+        ],
+        "init": true
+    },
+    "TCP-9043": {
+        "protocol": "TCP",
+        "port": [
+            "9043"
+        ],
+        "init": true
+    },
+    "DB2": {
+        "protocol": "TCP",
+        "port": [
+            "50000"
+        ],
+        "init": true
+    },
+    "TCP-6443": {
+        "protocol": "TCP",
+        "port": [
+            "6443"
+        ],
+        "init": true
+    },
+    "WINS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "42"
+        ],
+        "init": true
+    },
+    "ORACLE_TNS": {
+        "protocol": "ORACLE_TNS",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP NMobile Prefix Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mobile-prefix-solicitation"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Destination Unreachable": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "destination-unreachable"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Home Agent Address Discovery Request": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "home-agent-address-discovery-request"
+        ],
+        "init": true
+    },
+    "ICMP Source Quench": {
+        "protocol": "ICMP",
+        "port": [
+            "source-quench"
+        ],
+        "init": true
+    },
+    "ICMP Router Solicitation": {
+        "protocol": "ICMP",
+        "port": [
+            "router-solicitation"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Utilized by Experimental Mobility Protocols": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "utilized-by-experimental-mobility-protocols"
+        ],
+        "init": true
+    },
+    "ICMP Router Advertisement": {
+        "protocol": "ICMP",
+        "port": [
+            "router-advertisement"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Duplicate Address Confirmation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "duplicate-address-confirmation"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Node Information Query": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "node-information-query"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Inverse Neighbor Discovery Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "inverse-neighbor-discovery-advertisement"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP RPL Control": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "rpl-control"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Query": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-query"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-solicitation"
+        ],
+        "init": true
+    },
+    "SAP Start Service 2": {
+        "protocol": "TCP",
+        "port": [
+            "50014"
+        ],
+        "init": true
+    },
+    "VMware-VCO-WebHTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8280"
+        ],
+        "init": true
+    },
+    "Vmware-SRM-WSDL-vCentreServer": {
+        "protocol": "TCP",
+        "port": [
+            "9007"
+        ],
+        "init": true
+    },
+    "SAP PAW Servlet Engine": {
+        "protocol": "TCP",
+        "port": [
+            "1089"
+        ],
+        "init": true
+    },
+    "SAP JDBCAdapter": {
+        "protocol": "TCP",
+        "port": [
+            "8220"
+        ],
+        "init": true
+    },
+    "POP3": {
+        "protocol": "TCP",
+        "port": [
+            "110"
+        ],
+        "init": true
+    },
+    "Syslog (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "MS Customizable": {
+        "protocol": "TCP",
+        "port": [
+            "64327"
+        ],
+        "init": true
+    },
+    "SAP gateway - CPIC/RFC": {
+        "protocol": "TCP",
+        "port": [
+            "3300"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr": {
+        "protocol": "TCP",
+        "port": [
+            "9000-9100"
+        ],
+        "init": true
+    },
+    "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1025-65535"
+        ],
+        "init": true
+    },
+    "Oracle": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "NBNS-Unicast": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "VMware-HA-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "8182"
+        ],
+        "init": true
+    },
+    "TELNET": {
+        "protocol": "TCP",
+        "port": [
+            "23"
+        ],
+        "init": true
+    },
+    "SQL Server Browser service": {
+        "protocol": "TCP",
+        "port": [
+            "2382"
+        ],
+        "init": true
+    },
+    "SAP JMS Adapter": {
+        "protocol": "TCP",
+        "port": [
+            "8210"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Jserv port": {
+        "protocol": "TCP",
+        "port": [
+            "8007"
+        ],
+        "init": true
+    },
+    "Vmware-VCO-VCO-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8282"
+        ],
+        "init": true
+    },
+    "Oracle SOAP Server": {
+        "protocol": "TCP",
+        "port": [
+            "9998"
+        ],
+        "init": true
+    },
+    "IPv6-NoExt": {
+        "protocol": "IPV6NONXT",
+        "port": "",
+        "init": true
+    },
+    "SAP IPC Dispatcher Mobile client 2": {
+        "protocol": "TCP",
+        "port": [
+            "4363"
+        ],
+        "init": true
+    },
+    "SUN_RPC_UDP": {
+        "protocol": "SUN_RPC_UDP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "SUN_RPC_TCP": {
+        "protocol": "SUN_RPC_TCP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "FTP": {
+        "protocol": "FTP",
+        "port": [
+            "21"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-advertisement"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Termination": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-termination"
+        ],
+        "init": true
+    },
+    "ICMP Echo Reply": {
+        "protocol": "ICMP",
+        "port": [
+            "echo-reply"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Echo Reply": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "echo-reply"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Renumbering": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-renumbering"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Mobile Prefix Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mobile-prefix-advertisement"
+        ],
+        "init": true
+    },
+    "Java Object Cache port": {
+        "protocol": "TCP",
+        "port": [
+            "7000"
+        ],
+        "init": true
+    },
+    "VMware-VC-ESXi": {
+        "protocol": "TCP",
+        "port": [
+            "51915"
+        ],
+        "init": true
+    },
+    "SAP JMS/JDBC/File Adapter Server": {
+        "protocol": "TCP",
+        "port": [
+            "8200"
+        ],
+        "init": true
+    },
+    "SAP Import Mgr": {
+        "protocol": "TCP",
+        "port": [
+            "20006"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "8009"
+        ],
+        "init": true
+    },
+    "Active Directory Server": {
+        "protocol": "TCP",
+        "port": [
+            "464"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4764)": {
+        "protocol": "TCP",
+        "port": [
+            "4764"
+        ],
+        "init": true
+    },
+    "H323 Gatekeeper Discovery": {
+        "protocol": "UDP",
+        "port": [
+            "1718"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache HTTP Listen(SSL) port": {
+        "protocol": "TCP",
+        "port": [
+            "4444"
+        ],
+        "init": true
+    },
+    "VMware-VDM2.x-Ephemeral": {
+        "protocol": "TCP",
+        "port": [
+            "1024-65535"
+        ],
+        "init": true
+    },
+    "SAP File Adapter": {
+        "protocol": "TCP",
+        "port": [
+            "8230"
+        ],
+        "init": true
+    },
+    "SAP Queue Server": {
+        "protocol": "TCP",
+        "port": [
+            "30004"
+        ],
+        "init": true
+    },
+    "Oracle OC4J AJP": {
+        "protocol": "TCP",
+        "port": [
+            "3301"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Data": {
+        "protocol": "TCP",
+        "port": [
+            "8244"
+        ],
+        "init": true
+    },
+    "VMware-SRM-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "9008"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS traffic from Agent to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "VMware-VCOStdAln-Remote": {
+        "protocol": "TCP",
+        "port": [
+            "61616"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Diagnostic Port": {
+        "protocol": "TCP",
+        "port": [
+            "7200"
+        ],
+        "init": true
+    },
+    "VMware-DataRecovery": {
+        "protocol": "TCP",
+        "port": [
+            "22024"
+        ],
+        "init": true
+    },
+    "SAP Index Server": {
+        "protocol": "TCP",
+        "port": [
+            "30003"
+        ],
+        "init": true
+    },
+    "Routing Engine service": {
+        "protocol": "TCP",
+        "port": [
+            "691"
+        ],
+        "init": true
+    },
+    "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+        "protocol": "TCP",
+        "port": [
+            "49152-65535"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Security Server to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "Syslog (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "SAP Enqueue Repl 2": {
+        "protocol": "TCP",
+        "port": [
+            "50116"
+        ],
+        "init": true
+    },
+    "Windows-Global-Catalog-over-SSL": {
+        "protocol": "TCP",
+        "port": [
+            "3269"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4761)": {
+        "protocol": "TCP",
+        "port": [
+            "4761"
+        ],
+        "init": true
+    },
+    "SIP 5061": {
+        "protocol": "UDP",
+        "port": [
+            "5061"
+        ],
+        "init": true
+    },
+    "SAP Name Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8355"
+        ],
+        "init": true
+    },
+    "SIP 5060": {
+        "protocol": "UDP",
+        "port": [
+            "5060"
+        ],
+        "init": true
+    },
+    "VMware-DVS": {
+        "protocol": "TCP",
+        "port": [
+            "8301",
+            "8302"
+        ],
+        "init": true
+    },
+    "VMware-VCO-WebHTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "8281"
+        ],
+        "init": true
+    },
+    "WINS": {
+        "protocol": "TCP",
+        "port": [
+            "42"
+        ],
+        "init": true
+    },
+    "Enterprise Manager Reporting port": {
+        "protocol": "TCP",
+        "port": [
+            "3339"
+        ],
+        "init": true
+    },
+    "VMware-SRMClient-Server": {
+        "protocol": "TCP",
+        "port": [
+            "8095"
+        ],
+        "init": true
+    },
+    "DCM Java Object Cache port": {
+        "protocol": "TCP",
+        "port": [
+            "7100"
+        ],
+        "init": true
+    },
+    "VMware-VCOMgr-UI": {
+        "protocol": "TCP",
+        "port": [
+            "1194"
+        ],
+        "init": true
+    },
+    "TFTP": {
+        "protocol": "UDP",
+        "port": [
+            "69"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure JMS Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "MSN (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "1863"
+        ],
+        "init": true
+    },
+    "MS-DS-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "Horizon 6 HTML access to Security Server": {
+        "protocol": "TCP",
+        "port": [
+            "8443"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS traffic Agent to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "SAP Exchange Groupware Connector (DCOM)": {
+        "protocol": "TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "IKE (Key Exchange)": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "SAP Inst on IBM": {
+        "protocol": "TCP",
+        "port": [
+            "59975",
+            "59976"
+        ],
+        "init": true
+    },
+    "SAP Upgrade": {
+        "protocol": "TCP",
+        "port": [
+            "4238",
+            "4239",
+            "4240",
+            "4241"
+        ],
+        "init": true
+    },
+    "VMware-VC-Syslog": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": true
+    },
+    "SMTP_TLS": {
+        "protocol": "TCP",
+        "port": [
+            "587"
+        ],
+        "init": true
+    },
+    "RDP": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "SAP ICM HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "VMware-View5.x-PCoIP-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP HostControl": {
+        "protocol": "TCP",
+        "port": [
+            "1128"
+        ],
+        "init": true
+    },
+    "SAP SNC secured gateway": {
+        "protocol": "TCP",
+        "port": [
+            "4800"
+        ],
+        "init": true
+    },
+    "IMAP": {
+        "protocol": "TCP",
+        "port": [
+            "143"
+        ],
+        "init": true
+    },
+    "T120 (Whiteboard A43)": {
+        "protocol": "TCP",
+        "port": [
+            "1503"
+        ],
+        "init": true
+    },
+    "VMware-VCO-VCO-HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "8283"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOPS2": {
+        "protocol": "TCP",
+        "port": [
+            "3601"
+        ],
+        "init": true
+    },
+    "SAP Cruiser": {
+        "protocol": "TCP",
+        "port": [
+            "30008"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOPS1": {
+        "protocol": "TCP",
+        "port": [
+            "3501"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "8084"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server listen port": {
+        "protocol": "TCP",
+        "port": [
+            "7778"
+        ],
+        "init": true
+    },
+    "Vmware-VC-VC-Internal": {
+        "protocol": "TCP",
+        "port": [
+            "7500",
+            "8005",
+            "8006",
+            "8083",
+            "8085",
+            "8086",
+            "8087",
+            "8443",
+            "10109",
+            "10111",
+            "60099"
+        ],
+        "init": true
+    },
+    "SAP Telnet": {
+        "protocol": "TCP",
+        "port": [
+            "50008"
+        ],
+        "init": true
+    },
+    "RFB": {
+        "protocol": "TCP",
+        "port": [
+            "5900-5964"
+        ],
+        "init": true
+    },
+    "SAP Message Server HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8100"
+        ],
+        "init": true
+    },
+    "SAP Queue Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8352"
+        ],
+        "init": true
+    },
+    "SAP Alert Server": {
+        "protocol": "TCP",
+        "port": [
+            "30011"
+        ],
+        "init": true
+    },
+    "NFS Client UDP": {
+        "protocol": "UDP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "VMware-View5.x-JMS": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service remote port": {
+        "protocol": "TCP",
+        "port": [
+            "6200"
+        ],
+        "init": true
+    },
+    "MS-SQL-M-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1434"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure LDAP replication between Connection Servers": {
+        "protocol": "TCP",
+        "port": [
+            "22636"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Security Server": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "POP3_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "995"
+        ],
+        "init": true
+    },
+    "Vmware-VDM2.x-JMS": {
+        "protocol": "TCP",
+        "port": [
+            "4100"
+        ],
+        "init": true
+    },
+    "MS-DS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "Directory Services": {
+        "protocol": "TCP",
+        "port": [
+            "5725"
+        ],
+        "init": true
+    },
+    "MS_RPC_TCP": {
+        "protocol": "MS_RPC_TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "ICMP Destination Unreachable": {
+        "protocol": "ICMP",
+        "port": [
+            "destination-unreachable"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Node Information Response": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "node-information-response"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Echo": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "echo-request"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Done": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-done"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Home Agent Address Discovery Reply": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "home-agent-address-discovery-reply"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP ILNPv6 Locator Update": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "ilnpv6-locator-update"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Version 2 Multicast Listener": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "version-2-multicast-listener"
+        ],
+        "init": true
+    },
+    "ICMP Echo": {
+        "protocol": "ICMP",
+        "port": [
+            "echo-request"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Neighbor Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "neighbor-advertisement"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-solicitation"
+        ],
+        "init": true
+    },
+    "Exchange ActiveSync": {
+        "protocol": "UDP",
+        "port": [
+            "2883"
+        ],
+        "init": true
+    },
+    "SMTP": {
+        "protocol": "TCP",
+        "port": [
+            "25"
+        ],
+        "init": true
+    },
+    "SAP Cache Server": {
+        "protocol": "TCP",
+        "port": [
+            "1095"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15004)": {
+        "protocol": "TCP",
+        "port": [
+            "15004"
+        ],
+        "init": true
+    },
+    "MS-DS": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "CIM-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "5988"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "NetBios Datagram (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "Horizon 6 USB communication from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "32111"
+        ],
+        "init": true
+    },
+    "Vmware-VDM2.x-AJP": {
+        "protocol": "TCP",
+        "port": [
+            "8009"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP traffic from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP IIOPS": {
+        "protocol": "TCP",
+        "port": [
+            "50003"
+        ],
+        "init": true
+    },
+    "Horizon 6 IPSec Negotiation Traffic from Security Server to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-update": {
+        "protocol": "TCP",
+        "port": [
+            "9087"
+        ],
+        "init": true
+    },
+    "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - UDP": {
+        "protocol": "UDP",
+        "port": [
+            "1025-65535"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Security Server": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP Enqueue Svr": {
+        "protocol": "TCP",
+        "port": [
+            "3201"
+        ],
+        "init": true
+    },
+    "SAP Gateway Netweaver App Server": {
+        "protocol": "UDP",
+        "port": [
+            "3300"
+        ],
+        "init": true
+    },
+    "VMware-HA-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8182"
+        ],
+        "init": true
+    },
+    "HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "SAP Content Server": {
+        "protocol": "TCP",
+        "port": [
+            "1090"
+        ],
+        "init": true
+    },
+    "Win 2003 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+        "protocol": "TCP",
+        "port": [
+            "1025-5000"
+        ],
+        "init": true
+    },
+    "DHCPv6 Server": {
+        "protocol": "UDP",
+        "port": [
+            "547"
+        ],
+        "init": true
+    },
+    "SAP HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "50000"
+        ],
+        "init": true
+    },
+    "MS Unified Messaging server - Client Access": {
+        "protocol": "TCP",
+        "port": [
+            "5075",
+            "5076",
+            "5077"
+        ],
+        "init": true
+    },
+    "VMware-VCOStdAln-Heartbeat": {
+        "protocol": "TCP",
+        "port": [
+            "1199"
+        ],
+        "init": true
+    },
+    "Oracle XMLDB HTTP port": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": true
+    },
+    "VMware-VCHeartbeat": {
+        "protocol": "TCP",
+        "port": [
+            "52267"
+        ],
+        "init": true
+    },
+    "EdgeSync service/ADAM": {
+        "protocol": "TCP",
+        "port": [
+            "50389"
+        ],
+        "init": true
+    },
+    "VMware-VC-DumpCollector-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "DNS": {
+        "protocol": "TCP",
+        "port": [
+            "53"
+        ],
+        "init": true
+    },
+    "SAP Java Debug": {
+        "protocol": "TCP",
+        "port": [
+            "50021"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Connection Server traffic": {
+        "protocol": "TCP",
+        "port": [
+            "48080"
+        ],
+        "init": true
+    },
+    "SAP Layout Server": {
+        "protocol": "TCP",
+        "port": [
+            "31596",
+            "31597",
+            "31604"
+        ],
+        "init": true
+    },
+    "NetBios Name Service (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "SAP Layout Server Quark Express": {
+        "protocol": "TCP",
+        "port": [
+            "31602"
+        ],
+        "init": true
+    },
+    "SNMP": {
+        "protocol": "UDP",
+        "port": [
+            "161"
+        ],
+        "init": true
+    },
+    "SAP Backup Server": {
+        "protocol": "TCP",
+        "port": [
+            "30017"
+        ],
+        "init": true
+    },
+    "Enterprise Manager RMI port": {
+        "protocol": "TCP",
+        "port": [
+            "1850"
+        ],
+        "init": true
+    },
+    "OC4J Forms / Reports Instance": {
+        "protocol": "TCP",
+        "port": [
+            "8888"
+        ],
+        "init": true
+    },
+    "SAP Dispatcher Netweaver App Server": {
+        "protocol": "UDP",
+        "port": [
+            "3200"
+        ],
+        "init": true
+    },
+    "VMware Consolidated Backup": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "SMB": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "NetBios Name Service (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "DHCP-Server": {
+        "protocol": "UDP",
+        "port": [
+            "67"
+        ],
+        "init": true
+    },
+    "SAP Dispatcher": {
+        "protocol": "TCP",
+        "port": [
+            "3200"
+        ],
+        "init": true
+    },
+    "Server Message Block (SMB)": {
+        "protocol": "TCP",
+        "port": [
+            "137",
+            "138",
+            "139"
+        ],
+        "init": true
+    },
+    "Horizon 6 Interpod Communication between Connection Servers": {
+        "protocol": "TCP",
+        "port": [
+            "8472"
+        ],
+        "init": true
+    },
+    "IBM DB2": {
+        "protocol": "TCP",
+        "port": [
+            "5000"
+        ],
+        "init": true
+    },
+    "SAP Oracle Listener": {
+        "protocol": "TCP",
+        "port": [
+            "1527"
+        ],
+        "init": true
+    },
+    "SAP MDM Server": {
+        "protocol": "TCP",
+        "port": [
+            "2000-2002"
+        ],
+        "init": true
+    },
+    "SQL Analysis service": {
+        "protocol": "TCP",
+        "port": [
+            "2383"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "SAP Layout Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "31596"
+        ],
+        "init": true
+    },
+    "Terminal Services (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "Oracle Net Listener": {
+        "protocol": "TCP",
+        "port": [
+            "1526"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4766)": {
+        "protocol": "TCP",
+        "port": [
+            "4766"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Admin port": {
+        "protocol": "TCP",
+        "port": [
+            "4000"
+        ],
+        "init": true
+    },
+    "VMware-SRM-SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "8043"
+        ],
+        "init": true
+    },
+    "DHCPv6 Client": {
+        "protocol": "UDP",
+        "port": [
+            "546"
+        ],
+        "init": true
+    },
+    "ORACLE-FORM-SERVICES": {
+        "protocol": "TCP",
+        "port": [
+            "9000"
+        ],
+        "init": true
+    },
+    "RTSP (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "554"
+        ],
+        "init": true
+    },
+    "iSQLPlus 10g (5580)": {
+        "protocol": "TCP",
+        "port": [
+            "5580"
+        ],
+        "init": true
+    },
+    "Terminal Services (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "H323 Call Signaling": {
+        "protocol": "TCP",
+        "port": [
+            "1720"
+        ],
+        "init": true
+    },
+    "SAP IPC Dispatcher Mobile client": {
+        "protocol": "TCP",
+        "port": [
+            "4444"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4767)": {
+        "protocol": "TCP",
+        "port": [
+            "4767"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server port": {
+        "protocol": "TCP",
+        "port": [
+            "7777"
+        ],
+        "init": true
+    },
+    "Oracle GIOP IIOP for SSL": {
+        "protocol": "TCP",
+        "port": [
+            "2482"
+        ],
+        "init": true
+    },
+    "MS_RPC_UDP": {
+        "protocol": "MS_RPC_UDP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Packet Too Big": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "packet-too-big"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP MPL Control": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mpl-control"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Inverse Neighbor Discovery Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "inverse-neighbor-discovery-solicitation"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Parameter Problem": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "parameter-problem"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Certification Path Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "certification-path-advertisement"
+        ],
+        "init": true
+    },
+    "ICMP Time Exceeded": {
+        "protocol": "ICMP",
+        "port": [
+            "time-exceeded"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Redirect": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "redirect"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Neighbor Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "neighbor-solicitation"
+        ],
+        "init": true
+    },
+    "NetBios Session Service (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Connection Server JMS traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4100"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Desktop Agent RDP traffic": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "Log Loader": {
+        "protocol": "TCP",
+        "port": [
+            "44000"
+        ],
+        "init": true
+    },
+    "Oracle JDBC for Rdb Thin Server": {
+        "protocol": "TCP",
+        "port": [
+            "1701"
+        ],
+        "init": true
+    },
+    "Enterprise Manager Servlet port SSL": {
+        "protocol": "TCP",
+        "port": [
+            "1810"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1809)": {
+        "protocol": "TCP",
+        "port": [
+            "1809"
+        ],
+        "init": true
+    },
+    "Vmware-VCO-Lookup": {
+        "protocol": "TCP",
+        "port": [
+            "8230"
+        ],
+        "init": true
+    },
+    "OracleAS Certificate Authority (OCA) - Server Authentication": {
+        "protocol": "TCP",
+        "port": [
+            "4400"
+        ],
+        "init": true
+    },
+    "Vmware-FT-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "8100",
+            "8200"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service request port": {
+        "protocol": "TCP",
+        "port": [
+            "6003"
+        ],
+        "init": true
+    },
+    "IGMP V3 Membership Report": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "iSQLPlus 10g": {
+        "protocol": "TCP",
+        "port": [
+            "5560"
+        ],
+        "init": true
+    },
+    "Oracle XMLDB FTP Port": {
+        "protocol": "TCP",
+        "port": [
+            "2100"
+        ],
+        "init": true
+    },
+    "SAP Monitoring (GRMG)": {
+        "protocol": "TCP",
+        "port": [
+            "8366"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1754)": {
+        "protocol": "TCP",
+        "port": [
+            "1754"
+        ],
+        "init": true
+    },
+    "Horizon 6 Composer Service to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "18443"
+        ],
+        "init": true
+    },
+    "RTSP (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "554"
+        ],
+        "init": true
+    },
+    "VMware-SRM-vCentreServer": {
+        "protocol": "TCP",
+        "port": [
+            "8096"
+        ],
+        "init": true
+    },
+    "Oracle OC4J RMI": {
+        "protocol": "TCP",
+        "port": [
+            "3201"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Statistics port": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic using IPsec with NAT from Security Server to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "4500"
+        ],
+        "init": true
+    },
+    "VMware-VC-DumpSvr": {
+        "protocol": "UDP",
+        "port": [
+            "6500"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "55000"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure Connection Server to View Composer Service communication": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen": {
+        "protocol": "TCP",
+        "port": [
+            "4662"
+        ],
+        "init": true
+    },
+    "Horizon 6 View Composer to ESXi Host Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "Vmware-VC-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "10080"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr 2": {
+        "protocol": "TCP",
+        "port": [
+            "3601"
+        ],
+        "init": true
+    },
+    "Syslog-Server-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "SMB Server UDP": {
+        "protocol": "UDP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "SAP LiveCache": {
+        "protocol": "TCP",
+        "port": [
+            "7200",
+            "7210",
+            "7269",
+            "7270",
+            "7575"
+        ],
+        "init": true
+    },
+    "Oracle GIOP IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "2481"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Client": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "Horizon 6 USB Access to desktops": {
+        "protocol": "TCP",
+        "port": [
+            "32111"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP PAW Communication Server": {
+        "protocol": "TCP",
+        "port": [
+            "1099"
+        ],
+        "init": true
+    },
+    "SSH": {
+        "protocol": "TCP",
+        "port": [
+            "22"
+        ],
+        "init": true
+    },
+    "Horizon 6 Default HTTPS Client to Connection and Security Servers": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "NFS (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Port Tunneling": {
+        "protocol": "TCP",
+        "port": [
+            "7501"
+        ],
+        "init": true
+    },
+    "Horizon 6 Microsoft RDP traffic to View Desktop": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "VMware-VDM2.x-RGS": {
+        "protocol": "TCP",
+        "port": [
+            "42966"
+        ],
+        "init": true
+    },
+    "SMB Server": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "Vmware-VC-WebAccess": {
+        "protocol": "TCP",
+        "port": [
+            "8443",
+            "9443",
+            "10443"
+        ],
+        "init": true
+    },
+    "SAP Inter Server COmm": {
+        "protocol": "TCP",
+        "port": [
+            "20004"
+        ],
+        "init": true
+    },
+    "Horizon 6 Wyse MMR redirection": {
+        "protocol": "TCP",
+        "port": [
+            "9427"
+        ],
+        "init": true
+    },
+    "SAP Mapping Manager": {
+        "protocol": "TCP",
+        "port": [
+            "3909"
+        ],
+        "init": true
+    },
+    "PostgreSQL": {
+        "protocol": "TCP",
+        "port": [
+            "5432"
+        ],
+        "init": true
+    },
+    "NFS (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "Oracle Connection Manager (CMAN)": {
+        "protocol": "TCP",
+        "port": [
+            "1630"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "RPC, DFSR (SYSVOL)": {
+        "protocol": "TCP",
+        "port": [
+            "5722"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache HTTP Listen(non-SSL) port": {
+        "protocol": "TCP",
+        "port": [
+            "7779"
+        ],
+        "init": true
+    },
+    "SAP Comm": {
+        "protocol": "TCP",
+        "port": [
+            "20003"
+        ],
+        "init": true
+    },
+    "Oracle Enterprise Manager Web Console": {
+        "protocol": "TCP",
+        "port": [
+            "5500"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Desktop Agent": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP Index Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8351"
+        ],
+        "init": true
+    },
+    "SAP P4 over HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "50005"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Messaging": {
+        "protocol": "TCP",
+        "port": [
+            "8250"
+        ],
+        "init": true
+    },
+    "OS Agent": {
+        "protocol": "TCP",
+        "port": [
+            "14000"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to vCenter server communication": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "VMware-SRM-Replication": {
+        "protocol": "TCP",
+        "port": [
+            "8123"
+        ],
+        "init": true
+    },
+    "SAP Syndicator Service": {
+        "protocol": "TCP",
+        "port": [
+            "20007"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "3401"
+        ],
+        "init": true
+    },
+    "LDAP Global Catalog": {
+        "protocol": "TCP",
+        "port": [
+            "3268"
+        ],
+        "init": true
+    },
+    "DNS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "53"
+        ],
+        "init": true
+    },
+    "ISAKMP": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "Syslog-Server": {
+        "protocol": "TCP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "SAP Pre Processor": {
+        "protocol": "TCP",
+        "port": [
+            "30002"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server SSL port": {
+        "protocol": "TCP",
+        "port": [
+            "4443"
+        ],
+        "init": true
+    },
+    "Oracle Forms Server 6 / 6i": {
+        "protocol": "TCP",
+        "port": [
+            "9000"
+        ],
+        "init": true
+    },
+    "LDAP-over-SSL": {
+        "protocol": "TCP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "SAP IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "50007"
+        ],
+        "init": true
+    },
+    "IGMP Leave Group": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "NFS Client": {
+        "protocol": "TCP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "SAP HTTP Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8353"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Client": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "H323 Gatekeeper RAS": {
+        "protocol": "UDP",
+        "port": [
+            "1718-1719"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(SSL)": {
+        "protocol": "TCP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "VMware VMotion": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "Active Directory Server UDP": {
+        "protocol": "UDP",
+        "port": [
+            "464"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service local port": {
+        "protocol": "TCP",
+        "port": [
+            "6100"
+        ],
+        "init": true
+    },
+    "SAP P4": {
+        "protocol": "TCP",
+        "port": [
+            "50004"
+        ],
+        "init": true
+    },
+    "MS Unified Messaging server": {
+        "protocol": "TCP",
+        "port": [
+            "5060",
+            "5061",
+            "5062"
+        ],
+        "init": true
+    },
+    "VMware-SRM-vSphereReplication": {
+        "protocol": "TCP",
+        "port": [
+            "31031",
+            "44046"
+        ],
+        "init": true
+    },
+    "SAP Admin console": {
+        "protocol": "TCP",
+        "port": [
+            "20005"
+        ],
+        "init": true
+    },
+    "NetBios Datagram (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "NBDG-Broadcast": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "SAP Name Server": {
+        "protocol": "TCP",
+        "port": [
+            "30001"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Command": {
+        "protocol": "TCP",
+        "port": [
+            "8240"
+        ],
+        "init": true
+    },
+    "Office Server Web Services, HTTP, SSL": {
+        "protocol": "TCP",
+        "port": [
+            "56737",
+            "56738"
+        ],
+        "init": true
+    },
+    "VMware-SRM-UI": {
+        "protocol": "TCP",
+        "port": [
+            "9085"
+        ],
+        "init": true
+    },
+    "IKE (Traversal)": {
+        "protocol": "UDP",
+        "port": [
+            "4500"
+        ],
+        "init": true
+    },
+    "LDAP-over-SSL-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "SAP SDM/SL": {
+        "protocol": "TCP",
+        "port": [
+            "50017",
+            "50018",
+            "50019"
+        ],
+        "init": true
+    },
+    "VMware-CIMSLP": {
+        "protocol": "UDP",
+        "port": [
+            "427"
+        ],
+        "init": true
+    },
+    "SAP HTTP Server": {
+        "protocol": "TCP",
+        "port": [
+            "30005"
+        ],
+        "init": true
+    },
+    "Horizon 6 Wyse MMR traffic from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "9427"
+        ],
+        "init": true
+    },
+    "IPv6-Opts": {
+        "protocol": "IPV6OPTS",
+        "port": "",
+        "init": true
+    },
+    "MS Unified Messaging server-Phone": {
+        "protocol": "TCP",
+        "port": [
+            "5060",
+            "5061",
+            "5065",
+            "5066",
+            "5067",
+            "5068"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(non-SSL)": {
+        "protocol": "TCP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15002)": {
+        "protocol": "TCP",
+        "port": [
+            "15002"
+        ],
+        "init": true
+    },
+    "SAP Start Service": {
+        "protocol": "TCP",
+        "port": [
+            "50013"
+        ],
+        "init": true
+    },
+    "Yahoo Messenger (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "5050"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4758)": {
+        "protocol": "TCP",
+        "port": [
+            "4758"
+        ],
+        "init": true
+    },
+    "VMware-ESXi5.x-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "SAP Pre Processor 2": {
+        "protocol": "TCP",
+        "port": [
+            "8357"
+        ],
+        "init": true
+    },
+    "VMware-Heartbeat-PrimarySecondary": {
+        "protocol": "TCP",
+        "port": [
+            "57348"
+        ],
+        "init": true
+    },
+    "Oracle Connection Manager Admin (CMAN)": {
+        "protocol": "TCP",
+        "port": [
+            "1830"
+        ],
+        "init": true
+    },
+    "SAP Inst": {
+        "protocol": "TCP",
+        "port": [
+            "21212",
+            "21213"
+        ],
+        "init": true
+    },
+    "Yahoo Messenger (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "5050"
+        ],
+        "init": true
+    },
+    "KERBEROS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "SAP IBM": {
+        "protocol": "TCP",
+        "port": [
+            "50000",
+            "4402"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15000)": {
+        "protocol": "TCP",
+        "port": [
+            "15000"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4759)": {
+        "protocol": "TCP",
+        "port": [
+            "4759"
+        ],
+        "init": true
+    },
+    "VMware-ESXi5.x-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "IGMP V2 Membership Report": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "Oracle Intelligent Agent (1748)": {
+        "protocol": "TCP",
+        "port": [
+            "1748"
+        ],
+        "init": true
+    },
+    "Oracle Names": {
+        "protocol": "TCP",
+        "port": [
+            "1575"
+        ],
+        "init": true
+    },
+    "SAP P4 over SSL": {
+        "protocol": "TCP",
+        "port": [
+            "50006"
+        ],
+        "init": true
+    },
+    "Windows-Global-Catalog": {
+        "protocol": "TCP",
+        "port": [
+            "3268"
+        ],
+        "init": true
+    },
+    "SAP Central Software Deployment Manager": {
+        "protocol": "TCP",
+        "port": [
+            "20201"
+        ],
+        "init": true
+    },
+    "NetBios Session Service (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "LDAP-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "SAP Router": {
+        "protocol": "TCP",
+        "port": [
+            "3299"
+        ],
+        "init": true
+    },
+    "SAP IPC data loader": {
+        "protocol": "TCP",
+        "port": [
+            "4445"
+        ],
+        "init": true
+    },
+    "SAP Design Time Repository": {
+        "protocol": "TCP",
+        "port": [
+            "50015"
+        ],
+        "init": true
+    },
+    "SAP network Test Program": {
+        "protocol": "TCP",
+        "port": [
+            "3298"
+        ],
+        "init": true
+    },
+    "MGCP (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "2427"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Clickstream Collector Agent": {
+        "protocol": "TCP",
+        "port": [
+            "6668"
+        ],
+        "init": true
+    },
+    "SAP IIOP initial": {
+        "protocol": "TCP",
+        "port": [
+            "50002"
+        ],
+        "init": true
+    },
+    "SNMP-Receive": {
+        "protocol": "UDP",
+        "port": [
+            "161"
+        ],
+        "init": true
+    },
+    "NBSS": {
+        "protocol": "TCP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "VMware-View-PCoIP": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "NBNS-Broadcast": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "SAP GRMG Service (Heartbeat)": {
+        "protocol": "TCP",
+        "port": [
+            "30006"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to View Desktop Agent Communication": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "OracleAS Certificate Authority (OCA) - Mutual Authentication": {
+        "protocol": "TCP",
+        "port": [
+            "4401"
+        ],
+        "init": true
+    },
+    "NTP Time Server": {
+        "protocol": "UDP",
+        "port": [
+            "123"
+        ],
+        "init": true
+    },
+    "NBDG-Unicast": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "MGCP (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "2428"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr": {
+        "protocol": "TCP",
+        "port": [
+            "3600"
+        ],
+        "init": true
+    },
+    "NTP": {
+        "protocol": "UDP",
+        "port": [
+            "123"
+        ],
+        "init": true
+    },
+    "IGMP Membership Query": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "DHCP, MADCAP": {
+        "protocol": "UDP",
+        "port": [
+            "2535"
+        ],
+        "init": true
+    },
+    "Horizon 6 Default HTTPS Client connection to Connection and Security Servers": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "VMware-SRM-VAMI": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": true
+    },
+    "AD Server": {
+        "protocol": "TCP",
+        "port": [
+            "1024"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-VUM": {
+        "protocol": "TCP",
+        "port": [
+            "9084"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to View Composer Service communication": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "CIM-HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "5989"
+        ],
+        "init": true
+    },
+    "ORACLE-XDB-FTP": {
+        "protocol": "TCP",
+        "port": [
+            "2100"
+        ],
+        "init": true
+    },
+    "Site Replication service": {
+        "protocol": "TCP",
+        "port": [
+            "379"
+        ],
+        "init": true
+    },
+    "SAP Java Join": {
+        "protocol": "TCP",
+        "port": [
+            "50020"
+        ],
+        "init": true
+    },
+    "ORACLE-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "7777"
+        ],
+        "init": true
+    },
+    "LDAP": {
+        "protocol": "TCP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Security Server": {
+        "protocol": "UDP",
+        "port": [
+            "55000"
+        ],
+        "init": true
+    },
+    "SAP Lotus Domino - Proxy": {
+        "protocol": "TCP",
+        "port": [
+            "62126-62129"
+        ],
+        "init": true
+    },
+    "SAP gateway/replication": {
+        "protocol": "TCP",
+        "port": [
+            "3301"
+        ],
+        "init": true
+    },
+    "HTTPS, net.tcp binding": {
+        "protocol": "TCP",
+        "port": [
+            "32843",
+            "32844",
+            "32845"
+        ],
+        "init": true
+    },
+    "Oracle OC4J JMS": {
+        "protocol": "TCP",
+        "port": [
+            "3701"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to vCenter Server communication": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(non-SSL, 4032)": {
+        "protocol": "TCP",
+        "port": [
+            "4032"
+        ],
+        "init": true
+    },
+    "SAP RFC Server": {
+        "protocol": "TCP",
+        "port": [
+            "30007"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1808)": {
+        "protocol": "TCP",
+        "port": [
+            "1808"
+        ],
+        "init": true
+    },
+    "SAP IPC Server": {
+        "protocol": "TCP",
+        "port": [
+            "9999"
+        ],
+        "init": true
+    },
+    "Microsoft Media Server (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "1755"
+        ],
+        "init": true
+    },
+    "Skinny": {
+        "protocol": "TCP",
+        "port": [
+            "2000"
+        ],
+        "init": true
+    },
+    "MS Replication service": {
+        "protocol": "TCP",
+        "port": [
+            "808"
+        ],
+        "init": true
+    },
+    "PC Anywhere (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "5632"
+        ],
+        "init": true
+    },
+    "Horizon 6 LDAP repllication between connection servers": {
+        "protocol": "TCP",
+        "port": [
+            "22389"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Composer Service": {
+        "protocol": "TCP",
+        "port": [
+            "18443"
+        ],
+        "init": true
+    },
+    "For X.400 connections over TCP": {
+        "protocol": "TCP",
+        "port": [
+            "102"
+        ],
+        "init": true
+    },
+    "VMware-SPS": {
+        "protocol": "TCP",
+        "port": [
+            "31100",
+            "31000"
+        ],
+        "init": true
+    },
+    "MSN (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "1863"
+        ],
+        "init": true
+    },
+    "SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "9389"
+        ],
+        "init": true
+    },
+    "SAP Layout Server Adobe InDesign": {
+        "protocol": "TCP",
+        "port": [
+            "31603"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8101"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Invalidation port": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "NFS-Server-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "EdgeSync service": {
+        "protocol": "TCP",
+        "port": [
+            "50636"
+        ],
+        "init": true
+    },
+    "VMware-VC-DPM": {
+        "protocol": "UDP",
+        "port": [
+            "623"
+        ],
+        "init": true
+    },
+    "Office communication server": {
+        "protocol": "TCP",
+        "port": [
+            "5075",
+            "5076",
+            "5077"
+        ],
+        "init": true
+    },
+    "PC Anywhere (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "5631"
+        ],
+        "init": true
+    },
+    "NNTP_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "563"
+        ],
+        "init": true
+    },
+    "HBR Server App": {
+        "protocol": "TCP",
+        "port": [
+            "5480"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "VMware-iSCSI-Server": {
+        "protocol": "TCP",
+        "port": [
+            "3260"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-Patching": {
+        "protocol": "TCP",
+        "port": [
+            "735"
+        ],
+        "init": true
+    },
+    "NFS-Server-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "SAP Lotus Domino - Connector": {
+        "protocol": "TCP",
+        "port": [
+            "62026-62029"
+        ],
+        "init": true
+    },
+    "DHCP-Client": {
+        "protocol": "UDP",
+        "port": [
+            "68"
+        ],
+        "init": true
+    },
+    "Vmware-FT-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8100",
+            "8200"
+        ],
+        "init": true
+    },
+    "Horizon 6 HTMP Access from Security Server to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "22443"
+        ],
+        "init": true
+    },
+    "SAP HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "MS-SQL-M": {
+        "protocol": "UDP",
+        "port": [
+            "1434"
+        ],
+        "init": true
+    },
+    "SNMP-Send": {
+        "protocol": "UDP",
+        "port": [
+            "162"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(SSL, 4031)": {
+        "protocol": "TCP",
+        "port": [
+            "4031"
+        ],
+        "init": true
+    },
+    "MS-SQL-S": {
+        "protocol": "TCP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "KERBEROS": {
+        "protocol": "TCP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "Oracle-2": {
+        "protocol": "TCP",
+        "port": [
+            "1526"
+        ],
+        "init": true
+    },
+    "Enterprise ManagerAgent port": {
+        "protocol": "TCP",
+        "port": [
+            "1831"
+        ],
+        "init": true
+    },
+    "IMAP_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "993"
+        ],
+        "init": true
+    },
+    "VMware-VC-RemoteConsole": {
+        "protocol": "TCP",
+        "port": [
+            "903"
+        ],
+        "init": true
+    },
+    "OC4J Forms / Reports Instance (8889)": {
+        "protocol": "TCP",
+        "port": [
+            "8889"
+        ],
+        "init": true
+    },
+    "SAP HostControlS": {
+        "protocol": "TCP",
+        "port": [
+            "1129"
+        ],
+        "init": true
+    },
+    "Microsoft Media Server (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "1755"
+        ],
+        "init": true
+    },
+    "APP_DCERPC_TCP": {
+        "protocol": "TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "APP_MSSQL_UDP": {
+        "protocol": "UDP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "APP_DCERPC_UDP": {
+        "protocol": "UDP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "APP_FTP": {
+        "protocol": "TCP",
+        "port": [
+            "21"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic using IPsec without NAT": {
+        "protocol": "ESP",
+        "port": "",
+        "init": true
+    },
+    "IPv6-ICMP FMIPv6": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "fmipv6"
+        ],
+        "init": true
+    },
+    "ICMP Redirect": {
+        "protocol": "ICMP",
+        "port": [
+            "redirect"
+        ],
+        "init": true
+    },
+    "Oracle Net Listener / Enterprise Manager Repository port": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "SAP JMS": {
+        "protocol": "TCP",
+        "port": [
+            "50010"
+        ],
+        "init": true
+    },
+    "MySQL": {
+        "protocol": "TCP",
+        "port": [
+            "3306"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Horizon Client Communication": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "NNTP": {
+        "protocol": "TCP",
+        "port": [
+            "119"
+        ],
+        "init": true
+    },
+    "SAP printer spooler": {
+        "protocol": "TCP",
+        "port": [
+            "515"
+        ],
+        "init": true
+    },
+    "KERBEROS-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "tcp-3128": {
+        "protocol": "TCP",
+        "port": [
+            "3128"
+        ],
+        "init": true
+    },
+    "tcp-8080": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": true
+    },
+    "tcp-5480": {
+        "protocol": "TCP",
+        "port": [
+            "5480"
+        ],
+        "init": true
+    },
+    "tcp-8443": {
+        "protocol": "TCP",
+        "port": [
+            "8443"
+        ],
+        "init": true
+    },
+    "tcp-8001": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": true
+    },
+    "7971": {
+        "protocol": "TCP",
+        "port": [
+            "7971"
+        ],
+        "init": true
+    },
+    "SMTP_2525": {
+        "protocol": "TCP",
+        "port": [
+            "2525"
+        ],
+        "init": true
+    },
+    "ICP-Management-Console": {
+        "protocol": "TCP",
+        "port": [
+            "8080",
+            "8443"
+        ],
+        "init": true
+    },
+    "ICP-Ingress-Service": {
+        "protocol": "TCP",
+        "port": [
+            "80",
+            "443",
+            "8181",
+            "18080"
+        ],
+        "init": true
+    },
+    "ICP-Docker-Registry": {
+        "protocol": "TCP",
+        "port": [
+            "8500",
+            "8600"
+        ],
+        "init": true
+    },
+    "ICP-Kubernetes-NodePort": {
+        "protocol": "TCP",
+        "port": [
+            "30000-32767"
+        ],
+        "init": true
+    },
+    "ICP-WebSphere-Application-Server-Liberty": {
+        "protocol": "TCP",
+        "port": [
+            "9443"
+        ],
+        "init": true
+    },
+    "ICP-Kubernetes-API-Server": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": true
+    }
+}

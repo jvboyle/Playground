@@ -1,0 +1,413 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "LDAP",
+            "WINS",
+            "SSH",
+            "KERBEROS-UDP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "LDAP-UDP",
+            "NBDG-Broadcast",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "Windows-Global-Catalog",
+            "NBDG-Unicast",
+            "DHCP-Server",
+            "SOAP",
+            "TCP-9083",
+            "KERBEROS",
+            "Active Directory Server UDP",
+            "TCP-5985",
+            "DNS",
+            "DNS-UDP",
+            "MS-DS-UDP",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "TCP-5696",
+            "HTTPS",
+            "TCP-5986",
+            "NTP Time Server",
+            "Active Directory Server",
+            "Windows-Global-Catalog-over-SSL",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "SMB",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DR179-STaaS-AD-DNS",
+            "TF-EU1-HOST-eu1sr1lpmpcansb",
+            "TF-EU1-HOST-eu1sr1staas15",
+            "TF-EU1-SG-DR179-STaaS-AD-Clients",
+            "TF-EU1-HOST-eu1srlpabcmstr",
+            "TF-EU1-HOST-eu1dr179wpdc1",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-HOST-eu1sr1staas16",
+            "TF-EU1-HOST-eu1dr179wpdc2",
+            "TF-EU1-HOST-eu1dr179lpskl",
+            "TF-EU1-HOST-eu1dr179lpstl",
+            "TF-EU1-HOST-eu1sr1staas17",
+            "TF-EU1-HOST-eu1dr179wpstw",
+            "TF-EU1-HOST-eu1dr179lparx",
+            "TF-EU1-HOST-eu1dr179wpfm",
+            "TF-EU1-HOST-eu1sr1staas14"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES179": {
+            "category": "Application",
+            "rules": {
+                "6678": {
+                    "display_name": "TF-6678-AD/DNS/NTP",
+                    "source_groups": [
+                        "TF-EU1-SG-DR179-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR179-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-SG-DR179-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ]
+                },
+                "6679": {
+                    "display_name": "TF-6679-AD/DNS/NTP",
+                    "source_groups": [
+                        "TF-EU1-SG-DR179-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-SG-DR179-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ]
+                },
+                "6680": {
+                    "display_name": "TF-6680-SKLM",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr179wpstw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr179wpstw"
+                    ]
+                },
+                "6681": {
+                    "display_name": "TF-6681-SKLM-",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr179wpstw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9083",
+                        "HTTPS",
+                        "TCP-5696"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr179wpstw",
+                        "TF-EU1-HOST-eu1sr1staas17"
+                    ]
+                },
+                "6684": {
+                    "display_name": "TF-6684-Ansible",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                },
+                "6685": {
+                    "display_name": "TF-6685-Ansible",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas16",
+                        "TF-EU1-HOST-eu1sr1staas15",
+                        "TF-EU1-HOST-eu1sr1staas14"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5986",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb",
+                        "TF-EU1-HOST-eu1sr1staas16",
+                        "TF-EU1-HOST-eu1sr1staas15",
+                        "TF-EU1-HOST-eu1sr1staas14"
+                    ]
+                },
+                "6686": {
+                    "display_name": "TF-6686-Ansible",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr179lparx",
+                        "TF-EU1-HOST-eu1dr179wpfm",
+                        "TF-EU1-HOST-eu1dr179lpstl",
+                        "TF-EU1-HOST-eu1dr179lpskl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5986",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\nWill be updated with new WIN VM CH50088110",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb",
+                        "TF-EU1-HOST-eu1dr179lpskl",
+                        "TF-EU1-HOST-eu1dr179lpstl",
+                        "TF-EU1-HOST-eu1dr179lparx",
+                        "TF-EU1-HOST-eu1dr179wpfm"
+                    ]
+                },
+                "6687": {
+                    "display_name": "TF-6687-SMB",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas16"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMB"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas16",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ]
+                },
+                "6688": {
+                    "display_name": "TF-6688-\"MS_RPC_TCP-Win-2008-RPC,DCOM,\\u2026\"",
+                    "source_groups": [
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas16"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "MS_RPC_TCP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas16",
+                        "TF-EU1-SG-DR179-STaaS-AD-Clients"
+                    ]
+                },
+                "6691": {
+                    "display_name": "TF-6691-Microstrategy",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr179lparx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr179lparx",
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                },
+                "6692": {
+                    "display_name": "TF-6692-Microstrategy-",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr179lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50077721\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1staas17",
+                        "TF-EU1-HOST-eu1dr179lparx",
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ]
+                },
+                "7585": {
+                    "display_name": "TF-7585-Ansible",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1lpmpcansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr179wpdc1",
+                        "TF-EU1-HOST-eu1dr179wpstw",
+                        "TF-EU1-HOST-eu1dr179wpdc2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51216347",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr179wpdc1",
+                        "TF-EU1-HOST-eu1dr179wpstw",
+                        "TF-EU1-HOST-eu1sr1lpmpcansb",
+                        "TF-EU1-HOST-eu1dr179wpdc2"
+                    ]
+                }
+            }
+        }
+    }
+}

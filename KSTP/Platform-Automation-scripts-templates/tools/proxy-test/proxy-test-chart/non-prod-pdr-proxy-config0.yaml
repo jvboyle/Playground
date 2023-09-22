@@ -1,0 +1,13 @@
+proxyEnvs:
+  - name: HTTP_PROXY
+    value: "http://100.120.35.4:8080"
+  - name: HTTPS_PROXY
+    value: "http://100.120.35.4:8080"
+  - name: NO_PROXY
+    value: "localhost,127.0.0.1,100.120.35.17,w3.apihub.ibm.com,w3.api.ibm.com,w3-dev.ibm.com,w3-03.ibm.com,bluepages.ibm.com,pocpdr1icp1.pdr1.poc.ispw.ibm.local:8500"
+  - name: http_proxy
+    value: "http://100.120.35.4:8080"
+  - name: https_proxy
+    value: "http://100.120.35.4:8080"
+  - name: no_proxy
+    value: "localhost,127.0.0.1,100.120.35.17,w3.apihub.ibm.com,w3.api.ibm.com,w3-dev.ibm.com,w3-03.ibm.com,bluepages.ibm.com,pocpdr1icp1.pdr1.poc.ispw.ibm.local:8500"

@@ -1,0 +1,132 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTPS",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DRES146-CACF-Proxy-VIP",
+            "TF-EU1-HOST-eu1d146pnroctuf",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d146csconise1",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d146pnrocbam",
+            "TF-EU1-SG-DRES146-SDN-Lab-SolarWinds",
+            "TF-EU1-HOST-eu1d146lnrpt1002",
+            "TF-EU1-HOST-eu1d146lpcacprx1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES146": {
+            "category": "Application",
+            "rules": {
+                "5697": {
+                    "display_name": "TF-5697-SSH-and-HTTPS-access-to-Cisco-ISE-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d146csconise1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d146csconise1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5698": {
+                    "display_name": "TF-5698-RDP-SolarWinds-Orion-Server-and-MS-SQL-DB-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES146-SDN-Lab-SolarWinds"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DRES146-SDN-Lab-SolarWinds",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "6775": {
+                    "display_name": "TF-6775-SRES-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d146lnrpt1002",
+                        "TF-EU1-HOST-eu1d146pnrocbam",
+                        "TF-EU1-HOST-eu1d146pnroctuf"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50078907\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d146lnrpt1002",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d146pnrocbam",
+                        "TF-EU1-HOST-eu1d146pnroctuf"
+                    ]
+                },
+                "7853": {
+                    "display_name": "TF-7853-CPREM-JH-to-CAFCF-Proxy-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DRES146-CACF-Proxy-VIP",
+                        "TF-EU1-HOST-eu1d146lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50096982",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d146lpcacprx1",
+                        "TF-EU1-IPSET-DRES146-CACF-Proxy-VIP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

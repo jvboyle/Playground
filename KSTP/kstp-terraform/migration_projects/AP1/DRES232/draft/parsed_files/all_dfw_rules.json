@@ -1,0 +1,195 @@
+{
+    "TF-DRES232": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-8081",
+                "SSH"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                "TF-AP1-SG-SRES01-OCP-Cluster01",
+                "TF-AP1-IPSET-Host-ap1srlpcacfbds1",
+                "TF-AP1-IPSET-DR232-CPREM",
+                "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP",
+                "TF-AP1-HOST-ap1d232lpwnzpr1"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES232": {
+                "category": "Application",
+                "rules": {
+                    "1545": {
+                        "display_name": "TF-1545-Proxy-to-BDS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1432515",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1"
+                        ]
+                    },
+                    "1546": {
+                        "display_name": "TF-1546-CPREM-to-PROXY-VIP",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [
+                            "202.7.36.176/29"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1432515",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                        ]
+                    },
+                    "1575": {
+                        "display_name": "TF-1575-WNZ-Proxy-to-CPREM",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-DR232-CPREM"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-DR232-CPREM"
+                        ]
+                    },
+                    "1576": {
+                        "display_name": "TF-1576-CPREM-to-WNZ-Proxy",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-DR232-CPREM"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-DR232-CPREM"
+                        ]
+                    },
+                    "1585": {
+                        "display_name": "TF-1585-OCP-4-to-Proxy",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-SRES": {
+        "map_services": {
+            "SERVICES": [
+                "SSH"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-HOST-ap1d232lpwnzpr1",
+                "TF-AP1-SG-SRES01-OCP-Cluster01",
+                "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+            ]
+        },
+        "map_policies": {
+            "TF-SRES": {
+                "category": "Application",
+                "rules": {
+                    "1583": {
+                        "display_name": "TF-1583-OCP-to-CACF-Proxy-VIP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d232lpwnzpr1",
+                            "TF-AP1-SG-SRES01-OCP-Cluster01",
+                            "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "BDS-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d225lpisiams1",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES225": {
+            "category": "Application",
+            "rules": {
+                "7828": {
+                    "display_name": "TF-7828-BDS-backend",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d225lpisiams1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50096870",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d225lpisiams1",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

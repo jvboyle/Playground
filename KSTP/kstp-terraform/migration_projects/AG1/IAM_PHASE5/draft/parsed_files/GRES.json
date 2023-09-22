@@ -1,0 +1,158 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "DNS",
+            "ICP-Kubernetes API-Server",
+            "ICP-Docker Registry",
+            "ICP-Ingress Service",
+            "DNS-UDP",
+            "NTP",
+            "ICP-Management Console",
+            "ICP-WebSphere Application Server Liberty",
+            "ICP-Kubernetes NodePort"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-GRES01-ICp-Cluster02",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-GRES01-ICp-Cluster01",
+            "TF-AG1-SG-GRES01-ICp-Cluster03",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+        ]
+    },
+    "map_policies": {
+        "TF-GRES": {
+            "category": "Application",
+            "rules": {
+                "1023": {
+                    "display_name": "TF-1023-DNS-Clients-",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1024": {
+                    "display_name": "TF-1024-NTP-Clients-",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1051": {
+                    "display_name": "TF-1051-ICp-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster01",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1065": {
+                    "display_name": "TF-1065-ICp2-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster02",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1261": {
+                    "display_name": "TF-1261-ICp-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster03"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster03",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

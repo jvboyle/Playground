@@ -1,0 +1,50 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "SSH",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d267lpcacprx1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES267": {
+            "category": "Application",
+            "rules": {
+                "8311": {
+                    "display_name": "TF-8311-SRES-JH-to-CAFCF-Proxy-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d267lpcacprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50102830",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d267lpcacprx1"
+                    ]
+                }
+            }
+        }
+    }
+}

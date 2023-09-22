@@ -1,0 +1,7 @@
+---
+- yum:
+    name:
+    - ansible
+    - pyOpenSSL
+    enablerepo: "epel"
+    state: present

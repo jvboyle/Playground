@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8443",
+            "TCP-8088"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1dr13stw",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES13": {
+            "category": "Application",
+            "rules": {
+                "1146": {
+                    "display_name": "TF-1146-Netapp-7MTT",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr13stw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8088",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr13stw",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

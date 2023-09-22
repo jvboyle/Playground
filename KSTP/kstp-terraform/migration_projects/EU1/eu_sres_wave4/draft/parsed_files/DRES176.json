@@ -1,0 +1,70 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-20000-23000",
+            "TCP-30000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+            "TF-EU1-HOST-eu1d176lpisilht",
+            "TF-EU1-SG-SRES-ISIM-IAM01-WAS"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES176": {
+            "category": "Application",
+            "rules": {
+                "7921": {
+                    "display_name": "TF-7921-ISIM-IAM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAM01-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lpisilht"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20000-23000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51287904",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d176lpisilht",
+                        "TF-EU1-SG-SRES-ISIM-IAM01-WAS"
+                    ]
+                },
+                "7922": {
+                    "display_name": "TF-7922-ISIM-IAM-infra-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lpisilht"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-30000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51287904",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                        "TF-EU1-HOST-eu1d176lpisilht"
+                    ]
+                }
+            }
+        }
+    }
+}

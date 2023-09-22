@@ -1,0 +1,117 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8443",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-nlascno000dc1rm",
+            "TF-EU1-HOST-eu1d15lpdv1sldbp1",
+            "TF-EU1-IPSET-Host-eu1d15lpdv1sldb-vip",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-nlascni000m1ermp",
+            "TF-EU1-HOST-nlaspno000dc1rm",
+            "TF-EU1-HOST-nlaspni000m1ermp",
+            "TF-EU1-HOST-eu1d15lpdv1sldbc1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES15": {
+            "category": "Application",
+            "rules": {
+                "6345": {
+                    "display_name": "TF-6345-SRM-Integration-doValue",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-nlaspni000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Host-eu1d15lpdv1sldb-vip",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50948369",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1",
+                        "TF-EU1-IPSET-Host-eu1d15lpdv1sldb-vip",
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1"
+                    ]
+                },
+                "7890": {
+                    "display_name": "TF-7890-Sync-Deamon-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-nlascno000dc1rm",
+                        "TF-EU1-HOST-nlaspno000dc1rm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Host-eu1d15lpdv1sldb-vip",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51278016",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlascno000dc1rm",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1",
+                        "TF-EU1-IPSET-Host-eu1d15lpdv1sldb-vip",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-nlaspno000dc1rm",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1"
+                    ]
+                },
+                "8405": {
+                    "display_name": "TF-8405-SL1-Netcool-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0075350",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbc1",
+                        "TF-EU1-HOST-eu1d15lpdv1sldbp1"
+                    ]
+                }
+            }
+        }
+    }
+}

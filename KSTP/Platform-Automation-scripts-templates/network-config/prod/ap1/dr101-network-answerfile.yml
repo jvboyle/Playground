@@ -1,0 +1,26 @@
+customer_name: Mitsubishi Motors Australia
+blue_id: N/A
+dres_name: dr101
+app_internal_name: "dr101-app-internal1"
+app_internal_subnet: 100.80.78.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.80.78.1
+dres_transit_subnet: 100.80.0.80
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr101-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.80.0.80
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.80.0.82
+vpn_esg_vnic1_ip: 100.80.0.81
+esg_dlr_transit_name: "dr101-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.80.0.88
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.80.0.89
+dlr_uplink1_ip: 100.80.0.90
+res_esg_vnic0_ip: 100.80.64.8
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: ap1-e-dvs1-pub-dvpg-edge-pub-ns-908
+vpn_esg_vnic0_ip: 130.198.112.248
+vpn_esg_vnic0_ip_prefix: 28

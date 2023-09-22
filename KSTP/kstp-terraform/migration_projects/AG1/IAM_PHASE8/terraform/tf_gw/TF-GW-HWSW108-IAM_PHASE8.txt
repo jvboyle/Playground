@@ -1,0 +1,861 @@
+######################################################
+# migration: IAM_PHASE8
+######################################################
+   rule {
+         display_name = "TF-3058-Srt_to_web1"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3062-web1_to_db1"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3066-et1_to_db1"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3067-Cet1_to_EU_AP_OCP"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU-SRES01-OCP-Cluster02-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ap1sr1lpcacprx1-vip",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3070-SRv1todb1"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3072-st101_to_db01"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3073-db1_to_Eu"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcweb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcdb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwccog",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcetl-"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-3389"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3077-EU-to-HWSW-DB"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcweb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcdb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwccog",
+               "/infra/domains/default/groups/TF-AG1-IPSET-eu1sr1wphwcetl-"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-3389",
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3078-cls-to-db"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcls01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcodb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3081-cstl-to-db-and-web"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-50000",
+               "/infra/services/TCP-9093",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-3389"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3082-stl-to-db"
+         notes        = "SR51217276"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcodb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3090-HWSW_to_ibmcloud-LDAP"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-ibmcloud-LDAP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3091-kafka-live-feed-for-storewise"
+         notes        = "SR51217619 RITM0075840"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-KAFKA-PROD02-MESSAGEHUB",
+               "/infra/domains/default/groups/TF-AG1-IPSET-KAFKA-MH-VZFKDLFLPYDMPMRPRWXT"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9093"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3093-HWSW_to_ibmcloud-SMTP"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcls01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-ibmcloud-SMTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3094-IBM-blue-to-HWSW"
+         notes        = "SR51217650"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-IBM-9-SERVERS-1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SAP_HTTP",
+               "/infra/services/SSH",
+               "/infra/services/TCP-50000",
+               "/infra/services/RDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3095-IBM-blue-to-HWSW-"
+         notes        = "SR51217650"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-IBM-9-SERVERS-2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcodb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SAP_HTTP",
+               "/infra/services/SSH",
+               "/infra/services/TCP-50000",
+               "/infra/services/RDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3098-HWSW_to_ibmcloud-HTTPS"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-IBM-9-HTTPS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3099-HWSW_to_ibmcloud-DB2"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-IBM-9-50000"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3102-HWSW_to_ibmcloud-SSH"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-ibmcloud-SSH",
+               "9.45.126.100"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3104-HWSW_to_ibmcloud-SSH-DB2-RDP-WEB-Datastage-"
+         notes        = "SR51217636"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcweb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcls01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcsrv01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-ibmcloud-bluewashington"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-50000",
+               "/infra/services/RDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3119-HWSW_stl-to-PDR"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-Internet-Proxy-Server"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8080"
+            ]
+         scope = [local.gw_scope]
+         disabled              = true
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3177-blue-to-stl_dbs"
+         notes        = "SR51253707"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcodb01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-50000",
+               "/infra/services/RDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3178-blue-to-str01"
+         notes        = "SR51253707"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-8196",
+               "/infra/services/TCP-8194",
+               "/infra/services/TCP-8198",
+               "/infra/services/TCP-8192",
+               "/infra/services/TCP-8199",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-8197",
+               "/infra/services/TCP-8195",
+               "/infra/services/TCP-8191",
+               "/infra/services/RDP",
+               "/infra/services/TCP-8190",
+               "/infra/services/TCP-9093",
+               "/infra/services/TCP-8193"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3188-AG-Proxy-Gacdw-to-HWSW-Server"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-CDI-gtscdi-ag-proxy01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3189-ag1srwphwcstr01-to-Blue"
+         notes        = "SR512852236"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HWSW-ibmcloud-LDAP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/LDAP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3313-ag1-to-eu1-"
+         notes        = "SR51376490"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SRES-eu1srlphwcsss01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-60000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3314-Copy-of-ag1-to-eu1-"
+         notes        = "SR51376490"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SRES-eu1srlphwcsss01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3512-HWSW-to-Tanzu-WL"
+         notes        = "RITM0116981"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-25010"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3643-NA-HWSW-to-IN-HWSW"
+         notes        = "RITM0129514"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-AG1SRWPHWC"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-KSTP-IN-HWSW"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-9443",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-50000",
+               "/infra/services/RDP",
+               "/infra/services/TCP-9043-OPJR-VZo8",
+               "/infra/services/TCP-9092-9096"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3652-IN-HWSW-to-NA-HWSW"
+         notes        = "RITM0130082"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-KSTP-IN-HWSW"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-AG1SRWPHWC"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-9443",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-9043-OPJR-VZo8",
+               "/infra/services/RDP",
+               "/infra/services/TCP-50000",
+               "/infra/services/TCP-9092-9096"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3697-HWSW-Storage-To-EU"
+         notes        = "RITM0133665"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstr01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU-SRES01-OCP-Cluster02-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3884-SRES-WL01-to-HWSW"
+         notes        = "RITM0151831"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Host"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcdb01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }

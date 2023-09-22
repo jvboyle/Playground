@@ -1,0 +1,38 @@
+{
+    "map_grp": {
+        "AG1-AG1-Host-ag1srlpgse1000": {
+            "VM": [
+                "ag1srlpgse1000"
+            ]
+        },
+        "AG1-NET-IBM-Blue": {
+            "IP": [
+                "9.0.0.0/8"
+            ]
+        },
+        "AG1-HOST-AP-ap1srlpgsehst01": {
+            "IP": [
+                "158.87.54.93"
+            ]
+        },
+        "AG1-HOST-IBM-Bluepages": {
+            "IP": [
+                "9.23.210.79",
+                "9.15.48.48",
+                "9.15.0.48",
+                "9.57.182.78",
+                "9.17.186.253"
+            ]
+        },
+        "AG1-HOST-ag1srlpgse1000": {
+            "VM": [
+                "ag1srlpgse1000"
+            ]
+        },
+        "AG1-HOST-ag1pdr1smtp01": {
+            "VM": [
+                "ag1pdr1smtp01"
+            ]
+        }
+    }
+}

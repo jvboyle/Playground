@@ -1,0 +1,143 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-8443",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d205lpkrntnp1",
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-eu1d205lpkrntnp2",
+            "TF-EU1-IPSET-DRES205-eu1d205lpkrnsd-vip",
+            "TF-EU1-HOST-eu1srlpm1epnp3",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-eu1d205lpkrnsdp",
+            "TF-EU1-HOST-eu1srlpm1ecno3",
+            "TF-EU1-HOST-eu1d205lpkrnsdc",
+            "TF-EU1-HOST-eu1srlpm1epno3"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES205": {
+            "category": "Application",
+            "rules": {
+                "7186": {
+                    "display_name": "TF-7186-SRES-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51065694\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ]
+                },
+                "8684": {
+                    "display_name": "TF-8684-Netcool-MsgBus-Probe-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175842",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ]
+                },
+                "8819": {
+                    "display_name": "TF-8819-ScienceLogic-API",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epnp3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdc",
+                        "TF-EU1-IPSET-DRES205-eu1d205lpkrnsd-vip",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0127931\nRITM0144845",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-IPSET-DRES205-eu1d205lpkrnsd-vip",
+                        "TF-EU1-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc"
+                    ]
+                },
+                "9042": {
+                    "display_name": "TF-9042-Netcool-HTTPS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdc",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0143025\nRITM0144845",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp"
+                    ]
+                }
+            }
+        }
+    }
+}

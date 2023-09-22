@@ -1,0 +1,72 @@
+#
+- name: Provision VM
+  vmware_guest:
+    hostname: "{{ vcenter }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    validate_certs: False
+    name: '{{ inventory_hostname }}'
+    template: '{{ vmtemplate }}'
+    datacenter: '{{ vcenter_dc }}'
+    folder: '{{ folder }}'
+    annotation: "{{ vm_notes }}"
+    guest_id: '{{ guest_id }}'
+    state: '{{ requested_state }}'
+    cluster: "{{ vsphere_clusters.compute_cluster.name }}"
+    hardware:
+      memory_mb: '{{ vm_ram }} '
+      num_cpus: '{{ vm_cpu }}'
+    disk:
+      # Base OS Disk
+    - size_gb: 50
+      type: thin
+      datastore: '{{ vsphere_clusters.compute_cluster.datastore }}'
+      # Data Disk
+    - size_gb: '{{ vm_disk2_gb }}'
+      type: thin
+      datastore: '{{ vsphere_clusters.compute_cluster.datastore }}'
+    networks:
+    - name: '{{ network_label.0 }}'   # NOTE:  you need to reference the first element in the Array
+  #    ip: '{{ custom_ip }}'
+  #    netmask: '{{ region_netmask }}'
+      gateway: '{{ region_gateway }}'
+      dns_servers:
+      - '{{ region_dns_servers }}'
+      wait_for_ip_address: yes
+    customization:
+      dns_servers:
+      - '{{ region_dns_servers }}'
+      domain : '{{ domain }}'
+    wait_for_ip_address: yes
+  register: vm_information
+  delegate_to: localhost
+
+
+
+- name: accept new ssh fingerprints
+#  shell: ssh-keyscan {{ custom_ip }},{{inventory_hostname}} >> ~/.ssh/known_hosts
+  shell: ssh-keyscan {{ custom_ip }},{{inventory_hostname}} >> ~/.ssh/known_hosts
+  with_items: '{{play_hosts}}'
+  when: "hostvars[item].inventory_hostname == inventory_hostname"
+  delegate_to: localhost
+
+#- name: Run a command
+#  shell: echo `date` > /tmp/gz
+
+#- name: Run a command
+#  shell: whoami >> /tmp/gz
+
+#- name: add to ansible hosts file
+#  lineinfile:
+#    dest: /etc/ansible/hosts
+#    insertafter: '^\[{{ ansible_host_group }}\]'
+#    line: '{{ item }}'
+#  with_items: '{{control-node}}'
+#  run_once: true
+
+
+# - name: Create a login user
+#  user:
+ #    name: gzeien
+#    groups: # Empty by default, here we give it some groups
+#    state: present

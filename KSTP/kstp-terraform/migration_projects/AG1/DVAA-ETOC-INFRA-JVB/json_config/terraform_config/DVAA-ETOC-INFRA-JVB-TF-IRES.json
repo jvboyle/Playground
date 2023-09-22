@@ -1,0 +1,145 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP",
+            "MS_RPC_TCP",
+            "SSH",
+            "SMTP",
+            "NTP Time Server",
+            "NBDG-Broadcast",
+            "DNS",
+            "DNS-UDP",
+            "TCP-7700",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "LDAP-UDP",
+            "NBDG-Unicast",
+            "KERBEROS-UDP",
+            "SOAP",
+            "MS-DS-UDP",
+            "KERBEROS",
+            "LDAP-over-SSL",
+            "Active Directory Server",
+            "Active Directory Server UDP",
+            "Windows-Global-Catalog",
+            "Windows-Global-Catalog-over-SSL",
+            "NBNS-Broadcast",
+            "NBNS-Unicast",
+            "DHCP-Server",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "WINS",
+            "NBSS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+            "TF-AG1-SG-IRES-SL1-Collectors",
+            "TF-AG1-SG-SRES-WIN-DA",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-IRES-Network-Automation-Server-Group",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "1234": {
+                    "display_name": "TF-1234-DA-SRES-Win-to-IRES-AD",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-DA"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "NTP Time Server",
+                        "NBDG-Broadcast",
+                        "DNS",
+                        "DNS-UDP",
+                        "LDAP-UDP",
+                        "NBDG-Unicast",
+                        "KERBEROS-UDP",
+                        "SOAP",
+                        "MS-DS-UDP",
+                        "KERBEROS",
+                        "LDAP-over-SSL",
+                        "Active Directory Server",
+                        "Active Directory Server UDP",
+                        "Windows-Global-Catalog",
+                        "Windows-Global-Catalog-over-SSL",
+                        "NBNS-Broadcast",
+                        "NBNS-Unicast",
+                        "DHCP-Server",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "WINS",
+                        "NBSS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                        "TF-AG1-SG-SRES-WIN-DA"
+                    ]
+                },
+                "1930": {
+                    "display_name": "TF-1930-SG-IRES-SL1-Collectors-to-SRES-DNS--NTP",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2959": {
+                    "display_name": "TF-2959-Copy-of-SG-IRES-SL1-Collectors-to-SRES-DNS--NTP-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

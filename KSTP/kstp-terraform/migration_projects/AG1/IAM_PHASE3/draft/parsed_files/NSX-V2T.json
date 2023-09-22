@@ -1,0 +1,51 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-5671",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-SRES-IAM-CIO-RMQ-PROD-VIP",
+            "TF-AG1-HOST-ag1sr1lpiamciprx2",
+            "TF-AG1-HOST-ag1sr1lpiamciprx1",
+            "TF-AG1-IPSET-ag1sr1lpiamciprx1",
+            "TF-AG1-IPSET-CISO-TOOLS-AWS"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "3832": {
+                    "display_name": "TF-3832-CISO-AWS-to-KSTP",
+                    "source_groups": [
+                        "TF-AG1-IPSET-CISO-TOOLS-AWS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-IAM-CIO-RMQ-PROD-VIP",
+                        "TF-AG1-IPSET-ag1sr1lpiamciprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-5671"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-IAM-CIO-RMQ-PROD-VIP",
+                        "TF-AG1-HOST-ag1sr1lpiamciprx2",
+                        "TF-AG1-HOST-ag1sr1lpiamciprx1",
+                        "TF-AG1-IPSET-ag1sr1lpiamciprx1",
+                        "TF-AG1-IPSET-CISO-TOOLS-AWS"
+                    ]
+                }
+            }
+        }
+    }
+}

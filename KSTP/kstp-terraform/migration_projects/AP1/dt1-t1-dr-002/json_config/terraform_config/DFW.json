@@ -1,0 +1,130 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF_AP1-Host-TEST-CP-SUBNET",
+            "TF_AP1-HOST_NAT_CACF_Proxy",
+            "TF_AP1-HOST-ap1d290lpcacpr1",
+            "TF_AP1-HOST-ap1srlpcacfbds1",
+            "TF_AP1-HOST-ap1d290lpcacpr2"
+        ]
+    },
+    "map_policies": {
+        "TF_DRES290": {
+            "category": "Application",
+            "rules": {
+                "TF_rule_1786": {
+                    "display_name": "1786_TEST_Ansible_SSH_Flow",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AP1-Host-TEST-CP-SUBNET"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF_AP1-Host-TEST-CP-SUBNET",
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ]
+                },
+                "TF_rule_1785": {
+                    "display_name": "1785_TEST_BDS_Flow",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AP1-HOST-ap1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF_AP1-HOST-ap1srlpcacfbds1",
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ]
+                },
+                "TF_rule_1784": {
+                    "display_name": "1784_TEST_CP_to_CACF_Proxy",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AP1-Host-TEST-CP-SUBNET"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AP1-HOST_NAT_CACF_Proxy",
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF_AP1-Host-TEST-CP-SUBNET",
+                        "TF_AP1-HOST_NAT_CACF_Proxy",
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ]
+                },
+                "TF_rule_1783": {
+                    "display_name": "1783_Internal_Server_comm",
+                    "apply": true,
+                    "source_groups": [
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "disabled": false,
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF_AP1-HOST-ap1d290lpcacpr2",
+                        "TF_AP1-HOST-ap1d290lpcacpr1"
+                    ]
+                }
+            }
+        }
+    }
+}

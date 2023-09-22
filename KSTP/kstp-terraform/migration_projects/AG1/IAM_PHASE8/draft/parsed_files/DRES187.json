@@ -1,0 +1,69 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DR187-CACF-Proxy",
+            "TF-AG1-IPSET-DR187-CACF-Proxy-VIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES187": {
+            "category": "Application",
+            "rules": {
+                "2572": {
+                    "display_name": "TF-2572-Proxy-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR187-CACF-Proxy"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51132941",
+                    "scope": [
+                        "TF-AG1-SG-DR187-CACF-Proxy",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                },
+                "2573": {
+                    "display_name": "TF-2573-OCP-to-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR187-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51132941",
+                    "scope": [
+                        "TF-AG1-IPSET-DR187-CACF-Proxy-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                }
+            }
+        }
+    }
+}

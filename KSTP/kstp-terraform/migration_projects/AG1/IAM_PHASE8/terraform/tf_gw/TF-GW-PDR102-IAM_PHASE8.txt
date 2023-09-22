@@ -1,0 +1,82 @@
+######################################################
+# migration: IAM_PHASE8
+######################################################
+   rule {
+         display_name = "TF-1852-PDR-ESG-to-BDS-master"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-pdr-esg01-inside",
+               "/infra/domains/default/groups/TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8081"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2766-Internet-to-PDR-ESG01-BDS-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-PDR-BDS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8081"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3197-BDS-MCSM-"
+         notes        = "SR51302675"
+         source_groups = [
+               "169.47.188.164",
+               "169.47.188.161",
+               "169.47.188.165",
+               "169.47.188.160/29",
+               "169.47.188.163",
+               "169.63.90.80/28",
+               "169.47.188.162"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-AG1"
+            }
+      }

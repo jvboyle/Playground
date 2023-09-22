@@ -1,0 +1,56 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-16443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-SRES01-OCP-Cluster01",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d68lpwppssh2",
+            "TF-EU1-HOST-eu1d68lpwppssh1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES68": {
+            "category": "Application",
+            "rules": {
+                "4127": {
+                    "display_name": "TF-4127-Sres-co-CPREM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d68lpwppssh1",
+                        "TF-EU1-HOST-eu1d68lpwppssh2"
+                    ],
+                    "destination_ips": [
+                        "100.72.172.10"
+                    ],
+                    "services": [
+                        "TCP-16443",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d68lpwppssh2",
+                        "TF-EU1-HOST-eu1d68lpwppssh1"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+---
+# This is the file the drives the orchestration of the steps ( i.e. roles and tasks)
+# the 'hosts' variable references the elements of the inventory that will
+# be provisions
+- hosts: all
+  gather_facts: false
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+  vars_files:
+  # the following should be changed based on the region running in.
+    - ../../region-configs/{{ region_type }}/{{ region }}/region-answerfile.yml
+    ## NOTE: added this to aid in getting the network_label
+    - ../../network-config/{{ region_type }}/{{ region }}/{{ segmentID }}-network-answerfile.yml
+
+  # the following should be changed based on the target segment
+    - non-prod-answerfile.yml
+    - ../../region-configs/non-prod/compliance-answerfile.yml
+  # the following represent the tasks that will be executed to provision this VM
+  # each of these roles is associated to a subdirectory under the roles directory
+  # These are executed in the order they are listed.
+
+  vars_prompt:
+    - name: "vcenter_user"
+      prompt: "vCenter User?"
+      private: no
+    - name: "vcenter_pwd"
+      prompt: "vCenter Password?"
+      private: yes
+
+  roles:
+#     - setup
+     - check-vmExist
+     - get_network_label
+     - provision-vm
+     - record-information
+#     - configure-vm
+#     - check-proxy
+#     - register-server-in-dns
+#     - install-Qradar
+#     - install-Carbon-CarbonBlack
+#     - install-BESAgent
+#     - install-APM-Agent
+#     - install-anti-virus
+#     - install-qualys
+#     - cleanup
+
+# SESDR
+#     - upload-inventory-information
+#     - register-in-mad
+#     - upload-sharedid-ISIM
+#     - update-backup-listed
+#     - add-server-to-qualsys
+#     - perform-healthcheck

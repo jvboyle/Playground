@@ -1,0 +1,26 @@
+customer_name: SEC
+blue_id: N/A
+dres_name: dr190
+app_internal_name: "dr190-app-internal1"
+app_internal_subnet: 100.73.70.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.73.70.1
+dres_transit_subnet: 100.72.8.16
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr190-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.72.8.16
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.72.8.18
+vpn_esg_vnic1_ip: 100.72.8.17
+esg_dlr_transit_name: "dr190-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.72.8.24
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.72.8.25
+dlr_uplink1_ip: 100.72.8.26
+res_esg_vnic0_ip: 100.72.64.132
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: eu1-e-dvs1-pub-dvpg-edge-pub-ns-1222
+vpn_esg_vnic0_ip: 169.51.162.233
+vpn_esg_vnic0_ip_prefix: 25

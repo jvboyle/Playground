@@ -1,0 +1,65 @@
+{
+    "map_services": {
+        "SERVICES": []
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DA-Nessus-146-89-167-214",
+            "TF-EU1-SG-SRES01-OCP-Cluster02",
+            "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP",
+            "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+            "TF-EU1-SG-SRES01-OCP-Cluster03",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+            "TF-EU1-SG-SRES01-OCP-Cluster01",
+            "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP",
+            "TF-EU1-SG-DR20-SSH-Proxy",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-EU-Shared-Prod"
+        ]
+    },
+    "map_policies": {
+        "TF-TMP-Section": {
+            "category": "Application",
+            "rules": {
+                "4053": {
+                    "display_name": "TF-4053-DA1-0-Nessus-to-CACF",
+                    "source_groups": [
+                        "TF-EU1-IPSET-DA-Nessus-146-89-167-214"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP",
+                        "TF-EU1-SG-DR20-SSH-Proxy",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-EU-Shared-Prod"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-DA-Nessus-146-89-167-214",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP",
+                        "TF-EU1-SG-DR20-SSH-Proxy",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-EU-Shared-Prod",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8080",
+            "TCP-8443",
+            "TCP-7700",
+            "HTTPS",
+            "TCP-4500",
+            "HTTPS_16443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-eu1srlpm1epni2",
+            "TF-EU1-HOST-eu1srlpm1epno2",
+            "TF-EU1-SG-SRES-HOST-eu1srlplmt3",
+            "TF-EU1-SG-SRES01-OCP-Cluster01",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1ecno2",
+            "TF-EU1-HOST-eu1d176lplufsdp",
+            "TF-EU1-HOST-eu1sr1wphwcetl",
+            "TF-EU1-SG-PDR-Internet-Proxy-Server",
+            "TF-EU1-HOST-eu1srlpm1ecnp2",
+            "TF-EU1-IPSET-dr176-LB-VIP1",
+            "TF-EU1-HOST-eu1d176lplufsdc",
+            "TF-EU1-HOST-eu1srlpm1ecni2",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-DR176-ESG-LB-Source",
+            "TF-EU1-SG-SRES-HOST-eu1srlplmt5",
+            "TF-EU1-HOST-eu1d176lpluftnp1",
+            "TF-EU1-HOST-eu1srlpm1epnp2",
+            "TF-EU1-HOST-eu1d176lpluftnp2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES176": {
+            "category": "Application",
+            "rules": {
+                "6459": {
+                    "display_name": "TF-6459-Proxy-Probe-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d176lpluftnp2",
+                        "TF-EU1-HOST-eu1d176lpluftnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50076763",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d176lpluftnp2",
+                        "TF-EU1-HOST-eu1d176lpluftnp1",
+                        "TF-EU1-HOST-eu1srlpm1epno2",
+                        "TF-EU1-HOST-eu1srlpm1ecno2"
+                    ]
+                },
+                "6764": {
+                    "display_name": "TF-6764-LB-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR176-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTPS_16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50967845\nSR51144224\nSR51148605",
+                    "scope": [
+                        "TF-EU1-SG-DR176-ESG-LB-Source",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "6766": {
+                    "display_name": "TF-6766-SRES-to-LB-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlplmt3",
+                        "TF-EU1-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-SG-SRES-HOST-eu1srlplmt5"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50967845",
+                    "scope": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlplmt3",
+                        "TF-EU1-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-SG-SRES-HOST-eu1srlplmt5"
+                    ]
+                },
+                "7083": {
+                    "display_name": "TF-7083-SRES-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1d176lplufsdc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ]
+                },
+                "7085": {
+                    "display_name": "TF-7085-SRES-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1d176lplufsdc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ]
+                },
+                "7086": {
+                    "display_name": "TF-7086-DRES-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1d176lplufsdc"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lpluftnp2",
+                        "TF-EU1-HOST-eu1d176lpluftnp1",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2",
+                        "TF-EU1-HOST-eu1d176lpluftnp2",
+                        "TF-EU1-HOST-eu1d176lpluftnp1"
+                    ]
+                },
+                "7087": {
+                    "display_name": "TF-7087-DRES-to-PDR-and-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-HOST-eu1d176lplufsdc"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-PDR-Internet-Proxy-Server",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8080"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d176lplufsdp",
+                        "TF-EU1-SG-PDR-Internet-Proxy-Server",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2"
+                    ]
+                }
+            }
+        }
+    }
+}

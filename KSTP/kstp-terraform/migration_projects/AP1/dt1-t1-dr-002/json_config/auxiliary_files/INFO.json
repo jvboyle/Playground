@@ -1,0 +1,18 @@
+{
+    "source and destination": [
+        "ap1srlpcacfbds1",
+        "HOST_NAT_CACF_Proxy",
+        "ap1d290lpcacpr2",
+        "Host-TEST-CP-SUBNET",
+        "ap1d290lpcacpr1"
+    ],
+    "groups and ipsets": [
+        "HOST_NAT_CACF_Proxy",
+        "Host-TEST-CP-SUBNET"
+    ],
+    "source and destination ips": [
+        "100.120.5.0/24",
+        "158.87.104.51",
+        "158.87.104.52"
+    ]
+}

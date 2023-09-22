@@ -1,0 +1,42 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpcarwas1000",
+            "TF-EU1-SG-DR228-ESG-LB-Source"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES228": {
+            "category": "Application",
+            "rules": {
+                "7513": {
+                    "display_name": "TF-7513-DRES-ESG-to-CAR",
+                    "source_groups": [
+                        "TF-EU1-SG-DR228-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcarwas1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50089670",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpcarwas1000",
+                        "TF-EU1-SG-DR228-ESG-LB-Source"
+                    ]
+                }
+            }
+        }
+    }
+}

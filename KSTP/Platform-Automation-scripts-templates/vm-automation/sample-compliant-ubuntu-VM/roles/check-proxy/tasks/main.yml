@@ -1,0 +1,11 @@
+- name: Test Proxy 1 - fail 1
+  shell: timeout 10 ping google.com > /tmp/proxy-test
+
+- name: Test Proxy 2 - good 1
+  shell: timeout 10 ping ubuntu.com > /tmp/proxy-test
+
+- name: Test Proxy 2 - good 3
+  shell: timeout 10 ping redhat.com > /tmp/proxy-test
+
+- name: Test Proxy 3 - fail 2
+  shell: timeout 10 ping github.ibm.com > /tmp/proxy-test

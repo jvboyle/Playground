@@ -1,0 +1,34 @@
+{
+    "map_svc": {
+        "TCP-53-389-636-88-464-3268-3269": {
+            "TCP": [
+                "53,389,636,88,464,3268,3269"
+            ]
+        },
+        "DNS-UDP": {
+            "UDP": [
+                "53"
+            ]
+        },
+        "Microsoft Active Directory V1": {
+            "": [
+                ""
+            ]
+        },
+        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+            "TCP": [
+                "49152-65535"
+            ]
+        },
+        "TCP-42": {
+            "TCP": [
+                "42"
+            ]
+        },
+        "DNS": {
+            "TCP": [
+                "53"
+            ]
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "migration_date": "03/24/2023 17:35",
+    "geography": "AP1",
+    "wave": "DRES_271",
+    "rules": {
+        "total": 4,
+        "rules": [
+            "1808",
+            "1805",
+            "1806",
+            "1807"
+        ]
+    },
+    "vms": {
+        "ap1d271lpcacpr1": {
+            "ip": "100.80.128.51\n100.80.128.50",
+            "groups": [
+                "TF-AP1-HOST-ap1d271lpcacpr1"
+            ],
+            "original_groups": []
+        },
+        "ap1d271lpcacpr2": {
+            "ip": "100.80.128.52",
+            "groups": [
+                "TF-AP1-HOST-ap1d271lpcacpr2"
+            ],
+            "original_groups": []
+        }
+    }
+}

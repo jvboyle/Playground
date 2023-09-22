@@ -1,0 +1,13 @@
+- hosts: all
+  gather_facts: false
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+
+- import_playbook: ../network_automation/get_network_label_playbook/get_network_label.yml
+  vars:
+    region_type: "non-prod"
+    region: "ag1"
+    segmentID: "sr1"
+    target_cluster: "WDC04-PoC-CL1"

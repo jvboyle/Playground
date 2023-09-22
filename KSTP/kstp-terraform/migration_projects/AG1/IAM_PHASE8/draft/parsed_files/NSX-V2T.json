@@ -1,0 +1,145 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8443",
+            "NFS-Server-TCP",
+            "NFS Client UDP",
+            "NFS-Server-UDP",
+            "NFS Client",
+            "HTTPS",
+            "TCP-"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+            "TF-AG1-HOST-ag1sr1lpocpnfs01",
+            "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+            "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet",
+            "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+            "TF-AG1-SG-OCP-Cluster6-VIP",
+            "TF-AG1-IPSET-NET-NSXT-OCP04-Subnet",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM",
+            "TF-AG1-SG-SRES01-OCP-Cluster02"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "2966": {
+                    "display_name": "TF-2966-SRES_ocp_5_to_NSXT_NFS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1lpocpnfs01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NFS-Server-TCP",
+                        "NFS Client UDP",
+                        "NFS-Server-UDP",
+                        "NFS Client",
+                        "TCP-"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198268",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1lpocpnfs01",
+                        "TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+                    ]
+                },
+                "2967": {
+                    "display_name": "TF-2967-NSXT_SRES_OCP4_to_OCP2vip",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-NET-NSXT-OCP04-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51195107",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-IPSET-NET-NSXT-OCP04-Subnet"
+                    ]
+                },
+                "3183": {
+                    "display_name": "TF-3183-SRES_ocp_6_to_NSXT_NFS-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1lpocpnfs01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NFS-Server-TCP",
+                        "NFS Client UDP",
+                        "NFS-Server-UDP",
+                        "NFS Client",
+                        "TCP-"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198268",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1lpocpnfs01",
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+                    ]
+                },
+                "3372": {
+                    "display_name": "TF-3372-NA-to-EU-MoM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster02",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51426553",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-SG-SRES01-OCP-Cluster02"
+                    ]
+                }
+            }
+        }
+    }
+}

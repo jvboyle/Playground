@@ -1,0 +1,32 @@
+######################################################
+# migration: IAM_PHASE6
+######################################################
+   rule {
+         display_name = "TF-3338-DX-plat-IKS-Prod-to-GRF-DB"
+         notes        = "SR51402877 RITM0128417---added the ag1srlpcardb1000 to the destination "
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcardb1000"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcardb1000",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VPC-AG1"
+            }
+      }

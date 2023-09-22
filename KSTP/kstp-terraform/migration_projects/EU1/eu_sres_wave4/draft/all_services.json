@@ -1,0 +1,4537 @@
+{
+    "services": {
+        "by_port": {
+            "10002": {
+                "TCP": "TCP-10002"
+            },
+            "10080": {
+                "TCP": "Vmware-VC-HTTP"
+            },
+            "102": {
+                "TCP": "For X.400 connections over TCP"
+            },
+            "1024": {
+                "TCP": "AD Server"
+            },
+            "1024-65535": {
+                "TCP": "VMware-VDM2.x-Ephemeral"
+            },
+            "1025-5000": {
+                "TCP": "Win 2003 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+            },
+            "1025-65535": {
+                "UDP": "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - UDP"
+            },
+            "10443": {
+                "TCP": "TCP-10443"
+            },
+            "1089": {
+                "TCP": "SAP PAW Servlet Engine"
+            },
+            "1090": {
+                "TCP": "SAP Content Server"
+            },
+            "1095": {
+                "TCP": "SAP Cache Server"
+            },
+            "1099": {
+                "TCP": "SAP PAW Communication Server"
+            },
+            "110": {
+                "TCP": "POP3"
+            },
+            "111": {
+                "SUN_RPC_UDP": "SUN_RPC_UDP"
+            },
+            "112": {
+                "L3_OTHERS": "VRRP"
+            },
+            "1128": {
+                "TCP": "SAP HostControl"
+            },
+            "1129": {
+                "TCP": "SAP HostControlS"
+            },
+            "119": {
+                "TCP": "NNTP"
+            },
+            "1194": {
+                "TCP": "VMware-VCOMgr-UI"
+            },
+            "1199": {
+                "TCP": "VMware-VCOStdAln-Heartbeat"
+            },
+            "12041": {
+                "TCP": "ISPW-CDI"
+            },
+            "123": {
+                "UDP": "NTP"
+            },
+            "135": {
+                "TCP": "SAP Exchange Groupware Connector (DCOM)"
+            },
+            "137": {
+                "TCP": "NetBios Name Service (TCP)"
+            },
+            "137,138,139": {
+                "TCP": "Server Message Block (SMB)"
+            },
+            "138": {
+                "TCP": "NetBios Datagram (TCP)"
+            },
+            "139": {
+                "TCP": "NetBios Session Service (TCP)"
+            },
+            "14000": {
+                "TCP": "OS Agent"
+            },
+            "143": {
+                "TCP": "IMAP"
+            },
+            "1433": {
+                "UDP": "APP_MSSQL_UDP"
+            },
+            "1434": {
+                "TCP": "MS-SQL-M-TCP"
+            },
+            "1443": {
+                "TCP": "TCP-1443"
+            },
+            "1468,6514,12001,8671,443,15672,6379": {
+                "TCP": "PSN-PAN-TCP"
+            },
+            "15000": {
+                "TCP": "Oracle Times Ten (15000)"
+            },
+            "15002": {
+                "TCP": "Oracle Times Ten (15002)"
+            },
+            "15004": {
+                "TCP": "Oracle Times Ten (15004)"
+            },
+            "1503": {
+                "TCP": "T120 (Whiteboard A43)"
+            },
+            "1521": {
+                "ORACLE_TNS": "ORACLE_TNS"
+            },
+            "1526": {
+                "TCP": "Oracle Net Listener"
+            },
+            "1527": {
+                "TCP": "SAP Oracle Listener"
+            },
+            "1575": {
+                "TCP": "Oracle Names"
+            },
+            "161": {
+                "UDP": "SNMP"
+            },
+            "162": {
+                "UDP": "SNMP-Send"
+            },
+            "1630": {
+                "TCP": "Oracle Connection Manager (CMAN)"
+            },
+            "16311": {
+                "TCP": "TCP-16311"
+            },
+            "16351": {
+                "TCP": "Pentest-16351"
+            },
+            "16443": {
+                "TCP": "Netcool_16443"
+            },
+            "16443-17443": {
+                "TCP": "Netcool_16443-17443"
+            },
+            "1688": {
+                "TCP": "tcp-1688"
+            },
+            "1701": {
+                "TCP": "Oracle JDBC for Rdb Thin Server"
+            },
+            "1718": {
+                "UDP": "H323 Gatekeeper Discovery"
+            },
+            "1720": {
+                "TCP": "H323 Call Signaling"
+            },
+            "1748": {
+                "TCP": "Oracle Intelligent Agent (1748)"
+            },
+            "1754": {
+                "TCP": "Oracle Intelligent Agent (1754)"
+            },
+            "1755": {
+                "UDP": "Microsoft Media Server (UDP)"
+            },
+            "1808": {
+                "TCP": "Oracle Intelligent Agent (1808)"
+            },
+            "1809": {
+                "TCP": "Oracle Intelligent Agent (1809)"
+            },
+            "1810": {
+                "TCP": "Enterprise Manager Servlet port SSL"
+            },
+            "1812": {
+                "TCP": "TCP-1812"
+            },
+            "1830": {
+                "TCP": "Oracle Connection Manager Admin (CMAN)"
+            },
+            "1831": {
+                "TCP": "Enterprise ManagerAgent port"
+            },
+            "18443": {
+                "TCP": "Horizon 6 Composer Service to Connection Server"
+            },
+            "1850": {
+                "TCP": "Enterprise Manager RMI port"
+            },
+            "1863": {
+                "TCP": "MSN (TCP)"
+            },
+            "2000": {
+                "TCP": "Skinny"
+            },
+            "2000-2002": {
+                "TCP": "SAP MDM Server"
+            },
+            "20003": {
+                "TCP": "SAP Comm"
+            },
+            "20004": {
+                "TCP": "SAP Inter Server COmm"
+            },
+            "20005": {
+                "TCP": "SAP Admin console"
+            },
+            "20006": {
+                "TCP": "SAP Import Mgr"
+            },
+            "20007": {
+                "TCP": "SAP Syndicator Service"
+            },
+            "20048": {
+                "TCP": "TCP-20048"
+            },
+            "20201": {
+                "TCP": "SAP Central Software Deployment Manager"
+            },
+            "2048": {
+                "TCP": "TCP-2048"
+            },
+            "2049": {
+                "TCP": "NFS (TCP)"
+            },
+            "20514,1700,3799": {
+                "UDP": "PSN-PAN-UDP"
+            },
+            "21": {
+                "FTP": "FTP"
+            },
+            "2100": {
+                "TCP": "ORACLE-XDB-FTP"
+            },
+            "21212,21213": {
+                "TCP": "SAP Inst"
+            },
+            "21666": {
+                "TCP": "TCP-21666"
+            },
+            "22": {
+                "TCP": "SSH"
+            },
+            "22,80,2809,2810,2811,5000,5001,7060,7062,7272,7277,7286,7287,8878,8879": {
+                "TCP": "ISIM-6_1"
+            },
+            "22024": {
+                "TCP": "VMware-DataRecovery"
+            },
+            "22389": {
+                "TCP": "Horizon 6 LDAP repllication between connection servers"
+            },
+            "22443": {
+                "TCP": "Horizon 6 HTMP Access from Security Server to Desktop Agent"
+            },
+            "22636": {
+                "TCP": "Horizon 6 Secure LDAP replication between Connection Servers"
+            },
+            "23": {
+                "TCP": "TELNET"
+            },
+            "2382": {
+                "TCP": "SQL Server Browser service"
+            },
+            "2383": {
+                "TCP": "SQL Analysis service"
+            },
+            "2427": {
+                "UDP": "MGCP (UDP)"
+            },
+            "2428": {
+                "TCP": "MGCP (TCP)"
+            },
+            "2481": {
+                "TCP": "Oracle GIOP IIOP"
+            },
+            "2482": {
+                "TCP": "Oracle GIOP IIOP for SSL"
+            },
+            "25": {
+                "TCP": "SMTP"
+            },
+            "2525": {
+                "TCP": "TCP-2525"
+            },
+            "2526": {
+                "TCP": "TCP-2526"
+            },
+            "2535": {
+                "UDP": "DHCP, MADCAP"
+            },
+            "2883": {
+                "UDP": "Exchange ActiveSync"
+            },
+            "30000-32767": {
+                "TCP": "ICP-Kubernetes NodePort"
+            },
+            "30001": {
+                "TCP": "SAP Name Server"
+            },
+            "30002": {
+                "TCP": "SAP Pre Processor"
+            },
+            "30003": {
+                "TCP": "SAP Index Server"
+            },
+            "30004": {
+                "TCP": "SAP Queue Server"
+            },
+            "30005": {
+                "TCP": "SAP HTTP Server"
+            },
+            "30006": {
+                "TCP": "SAP GRMG Service (Heartbeat)"
+            },
+            "30007": {
+                "TCP": "SAP RFC Server"
+            },
+            "30008": {
+                "TCP": "SAP Cruiser"
+            },
+            "30011": {
+                "TCP": "SAP Alert Server"
+            },
+            "30017": {
+                "TCP": "SAP Backup Server"
+            },
+            "31031,44046": {
+                "TCP": "VMware-SRM-vSphereReplication"
+            },
+            "31100,31000": {
+                "TCP": "VMware-SPS"
+            },
+            "31596": {
+                "TCP": "SAP Layout Server 2"
+            },
+            "31596,31597,31604": {
+                "TCP": "SAP Layout Server"
+            },
+            "31602": {
+                "TCP": "SAP Layout Server Quark Express"
+            },
+            "31603": {
+                "TCP": "SAP Layout Server Adobe InDesign"
+            },
+            "3200": {
+                "UDP": "SAP Dispatcher Netweaver App Server"
+            },
+            "3201": {
+                "TCP": "SAP Enqueue Svr"
+            },
+            "32111": {
+                "TCP": "Horizon 6 USB Access to desktops"
+            },
+            "32369": {
+                "TCP": "TCP-32369"
+            },
+            "3260": {
+                "TCP": "VMware-iSCSI-Server"
+            },
+            "3268": {
+                "TCP": "LDAP Global Catalog"
+            },
+            "3268-3269": {
+                "TCP": "TCP-3268-3269"
+            },
+            "3269": {
+                "TCP": "Windows-Global-Catalog-over-SSL"
+            },
+            "32843,32844,32845": {
+                "TCP": "HTTPS, net.tcp binding"
+            },
+            "3298": {
+                "TCP": "SAP network Test Program"
+            },
+            "3299": {
+                "TCP": "SAP Router"
+            },
+            "3300": {
+                "TCP": "SAP gateway - CPIC/RFC"
+            },
+            "3301": {
+                "TCP": "SAP gateway/replication"
+            },
+            "3306": {
+                "TCP": "MySQL"
+            },
+            "3339": {
+                "TCP": "Enterprise Manager Reporting port"
+            },
+            "3389": {
+                "UDP": "Terminal Services (UDP)"
+            },
+            "3390": {
+                "TCP": "TCP-3390"
+            },
+            "3401": {
+                "TCP": "Oracle OC4J IIOP"
+            },
+            "3501": {
+                "TCP": "Oracle OC4J IIOPS1"
+            },
+            "3600": {
+                "TCP": "SAP Msg Svr"
+            },
+            "3601": {
+                "TCP": "SAP Msg Svr 2"
+            },
+            "3701": {
+                "TCP": "Oracle OC4J JMS"
+            },
+            "379": {
+                "TCP": "Site Replication service"
+            },
+            "389": {
+                "TCP": "Oracle Internet Directory(non-SSL)"
+            },
+            "3909": {
+                "TCP": "SAP Mapping Manager"
+            },
+            "4000": {
+                "TCP": "Oracle9iAS Web Cache Admin port"
+            },
+            "4001": {
+                "TCP": "Horizon 6 JMS traffic from Agent to Connection Server"
+            },
+            "4002": {
+                "TCP": "Horizon 6 Secure JMS Traffic"
+            },
+            "4031": {
+                "TCP": "Oracle Internet Directory(SSL, 4031)"
+            },
+            "4032": {
+                "TCP": "Oracle Internet Directory(non-SSL, 4032)"
+            },
+            "4100": {
+                "TCP": "Horizon 6 Connection Server to Connection Server JMS traffic"
+            },
+            "4172": {
+                "TCP": "Horizon 6 PCoIP TCP Secure Gateway Traffic from Security Server to Desktop Agent"
+            },
+            "42": {
+                "UDP": "WINS-UDP"
+            },
+            "4238,4239,4240,4241": {
+                "TCP": "SAP Upgrade"
+            },
+            "427": {
+                "UDP": "VMware-CIMSLP"
+            },
+            "42966": {
+                "TCP": "VMware-VDM2.x-RGS"
+            },
+            "4363": {
+                "TCP": "SAP IPC Dispatcher Mobile client 2"
+            },
+            "4400": {
+                "TCP": "OracleAS Certificate Authority (OCA) - Server Authentication"
+            },
+            "44000": {
+                "TCP": "Log Loader"
+            },
+            "4401": {
+                "TCP": "OracleAS Certificate Authority (OCA) - Mutual Authentication"
+            },
+            "4421": {
+                "TCP": "TCP-4421"
+            },
+            "443": {
+                "TCP": "VMware Consolidated Backup"
+            },
+            "4443": {
+                "TCP": "Oracle HTTP Server SSL port"
+            },
+            "4444": {
+                "TCP": "SAP IPC Dispatcher Mobile client"
+            },
+            "4445": {
+                "TCP": "SAP IPC data loader"
+            },
+            "445": {
+                "TCP": "SMB"
+            },
+            "4500": {
+                "UDP": "Horizon 6 APJ13 Forwarded Web Traffic using IPsec with NAT from Security Server to Connection Server"
+            },
+            "4501": {
+                "TCP": "TCP-4501"
+            },
+            "455": {
+                "TCP": "tcp-455"
+            },
+            "45666": {
+                "TCP": "TCP-45666"
+            },
+            "464": {
+                "TCP": "Active Directory Server"
+            },
+            "465": {
+                "TCP": "tcp-465"
+            },
+            "4662": {
+                "TCP": "Oracle TimesTen"
+            },
+            "4758": {
+                "TCP": "Oracle TimesTen (4758)"
+            },
+            "4759": {
+                "TCP": "Oracle TimesTen (4759)"
+            },
+            "4761": {
+                "TCP": "Oracle TimesTen (4761)"
+            },
+            "4764": {
+                "TCP": "Oracle TimesTen (4764)"
+            },
+            "4766": {
+                "TCP": "Oracle TimesTen (4766)"
+            },
+            "4767": {
+                "TCP": "Oracle TimesTen (4767)"
+            },
+            "4800": {
+                "TCP": "SAP SNC secured gateway"
+            },
+            "48080": {
+                "TCP": "Horizon 6 Connection Server to Connection Server traffic"
+            },
+            "49": {
+                "TCP": "TCP-49"
+            },
+            "49152-65535": {
+                "TCP": "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+            },
+            "500": {
+                "UDP": "IKE (Key Exchange)"
+            },
+            "5000": {
+                "TCP": "IBM DB2"
+            },
+            "50000": {
+                "TCP": "SAP HTTP"
+            },
+            "50000,4402": {
+                "TCP": "SAP IBM"
+            },
+            "50001": {
+                "UDP": "Horizon 6 Connection Server to Horizon Client Communication"
+            },
+            "50002": {
+                "TCP": "SAP IIOP initial"
+            },
+            "50003": {
+                "TCP": "SAP IIOPS"
+            },
+            "50004": {
+                "TCP": "SAP P4"
+            },
+            "50005": {
+                "TCP": "SAP P4 over HTTP"
+            },
+            "50006": {
+                "TCP": "SAP P4 over SSL"
+            },
+            "50007": {
+                "TCP": "SAP IIOP"
+            },
+            "50008": {
+                "TCP": "SAP Telnet"
+            },
+            "50010": {
+                "TCP": "SAP JMS"
+            },
+            "50013": {
+                "TCP": "SAP Start Service"
+            },
+            "50014": {
+                "TCP": "SAP Start Service 2"
+            },
+            "50015": {
+                "TCP": "SAP Design Time Repository"
+            },
+            "50017,50018,50019": {
+                "TCP": "SAP SDM/SL"
+            },
+            "50020": {
+                "TCP": "SAP Java Join"
+            },
+            "50021": {
+                "TCP": "SAP Java Debug"
+            },
+            "50116": {
+                "TCP": "SAP Enqueue Repl 2"
+            },
+            "50389": {
+                "TCP": "EdgeSync service/ADAM"
+            },
+            "5050": {
+                "UDP": "Yahoo Messenger (UDP)"
+            },
+            "5060": {
+                "UDP": "SIP 5060"
+            },
+            "5060,5061,5062": {
+                "TCP": "MS Unified Messaging server"
+            },
+            "5060,5061,5065,5066,5067,5068": {
+                "TCP": "MS Unified Messaging server-Phone"
+            },
+            "5061": {
+                "UDP": "SIP 5061"
+            },
+            "5061-5063,5558,5559,5578,5579,7276,7278,9044,9045,9061,9062,9080,9081": {
+                "TCP": "ISIM-6_3"
+            },
+            "50636": {
+                "TCP": "EdgeSync service"
+            },
+            "5075,5076,5077": {
+                "TCP": "Office communication server"
+            },
+            "514": {
+                "TCP": "Syslog (TCP)"
+            },
+            "515": {
+                "TCP": "SAP printer spooler"
+            },
+            "51915": {
+                "TCP": "VMware-VC-ESXi"
+            },
+            "52267": {
+                "TCP": "Vmware-VCHeartbeat"
+            },
+            "53": {
+                "UDP": "DNS-UDP"
+            },
+            "5432": {
+                "TCP": "PostgreSQL"
+            },
+            "5433": {
+                "TCP": "tcp-5433"
+            },
+            "546": {
+                "UDP": "DHCPv6 Client"
+            },
+            "547": {
+                "UDP": "DHCPv6 Server"
+            },
+            "5480": {
+                "TCP": "HBR Server App"
+            },
+            "5500": {
+                "TCP": "Oracle Enterprise Manager Web Console"
+            },
+            "55000": {
+                "UDP": "Horizon 6 PCoIP UDP traffic from View Agent to Connection Server"
+            },
+            "554": {
+                "UDP": "RTSP (UDP)"
+            },
+            "5555": {
+                "UDP": "UDP-5555"
+            },
+            "5556": {
+                "UDP": "UDP-5556"
+            },
+            "5560": {
+                "TCP": "iSQLPlus 10g"
+            },
+            "5580": {
+                "TCP": "iSQLPlus 10g (5580)"
+            },
+            "563": {
+                "TCP": "NNTP_SSL"
+            },
+            "5631": {
+                "TCP": "PC Anywhere (TCP)"
+            },
+            "5632": {
+                "UDP": "PC Anywhere (UDP)"
+            },
+            "5671": {
+                "TCP": "TCP-5671"
+            },
+            "5672": {
+                "TCP": "TCP-5672"
+            },
+            "56737,56738": {
+                "TCP": "Office Server Web Services, HTTP, SSL"
+            },
+            "5696": {
+                "TCP": "TCP-5696"
+            },
+            "5722": {
+                "TCP": "RPC, DFSR (SYSVOL)"
+            },
+            "5725": {
+                "TCP": "Directory Services"
+            },
+            "57348": {
+                "TCP": "Vmware-Heartbeat-PrimarySecondary"
+            },
+            "578": {
+                "TCP": "tcp-578"
+            },
+            "587": {
+                "TCP": "SMTP_TLS"
+            },
+            "5900": {
+                "TCP": "tcp-5900"
+            },
+            "5900-5964": {
+                "TCP": "RFB"
+            },
+            "593": {
+                "TCP": "tcp-593"
+            },
+            "5985": {
+                "TCP": "tcp-5985"
+            },
+            "5986": {
+                "TCP": "tcp-5986"
+            },
+            "5988": {
+                "TCP": "CIM-HTTP"
+            },
+            "5989": {
+                "TCP": "CIM-HTTPS"
+            },
+            "59975,59976": {
+                "TCP": "SAP Inst on IBM"
+            },
+            "60000": {
+                "TCP": "TCP-60000"
+            },
+            "6003": {
+                "TCP": "Oracle Notification Service request port"
+            },
+            "601": {
+                "TCP": "TCP-601"
+            },
+            "6100": {
+                "TCP": "Oracle Notification Service local port"
+            },
+            "61616": {
+                "TCP": "Vmware-VCOStdAln-Remote"
+            },
+            "6200": {
+                "TCP": "Oracle Notification Service remote port"
+            },
+            "62026-62029": {
+                "TCP": "SAP Lotus Domino - Connector"
+            },
+            "62126-62129": {
+                "TCP": "SAP Lotus Domino - Proxy"
+            },
+            "623": {
+                "UDP": "VMware-VC-DPM"
+            },
+            "636": {
+                "TCP": "Oracle Internet Directory(SSL)"
+            },
+            "64327": {
+                "TCP": "MS Customizable"
+            },
+            "6433": {
+                "TCP": "tcp-6433"
+            },
+            "6443": {
+                "TCP": "TCP-6443"
+            },
+            "6500": {
+                "UDP": "VMware-VC-DumpSvr"
+            },
+            "6668": {
+                "TCP": "Oracle9iAS Clickstream Collector Agent"
+            },
+            "67": {
+                "UDP": "DHCP-Server"
+            },
+            "68": {
+                "UDP": "DHCP-Client"
+            },
+            "69": {
+                "UDP": "TFTP"
+            },
+            "691": {
+                "TCP": "Routing Engine service"
+            },
+            "694": {
+                "TCP": "TCP-694"
+            },
+            "7000": {
+                "TCP": "Java Object Cache port"
+            },
+            "7100": {
+                "TCP": "DCM Java Object Cache port"
+            },
+            "7200": {
+                "TCP": "Oracle HTTP Server Diagnostic Port"
+            },
+            "7200,7210,7269,7270,7575": {
+                "TCP": "SAP LiveCache"
+            },
+            "7234": {
+                "TCP": "TCP-7234"
+            },
+            "735": {
+                "TCP": "VMware-UpdateMgr-Patching"
+            },
+            "7433": {
+                "TCP": "tcp-7433"
+            },
+            "7443": {
+                "TCP": "tcp-7443"
+            },
+            "7500,8005,8006,8083,8085,8086,8087,8443,10109,10111,60099": {
+                "TCP": "Vmware-VC-VC-Internal"
+            },
+            "7501": {
+                "TCP": "Oracle HTTP Server Port Tunneling"
+            },
+            "7700": {
+                "TCP": "tcp-7700"
+            },
+            "7705": {
+                "TCP": "tcp-7705"
+            },
+            "7706": {
+                "TCP": "tcp-7706"
+            },
+            "7777": {
+                "TCP": "ORACLE-HTTP"
+            },
+            "7778": {
+                "TCP": "Oracle HTTP Server listen port"
+            },
+            "7779": {
+                "TCP": "Oracle9iAS Web Cache HTTP Listen(non-SSL) port"
+            },
+            "7788": {
+                "TCP": "TCP-7788"
+            },
+            "80": {
+                "TCP": "Horizon 6 Default HTTPS Client to Connection and Security Servers"
+            },
+            "80,443,8181,18080": {
+                "TCP": "ICP-Ingress Service"
+            },
+            "8000": {
+                "TCP": "SAP ICM HTTP"
+            },
+            "8001": {
+                "TCP": "VMware-VC-Syslog"
+            },
+            "8007": {
+                "TCP": "Oracle HTTP Server Jserv port"
+            },
+            "8009": {
+                "TCP": "Horizon 6 APJ13 Forwarded Web Traffic"
+            },
+            "8043": {
+                "TCP": "VMware-SRM-SOAP"
+            },
+            "808": {
+                "TCP": "MS Replication service"
+            },
+            "8080": {
+                "TCP": "Oracle XMLDB HTTP port"
+            },
+            "8080,8443": {
+                "TCP": "ICP-Management Console"
+            },
+            "8081": {
+                "TCP": "BDS-8081"
+            },
+            "8084": {
+                "TCP": "VMware-UpdateMgr-SOAP"
+            },
+            "8089": {
+                "TCP": "TCP-8089"
+            },
+            "8095": {
+                "TCP": "VMware-SRMClient-Server"
+            },
+            "8096": {
+                "TCP": "VMware-SRM-vCentreServer"
+            },
+            "8100": {
+                "TCP": "SAP Message Server HTTP"
+            },
+            "8100,8200": {
+                "UDP": "Vmware-FT-UDP"
+            },
+            "8101": {
+                "TCP": "SAP Msg Svr HTTP"
+            },
+            "8123": {
+                "TCP": "VMware-SRM-Replication"
+            },
+            "8181": {
+                "TCP": "tcp-8181"
+            },
+            "8182": {
+                "UDP": "VMware-HA-UDP"
+            },
+            "8199": {
+                "TCP": "tcp-8199"
+            },
+            "8200": {
+                "TCP": "SAP JMS/JDBC/File Adapter Server"
+            },
+            "8201": {
+                "TCP": "tcp-8201"
+            },
+            "8210": {
+                "TCP": "SAP JMS Adapter"
+            },
+            "8220": {
+                "TCP": "SAP JDBCAdapter"
+            },
+            "8230": {
+                "TCP": "SAP File Adapter"
+            },
+            "8240": {
+                "TCP": "VMware-VCO-Command"
+            },
+            "8244": {
+                "TCP": "VMware-VCO-Data"
+            },
+            "8250": {
+                "TCP": "VMware-VCO-Messaging"
+            },
+            "8280": {
+                "TCP": "VMware-VCO-WebHTTP"
+            },
+            "8281": {
+                "TCP": "VMware-VCO-WebHTTPS"
+            },
+            "8282": {
+                "TCP": "Vmware-VCO-VCO-HTTP"
+            },
+            "8283": {
+                "TCP": "VMware-VCO-VCO-HTTPS"
+            },
+            "8301,8302": {
+                "TCP": "VMware-DVS"
+            },
+            "8351": {
+                "TCP": "SAP Index Server 2"
+            },
+            "8352": {
+                "TCP": "SAP Queue Server 2"
+            },
+            "8353": {
+                "TCP": "SAP HTTP Server 2"
+            },
+            "8355": {
+                "TCP": "SAP Name Server 2"
+            },
+            "8357": {
+                "TCP": "SAP Pre Processor 2"
+            },
+            "8366": {
+                "TCP": "SAP Monitoring (GRMG)"
+            },
+            "8433": {
+                "TCP": "tcp-8433"
+            },
+            "8443": {
+                "TCP": "Horizon 6 HTML access to Security Server"
+            },
+            "8443,9443,10443": {
+                "TCP": "Vmware-VC-WebAccess"
+            },
+            "8472": {
+                "TCP": "Horizon 6 Interpod Communication between Connection Servers"
+            },
+            "8500,8600": {
+                "TCP": "ICP-Docker Registry"
+            },
+            "88": {
+                "TCP": "KERBEROS-TCP"
+            },
+            "8880,8881,9043,9080,9060,9201,9202,9353,9629,9900,9901,11003,11004,2812,5060": {
+                "TCP": "ISIM-6_2"
+            },
+            "8888": {
+                "TCP": "OC4J Forms / Reports Instance"
+            },
+            "8889": {
+                "TCP": "OC4J Forms / Reports Instance (8889)"
+            },
+            "9000": {
+                "TCP": "ORACLE-FORM-SERVICES"
+            },
+            "9000-9100": {
+                "TCP": "VMware-UpdateMgr"
+            },
+            "9007": {
+                "TCP": "Vmware-SRM-WSDL-vCentreServer"
+            },
+            "9008": {
+                "TCP": "VMware-SRM-HTTP"
+            },
+            "902": {
+                "TCP": "Horizon 6 View Composer to ESXi Host Traffic"
+            },
+            "903": {
+                "TCP": "VMware-VC-RemoteConsole"
+            },
+            "9043": {
+                "TCP": "tcp-9043"
+            },
+            "9081": {
+                "TCP": "TCP-9081"
+            },
+            "9084": {
+                "TCP": "VMware-UpdateMgr-VUM"
+            },
+            "9085": {
+                "TCP": "VMware-SRM-UI"
+            },
+            "9087": {
+                "TCP": "Vmware-UpdateMgr-update"
+            },
+            "9354,9355,9356,9404-9409,9443,9444,9633,9634,11005-11010,17231,17232": {
+                "TCP": "ISIM-6_4"
+            },
+            "9389": {
+                "TCP": "SOAP"
+            },
+            "9427": {
+                "TCP": "Horizon 6 Wyse MMR redirection"
+            },
+            "9443": {
+                "TCP": "ICP-WebSphere Application Server Liberty"
+            },
+            "993": {
+                "TCP": "IMAP_SSL"
+            },
+            "995": {
+                "TCP": "POP3_SSL"
+            },
+            "9997": {
+                "TCP": "TCP-9997"
+            },
+            "9998": {
+                "TCP": "Oracle SOAP Server"
+            },
+            "9999": {
+                "TCP": "SAP IPC Server"
+            },
+            "certification-path-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Certification Path Advertisement"
+            },
+            "certification-path-solicitation": {
+                "IPV6ICMP": "IPv6-ICMP Certification Path Solicitation"
+            },
+            "destination-unreachable": {
+                "IPV6ICMP": "IPv6-ICMP Destination Unreachable"
+            },
+            "duplicate-address-confirmation": {
+                "IPV6ICMP": "IPv6-ICMP Duplicate Address Confirmation"
+            },
+            "duplicate-address-request": {
+                "IPV6ICMP": "IPv6-ICMP Duplicate Address Request"
+            },
+            "echo-reply": {
+                "ICMP": "ICMP Echo Reply"
+            },
+            "echo-request": {
+                "IPV6ICMP": "IPv6-ICMP Echo"
+            },
+            "fmipv6": {
+                "IPV6ICMP": "IPv6-ICMP FMIPv6"
+            },
+            "home-agent-address-discovery-reply": {
+                "IPV6ICMP": "IPv6-ICMP Home Agent Address Discovery Reply"
+            },
+            "home-agent-address-discovery-request": {
+                "IPV6ICMP": "IPv6-ICMP Home Agent Address Discovery Request"
+            },
+            "ilnpv6-locator-update": {
+                "IPV6ICMP": "IPv6-ICMP ILNPv6 Locator Update"
+            },
+            "inverse-neighbor-discovery-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Inverse Neighbor Discovery Advertisement"
+            },
+            "inverse-neighbor-discovery-solicitation": {
+                "IPV6ICMP": "IPv6-ICMP Inverse Neighbor Discovery Solicitation"
+            },
+            "mobile-prefix-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Mobile Prefix Advertisement"
+            },
+            "mobile-prefix-solicitation": {
+                "IPV6ICMP": "IPv6-ICMP NMobile Prefix Solicitation"
+            },
+            "mpl-control": {
+                "IPV6ICMP": "IPv6-ICMP MPL Control"
+            },
+            "multicast-listener-done": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Listener Done"
+            },
+            "multicast-listener-query": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Listener Query"
+            },
+            "multicast-listener-report": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Listener Report"
+            },
+            "multicast-router-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Router Advertisement"
+            },
+            "multicast-router-solicitation": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Router Solicitation"
+            },
+            "multicast-router-termination": {
+                "IPV6ICMP": "IPv6-ICMP Multicast Router Termination"
+            },
+            "neighbor-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Neighbor Advertisement"
+            },
+            "neighbor-solicitation": {
+                "IPV6ICMP": "IPv6-ICMP Neighbor Solicitation"
+            },
+            "node-information-query": {
+                "IPV6ICMP": "IPv6-ICMP Node Information Query"
+            },
+            "node-information-response": {
+                "IPV6ICMP": "IPv6-ICMP Node Information Response"
+            },
+            "packet-too-big": {
+                "IPV6ICMP": "IPv6-ICMP Packet Too Big"
+            },
+            "parameter-problem": {
+                "IPV6ICMP": "IPv6-ICMP Parameter Problem"
+            },
+            "redirect": {
+                "ICMP": "ICMP Redirect"
+            },
+            "router-advertisement": {
+                "IPV6ICMP": "IPv6-ICMP Router Advertisement"
+            },
+            "router-renumbering": {
+                "IPV6ICMP": "IPv6-ICMP Router Renumbering"
+            },
+            "router-solicitation": {
+                "ICMP": "ICMP Router Solicitation"
+            },
+            "rpl-control": {
+                "IPV6ICMP": "IPv6-ICMP RPL Control"
+            },
+            "source-quench": {
+                "ICMP": "ICMP Source Quench"
+            },
+            "time-exceeded": {
+                "IPV6ICMP": "IPv6-ICMP Time Exceeded"
+            },
+            "utilized-by-experimental-mobility-protocols": {
+                "IPV6ICMP": "IPv6-ICMP Utilized by Experimental Mobility Protocols"
+            },
+            "version-2-multicast-listener": {
+                "IPV6ICMP": "IPv6-ICMP Version 2 Multicast Listener"
+            }
+        },
+        "by_service_name": {
+            "AD Server": {
+                "TCP": [
+                    "1024"
+                ]
+            },
+            "APP_DCERPC_TCP": {
+                "TCP": [
+                    "135"
+                ]
+            },
+            "APP_DCERPC_UDP": {
+                "UDP": [
+                    "135"
+                ]
+            },
+            "APP_FTP": {
+                "TCP": [
+                    "21"
+                ]
+            },
+            "APP_MSSQL_TCP": {
+                "TCP": [
+                    "1433"
+                ]
+            },
+            "APP_MSSQL_UDP": {
+                "UDP": [
+                    "1433"
+                ]
+            },
+            "APP_ORACLE": {
+                "TCP": [
+                    "1521"
+                ]
+            },
+            "APP_TFTP": {
+                "UDP": [
+                    "69"
+                ]
+            },
+            "Active Directory Server": {
+                "TCP": [
+                    "464"
+                ]
+            },
+            "Active Directory Server UDP": {
+                "UDP": [
+                    "464"
+                ]
+            },
+            "BDS-8081": {
+                "TCP": [
+                    "8081"
+                ]
+            },
+            "CIM-HTTP": {
+                "TCP": [
+                    "5988"
+                ]
+            },
+            "CIM-HTTPS": {
+                "TCP": [
+                    "5989"
+                ]
+            },
+            "DCM Java Object Cache port": {
+                "TCP": [
+                    "7100"
+                ]
+            },
+            "DHCP, MADCAP": {
+                "UDP": [
+                    "2535"
+                ]
+            },
+            "DHCP-Client": {
+                "UDP": [
+                    "68"
+                ]
+            },
+            "DHCP-Server": {
+                "UDP": [
+                    "67"
+                ]
+            },
+            "DHCPv6 Client": {
+                "UDP": [
+                    "546"
+                ]
+            },
+            "DHCPv6 Server": {
+                "UDP": [
+                    "547"
+                ]
+            },
+            "DNS": {
+                "TCP": [
+                    "53"
+                ]
+            },
+            "DNS-UDP": {
+                "UDP": [
+                    "53"
+                ]
+            },
+            "Directory Services": {
+                "TCP": [
+                    "5725"
+                ]
+            },
+            "EdgeSync service": {
+                "TCP": [
+                    "50636"
+                ]
+            },
+            "EdgeSync service/ADAM": {
+                "TCP": [
+                    "50389"
+                ]
+            },
+            "Enterprise Manager RMI port": {
+                "TCP": [
+                    "1850"
+                ]
+            },
+            "Enterprise Manager Reporting port": {
+                "TCP": [
+                    "3339"
+                ]
+            },
+            "Enterprise Manager Servlet port SSL": {
+                "TCP": [
+                    "1810"
+                ]
+            },
+            "Enterprise ManagerAgent port": {
+                "TCP": [
+                    "1831"
+                ]
+            },
+            "Exchange ActiveSync": {
+                "UDP": [
+                    "2883"
+                ]
+            },
+            "FTP": {
+                "FTP": [
+                    "21"
+                ]
+            },
+            "For X.400 connections over TCP": {
+                "TCP": [
+                    "102"
+                ]
+            },
+            "H323 Call Signaling": {
+                "TCP": [
+                    "1720"
+                ]
+            },
+            "H323 Gatekeeper Discovery": {
+                "UDP": [
+                    "1718"
+                ]
+            },
+            "HBR Server App": {
+                "TCP": [
+                    "5480"
+                ]
+            },
+            "HTTP": {
+                "TCP": [
+                    "80"
+                ]
+            },
+            "HTTPS": {
+                "TCP": [
+                    "443"
+                ]
+            },
+            "HTTPS, net.tcp binding": {
+                "TCP": [
+                    "32843",
+                    "32844",
+                    "32845"
+                ]
+            },
+            "HTTPS_16443": {
+                "TCP": [
+                    "16443"
+                ]
+            },
+            "HTTPS_9443": {
+                "TCP": [
+                    "9443"
+                ]
+            },
+            "Horizon 6 APJ13 Forwarded Web Traffic": {
+                "TCP": [
+                    "8009"
+                ]
+            },
+            "Horizon 6 APJ13 Forwarded Web Traffic using IPsec with NAT from Security Server to Connection Server": {
+                "UDP": [
+                    "4500"
+                ]
+            },
+            "Horizon 6 Composer Service to Connection Server": {
+                "TCP": [
+                    "18443"
+                ]
+            },
+            "Horizon 6 Connection Server to Composer Service": {
+                "TCP": [
+                    "18443"
+                ]
+            },
+            "Horizon 6 Connection Server to Connection Server JMS traffic": {
+                "TCP": [
+                    "4100"
+                ]
+            },
+            "Horizon 6 Connection Server to Connection Server traffic": {
+                "TCP": [
+                    "48080"
+                ]
+            },
+            "Horizon 6 Connection Server to Desktop Agent RDP traffic": {
+                "TCP": [
+                    "3389"
+                ]
+            },
+            "Horizon 6 Connection Server to Horizon Client Communication": {
+                "UDP": [
+                    "50001"
+                ]
+            },
+            "Horizon 6 Connection Server to View Composer Service communication": {
+                "TCP": [
+                    "80"
+                ]
+            },
+            "Horizon 6 Connection Server to View Desktop Agent Communication": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 Connection Server to vCenter Server communication": {
+                "TCP": [
+                    "80"
+                ]
+            },
+            "Horizon 6 Connection Server to vCenter server communication": {
+                "TCP": [
+                    "443"
+                ]
+            },
+            "Horizon 6 Default HTTPS Client connection to Connection and Security Servers": {
+                "TCP": [
+                    "443"
+                ]
+            },
+            "Horizon 6 Default HTTPS Client to Connection and Security Servers": {
+                "TCP": [
+                    "80"
+                ]
+            },
+            "Horizon 6 HTML access to Security Server": {
+                "TCP": [
+                    "8443"
+                ]
+            },
+            "Horizon 6 HTMP Access from Security Server to Desktop Agent": {
+                "TCP": [
+                    "22443"
+                ]
+            },
+            "Horizon 6 IPSec Negotiation Traffic from Security Server to Connection Server": {
+                "UDP": [
+                    "500"
+                ]
+            },
+            "Horizon 6 Interpod Communication between Connection Servers": {
+                "TCP": [
+                    "8472"
+                ]
+            },
+            "Horizon 6 JMS Traffic": {
+                "TCP": [
+                    "4001"
+                ]
+            },
+            "Horizon 6 JMS traffic Agent to Connection Server": {
+                "TCP": [
+                    "4002"
+                ]
+            },
+            "Horizon 6 JMS traffic from Agent to Connection Server": {
+                "TCP": [
+                    "4001"
+                ]
+            },
+            "Horizon 6 LDAP repllication between connection servers": {
+                "TCP": [
+                    "22389"
+                ]
+            },
+            "Horizon 6 Microsoft RDP traffic to View Desktop": {
+                "TCP": [
+                    "3389"
+                ]
+            },
+            "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Connection Server": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Security Server": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP TCP Secure Gateway Traffic from Security Server to Desktop Agent": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Connection Server": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Security Server": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Client": {
+                "UDP": [
+                    "50001"
+                ]
+            },
+            "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Desktop Agent": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 PCoIP UDP traffic from View Agent to Client": {
+                "UDP": [
+                    "50001"
+                ]
+            },
+            "Horizon 6 PCoIP UDP traffic from View Agent to Connection Server": {
+                "UDP": [
+                    "55000"
+                ]
+            },
+            "Horizon 6 PCoIP UDP traffic from View Agent to Security Server": {
+                "UDP": [
+                    "55000"
+                ]
+            },
+            "Horizon 6 PCoIP traffic from connection server to desktop agent": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "Horizon 6 Secure Connection Server to View Composer Service communication": {
+                "TCP": [
+                    "443"
+                ]
+            },
+            "Horizon 6 Secure JMS Traffic": {
+                "TCP": [
+                    "4002"
+                ]
+            },
+            "Horizon 6 Secure LDAP replication between Connection Servers": {
+                "TCP": [
+                    "22636"
+                ]
+            },
+            "Horizon 6 USB Access to desktops": {
+                "TCP": [
+                    "32111"
+                ]
+            },
+            "Horizon 6 USB communication from connection server to desktop agent": {
+                "TCP": [
+                    "32111"
+                ]
+            },
+            "Horizon 6 View Composer to ESXi Host Traffic": {
+                "TCP": [
+                    "902"
+                ]
+            },
+            "Horizon 6 Wyse MMR redirection": {
+                "TCP": [
+                    "9427"
+                ]
+            },
+            "Horizon 6 Wyse MMR traffic from connection server to desktop agent": {
+                "TCP": [
+                    "9427"
+                ]
+            },
+            "IBM DB2": {
+                "TCP": [
+                    "5000"
+                ]
+            },
+            "ICMP Destination Unreachable": {
+                "ICMP": [
+                    "destination-unreachable"
+                ]
+            },
+            "ICMP Echo": {
+                "ICMP": [
+                    "echo-request"
+                ]
+            },
+            "ICMP Echo Reply": {
+                "ICMP": [
+                    "echo-reply"
+                ]
+            },
+            "ICMP Redirect": {
+                "ICMP": [
+                    "redirect"
+                ]
+            },
+            "ICMP Router Advertisement": {
+                "ICMP": [
+                    "router-advertisement"
+                ]
+            },
+            "ICMP Router Solicitation": {
+                "ICMP": [
+                    "router-solicitation"
+                ]
+            },
+            "ICMP Source Quench": {
+                "ICMP": [
+                    "source-quench"
+                ]
+            },
+            "ICMP Time Exceeded": {
+                "ICMP": [
+                    "time-exceeded"
+                ]
+            },
+            "ICP-Docker Registry": {
+                "TCP": [
+                    "8500",
+                    "8600"
+                ]
+            },
+            "ICP-Ingress Service": {
+                "TCP": [
+                    "80",
+                    "443",
+                    "8181",
+                    "18080"
+                ]
+            },
+            "ICP-Kubernetes API-Server": {
+                "TCP": [
+                    "8001"
+                ]
+            },
+            "ICP-Kubernetes NodePort": {
+                "TCP": [
+                    "30000-32767"
+                ]
+            },
+            "ICP-Management Console": {
+                "TCP": [
+                    "8080",
+                    "8443"
+                ]
+            },
+            "ICP-WebSphere Application Server Liberty": {
+                "TCP": [
+                    "9443"
+                ]
+            },
+            "IKE (Key Exchange)": {
+                "UDP": [
+                    "500"
+                ]
+            },
+            "IKE (Traversal)": {
+                "UDP": [
+                    "4500"
+                ]
+            },
+            "IMAP": {
+                "TCP": [
+                    "143"
+                ]
+            },
+            "IMAP_SSL": {
+                "TCP": [
+                    "993"
+                ]
+            },
+            "IPv6-ICMP Certification Path Advertisement": {
+                "IPV6ICMP": [
+                    "certification-path-advertisement"
+                ]
+            },
+            "IPv6-ICMP Certification Path Solicitation": {
+                "IPV6ICMP": [
+                    "certification-path-solicitation"
+                ]
+            },
+            "IPv6-ICMP Destination Unreachable": {
+                "IPV6ICMP": [
+                    "destination-unreachable"
+                ]
+            },
+            "IPv6-ICMP Duplicate Address Confirmation": {
+                "IPV6ICMP": [
+                    "duplicate-address-confirmation"
+                ]
+            },
+            "IPv6-ICMP Duplicate Address Request": {
+                "IPV6ICMP": [
+                    "duplicate-address-request"
+                ]
+            },
+            "IPv6-ICMP Echo": {
+                "IPV6ICMP": [
+                    "echo-request"
+                ]
+            },
+            "IPv6-ICMP Echo Reply": {
+                "IPV6ICMP": [
+                    "echo-reply"
+                ]
+            },
+            "IPv6-ICMP FMIPv6": {
+                "IPV6ICMP": [
+                    "fmipv6"
+                ]
+            },
+            "IPv6-ICMP Home Agent Address Discovery Reply": {
+                "IPV6ICMP": [
+                    "home-agent-address-discovery-reply"
+                ]
+            },
+            "IPv6-ICMP Home Agent Address Discovery Request": {
+                "IPV6ICMP": [
+                    "home-agent-address-discovery-request"
+                ]
+            },
+            "IPv6-ICMP ILNPv6 Locator Update": {
+                "IPV6ICMP": [
+                    "ilnpv6-locator-update"
+                ]
+            },
+            "IPv6-ICMP Inverse Neighbor Discovery Advertisement": {
+                "IPV6ICMP": [
+                    "inverse-neighbor-discovery-advertisement"
+                ]
+            },
+            "IPv6-ICMP Inverse Neighbor Discovery Solicitation": {
+                "IPV6ICMP": [
+                    "inverse-neighbor-discovery-solicitation"
+                ]
+            },
+            "IPv6-ICMP MPL Control": {
+                "IPV6ICMP": [
+                    "mpl-control"
+                ]
+            },
+            "IPv6-ICMP Mobile Prefix Advertisement": {
+                "IPV6ICMP": [
+                    "mobile-prefix-advertisement"
+                ]
+            },
+            "IPv6-ICMP Multicast Listener Done": {
+                "IPV6ICMP": [
+                    "multicast-listener-done"
+                ]
+            },
+            "IPv6-ICMP Multicast Listener Query": {
+                "IPV6ICMP": [
+                    "multicast-listener-query"
+                ]
+            },
+            "IPv6-ICMP Multicast Listener Report": {
+                "IPV6ICMP": [
+                    "multicast-listener-report"
+                ]
+            },
+            "IPv6-ICMP Multicast Router Advertisement": {
+                "IPV6ICMP": [
+                    "multicast-router-advertisement"
+                ]
+            },
+            "IPv6-ICMP Multicast Router Solicitation": {
+                "IPV6ICMP": [
+                    "multicast-router-solicitation"
+                ]
+            },
+            "IPv6-ICMP Multicast Router Termination": {
+                "IPV6ICMP": [
+                    "multicast-router-termination"
+                ]
+            },
+            "IPv6-ICMP NMobile Prefix Solicitation": {
+                "IPV6ICMP": [
+                    "mobile-prefix-solicitation"
+                ]
+            },
+            "IPv6-ICMP Neighbor Advertisement": {
+                "IPV6ICMP": [
+                    "neighbor-advertisement"
+                ]
+            },
+            "IPv6-ICMP Neighbor Solicitation": {
+                "IPV6ICMP": [
+                    "neighbor-solicitation"
+                ]
+            },
+            "IPv6-ICMP Node Information Query": {
+                "IPV6ICMP": [
+                    "node-information-query"
+                ]
+            },
+            "IPv6-ICMP Node Information Response": {
+                "IPV6ICMP": [
+                    "node-information-response"
+                ]
+            },
+            "IPv6-ICMP Packet Too Big": {
+                "IPV6ICMP": [
+                    "packet-too-big"
+                ]
+            },
+            "IPv6-ICMP Parameter Problem": {
+                "IPV6ICMP": [
+                    "parameter-problem"
+                ]
+            },
+            "IPv6-ICMP RPL Control": {
+                "IPV6ICMP": [
+                    "rpl-control"
+                ]
+            },
+            "IPv6-ICMP Redirect": {
+                "IPV6ICMP": [
+                    "redirect"
+                ]
+            },
+            "IPv6-ICMP Router Advertisement": {
+                "IPV6ICMP": [
+                    "router-advertisement"
+                ]
+            },
+            "IPv6-ICMP Router Renumbering": {
+                "IPV6ICMP": [
+                    "router-renumbering"
+                ]
+            },
+            "IPv6-ICMP Router Solicitation": {
+                "IPV6ICMP": [
+                    "router-solicitation"
+                ]
+            },
+            "IPv6-ICMP Time Exceeded": {
+                "IPV6ICMP": [
+                    "time-exceeded"
+                ]
+            },
+            "IPv6-ICMP Utilized by Experimental Mobility Protocols": {
+                "IPV6ICMP": [
+                    "utilized-by-experimental-mobility-protocols"
+                ]
+            },
+            "IPv6-ICMP Version 2 Multicast Listener": {
+                "IPV6ICMP": [
+                    "version-2-multicast-listener"
+                ]
+            },
+            "ISAKMP": {
+                "UDP": [
+                    "500"
+                ]
+            },
+            "ISIM-6_1": {
+                "TCP": [
+                    "22",
+                    "80",
+                    "2809",
+                    "2810",
+                    "2811",
+                    "5000",
+                    "5001",
+                    "7060",
+                    "7062",
+                    "7272",
+                    "7277",
+                    "7286",
+                    "7287",
+                    "8878",
+                    "8879"
+                ]
+            },
+            "ISIM-6_2": {
+                "TCP": [
+                    "8880",
+                    "8881",
+                    "9043",
+                    "9080",
+                    "9060",
+                    "9201",
+                    "9202",
+                    "9353",
+                    "9629",
+                    "9900",
+                    "9901",
+                    "11003",
+                    "11004",
+                    "2812",
+                    "5060"
+                ]
+            },
+            "ISIM-6_3": {
+                "TCP": [
+                    "5061-5063",
+                    "5558",
+                    "5559",
+                    "5578",
+                    "5579",
+                    "7276",
+                    "7278",
+                    "9044",
+                    "9045",
+                    "9061",
+                    "9062",
+                    "9080",
+                    "9081"
+                ]
+            },
+            "ISIM-6_4": {
+                "TCP": [
+                    "9354",
+                    "9355",
+                    "9356",
+                    "9404-9409",
+                    "9443",
+                    "9444",
+                    "9633",
+                    "9634",
+                    "11005-11010",
+                    "17231",
+                    "17232"
+                ]
+            },
+            "ISPW-CDI": {
+                "TCP": [
+                    "12041"
+                ]
+            },
+            "Java Object Cache port": {
+                "TCP": [
+                    "7000"
+                ]
+            },
+            "KERBEROS": {
+                "TCP": [
+                    "88"
+                ]
+            },
+            "KERBEROS-TCP": {
+                "TCP": [
+                    "88"
+                ]
+            },
+            "KERBEROS-UDP": {
+                "UDP": [
+                    "88"
+                ]
+            },
+            "LDAP": {
+                "TCP": [
+                    "389"
+                ]
+            },
+            "LDAP Global Catalog": {
+                "TCP": [
+                    "3268"
+                ]
+            },
+            "LDAP-UDP": {
+                "UDP": [
+                    "389"
+                ]
+            },
+            "LDAP-over-SSL": {
+                "TCP": [
+                    "636"
+                ]
+            },
+            "LDAP-over-SSL-UDP": {
+                "UDP": [
+                    "636"
+                ]
+            },
+            "Log Loader": {
+                "TCP": [
+                    "44000"
+                ]
+            },
+            "MGCP (TCP)": {
+                "TCP": [
+                    "2428"
+                ]
+            },
+            "MGCP (UDP)": {
+                "UDP": [
+                    "2427"
+                ]
+            },
+            "MS Customizable": {
+                "TCP": [
+                    "64327"
+                ]
+            },
+            "MS Replication service": {
+                "TCP": [
+                    "808"
+                ]
+            },
+            "MS Unified Messaging server": {
+                "TCP": [
+                    "5060",
+                    "5061",
+                    "5062"
+                ]
+            },
+            "MS Unified Messaging server - Client Access": {
+                "TCP": [
+                    "5075",
+                    "5076",
+                    "5077"
+                ]
+            },
+            "MS Unified Messaging server-Phone": {
+                "TCP": [
+                    "5060",
+                    "5061",
+                    "5065",
+                    "5066",
+                    "5067",
+                    "5068"
+                ]
+            },
+            "MS-DS": {
+                "TCP": [
+                    "445"
+                ]
+            },
+            "MS-DS-TCP": {
+                "TCP": [
+                    "445"
+                ]
+            },
+            "MS-DS-UDP": {
+                "UDP": [
+                    "445"
+                ]
+            },
+            "MS-SQL-M": {
+                "UDP": [
+                    "1434"
+                ]
+            },
+            "MS-SQL-M-TCP": {
+                "TCP": [
+                    "1434"
+                ]
+            },
+            "MS-SQL-S": {
+                "TCP": [
+                    "1433"
+                ]
+            },
+            "MSN (TCP)": {
+                "TCP": [
+                    "1863"
+                ]
+            },
+            "MSN (UDP)": {
+                "UDP": [
+                    "1863"
+                ]
+            },
+            "MS_RPC_TCP": {
+                "MS_RPC_TCP": [
+                    "135"
+                ]
+            },
+            "MS_RPC_UDP": {
+                "MS_RPC_UDP": [
+                    "135"
+                ]
+            },
+            "Microsoft Media Server (TCP)": {
+                "TCP": [
+                    "1755"
+                ]
+            },
+            "Microsoft Media Server (UDP)": {
+                "UDP": [
+                    "1755"
+                ]
+            },
+            "MySQL": {
+                "TCP": [
+                    "3306"
+                ]
+            },
+            "NBDG-Broadcast": {
+                "UDP": [
+                    "138"
+                ]
+            },
+            "NBDG-Unicast": {
+                "UDP": [
+                    "138"
+                ]
+            },
+            "NBNS-Broadcast": {
+                "UDP": [
+                    "137"
+                ]
+            },
+            "NBNS-Unicast": {
+                "UDP": [
+                    "137"
+                ]
+            },
+            "NBSS": {
+                "TCP": [
+                    "139"
+                ]
+            },
+            "NFS (TCP)": {
+                "TCP": [
+                    "2049"
+                ]
+            },
+            "NFS (UDP)": {
+                "UDP": [
+                    "2049"
+                ]
+            },
+            "NFS Client": {
+                "TCP": [
+                    "111"
+                ]
+            },
+            "NFS Client UDP": {
+                "UDP": [
+                    "111"
+                ]
+            },
+            "NFS-Server-TCP": {
+                "TCP": [
+                    "2049"
+                ]
+            },
+            "NFS-Server-UDP": {
+                "UDP": [
+                    "2049"
+                ]
+            },
+            "NNTP": {
+                "TCP": [
+                    "119"
+                ]
+            },
+            "NNTP_SSL": {
+                "TCP": [
+                    "563"
+                ]
+            },
+            "NTP": {
+                "UDP": [
+                    "123"
+                ]
+            },
+            "NTP Time Server": {
+                "UDP": [
+                    "123"
+                ]
+            },
+            "NTP-TCP": {
+                "TCP": [
+                    "123"
+                ]
+            },
+            "NetBios Datagram (TCP)": {
+                "TCP": [
+                    "138"
+                ]
+            },
+            "NetBios Datagram (UDP)": {
+                "UDP": [
+                    "138"
+                ]
+            },
+            "NetBios Name Service (TCP)": {
+                "TCP": [
+                    "137"
+                ]
+            },
+            "NetBios Name Service (UDP)": {
+                "UDP": [
+                    "137"
+                ]
+            },
+            "NetBios Session Service (TCP)": {
+                "TCP": [
+                    "139"
+                ]
+            },
+            "NetBios Session Service (UDP)": {
+                "UDP": [
+                    "139"
+                ]
+            },
+            "Netcool_16443": {
+                "TCP": [
+                    "16443"
+                ]
+            },
+            "Netcool_16443-17443": {
+                "TCP": [
+                    "16443-17443"
+                ]
+            },
+            "OC4J Forms / Reports Instance": {
+                "TCP": [
+                    "8888"
+                ]
+            },
+            "OC4J Forms / Reports Instance (8889)": {
+                "TCP": [
+                    "8889"
+                ]
+            },
+            "ORACLE-FORM-SERVICES": {
+                "TCP": [
+                    "9000"
+                ]
+            },
+            "ORACLE-HTTP": {
+                "TCP": [
+                    "7777"
+                ]
+            },
+            "ORACLE-XDB-FTP": {
+                "TCP": [
+                    "2100"
+                ]
+            },
+            "ORACLE_TNS": {
+                "ORACLE_TNS": [
+                    "1521"
+                ]
+            },
+            "OS Agent": {
+                "TCP": [
+                    "14000"
+                ]
+            },
+            "Office Server Web Services, HTTP, SSL": {
+                "TCP": [
+                    "56737",
+                    "56738"
+                ]
+            },
+            "Office communication server": {
+                "TCP": [
+                    "5075",
+                    "5076",
+                    "5077"
+                ]
+            },
+            "Oracle": {
+                "TCP": [
+                    "1521"
+                ]
+            },
+            "Oracle Connection Manager (CMAN)": {
+                "TCP": [
+                    "1630"
+                ]
+            },
+            "Oracle Connection Manager Admin (CMAN)": {
+                "TCP": [
+                    "1830"
+                ]
+            },
+            "Oracle Enterprise Manager Web Console": {
+                "TCP": [
+                    "5500"
+                ]
+            },
+            "Oracle Forms Server 6 / 6i": {
+                "TCP": [
+                    "9000"
+                ]
+            },
+            "Oracle GIOP IIOP": {
+                "TCP": [
+                    "2481"
+                ]
+            },
+            "Oracle GIOP IIOP for SSL": {
+                "TCP": [
+                    "2482"
+                ]
+            },
+            "Oracle HTTP Server Diagnostic Port": {
+                "TCP": [
+                    "7200"
+                ]
+            },
+            "Oracle HTTP Server Jserv port": {
+                "TCP": [
+                    "8007"
+                ]
+            },
+            "Oracle HTTP Server Port Tunneling": {
+                "TCP": [
+                    "7501"
+                ]
+            },
+            "Oracle HTTP Server SSL port": {
+                "TCP": [
+                    "4443"
+                ]
+            },
+            "Oracle HTTP Server listen port": {
+                "TCP": [
+                    "7778"
+                ]
+            },
+            "Oracle HTTP Server port": {
+                "TCP": [
+                    "7777"
+                ]
+            },
+            "Oracle Intelligent Agent (1748)": {
+                "TCP": [
+                    "1748"
+                ]
+            },
+            "Oracle Intelligent Agent (1754)": {
+                "TCP": [
+                    "1754"
+                ]
+            },
+            "Oracle Intelligent Agent (1808)": {
+                "TCP": [
+                    "1808"
+                ]
+            },
+            "Oracle Intelligent Agent (1809)": {
+                "TCP": [
+                    "1809"
+                ]
+            },
+            "Oracle Internet Directory(SSL)": {
+                "TCP": [
+                    "636"
+                ]
+            },
+            "Oracle Internet Directory(SSL, 4031)": {
+                "TCP": [
+                    "4031"
+                ]
+            },
+            "Oracle Internet Directory(non-SSL)": {
+                "TCP": [
+                    "389"
+                ]
+            },
+            "Oracle Internet Directory(non-SSL, 4032)": {
+                "TCP": [
+                    "4032"
+                ]
+            },
+            "Oracle JDBC for Rdb Thin Server": {
+                "TCP": [
+                    "1701"
+                ]
+            },
+            "Oracle Names": {
+                "TCP": [
+                    "1575"
+                ]
+            },
+            "Oracle Net Listener": {
+                "TCP": [
+                    "1526"
+                ]
+            },
+            "Oracle Net Listener / Enterprise Manager Repository port": {
+                "TCP": [
+                    "1521"
+                ]
+            },
+            "Oracle Notification Service local port": {
+                "TCP": [
+                    "6100"
+                ]
+            },
+            "Oracle Notification Service remote port": {
+                "TCP": [
+                    "6200"
+                ]
+            },
+            "Oracle Notification Service request port": {
+                "TCP": [
+                    "6003"
+                ]
+            },
+            "Oracle OC4J AJP": {
+                "TCP": [
+                    "3301"
+                ]
+            },
+            "Oracle OC4J IIOP": {
+                "TCP": [
+                    "3401"
+                ]
+            },
+            "Oracle OC4J IIOPS1": {
+                "TCP": [
+                    "3501"
+                ]
+            },
+            "Oracle OC4J IIOPS2": {
+                "TCP": [
+                    "3601"
+                ]
+            },
+            "Oracle OC4J JMS": {
+                "TCP": [
+                    "3701"
+                ]
+            },
+            "Oracle OC4J RMI": {
+                "TCP": [
+                    "3201"
+                ]
+            },
+            "Oracle SOAP Server": {
+                "TCP": [
+                    "9998"
+                ]
+            },
+            "Oracle Times Ten (15000)": {
+                "TCP": [
+                    "15000"
+                ]
+            },
+            "Oracle Times Ten (15002)": {
+                "TCP": [
+                    "15002"
+                ]
+            },
+            "Oracle Times Ten (15004)": {
+                "TCP": [
+                    "15004"
+                ]
+            },
+            "Oracle TimesTen": {
+                "TCP": [
+                    "4662"
+                ]
+            },
+            "Oracle TimesTen (4758)": {
+                "TCP": [
+                    "4758"
+                ]
+            },
+            "Oracle TimesTen (4759)": {
+                "TCP": [
+                    "4759"
+                ]
+            },
+            "Oracle TimesTen (4761)": {
+                "TCP": [
+                    "4761"
+                ]
+            },
+            "Oracle TimesTen (4764)": {
+                "TCP": [
+                    "4764"
+                ]
+            },
+            "Oracle TimesTen (4766)": {
+                "TCP": [
+                    "4766"
+                ]
+            },
+            "Oracle TimesTen (4767)": {
+                "TCP": [
+                    "4767"
+                ]
+            },
+            "Oracle XMLDB FTP Port": {
+                "TCP": [
+                    "2100"
+                ]
+            },
+            "Oracle XMLDB HTTP port": {
+                "TCP": [
+                    "8080"
+                ]
+            },
+            "Oracle-2": {
+                "TCP": [
+                    "1526"
+                ]
+            },
+            "Oracle9iAS Clickstream Collector Agent": {
+                "TCP": [
+                    "6668"
+                ]
+            },
+            "Oracle9iAS Web Cache Admin port": {
+                "TCP": [
+                    "4000"
+                ]
+            },
+            "Oracle9iAS Web Cache HTTP Listen(SSL) port": {
+                "TCP": [
+                    "4444"
+                ]
+            },
+            "Oracle9iAS Web Cache HTTP Listen(non-SSL) port": {
+                "TCP": [
+                    "7779"
+                ]
+            },
+            "Oracle9iAS Web Cache Invalidation port": {
+                "TCP": [
+                    "4001"
+                ]
+            },
+            "Oracle9iAS Web Cache Statistics port": {
+                "TCP": [
+                    "4002"
+                ]
+            },
+            "OracleAS Certificate Authority (OCA) - Mutual Authentication": {
+                "TCP": [
+                    "4401"
+                ]
+            },
+            "OracleAS Certificate Authority (OCA) - Server Authentication": {
+                "TCP": [
+                    "4400"
+                ]
+            },
+            "PC Anywhere (TCP)": {
+                "TCP": [
+                    "5631"
+                ]
+            },
+            "PC Anywhere (UDP)": {
+                "UDP": [
+                    "5632"
+                ]
+            },
+            "POP3": {
+                "TCP": [
+                    "110"
+                ]
+            },
+            "POP3_SSL": {
+                "TCP": [
+                    "995"
+                ]
+            },
+            "PSN-PAN-TCP": {
+                "TCP": [
+                    "1468",
+                    "6514",
+                    "12001",
+                    "8671",
+                    "443",
+                    "15672",
+                    "6379"
+                ]
+            },
+            "PSN-PAN-UDP": {
+                "UDP": [
+                    "20514",
+                    "1700",
+                    "3799"
+                ]
+            },
+            "Pentest-16351": {
+                "TCP": [
+                    "16351"
+                ]
+            },
+            "PostgreSQL": {
+                "TCP": [
+                    "5432"
+                ]
+            },
+            "RDP": {
+                "TCP": [
+                    "3389"
+                ]
+            },
+            "RFB": {
+                "TCP": [
+                    "5900-5964"
+                ]
+            },
+            "RPC, DFSR (SYSVOL)": {
+                "TCP": [
+                    "5722"
+                ]
+            },
+            "RTSP (TCP)": {
+                "TCP": [
+                    "554"
+                ]
+            },
+            "RTSP (UDP)": {
+                "UDP": [
+                    "554"
+                ]
+            },
+            "Routing Engine service": {
+                "TCP": [
+                    "691"
+                ]
+            },
+            "SAP Admin console": {
+                "TCP": [
+                    "20005"
+                ]
+            },
+            "SAP Alert Server": {
+                "TCP": [
+                    "30011"
+                ]
+            },
+            "SAP Backup Server": {
+                "TCP": [
+                    "30017"
+                ]
+            },
+            "SAP Cache Server": {
+                "TCP": [
+                    "1095"
+                ]
+            },
+            "SAP Central Software Deployment Manager": {
+                "TCP": [
+                    "20201"
+                ]
+            },
+            "SAP Comm": {
+                "TCP": [
+                    "20003"
+                ]
+            },
+            "SAP Content Server": {
+                "TCP": [
+                    "1090"
+                ]
+            },
+            "SAP Cruiser": {
+                "TCP": [
+                    "30008"
+                ]
+            },
+            "SAP Design Time Repository": {
+                "TCP": [
+                    "50015"
+                ]
+            },
+            "SAP Dispatcher": {
+                "TCP": [
+                    "3200"
+                ]
+            },
+            "SAP Dispatcher Netweaver App Server": {
+                "UDP": [
+                    "3200"
+                ]
+            },
+            "SAP Enqueue Repl 2": {
+                "TCP": [
+                    "50116"
+                ]
+            },
+            "SAP Enqueue Svr": {
+                "TCP": [
+                    "3201"
+                ]
+            },
+            "SAP Exchange Groupware Connector (DCOM)": {
+                "TCP": [
+                    "135"
+                ]
+            },
+            "SAP File Adapter": {
+                "TCP": [
+                    "8230"
+                ]
+            },
+            "SAP GRMG Service (Heartbeat)": {
+                "TCP": [
+                    "30006"
+                ]
+            },
+            "SAP Gateway Netweaver App Server": {
+                "UDP": [
+                    "3300"
+                ]
+            },
+            "SAP HTTP": {
+                "TCP": [
+                    "50000"
+                ]
+            },
+            "SAP HTTP Server": {
+                "TCP": [
+                    "30005"
+                ]
+            },
+            "SAP HTTP Server 2": {
+                "TCP": [
+                    "8353"
+                ]
+            },
+            "SAP HTTPS": {
+                "TCP": [
+                    "50001"
+                ]
+            },
+            "SAP HostControl": {
+                "TCP": [
+                    "1128"
+                ]
+            },
+            "SAP HostControlS": {
+                "TCP": [
+                    "1129"
+                ]
+            },
+            "SAP IBM": {
+                "TCP": [
+                    "50000",
+                    "4402"
+                ]
+            },
+            "SAP ICM HTTP": {
+                "TCP": [
+                    "8000"
+                ]
+            },
+            "SAP IIOP": {
+                "TCP": [
+                    "50007"
+                ]
+            },
+            "SAP IIOP initial": {
+                "TCP": [
+                    "50002"
+                ]
+            },
+            "SAP IIOPS": {
+                "TCP": [
+                    "50003"
+                ]
+            },
+            "SAP IPC Dispatcher Mobile client": {
+                "TCP": [
+                    "4444"
+                ]
+            },
+            "SAP IPC Dispatcher Mobile client 2": {
+                "TCP": [
+                    "4363"
+                ]
+            },
+            "SAP IPC Server": {
+                "TCP": [
+                    "9999"
+                ]
+            },
+            "SAP IPC data loader": {
+                "TCP": [
+                    "4445"
+                ]
+            },
+            "SAP Import Mgr": {
+                "TCP": [
+                    "20006"
+                ]
+            },
+            "SAP Index Server": {
+                "TCP": [
+                    "30003"
+                ]
+            },
+            "SAP Index Server 2": {
+                "TCP": [
+                    "8351"
+                ]
+            },
+            "SAP Inst": {
+                "TCP": [
+                    "21212",
+                    "21213"
+                ]
+            },
+            "SAP Inst on IBM": {
+                "TCP": [
+                    "59975",
+                    "59976"
+                ]
+            },
+            "SAP Inter Server COmm": {
+                "TCP": [
+                    "20004"
+                ]
+            },
+            "SAP JDBCAdapter": {
+                "TCP": [
+                    "8220"
+                ]
+            },
+            "SAP JMS": {
+                "TCP": [
+                    "50010"
+                ]
+            },
+            "SAP JMS Adapter": {
+                "TCP": [
+                    "8210"
+                ]
+            },
+            "SAP JMS/JDBC/File Adapter Server": {
+                "TCP": [
+                    "8200"
+                ]
+            },
+            "SAP Java Debug": {
+                "TCP": [
+                    "50021"
+                ]
+            },
+            "SAP Java Join": {
+                "TCP": [
+                    "50020"
+                ]
+            },
+            "SAP Layout Server": {
+                "TCP": [
+                    "31596",
+                    "31597",
+                    "31604"
+                ]
+            },
+            "SAP Layout Server 2": {
+                "TCP": [
+                    "31596"
+                ]
+            },
+            "SAP Layout Server Adobe InDesign": {
+                "TCP": [
+                    "31603"
+                ]
+            },
+            "SAP Layout Server Quark Express": {
+                "TCP": [
+                    "31602"
+                ]
+            },
+            "SAP LiveCache": {
+                "TCP": [
+                    "7200",
+                    "7210",
+                    "7269",
+                    "7270",
+                    "7575"
+                ]
+            },
+            "SAP Lotus Domino - Connector": {
+                "TCP": [
+                    "62026-62029"
+                ]
+            },
+            "SAP Lotus Domino - Proxy": {
+                "TCP": [
+                    "62126-62129"
+                ]
+            },
+            "SAP MDM Server": {
+                "TCP": [
+                    "2000-2002"
+                ]
+            },
+            "SAP Mapping Manager": {
+                "TCP": [
+                    "3909"
+                ]
+            },
+            "SAP Message Server HTTP": {
+                "TCP": [
+                    "8100"
+                ]
+            },
+            "SAP Monitoring (GRMG)": {
+                "TCP": [
+                    "8366"
+                ]
+            },
+            "SAP Msg Svr": {
+                "TCP": [
+                    "3600"
+                ]
+            },
+            "SAP Msg Svr 2": {
+                "TCP": [
+                    "3601"
+                ]
+            },
+            "SAP Msg Svr HTTP": {
+                "TCP": [
+                    "8101"
+                ]
+            },
+            "SAP Name Server": {
+                "TCP": [
+                    "30001"
+                ]
+            },
+            "SAP Name Server 2": {
+                "TCP": [
+                    "8355"
+                ]
+            },
+            "SAP Oracle Listener": {
+                "TCP": [
+                    "1527"
+                ]
+            },
+            "SAP P4": {
+                "TCP": [
+                    "50004"
+                ]
+            },
+            "SAP P4 over HTTP": {
+                "TCP": [
+                    "50005"
+                ]
+            },
+            "SAP P4 over SSL": {
+                "TCP": [
+                    "50006"
+                ]
+            },
+            "SAP PAW Communication Server": {
+                "TCP": [
+                    "1099"
+                ]
+            },
+            "SAP PAW Servlet Engine": {
+                "TCP": [
+                    "1089"
+                ]
+            },
+            "SAP Pre Processor": {
+                "TCP": [
+                    "30002"
+                ]
+            },
+            "SAP Pre Processor 2": {
+                "TCP": [
+                    "8357"
+                ]
+            },
+            "SAP Queue Server": {
+                "TCP": [
+                    "30004"
+                ]
+            },
+            "SAP Queue Server 2": {
+                "TCP": [
+                    "8352"
+                ]
+            },
+            "SAP RFC Server": {
+                "TCP": [
+                    "30007"
+                ]
+            },
+            "SAP Router": {
+                "TCP": [
+                    "3299"
+                ]
+            },
+            "SAP SDM/SL": {
+                "TCP": [
+                    "50017",
+                    "50018",
+                    "50019"
+                ]
+            },
+            "SAP SNC secured gateway": {
+                "TCP": [
+                    "4800"
+                ]
+            },
+            "SAP Start Service": {
+                "TCP": [
+                    "50013"
+                ]
+            },
+            "SAP Start Service 2": {
+                "TCP": [
+                    "50014"
+                ]
+            },
+            "SAP Syndicator Service": {
+                "TCP": [
+                    "20007"
+                ]
+            },
+            "SAP Telnet": {
+                "TCP": [
+                    "50008"
+                ]
+            },
+            "SAP Upgrade": {
+                "TCP": [
+                    "4238",
+                    "4239",
+                    "4240",
+                    "4241"
+                ]
+            },
+            "SAP gateway - CPIC/RFC": {
+                "TCP": [
+                    "3300"
+                ]
+            },
+            "SAP gateway/replication": {
+                "TCP": [
+                    "3301"
+                ]
+            },
+            "SAP network Test Program": {
+                "TCP": [
+                    "3298"
+                ]
+            },
+            "SAP printer spooler": {
+                "TCP": [
+                    "515"
+                ]
+            },
+            "SIP 5060": {
+                "UDP": [
+                    "5060"
+                ]
+            },
+            "SIP 5061": {
+                "UDP": [
+                    "5061"
+                ]
+            },
+            "SMB": {
+                "TCP": [
+                    "445"
+                ]
+            },
+            "SMB Server": {
+                "TCP": [
+                    "445"
+                ]
+            },
+            "SMB Server UDP": {
+                "UDP": [
+                    "445"
+                ]
+            },
+            "SMTP": {
+                "TCP": [
+                    "25"
+                ]
+            },
+            "SMTP_TLS": {
+                "TCP": [
+                    "587"
+                ]
+            },
+            "SNMP": {
+                "UDP": [
+                    "161"
+                ]
+            },
+            "SNMP-Recieve": {
+                "UDP": [
+                    "161"
+                ]
+            },
+            "SNMP-Send": {
+                "UDP": [
+                    "162"
+                ]
+            },
+            "SNMP-Send-TCP": {
+                "TCP": [
+                    "162"
+                ]
+            },
+            "SNMP-TCP": {
+                "TCP": [
+                    "161"
+                ]
+            },
+            "SOAP": {
+                "TCP": [
+                    "9389"
+                ]
+            },
+            "SQL Analysis service": {
+                "TCP": [
+                    "2383"
+                ]
+            },
+            "SQL Server Browser service": {
+                "TCP": [
+                    "2382"
+                ]
+            },
+            "SSH": {
+                "TCP": [
+                    "22"
+                ]
+            },
+            "SUN_RPC_TCP": {
+                "SUN_RPC_TCP": [
+                    "111"
+                ]
+            },
+            "SUN_RPC_UDP": {
+                "SUN_RPC_UDP": [
+                    "111"
+                ]
+            },
+            "Server Message Block (SMB)": {
+                "TCP": [
+                    "137",
+                    "138",
+                    "139"
+                ]
+            },
+            "Site Replication service": {
+                "TCP": [
+                    "379"
+                ]
+            },
+            "Skinny": {
+                "TCP": [
+                    "2000"
+                ]
+            },
+            "Syslog (TCP)": {
+                "TCP": [
+                    "514"
+                ]
+            },
+            "Syslog (UDP)": {
+                "UDP": [
+                    "514"
+                ]
+            },
+            "Syslog-Server": {
+                "TCP": [
+                    "514"
+                ]
+            },
+            "Syslog-Server-UDP": {
+                "UDP": [
+                    "514"
+                ]
+            },
+            "T120 (Whiteboard A43)": {
+                "TCP": [
+                    "1503"
+                ]
+            },
+            "TCP-10002": {
+                "TCP": [
+                    "10002"
+                ]
+            },
+            "TCP-10443": {
+                "TCP": [
+                    "10443"
+                ]
+            },
+            "TCP-123": {
+                "TCP": [
+                    "123"
+                ]
+            },
+            "TCP-1433": {
+                "TCP": [
+                    "1433"
+                ]
+            },
+            "TCP-1443": {
+                "TCP": [
+                    "1443"
+                ]
+            },
+            "TCP-16311": {
+                "TCP": [
+                    "16311"
+                ]
+            },
+            "TCP-1812": {
+                "TCP": [
+                    "1812"
+                ]
+            },
+            "TCP-20048": {
+                "TCP": [
+                    "20048"
+                ]
+            },
+            "TCP-2048": {
+                "TCP": [
+                    "2048"
+                ]
+            },
+            "TCP-2049": {
+                "TCP": [
+                    "2049"
+                ]
+            },
+            "TCP-21666": {
+                "TCP": [
+                    "21666"
+                ]
+            },
+            "TCP-2525": {
+                "TCP": [
+                    "2525"
+                ]
+            },
+            "TCP-2526": {
+                "TCP": [
+                    "2526"
+                ]
+            },
+            "TCP-32369": {
+                "TCP": [
+                    "32369"
+                ]
+            },
+            "TCP-3268-3269": {
+                "TCP": [
+                    "3268-3269"
+                ]
+            },
+            "TCP-3390": {
+                "TCP": [
+                    "3390"
+                ]
+            },
+            "TCP-4421": {
+                "TCP": [
+                    "4421"
+                ]
+            },
+            "TCP-4501": {
+                "TCP": [
+                    "4501"
+                ]
+            },
+            "TCP-45666": {
+                "TCP": [
+                    "45666"
+                ]
+            },
+            "TCP-49": {
+                "TCP": [
+                    "49"
+                ]
+            },
+            "TCP-5671": {
+                "TCP": [
+                    "5671"
+                ]
+            },
+            "TCP-5672": {
+                "TCP": [
+                    "5672"
+                ]
+            },
+            "TCP-5696": {
+                "TCP": [
+                    "5696"
+                ]
+            },
+            "TCP-60000": {
+                "TCP": [
+                    "60000"
+                ]
+            },
+            "TCP-601": {
+                "TCP": [
+                    "601"
+                ]
+            },
+            "TCP-6443": {
+                "TCP": [
+                    "6443"
+                ]
+            },
+            "TCP-694": {
+                "TCP": [
+                    "694"
+                ]
+            },
+            "TCP-7234": {
+                "TCP": [
+                    "7234"
+                ]
+            },
+            "TCP-7788": {
+                "TCP": [
+                    "7788"
+                ]
+            },
+            "TCP-8000": {
+                "TCP": [
+                    "8000"
+                ]
+            },
+            "TCP-8089": {
+                "TCP": [
+                    "8089"
+                ]
+            },
+            "TCP-88": {
+                "TCP": [
+                    "88"
+                ]
+            },
+            "TCP-9081": {
+                "TCP": [
+                    "9081"
+                ]
+            },
+            "TCP-9997": {
+                "TCP": [
+                    "9997"
+                ]
+            },
+            "TCP-9998": {
+                "TCP": [
+                    "9998"
+                ]
+            },
+            "TCP-9999": {
+                "TCP": [
+                    "9999"
+                ]
+            },
+            "TELNET": {
+                "TCP": [
+                    "23"
+                ]
+            },
+            "TFTP": {
+                "UDP": [
+                    "69"
+                ]
+            },
+            "Terminal Services (TCP)": {
+                "TCP": [
+                    "3389"
+                ]
+            },
+            "Terminal Services (UDP)": {
+                "UDP": [
+                    "3389"
+                ]
+            },
+            "UDP-111": {
+                "UDP": [
+                    "111"
+                ]
+            },
+            "UDP-139": {
+                "UDP": [
+                    "139"
+                ]
+            },
+            "UDP-20048": {
+                "UDP": [
+                    "20048"
+                ]
+            },
+            "UDP-2048": {
+                "UDP": [
+                    "2048"
+                ]
+            },
+            "UDP-2049": {
+                "UDP": [
+                    "2049"
+                ]
+            },
+            "UDP-21666": {
+                "UDP": [
+                    "21666"
+                ]
+            },
+            "UDP-3389": {
+                "UDP": [
+                    "3389"
+                ]
+            },
+            "UDP-45666": {
+                "UDP": [
+                    "45666"
+                ]
+            },
+            "UDP-5555": {
+                "UDP": [
+                    "5555"
+                ]
+            },
+            "UDP-5556": {
+                "UDP": [
+                    "5556"
+                ]
+            },
+            "UDP-601": {
+                "UDP": [
+                    "601"
+                ]
+            },
+            "VMware Consolidated Backup": {
+                "TCP": [
+                    "443"
+                ]
+            },
+            "VMware VMotion": {
+                "TCP": [
+                    "8000"
+                ]
+            },
+            "VMware-CIMSLP": {
+                "UDP": [
+                    "427"
+                ]
+            },
+            "VMware-DVS": {
+                "TCP": [
+                    "8301",
+                    "8302"
+                ]
+            },
+            "VMware-DataRecovery": {
+                "TCP": [
+                    "22024"
+                ]
+            },
+            "VMware-ESXi5.x-TCP": {
+                "TCP": [
+                    "902"
+                ]
+            },
+            "VMware-ESXi5.x-UDP": {
+                "UDP": [
+                    "902"
+                ]
+            },
+            "VMware-HA-TCP": {
+                "TCP": [
+                    "8182"
+                ]
+            },
+            "VMware-HA-UDP": {
+                "UDP": [
+                    "8182"
+                ]
+            },
+            "VMware-SPS": {
+                "TCP": [
+                    "31100",
+                    "31000"
+                ]
+            },
+            "VMware-SRM-HTTP": {
+                "TCP": [
+                    "9008"
+                ]
+            },
+            "VMware-SRM-Replication": {
+                "TCP": [
+                    "8123"
+                ]
+            },
+            "VMware-SRM-SOAP": {
+                "TCP": [
+                    "8043"
+                ]
+            },
+            "VMware-SRM-UI": {
+                "TCP": [
+                    "9085"
+                ]
+            },
+            "VMware-SRM-VAMI": {
+                "TCP": [
+                    "8080"
+                ]
+            },
+            "VMware-SRM-vCentreServer": {
+                "TCP": [
+                    "8096"
+                ]
+            },
+            "VMware-SRM-vSphereReplication": {
+                "TCP": [
+                    "31031",
+                    "44046"
+                ]
+            },
+            "VMware-SRMClient-Server": {
+                "TCP": [
+                    "8095"
+                ]
+            },
+            "VMware-UpdateMgr": {
+                "TCP": [
+                    "9000-9100"
+                ]
+            },
+            "VMware-UpdateMgr-Patching": {
+                "TCP": [
+                    "735"
+                ]
+            },
+            "VMware-UpdateMgr-SOAP": {
+                "TCP": [
+                    "8084"
+                ]
+            },
+            "VMware-UpdateMgr-VUM": {
+                "TCP": [
+                    "9084"
+                ]
+            },
+            "VMware-VC-DPM": {
+                "UDP": [
+                    "623"
+                ]
+            },
+            "VMware-VC-DumpCollector-TCP": {
+                "TCP": [
+                    "8000"
+                ]
+            },
+            "VMware-VC-DumpSvr": {
+                "UDP": [
+                    "6500"
+                ]
+            },
+            "VMware-VC-ESXi": {
+                "TCP": [
+                    "51915"
+                ]
+            },
+            "VMware-VC-RemoteConsole": {
+                "TCP": [
+                    "903"
+                ]
+            },
+            "VMware-VC-Syslog": {
+                "TCP": [
+                    "8001"
+                ]
+            },
+            "VMware-VCO-Command": {
+                "TCP": [
+                    "8240"
+                ]
+            },
+            "VMware-VCO-Data": {
+                "TCP": [
+                    "8244"
+                ]
+            },
+            "VMware-VCO-Messaging": {
+                "TCP": [
+                    "8250"
+                ]
+            },
+            "VMware-VCO-VCO-HTTPS": {
+                "TCP": [
+                    "8283"
+                ]
+            },
+            "VMware-VCO-WebHTTP": {
+                "TCP": [
+                    "8280"
+                ]
+            },
+            "VMware-VCO-WebHTTPS": {
+                "TCP": [
+                    "8281"
+                ]
+            },
+            "VMware-VCOMgr-UI": {
+                "TCP": [
+                    "1194"
+                ]
+            },
+            "VMware-VCOStdAln-Heartbeat": {
+                "TCP": [
+                    "1199"
+                ]
+            },
+            "VMware-VDM2.x-Ephemeral": {
+                "TCP": [
+                    "1024-65535"
+                ]
+            },
+            "VMware-VDM2.x-RGS": {
+                "TCP": [
+                    "42966"
+                ]
+            },
+            "VMware-View-PCoIP": {
+                "TCP": [
+                    "4172"
+                ]
+            },
+            "VMware-View5.x-JMS": {
+                "TCP": [
+                    "4001"
+                ]
+            },
+            "VMware-View5.x-PCoIP-UDP": {
+                "UDP": [
+                    "4172"
+                ]
+            },
+            "VMware-iSCSI-Server": {
+                "TCP": [
+                    "3260"
+                ]
+            },
+            "VRRP": {
+                "L3_OTHERS": [
+                    "112"
+                ]
+            },
+            "Vmware-FT-TCP": {
+                "TCP": [
+                    "8100",
+                    "8200"
+                ]
+            },
+            "Vmware-FT-UDP": {
+                "UDP": [
+                    "8100",
+                    "8200"
+                ]
+            },
+            "Vmware-Heartbeat-PrimarySecondary": {
+                "TCP": [
+                    "57348"
+                ]
+            },
+            "Vmware-SRM-WSDL-vCentreServer": {
+                "TCP": [
+                    "9007"
+                ]
+            },
+            "Vmware-UpdateMgr-update": {
+                "TCP": [
+                    "9087"
+                ]
+            },
+            "Vmware-VC-HTTP": {
+                "TCP": [
+                    "10080"
+                ]
+            },
+            "Vmware-VC-VC-Internal": {
+                "TCP": [
+                    "7500",
+                    "8005",
+                    "8006",
+                    "8083",
+                    "8085",
+                    "8086",
+                    "8087",
+                    "8443",
+                    "10109",
+                    "10111",
+                    "60099"
+                ]
+            },
+            "Vmware-VC-WebAccess": {
+                "TCP": [
+                    "8443",
+                    "9443",
+                    "10443"
+                ]
+            },
+            "Vmware-VCHeartbeat": {
+                "TCP": [
+                    "52267"
+                ]
+            },
+            "Vmware-VCO-Lookup": {
+                "TCP": [
+                    "8230"
+                ]
+            },
+            "Vmware-VCO-VCO-HTTP": {
+                "TCP": [
+                    "8282"
+                ]
+            },
+            "Vmware-VCOStdAln-Remote": {
+                "TCP": [
+                    "61616"
+                ]
+            },
+            "Vmware-VDM2.x-AJP": {
+                "TCP": [
+                    "8009"
+                ]
+            },
+            "Vmware-VDM2.x-JMS": {
+                "TCP": [
+                    "4100"
+                ]
+            },
+            "WINS": {
+                "TCP": [
+                    "42"
+                ]
+            },
+            "WINS-UDP": {
+                "UDP": [
+                    "42"
+                ]
+            },
+            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP": {
+                "TCP": [
+                    "1025-65535"
+                ]
+            },
+            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - UDP": {
+                "UDP": [
+                    "1025-65535"
+                ]
+            },
+            "Win 2003 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+                "TCP": [
+                    "1025-5000"
+                ]
+            },
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+                "TCP": [
+                    "49152-65535"
+                ]
+            },
+            "Windows-Global-Catalog": {
+                "TCP": [
+                    "3268"
+                ]
+            },
+            "Windows-Global-Catalog-over-SSL": {
+                "TCP": [
+                    "3269"
+                ]
+            },
+            "Yahoo Messenger (TCP)": {
+                "TCP": [
+                    "5050"
+                ]
+            },
+            "Yahoo Messenger (UDP)": {
+                "UDP": [
+                    "5050"
+                ]
+            },
+            "iSQLPlus 10g": {
+                "TCP": [
+                    "5560"
+                ]
+            },
+            "iSQLPlus 10g (5580)": {
+                "TCP": [
+                    "5580"
+                ]
+            },
+            "tcp-111": {
+                "TCP": [
+                    "111"
+                ]
+            },
+            "tcp-135": {
+                "TCP": [
+                    "135"
+                ]
+            },
+            "tcp-137": {
+                "TCP": [
+                    "137"
+                ]
+            },
+            "tcp-138": {
+                "TCP": [
+                    "138"
+                ]
+            },
+            "tcp-139": {
+                "TCP": [
+                    "139"
+                ]
+            },
+            "tcp-1688": {
+                "TCP": [
+                    "1688"
+                ]
+            },
+            "tcp-22443": {
+                "TCP": [
+                    "22443"
+                ]
+            },
+            "tcp-4001": {
+                "TCP": [
+                    "4001"
+                ]
+            },
+            "tcp-4002": {
+                "TCP": [
+                    "4002"
+                ]
+            },
+            "tcp-445": {
+                "TCP": [
+                    "445"
+                ]
+            },
+            "tcp-4500": {
+                "TCP": [
+                    "4500"
+                ]
+            },
+            "tcp-455": {
+                "TCP": [
+                    "455"
+                ]
+            },
+            "tcp-465": {
+                "TCP": [
+                    "465"
+                ]
+            },
+            "tcp-49152-65535": {
+                "TCP": [
+                    "49152-65535"
+                ]
+            },
+            "tcp-50000": {
+                "TCP": [
+                    "50000"
+                ]
+            },
+            "tcp-50010": {
+                "TCP": [
+                    "50010"
+                ]
+            },
+            "tcp-5433": {
+                "TCP": [
+                    "5433"
+                ]
+            },
+            "tcp-578": {
+                "TCP": [
+                    "578"
+                ]
+            },
+            "tcp-587": {
+                "TCP": [
+                    "587"
+                ]
+            },
+            "tcp-5900": {
+                "TCP": [
+                    "5900"
+                ]
+            },
+            "tcp-593": {
+                "TCP": [
+                    "593"
+                ]
+            },
+            "tcp-5985": {
+                "TCP": [
+                    "5985"
+                ]
+            },
+            "tcp-5986": {
+                "TCP": [
+                    "5986"
+                ]
+            },
+            "tcp-6433": {
+                "TCP": [
+                    "6433"
+                ]
+            },
+            "tcp-7433": {
+                "TCP": [
+                    "7433"
+                ]
+            },
+            "tcp-7443": {
+                "TCP": [
+                    "7443"
+                ]
+            },
+            "tcp-7700": {
+                "TCP": [
+                    "7700"
+                ]
+            },
+            "tcp-7705": {
+                "TCP": [
+                    "7705"
+                ]
+            },
+            "tcp-7706": {
+                "TCP": [
+                    "7706"
+                ]
+            },
+            "tcp-8080": {
+                "TCP": [
+                    "8080"
+                ]
+            },
+            "tcp-8181": {
+                "TCP": [
+                    "8181"
+                ]
+            },
+            "tcp-8199": {
+                "TCP": [
+                    "8199"
+                ]
+            },
+            "tcp-8200": {
+                "TCP": [
+                    "8200"
+                ]
+            },
+            "tcp-8201": {
+                "TCP": [
+                    "8201"
+                ]
+            },
+            "tcp-8433": {
+                "TCP": [
+                    "8433"
+                ]
+            },
+            "tcp-8443": {
+                "TCP": [
+                    "8443"
+                ]
+            },
+            "tcp-9043": {
+                "TCP": [
+                    "9043"
+                ]
+            },
+            "tcp-9427": {
+                "TCP": [
+                    "9427"
+                ]
+            },
+            "udp-137": {
+                "UDP": [
+                    "137"
+                ]
+            },
+            "udp-138": {
+                "UDP": [
+                    "138"
+                ]
+            },
+            "udp-22443": {
+                "UDP": [
+                    "22443"
+                ]
+            },
+            "udp-445": {
+                "UDP": [
+                    "445"
+                ]
+            },
+            "udp-455": {
+                "UDP": [
+                    "455"
+                ]
+            }
+        }
+    },
+    "service_groups": {
+        "Active Directory Integration": [
+            "EPM",
+            "DRSUAPI",
+            "Active Directory Server",
+            "SOAP",
+            "NetBios Datagram (UDP)",
+            "tcp-135",
+            "DCOM",
+            "NetBios Session Service (UDP)",
+            "Win 2008 - RPC",
+            "KERBEROS-TCP",
+            "LDAP-UDP",
+            "Windows-Global-Catalog-over-SSL",
+            "LDAP",
+            "NetLogonR",
+            "MS_RPC_UDP",
+            "SamR",
+            "LDAP Global Catalog",
+            "NetBios Name Service (UDP)",
+            "tcp-445",
+            "NetBios Datagram (TCP)",
+            "KERBEROS-UDP",
+            "NetBios Session Service (TCP)",
+            "LDAP-over-SSL-UDP",
+            "LDAP-over-SSL",
+            "FRS"
+        ],
+        "Data Recovery Appliance": [
+            "HTTPS",
+            "VMware-DataRecovery",
+            "VMware-ESXi5.x-TCP"
+        ],
+        "ESXi Syslog Collector": [
+            "VMware-VC-Syslog"
+        ],
+        "Heartbeat": [
+            "Vmware-Heartbeat-PrimarySecondary",
+            "Vmware-VCHeartbeat"
+        ],
+        "MS Exchange 2007 Client Access Server": [
+            "HTTP",
+            "IMAP_SSL",
+            "MS Unified Messaging server",
+            "POP3",
+            "POP3_SSL",
+            "HTTPS",
+            "IMAP"
+        ],
+        "MS Exchange 2007 Mailbox Servers": [
+            "KERBEROS",
+            "LDAP Global Catalog",
+            "LDAP",
+            "MS_RPC_TCP",
+            "KERBEROS-UDP",
+            "DNS",
+            "HTTP",
+            "HTTPS",
+            "MS-DS-TCP",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MS Exchange 2007 Transport Servers": [
+            "KERBEROS",
+            "LDAP Global Catalog",
+            "LDAP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "DNS",
+            "KERBEROS-UDP",
+            "SMTP_TLS",
+            "HTTP",
+            "EdgeSync service",
+            "EdgeSync service/ADAM",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MS Exchange 2007 Unified Messaging Centre": [
+            "MS Unified Messaging server",
+            "MS_RPC_TCP",
+            "SMTP",
+            "HTTP",
+            "HTTPS"
+        ],
+        "MS Exchange 2010 Client Access Servers": [
+            "KERBEROS",
+            "LDAP Global Catalog",
+            "HTTP",
+            "IMAP_SSL",
+            "MS Unified Messaging server",
+            "LDAP",
+            "MS_RPC_TCP",
+            "POP3",
+            "DNS",
+            "KERBEROS-UDP",
+            "POP3_SSL",
+            "HTTPS",
+            "IMAP",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MS Exchange 2010 Mailbox Servers": [
+            "KERBEROS",
+            "MS Replication service",
+            "LDAP Global Catalog",
+            "LDAP",
+            "MS_RPC_TCP",
+            "KERBEROS-UDP",
+            "DNS",
+            "MS Customizable",
+            "Office communication server",
+            "MS-DS-TCP",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MS Exchange 2010 Transport Servers": [
+            "KERBEROS",
+            "LDAP Global Catalog",
+            "LDAP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "DNS",
+            "KERBEROS-UDP",
+            "SMTP_TLS",
+            "HTTPS",
+            "EdgeSync service",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MS Exchange 2010 Unified Messaging Server": [
+            "KERBEROS",
+            "MS Unified Messaging server - Client Access",
+            "LDAP Global Catalog",
+            "LDAP",
+            "MS_RPC_TCP",
+            "MS Unified Messaging server-Phone",
+            "SMTP",
+            "DNS",
+            "KERBEROS-UDP",
+            "HTTP",
+            "HTTPS",
+            "LDAP-UDP",
+            "DNS-UDP"
+        ],
+        "MSSQL Integration Services": [
+            "MS_RPC_TCP"
+        ],
+        "MSSQL Reporting Services": [
+            "HTTP",
+            "HTTPS"
+        ],
+        "MSSQL Server Analysis Services": [
+            "SQL Analysis service",
+            "SQL Server Browser service",
+            "HTTPS",
+            "HTTP"
+        ],
+        "MSSQL Server Database Engine": [
+            "MS-SQL-M-TCP",
+            "MS_RPC_TCP",
+            "MS-SQL-S",
+            "MS-SQL-M",
+            "HTTP",
+            "HTTPS"
+        ],
+        "Microsoft Active Directory": [
+            "KERBEROS",
+            "Active Directory Server",
+            "SOAP",
+            "DHCP-Server",
+            "NBDG-Unicast",
+            "NBDG-Broadcast",
+            "Active Directory Server UDP",
+            "LDAP-UDP",
+            "Windows-Global-Catalog-over-SSL",
+            "LDAP",
+            "WINS",
+            "DNS",
+            "MS-DS-UDP",
+            "DNS-UDP",
+            "KERBEROS-UDP",
+            "Windows-Global-Catalog",
+            "WINS-UDP",
+            "LDAP-over-SSL",
+            "NBSS",
+            "NTP Time Server",
+            "MS_RPC_TCP",
+            "SMTP",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "MS-DS-TCP"
+        ],
+        "Microsoft Exchange 2003": [
+            "HTTP",
+            "IMAP_SSL",
+            "Routing Engine service",
+            "LDAP",
+            "MS_RPC_TCP",
+            "IMAP",
+            "Exchange ActiveSync",
+            "SMTP",
+            "Site Replication service",
+            "POP3",
+            "POP3_SSL",
+            "HTTPS",
+            "For X.400 connections over TCP",
+            "NNTP",
+            "NNTP_SSL"
+        ],
+        "Microsoft Exchange 2007": [
+            "MS Exchange 2007 Mailbox Servers",
+            "MS Exchange 2007 Client Access Server",
+            "MS Exchange 2007 Transport Servers",
+            "MS Exchange 2007 Unified Messaging Centre"
+        ],
+        "Microsoft Exchange 2010": [
+            "MS Exchange 2010 Unified Messaging Server",
+            "MS Exchange 2010 Transport Servers",
+            "MS Exchange 2010 Mailbox Servers",
+            "MS Exchange 2010 Client Access Servers"
+        ],
+        "Microsoft SQL Server": [
+            "MSSQL Server Database Engine",
+            "MSSQL Integration Services",
+            "MS-SQL-S",
+            "MSSQL Reporting Services",
+            "MSSQL Server Analysis Services"
+        ],
+        "NFS-BACKUP-SL1": [
+            "TCP-45666",
+            "NFS Client UDP",
+            "UDP-45666",
+            "UDP-20048",
+            "TCP-21666",
+            "NFS Client",
+            "NFS-Server-TCP",
+            "UDP-21666",
+            "NFS-Server-UDP",
+            "TCP-20048"
+        ],
+        "Oracle Application Server": [
+            "Oracle HTTP Server Jserv port",
+            "Oracle9iAS Web Cache Admin port",
+            "Java Object Cache port",
+            "Oracle HTTP Server port",
+            "Oracle Notification Service local port",
+            "Oracle HTTP Server SSL port",
+            "Oracle Intelligent Agent (1748)",
+            "Oracle Forms Server 6 / 6i",
+            "OS Agent",
+            "Oracle9iAS Clickstream Collector Agent",
+            "DCM Java Object Cache port",
+            "Oracle OC4J JMS",
+            "Oracle HTTP Server Port Tunneling",
+            "Oracle OC4J IIOPS1",
+            "Oracle Notification Service request port",
+            "Oracle Internet Directory(SSL)",
+            "Oracle9iAS Web Cache HTTP Listen(SSL) port",
+            "Oracle HTTP Server Diagnostic Port",
+            "Oracle SOAP Server",
+            "Oracle OC4J RMI",
+            "Oracle Intelligent Agent (1754)",
+            "Oracle OC4J IIOP",
+            "Oracle Intelligent Agent (1808)",
+            "Enterprise Manager Reporting port",
+            "Oracle HTTP Server listen port",
+            "OracleAS Certificate Authority (OCA) - Mutual Authentication",
+            "Oracle OC4J IIOPS2",
+            "Oracle Intelligent Agent (1809)",
+            "Oracle Notification Service remote port",
+            "Oracle9iAS Web Cache Invalidation port",
+            "Oracle Internet Directory(non-SSL)",
+            "OracleAS Certificate Authority (OCA) - Server Authentication",
+            "Oracle9iAS Web Cache Statistics port",
+            "Oracle OC4J AJP",
+            "Oracle9iAS Web Cache HTTP Listen(non-SSL) port"
+        ],
+        "Oracle Database": [
+            "Oracle Names",
+            "Oracle GIOP IIOP",
+            "Oracle XMLDB HTTP port",
+            "Oracle XMLDB FTP Port",
+            "Oracle Net Listener",
+            "Oracle Net Listener / Enterprise Manager Repository port",
+            "Oracle GIOP IIOP for SSL"
+        ],
+        "Oracle Enterprise Manager": [
+            "Log Loader",
+            "Enterprise Manager RMI port",
+            "Enterprise Manager Servlet port SSL",
+            "Enterprise ManagerAgent port"
+        ],
+        "Oracle Enterprise Manager Web": [
+            "Oracle Enterprise Manager Web Console"
+        ],
+        "Oracle Rdb": [
+            "Oracle JDBC for Rdb Thin Server"
+        ],
+        "Oracle Times Ten": [
+            "Oracle TimesTen (4764)",
+            "Oracle Times Ten (15004)",
+            "Oracle TimesTen (4767)",
+            "Oracle TimesTen (4766)",
+            "Oracle TimesTen (4761)",
+            "Oracle TimesTen",
+            "Oracle TimesTen (4758)",
+            "Oracle Times Ten (15002)",
+            "Oracle TimesTen (4759)",
+            "Oracle Times Ten (15000)"
+        ],
+        "Oracle i*SQLPlus": [
+            "iSQLPlus 10g",
+            "iSQLPlus 10g (5580)"
+        ],
+        "Orchestrator": [
+            "Vmware-VCO-VCO-HTTP",
+            "VMware-VCO-Command",
+            "VMware-VCO-VCO-HTTPS",
+            "Vmware-VCO-Lookup",
+            "LDAP",
+            "MS-SQL-S",
+            "SMTP",
+            "VMware-VCO-Data",
+            "PostgreSQL",
+            "VMware-VCO-Messaging",
+            "Oracle",
+            "MySQL",
+            "HTTPS",
+            "VMware-VCO-WebHTTP",
+            "VMware-VCO-WebHTTPS",
+            "LDAP-UDP",
+            "LDAP-over-SSL"
+        ],
+        "SharePoint 2007": [
+            "MS-SQL-M",
+            "SMB Server UDP",
+            "NBDG-Unicast",
+            "NBDG-Broadcast",
+            "HTTPS",
+            "LDAP-UDP",
+            "SMB Server",
+            "DNS",
+            "Server Message Block (SMB)",
+            "DNS-UDP",
+            "RDP",
+            "MS-SQL-S",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL-UDP",
+            "NBSS",
+            "MS_RPC_TCP",
+            "SMTP",
+            "NBNS-Unicast",
+            "HTTP",
+            "NBNS-Broadcast",
+            "MS-DS-TCP"
+        ],
+        "SharePoint 2010": [
+            "Directory Services",
+            "HTTPS",
+            "Active Directory Server UDP",
+            "SharePoint 2007"
+        ],
+        "Site Recovery Manager 5.x": [
+            "Vmware-VCO-VCO-HTTP",
+            "HBR Server App",
+            "VMware-SRM-vSphereReplication",
+            "VMware-SRM-SOAP",
+            "VMware-SRMClient-Server",
+            "HTTP",
+            "IBM DB2",
+            "VMware-SRM-HTTP",
+            "MS-SQL-S",
+            "Oracle",
+            "VMware-ESXi5.x-TCP",
+            "Vmware-SRM-WSDL-vCentreServer",
+            "HTTPS",
+            "VMware-SRM-Replication",
+            "Oracle-2",
+            "VMware-SRM-vCentreServer",
+            "VMware-SRM-UI",
+            "VMware-SRM-VAMI"
+        ],
+        "Update Manager": [
+            "HTTPS",
+            "VMware-UpdateMgr-VUM",
+            "VMware-UpdateMgr",
+            "MS-SQL-S",
+            "VMware-UpdateMgr-Patching",
+            "Oracle",
+            "VMware-ESXi5.x-TCP",
+            "HTTP",
+            "Vmware-UpdateMgr-update",
+            "VMware-UpdateMgr-SOAP"
+        ],
+        "VMware ESXi 5.x": [
+            "KERBEROS",
+            "SSH",
+            "DHCP-Server",
+            "NFS-Server-TCP",
+            "HTTPS",
+            "VMware-HA-TCP",
+            "LDAP-UDP",
+            "VMware-HA-UDP",
+            "NFS Client UDP",
+            "Syslog-Server-UDP",
+            "LDAP",
+            "VMware-iSCSI-Server",
+            "MS-DS-UDP",
+            "VMware ESXi Dump Collector",
+            "NFS-Server-UDP",
+            "CIM-HTTPS",
+            "Vmware-FT-UDP",
+            "DNS-UDP",
+            "SNMP-Send",
+            "ESXi Syslog Collector",
+            "VMware-SPS",
+            "VMware-ESXi5.x-TCP",
+            "VMware-ESXi5.x-UDP",
+            "VMware VMotion",
+            "CIM-HTTP",
+            "Vmware-FT-TCP",
+            "SNMP-Recieve",
+            "AD Server",
+            "NFS Client",
+            "DHCP-Client",
+            "VMware-CIMSLP",
+            "VMware-DVS",
+            "HTTP",
+            "Syslog-Server",
+            "MS-DS-TCP",
+            "RFB"
+        ],
+        "VMware ESXi Dump Collector": [
+            "VMware-VC-DumpCollector-TCP",
+            "VMware-VC-DumpSvr"
+        ],
+        "View 5.x": [
+            "HTTPS",
+            "VMware-View5.x-JMS",
+            "VMware-View5.x-PCoIP-UDP",
+            "VMware-ESXi5.x-TCP",
+            "HTTP",
+            "VMware-View-PCoIP"
+        ],
+        "Vmware View/VDM2.x": [
+            "KERBEROS",
+            "VMware-View5.x-JMS",
+            "VMware-VDM2.x-RGS",
+            "RDP",
+            "LDAP",
+            "VMware-VDM2.x-Ephemeral",
+            "Vmware-VDM2.x-JMS",
+            "KERBEROS-UDP",
+            "Vmware-VDM2.x-AJP",
+            "MS-DS-UDP",
+            "HTTP",
+            "HTTPS",
+            "MS-DS-TCP",
+            "LDAP-UDP"
+        ],
+        "vCenter5.x": [
+            "KERBEROS",
+            "VMware-VC-DPM",
+            "VMware-VC-ESXi",
+            "MS-SQL-M",
+            "VMware-VC-RemoteConsole",
+            "HTTPS",
+            "LDAP-UDP",
+            "VMware-VC-DumpCollector-TCP",
+            "LDAP",
+            "DNS",
+            "CIM-HTTPS",
+            "SNMP-Send",
+            "MS-SQL-S",
+            "Vmware-VC-WebAccess",
+            "KERBEROS-UDP",
+            "Oracle",
+            "VMware-ESXi5.x-TCP",
+            "VMware-ESXi5.x-UDP",
+            "Vmware-VC-VC-Internal",
+            "CIM-HTTP",
+            "VMware-SRM-VAMI",
+            "LDAP-over-SSL",
+            "SNMP-Recieve",
+            "MS_RPC_TCP",
+            "SMTP",
+            "Vmware-VC-HTTP"
+        ],
+        "vCentre Operations Manager (Standalone) 5.x": [
+            "HTTP",
+            "HTTPS",
+            "Vmware-VCOStdAln-Remote",
+            "VMware-VCOStdAln-Heartbeat"
+        ],
+        "vCentre Operations Manager (vApp) 5.x": [
+            "HTTP",
+            "HTTPS",
+            "SSH",
+            "VMware-VCOMgr-UI"
+        ],
+        "vCentre Operations Standard": [
+            "HBR Server App",
+            "SSH"
+        ],
+        "vCentre Operations Standard 1.x": [
+            "HBR Server App",
+            "HTTPS",
+            "SSH"
+        ]
+    }
+}

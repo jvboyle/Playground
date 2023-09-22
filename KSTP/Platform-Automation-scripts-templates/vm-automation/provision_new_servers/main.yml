@@ -1,0 +1,78 @@
+---
+#- name: install symantec on linux
+#  user: cornel
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+#  hosts: all
+#  vars_files:
+#   - vault.yml
+#   - roles/seplin/vars/main.yml
+#  roles:
+#      - seplin
+
+#- name: install bigfix on linux
+#  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+#  hosts: newservers
+#  vars_files:
+#   - vault.yml
+#   - roles/bigfixlin/vars/main.yml
+#  roles:
+#      - bigfixlin
+
+- name: subscribe and update
+  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+  hosts: newservers
+  vars_files:
+   - vault.yml
+  roles:
+      - subscription
+
+- name: sudo users tasks
+  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+  hosts: newservers
+  vars_files:
+   - vault.yml
+  roles:
+      - sudo-users-tasks
+
+- name: install dependencies
+  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+  hosts: newservers
+  vars_files:
+   - vault.yml
+  roles:
+      - dependencies
+
+- name: install haproxy and keepalived
+  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+  hosts: newservers
+  vars_files:
+   - vault.yml
+  roles: 
+      - haproxy-keepalived
+
+- name: correct violations
+  user: root
+#  become: yes
+#  become_user: root
+#  become_method: sudo
+  hosts: newservers
+  vars_files:
+  roles: 
+      - correct-violations

@@ -1,0 +1,49 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-eu1d73lpbvatnp2",
+            "TF-EU1-HOST-eu1d73lpbvatnp1",
+            "TF-EU1-HOST-nlascno000m1ermp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES73": {
+            "category": "Application",
+            "rules": {
+                "4580": {
+                    "display_name": "TF-4580-Netcool-Ping-Probe-OMNibus-Prim-Sec",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d73lpbvatnp2",
+                        "TF-EU1-HOST-eu1d73lpbvatnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-eu1d73lpbvatnp2",
+                        "TF-EU1-HOST-eu1d73lpbvatnp1",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                }
+            }
+        }
+    }
+}

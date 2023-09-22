@@ -1,0 +1,1884 @@
+{
+    "TF-IRES": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-5985",
+                "SMB",
+                "TCP-5986",
+                "MS_RPC_TCP",
+                "NetBios Session Service (TCP)",
+                "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP",
+                "NetBios Datagram (UDP)",
+                "NetBios Name Service (UDP)"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-IRES-TS-License-Server",
+                "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                "TF-AG1-HOST-ag1jump02",
+                "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                "TF-AG1-HOST-ag1dc1",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-HOST-ag1dc2",
+                "TF-AG1-SG-TS-Session-Hosts"
+            ]
+        },
+        "map_policies": {
+            "TF-IRES": {
+                "category": "Application",
+                "rules": {
+                    "1114": {
+                        "display_name": "TF-1114-Terminal-servers-to-License-server",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                            "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-SG-TS-Session-Hosts"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-IRES-TS-License-Server"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5986",
+                            "SMB",
+                            "MS_RPC_TCP",
+                            "TCP-5985",
+                            "NetBios Session Service (TCP)",
+                            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP",
+                            "NetBios Datagram (UDP)",
+                            "NetBios Name Service (UDP)"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51015869 -  source  SG-SRES-IAM-THY-RAS-PROD,SG-SRES-IAM-THY-RAS-NONPROD added to the source",
+                        "scope": [
+                            "TF-AG1-SG-IRES-TS-License-Server",
+                            "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-HOST-ag1jump02",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                            "TF-AG1-SG-TS-Session-Hosts"
+                        ]
+                    },
+                    "2331": {
+                        "display_name": "TF-2331-IAMaas--Thycotic-Pentest",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-All-VMs"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1dc1",
+                            "TF-AG1-HOST-ag1dc2"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50955390",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-HOST-ag1dc1"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-PDR": {
+        "map_services": {
+            "SERVICES": [
+                "SMTP",
+                "SMTP_TLS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-PDR-SMTP-Server",
+                "TF-AG1-SG-SMTP-Clients"
+            ]
+        },
+        "map_policies": {
+            "TF-PDR": {
+                "category": "Application",
+                "rules": {
+                    "1192": {
+                        "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-PDR-SMTP-Server"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP",
+                            "SMTP_TLS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-PDR-SMTP-Server"
+                        ]
+                    },
+                    "1264": {
+                        "display_name": "TF-1264-ST-SMTP-Client-to-PDR-SMTP-server",
+                        "source_groups": [
+                            "TF-AG1-SG-SMTP-Clients"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-PDR-SMTP-Server"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP",
+                            "SMTP_TLS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-PDR-SMTP-Server",
+                            "TF-AG1-SG-SMTP-Clients"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-SRES": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-2821",
+                "KERBEROS",
+                "NBDG-Unicast",
+                "WINS",
+                "LDAP",
+                "LDAP-UDP",
+                "WINS-UDP",
+                "MS_RPC_TCP",
+                "MS-DS-UDP",
+                "TCP-139",
+                "TCP-1098",
+                "TCP-9000",
+                "TCP-50010",
+                "TCP-5671",
+                "UDP-137",
+                "TCP-2001",
+                "TCP-10050",
+                "TCP-3390",
+                "Active Directory Server",
+                "Windows-Global-Catalog",
+                "HTTPS",
+                "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                "UDP-50010",
+                "TCP-135",
+                "HTTP",
+                "NBNS-Unicast",
+                "UDP-2821",
+                "SSH",
+                "TCP-9112",
+                "TCP-1099",
+                "TCP-9343",
+                "Terminal Services (UDP)",
+                "TCP-9443",
+                "Windows-Global-Catalog-over-SSL",
+                "NBDG-Broadcast",
+                "LDAP-over-SSL",
+                "RDP",
+                "SMTP",
+                "UDP-138",
+                "NBNS-Broadcast",
+                "TCP-1100",
+                "Active Directory Server UDP",
+                "TCP-445",
+                "TCP-10444",
+                "TCP-9437-9439",
+                "NTP Time Server",
+                "TCP-8892",
+                "SNMP",
+                "UDP-1098",
+                "NBSS",
+                "KERBEROS-UDP",
+                "TCP-51010",
+                "UDP-1099",
+                "TCP-1433",
+                "TCP-45580",
+                "UDP-51010",
+                "DNS-UDP",
+                "TCP-5672",
+                "UDP-3389",
+                "TCP-3389",
+                "TCP-5671-5672",
+                "TCP-11443",
+                "DHCP-Server",
+                "TCP-8443",
+                "DNS",
+                "MS-DS-TCP",
+                "SOAP",
+                "TCP-16351"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-HOST-ag1twin01",
+                "TF-AG1-IPSET-EU1-eu1d276wpDDE",
+                "TF-AG1-HOST-ag1vmon",
+                "TF-AG1-HOST-ag1sr1wpiampre2",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                "TF-AG1-IPSET-Host-nlaspnp000m1erms",
+                "TF-AG1-IPSET-UAT-LA2",
+                "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                "TF-AG1-SG-SRES-WIN-WSUS",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                "TF-AG1-SG-SRES-IAM-THY-MSSQL-PEN",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                "TF-AG1-IPSET-Host-ag1sr1lniamsbprx1",
+                "TF-AG1-IPSET-SRES-ag1irlpipam01",
+                "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                "TF-AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                "TF-AG1-IPSET-test-rdszz-omnibus",
+                "TF-AG1-IPSET-Host-icamspamhapxy01-cloudprivate",
+                "TF-AG1-HOST-ag1sr1wdns02",
+                "TF-AG1-SG-SRES-IAM-CIO-RAS-PROD",
+                "TF-AG1-HOST-ag1sr1wpiampre1",
+                "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                "TF-AG1-SG-SRES-WIN-DA",
+                "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+                "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                "TF-AG1-IPSET-NET-IBM-Blue",
+                "TF-AG1-HOST-ag1sr1wdns01",
+                "TF-AG1-SG-SRES-IAM-NODB-PROD",
+                "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                "TF-AG1-SG-SRES-IAM-THY-MSSQL-SIDT",
+                "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                "TF-AG1-SG-SRES-IAM-LINUX-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-SECRET-UAT",
+                "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "TF-AG1-SG-Thycotic-UAT-LA",
+                "TF-AG1-IPSET-SRES-IAM-THY-PROXY-UAT-VIP",
+                "TF-AG1-IPSET-Host-MNE-Dev-Test",
+                "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PEN-VIP",
+                "TF-AG1-IPSET-Host-icdalpamhapxy01-cloudprivate-local",
+                "TF-AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-DE-PEN",
+                "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-SECRET-SIDT",
+                "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                "TF-AG1-HOST-ag1sr1wjmp02",
+                "TF-AG1-SG-SRES-IAM-THY-PROXY-UAT",
+                "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN",
+                "TF-AG1-HOST-ag1pdr1smtp01",
+                "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                "TF-AG1-IPSET-Host-ag1sr1lniamsbbkl1",
+                "TF-AG1-IPSET-Host-ag1sr1wniamsb-All",
+                "TF-AG1-IPSET-Host-IAMAAS-ZABBIX",
+                "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PROD-VIP",
+                "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                "TF-AG1-IPSET-test-oc4q5-omnibus",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-SG-SRES-IAM-THY-RMQ-UAT",
+                "TF-AG1-SG-SRES-IAM-THY-RMQ-PEN",
+                "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                "TF-AG1-IPSET-ESLS-UAT",
+                "TF-AG1-SG-SRES-IAM-THY-RMQ-SIDT",
+                "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                "TF-AG1-SG-SRES-IAM-THY-PROXY-SIDT",
+                "TF-AG1-HOST-ag1sr1staas2",
+                "TF-AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                "TF-AG1-SG-HOST-UAT-Shared",
+                "TF-AG1-IPSET-Tanzu-Workload-04-HOST",
+                "TF-AG1-SG-SRES-WIN-SQL",
+                "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+                "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "TF-AG1-IPSET-EU1-eu1d276lprevpxy",
+                "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                "TF-AG1-HOST-ag1sr1wpiamprra",
+                "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                "TF-AG1-HOST-ag1sr1wpiamprfs",
+                "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                "TF-AG1-IPSET-Host-NET-SRES-APP",
+                "TF-AG1-HOST-ag1wtslic01",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN",
+                "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                "TF-AG1-IPSET-IBM-Bluepages",
+                "TF-AG1-IPSET-EU-SRES-LB",
+                "TF-AG1-SG-SRES-IAM-THY-MSSQL-UAT",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                "TF-AG1-HOST-ag1sr1wjmp01",
+                "TF-AG1-SG-SRES-WIN-SEPM",
+                "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                "TF-AG1-SG-SRES-IAM-THY-DB2-PROD",
+                "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+            ]
+        },
+        "map_policies": {
+            "TF-SRES": {
+                "category": "Application",
+                "rules": {
+                    "1976": {
+                        "display_name": "TF-1976-User-Web-Access",
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-9443",
+                            "TCP-9343"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50880868 \nSR51140346 - added SG-SRES-IAM-THY-PROXY-PROD",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ]
+                    },
+                    "2016": {
+                        "display_name": "TF-2016-IAMaaS-THY-to-IRES-Domain-Controller",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                            "KERBEROS",
+                            "NBDG-Unicast",
+                            "WINS",
+                            "LDAP",
+                            "LDAP-UDP",
+                            "WINS-UDP",
+                            "MS_RPC_TCP",
+                            "MS-DS-UDP",
+                            "Windows-Global-Catalog",
+                            "Active Directory Server",
+                            "NBNS-Unicast",
+                            "Windows-Global-Catalog-over-SSL",
+                            "NBDG-Broadcast",
+                            "LDAP-over-SSL",
+                            "SMTP",
+                            "NBNS-Broadcast",
+                            "Active Directory Server UDP",
+                            "NTP Time Server",
+                            "NBSS",
+                            "KERBEROS-UDP",
+                            "DNS-UDP",
+                            "DHCP-Server",
+                            "DNS",
+                            "MS-DS-TCP",
+                            "SOAP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50963446 - SG-SRES-IAM-WINDOWS-PEN\nSR50971783  -SG-SRES-IAM-WINDOWS-SIDT added to the existing source.\nCH50078675\u00a0and SR50970216  SG-SRES-IAM-WINDOWS-UAT added to the existing source\n\nCH50079731 and SR50980015 SG-SRES-IAM-WINDOWS-PROD added to source",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ]
+                    },
+                    "2291": {
+                        "display_name": "TF-2291-ALL-Win-Servers-to-Staas2-&-DNS02",
+                        "source_groups": [
+                            "TF-AG1-SG-All-Windows-Hosts"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "LDAP-over-SSL",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR50942226",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-SG-All-Windows-Hosts",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1wdns02"
+                        ]
+                    },
+                    "2312": {
+                        "display_name": "TF-2312-Certification-Authority",
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1twin01",
+                            "TF-AG1-SG-SRES-WIN-DA",
+                            "TF-AG1-HOST-ag1vmon",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SRES-WIN-WSUS",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                            "TF-AG1-HOST-ag1wtslic01",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                            "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                            "TF-AG1-HOST-ag1sr1wjmp01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1wjmp02",
+                            "TF-AG1-SG-SRES-WIN-SEPM"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1wdns02"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "MS_RPC_TCP",
+                            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50945469\nSR50963446 - SG-SRES-IAM-WINDOWS-PEN\n SR50971783  SG-SRES-IAM-WINDOWS-SIDT added to existing source.\n\nCH50078675\u00a0and SR50970216 SG-SRES-IAM-WINDOWS-UAT added to existing source\n\nCH50079731 and SR50980015  SG-SRES-IAM-WINDOWS-PROD added to source",
+                        "scope": [
+                            "TF-AG1-HOST-ag1twin01",
+                            "TF-AG1-SG-SRES-WIN-DA",
+                            "TF-AG1-HOST-ag1vmon",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SRES-WIN-WSUS",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                            "TF-AG1-HOST-ag1wtslic01",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                            "TF-AG1-HOST-ag1sr1wjmp01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1wjmp02",
+                            "TF-AG1-SG-SRES-WIN-SEPM"
+                        ]
+                    },
+                    "2336": {
+                        "display_name": "TF-2336-IAM--IBM-Blue-to-nonProd-Remote-Access-Server",
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "RDP",
+                            "Terminal Services (UDP)"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50954319 \nSR50997001  SG-SRES-IAM-THY-RAS-PROD\u00a0 added to the destination",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                            "TF-AG1-IPSET-NET-IBM-Blue",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ]
+                    },
+                    "2484": {
+                        "display_name": "TF-2484-IAM-PROD-Remote-Access-Server-to-Proxies",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-9000",
+                            "TCP-5672",
+                            "TCP-9443",
+                            "TCP-5671",
+                            "TCP-9343"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ]
+                    },
+                    "2485": {
+                        "display_name": "TF-2485-IAM-PROD-Remote-Access-Server-to-Windows-VMs",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "UDP-3389",
+                            "TCP-3389"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ]
+                    },
+                    "2486": {
+                        "display_name": "TF-2486-IAM-PROD-Remote-Access-Server-to-SVG",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9443",
+                            "TCP-9343"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2487": {
+                        "display_name": "TF-2487-IAM-PROD-Proxies-to-SVG",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-11443",
+                            "TCP-9343",
+                            "TCP-10444",
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2488": {
+                        "display_name": "TF-2488-IAM-PROD-Proxies-to-Secret",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2489": {
+                        "display_name": "TF-2489-IAM-PROD-Remote-Access-Server-to-Linux-VMs",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-LINUX-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "RDP",
+                            "SSH",
+                            "HTTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-LINUX-PROD"
+                        ]
+                    },
+                    "2490": {
+                        "display_name": "TF-2490-ISM-PROD--All-but-DB-to-Proxies",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-NODB-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8892",
+                            "TCP-1098",
+                            "TCP-445",
+                            "UDP-51010",
+                            "TCP-1099",
+                            "UDP-50010",
+                            "TCP-9343",
+                            "HTTPS",
+                            "SSH",
+                            "TCP-139",
+                            "TCP-9000",
+                            "TCP-51010",
+                            "TCP-50010",
+                            "TCP-2821",
+                            "TCP-5672",
+                            "UDP-2821",
+                            "SNMP",
+                            "TCP-9112",
+                            "TCP-135",
+                            "UDP-1098",
+                            "TCP-9443",
+                            "UDP-1099"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-NODB-PROD"
+                        ]
+                    },
+                    "2491": {
+                        "display_name": "TF-2491-IAM-PROD-Secret-to-Session-Server",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1wpiamprfs"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "UDP-137",
+                            "TCP-139",
+                            "TCP-445",
+                            "UDP-138"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                            "TF-AG1-HOST-ag1sr1wpiamprfs",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2492": {
+                        "display_name": "TF-2492-IAM-PROD-Secret-to-Rabbit-MQ",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5671",
+                            "TCP-5672"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2493": {
+                        "display_name": "TF-2493-IAM-PROD-Secret-to-MS-SQL",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-139",
+                            "TCP-445",
+                            "TCP-1433",
+                            "TCP-135"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2494": {
+                        "display_name": "TF-2494-IAM-PROD-SVG-to-SDI-and-SDI-to-SVG",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SNMP",
+                            "TCP-8892",
+                            "TCP-1098",
+                            "TCP-9112",
+                            "TCP-2821",
+                            "UDP-1098",
+                            "TCP-1099",
+                            "SSH",
+                            "TCP-9437-9439",
+                            "UDP-2821",
+                            "TCP-9443",
+                            "TCP-9343",
+                            "UDP-1099"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2496": {
+                        "display_name": "TF-2496-IAM-PROD-Distrib-Engine-to-Rabbit-MQ",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5671",
+                            "TCP-5672"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2497": {
+                        "display_name": "TF-2497-IAM-PROD-Distrib-Engine-to-Secret",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2498": {
+                        "display_name": "TF-2498-IAM-PROD-SDI-to-SDI",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ]
+                    },
+                    "2499": {
+                        "display_name": "TF-2499-IAM-PROD-Rabbit-MQ-to-Rabbit-MQ",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ]
+                    },
+                    "2501": {
+                        "display_name": "TF-2501-IAM-PROD-SQL-to-SQL",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD"
+                        ]
+                    },
+                    "2503": {
+                        "display_name": "TF-2503-IAM-PROD-Secret-to-Secret",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2504": {
+                        "display_name": "TF-2504-IAM-PROD-Proxies-to-Proxies",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50079731 and SR50980015",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ]
+                    },
+                    "2694": {
+                        "display_name": "TF-2694-IAMAAS_to_bluepages",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-IBM-Bluepages"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "LDAP-over-SSL"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51036565",
+                        "scope": [
+                            "TF-AG1-IPSET-IBM-Bluepages",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2706": {
+                        "display_name": "TF-2706-Thycotic-to-UAT-LA",
+                        "source_groups": [
+                            "TF-AG1-SG-Thycotic-UAT-LA"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "158.87.106.77",
+                            "158.87.106.82"
+                        ],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-Thycotic-UAT-LA"
+                        ]
+                    },
+                    "2707": {
+                        "display_name": "TF-2707-IAMAAS_Thy_secret_prod_to_SMTP",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1pdr1smtp01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51043256 ",
+                        "scope": [
+                            "TF-AG1-HOST-ag1pdr1smtp01",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ]
+                    },
+                    "2722": {
+                        "display_name": "TF-2722-IAMAAS-sdi-prod-to-db2prod",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DB2-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "UDP-51010",
+                            "TCP-51010",
+                            "TCP-50010",
+                            "UDP-50010"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51043485",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-DB2-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ]
+                    },
+                    "2734": {
+                        "display_name": "TF-2734-IAMAAS-prod-sdi-to-secret-",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Tanzu-Workload-04-HOST",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51044565",
+                        "scope": [
+                            "TF-AG1-IPSET-Tanzu-Workload-04-HOST",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ]
+                    },
+                    "2738": {
+                        "display_name": "TF-2738-IAMAAS-PROD--Proxy-to-DE,RMQ,SECRET-",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5671"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51046819",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2739": {
+                        "display_name": "TF-2739-IAMAAS-PROD-DE,RMQ,SECRET-to-PROXY",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5671"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51046819",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2761": {
+                        "display_name": "TF-2761-Thycotic-IAMAAS-SDI-to-SVG-",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-1100"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51054677",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2842": {
+                        "display_name": "TF-2842-Thycotic-Secret-PROD-to-IAM-Windows--",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-135"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51100545",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2843": {
+                        "display_name": "TF-2843-Thycotic-DE-PROD-to-IAM-Windows--",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-445",
+                            "TCP-135"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51100545",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "2878": {
+                        "display_name": "TF-2878-Thycotic-SVG/SDI-to-Infra-ports-",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51119267",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2880": {
+                        "display_name": "TF-2880-Thycotic-SVG/SDI-to-Infra-ports",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-LINUX-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51119267",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-LINUX-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ]
+                    },
+                    "2888": {
+                        "display_name": "TF-2888-Thycotic-SVG/SDI-to-Infra-ports-----",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-45580"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51119267",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2890": {
+                        "display_name": "TF-2890-IAM-PROD-SID->-DE-",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-1100"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51132852 ",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD"
+                        ]
+                    },
+                    "2996": {
+                        "display_name": "TF-2996-IAMAAS-Secret-to-Blue",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "9.63.66.23"
+                        ],
+                        "services": [
+                            "TCP-2001"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51186649\n",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN"
+                        ]
+                    },
+                    "3202": {
+                        "display_name": "TF-3202-SRES-to-ICP",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-16351"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51306624",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                        ]
+                    },
+                    "3262": {
+                        "display_name": "TF-3262-ICP-to-SRES",
+                        "source_groups": [
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-test-oc4q5-omnibus"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-test-oc4q5-omnibus"
+                        ]
+                    },
+                    "3263": {
+                        "display_name": "TF-3263-SRES-to-ICP",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ]
+                    },
+                    "3270": {
+                        "display_name": "TF-3270-PenTest-VM-for-ChatOps",
+                        "source_groups": [
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-ag1irlpipam01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-8443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "CH50099191",
+                        "scope": [
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                            "TF-AG1-IPSET-SRES-ag1irlpipam01",
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip"
+                        ]
+                    },
+                    "3276": {
+                        "display_name": "TF-3276-SRES-to-ICP",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "146.89.238.165"
+                        ],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51357166",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ]
+                    },
+                    "3437": {
+                        "display_name": "TF-3437-UAT-Shared-to-DSS-NA",
+                        "source_groups": [
+                            "TF-AG1-SG-HOST-UAT-Shared"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PEN-VIP",
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-UAT-VIP",
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PROD-VIP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0122210",
+                        "scope": [
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PEN-VIP",
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-UAT-VIP",
+                            "TF-AG1-IPSET-SRES-IAM-THY-PROXY-PROD-VIP",
+                            "TF-AG1-SG-HOST-UAT-Shared"
+                        ]
+                    },
+                    "3482": {
+                        "display_name": "TF-3482-IBM-CLOUD-to-THY",
+                        "source_groups": [
+                            "TF-AG1-IPSET-Host-icdalpamhapxy01-cloudprivate-local",
+                            "TF-AG1-IPSET-Host-icamspamhapxy01-cloudprivate"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-5671-5672"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0116065",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-IPSET-Host-icdalpamhapxy01-cloudprivate-local",
+                            "TF-AG1-IPSET-Host-icamspamhapxy01-cloudprivate",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ]
+                    },
+                    "3483": {
+                        "display_name": "TF-3483-NA-to-EU-Chatops-integration",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-nlaspnp000m1erms"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-Host-nlaspnp000m1erms",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ]
+                    },
+                    "3526": {
+                        "display_name": "TF-3526-CHATOPS-to-ICD",
+                        "source_groups": [
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-ESLS-UAT",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ]
+                    },
+                    "3527": {
+                        "display_name": "TF-3527-ICD-to-CHATOPS",
+                        "source_groups": [
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "RITM0118985",
+                        "scope": [
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                            "TF-AG1-IPSET-ESLS-UAT",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                        ]
+                    },
+                    "3530": {
+                        "display_name": "TF-3530-EU-to-NA-SRES",
+                        "source_groups": [
+                            "TF-AG1-IPSET-EU-SRES-LB"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-5671",
+                            "TCP-5672"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0118704",
+                        "scope": [
+                            "TF-AG1-IPSET-EU-SRES-LB",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ]
+                    },
+                    "3585": {
+                        "display_name": "TF-3585-MCMS-EU-to-PAM",
+                        "source_groups": [
+                            "TF-AG1-IPSET-Host-icamspamhapxy01-cloudprivate"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "TCP-5672",
+                            "TCP-5671"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "RITM0121602",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-IPSET-Host-icamspamhapxy01-cloudprivate"
+                        ]
+                    },
+                    "3638": {
+                        "display_name": "TF-3638-IAM-to-IAMAAS-ZABBIX",
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-All-VMs"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-IAMAAS-ZABBIX"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-10050"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0127633",
+                        "scope": [
+                            "TF-AG1-IPSET-Host-IAMAAS-ZABBIX",
+                            "TF-AG1-SG-SRES-IAM-THY-All-VMs"
+                        ]
+                    },
+                    "3661": {
+                        "display_name": "TF-3661-ZABBIX-to-SRES",
+                        "source_groups": [
+                            "TF-AG1-IPSET-Host-IAMAAS-ZABBIX"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+                            "TF-AG1-IPSET-Host-ag1sr1lniamsbbkl1",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-SIDT",
+                            "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                            "TF-AG1-IPSET-Host-ag1sr1wniamsb-All",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-UAT",
+                            "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PEN",
+                            "TF-AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-SIDT",
+                            "TF-AG1-IPSET-Host-ag1sr1lniamsbprx1",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                            "TF-AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-CIO-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-10050"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0131427",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+                            "TF-AG1-IPSET-Host-ag1sr1lniamsbbkl1",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-SIDT",
+                            "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                            "TF-AG1-IPSET-Host-ag1sr1wniamsb-All",
+                            "TF-AG1-IPSET-Host-IAMAAS-ZABBIX",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-UAT",
+                            "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-PEN",
+                            "TF-AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-SIDT",
+                            "TF-AG1-IPSET-Host-ag1sr1lniamsbprx1",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-MSSQL-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                            "TF-AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                            "TF-AG1-SG-SRES-IAM-CIO-RAS-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-UAT",
+                            "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-DE-PROD"
+                        ]
+                    },
+                    "3745": {
+                        "display_name": "TF-3745-KSTP-2023-Pen-Test-SRES-scan",
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-NET-SRES-APP"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0139451",
+                        "scope": [
+                            "TF-AG1-IPSET-Host-NET-SRES-APP"
+                        ]
+                    },
+                    "3768": {
+                        "display_name": "TF-3768-IAM-dedicated-RAS-to-DDE",
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1sr1wpiamprra"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-EU1-eu1d276wpDDE"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "RDP",
+                            "TCP-3390"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0140602",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wpiamprra",
+                            "TF-AG1-IPSET-EU1-eu1d276wpDDE"
+                        ]
+                    },
+                    "3769": {
+                        "display_name": "TF-3769-Reverse-proxyto-KSTP-NA-PAM-RMQ",
+                        "source_groups": [
+                            "TF-AG1-IPSET-EU1-eu1d276lprevpxy"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-5672",
+                            "TCP-5671"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0140602",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-RMQ-PROD",
+                            "TF-AG1-IPSET-EU1-eu1d276lprevpxy"
+                        ]
+                    },
+                    "3770": {
+                        "display_name": "TF-3770-Reverse-proxy-to-KSTP-NA-PAM-Proxy",
+                        "source_groups": [
+                            "TF-AG1-IPSET-EU1-eu1d276lprevpxy"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0140602",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-PROXY-PROD",
+                            "TF-AG1-IPSET-EU1-eu1d276lprevpxy"
+                        ]
+                    },
+                    "3801": {
+                        "display_name": "TF-3801-AG-SRES-to-UAT-LA",
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1sr1wpiampre1",
+                            "TF-AG1-HOST-ag1sr1wpiampre2"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-UAT-LA2"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0143380",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wpiampre1",
+                            "TF-AG1-IPSET-UAT-LA2",
+                            "TF-AG1-HOST-ag1sr1wpiampre2"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

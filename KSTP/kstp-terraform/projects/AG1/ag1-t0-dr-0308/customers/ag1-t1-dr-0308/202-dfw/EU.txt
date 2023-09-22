@@ -1,0 +1,129 @@
+
+rule {
+    display_name = "TF-AG1-${local.dres}-RPAgent-Endpoints"
+    notes        = local.change
+    source_groups = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    destination_groups = [
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US1",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US2",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US3",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Argentina",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Chile",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Colombia",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Ecuador",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Mexico",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Uruguay",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Venezuela",
+       "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Canada"
+    ]
+    action = "ALLOW"
+    services = [
+      "/infra/services/SSH"
+    ]
+    scope = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    disabled              = false
+    direction             = "IN_OUT"
+    ip_version            = "IPV4_IPV6"
+    logged                = true
+    sources_excluded      = false
+    destinations_excluded = false
+    tag {
+      tag = "TF-AG-DRES${local.dres}"
+    }
+  }
+
+rule {
+    display_name = "TF-AG1-${local.dres}-Endpoints-RPAgent"
+    notes        = local.change
+    source_groups = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US1",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US2",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-US3",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Argentina",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Chile",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Colombia",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Ecuador",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Mexico",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Uruguay",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Venezuela",
+      "/infra/domains/default/groups/TF-AG1-IPSET-Endpoint_Nodes-Canada"
+    ]
+    destination_groups = [
+       "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    action = "ALLOW"
+    services = [
+      "/infra/services/SSH"
+    ]
+    scope = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    disabled              = false
+    direction             = "IN_OUT"
+    ip_version            = "IPV4_IPV6"
+    logged                = true
+    sources_excluded      = false
+    destinations_excluded = false
+    tag {
+      tag = "TF-AG-DRES${local.dres}"
+    }
+  }
+
+rule {
+    display_name = "TF-AG1-${local.dres}-EURP-RPAgent"
+    notes        = local.change
+    source_groups = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    destination_groups = [
+       "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    action = "ALLOW"
+    services = [
+      "/infra/services/ICMP-ALL"
+    ]
+    scope = [
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    disabled              = false
+    direction             = "IN_OUT"
+    ip_version            = "IPV4_IPV6"
+    logged                = true
+    sources_excluded      = false
+    destinations_excluded = false
+    tag {
+      tag = "TF-AG-DRES${local.dres}"
+    }
+  }
+
+rule {
+    display_name = "TF-AG1-${local.dres}-Jumphost-RPAgent"
+    notes        = local.change
+    source_groups = [
+      "/infra/domains/default/groups/TF-AG1-SG-DRES${local.dres}-Jumphost-NTP"
+    ]
+    destination_groups = [
+       "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    action = "ALLOW"
+    services = [
+      "/infra/services/SSH"
+    ]
+    scope = [
+      "/infra/domains/default/groups/TF-AG1-SG-DRES${local.dres}-Jumphost-NTP",
+      "/infra/domains/default/groups/TF-AG1-IPSET-EU-RestorePoint"
+    ]
+    disabled              = false
+    direction             = "IN_OUT"
+    ip_version            = "IPV4_IPV6"
+    logged                = true
+    sources_excluded      = false
+    destinations_excluded = false
+    tag {
+      tag = "TF-AG-DRES${local.dres}"
+    }
+  }

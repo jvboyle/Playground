@@ -1,0 +1,167 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-3389",
+            "HTTPS",
+            "RDP",
+            "TCP-3390",
+            "Terminal Services (UDP)",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+            "TF-AG1-SG-SRES-IAM-THY-DE-PEN",
+            "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+            "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN",
+            "TF-AG1-SG-DRES-PEN-IAM-THY-JPF",
+            "TF-AG1-HOST-ag1dit3lniamjpf",
+            "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN",
+            "TF-AG1-HOST-ag1sr1wniampte1",
+            "TF-AG1-SG-SRES-IAM-THY-SDI-PEN"
+        ]
+    },
+    "map_policies": {
+        "TF-DRIAMAASTHY3": {
+            "category": "Application",
+            "rules": {
+                "2337": {
+                    "display_name": "TF-2337-IAM-PEN-SRES-Distrib-Engine-to-Secret",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1wniampte1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 ",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-SECRET-PEN",
+                        "TF-AG1-HOST-ag1sr1wniampte1",
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ]
+                },
+                "2338": {
+                    "display_name": "TF-2338-IAM-PEN-DRES-port-forwarder-to-SRES-Proxies",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 ",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-PROXY-PEN",
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ]
+                },
+                "2339": {
+                    "display_name": "TF-2339-IAM-PEN-SVG-and-SDI-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-PEN"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 ",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-PEN",
+                        "TF-AG1-HOST-ag1dit3lniamjpf",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-PEN"
+                    ]
+                },
+                "2342": {
+                    "display_name": "TF-2342-IAM-PEN-Remote-Access-Server-to-SRES-Distrib-Engine-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1wniampte1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Terminal Services (UDP)",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 ",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                        "TF-AG1-HOST-ag1sr1wniampte1",
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ]
+                },
+                "2343": {
+                    "display_name": "TF-2343-IAM-PEN-DRES-port-forwarder-to-Distrib-Engine",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-DE-PEN"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-3390",
+                        "TCP-3389"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 \n\nCH50078679 and SR50964831:Remove: ag1dit3wniamde, \nAdd: SG-SRES-IAM-THY-DE-PEN",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-DE-PEN",
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ]
+                },
+                "2344": {
+                    "display_name": "TF-2344-IAM-PEN-SRES-Distrib-Engine-to-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-DE-PEN"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES-PEN-IAM-THY-JPF"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50078679 and SR50964831",
+                    "scope": [
+                        "TF-AG1-SG-DRES-PEN-IAM-THY-JPF",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-PEN"
+                    ]
+                }
+            }
+        }
+    }
+}

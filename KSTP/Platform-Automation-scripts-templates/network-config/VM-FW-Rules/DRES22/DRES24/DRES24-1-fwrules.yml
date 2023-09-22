@@ -1,0 +1,9 @@
+section_name: DR24
+rule_name: AA DRES robots ->  AA DRES robots
+source: SG-DR24-RPA-AA-Desktop-Pool
+destination: SG-DR24-RPA-AA-Desktop-Pool
+service: tcp/445
+action: allow
+logging: no
+direction: In/Out
+applied_to: SG-DR24-RPA-AA-Desktop-Pool

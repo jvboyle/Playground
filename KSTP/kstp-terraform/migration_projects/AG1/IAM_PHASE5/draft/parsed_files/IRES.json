@@ -1,0 +1,267 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-5985",
+            "Windows-Global-Catalog",
+            "MS-DS-UDP",
+            "SMTP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "NetBios Name Service (UDP)",
+            "KERBEROS",
+            "LDAP",
+            "KERBEROS-UDP",
+            "Windows-Global-Catalog-over-SSL",
+            "NTP",
+            "NBNS-Broadcast",
+            "SSH",
+            "DNS",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "TCP-7700",
+            "SOAP",
+            "SMB",
+            "DHCP-Server",
+            "WINS",
+            "LDAP-over-SSL",
+            "DNS-UDP",
+            "LDAP-UDP",
+            "NetBios Session Service (TCP)",
+            "Active Directory Server",
+            "TCP-5986",
+            "MS_RPC_TCP",
+            "NBDG-Broadcast",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "Active Directory Server UDP",
+            "NBSS",
+            "NBNS-Unicast",
+            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP",
+            "NetBios Datagram (UDP)"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1sr1staas1",
+            "TF-AG1-IPSET-MEaaS-Netcool-Probe",
+            "TF-AG1-SG-IRES-TS-License-Server",
+            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+            "TF-AG1-IPSET-NET-SL-IRES-Portable",
+            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-SG-TS-Session-Hosts",
+            "TF-AG1-HOST-ag1dc2",
+            "TF-AG1-HOST-ag1sr1staas2",
+            "TF-AG1-HOST-ag1sr1wdns01",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+            "TF-AG1-IPSET-MEaaS-IPM-Proxy",
+            "TF-AG1-HOST-ag1sr1wdns02",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-HOST-ag1jump02",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+            "TF-AG1-SG-IRES-SL1-Collectors",
+            "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "1111": {
+                    "display_name": "TF-1111-ISPW-SRES-Windows-Jump-Server-to-IPM-Proxy-Netcool-P-Netcool-S",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-MEaaS-Netcool-Probe",
+                        "TF-AG1-IPSET-MEaaS-IPM-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-MEaaS-Netcool-Probe",
+                        "TF-AG1-IPSET-MEaaS-IPM-Proxy",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1114": {
+                    "display_name": "TF-1114-Terminal-servers-to-License-server",
+                    "source_groups": [
+                        "TF-AG1-SG-TS-Session-Hosts",
+                        "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-TS-License-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "MS_RPC_TCP",
+                        "SMB",
+                        "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP",
+                        "TCP-5985",
+                        "NetBios Session Service (TCP)",
+                        "NetBios Datagram (UDP)",
+                        "NetBios Name Service (UDP)",
+                        "TCP-5986"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51015869 -  source  SG-SRES-IAM-THY-RAS-PROD,SG-SRES-IAM-THY-RAS-NONPROD added to the source",
+                    "scope": [
+                        "TF-AG1-SG-IRES-TS-License-Server",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                        "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                        "TF-AG1-HOST-ag1jump02",
+                        "TF-AG1-SG-TS-Session-Hosts"
+                    ]
+                },
+                "1927": {
+                    "display_name": "TF-1927-SG-IRES-SL1-Collectors-to-SRES-DNS-NTP",
+                    "source_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                    ]
+                },
+                "1930": {
+                    "display_name": "TF-1930-SG-IRES-SL1-Collectors-to-SRES-DNS-NTP",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2290": {
+                    "display_name": "TF-2290-SG-IRES-SL1-Collectors-to-DC",
+                    "source_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-HOST-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1sr1wdns01",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "Windows-Global-Catalog",
+                        "MS-DS-UDP",
+                        "SMTP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "KERBEROS",
+                        "LDAP",
+                        "KERBEROS-UDP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "NBNS-Broadcast",
+                        "MS-DS-TCP",
+                        "DNS",
+                        "WINS-UDP",
+                        "SOAP",
+                        "DHCP-Server",
+                        "WINS",
+                        "LDAP-over-SSL",
+                        "DNS-UDP",
+                        "LDAP-UDP",
+                        "Active Directory Server",
+                        "MS_RPC_TCP",
+                        "NBDG-Broadcast",
+                        "Active Directory Server UDP",
+                        "NBSS",
+                        "NBNS-Unicast"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50942227 SR50943392",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-HOST-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1sr1wdns01",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2"
+                    ]
+                },
+                "2959": {
+                    "display_name": "TF-2959-Copy-of-SG-IRES-SL1-Collectors-to-SRES-DNS-NTP-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

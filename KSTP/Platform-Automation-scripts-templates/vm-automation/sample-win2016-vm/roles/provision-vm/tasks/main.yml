@@ -1,0 +1,24 @@
+- name: Deploy VM {{ vmName }} on {{ vcenter }}
+  vmware_guest:
+    hostname: "{{ vcenter }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    datacenter: "{{ vcenter_dc }}"
+    cluster: "{{ vcenter_compute_cluster }}"
+    datastore: "{{ vcenter_compute_datastore }}"
+    validate_certs: no
+    folder: "/"
+    name: "{{ vmName }}"
+    state: poweredon
+    template: "{{ region_template_win2016 }}"
+    networks:
+    - name: "{{ vmNetwork }}"
+      type: static
+      ip: "{{ vmIp }}"
+      netmask: "{{ vmNetmask }}"
+      gateway: "{{ vmGw }}"
+      dns_servers: "{{ region_dns_servers }}"
+      domain: "{{ vmDomain }}"
+      start_connected: yes
+  delegate_to: localhost
+  register: facts_deploy

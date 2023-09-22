@@ -1,0 +1,41 @@
+{
+    "map_services": {
+        "SERVICES": []
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-HOST-ag1dc2"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "2331": {
+                    "display_name": "TF-2331-IAMaas--Thycotic-Pentest",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-All-VMs"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1dc2"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955390",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1dc2"
+                    ]
+                }
+            }
+        }
+    }
+}

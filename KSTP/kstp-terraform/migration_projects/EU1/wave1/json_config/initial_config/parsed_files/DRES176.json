@@ -1,0 +1,48 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DR176-eu1d176lplufsd-vip",
+            "TF-EU1-HOST-eu1sr1dxdev02",
+            "TF-EU1-HOST-eu1d176lplufsdc",
+            "TF-EU1-HOST-eu1d176lplufsdp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES176": {
+            "category": "Application",
+            "rules": {
+                "8572": {
+                    "display_name": "TF-8572-HTTP-Proxy-(vRO-to-M&EaaS-Portal-API)",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1dxdev02"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR176-eu1d176lplufsd-vip",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0114671\nRITM0118416",
+                    "scope": [
+                        "TF-EU1-IPSET-DR176-eu1d176lplufsd-vip",
+                        "TF-EU1-HOST-eu1sr1dxdev02",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ]
+                }
+            }
+        }
+    }
+}

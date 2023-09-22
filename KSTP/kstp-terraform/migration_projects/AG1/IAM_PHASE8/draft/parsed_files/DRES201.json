@@ -1,0 +1,74 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-16443",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR201-CACF-Proxy-VIP",
+            "TF-AG1-HOST-ag1d201lpcacpr1",
+            "TF-AG1-HOST-ag1d201lpcacpr2",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES201": {
+            "category": "Application",
+            "rules": {
+                "2695": {
+                    "display_name": "TF-2695-OCP-to-DRES-CACF-Proxy-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR201-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50082367/SR51018352\nSR51231745 - 16443",
+                    "scope": [
+                        "TF-AG1-IPSET-DR201-CACF-Proxy-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "2696": {
+                    "display_name": "TF-2696-DRES-to-dres",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d201lpcacpr1",
+                        "TF-AG1-HOST-ag1d201lpcacpr2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50082367/SR51018352",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d201lpcacpr1",
+                        "TF-AG1-HOST-ag1d201lpcacpr2",
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

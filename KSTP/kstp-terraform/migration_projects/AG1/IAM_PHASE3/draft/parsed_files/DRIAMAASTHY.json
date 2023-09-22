@@ -1,0 +1,64 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dlniamjpfua1",
+            "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT"
+        ]
+    },
+    "map_policies": {
+        "TF-DRIAMAASTHY": {
+            "category": "Application",
+            "rules": {
+                "2978": {
+                    "display_name": "TF-2978-JPF-to-EPL1-UAT",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198745",
+                    "scope": [
+                        "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT",
+                        "TF-AG1-HOST-ag1dlniamjpfua1"
+                    ]
+                },
+                "2980": {
+                    "display_name": "TF-2980-EPL1-UAT-to-jpf",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51198745",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DR226-ScienceLogic-Cluster-VIP",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-DR226-MNEAAS-SL1-1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES226": {
+            "category": "Application",
+            "rules": {
+                "7491": {
+                    "display_name": "TF-7491-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR226-ScienceLogic-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50089155",
+                    "scope": [
+                        "TF-EU1-IPSET-DR226-ScienceLogic-Cluster-VIP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "7492": {
+                    "display_name": "TF-7492-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR226-MNEAAS-SL1-1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50089155",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-DR226-MNEAAS-SL1-1"
+                    ]
+                }
+            }
+        }
+    }
+}

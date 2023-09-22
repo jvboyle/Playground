@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d218lpscasap"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES218": {
+            "category": "Application",
+            "rules": {
+                "9231": {
+                    "display_name": "TF-9231-ScienceLogic-Admin-to-Administration-Portal",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d218lpscasap"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0207691",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d218lpscasap",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

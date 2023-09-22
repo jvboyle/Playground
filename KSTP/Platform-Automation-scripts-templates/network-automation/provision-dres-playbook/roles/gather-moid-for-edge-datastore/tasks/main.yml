@@ -1,0 +1,15 @@
+  - name: Collect Edge Datastore ID
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/datastore?filter.names={{ vcenter_edge_datastore }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_edge_datastore
+
+  - name: Save Edge Datastore ID to Variable
+    set_fact:
+      edge_datastore_id: "{{ output_edge_datastore.json.value[0].datastore }}"

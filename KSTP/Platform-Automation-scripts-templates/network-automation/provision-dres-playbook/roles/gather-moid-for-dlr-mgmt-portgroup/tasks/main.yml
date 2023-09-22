@@ -1,0 +1,11 @@
+---
+- name: gather moid for dlr mgmt portgroup
+  vcenter_gather_moids:
+    hostname: "{{ vcenter }}"
+    username: "{{ vcenter_user }}"
+    password: "{{ vcenter_pwd }}"
+    datacenter_name: "{{ vcenter_dc }}"
+    portgroup_name: "{{ priv_dlr_mgmt_portgroup }}"
+    validate_certs: False
+  register: gather_moids_priv_dlr_mgmt_pg
+  tags: moids

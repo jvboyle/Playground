@@ -1,0 +1,53 @@
+---
+- name: Starting to prepeare the hosts
+  hosts: all
+  tasks:
+
+#   This steps adds the EPEL repository to the yum package manager so that it can download the required packages from epel.    
+  - name: Adding the EPEL Repository in disabled state
+    include_tasks: add-epel.yml
+
+#   This step installs the required packages which are available in the epel repository.
+  - name: Installing packages
+    include_tasks: install-package-from-epel.yml
+
+#   This will register the hosts with RHEL subscription.
+#   This is a required step for deploying the Enterprise Edition of OpenShift.
+  - name: Register and auto-subscribe to available content.
+    include_tasks: redhat-subscription.yml
+    when: openshift_deployment_type == "openshift-enterprise"
+
+#   This will subscribe the hosts with the repositories required for installing OpenShift Cluster Platform.
+  - name: Enabling repos for OpenShift packages
+    include_tasks: add-rhel-repos-origin.yml
+
+#   OpenShift Enterprise Edition require some additional packages. This step will add the repositories for those extra packages.
+#   This step requires the previous step to be executed successfully. (Registeration with RHEL)  
+  - name: Enabling additional repos for OpenShift Enterprise
+    include_tasks: add-rhel-repos-enterprise.yml
+    when: openshift_deployment_type == "openshift-enterprise"
+
+#   This will install some base packages required for the installation of OpenShift Cluster Platform.
+  - name: Install base packages
+    include_tasks: packages.yml
+
+#   This step will perform the tasks necessary to setup the DNS service between the hosts.
+#   This will allow the hosts to communicate with each other in the cluster.
+  - name: Setting up the DNS
+    include_tasks: dns-setup.yml
+
+#   This will enable and restart the services required for the installation of the OpenShift Container Platform
+  - name: Restart and enable Services
+    include_tasks: services.yml
+
+#   This will setup the volume storage for etcd.
+#   The tasks required for this will only be performed if the user specifies that the setup is required.
+#   The user can do so by setting the parameter etcd_setup_required as required or not required, as per need.
+  - include_tasks: etcd-setup.yml
+    when: etcd_setup_required == "required"
+
+#   This will setup the volume storage for docker.
+#   The tasks required for this will only be performed if the user specifies that the setup is required.
+#   The user can do so by setting the parameter docker_setup_required as required or not required, as per need.
+  - include_tasks: docker-setup.yml
+    when: docker_setup_required == "required"

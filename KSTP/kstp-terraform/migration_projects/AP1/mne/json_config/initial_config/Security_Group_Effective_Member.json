@@ -1,0 +1,516 @@
+{
+    "SG-SRES-IAM-THY-MSSQL-PROD": {
+        "vms": [
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprq2"
+        ]
+    },
+    "SG-PDR-SMTP-Relay": {
+        "vms": [
+            "ap1pdr1smtp01"
+        ]
+    },
+    "SG-DRES114-OCP-Cluster01": {
+        "vms": [
+            "ap1d114lpnabwrk4",
+            "ap1d114lpnabctl1",
+            "ap1d114lpnabwrk1",
+            "ap1d114lpnabbootstrap",
+            "ap1d114lpnabctl3",
+            "ap1d114lpnabocs2",
+            "ap1d114lpnabocs3",
+            "ap1d114lpnabwrk2",
+            "ap1d114lpnabctl2",
+            "ap1d114lpnabbase",
+            "ap1d114lpnabocs1",
+            "ap1d114lpnabwrk3"
+        ]
+    },
+    "SG-IRES-WIN-VMware-Monitoring": {
+        "vms": [
+            "ap1vmon"
+        ]
+    },
+    "SG-SRES-NAB-RDP-PROD": {
+        "vms": [
+            "ap1sr1wnabjmp02",
+            "ap1sr1wnabjmp01"
+        ]
+    },
+    "SG-SRES-IAM-THY-RAS-PROD": {
+        "vms": [
+            "ap1sr1wpiamprra"
+        ]
+    },
+    "SG-SMTP-Clients": {
+        "vms": [
+            "ap1sr1lpiamprprx1",
+            "ap1sr1lpiamprprx2"
+        ]
+    },
+    "SG-DRES110-OCP-Cluster01": {
+        "vms": [
+            "ap1d110lpbpibase",
+            "ap1d110lpbpiocs1",
+            "ap1d110lpbpibootstrap",
+            "ap1d110lpbpiocs2",
+            "ap1d110lpbpiwrk2",
+            "ap1d110lpbpiwrk4",
+            "ap1d110lpbpictl2",
+            "ap1d110lpbpictl3",
+            "ap1d110lpbpictl1",
+            "ap1d110lpbpiwrk1",
+            "ap1d110lpbpiwrk3",
+            "ap1d110lpbpiocs3"
+        ]
+    },
+    "SG-BigFix-Relay": {
+        "vms": [
+            "ap1sr1bfrelay1",
+            "ap1sr1bfrelay2"
+        ]
+    },
+    "SG-SRES-IAM-THY-SVG-PROD": {
+        "vms": [
+            "ap1sr1apiamprsvg1",
+            "ap1sr1apiamprsvg2"
+        ]
+    },
+    "SG-SRES01-Icp-Cluster01": {
+        "vms": [
+            "ap1sr1icp1n04",
+            "ap1sr1icp1nfs01",
+            "ap1sr1icp1n07",
+            "ap1sr1icp1n01",
+            "ap1sr1icp1x03",
+            "ap1sr1icp1x01",
+            "ap1sr1icp1m01",
+            "ap1sr1icp1va01",
+            "ap1sr1icp1n02",
+            "ap1sr1icp1x02",
+            "ap1sr1icp1m02",
+            "ap1sr1icp1n06",
+            "ap1sr1icp1p02",
+            "ap1sr1icp1n05",
+            "ap1sr1icp1m03",
+            "ap1sr1icp1p03"
+        ]
+    },
+    "SG-HRES-HA-Proxy-OUT": {
+        "vms": [
+            "ap1h1lpta2hap1",
+            "ap1h1lpta2hap2"
+        ]
+    },
+    "SG-SRES-WIN-Jump-Servers": {
+        "vms": [
+            "ap1sr1wjmp01",
+            "ap1sr1wjmp02"
+        ]
+    },
+    "SG-SRES-IAM-THY-DE-PROD": {
+        "vms": [
+            "ap1sr1wpiampre1",
+            "ap1sr1wpiampre2"
+        ]
+    },
+    "SG-SRES-IAM-THY-SDI-PROD": {
+        "vms": [
+            "ap1sr1lpiamprsdi3",
+            "ap1sr1lpiamprsdi1",
+            "ap1sr1lpiamprsdi2"
+        ]
+    },
+    "SG-DRES-ALL-CACF-Proxy": {
+        "vms": [
+            "ap1d105lpcacpr2",
+            "ap1d141lpcacpr1",
+            "ap1pdr1prx01",
+            "ap1d107lpcacpr1",
+            "ap1d129lpcacpr1",
+            "ap1h1lpta1ssh1",
+            "ap1d110lpcacpr1",
+            "ap1sr1lpcacprx1",
+            "ap1d127lpcacpr1",
+            "ap1d110lpcacpr2",
+            "ap1pdr1prx02",
+            "ap1d103lpcacpr1",
+            "ap1d105lpcacpr1",
+            "ap1d108lpcacpr1",
+            "ap1h1lpta1ssh2",
+            "ap1d107lpcacpr2",
+            "ap1d114lpcacpr1",
+            "ap1d101lpcacprx1",
+            "ap1d128lpcacpr1",
+            "ap1sr1lpcacprx2",
+            "ap1d114lpcacpr2",
+            "ap1d130lpcacpr1"
+        ]
+    },
+    "SG-DRES-Proxy-Servers": {
+        "vms": [
+            "ap1d103lpcacpr1",
+            "ap1d101lpcacprx1",
+            "ap1d110lpcacpr1",
+            "ap1d105lpcacpr2",
+            "ap1d108lpcacpr1",
+            "ap1d128lpcacpr1",
+            "ap1d130lpcacpr1",
+            "ap1d127lpcacpr1",
+            "ap1d141lpcacpr1",
+            "ap1d105lpcacpr1",
+            "ap1d107lpcacpr1"
+        ]
+    },
+    "SG-SL-VCS-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ADNSap11",
+            "ADNSap12"
+        ]
+    },
+    "SG-SRES01-OCP-Build": {
+        "vms": [
+            "ap1sr1wdns01"
+        ]
+    },
+    "SG-SRES-Linux-Jump-Servers": {
+        "vms": [
+            "ap1sr1ljmp01"
+        ]
+    },
+    "SG-SRES-MNEAAS-AP-NCI": {
+        "vms": [
+            "ap1srlpm1ecni",
+            "ap1srlpm1epni"
+        ]
+    },
+    "SG-SRES-WIN-SEPM": {
+        "vms": [
+            "ap1sr1sepm1"
+        ]
+    },
+    "SG-SL-IRES-WIN-AD-DNS-NTP": {
+        "vms": [
+            "ap1dc2",
+            "ap1dc1"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-PROD-AD": {
+        "vms": [
+            "ap1sr1wpiamprr3",
+            "ap1sr1wpiampre2",
+            "ap1sr1wpiamprra",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiampre1",
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprt3",
+            "ap1sr1wpiamprfs",
+            "ap1sr1wpiamprt1",
+            "ap1sr1wpiamprq2",
+            "ap1sr1wpiamprqs",
+            "ap1sr1wpiamprr1",
+            "ap1sr1wpiamprt2"
+        ]
+    },
+    "SG-SRES-IAM-NODB-PROD": {
+        "vms": [
+            "ap1sr1wpiampre2",
+            "ap1sr1lpiamprsdi1",
+            "ap1sr1wpiampre1",
+            "ap1sr1wpiamprt2",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiamprr1",
+            "ap1sr1wpiamprt3",
+            "ap1sr1wpiamprt1",
+            "ap1sr1lpiamprsdi2",
+            "ap1sr1wpiamprr3",
+            "ap1sr1lpiamprsdi3"
+        ]
+    },
+    "SG-SL-IRES-WIN-Jump-Servers": {
+        "vms": [
+            "ap1jump02"
+        ]
+    },
+    "SG-SRES01-OCP-Cluster02": {
+        "vms": [
+            "ap1sr1lpta2base"
+        ]
+    },
+    "SG-IRES-LIN-SFTP-Backup": {
+        "vms": [
+            "ap1sftp02"
+        ]
+    },
+    "SG-SRES-IAM-THY-SECRET-PROD": {
+        "vms": [
+            "ap1sr1wpiamprt3",
+            "ap1sr1wpiamprt1",
+            "ap1sr1wpiamprt2"
+        ]
+    },
+    "SG-SRES-Automation-Control-Node": {
+        "vms": [
+            "ap1sr1cntrl1"
+        ]
+    },
+    "SG-SRES-WIN-SQL": {
+        "vms": [
+            "ap1sr1sql01"
+        ]
+    },
+    "SG-HRES-HA-Proxy-IN": {
+        "vms": [
+            "ap1h1lpta1hap1",
+            "ap1h1lpta1hap2"
+        ]
+    },
+    "SG-SRES-WIN-WSUS": {
+        "vms": [
+            "ap1sr1wsus01"
+        ]
+    },
+    "SG-SRES01-OCP-Cluster01": {
+        "vms": [
+            "ap1sr1lpta1wrk5",
+            "ap1sr1lpta1ctl3",
+            "ap1sr1lpta1ctl1",
+            "ap1sr1lpta1wrk4",
+            "ap1sr1lpta1ctl2",
+            "ap1sr1lpta1wrk1",
+            "ap1sr1lpta1wrk8",
+            "ap1sr1lpta1wrk6",
+            "ap1sr1lpta1wrk2",
+            "ap1sr1lpta1wrk7",
+            "ap1sr1lpta1wrk3"
+        ]
+    },
+    "SG-PDR-Internet-Proxy-Server": {
+        "vms": [
+            "ap1pdr1prx01",
+            "ap1pdr1prx02"
+        ]
+    },
+    "SG-SRES-Sciencelogic-servers": {
+        "vms": [
+            "ap1srlpm1esc1",
+            "ap1srlpm1esbk1"
+        ]
+    },
+    "SG-SRES-MNEAAS-AP-NWG": {
+        "vms": [
+            "ap1srlpm1epwg"
+        ]
+    },
+    "SG-SRES-IAM-WINDOWS-PROD": {
+        "vms": [
+            "ap1sr1wpiampre2",
+            "ap1sr1wpiamprt1",
+            "ap1sr1wpiamprr1",
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiamprq2",
+            "ap1sr1wpiamprr3",
+            "ap1sr1wpiamprt2",
+            "ap1sr1wpiampre1",
+            "ap1sr1wpiamprra",
+            "ap1sr1wpiamprt3"
+        ]
+    },
+    "SG-SRES-WIN-DNS-NTP": {
+        "vms": [
+            "ap1sr1wdns01",
+            "ap1sr1wdns02"
+        ]
+    },
+    "SG-SRES-IAM-LINUX-PROD": {
+        "vms": [
+            "ap1sr1apiamprsvg1",
+            "ap1sr1lpiamprd2",
+            "ap1sr1lpiamprprx1",
+            "ap1sr1lpiamprd1",
+            "ap1sr1lpiamprsdi2",
+            "ap1sr1lpiamprsdi3",
+            "ap1sr1apiamprsvg2",
+            "ap1sr1lpiamprprx2",
+            "ap1sr1lpiamprsdi1"
+        ]
+    },
+    "SG-SRES-IAM-THY-RDP-PROD": {
+        "vms": [
+            "ap1sr1wpiamprr2",
+            "ap1sr1lpiamnfs",
+            "ap1sr1wpiamprr1",
+            "ap1sr1lpiamprprx2",
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprra",
+            "ap1sr1wpiamprt3",
+            "ap1sr1apiamprsvg1",
+            "ap1sr1wpiampre1",
+            "ap1sr1wpiamprt2",
+            "ap1sr1wpiamprfs",
+            "ap1sr1lpiamprsdi2",
+            "ap1sr1wpiamprq2",
+            "ap1sr1lpiamprsdi1",
+            "ap1sr1wpiamprqs",
+            "ap1sr1lpiamprprx1",
+            "ap1sr1wpiampre2",
+            "ap1sr1lpiamprd2",
+            "ap1sr1wpiamprt1",
+            "ap1sr1lpiamprsdi3",
+            "ap1sr1apiamprsvg2",
+            "ap1sr1wpiamprr3",
+            "ap1sr1lpiamprd1"
+        ]
+    },
+    "SG-SRES-IAM-THY-RMQ-PROD": {
+        "vms": [
+            "ap1sr1wpiamprr1",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiamprr3"
+        ]
+    },
+    "SG-SRES-IAM-THY-All-VMs": {
+        "vms": [
+            "ap1sr1wpiampre1",
+            "ap1sr1lpiamnfs",
+            "ap1sr1wpiamprr1",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiamprqs",
+            "ap1sr1wpiamprt3",
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprt2",
+            "ap1sr1wpiampre2",
+            "ap1sr1lpiamprsdi1",
+            "ap1sr1lpiamprsdi3",
+            "ap1sr1wpiamprr3",
+            "ap1sr1lpiamprprx1",
+            "ap1sr1wpiamprra",
+            "ap1sr1lpiamprd2",
+            "ap1sr1lpiamprd1",
+            "ap1sr1lpiamprprx2",
+            "ap1sr1wpiamprt1",
+            "ap1sr1lpiamprsdi2",
+            "ap1sr1wpiamprfs",
+            "ap1sr1wpiamprq2"
+        ]
+    },
+    "SG-IRES-WIN-TS-Licensing": {
+        "vms": [
+            "ap1wtslic01"
+        ]
+    },
+    "SG-AP-MSS-QRADAR-DC": {
+        "vms": [
+            "ap1lmssqr01"
+        ]
+    },
+    "SG-ap1sr1wppd": {
+        "vms": [
+            "ap1sr1lcacfjump02",
+            "ap1sr1wnabjmp02",
+            "ap1sr1wpiamprt1",
+            "ap1sr1wpiamprfs",
+            "ap1sr1icp1x02",
+            "ap1sr1lpcacprx2",
+            "ap1sr1lpta1ctl2",
+            "ap1sr1icp1p02",
+            "ap1sr1lniamptsdi",
+            "ap1sr1wdns01",
+            "ap1sr1wpiampre1",
+            "ap1sr1icp1n07",
+            "ap1sr1wjmp01",
+            "ap1sr1icp1n06",
+            "ap1sr1wrptest",
+            "ap1sr1ljmp01",
+            "ap1sr1icp1p03",
+            "ap1sr1wnabjmp01",
+            "ap1sr1lpta1ctl3",
+            "ap1sr1wpiamprr2",
+            "ap1sr1wpiamprt2",
+            "ap1sr1icp1va01",
+            "ap1sr1wjmp02",
+            "ap1sr1lpiamnfs",
+            "ap1sr1bfrelay1",
+            "ap1sr1wniamptr1",
+            "ap1sr1lpta1wrk8",
+            "ap1sr1icp1x01",
+            "ap1sr1lpiamprprx2",
+            "ap1sr1lpta1ctl1",
+            "ap1sr1lniamptd1",
+            "Ap1sr1wisotest",
+            "ap1sr1lpta1wrk6",
+            "ap1sr1icp1m03",
+            "ap1sr1lpocpnfs1",
+            "ap1sr1wpiamprt3",
+            "ap1sr1wpiamprqs",
+            "ap1sr1lpta1wrk3",
+            "ap1sr1lpta2base",
+            "ap1sr1wdns02",
+            "ap1sr1sepm1",
+            "ap1sr1lpcacprx1",
+            "ap1sr1wppd",
+            "ap1sr1ptr1_test",
+            "ap1sr1bfrelay2",
+            "ap1sr1lniamptd2",
+            "ap1sr1icp1m01",
+            "ap1sr1wsus01",
+            "ap1sr1lpta1wrk5",
+            "ap1sr1wpiamprq1",
+            "ap1sr1wpiamprra",
+            "ap1sr1wniamptt1",
+            "ap1sr1lcacfjump01",
+            "ap1sr1wpiamprr1",
+            "ap1sr1lpiamprd1",
+            "ap1sr1wpiamprq2",
+            "ap1sr1apiamprsvg1",
+            "ap1sr1icp1n05",
+            "ap1sr1lncacibtjh -New",
+            "ap1sr1lpta1wrk1",
+            "ap1sr1lpiamprsdi1",
+            "ap1sr1icp1nfs01",
+            "ap1sr1sql01",
+            "ap1sr1lpta1wrk4",
+            "ap1sr1icp1n04",
+            "ap1sr1lncacibtep",
+            "ap1sr1icp1n01",
+            "ap1sr1icp1n02",
+            "ap1sr1lpiamprsdi3",
+            "ap1sr1lpiamprsdi2",
+            "ap1sr1wpiamprr3",
+            "ap1sr1icp1x03",
+            "ap1sr1lpiamprd2",
+            "ap1sr1wpiampre2",
+            "ap1sr1apiamprsvg2",
+            "ap1sr1lpnessus",
+            "ap1sr1lpiamprprx1",
+            "ap1sr1lpta1wrk2",
+            "ap1sr1icp1m02",
+            "ap1sr1cntrl1",
+            "ap1sr1lpta1wrk7"
+        ]
+    },
+    "SG-HRES-TALOS-SSHProxy": {
+        "vms": [
+            "ap1h1lpta1ssh2",
+            "ap1h1lpta1ssh1"
+        ]
+    },
+    "SG-IRES-WIN-VMware-vRO": {
+        "vms": [
+            "ap1vro01"
+        ]
+    },
+    "SG-SRES-IAM-THY-DB2-PROD": {
+        "vms": [
+            "ap1sr1lpiamprd1",
+            "ap1sr1lpiamprd2"
+        ]
+    },
+    "SG-SRES-IAM-THY-PROXY-PROD": {
+        "vms": [
+            "ap1sr1lpiamprprx1",
+            "ap1sr1lpiamprprx2"
+        ]
+    }
+}

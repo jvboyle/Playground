@@ -1,0 +1,11 @@
+---
+- name: gather moid for public uplink portgroup
+  vcenter_gather_moids:
+    hostname: "{{ vcenter }}"
+    username: "{{ vcenter_user }}"
+    password: "{{ vcenter_pwd }}"
+    datacenter_name: "{{ vcenter_dc }}"
+    portgroup_name: "{{ pub_ns_portgroup }}"
+    validate_certs: False
+  register: gather_moids_pub_pg
+  tags: moids

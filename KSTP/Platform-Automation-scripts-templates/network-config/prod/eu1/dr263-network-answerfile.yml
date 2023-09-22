@@ -1,0 +1,26 @@
+customer_name: Dior Couture
+blue_id: FR000055
+dres_name: dr263
+app_internal_name: "dr263-app-internal1"
+app_internal_subnet: 100.73.158.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.73.158.1
+dres_transit_subnet: 100.72.10.208
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr263-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.72.10.208
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.72.10.210
+vpn_esg_vnic1_ip: 100.72.10.209
+esg_dlr_transit_name: "dr263-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.72.10.216
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.72.10.217
+dlr_uplink1_ip: 100.72.10.218
+res_esg_vnic0_ip: 100.72.64.176
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: eu1-e-dvs1-pub-dvpg-edge-pub-ns-1137
+vpn_esg_vnic0_ip: 169.51.163.145
+vpn_esg_vnic0_ip_prefix: 24

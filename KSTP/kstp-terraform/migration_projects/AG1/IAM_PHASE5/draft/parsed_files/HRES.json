@@ -1,0 +1,98 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTPS",
+            "HTTP",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-IPSET-HRES-ag1h1lpta1ssh-VIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-ag1h1lpta2hapProxy",
+            "TF-AG1-SG-SRES01-OCP-Cluster03",
+            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+            "TF-AG1-SG-ag1h1lpta1hapProxy",
+            "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster05",
+            "TF-AG1-SG-SRES01-OCP-Cluster02",
+            "TF-AG1-SG-HRES-TALOS-SSHProxy-SharedProd"
+        ]
+    },
+    "map_policies": {
+        "TF-HRES": {
+            "category": "Application",
+            "rules": {
+                "1412": {
+                    "display_name": "TF-1412-WIN-Jump-AT-to-HRES-SSH-Proxy-for-AG-Prod-Instance",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES01-OCP-Cluster03",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-SG-SRES01-OCP-Cluster02",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-HRES-ag1h1lpta1ssh-VIP",
+                        "TF-AG1-SG-HRES-TALOS-SSHProxy-SharedProd"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-HRES-TALOS-SSHProxy-SharedProd",
+                        "TF-AG1-IPSET-HRES-ag1h1lpta1ssh-VIP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES01-OCP-Cluster03",
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-SG-SRES01-OCP-Cluster02",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "1675": {
+                    "display_name": "TF-1675-SRES-jump-to-hres-proxy",
+                    "source_groups": [
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-ag1h1lpta2hapProxy",
+                        "TF-AG1-SG-ag1h1lpta1hapProxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-ag1h1lpta2hapProxy",
+                        "TF-AG1-SG-ag1h1lpta1hapProxy",
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP"
+                    ]
+                }
+            }
+        }
+    }
+}

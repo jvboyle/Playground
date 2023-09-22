@@ -1,0 +1,345 @@
+######################################################
+# migration: IAM_PHASE5
+######################################################
+   rule {
+         display_name = "TF-2650-V2T-Test-rule-1"
+         notes        = "SR51025105"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "100.65.2.0/23",
+               "100.71.234.0/23",
+               "100.64.65.0/24",
+               "10.211.161.0/24",
+               "100.71.242.0/24",
+               "100.71.243.0/24",
+               "100.71.244.0/27",
+               "10.211.12.192/26",
+               "100.65.0.0/23"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/ICMP_Echo_Reply",
+               "/infra/services/SSH",
+               "/infra/services/ICMP_Time_Exceeded",
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP",
+               "/infra/services/ICMP-Echo",
+               "/infra/services/ICMP_Destination_Unreachable",
+               "/infra/services/ICMP_Redirect"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2660-Access-Installer-Interface-from-SRES-WIN-JH"
+         notes        = "SR51098996 To Access the installer interface from SRES Windows Jump servers"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-mgmt-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-TKG-MGMTs"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-31234",
+               "/infra/services/TCP-5555",
+               "/infra/services/TCP-30167",
+               "/infra/services/TCP-6443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2778-Tanzu-Mgmt-to-IRES-LDAP"
+         notes        = "NSX-T POC Migration"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-sres-tanzu-workload-06",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-mgmt-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+               "/infra/domains/default/groups/TF-AG1-IPSET-sres-tanzu-workload-05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NTP",
+               "/infra/services/LDAP",
+               "/infra/services/TCP-636"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2834-SRES-JH-to-TKG-Cluster-Access"
+         notes        = "SR51098996 SRES JH to TKG cluster access"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-mgmt-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-6443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2835-AUTH-Login-to-TKG-Clusters-from-Jumphosts"
+         notes        = "SR51098996 Allow Login to the TKG Clusters"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-mgmt-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-02-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-31531",
+               "/infra/services/TCP-31637",
+               "/infra/services/TCP-30167",
+               "/infra/services/TCP-31234"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2889-DNS-delegation-to-AVI"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AVI-NS1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2896-OCP-4-6-build"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster7-VIP",
+               "100.71.244.0/24"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8181",
+               "/infra/services/SSH",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-8053",
+               "/infra/services/TCP-6443",
+               "/infra/services/TCP-9000",
+               "/infra/services/TCP-8080",
+               "/infra/services/HTTP",
+               "/infra/services/TCP-4789",
+               "/infra/services/TCP-22623",
+               "/infra/services/DNS-UDP",
+               "/infra/services/TCP-18080",
+               "/infra/services/TCP-10250",
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-8001",
+               "/infra/services/TCP-30000-32767",
+               "/infra/services/TCP-8500"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2952-MoM-Jump-server-AG-to-CACF-NA-DevTest-cluster"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "100.71.244.2",
+               "100.71.244.4"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-6443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2969-NSXV_Windows_JH_to_NSXT_OCP4"
+         notes        = "SR51195107"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-6443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3023-OCP5-to-CACF-Jump"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-NSXT-OCP05-Subnet"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3870-DRES308-NTP-DNS"
+         notes        = "RITM0149324"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1d308-AD"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/NTP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }

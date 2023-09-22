@@ -1,0 +1,50 @@
+{
+    "source and destination": [
+        "HOST-IBM-Bluepages",
+        "HOST-EZOPS-ITM-hkgsni",
+        "HOST-EZOPS-DEV",
+        "SG-SRES-WIN-Jump-Servers",
+        "HOST-ap1sr1lpta1-vip",
+        "HOST-w3-ibm-com",
+        "SG-SRES-Linux-Jump-Servers",
+        "SG-PDR-SMTP-Relay",
+        "HOST-bldbmsa-boulder-ibm-com",
+        "NET-IBM-Blue",
+        "ap1srlpezoyess"
+    ],
+    "groups and ipsets": [
+        "HOST-IBM-Bluepages",
+        "HOST-EZOPS-ITM-hkgsni",
+        "HOST-EZOPS-DEV",
+        "SG-SRES-WIN-Jump-Servers",
+        "HOST-ap1sr1lpta1-vip",
+        "HOST-w3-ibm-com",
+        "SG-SRES-Linux-Jump-Servers",
+        "SG-PDR-SMTP-Relay",
+        "HOST-bldbmsa-boulder-ibm-com",
+        "NET-IBM-Blue"
+    ],
+    "source and destination ips": [
+        "ap1sr1wjmp02",
+        "9.17.186.253",
+        "100.80.69.5",
+        "146.89.226.177",
+        "9.16.252.114",
+        "146.89.226.178",
+        "9.115.1.175",
+        "9.23.210.79",
+        "9.17.185.146",
+        "9.57.182.78",
+        "9.115.3.175",
+        "158.87.54.5",
+        "10.63.9.69",
+        "10.63.9.68",
+        "158.87.54.7",
+        "9.115.5.175",
+        "10.63.9.71",
+        "158.87.54.20",
+        "9.0.0.0/8",
+        "146.89.226.164",
+        "158.87.54.4"
+    ]
+}

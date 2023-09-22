@@ -1,0 +1,69 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8420",
+            "SSH",
+            "TCP-33343"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d275lnsaspoc2",
+            "TF-EU1-HOST-eu1srlnsaspoc1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES275": {
+            "category": "Application",
+            "rules": {
+                "8662": {
+                    "display_name": "TF-8662-SAS-SRES-SAS-server-to-DRES-SAS-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlnsaspoc1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d275lnsaspoc2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175685",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d275lnsaspoc2",
+                        "TF-EU1-HOST-eu1srlnsaspoc1"
+                    ]
+                },
+                "8894": {
+                    "display_name": "TF-8894-DRES-SAS-to-SRES-SAS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d275lnsaspoc2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlnsaspoc1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8420",
+                        "TCP-33343"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0127613 -correction",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d275lnsaspoc2",
+                        "TF-EU1-HOST-eu1srlnsaspoc1"
+                    ]
+                }
+            }
+        }
+    }
+}

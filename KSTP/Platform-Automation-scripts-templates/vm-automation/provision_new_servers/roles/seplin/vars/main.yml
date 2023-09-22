@@ -1,0 +1,8 @@
+---
+jre_rpm_src: "files/jre-8u101-linux-x64.rpm"
+jre_rpm_dst: "/tmp/jre-8u101-linux-x64.rpm"
+jce_src: "files/UnlimitedJCEPolicyJDK8"
+jce_dst: "/usr/java/jre1.8.0_101/lib/security"
+sep_src: "files/sep-rpm.zip"
+sep_dst: "/tmp"
+...

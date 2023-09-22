@@ -1,0 +1,26 @@
+customer_name: SAT-zCloud
+blue_id: N/A
+dres_name: dr70
+app_internal_name: "dr70-app-internal1"
+app_internal_subnet: 100.64.96.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.64.96.1
+dres_transit_subnet: 100.64.0.224
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "dr70-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.64.0.224
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.64.0.226
+vpn_esg_vnic1_ip: 100.64.0.225
+esg_dlr_transit_name: "dr70-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.64.0.232
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.64.0.233
+dlr_uplink1_ip: 100.64.0.234
+res_esg_vnic0_ip: 100.64.64.17
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: ag1-e-dvs1-pub-dvpg-pub-ns-874
+vpn_esg_vnic0_ip: 169.63.82.242
+vpn_esg_vnic0_ip_prefix: 27

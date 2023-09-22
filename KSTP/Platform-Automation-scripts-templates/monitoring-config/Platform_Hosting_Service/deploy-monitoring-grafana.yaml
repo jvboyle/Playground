@@ -1,0 +1,152 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"extensions/v1beta1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"monitoring-grafana","component":"grafana"},"name":"monitoring-grafana","namespace":"kube-system"},"spec":{"replicas":1,"template":{"metadata":{"labels":{"app":"monitoring-grafana","component":"grafana","release":"monitoring"}},"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"beta.kubernetes.io/arch","operator":"In","values":["amd64"]},{"key":"management","operator":"In","values":["true"]}]}]}}},"containers":[{"command":["/opt/entry/entrypoint.sh"],"env":[{"name":"GF_SECURITY_ADMIN_USER","value":"admin"},{"name":"GF_SECURITY_ADMIN_PASSWORD","value":"admin"}],"image":"ibmcom/grafana:4.6.3","imagePullPolicy":"IfNotPresent","name":"grafana","ports":[{"containerPort":3001,"name":"web"}],"resources":{},"volumeMounts":[{"mountPath":"/var/lib/grafana","name":"grafana-storage"},{"mountPath":"/etc/grafana","name":"config-volume"},{"mountPath":"/var/lib/grafana/dashboards","name":"dashboard-volume"},{"mountPath":"/opt/entry","name":"grafana-entry"}]},{"command":["/opt/ibm/router/entry/entrypoint.sh"],"image":"ibmcom/icp-router:2.2.0","imagePullPolicy":"IfNotPresent","name":"router","ports":[{"containerPort":8080,"name":"router"}],"volumeMounts":[{"mountPath":"/opt/ibm/router/conf","name":"router-config"},{"mountPath":"/opt/ibm/router/certs","name":"monitoring-certs"},{"mountPath":"/opt/ibm/router/ca-certs","name":"monitoring-ca-cert"},{"mountPath":"/opt/ibm/router/entry","name":"router-entry"}]}],"tolerations":[{"effect":"NoSchedule","key":"dedicated","operator":"Exists"}],"volumes":[{"name":"grafana-storage","persistentVolumeClaim":{"claimName":"monitoring-grafana-pvc"}},{"configMap":{"name":"monitoring-grafana-config"},"name":"config-volume"},{"configMap":{"name":"monitoring-grafana-dashboard-config"},"name":"dashboard-volume"},{"configMap":{"defaultMode":484,"name":"grafana-entry-config"},"name":"grafana-entry"},{"configMap":{"name":"grafana-router-nginx-config"},"name":"router-config"},{"name":"monitoring-certs","secret":{"secretName":"monitoring-certs"}},{"name":"monitoring-ca-cert","secret":{"secretName":"monitoring-ca-cert"}},{"configMap":{"defaultMode":484,"name":"monitoring-router-entry-config"},"name":"router-entry"}]}}}}
+  creationTimestamp: 2018-03-21T05:20:08Z
+  generation: 2
+  labels:
+    app: monitoring-grafana
+    component: grafana
+  name: monitoring-grafana
+  namespace: kube-system
+  resourceVersion: "51003621"
+  selfLink: /apis/extensions/v1beta1/namespaces/kube-system/deployments/monitoring-grafana
+  uid: 85bc3bb0-2cc7-11e8-bc77-005056bbded7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitoring-grafana
+      component: grafana
+      release: monitoring
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: monitoring-grafana
+        component: grafana
+        release: monitoring
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+              - key: management
+                operator: In
+                values:
+                - "true"
+      containers:
+      - command:
+        - /opt/entry/entrypoint.sh
+        env:
+        - name: GF_SECURITY_ADMIN_USER
+          value: admin
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          value: admin
+        image: ibmcom/grafana:4.6.3
+        imagePullPolicy: IfNotPresent
+        name: grafana
+        ports:
+        - containerPort: 3001
+          name: web
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/grafana
+          name: grafana-storage
+        - mountPath: /etc/grafana
+          name: config-volume
+        - mountPath: /var/lib/grafana/dashboards
+          name: dashboard-volume
+        - mountPath: /opt/entry
+          name: grafana-entry
+      - command:
+        - /opt/ibm/router/entry/entrypoint.sh
+        image: ibmcom/icp-router:2.2.0
+        imagePullPolicy: IfNotPresent
+        name: router
+        ports:
+        - containerPort: 8080
+          name: router
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/ibm/router/conf
+          name: router-config
+        - mountPath: /opt/ibm/router/certs
+          name: monitoring-certs
+        - mountPath: /opt/ibm/router/ca-certs
+          name: monitoring-ca-cert
+        - mountPath: /opt/ibm/router/entry
+          name: router-entry
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: dedicated
+        operator: Exists
+      volumes:
+      - name: grafana-storage
+        persistentVolumeClaim:
+          claimName: monitoring-grafana-pvc
+      - configMap:
+          defaultMode: 420
+          name: monitoring-grafana-config
+        name: config-volume
+      - configMap:
+          defaultMode: 420
+          name: monitoring-grafana-dashboard-config
+        name: dashboard-volume
+      - configMap:
+          defaultMode: 484
+          name: grafana-entry-config
+        name: grafana-entry
+      - configMap:
+          defaultMode: 420
+          name: grafana-router-nginx-config
+        name: router-config
+      - name: monitoring-certs
+        secret:
+          defaultMode: 420
+          secretName: monitoring-certs
+      - name: monitoring-ca-cert
+        secret:
+          defaultMode: 420
+          secretName: monitoring-ca-cert
+      - configMap:
+          defaultMode: 484
+          name: monitoring-router-entry-config
+        name: router-entry
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: 2018-03-21T05:20:08Z
+    lastUpdateTime: 2018-03-21T05:20:08Z
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

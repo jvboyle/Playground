@@ -1,0 +1,9 @@
+services:
+  ansible:
+    image: ansible-docker-container
+    volumes:
+      - type: bind
+        source: $PWD/../
+        target: /SOURCE
+    environment:
+      - USER_ID=jboyle

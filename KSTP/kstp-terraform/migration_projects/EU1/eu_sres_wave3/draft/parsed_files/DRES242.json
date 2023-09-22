@@ -1,0 +1,49 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1eascno",
+            "TF-EU1-HOST-eu1srlpm1easpno",
+            "TF-EU1-HOST-eu1d242lptlftnp2",
+            "TF-EU1-HOST-eu1d242lptlftnp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES242": {
+            "category": "Application",
+            "rules": {
+                "7988": {
+                    "display_name": "TF-7988-Event-Data-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d242lptlftnp2",
+                        "TF-EU1-HOST-eu1d242lptlftnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1srlpm1easpno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51314103",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d242lptlftnp1",
+                        "TF-EU1-HOST-eu1srlpm1easpno",
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1d242lptlftnp2"
+                    ]
+                }
+            }
+        }
+    }
+}

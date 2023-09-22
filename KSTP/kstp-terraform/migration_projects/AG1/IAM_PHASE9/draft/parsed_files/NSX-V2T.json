@@ -1,0 +1,186 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-UDP",
+            "NBSS",
+            "HTTPS",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "DNS",
+            "WINS-UDP",
+            "Active Directory Server UDP",
+            "NTP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "SOAP",
+            "NBNS-Unicast",
+            "SMTP",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "NBDG-Broadcast",
+            "MS-DS-TCP",
+            "DHCP-Server",
+            "NBNS-Broadcast",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL",
+            "MS-DS-UDP",
+            "MS_RPC_TCP",
+            "Windows-Global-Catalog",
+            "KERBEROS",
+            "TCP-60014",
+            "LDAP",
+            "DNS-UDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1srlphwcls01",
+            "TF-AG1-IPSET-ag1d308-AD",
+            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+            "TF-AG1-IPSET-Brazil-Maximo-Shared-Dev-QA",
+            "TF-AG1-IPSET-EU-eu1sr1dxdev02",
+            "TF-AG1-SG-SRES-STaaS-AD-DNS",
+            "TF-AG1-IPSET-ag1d308-Server",
+            "TF-AG1-IPSET-Brazil-Maximo-Shared-Prod",
+            "TF-AG1-IPSET-DR327-VMs",
+            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "3315": {
+                    "display_name": "TF-3315-HWSH-to-AIOps-Tanzu",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-Brazil-Maximo-Shared-Dev-QA",
+                        "TF-AG1-IPSET-Brazil-Maximo-Shared-Prod",
+                        "TF-AG1-HOST-ag1srlphwcls01",
+                        "TF-AG1-IPSET-EU-eu1sr1dxdev02"
+                    ],
+                    "source_ips": [
+                        "158.87.52.5"
+                    ],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlphwcls01",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlphwcls01",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-Brazil-Maximo-Shared-Dev-QA",
+                        "TF-AG1-IPSET-EU-eu1sr1dxdev02",
+                        "TF-AG1-IPSET-Brazil-Maximo-Shared-Prod",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+                    ]
+                },
+                "3869": {
+                    "display_name": "TF-3869-DRES308-AD",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-ag1d308-Server"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148619",
+                    "scope": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-IPSET-ag1d308-Server"
+                    ]
+                },
+                "3870": {
+                    "display_name": "TF-3870-DRES308-NTP-DNS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-ag1d308-AD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0149324",
+                    "scope": [
+                        "TF-AG1-IPSET-ag1d308-AD",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "3878": {
+                    "display_name": "TF-3878-DRES327-AD-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-DR327-VMs"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-60014"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148619",
+                    "scope": [
+                        "TF-AG1-IPSET-DR327-VMs",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                }
+            }
+        }
+    }
+}

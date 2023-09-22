@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-31421",
+            "TCP-6264",
+            "TCP-6262"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+            "TF-EU1-HOST-eu1sr1dxdev02",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "8194": {
+                    "display_name": "TF-8194-Chatops",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1dxdev02"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-31421"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51384661",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+                        "TF-EU1-HOST-eu1sr1dxdev02"
+                    ]
+                },
+                "8359": {
+                    "display_name": "TF-8359-KSI-Logstash-Cluster",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1dxdev02"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-6262",
+                        "TCP-6264"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0074428",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1dxdev02",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1"
+                    ]
+                }
+            }
+        }
+    }
+}

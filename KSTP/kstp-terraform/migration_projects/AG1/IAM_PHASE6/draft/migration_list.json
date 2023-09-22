@@ -1,0 +1,144 @@
+{
+    "migration_date": "07/12/2023 13:56",
+    "geography": "AG1",
+    "wave": "IAM_PHASE6",
+    "rules": {
+        "total": 70,
+        "rules": [
+            "3456",
+            "3457",
+            "3074",
+            "3202",
+            "3458",
+            "3459",
+            "3338",
+            "3217",
+            "3218",
+            "3219",
+            "3732",
+            "3224",
+            "3481",
+            "3864",
+            "3483",
+            "3103",
+            "3487",
+            "3488",
+            "3490",
+            "3745",
+            "3621",
+            "3751",
+            "1192",
+            "3243",
+            "3378",
+            "3381",
+            "3510",
+            "3262",
+            "3263",
+            "3447",
+            "3448",
+            "3270",
+            "3526",
+            "3272",
+            "3273",
+            "3274",
+            "3275",
+            "3276",
+            "3400",
+            "3401",
+            "3449",
+            "3450",
+            "3281",
+            "3527",
+            "3157",
+            "3158",
+            "3159",
+            "3160",
+            "3161",
+            "3162",
+            "3163",
+            "3164",
+            "3681",
+            "3171",
+            "1894",
+            "3703",
+            "3310",
+            "3440",
+            "3057",
+            "3441",
+            "2291",
+            "3187",
+            "3317",
+            "3444",
+            "3319",
+            "3445",
+            "3193",
+            "3446",
+            "3451",
+            "3700"
+        ]
+    },
+    "vms": {
+        "ag1srwphwcgrfds": {
+            "new_vm_group": "TF-AG1-HOST-ag1srwphwcgrfds",
+            "ip": "158.87.49.159",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-HWSW-DB-VM",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srwphwcgrfds"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "HWSW-DB-VM",
+                "SG-All-Windows-Hosts",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1srwphwcgrfdb": {
+            "new_vm_group": "TF-AG1-HOST-ag1srwphwcgrfdb",
+            "ip": "158.87.49.160",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-HWSW-DB-VM",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srwphwcgrfdb"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "HWSW-DB-VM",
+                "SG-All-Windows-Hosts",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1srlphwcsss01": {
+            "new_vm_group": "TF-AG1-HOST-ag1srlphwcsss01",
+            "ip": "158.87.49.163",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-HWSW-SERVERS",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srlphwcsss01"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES-HWSW-SERVERS",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1srlphwcmon01": {
+            "new_vm_group": "TF-AG1-HOST-ag1srlphwcmon01",
+            "ip": "158.87.49.178",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srlphwcmon01"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        }
+    }
+}

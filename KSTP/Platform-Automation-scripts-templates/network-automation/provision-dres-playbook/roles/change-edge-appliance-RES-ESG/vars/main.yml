@@ -1,0 +1,3 @@
+edge_folder_location_ha: "{{ lookup('template', 'edge_folder_location_ha.json.j2') }}"
+edge_folder_location_noha: "{{ lookup('template', 'edge_folder_location_noha.json.j2') }}"
+res_esg_edge_size: "quadlarge"

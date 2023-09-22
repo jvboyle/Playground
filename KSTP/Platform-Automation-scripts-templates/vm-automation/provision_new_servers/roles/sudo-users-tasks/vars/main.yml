@@ -1,0 +1,13 @@
+---
+users_rhel:
+#Create Users Rhel
+  - { username: 'z44003', group: ['toweradm'], groups: [''], expire: '-1', comment: '668/I/Z44003/IBM/Erdinc.Guler', shell: '/bin/bash', password: '$6$Tt9Hlhnl$COD1g14wqWjgjh7tbVJQTC6uEp01.gbhSROMtlKN6kEhn2hMJLbDuJYP4y8BJ1lb7Co9p0ne4twiuu2xfNcvD/' }
+  - { username: 'z60923', group: ['toweradm'], groups: [''], expire: '-1', comment: '668/I/Z60923/IBM/Marek.Haluska', shell: '/bin/bash', password: '$6$GGCbOpzb$TGcRq4u5wtarY5VWxQiL/z.hQRDdz064fBISi7NZIzRxocFnupu4lZSA6irkUhlPVZDW4g05N4wYqSi26lau41' }
+  - { username: 'autom802', group: ['toweradm'], groups: [''], expire: '-1', comment: '668/S/*DAAT01/IBM/AT01 DA2.0', shell: '/bin/bash', password: '$6$zKS3rRNAKbznd9CL$3ZEO3XixNs1rfACeOt5LkfhxOsGngSN7.CD/4ML/S14cxSiQzPWsPHQtGiYiiRByggDvQOhMur5XblySXzlc5.' }
+  - { username: 'lcavallin', group: ['ispwux'], groups: [''], expire: '-1', comment: '668/I/Z72798/IBM/Luca.Cavallin', shell: '/bin/bash', password: '$6$eLClHzj7$l4BaeEAmBN9Z.kVWhk0TCkVu/lbU2137EJJKNHwGDGrJWsPY1HlN1gtsdTVK/EvZKjUQn7TLFoGfCG4ZIiY/.1' }
+  - { username: 'akhachaturov', group: ['ispwux'], groups: [''], expire: '-1', comment: '668/I/ZZ02QZ/IBM/Aleksandre.Khachaturov', shell: '/bin/bash', password: '$6$VVRqYxVk$Rn5onpf2ewNNVw1VKP1ToEsGdWaRRDdrnkoKuxbSuxuVUET8pBAar2x8eevGSrPk/PoeAXoRE995T8bPMQFzb/' }
+  - { username: 'mvasi', group: ['ispwux'], groups: [''], expire: '-1', comment: '668/I/ZZ02VE/IBM/Mark.Vasi', shell: '/bin/bash', password: '$6$zUqoyczO$yRBLesqDv01vQayFk7MW7/ypOo67ZT8VxioeF6tZNSYvKgiGB44tJgnaEgs/VigEkBGHP4BRRjUZMx20HBiMJ/' }
+
+nameserver1: 158.87.52.2
+nameserver2: 158.87.52.3
+...

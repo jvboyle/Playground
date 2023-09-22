@@ -1,0 +1,51 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d202lpcacprx1",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d202lpcacprx2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES202": {
+            "category": "Application",
+            "rules": {
+                "7757": {
+                    "display_name": "TF-7757-JUMP-to-Proxies",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d202lpcacprx1",
+                        "TF-EU1-HOST-eu1d202lpcacprx2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51106686",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d202lpcacprx1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d202lpcacprx2"
+                    ]
+                }
+            }
+        }
+    }
+}

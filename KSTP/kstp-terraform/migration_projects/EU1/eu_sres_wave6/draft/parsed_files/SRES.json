@@ -1,0 +1,2843 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-15672",
+            "TCP-3141",
+            "SSH",
+            "NBSS",
+            "TCP-4000",
+            "TCP-30482",
+            "TCP-8092",
+            "TCP-8531",
+            "TCP-1433",
+            "NBNS-Broadcast",
+            "TCP-9443",
+            "TCP-30000-32767",
+            "TCP-8530",
+            "TCP-32016",
+            "BDS-8081",
+            "TCP-4500",
+            "ICP-Docker Registry",
+            "TCP-31354",
+            "TCP-9099",
+            "TCP-50001",
+            "TCP-2967",
+            "TCP-179",
+            "TCP-50000",
+            "TCP-16443",
+            "TCP-16316",
+            "TCP-8014",
+            "DNS",
+            "TCP-18080",
+            "TCP-32369",
+            "TCP-32527",
+            "TCP-9080",
+            "TCP-8099",
+            "TCP-443",
+            "TCP-139",
+            "TCP-31918",
+            "SMB",
+            "TCP-8093",
+            "TCP-3000",
+            "TCP-32710",
+            "TCP-6969",
+            "TCP-445",
+            "UDP-137-139",
+            "SOAP",
+            "TCP-8445",
+            "LDAP-over-SSL",
+            "TCP-31673",
+            "TCP-8001",
+            "TCP-52311",
+            "TCP-30144",
+            "Windows-Global-Catalog",
+            "TCP-52000",
+            "HTTPS",
+            "TCP-9091",
+            "TCP-8053",
+            "TCP-9000",
+            "NTP Time Server",
+            "ICP-WebSphere Application Server Liberty",
+            "Active Directory Server UDP",
+            "TCP-9987",
+            "TCP-31789",
+            "TCP-2968",
+            "TCP-8080",
+            "TCP-8091",
+            "NBDG-Broadcast",
+            "KERBEROS-UDP",
+            "UDP-137-138",
+            "WINS-UDP",
+            "NBDG-Unicast",
+            "TCP-7700",
+            "TCP-5556",
+            "TCP-8181",
+            "DNS-UDP",
+            "TCP-5986",
+            "TCP-9100",
+            "ICP-Management Console",
+            "TCP-16351",
+            "SMTP",
+            "TCP-30820",
+            "MS-DS-TCP",
+            "TCP-9043",
+            "TCP-5985",
+            "Windows-Global-Catalog-over-SSL",
+            "RDP",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "MS_RPC_TCP",
+            "TCP-16311",
+            "TCP-10250",
+            "UDP-4789",
+            "LDAP-UDP",
+            "TCP-9081",
+            "HTTPS_9443",
+            "WINS",
+            "TCP-135",
+            "TCP-8070-8071",
+            "TCP-8081",
+            "MS-DS-UDP",
+            "ICP-Kubernetes NodePort",
+            "ICP-Kubernetes API-Server",
+            "TCP-1500-1510",
+            "TCP-902",
+            "TCP-10248-10252",
+            "KERBEROS",
+            "LDAP",
+            "Active Directory Server",
+            "TCP-8500",
+            "NBNS-Unicast",
+            "ICP-Ingress Service",
+            "HTTP",
+            "TCP-8443",
+            "TCP-1025-65535",
+            "DHCP-Server"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcni",
+            "TF-EU1-IPSET-NET-All-CGN-Subnets",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg2",
+            "TF-EU1-HOST-eu1srlpm1esdc7",
+            "TF-EU1-SG-SRES-WIN-WSUS",
+            "TF-EU1-SG-CHGEU0134666-VM",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmcdexec",
+            "TF-EU1-SG-SRES-STAAS-Netcool-Dashboard",
+            "TF-EU1-HOST-eu1srlpm1eslpf01",
+            "TF-EU1-HOST-eu1sr1wjmp01",
+            "TF-EU1-IPSET-NET-SL-IRES-Portable-new",
+            "TF-EU1-SG-SRES-HOST-eu1srltm1eslc",
+            "TF-EU1-SG-PDR-SMTP-Relay",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpni",
+            "TF-EU1-IPSET-SRES-RITM0144686-VMs",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni3",
+            "TF-EU1-HOST-eu1srlpm1esldbc1",
+            "TF-EU1-IPSET-snat-to-SL-SVC",
+            "TF-EU1-HOST-eu1sr1wtslic01",
+            "TF-EU1-HOST-eu1srlpm1esdc2",
+            "TF-EU1-IPSET-NET-SL-IRES-Portable",
+            "TF-EU1-HOST-eu1srlpm1esdc3",
+            "TF-EU1-SG-SRES-RPA-AD-DNS",
+            "TF-EU1-SG-SRES-WIN-DA",
+            "TF-EU1-SG-SRES-Linux-ILMT-BigFixServer",
+            "TF-EU1-HOST-eu1srlpm1esdp7",
+            "TF-EU1-IPSET-SG-eu1srlpm1esdc9",
+            "TF-EU1-HOST-eu1srlpm1esdp3",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1eascno",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam32",
+            "TF-EU1-IPSET-nlaspnw000iswrm",
+            "TF-EU1-IPSET-SG-HOSTS-VCS-ADNS",
+            "TF-EU1-HOST-eu1dc2",
+            "TF-EU1-SG-SRES-MNEAAS-SL1-CUG-EU-SHR1",
+            "TF-EU1-IPSET-SRES-eu1srlpm1epwg4",
+            "TF-EU1-HOST-eu1srlpm1esdp5",
+            "TF-EU1-IPSET-SG-eu1srlpm1esdp9",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epni2",
+            "TF-EU1-SG-SRES-HOST-eu1srltm1esdc",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmcdjenkns",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1",
+            "TF-EU1-HOST-eu1sr1licpres",
+            "TF-EU1-IPSET-SRES-nlascdb000m1erms",
+            "TF-EU1-IPSET-eu1sr1wjmp01-dnat",
+            "TF-EU1-IPSET-eu1srlpm1esldb1-vip",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-nlaspnp000m1ermp",
+            "TF-EU1-IPSET-eu1sr1ljmp01-dnat",
+            "TF-EU1-SG-SRES-RPA-SQL",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1esbk5",
+            "TF-EU1-SG-SRES-HOST-nlascno000m1erms",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epno2",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg3",
+            "TF-EU1-HOST-eu1sr1wdns02",
+            "TF-EU1-HOST-eu1srlpm1esdp6",
+            "TF-EU1-SG-SRES-HOST-eu1srlpcardb1000",
+            "TF-EU1-SG-SRES01-OCP-Cluster04",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-IPSET-SRES-eu1srlpm1epni4",
+            "TF-EU1-SG-SRES-RPA-FileServers",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1easweb",
+            "TF-EU1-IPSET-eu1srlpm1esd6-vip",
+            "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP",
+            "TF-EU1-HOST-eu1dc1",
+            "TF-EU1-SG-SRES-HOST-eu1srlpcacfbds1",
+            "TF-EU1-SG-SRES-WIN-DNS-NTP",
+            "TF-EU1-SG-SRES-WIN-ClientTerminals",
+            "TF-EU1-SG-SRES01-OCP-Cluster02",
+            "TF-EU1-IPSET-eu1srlpm1esd8-vip",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam42",
+            "TF-EU1-SG-IRES01-MEaaS",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwai93",
+            "TF-EU1-SG-SRES-TSB-M-EaaS-SL1-Powerflow",
+            "TF-EU1-HOST-eu1srlpm1esldbp1",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam52",
+            "TF-EU1-SG-SRES-HOST-nlaspno000m1erms",
+            "TF-EU1-SG-DR62-SolarWinds-DC",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1easpni",
+            "TF-EU1-HOST-eu1srlnm1eslpf01",
+            "TF-EU1-SG-SRES-HOST-eu1srlphsts1ncl",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg3",
+            "TF-EU1-SG-SRES-WIN-SEPM",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epno3",
+            "TF-EU1-SG-SRES-TS-License-Server",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwai02",
+            "TF-EU1-IPSET-eu1srlpm1esd2-vip",
+            "TF-EU1-SG-SRES-HOST-nlascni000m1erms",
+            "TF-EU1-SG-ISIM-EUISPW-DRES-Members",
+            "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+            "TF-EU1-IPSET-SRES-eu1srlpm1ebcp3",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcwg",
+            "TF-EU1-IPSET-SRES-eu1srlpm1esd9-vip",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam23",
+            "TF-EU1-IPSET-SRES-LB1-PrimaryIP",
+            "TF-EU1-HOST-eu1srlpm1esdc6",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1easbcp",
+            "TF-EU1-IPSET-SRES-eu1srlpm1epno4",
+            "TF-EU1-SG-SL-IRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni2",
+            "TF-EU1-SG-SRES01-ICp-Cluster01",
+            "TF-EU1-HOST-eu1vmon",
+            "TF-EU1-IPSET-DA-prodnlbds01-146-89-167-196",
+            "TF-EU1-SG-SRES-HOST-eu1srltm1esbk",
+            "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epnp3",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1epni3",
+            "TF-EU1-IPSET-SL-WSUS",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus",
+            "TF-EU1-IPSET-IRES-BaaS-TSM",
+            "TF-EU1-IPSET-SRES-eu1srlpm1ecwg4",
+            "TF-EU1-SG-SRES01-MEaaS",
+            "TF-EU1-SG-SL-IRES-AD-WIN-DNS-NTP",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg2",
+            "TF-EU1-HOST-eu1srlpm1esdc4",
+            "TF-EU1-IPSET-NET-SL-Services",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1easpno",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+            "TF-EU1-SG-SRES-HOST-eu1srlpcarwas1000",
+            "TF-EU1-IPSET-eu1srlpm1esd7-vip",
+            "TF-EU1-HOST-eu1d205lpkrntnp2",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam72",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam98",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcno",
+            "TF-EU1-HOST-eu1srlpm1esdp2",
+            "TF-EU1-SG-SRES-HOST-eu1srltm1esdp",
+            "TF-EU1-SG-SRES-WIN-SQL",
+            "TF-EU1-SG-SRES-HOST-eu1srlphcs0001",
+            "TF-EU1-SG-ISIM-EUISPW-SRES-Members",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam62",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno2",
+            "TF-EU1-IPSET-SRES-eu1srlpm1ecni4",
+            "TF-EU1-SG-SRES-HOST-eu1srlphstp1ncl",
+            "TF-EU1-IPSET-NET-AMS-CGN-subnets",
+            "TF-EU1-SG-SRES01-ICp-Cluster02",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam03",
+            "TF-EU1-IPSET-NET-All-GSNI-routable",
+            "TF-EU1-IPSET-SRES-eu1srlpm1ecno4",
+            "TF-EU1-SG-SRES-HOST-eu1sr1licpres",
+            "TF-EU1-IPSET-BLUEIDP1-zw2uspriv-app-kyndryl-net",
+            "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+            "TF-EU1-SG-SL-IRES-vCenter",
+            "TF-EU1-HOST-eu1srlpm1esc5",
+            "TF-EU1-HOST-eu1srlpm1esdp4",
+            "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+            "TF-EU1-HOST-eu1d205lpkrntnp1",
+            "TF-EU1-SG-ISIM-EUISPW-IRES-Members",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpno",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1esc2",
+            "TF-EU1-HOST-eu1srlpm1esdc5",
+            "TF-EU1-SG-SRES-HOST-eu1srlpisiwam83",
+            "TF-EU1-HOST-eu1sr1sepm1",
+            "TF-EU1-IPSET-eu1srlpmcdanstw-VIP",
+            "TF-EU1-SG-SRES01-OCP-Cluster01",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecnp3",
+            "TF-EU1-IPSET-eu1srlpm1esd4-vip",
+            "TF-EU1-HOST-eu1srlpm1esdc8",
+            "TF-EU1-IPSET-eu1srlpm1esd3-vip",
+            "TF-EU1-SG-SRES-HOST-nlaspni000m1erms",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1eascni",
+            "TF-EU1-SG-SRES-GTSAnalytics-DevLinux",
+            "TF-EU1-SG-SRES01-ICP-restore",
+            "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+            "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno3",
+            "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp",
+            "TF-EU1-SG-SRES01-OCP-Cluster03",
+            "TF-EU1-HOST-eu1srlpm1esdp8",
+            "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpwg",
+            "TF-EU1-IPSET-NET-AMS-SRES-GSNI-subnets"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES": {
+            "category": "Application",
+            "rules": {
+                "1030": {
+                    "display_name": "TF-1030-SRES-Jump-from-Provider",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-Services"
+                    ],
+                    "source_ips": [
+                        "100.72.0.1"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-eu1sr1wjmp01-dnat",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-eu1sr1ljmp01-dnat",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-Services",
+                        "TF-EU1-IPSET-eu1sr1wjmp01-dnat",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-eu1sr1ljmp01-dnat",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+                        "TF-EU1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers"
+                    ]
+                },
+                "1031": {
+                    "display_name": "TF-1031-SRES-Jump-to-Provider",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-snat-to-SL-SVC",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-snat-to-SL-SVC"
+                    ]
+                },
+                "1036": {
+                    "display_name": "TF-1036-AD-Clients-to-IRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-SEPM"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SL-IRES-AD-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "DNS",
+                        "Windows-Global-Catalog",
+                        "Windows-Global-Catalog-over-SSL",
+                        "MS_RPC_TCP",
+                        "NBSS",
+                        "NTP Time Server",
+                        "LDAP-UDP",
+                        "Active Directory Server UDP",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "KERBEROS-UDP",
+                        "NBNS-Broadcast",
+                        "WINS-UDP",
+                        "MS-DS-UDP",
+                        "NBDG-Unicast",
+                        "LDAP",
+                        "KERBEROS",
+                        "Active Directory Server",
+                        "DNS-UDP",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "LDAP-over-SSL",
+                        "SMTP",
+                        "MS-DS-TCP",
+                        "DHCP-Server"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SL-IRES-AD-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-SEPM",
+                        "TF-EU1-SG-SRES-WIN-SQL"
+                    ]
+                },
+                "1037": {
+                    "display_name": "TF-1037-SL-WSUS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SL-WSUS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-IPSET-SL-WSUS",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1057": {
+                    "display_name": "TF-1057-ICp-from-SRES-Jump",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes NodePort",
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Management Console",
+                        "ICP-Ingress Service",
+                        "ICP-Docker Registry",
+                        "ICP-WebSphere Application Server Liberty"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1082": {
+                    "display_name": "TF-1082-SRES-Windows-Jump-to-MEaaS-SRES-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-MEaaS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-8093",
+                        "TCP-9987",
+                        "TCP-9443",
+                        "TCP-8092",
+                        "TCP-16311",
+                        "TCP-8091",
+                        "TCP-4500",
+                        "TCP-8099",
+                        "TCP-16443",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-MEaaS",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1103": {
+                    "display_name": "TF-1103-SRES-Windows-Jump-to-MEaaS-IRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-IRES01-MEaaS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-8093",
+                        "TCP-9987",
+                        "TCP-9443",
+                        "SSH",
+                        "TCP-8092",
+                        "TCP-16311",
+                        "TCP-8091",
+                        "TCP-4500",
+                        "TCP-8099",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-IRES01-MEaaS",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1201": {
+                    "display_name": "TF-1201-SRES-jumpserver-RPA-SQL-servers",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlphsts1ncl",
+                        "TF-EU1-SG-SRES-RPA-SQL",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphstp1ncl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "Updated in SR51081496 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlphsts1ncl",
+                        "TF-EU1-SG-SRES-RPA-SQL",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphstp1ncl"
+                    ]
+                },
+                "1285": {
+                    "display_name": "TF-1285-All-VMs-to-SEPM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-HOST-eu1dc2",
+                        "TF-EU1-IPSET-NET-AMS-CGN-subnets",
+                        "TF-EU1-HOST-eu1vmon",
+                        "TF-EU1-HOST-eu1sr1wtslic01",
+                        "TF-EU1-IPSET-NET-AMS-SRES-GSNI-subnets",
+                        "TF-EU1-HOST-eu1dc1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1sepm1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2968",
+                        "TCP-2967",
+                        "HTTPS",
+                        "TCP-445",
+                        "TCP-8014"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dc1",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-HOST-eu1dc2",
+                        "TF-EU1-HOST-eu1sr1sepm1",
+                        "TF-EU1-IPSET-NET-AMS-CGN-subnets",
+                        "TF-EU1-HOST-eu1vmon",
+                        "TF-EU1-HOST-eu1sr1wtslic01",
+                        "TF-EU1-IPSET-NET-AMS-SRES-GSNI-subnets"
+                    ]
+                },
+                "1308": {
+                    "display_name": "TF-1308-ISPW-SRES-Windows-Jump-Server-Preprod-OMNibus-Primary-Sec",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlaspno000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlaspno000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1erms",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1309": {
+                    "display_name": "TF-1309-ISPW-SRES-Windows-Jump-Server-Preprod-NOI-Log-Analysis",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16351",
+                        "TCP-9987"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1ermp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1310": {
+                    "display_name": "TF-1310-ISPW-SRES-Windows-Jump-Server-Preprod-Netcool-WebGUI-Preprod-Impact-Prim-Sec",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlascni000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphstp1ncl",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphsts1ncl",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50278348\nupdated in SR51081496 [M&E][EU] onenetcool - FW rules",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlascni000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphstp1ncl",
+                        "TF-EU1-SG-SRES-HOST-eu1srlphsts1ncl",
+                        "TF-EU1-SG-SRES-HOST-nlaspni000m1erms"
+                    ]
+                },
+                "1498": {
+                    "display_name": "TF-1498-ICp-from-SRES-Jump",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes NodePort",
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Management Console",
+                        "ICP-Ingress Service",
+                        "ICP-Docker Registry",
+                        "ICP-WebSphere Application Server Liberty"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-ICp-Cluster02",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1577": {
+                    "display_name": "TF-1577-SEPM-server-to-SQL-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-SEPM"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-SQL"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-1433"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-WIN-SEPM"
+                    ]
+                },
+                "3119": {
+                    "display_name": "TF-3119-BaaS-TSM-to-SQL",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-IRES-BaaS-TSM"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-RPA-SQL"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-1500-1510"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-IRES-BaaS-TSM",
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-RPA-SQL"
+                    ]
+                },
+                "3120": {
+                    "display_name": "TF-3120-SQL-to-BaaS-TSM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-RPA-FileServers",
+                        "TF-EU1-SG-SRES-RPA-SQL",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcardb1000",
+                        "TF-EU1-SG-SRES-WIN-SQL"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-IRES-BaaS-TSM"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-1500-1510"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50865355\nSR50998386",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcardb1000",
+                        "TF-EU1-IPSET-IRES-BaaS-TSM",
+                        "TF-EU1-SG-SRES-RPA-SQL",
+                        "TF-EU1-SG-SRES-RPA-FileServers",
+                        "TF-EU1-SG-SRES-WIN-SQL"
+                    ]
+                },
+                "3273": {
+                    "display_name": "TF-3273-SRES-Jump-Servers-to-GTSAnalytics",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-GTSAnalytics-DevLinux"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-GTSAnalytics-DevLinux",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "3567": {
+                    "display_name": "TF-3567-JH-to-OCP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster04",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "TCP-8080",
+                        "TCP-8181",
+                        "TCP-8500",
+                        "SSH",
+                        "HTTPS",
+                        "TCP-30000-32767",
+                        "HTTP",
+                        "TCP-8443",
+                        "UDP-4789",
+                        "TCP-8053",
+                        "TCP-18080",
+                        "TCP-8001",
+                        "TCP-10250",
+                        "TCP-9000",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51013348",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES01-OCP-Cluster04",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03"
+                    ]
+                },
+                "3769": {
+                    "display_name": "TF-3769-LB-to-Win-Jumphosts-RDP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-LB1-PrimaryIP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-LB1-PrimaryIP"
+                    ]
+                },
+                "4031": {
+                    "display_name": "TF-4031-Copy-of-ISPW-SRES-Windows-Jump-Server-Preprod-NOI-Log-Analysis-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-IPSET-nlaspnw000iswrm"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16351"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnw000m1erms",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-nlaspnw000iswrm"
+                    ]
+                },
+                "4079": {
+                    "display_name": "TF-4079-AD-to-ISIM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dc2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-ISIM-EUISPW-IRES-Members",
+                        "TF-EU1-SG-ISIM-EUISPW-SRES-Members"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-ISIM-EUISPW-IRES-Members",
+                        "TF-EU1-HOST-eu1dc2",
+                        "TF-EU1-SG-ISIM-EUISPW-SRES-Members"
+                    ]
+                },
+                "4153": {
+                    "display_name": "TF-4153-WSUS-SRES-to-IERES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SL-IRES-AD-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "DNS",
+                        "Windows-Global-Catalog",
+                        "Windows-Global-Catalog-over-SSL",
+                        "MS_RPC_TCP",
+                        "NBSS",
+                        "NTP Time Server",
+                        "LDAP-UDP",
+                        "Active Directory Server UDP",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "KERBEROS-UDP",
+                        "NBNS-Broadcast",
+                        "WINS-UDP",
+                        "MS-DS-UDP",
+                        "NBDG-Unicast",
+                        "LDAP",
+                        "KERBEROS",
+                        "Active Directory Server",
+                        "DNS-UDP",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "LDAP-over-SSL",
+                        "SMTP",
+                        "MS-DS-TCP",
+                        "DHCP-Server"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SL-IRES-AD-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ]
+                },
+                "4154": {
+                    "display_name": "TF-4154-WSUS-ALL-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable-new",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-IPSET-NET-All-CGN-Subnets",
+                        "TF-EU1-IPSET-NET-All-GSNI-routable"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8530",
+                        "TCP-8531"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51255169",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable-new",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-IPSET-NET-All-CGN-Subnets",
+                        "TF-EU1-SG-SRES-WIN-WSUS",
+                        "TF-EU1-IPSET-NET-All-GSNI-routable"
+                    ]
+                },
+                "4155": {
+                    "display_name": "TF-4155-WSUS-SRES-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-SQL"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-1433"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ]
+                },
+                "4508": {
+                    "display_name": "TF-4508-SRES-TO-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1wdns02"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-ISIM-EUISPW-IRES-Members",
+                        "TF-EU1-SG-ISIM-EUISPW-DRES-Members",
+                        "TF-EU1-SG-ISIM-EUISPW-SRES-Members"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1wdns02",
+                        "TF-EU1-SG-ISIM-EUISPW-DRES-Members",
+                        "TF-EU1-SG-ISIM-EUISPW-SRES-Members",
+                        "TF-EU1-SG-ISIM-EUISPW-IRES-Members"
+                    ]
+                },
+                "4509": {
+                    "display_name": "TF-4509-SRES-IRES-to-SRES-TS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-135",
+                        "TCP-139",
+                        "TCP-1025-65535",
+                        "UDP-137-138",
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SL-IRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ]
+                },
+                "4510": {
+                    "display_name": "TF-4510-SRES-to-SRES-AD",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-DA",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-WSUS",
+                        "TF-EU1-SG-SRES-WIN-SEPM",
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "DNS",
+                        "Windows-Global-Catalog",
+                        "Windows-Global-Catalog-over-SSL",
+                        "MS_RPC_TCP",
+                        "NBSS",
+                        "NTP Time Server",
+                        "LDAP-UDP",
+                        "Active Directory Server UDP",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "KERBEROS-UDP",
+                        "NBNS-Broadcast",
+                        "WINS-UDP",
+                        "MS-DS-UDP",
+                        "NBDG-Unicast",
+                        "LDAP",
+                        "KERBEROS",
+                        "Active Directory Server",
+                        "DNS-UDP",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "LDAP-over-SSL",
+                        "SMTP",
+                        "MS-DS-TCP",
+                        "DHCP-Server"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-DA",
+                        "TF-EU1-SG-SRES-WIN-WSUS",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-SEPM",
+                        "TF-EU1-SG-SRES-WIN-SQL",
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ]
+                },
+                "4585": {
+                    "display_name": "TF-4585-Netcool-Impact",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epwg4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecwg4",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easpni",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecni4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epni4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epno4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecno4",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1eascni"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CHGEU0210143",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epwg4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecwg4",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easpni",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecni4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epni4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1epno4",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ecno4",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1eascni"
+                    ]
+                },
+                "4588": {
+                    "display_name": "TF-4588-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easpno",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1eascno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easpno",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1eascno",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4589": {
+                    "display_name": "TF-4589-Netcool-WebGUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easweb"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easweb",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4607": {
+                    "display_name": "TF-4607-MnEaaS-Portal",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esldbp1",
+                        "TF-EU1-HOST-eu1srlpm1esldbc1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1esldbp1",
+                        "TF-EU1-HOST-eu1srlpm1esldbc1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4663": {
+                    "display_name": "TF-4663-ISPW-SRES-Jump-servers-to-BDS-Master-Repo-VM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP",
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcacfbds1"
+                    ]
+                },
+                "4742": {
+                    "display_name": "TF-4742-File-share-between-SRES-jumps",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMB"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4751": {
+                    "display_name": "TF-4751-Powershell-remote-allow-from-WSUS-server-to-all",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-AMS-CGN-subnets",
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-IPSET-NET-AMS-SRES-GSNI-subnets"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5986",
+                        "TCP-5985"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-IRES-Portable",
+                        "TF-EU1-SG-SRES-WIN-WSUS",
+                        "TF-EU1-IPSET-NET-AMS-CGN-subnets",
+                        "TF-EU1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-NET-AMS-SRES-GSNI-subnets"
+                    ]
+                },
+                "4754": {
+                    "display_name": "TF-4754-Windows-Linux-Jump-to-ILMT-BigFix",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-BigFixServer"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3000",
+                        "TCP-52000",
+                        "SSH",
+                        "HTTPS",
+                        "TCP-52311",
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-BigFixServer",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "4755": {
+                    "display_name": "TF-4755-Linux-Windows-Jump-to-ILMT",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9081",
+                        "TCP-50000",
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "4805": {
+                    "display_name": "TF-4805-Webshpere-BC-connectivity",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easbcp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9443",
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1easbcp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5233": {
+                    "display_name": "TF-5233-ScienceLogic-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-eu1srlpm1esd2-vip",
+                        "TF-EU1-IPSET-eu1srlpm1esd8-vip",
+                        "TF-EU1-IPSET-eu1srlpm1esd4-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50081702\nSR51275756",
+                    "scope": [
+                        "TF-EU1-IPSET-eu1srlpm1esd2-vip",
+                        "TF-EU1-HOST-eu1srlpm1esdp4",
+                        "TF-EU1-IPSET-eu1srlpm1esd8-vip",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-eu1srlpm1esd4-vip",
+                        "TF-EU1-HOST-eu1srlpm1esdc8",
+                        "TF-EU1-HOST-eu1srlpm1esdp8",
+                        "TF-EU1-HOST-eu1srlpm1esdc4",
+                        "TF-EU1-HOST-eu1srlpm1esdc2",
+                        "TF-EU1-HOST-eu1srlpm1esdp2"
+                    ]
+                },
+                "5234": {
+                    "display_name": "TF-5234-ScienceLogic-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esdc8",
+                        "TF-EU1-HOST-eu1srlpm1esdp8",
+                        "TF-EU1-HOST-eu1srlpm1esdp2",
+                        "TF-EU1-HOST-eu1srlpm1esdc2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1esc2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50081702\nSR51275756",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esdp4",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1srlpm1esdc8",
+                        "TF-EU1-HOST-eu1srlpm1esdp8",
+                        "TF-EU1-HOST-eu1srlpm1esdp2",
+                        "TF-EU1-HOST-eu1srlpm1esdc2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1esc2",
+                        "TF-EU1-HOST-eu1srlpm1esdc4"
+                    ]
+                },
+                "5471": {
+                    "display_name": "TF-5471-Win-JS-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpno",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpno",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcno"
+                    ]
+                },
+                "5472": {
+                    "display_name": "TF-5472-Win-JS-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcni",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpwg",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpni"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcni",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpni",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ejpwg"
+                    ]
+                },
+                "5501": {
+                    "display_name": "TF-5501-SRES-resources-to-IBM-Cloud-Private-Service-Endpoints",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES01-ICp-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-32016",
+                        "TCP-32710",
+                        "TCP-32369",
+                        "TCP-32527",
+                        "TCP-31789",
+                        "TCP-30820",
+                        "TCP-31918",
+                        "TCP-30482",
+                        "TCP-30144",
+                        "TCP-31354",
+                        "TCP-31673",
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51013068\nSR50818423\nSR50937413  \nSR50968178\nSR50997003\nSR50998776\nSR50998018 ",
+                    "scope": [
+                        "TF-EU1-IPSET-NET-SL-Private-Service-Endpoints",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES01-ICp-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-SRES01-ICp-Cluster01"
+                    ]
+                },
+                "5502": {
+                    "display_name": "TF-5502-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-SL1-CUG-EU-SHR1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-MNEAAS-SL1-CUG-EU-SHR1"
+                    ]
+                },
+                "5734": {
+                    "display_name": "TF-5734-to-validate-Certificates-on-CA-via-LDAP-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SolarWinds-DC"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "LDAP",
+                        "KERBEROS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DR62-SolarWinds-DC",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5735": {
+                    "display_name": "TF-5735-to-validate-Certificates-on-CA-via-LDAP-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-RPA-AD-DNS",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "LDAP",
+                        "KERBEROS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-RPA-AD-DNS",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "5877": {
+                    "display_name": "TF-5877-SRES-JH-to-DA-BDS-Repo",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DA-prodnlbds01-146-89-167-196"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50865321",
+                    "scope": [
+                        "TF-EU1-IPSET-DA-prodnlbds01-146-89-167-196",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "5957": {
+                    "display_name": "TF-5957-WAS-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam98",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam83",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwai02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50072517\nCH50076227",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam98",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam83",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwai02"
+                    ]
+                },
+                "6140": {
+                    "display_name": "TF-6140-MnEaaS-SL1-PREPROD-environment",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdc",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdp",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1eslc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50927658",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdc",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1eslc"
+                    ]
+                },
+                "6163": {
+                    "display_name": "TF-6163-WAS-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwai93"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50074639\n",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwai93"
+                    ]
+                },
+                "6329": {
+                    "display_name": "TF-6329-Admin-access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1eslc",
+                        "TF-EU1-SG-SRES-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esbk",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdc",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdp",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50942991\n",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1eslc",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esbk",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdc",
+                        "TF-EU1-SG-SRES-HOST-eu1srltm1esdp",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ]
+                },
+                "6380": {
+                    "display_name": "TF-6380-Linux-Windows-Jump-to-ILMT4",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9081",
+                        "TCP-50000",
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50074961",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-ILMT-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "6464": {
+                    "display_name": "TF-6464-JH1-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epno2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50076763",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epno2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "6465": {
+                    "display_name": "TF-6465-JH1-to-Netcool-Webgui",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epni2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50076763",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg2",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epni2"
+                    ]
+                },
+                "6525": {
+                    "display_name": "TF-6525-WAS-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam23"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50076479 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam23"
+                    ]
+                },
+                "6623": {
+                    "display_name": "TF-6623-WAS-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam03"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50077972\n",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam03"
+                    ]
+                },
+                "6712": {
+                    "display_name": "TF-6712-ScienceLogic-for-TSB",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-TSB-M-EaaS-SL1-Powerflow"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-15672",
+                        "TCP-8091",
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50078210",
+                    "scope": [
+                        "TF-EU1-SG-SRES-TSB-M-EaaS-SL1-Powerflow",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "6714": {
+                    "display_name": "TF-6714-ScienceLogic-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-TSB-M-EaaS-SL1-Powerflow"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5556",
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50078210",
+                    "scope": [
+                        "TF-EU1-SG-SRES-TSB-M-EaaS-SL1-Powerflow",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "6725": {
+                    "display_name": "TF-6725-ScienceLogic-Powerflow",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlnm1eslpf01",
+                        "TF-EU1-HOST-eu1srlpm1eslpf01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3141"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50970074\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlnm1eslpf01",
+                        "TF-EU1-HOST-eu1srlpm1eslpf01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "6919": {
+                    "display_name": "TF-6919-Jump-Servers-to-CAR",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcardb1000",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcarwas1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000",
+                        "HTTPS",
+                        "TCP-9443",
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51002678\n",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcardb1000",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpcarwas1000",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "6999": {
+                    "display_name": "TF-6999-ScienceLogic-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-eu1srlpm1esd3-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50081729\n",
+                    "scope": [
+                        "TF-EU1-IPSET-eu1srlpm1esd3-vip",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1srlpm1esdp3",
+                        "TF-EU1-HOST-eu1srlpm1esdc3"
+                    ]
+                },
+                "7000": {
+                    "display_name": "TF-7000-ScienceLogic-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esdc3",
+                        "TF-EU1-HOST-eu1srlpm1esdp6",
+                        "TF-EU1-HOST-eu1srlpm1esdp7",
+                        "TF-EU1-HOST-eu1srlpm1esdc7",
+                        "TF-EU1-HOST-eu1srlpm1esdc6",
+                        "TF-EU1-HOST-eu1srlpm1esdp3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50081729\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esdc3",
+                        "TF-EU1-HOST-eu1srlpm1esdp6",
+                        "TF-EU1-HOST-eu1srlpm1esdc7",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1srlpm1esdp7",
+                        "TF-EU1-HOST-eu1srlpm1esdc6",
+                        "TF-EU1-HOST-eu1srlpm1esdp3"
+                    ]
+                },
+                "7057": {
+                    "display_name": "TF-7057-SAT-HTTPS-GUI-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-CHGEU0134666-VM"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51032021",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-CHGEU0134666-VM",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "7068": {
+                    "display_name": "TF-7068-SAT-HTTPS-GUI-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-CHGEU0134666-VM"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51036481",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-CHGEU0134666-VM",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "7149": {
+                    "display_name": "TF-7149-Send-emails-from-Windows-Jump-Server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-PDR-SMTP-Relay"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51055564\n",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-PDR-SMTP-Relay"
+                    ]
+                },
+                "7153": {
+                    "display_name": "TF-7153-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epno3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-6969"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50083108 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epno3",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecno3"
+                    ]
+                },
+                "7154": {
+                    "display_name": "TF-7154-Netcool-WebGUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epni3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50083108\nSR51115193\nSR51119242",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecni3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epni3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecwg1"
+                    ]
+                },
+                "7174": {
+                    "display_name": "TF-7174-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50083100\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "7175": {
+                    "display_name": "TF-7175-SSH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esc5",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1esbk5",
+                        "TF-EU1-HOST-eu1srlpm1esdp5",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-eu1srlpm1esdc5",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esc5",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1esbk5",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-HOST-eu1srlpm1esdp5",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-eu1srlpm1esdc5",
+                        "TF-EU1-IPSET-SRES-SL1-DB-Cluster-VIP"
+                    ]
+                },
+                "7201": {
+                    "display_name": "TF-7201-WAS-admin",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam62",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam52",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam72",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam42",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam32"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50082395\nCH50082356\nCH50082311\nCH50081655\nCH50083943 \nCH50082311",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam62",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam52",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam72",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam42",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpisiwam32"
+                    ]
+                },
+                "7405": {
+                    "display_name": "TF-7405-Copy-of-dx-restore-cacf-data_emergency-rule-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-ICP-restore",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1licpres",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [
+                        "158.87.53.55"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES01-ICP-restore",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1licpres"
+                    ],
+                    "destination_ips": [
+                        "158.87.53.55"
+                    ],
+                    "services": [
+                        "TCP-9099",
+                        "DNS",
+                        "SSH",
+                        "HTTPS",
+                        "TCP-4000",
+                        "TCP-8445",
+                        "TCP-10248-10252",
+                        "HTTP",
+                        "TCP-8443",
+                        "TCP-9100",
+                        "DNS-UDP",
+                        "TCP-9091",
+                        "TCP-179"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50087264 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-ICP-restore",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1licpres",
+                        "TF-EU1-HOST-eu1sr1licpres"
+                    ]
+                },
+                "7406": {
+                    "display_name": "TF-7406-Copy-of-dx-restore-cacf-data_emergency-rule-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1licpres"
+                    ],
+                    "source_ips": [
+                        "158.87.53.55"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50087264 ",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1licpres",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1licpres",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "7408": {
+                    "display_name": "TF-7408-Windows-JH-to-STaaS-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STAAS-Netcool-Dashboard"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50087288",
+                    "scope": [
+                        "TF-EU1-SG-SRES-STAAS-Netcool-Dashboard",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "7634": {
+                    "display_name": "TF-7634-Copy-of-ScienceLogic-SL1-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-eu1srlpm1esd6-vip",
+                        "TF-EU1-IPSET-eu1srlpm1esd7-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51231649",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esdp6",
+                        "TF-EU1-IPSET-eu1srlpm1esd7-vip",
+                        "TF-EU1-HOST-eu1srlpm1esdp7",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1srlpm1esdc6",
+                        "TF-EU1-IPSET-eu1srlpm1esd6-vip"
+                    ]
+                },
+                "7780": {
+                    "display_name": "TF-7780-HcaaS-SAT",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlphcs0001"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50095728",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlphcs0001",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "7845": {
+                    "display_name": "TF-7845-Jump-MCDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-IPSET-eu1srlpmcdanstw-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8080",
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51278125 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-IPSET-eu1srlpmcdanstw-VIP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "7846": {
+                    "display_name": "TF-7846-Jump-MCDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8080",
+                        "BDS-8081",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51338518",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "8068": {
+                    "display_name": "TF-8068-SRES-Jump-to-Fortigate",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-snat-to-SL-SVC",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "169.50.185.97",
+                        "169.51.163.1"
+                    ],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-snat-to-SL-SVC"
+                    ]
+                },
+                "8160": {
+                    "display_name": "TF-8160-WAS-Console-HTTPS-BlueCARE-API-HTTPS-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ebcp3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9043",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51375326",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1ebcp3",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "8286": {
+                    "display_name": "TF-8286-infra-clients-terminal-servers-to-license-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-ClientTerminals"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-139",
+                        "TCP-1025-65535",
+                        "TCP-135",
+                        "UDP-137-139",
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51419691",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-ClientTerminals",
+                        "TF-EU1-SG-SRES-TS-License-Server"
+                    ]
+                },
+                "8393": {
+                    "display_name": "TF-8393-IQ-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdexec",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8070-8071"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0075411",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdexec",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmcdnexus"
+                    ]
+                },
+                "8420": {
+                    "display_name": "TF-8420-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd9-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0075447",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd9-vip",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "8421": {
+                    "display_name": "TF-8421-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SG-eu1srlpm1esdp9",
+                        "TF-EU1-IPSET-SG-eu1srlpm1esdc9"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0075447",
+                    "scope": [
+                        "TF-EU1-IPSET-SG-eu1srlpm1esdp9",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SG-eu1srlpm1esdc9"
+                    ]
+                },
+                "8439": {
+                    "display_name": "TF-8439-Netcool-WebGUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16316",
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0075763",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-nlascno000m1erms",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "8643": {
+                    "display_name": "TF-8643-WSUS-to-Vcenter",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SL-IRES-vCenter"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-902",
+                        "HTTPS",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0118399",
+                    "scope": [
+                        "TF-EU1-SG-SL-IRES-vCenter",
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ]
+                },
+                "8790": {
+                    "display_name": "TF-8790-MNEaaS-ScienceLogic-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esldbp1",
+                        "TF-EU1-HOST-eu1srlpm1esldbc1",
+                        "TF-EU1-IPSET-eu1srlpm1esldb1-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0126258",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esldbp1",
+                        "TF-EU1-HOST-eu1srlpm1esldbc1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-eu1srlpm1esldb1-vip"
+                    ]
+                },
+                "8920": {
+                    "display_name": "TF-8920-HWSW-to-BlueID-Azure",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-BLUEIDP1-zw2uspriv-app-kyndryl-net"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50001"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0136146 ",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-IPSET-BLUEIDP1-zw2uspriv-app-kyndryl-net",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9085": {
+                    "display_name": "TF-9085-WSUS-to-SRES-IRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-WSUS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-RITM0144686-VMs",
+                        "TF-EU1-IPSET-SG-HOSTS-VCS-ADNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144686",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-RITM0144686-VMs",
+                        "TF-EU1-SG-SRES-WIN-WSUS",
+                        "TF-EU1-IPSET-SG-HOSTS-VCS-ADNS"
+                    ]
+                },
+                "9305": {
+                    "display_name": "TF-9305-BlueCare-Portal",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-nlascdb000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9080",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0168934",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-nlascdb000m1erms",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,230 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081",
+            "TCP-8182",
+            "HTTP",
+            "TCP-5986",
+            "HTTPS",
+            "TCP-5985",
+            "TCP-8443",
+            "TCP-902",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-MCDS-Kali-eu-vm0079-pt",
+            "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+            "TF-EU1-IPSET-IRES-NSXT-VC",
+            "TF-EU1-IPSET-MCDS-CLUSTER-ESXI-MGMT",
+            "TF-EU1-IPSET-eu1nsxt-mcdstower",
+            "TF-EU1-HOST-eu1srlpmcdanstw1",
+            "TF-EU1-HOST-eu1srlpmcdexec",
+            "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet",
+            "TF-EU1-HOST-eu1srlpmcdjump",
+            "TF-EU1-HOST-eu1srlpmcdanstw3",
+            "TF-EU1-HOST-eu1srlpmcdjenkns",
+            "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds",
+            "TF-EU1-HOST-eu1srlpmcdnexus",
+            "TF-EU1-HOST-eu1srlpmcdanstw2",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "7821": {
+                    "display_name": "TF-7821-MCDS-V-to-T",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpmcdanstw1",
+                        "TF-EU1-HOST-eu1srlpmcdexec",
+                        "TF-EU1-HOST-eu1srlpmcdanstw3",
+                        "TF-EU1-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-HOST-eu1srlpmcdanstw2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-IRES-NSXT-VC",
+                        "TF-EU1-HOST-eu1srlpmcdexec",
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5986",
+                        "HTTP",
+                        "HTTPS",
+                        "TCP-5985",
+                        "TCP-902",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51257009\nSR51320522",
+                    "scope": [
+                        "TF-EU1-IPSET-IRES-NSXT-VC",
+                        "TF-EU1-HOST-eu1srlpmcdanstw1",
+                        "TF-EU1-HOST-eu1srlpmcdexec",
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet",
+                        "TF-EU1-HOST-eu1srlpmcdanstw3",
+                        "TF-EU1-HOST-eu1srlpmcdjenkns",
+                        "TF-EU1-HOST-eu1srlpmcdanstw2"
+                    ]
+                },
+                "7822": {
+                    "display_name": "TF-7822-Dedicated-vSphere-cluster",
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpmcdnexus"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-8081",
+                        "TCP-8182",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51257009\nSR51320522",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpmcdnexus",
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ]
+                },
+                "8018": {
+                    "display_name": "TF-8018-Dedicated-vSphere-cluster-to-exec",
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpmcdexec"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8182",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51257009\nSR51320522",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpmcdexec",
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ]
+                },
+                "8032": {
+                    "display_name": "TF-8032-MCDS-Execution-Node-to-ESXi",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpmcdexec"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-MCDS-CLUSTER-ESXI-MGMT"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTP",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51337318",
+                    "scope": [
+                        "TF-EU1-IPSET-MCDS-CLUSTER-ESXI-MGMT",
+                        "TF-EU1-HOST-eu1srlpmcdexec"
+                    ]
+                },
+                "8124": {
+                    "display_name": "TF-8124-MCDS-Kali-Linux",
+                    "source_groups": [
+                        "TF-EU1-IPSET-MCDS-Kali-eu-vm0079-pt"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-eu1nsxt-mcdstower",
+                        "TF-EU1-HOST-eu1srlpmcdjenkns"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51362902",
+                    "scope": [
+                        "TF-EU1-IPSET-eu1nsxt-mcdstower",
+                        "TF-EU1-IPSET-MCDS-Kali-eu-vm0079-pt",
+                        "TF-EU1-HOST-eu1srlpmcdjenkns"
+                    ]
+                },
+                "8780": {
+                    "display_name": "TF-8780-MCDS-to-NSXT",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpmcdanstw2",
+                        "TF-EU1-HOST-eu1srlpmcdanstw3",
+                        "TF-EU1-HOST-eu1srlpmcdanstw1",
+                        "TF-EU1-HOST-eu1srlpmcdjump"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985",
+                        "TCP-5986",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0125663",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpmcdjump",
+                        "TF-EU1-HOST-eu1srlpmcdanstw1",
+                        "TF-EU1-IPSET-NET-NSXT-MCDS-DedicatedVMsubnet",
+                        "TF-EU1-HOST-eu1srlpmcdanstw3",
+                        "TF-EU1-HOST-eu1srlpmcdanstw2"
+                    ]
+                },
+                "8944": {
+                    "display_name": "TF-8944-Ansible-to-BDS-child",
+                    "source_groups": [
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0137971\nRITM0140044",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1",
+                        "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ]
+                }
+            }
+        }
+    }
+}

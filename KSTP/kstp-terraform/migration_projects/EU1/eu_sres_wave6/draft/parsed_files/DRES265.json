@@ -1,0 +1,90 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "SSH",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d265lpkt1bkp",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d265lpkt1tnp1",
+            "TF-EU1-HOST-eu1d265lpkt1sc",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d265lpkt1sdp",
+            "TF-EU1-HOST-eu1d265lpkt1sdc",
+            "TF-EU1-HOST-eu1d265lpkt1tnp2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES265": {
+            "category": "Application",
+            "rules": {
+                "8301": {
+                    "display_name": "TF-8301-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50102785",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp"
+                    ]
+                },
+                "8302": {
+                    "display_name": "TF-8302-SSH-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1bkp",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1",
+                        "TF-EU1-HOST-eu1d265lpkt1sc",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50102785",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpkt1bkp",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1",
+                        "TF-EU1-HOST-eu1d265lpkt1sc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2"
+                    ]
+                }
+            }
+        }
+    }
+}

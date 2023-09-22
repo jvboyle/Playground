@@ -1,0 +1,58 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d205lpkrnbkp",
+            "TF-EU1-HOST-eu1d205lpkrntnp1",
+            "TF-EU1-HOST-eu1d205lpkrnsdp",
+            "TF-EU1-HOST-eu1d205lpkrnsc",
+            "TF-EU1-HOST-eu1d205lpkrntnp2",
+            "TF-EU1-HOST-eu1d205lpkrnsdc"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES205": {
+            "category": "Application",
+            "rules": {
+                "8678": {
+                    "display_name": "TF-8678-JH-to-SL1-SSH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnbkp",
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp",
+                        "TF-EU1-HOST-eu1d205lpkrnsc",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175842",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d205lpkrnbkp",
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp",
+                        "TF-EU1-HOST-eu1d205lpkrnsc",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc"
+                    ]
+                }
+            }
+        }
+    }
+}

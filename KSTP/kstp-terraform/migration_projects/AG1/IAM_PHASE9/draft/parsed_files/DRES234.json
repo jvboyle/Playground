@@ -1,0 +1,358 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-9083",
+            "HTTPS",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "DNS",
+            "NTP",
+            "Active Directory Server UDP",
+            "Active Directory Server",
+            "TCP-5985",
+            "TCP-5696",
+            "TCP-88",
+            "TCP-135",
+            "TCP-389",
+            "TCP-53",
+            "SSH",
+            "TCP-8443",
+            "UDP-389",
+            "TCP-139",
+            "TCP-445",
+            "DNS-UDP",
+            "UDP-53"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DR234-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1dr234lparx",
+            "TF-AG1-SG-SRES-STaaS-AD-DNS",
+            "TF-AG1-HOST-ag1sr1lpansb",
+            "TF-AG1-HOST-ag1sr1staas4",
+            "TF-AG1-HOST-ag1dr234lpfm",
+            "TF-AG1-HOST-ag1sr1staas3",
+            "TF-AG1-HOST-ag1dr234stw",
+            "TF-AG1-HOST-ag1dr234lpstl",
+            "TF-AG1-HOST-ag1dr234lpskl",
+            "TF-AG1-HOST-ag1srlpdefmstr"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES234": {
+            "category": "Application",
+            "rules": {
+                "3007": {
+                    "display_name": "TF-3007-SRES-to-DR234-AD-DNS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "Active Directory Server UDP",
+                        "NTP",
+                        "DNS-UDP",
+                        "Active Directory Server"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50090927",
+                    "scope": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "3008": {
+                    "display_name": "TF-3008-DR234-to-SRES-AD-DNS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "Active Directory Server UDP",
+                        "NTP",
+                        "DNS-UDP",
+                        "Active Directory Server"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "3009": {
+                    "display_name": "TF-3009-DR234-STW-to-SRES-SKLM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5696",
+                        "TCP-9083",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas3",
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ]
+                },
+                "3013": {
+                    "display_name": "TF-3013-HOST-ag1sr1lpansb-to-STW",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1lpansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50090927",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1lpansb",
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ]
+                },
+                "3014": {
+                    "display_name": "TF-3014-HOST-ag1sr1lpansb-to-DR234-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1lpansb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1dr234lpfm",
+                        "TF-AG1-HOST-ag1dr234stw",
+                        "TF-AG1-HOST-ag1dr234lpstl",
+                        "TF-AG1-HOST-ag1dr234lpskl"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5985",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1sr1lpansb",
+                        "TF-AG1-HOST-ag1dr234lpfm",
+                        "TF-AG1-HOST-ag1dr234stw",
+                        "TF-AG1-HOST-ag1dr234lpstl",
+                        "TF-AG1-HOST-ag1dr234lpskl"
+                    ]
+                },
+                "3016": {
+                    "display_name": "TF-3016-HOST-ag1srlpdefmstr-to-DR234-ARX",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "3017": {
+                    "display_name": "TF-3017-DR234ARX-to-HOST-ag1sr1staas4",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ]
+                },
+                "3018": {
+                    "display_name": "TF-3018-HOST-ag1sr1staas4-to-DR234ARX",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1sr1staas4"
+                    ]
+                },
+                "3019": {
+                    "display_name": "TF-3019-DR234-ARX-to-HOST-ag1srlpdefmstr",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "3022": {
+                    "display_name": "TF-3022-Staas-Domain",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS",
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-139",
+                        "TCP-445",
+                        "TCP-135",
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "TCP-389",
+                        "TCP-53",
+                        "TCP-88",
+                        "UDP-53",
+                        "UDP-389"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DR234-STaaS-AD-DNS",
+                        "TF-AG1-SG-SRES-STaaS-AD-DNS",
+                        "TF-AG1-HOST-ag1dr234stw"
+                    ]
+                },
+                "3818": {
+                    "display_name": "TF-3818-DRES-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0142309",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                },
+                "3819": {
+                    "display_name": "TF-3819-SRES-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr234lparx"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0142309",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr234lparx",
+                        "TF-AG1-HOST-ag1srlpdefmstr"
+                    ]
+                }
+            }
+        }
+    }
+}

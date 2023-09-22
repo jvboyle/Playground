@@ -1,0 +1,4 @@
+  - set_fact:
+      pdr_esg_id: "{{ get_edges | json_query(query) | first }}"
+    vars:
+      query: "json.edgePage.data[?name=='{{ pdr_esg_name }}'].id"

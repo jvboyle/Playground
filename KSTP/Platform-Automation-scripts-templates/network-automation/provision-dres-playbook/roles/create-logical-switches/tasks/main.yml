@@ -1,0 +1,12 @@
+---
+- name: create logical switches
+  nsx_logical_switch:
+    nsxmanager_spec: "{{ nsxmanager_spec }}"
+    state:  "{{ requested_state }}"
+    transportzone: "{{ transport_zone }}"
+    name: "{{ item.value.name }}"
+    controlplanemode: "{{ cp_mode }}"
+    description: "{{ item.value.name }}"
+  with_dict: "{{ new_ls }}"
+  register: logical_switch
+  tags: lswitch_create

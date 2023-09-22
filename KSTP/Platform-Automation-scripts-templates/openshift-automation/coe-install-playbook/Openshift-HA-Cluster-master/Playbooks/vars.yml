@@ -1,0 +1,46 @@
+[vars]
+#  Copy these variable in the vars section of the tower
+
+openshift_deployment_type : origin
+
+# Set these variable to subscribe with redhat
+# Subscription is necessary for Enterprise Edition of OpenShift as it will allow to 
+# enable repositories and images necessary for installation
+# Provide valid username and password
+Enter_username : redhat_user
+Enter_password : redhat_user_password
+redhat_subscription_auto_attach : specify_required_or_not-required
+
+
+#Specify a domain name for the cluster. All apps deployed will have the subdomain as specified below.
+domain_name : apps.gtslabs.com
+
+# Provide the ip address of the host being used as load balancer.
+# This is required to add a wildcard entry in the hosts.
+# Wildcard entry will enable the resolution of the apps
+load_balancer_ip : 119.81.216.81
+
+#State whether you want the etcd storage to be setted up.
+# Specify yes / no
+etcd_setup_required: specify_required_or_not-required
+
+# Consider these only if etcd_setup_required is set to yes
+# Provide these details for setting up the etcd storage
+etcd_disk:
+etcd_volume_group:
+etcd_logical_volume:
+etcd_data_size:
+
+origin_disk:
+origin_volume_group:
+origin_logical_volume:
+origin_data_size:
+
+#State whether you want the docker storage to be setted up.
+# Specify required or not-required
+docker_setup_required: specify_required_or_not-required
+
+# Consider these only if docker_setup_required is set to yes
+# Provide these details for setting up the docker storage
+docker_volume_group:
+docker_data_size: 

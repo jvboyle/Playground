@@ -1,0 +1,19 @@
+### THIS IS A WAY TO DO THIS.  NOTE THE Default password = "password".
+
+
+- name: create gzeien
+  user:
+    name: gzeien
+    comment: gzeien@us.ibm.com
+    groups: 100 # set to group 100  also set passwd
+    password: "{{ 'password' | password_hash('sha512') }}"
+    update_password: on_create
+    state: present
+  register: gzeien
+  become: yes
+
+### FORCE the user to change in when they login
+- name: Force gzeien to change password
+  shell: chage -d 0 gzeien
+  when: gzeien.changed
+  become: yes

@@ -1,0 +1,73 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-DR176-ScienceLogic-Cluster-VIP",
+            "TF-EU1-HOST-eu1d176lplufsdc",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d176lplufsdp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES179": {
+            "category": "Application",
+            "rules": {
+                "6983": {
+                    "display_name": "TF-6983-ScienceLogic-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR176-ScienceLogic-Cluster-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-IPSET-DR176-ScienceLogic-Cluster-VIP",
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ]
+                },
+                "6984": {
+                    "display_name": "TF-6984-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ]
+                }
+            }
+        }
+    }
+}

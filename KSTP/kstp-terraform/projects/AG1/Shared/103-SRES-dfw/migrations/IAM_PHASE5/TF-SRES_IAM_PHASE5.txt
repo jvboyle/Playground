@@ -1,0 +1,2952 @@
+######################################################
+# migration: IAM_PHASE5
+######################################################
+   rule {
+         display_name = "TF-1022-SRES-Jump-from-Provider"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-Services",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1ljmp01-dnat",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Win-Jump-Servers-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1wjmp01-dnat"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/RDP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1ljmp01-dnat",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Win-Jump-Servers-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-Services",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1wjmp01-dnat"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1025-SRES-Jump-to-Provider-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-snat-to-SL-SVC",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/RDP",
+               "/infra/services/TCP-6443",
+               "/infra/services/HTTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-snat-to-SL-SVC",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1026-DNS-Forwarder-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1027-NTP-Server"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1028-DNS-Clients-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SRES-APP-INTERNAL"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SRES-APP-INTERNAL"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1029-NTP-Clients-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-GSNI-subnets"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-GSNI-subnets"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1030-AD-Clients-to-IRES"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-SQL",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-SEPM",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/Win_2008_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS",
+               "/infra/services/Windows-Global-Catalog",
+               "/infra/services/MS-DS-UDP",
+               "/infra/services/SMTP",
+               "/infra/services/NBDG-Unicast",
+               "/infra/services/NTP_Time_Server",
+               "/infra/services/KERBEROS",
+               "/infra/services/LDAP",
+               "/infra/services/KERBEROS-UDP",
+               "/infra/services/Windows-Global-Catalog-over-SSL",
+               "/infra/services/NBNS-Broadcast",
+               "/infra/services/MS-DS-TCP",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/WINS-UDP",
+               "/infra/services/SOAP",
+               "/infra/services/DHCP-Server",
+               "/infra/services/WINS",
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/DNS-UDP",
+               "/infra/services/LDAP-UDP",
+               "/infra/services/Active_Directory_Server",
+               "/infra/services/MS_RPC_TCP",
+               "/infra/services/NBDG-Broadcast",
+               "/infra/services/Active_Directory_Server_UDP",
+               "/infra/services/NBSS",
+               "/infra/services/NBNS-Unicast"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-SQL",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-SEPM",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1031-SL-WSUS-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-WSUS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SL-WSUS"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1071-ITaaS-Jenkins-to-SRES-Linux-Jump-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EITaaS-Jenkins"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-EITaaS-Jenkins",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1072-ITaaS-UCD-from-SRES-Linux-Jump"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EITaaS-UCD"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-7918"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EITaaS-UCD",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1093-SRES-DNS-to-IBM-Blue"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-DNS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-DNS",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Kyndryl-DNS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-DNS",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Kyndryl-DNS",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-DNS"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1094-SRES-Jump-to-Blue-API-Connect"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1095-SRES-Jump-to-TaaS-UCD"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-TaaS-UCD"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-7918"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-TaaS-UCD",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1127-DRES-clients-to-SRES-NTP"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1128-DRES-clients-to-SRES-DNS"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets",
+               "158.87.50.0/26"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1209-ICp-from-SRES-Jump"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-Cluster02"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/ICP-Kubernetes-API-Server",
+               "/infra/services/ICP-Docker-Registry",
+               "/infra/services/ICP-Ingress-Service",
+               "/infra/services/ICP-Management-Console",
+               "/infra/services/ICP-WebSphere-Application-Server-Liberty",
+               "/infra/services/ICP-Kubernetes-NodePort"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1325-Icp-to-IBM-Blue"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-Sendmail",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP",
+               "/infra/services/HTTPS",
+               "/infra/services/LDAP-over-SSL"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-Sendmail",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1326-SRES-JH-to-Icp"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/ICP-Kubernetes-API-Server",
+               "/infra/services/ICP-Docker-Registry",
+               "/infra/services/ICP-Ingress-Service",
+               "/infra/services/ICP-Management-Console",
+               "/infra/services/ICP-WebSphere-Application-Server-Liberty",
+               "/infra/services/ICP-Kubernetes-NodePort"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1356-SG-Sres-Jump-to-OCP-Cluster"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES01-OCP-Cluster01_46_TEMP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-53",
+               "/infra/services/TCP-22623",
+               "/infra/services/TCP-8181",
+               "/infra/services/TCP-22",
+               "/infra/services/TCP-18080",
+               "/infra/services/TCP-8080",
+               "/infra/services/TCP-80",
+               "/infra/services/TCP-4789",
+               "/infra/services/TCP-443",
+               "/infra/services/TCP-8500",
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-10250",
+               "/infra/services/TCP-8001",
+               "/infra/services/TCP-9000",
+               "/infra/services/TCP-30000-32767",
+               "/infra/services/TCP-6443",
+               "/infra/services/TCP-8053"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES01-OCP-Cluster01_46_TEMP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1456-LB-to-Win-Jumphosts-RDP"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB1-PrimaryIP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/RDP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB1-PrimaryIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1498-SRES-Jump-Servers-to-OCP-Cluster02"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES01-OCP-Cluster02_46_TEMP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-8181",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-18080",
+               "/infra/services/TCP-8080",
+               "/infra/services/TCP-4789",
+               "/infra/services/HTTP",
+               "/infra/services/DNS-UDP",
+               "/infra/services/TCP-8500",
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-10250",
+               "/infra/services/TCP-8001",
+               "/infra/services/TCP-9000",
+               "/infra/services/TCP-30000-32767",
+               "/infra/services/TCP-8053"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES01-OCP-Cluster02_46_TEMP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1505-AD-to-ISIM"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-ISIM-WDCISPW-IRES-Members",
+               "/infra/domains/default/groups/TF-AG1-SG-ISIM-WDCISPW-SRES-Members"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-445"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc2",
+               "/infra/domains/default/groups/TF-AG1-SG-ISIM-WDCISPW-IRES-Members",
+               "/infra/domains/default/groups/TF-AG1-SG-ISIM-WDCISPW-SRES-Members"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1512-Jump-to-Netcool"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-CACM-Netcool-Test-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-16316",
+               "/infra/services/TCP-16311"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-CACM-Netcool-Test-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1560-SG-SRES-CACF-JumpHost-Test-Servers-communication"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-CACF-JumpHost-Test-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-CACF-JumpHost-Test-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1645-ISPW-SRES-Linux-Jump-to-BDS-Master"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1657-SRES-Jump-to-DVAA-Servers-Test"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-DVAA-Test-Servers-All"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP",
+               "/infra/services/RDP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-DVAA-Test-Servers-All",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1674-ISPW-SRES-Jump-servers-to-BDS-Master-Repo-VM"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/RDP",
+               "/infra/services/HTTP",
+               "/infra/services/TCP-8081"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1725-File-share-between-SRES-jumps"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMB"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1741-SRES-Jump-Servers-to-OCP-Cluster03"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster03-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-22623",
+               "/infra/services/TCP-8181",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-18080",
+               "/infra/services/TCP-8080",
+               "/infra/services/TCP-4789",
+               "/infra/services/HTTP",
+               "/infra/services/TCP-8500",
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-10250",
+               "/infra/services/TCP-8001",
+               "/infra/services/TCP-9000",
+               "/infra/services/TCP-30000-32767",
+               "/infra/services/TCP-6443",
+               "/infra/services/TCP-8053"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster03-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1742-OCP-Cluster03"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster03-Temp"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster03-Temp"
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster03-Temp"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1780-SAT-GUI"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas4"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas4"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1850-OCP-Cluster05"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1858-THCaaS-to-BlueID-ICp-Cluster02"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-Cluster02"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-BLUEID-PROD"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-BLUEID-PROD",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-Cluster02"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1975-Mail-Notification-Relay-Service"
+         notes        = "SR51171499 - SG-SRES-Linux-Jump-Servers"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lniamprxy-vip",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-SMTP-Server"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lniamprxy-vip",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-SMTP-Server",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1994-Jump-servers-to-Thycotic-VM"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-8080",
+               "/infra/services/TCP-9343",
+               "/infra/services/TCP-9000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2007-SRES-Jumpserver-to-CAR-DB"
+         notes        = "SR51002160"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcardb1000"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcardb1000",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2008-SRES-Jumpserver-to-CAR-WAS"
+         notes        = "SR51002160"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcarwas1000"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-9043-OPJR-VZo8"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcarwas1000",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2025-Jumpserver-to-eToc-DB"
+         notes        = "SR51002321"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocdb1021",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocdb1011"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-60000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocdb1021",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocdb1011",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2026-Jumpservers-to-eToc-WAS"
+         notes        = "SR51002321"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocwas1021",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocwas1011"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-9043-OPJR-VZo8"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocwas1021",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocwas1011",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2033-WIN-Jumpserver-to-IAM-Proxy"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-11443",
+               "/infra/services/TCP-10444"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-THY-IGI-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2065-ISPW-SSH-Proxies"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2066-ISPW-SSH-Proxies-to-BDS-Master"
+         notes        = "SR50968197"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8081"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpcacfbds1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2068-ISPW-SSH-Proxies-to-All-ISPW"
+         notes        = "SR50875765 - NET-SL-IRES-Portable"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-IRES-Portable",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IRES-NSX-T",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-GSNI-subnets"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-5985-5986"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IRES-NSX-T",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-GSNI-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-IRES-Portable",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-WDC-CGN-subnets",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2069-ISPW-SSH-Proxy-VIP-to-Proxies"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB1-PrimaryIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-8081",
+               "/infra/services/TCP-5985-5986"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB1-PrimaryIP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2070-Tower-to-ISPW-SSH-Proxy-VIP"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-5985-5986"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2082-IAMAAS-Jump-Servers-SSH"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dlniamjpf2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dlniamjpf1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-2222"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dlniamjpf1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dlniamjpf2",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2111-SRES-Linux-Jump-to-IKS-Private-Endpoints"
+         notes        = "R51244418 - port 31220 SR50933939 - port 30270 SR51000571 - port 32469 SR51088576 - remove port 32469 SR51088576 - port 30079 SR51321231 - port 31702 SR51327173 - REMOVE 31702 SR51327173 - TCP 30263 SR51328585 - TCP 32527 SR51331318 - TCP 32422"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-Private-Service-Endpoints"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-31220",
+               "/infra/services/TCP-30079",
+               "/infra/services/TCP-31480",
+               "/infra/services/TCP-30270",
+               "/infra/services/TCP-30263",
+               "/infra/services/TCP-32527",
+               "/infra/services/TCP-32422",
+               "/infra/services/TCP-30183"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-SL-Private-Service-Endpoints",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2141-AG-SRES-Secure-Gateway-Client-to-IBM-Cloud"
+         notes        = "SR50862287"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpsecgw1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS",
+               "/infra/services/LDAP-over-SSL"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpsecgw1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-API-Connect",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2174-IAMaaS-SSH"
+         notes        = "SR50875672"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-2222",
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2248-eToc"
+         notes        = "SR50854517"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srwpetpd1000",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocdb1021",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocdb1011"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srwpetpd1000"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50001",
+               "/infra/services/TCP-50214",
+               "/infra/services/TCP-50514",
+               "/infra/services/TCP-51114",
+               "/infra/services/TCP-50714",
+               "/infra/services/TCP-50314",
+               "/infra/services/TCP-50414",
+               "/infra/services/TCP-50005",
+               "/infra/services/TCP-50914",
+               "/infra/services/TCP-50000",
+               "/infra/services/TCP-50034",
+               "/infra/services/TCP-50010",
+               "/infra/services/TCP-50004",
+               "/infra/services/TCP-51014",
+               "/infra/services/TCP-50114"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srwpetpd1000",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlnetocdb1021",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1srlpetocdb1011"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2297-DNS-Forwarding-"
+         notes        = "SR50943015"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dc1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2298-DNS-Forwarding"
+         notes        = "SR50943015"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1staas2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2366-SRES1_Cluster-VIP-to-ISPW-SSH-Proxy-VIP-"
+         notes        = "SR50968197"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2505-Jump-Server-OCP-VIPs"
+         notes        = "SR50982457"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-6443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2521-SAT-to-SAT-Proxy"
+         notes        = "JZerrich will add"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1srlpsatpxy-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/SAT-range-2001-2050"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1srlpsatpxy-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2544-SAT-Squid"
+         notes        = "SR50987567"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-Internet-Proxy-Server"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8080"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1",
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-Internet-Proxy-Server"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2545-SAT-SMTP-"
+         notes        = "SR50987567"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-SMTP-Server"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1",
+               "/infra/domains/default/groups/TF-AG1-SG-PDR-SMTP-Server"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2546-Ansible"
+         notes        = "SR50987567"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpansb"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpansb",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1",
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2547-SAT-to-DNS"
+         notes        = "SR50987567"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/Win_2008_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS",
+               "/infra/services/Windows-Global-Catalog",
+               "/infra/services/MS-DS-UDP",
+               "/infra/services/SMTP",
+               "/infra/services/NBDG-Unicast",
+               "/infra/services/NTP_Time_Server",
+               "/infra/services/KERBEROS",
+               "/infra/services/LDAP",
+               "/infra/services/KERBEROS-UDP",
+               "/infra/services/Windows-Global-Catalog-over-SSL",
+               "/infra/services/NBNS-Broadcast",
+               "/infra/services/MS-DS-TCP",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/WINS-UDP",
+               "/infra/services/SOAP",
+               "/infra/services/DHCP-Server",
+               "/infra/services/WINS",
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/DNS-UDP",
+               "/infra/services/LDAP-UDP",
+               "/infra/services/Active_Directory_Server",
+               "/infra/services/MS_RPC_TCP",
+               "/infra/services/NBDG-Broadcast",
+               "/infra/services/Active_Directory_Server_UDP",
+               "/infra/services/NBSS",
+               "/infra/services/NBNS-Unicast"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2548-DNS-to-SAT"
+         notes        = "SR50987567"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/Win_2008_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS",
+               "/infra/services/Windows-Global-Catalog",
+               "/infra/services/MS-DS-UDP",
+               "/infra/services/SMTP",
+               "/infra/services/NBDG-Unicast",
+               "/infra/services/NTP_Time_Server",
+               "/infra/services/KERBEROS",
+               "/infra/services/LDAP",
+               "/infra/services/KERBEROS-UDP",
+               "/infra/services/Windows-Global-Catalog-over-SSL",
+               "/infra/services/NBNS-Broadcast",
+               "/infra/services/MS-DS-TCP",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/WINS-UDP",
+               "/infra/services/SOAP",
+               "/infra/services/DHCP-Server",
+               "/infra/services/WINS",
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/DNS-UDP",
+               "/infra/services/LDAP-UDP",
+               "/infra/services/Active_Directory_Server",
+               "/infra/services/MS_RPC_TCP",
+               "/infra/services/NBDG-Broadcast",
+               "/infra/services/Active_Directory_Server_UDP",
+               "/infra/services/NBSS",
+               "/infra/services/NBNS-Unicast"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-Ag1srlpSATZcld",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy2",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpsatpxy1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2603-SRES-JH-to-TDI"
+         notes        = "SR50993704"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SDI-DevOps"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8080"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SDI-DevOps",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2604-SRES-TDI-to-SQL"
+         notes        = "SR50993704 SR50998396 SG-SRES-WIN-Jump-Servers added to the source SR51095899 - added source ag1sr1wniamptra"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SDI-DevOps"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-MSSQL-DevOps"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-1433"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SDI-DevOps",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-MSSQL-DevOps",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2658-NSX-T-to-SRES-NTP"
+         notes        = ""
+         source_groups = [
+               "10.211.161.0/24"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/NTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2676-Jump-to-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-agnsrlnetocddb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-agnsrlnetocdwas"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-60000",
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-50000",
+               "/infra/services/TCP-9043-OPJR-VZo8",
+               "/infra/services/TCP-443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-agnsrlnetocdwas",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-agnsrlnetocddb",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2712-Jump-to-OCP-cluster2"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-dummyVIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-OCP-Cluster6-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/TCP-6443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-dummyVIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2765-Jump-SMTP"
+         notes        = "SR51055559"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1pdr1smtp01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1pdr1smtp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2772-Block-Direct-Internet-access-from-SRES-JH"
+         notes        = "SR51310943"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Window-Linux-JumpHost"
+            ]
+         destination_groups = [
+
+            ]
+         action = "DENY"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP",
+               "/infra/services/RDP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Window-Linux-JumpHost"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2773-SRES-JH-to-FortiGate-FW"
+         notes        = "Fortigate 10Gig migration testing "
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IRES-JUMP02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "169.63.82.225/32",
+               "150.239.66.1/32"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IRES-JUMP02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2848-IAMaaS-appliance-to-DNS"
+         notes        = "SR51089515"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-DevOps",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-PEN"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-IAM-THY-SVG-DevOps",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2951-MoM-Jump-server-EU-to-NA"
+         notes        = "SR51185464"
+         source_groups = [
+               "158.87.53.52",
+               "158.87.53.51"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1lpi1pprx-vip"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2977-OCP-Cluster-01-to-DNS-NTP"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2992-SRES-JH-servers-to-hcs"
+         notes        = "CH50090359"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443",
+               "/infra/services/TCP-9043-OPJR-VZo8"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2999-Proxy-to-Vinm-Conections"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IRES-NSX-T"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-5985",
+               "/infra/services/SSH",
+               "/infra/services/TCP-5986"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IRES-NSX-T",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3167-GACDW-Test"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-CDI-AP-ProxyVIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-10003",
+               "/infra/services/TCP-10503"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-CDI-AP-ProxyVIP",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3172-SG-SRES-WIN-Jump-servers-to-agnsr1lnta2vip"
+         notes        = "SR51258186"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-6443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster2-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3174-SG-SRES-OCP-Cluster03-04-to-IBM-Blue-Stutvs3a"
+         notes        = "SR51256470"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-stutvs3a-de-ibm-com"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-LINUX-Jump-Server-CACF",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Blue-stutvs3a-de-ibm-com",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3203-SRES-LinuxJH-to-NFS-Mount"
+         notes        = "SR51312691 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-SRES-NFS01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-SRES-NFS01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3204-CACF-Proxy-to-NFS-Mounts"
+         notes        = "SR51312691 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-SRES-NFS01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-SRES-NFS01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3241-SRES-JH-to-DRES-"
+         notes        = "SR51312595"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dr77lpocum"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1dr77lpocum"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3271-NA-to-AP-Cntrl-node"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "158.87.54.8"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3304-BDS-Server-access"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-All-GSNI-routable",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-All-CGN-Subnets"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8081"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-All-GSNI-routable",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-All-CGN-Subnets"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3386-SRES-ag1sr1lniamuasdi-to-Blue"
+         notes        = "RITM0073612"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lniamuasdi",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Blue-dev-aiops-elk"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lniamuasdi",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Blue-dev-aiops-elk"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3452-NSXT-SRES-VM-Testing-Rules"
+         notes        = "temp"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-1-NSXT-SRES-IP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/NTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-DNS-NTP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-AG-1-NSXT-SRES-IP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3471-cstl1-to-tanzu-nonProd"
+         notes        = "RITM0115125 RITM0116758"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-25010"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcstl01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3657-SRES-to-IRES"
+         notes        = "RITM0130623"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-5985"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NSXT-ADNSnsxt2"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3733-Anisble-workflow-for-KSTP-ESXI-Hosts"
+         notes        = "RITM0135353"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1vc1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1vc1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3734-Anisble-workflow-for-KSTP-ESXI-Hosts"
+         notes        = "RITM0135353"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1nsxt-vc"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1nsxt-vc",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1lpi1pprx2",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-ag1sr1lpi1pprx1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3736-dr100-esg-to-linux-jump"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-dr100-ESG-vNic_1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-dr100-ESG-vNic_1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3798-SRES-Windows-JH-to-ag1sr1sltestvm"
+         notes        = "RITM0143527"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1sltestvm"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-3000",
+               "/infra/services/TCP-9090"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1sr1sltestvm"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3833-SRES-WIN-JH-to-WAS-Admin"
+         notes        = "RITM0145611"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-WAS-Admin"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-9043-OPJR-VZo8"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-WAS-Admin",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3852-Kyndryl-DNS-to-SRES-DNS"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Kyndryl-DNS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-DNS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/DNS-UDP",
+               "/infra/services/DNS-YgYUhldeX"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-DNS",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns02",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wdns01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Kyndryl-DNS"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }

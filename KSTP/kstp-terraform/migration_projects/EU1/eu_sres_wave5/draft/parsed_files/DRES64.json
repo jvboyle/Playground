@@ -1,0 +1,139 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTPS",
+            "HTTP",
+            "UDP-455",
+            "UDP-137-139",
+            "TCP-137-139",
+            "TCP-455"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlasabuildm1e00p",
+            "TF-EU1-HOST-eu1dr64lpcfrcno",
+            "TF-EU1-HOST-eu1d64lpcfrtnp2",
+            "TF-EU1-HOST-eu1dr64lpcfrcdb",
+            "TF-EU1-HOST-eu1dr64lpcfrpdb",
+            "TF-EU1-HOST-eu1dr64lpcfrcwg",
+            "TF-EU1-HOST-eu1d64lpcfrtnp1",
+            "TF-EU1-HOST-eu1dr64lpcfrpni",
+            "TF-EU1-HOST-eu1dr64lpcfrcni",
+            "TF-EU1-HOST-eu1dr64lpcfrpwg",
+            "TF-EU1-HOST-eu1dr64lpcfrpno"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES64": {
+            "category": "Application",
+            "rules": {
+                "4798": {
+                    "display_name": "TF-4798-Autobuild",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1dr64lpcfrcno",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpni",
+                        "TF-EU1-HOST-eu1dr64lpcfrcni",
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpno"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-455",
+                        "UDP-137-139",
+                        "TCP-137-139",
+                        "UDP-455"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-eu1dr64lpcfrcno",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpni",
+                        "TF-EU1-HOST-eu1dr64lpcfrcni",
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpno"
+                    ]
+                },
+                "4800": {
+                    "display_name": "TF-4800-Autobuild-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr64lpcfrcno",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpni",
+                        "TF-EU1-HOST-eu1dr64lpcfrcni",
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "HTTP",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-eu1dr64lpcfrcno",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpni",
+                        "TF-EU1-HOST-eu1dr64lpcfrcni",
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrpno"
+                    ]
+                },
+                "7752": {
+                    "display_name": "TF-7752-Netcool-Probe",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d64lpcfrtnp2",
+                        "TF-EU1-HOST-eu1d64lpcfrtnp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51250861",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-HOST-eu1d64lpcfrtnp2",
+                        "TF-EU1-HOST-eu1d64lpcfrtnp1"
+                    ]
+                }
+            }
+        }
+    }
+}

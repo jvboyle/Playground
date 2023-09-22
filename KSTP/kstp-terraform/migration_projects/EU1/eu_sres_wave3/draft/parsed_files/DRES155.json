@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-MNEAAS-EUSHR1-NCO",
+            "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES155": {
+            "category": "Application",
+            "rules": {
+                "5874": {
+                    "display_name": "TF-5874-Netcool-Probe-to-Object-Server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-EUSHR1-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-MNEAAS-EUSHR1-NCO",
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+customer_name: HON
+blue_id: N/A
+dres_name: dr285
+app_internal_name: "DR285-app-internal1"
+app_internal_subnet: 100.64.206.0
+app_internal_subnet_prefix: 24
+dlr_internal1_ip: 100.64.206.1
+dres_transit_subnet: 100.64.4.80
+dres_transit_subnet_prefix: 28
+esg_vpn_transit_name: "DR285-esg-vpn-transit1"
+esg_vpn_transit_subnet: 100.64.4.80
+esg_vpn_transit_subnet_prefix: 29
+res_esg_vnic1_ip: 100.64.4.82
+vpn_esg_vnic1_ip: 100.64.4.81
+esg_dlr_transit_name: "dr285-esg-dlr-transit1"
+esg_dlr_transit_subnet: 100.64.4.88
+esg_dlr_transit_subnet_prefix: 29
+res_esg_vnic2_ip: 100.64.4.89
+dlr_uplink1_ip: 100.64.4.90
+res_esg_vnic0_ip: 100.64.64.72
+res_esg_vnic0_ip_prefix: 24
+vpn_tunnel_type:
+ns_pg_type: public
+ns_pg_name: "ag1-e-dvs1-pub-dvpg-pub-ns-786"
+vpn_esg_vnic0_ip: 150.239.66.215
+vpn_esg_vnic0_ip_prefix: 24

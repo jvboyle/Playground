@@ -1,0 +1,86 @@
+# Please make sure:
+#   - ssh key /opt/ibm/icp/cluster/ssh_key.pub is populated to the root authorized_keys
+#   - /opt/ibm/icp/cluster/hosts is updated on m01
+#   - replace IPs in this file to real IP addresses
+---
+- hosts: "IPs"
+  vars:
+    dockerversion: "5:18.09.7"
+  tasks:
+    - lvg:
+        vg: datavg
+        pvs: /dev/sdb
+    - lvol:
+        vg: datavg
+        lv: lvvarlibdocker
+        size: 100g
+    - lvol:
+        vg: datavg
+        lv: lvvarlibkubelet
+        size: 20g
+    - lvol:
+        vg: datavg
+        lv: lvoptibmcfc
+        size: 2g
+    - filesystem:
+        fstype: ext4
+        dev: "/dev/datavg/{{ item }}"
+      loop:
+        - lvvarlibdocker
+        - lvvarlibkubelet
+        - lvoptibmcfc
+    - mount:
+        path: /var/lib/{{ item }}
+        src: /dev/datavg/{{ item }}
+        fstype: ext4
+        state: mounted
+      loop:
+        - lvvarlibdocker
+        - lvvarlibkubelet
+    - mount:
+        path: /opt/ibm/cfc
+        src: /dev/datavg/lvoptibmcfc
+        fstype: ext4
+        state: mounted
+    - apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+        filename: docker
+        state: present
+        update_cache: yes
+    - apt:
+        name: docker={{ dockerversion }}
+        install_recommends: yes
+    - apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+        filename: docker
+        state: absent
+        update_cache: yes
+    - copy:
+        src: /repo/ICP/docker.rules
+        dst: /etc/audit/rules.d/docker.rules
+    - copy:
+        src: /repo/ICP/daemon.json
+        dst: /etc/docker/daemon.json
+    - copy:
+        src: /repo/ICP/91-icp.conf
+        dst: /etc/sysctl.d/91-icp.conf
+    - lineinfile:
+        path: /etc/default/grub
+        regexp: '^GRUB_CMDLINE_LINUX='
+        state: present
+        line: GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+    - command: augenrules --load
+    - service:
+        name: auditd
+        state: restarted
+    - command: auditctl -l
+    - command: update-grub
+    - command: sysctl -p /etc/sysctl.d/91-icp.conf
+    - service:
+        name: docker
+        state: reloaded
+    - apt:
+        upgrade: yes
+        dpkg_options: force-confdef,force-confold
+    - reboot:
+        reboot_timeout: 60

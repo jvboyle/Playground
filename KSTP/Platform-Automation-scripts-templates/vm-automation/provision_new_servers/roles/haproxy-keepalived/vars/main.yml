@@ -1,0 +1,15 @@
+---
+keepalived_bind_interface: ens192
+keepalived_vip: 100.64.106.50
+keepalived_master: 100.64.106.51
+keepalived_slave: 100.64.106.52
+
+# HAProxy setting
+haproxy_bind_address: 100.64.106.50
+haproxy_user: haproxy
+haproxy_major_version: 2.1
+haproxy_minor_version: 4
+haproxy_download_url: "http://www.haproxy.org/download/{{ haproxy_major_version }}/src/haproxy-{{ haproxy_major_version }}.{{ haproxy_minor_version }}.tar.gz"
+haproxy_src_dir: /tmp
+haproxy_make_option: TARGET=linux-glibc CPU=x86_64 USE_OPENSSL=1 USE_ZLIB=1 USE_PCRE=1 USE_LINUX_TPROXY=1
+...

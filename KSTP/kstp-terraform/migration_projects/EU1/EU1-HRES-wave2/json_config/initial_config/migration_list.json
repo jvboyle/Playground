@@ -1,0 +1,351 @@
+{
+    "migration_date": "04/17/2023 19:16",
+    "geography": "EU1",
+    "wave": "EU1-HRES-wave2",
+    "rules": {
+        "total": 31,
+        "rules": [
+            "6800",
+            "6391",
+            "4771",
+            "3876",
+            "3880",
+            "3881",
+            "4777",
+            "4778",
+            "8361",
+            "7094",
+            "7095",
+            "4536",
+            "4664",
+            "4537",
+            "4538",
+            "4682",
+            "4684",
+            "3704",
+            "4053",
+            "8411",
+            "4709",
+            "8944",
+            "6003",
+            "6004",
+            "3702",
+            "3703",
+            "4728",
+            "4729",
+            "4730",
+            "4731",
+            "8959"
+        ]
+    },
+    "vms": {
+        "eu1-hres-lb1": {
+            "new_vm_group": "TF-EU1-HOST-hres-lb1",
+            "ip": "100.79.240.2",
+            "groups": [
+                "TF-EU1-HOST-hres-lb1"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta1ssh-vip": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1ssh-vip",
+            "ip": "100.79.240.3",
+            "groups": [
+                "TF-EU1-HOST-eu1h1lpta1ssh-vip"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta1ssh1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1ssh1",
+            "ip": "100.79.240.4",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-EU-Shared-Prod",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-SharedProd",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta1ssh1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-EU-Shared-Prod",
+                "SG-HRES-TALOS-SSHProxy-SharedProd",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta1ssh2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1ssh2",
+            "ip": "100.79.240.5",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-EU-Shared-Prod",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-SharedProd",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta1ssh2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-EU-Shared-Prod",
+                "SG-HRES-TALOS-SSHProxy-SharedProd",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta2ssh-vip": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2ssh-vip",
+            "ip": "100.79.240.6",
+            "groups": [
+                "TF-EU1-HOST-eu1h1lpta2ssh-vip"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta2ssh1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2ssh1",
+            "ip": "100.79.240.7",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta2ssh1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-FSSProd",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta2ssh2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2ssh2",
+            "ip": "100.79.240.8",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta2ssh2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-FSSProd",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta3ssh-vip": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta3ssh-vip",
+            "ip": "100.79.240.9",
+            "groups": [
+                "TF-EU1-HOST-eu1h1lpta3ssh-vip"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta3ssh1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta3ssh1",
+            "ip": "100.79.240.10",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta3ssh1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta3ssh2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta3ssh2",
+            "ip": "100.79.240.11",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta3ssh2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta1hap-vip": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1hap-vip",
+            "ip": "100.79.240.12",
+            "groups": [
+                "TF-EU1-HOST-eu1h1lpta1hap-vip"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta1hap1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1hap1",
+            "ip": "100.79.240.13",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-BDS-HTTPSProxy-JP-Shared-Prod",
+                "TF-EU1-SG-HRES-HAProxy-IN",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta1hap1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-BDS-HTTPSProxy-JP-Shared-Prod",
+                "SG-HRES-HAProxy-IN",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta1hap2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta1hap2",
+            "ip": "100.79.240.14",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-BDS-HTTPSProxy-JP-Shared-Prod",
+                "TF-EU1-SG-HRES-HAProxy-IN",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta1hap2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-BDS-HTTPSProxy-JP-Shared-Prod",
+                "SG-HRES-HAProxy-IN",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta2hap-vip": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2hap-vip",
+            "ip": "100.79.240.15",
+            "groups": [
+                "TF-EU1-HOST-eu1h1lpta2hap-vip"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpta2hap1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2hap1",
+            "ip": "100.79.240.16",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-HAProxy-OUT",
+                "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta2hap1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-HAProxy-OUT",
+                "SG-HRES-Proxy-eu1h1lpta2hap",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpta2hap2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpta2hap2",
+            "ip": "100.79.240.17",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-HRES-HAProxy-OUT",
+                "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpta2hap2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-HRES-HAProxy-OUT",
+                "SG-HRES-Proxy-eu1h1lpta2hap",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1car1prx1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1car1prx1",
+            "ip": "100.79.240.18",
+            "groups": [
+                "TF-EU1-HOST-eu1h1car1prx1"
+            ],
+            "original_groups": []
+        },
+        "eu1h1lpgsntnp1": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpgsntnp1",
+            "ip": "100.79.240.19",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR51023015-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpgsntnp1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR51023015-DPT-22-VM-List"
+            ]
+        },
+        "eu1h1lpgsntnp2": {
+            "new_vm_group": "TF-EU1-HOST-eu1h1lpgsntnp2",
+            "ip": "100.79.240.20",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR51023015-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1h1lpgsntnp2"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR51023015-DPT-22-VM-List"
+            ]
+        },
+        "eu1hr1lpcacfbds": {
+            "new_vm_group": "TF-EU1-HOST-eu1hr1lpcacfbds",
+            "ip": "100.79.240.21",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-HOST-HRES-CACF-BDS-Child",
+                "TF-EU1-HOST-eu1hr1lpcacfbds"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "HOST-HRES-CACF-BDS-Child"
+            ]
+        },
+        "eu1hr1lpcacfovpn": {
+            "new_vm_group": "TF-EU1-HOST-eu1hr1lpcacfovpn",
+            "ip": "100.79.240.22",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-HOST-eu1hr1lpcacfovpn"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All"
+            ]
+        },
+        "VIP_01": {
+            "new_vm_group": "TF-EU1-HOST-VIP_01",
+            "ip": "158.87.57.1",
+            "groups": [
+                "TF-EU1-HOST-VIP_01"
+            ],
+            "original_groups": []
+        },
+        "VIP_02": {
+            "new_vm_group": "TF-EU1-HOST-VIP_02",
+            "ip": "158.87.57.2",
+            "groups": [
+                "TF-EU1-HOST-VIP_02"
+            ],
+            "original_groups": []
+        },
+        "VIP_03": {
+            "new_vm_group": "TF-EU1-HOST-VIP_03",
+            "ip": "158.87.57.3",
+            "groups": [
+                "TF-EU1-HOST-VIP_03"
+            ],
+            "original_groups": []
+        },
+        "VIP_04": {
+            "new_vm_group": "TF-EU1-HOST-VIP_04",
+            "ip": "158.87.57.4",
+            "groups": [
+                "TF-EU1-HOST-VIP_04"
+            ],
+            "original_groups": []
+        },
+        "VIP_05": {
+            "new_vm_group": "TF-EU1-HOST-VIP_05",
+            "ip": "158.87.57.5",
+            "groups": [
+                "TF-EU1-HOST-VIP_05"
+            ],
+            "original_groups": []
+        }
+    }
+}

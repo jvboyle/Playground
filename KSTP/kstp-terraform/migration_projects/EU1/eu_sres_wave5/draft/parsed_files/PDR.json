@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4421",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-PDR-OKTA-ASA-GW"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "9179": {
+                    "display_name": "TF-9179-ASA-GW-to-Linux-JH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-PDR-OKTA-ASA-GW"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4421",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0150241",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-PDR-OKTA-ASA-GW"
+                    ]
+                }
+            }
+        }
+    }
+}

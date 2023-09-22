@@ -1,0 +1,35 @@
+{
+    "migration_date": "05/16/2023 13:14",
+    "geography": "AP1",
+    "wave": "DRES255",
+    "rules": {
+        "total": 0,
+        "rules": []
+    },
+    "vms": {
+        "ap1d255lpcacprx1": {
+            "new_vm_group": "TF-AP1-HOST-ap1d255lpcacprx1",
+            "ip": "100.80.116.51",
+            "groups": [
+                "TF-AP1-HOST-ap1d255lpcacprx1"
+            ],
+            "original_groups": []
+        },
+        "ap1d255lpcacprx2": {
+            "new_vm_group": "TF-AP1-HOST-ap1d255lpcacprx2",
+            "ip": "100.80.116.52",
+            "groups": [
+                "TF-AP1-HOST-ap1d255lpcacprx2"
+            ],
+            "original_groups": []
+        },
+        "ap1d255lpcacprx_vip": {
+            "new_vm_group": "TF-AP1-HOST-ap1d255lpcacprx_vip",
+            "ip": "100.80.116.50",
+            "groups": [
+                "TF-AP1-HOST-ap1d255lpcacprx_vip"
+            ],
+            "original_groups": []
+        }
+    }
+}

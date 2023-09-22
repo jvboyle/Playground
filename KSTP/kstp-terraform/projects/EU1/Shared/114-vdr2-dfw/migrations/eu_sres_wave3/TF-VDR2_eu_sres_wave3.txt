@@ -1,0 +1,30 @@
+######################################################
+# migration: eu_sres_wave3
+######################################################
+   rule {
+         display_name = "TF-9190-DRES-ESG-to-SRES"
+         notes        = "CHGEU0202753"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-VDR2-ESG-LB-Source"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MnEaaS-PRTG-SHR"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-10443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-EU1-SG-VDR2-ESG-LB-Source",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-MnEaaS-PRTG-SHR"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-VDR2-EU1"
+            }
+      }

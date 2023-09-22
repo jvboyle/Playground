@@ -1,0 +1,31 @@
+
+# The following is optional... the registered variable "vm_information" has all this vm_information
+# I'm keeping this in here as an FYI
+#- name: gather the VM facts
+#  vmware_guest:
+#    hostname: "{{ vcenter }}"
+#    username: "{{ lookup('env','vsphere_user') }}"
+#    password: "{{ lookup('env','vsphere_password') }}"
+#    validate_certs: False
+#    name: '{{ inventory_hostname }}'
+#  delegate_to: localhost
+#  register: facts
+
+- name:  read env vars
+  set_fact:
+    temp_label: "{{ lookup('env','NETWORK_LABEL') }}"
+  delegate_to: localhost
+
+- debug:
+    var: temp_label
+
+- name: Save information to a file
+  local_action: lineinfile line=network_label:{{ network_label.0 | to_yaml}}  dest=/tmp/network_label.yaml create=yes
+  delegate_to: localhost
+
+- name: create network label env var
+  lineinfile: >
+     dest=~/.profile
+     state=present
+     line="NETWORK_LABEL={{ network_label.0 }}"
+  delegate_to: localhost

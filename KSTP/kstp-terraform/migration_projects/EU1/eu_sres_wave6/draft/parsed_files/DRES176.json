@@ -1,0 +1,48 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d176lplufsdc",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d176lplufsdp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES176": {
+            "category": "Application",
+            "rules": {
+                "7083": {
+                    "display_name": "TF-7083-SRES-to-DRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50081732\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d176lplufsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d176lplufsdp"
+                    ]
+                }
+            }
+        }
+    }
+}

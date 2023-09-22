@@ -1,0 +1,52 @@
+{
+    "migration_date": "05/19/2023 07:46",
+    "geography": "AP1",
+    "wave": "DRES105",
+    "rules": {
+        "total": 6,
+        "rules": [
+            "1152",
+            "1315",
+            "1148",
+            "1149",
+            "1150",
+            "1151"
+        ]
+    },
+    "vms": {
+        "ap1d105lpcacpr1": {
+            "new_vm_group": "TF-AP1-HOST-ap1d105lpcacpr1",
+            "ip": "100.80.82.51",
+            "groups": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers",
+                "TF-AP1-HOST-ap1d105lpcacpr1"
+            ],
+            "original_groups": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ]
+        },
+        "ap1d105lpcacpr2": {
+            "new_vm_group": "TF-AP1-HOST-ap1d105lpcacpr2",
+            "ip": "100.80.82.52",
+            "groups": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers",
+                "TF-AP1-HOST-ap1d105lpcacpr2"
+            ],
+            "original_groups": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ]
+        },
+        "ap1d105lpcacpr_vip": {
+            "new_vm_group": "TF-AP1-HOST-ap1d105lpcacpr_vip",
+            "ip": "100.80.82.50",
+            "groups": [
+                "TF-AP1-HOST-ap1d105lpcacpr_vip"
+            ],
+            "original_groups": []
+        }
+    }
+}

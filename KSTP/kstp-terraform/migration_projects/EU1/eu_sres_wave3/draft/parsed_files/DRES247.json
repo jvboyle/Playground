@@ -1,0 +1,55 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d247lpmaatnp1",
+            "TF-EU1-HOST-eu1d247lpmaatnp2",
+            "TF-EU1-HOST-eu1srlpm1ecno2",
+            "TF-EU1-HOST-eu1srlpm1epno2",
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-nlascno000m1ermp"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES247": {
+            "category": "Application",
+            "rules": {
+                "7923": {
+                    "display_name": "TF-7923-Netcool-probes-to-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d247lpmaatnp1",
+                        "TF-EU1-HOST-eu1d247lpmaatnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097111\nSR51286372 ",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d247lpmaatnp1",
+                        "TF-EU1-HOST-eu1d247lpmaatnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2",
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                }
+            }
+        }
+    }
+}

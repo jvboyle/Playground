@@ -1,0 +1,13 @@
+proxyEnvs:
+  - name: HTTP_PROXY
+    value: "http://100.64.69.4:8080"
+  - name: HTTPS_PROXY
+    value: "http://100.64.69.4:8080"
+  - name: NO_PROXY
+    value: "localhost,127.0.0.1,cluster.local,100.64.78.23,10.10.10.1,100.127.74.208,w3.apihub.ibm.com,w3.api.ibm.com,w3-dev.ibm.com,w3-03.ibm.com,bluepages.ibm.com,mycluster.icp,ag1dr16icp1.dr16.ag1.sp.local:8500"
+  - name: http_proxy
+    value: "http://100.64.69.4:8080"
+  - name: https_proxy
+    value: "http://100.64.69.4:8080"
+  - name: no_proxy
+    value: "localhost,127.0.0.1,cluster.local,100.64.78.23,10.10.10.1,100.127.74.208,w3.apihub.ibm.com,w3.api.ibm.com,w3-dev.ibm.com,w3-03.ibm.com,bluepages.ibm.com,mycluster.icp,ag1dr16icp1.dr16.ag1.sp.local:8500"

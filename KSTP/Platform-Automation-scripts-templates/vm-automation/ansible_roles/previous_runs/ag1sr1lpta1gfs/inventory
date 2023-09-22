@@ -1,0 +1,7 @@
+[gluster_peers]
+ag1sr1lpta1gfs1 ansible_host=158.87.48.76
+ag1sr1lpta1gfs2 ansible_host=158.87.48.77
+ag1sr1lpta1gfs3 ansible_host=158.87.48.78
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3

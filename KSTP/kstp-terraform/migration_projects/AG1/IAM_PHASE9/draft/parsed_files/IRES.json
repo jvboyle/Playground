@@ -1,0 +1,177 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-UDP",
+            "NBSS",
+            "HTTPS",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "DNS",
+            "WINS-UDP",
+            "Active Directory Server UDP",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "SOAP",
+            "NBNS-Unicast",
+            "SMTP",
+            "TCP-5985-5986",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "NBDG-Broadcast",
+            "MS-DS-TCP",
+            "DHCP-Server",
+            "NBNS-Broadcast",
+            "KERBEROS-UDP",
+            "LDAP-over-SSL",
+            "MS-DS-UDP",
+            "MS_RPC_TCP",
+            "Windows-Global-Catalog",
+            "KERBEROS",
+            "LDAP",
+            "DNS-UDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1sr1staas1",
+            "TF-AG1-IPSET-Ag1-Host-ag1srwphwcstr01",
+            "TF-AG1-HOST-ag1srwphwcstl01",
+            "TF-AG1-HOST-ag1srwphwcsrv01",
+            "TF-AG1-IPSET-Ag1-Host-ag1srwphwcdb01",
+            "TF-AG1-HOST-ag1srwphwcdb01",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-HOST-ag1dc2",
+            "TF-AG1-HOST-ag1srwphwcweb01",
+            "TF-AG1-SG-IRES-SL1-Collectors",
+            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+            "TF-AG1-HOST-ag1sr1wdns01",
+            "TF-AG1-HOST-ag1sr1staas2",
+            "TF-AG1-IPSET-Host-ag1sr1win19test",
+            "TF-AG1-HOST-ag1srwphwcstr01",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns02",
+            "TF-AG1-IPSET-Ag1-Host-ag1srwphwcgrfdb",
+            "TF-AG1-HOST-ag1srwphwcgrfdb",
+            "TF-AG1-HOST-ag1sr1wdns02"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "2290": {
+                    "display_name": "TF-2290-SG-IRES-SL1-Collectors-to-DC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns02",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                        "TF-AG1-HOST-ag1sr1wdns01",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-HOST-ag1sr1wdns02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-UDP",
+                        "NBSS",
+                        "DNS",
+                        "WINS-UDP",
+                        "Active Directory Server UDP",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SOAP",
+                        "NBNS-Unicast",
+                        "SMTP",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Broadcast",
+                        "MS-DS-TCP",
+                        "DHCP-Server",
+                        "NBNS-Broadcast",
+                        "KERBEROS-UDP",
+                        "LDAP-over-SSL",
+                        "MS-DS-UDP",
+                        "MS_RPC_TCP",
+                        "Windows-Global-Catalog",
+                        "KERBEROS",
+                        "LDAP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50942227 SR50943392",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns02",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                        "TF-AG1-HOST-ag1sr1wdns01",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-HOST-ag1sr1wdns02"
+                    ]
+                },
+                "3381": {
+                    "display_name": "TF-3381-win19test-to-DC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcdb01",
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcstr01",
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcgrfdb",
+                        "TF-AG1-HOST-ag1srwphwcweb01",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-HOST-ag1srwphwcstl01",
+                        "TF-AG1-HOST-ag1srwphwcsrv01",
+                        "TF-AG1-IPSET-Host-ag1sr1win19test",
+                        "TF-AG1-HOST-ag1srwphwcdb01",
+                        "TF-AG1-HOST-ag1srwphwcstr01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-5985-5986",
+                        "DNS",
+                        "LDAP-over-SSL",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": " RITM0073507 ",
+                    "scope": [
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcstr01",
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcgrfdb",
+                        "TF-AG1-IPSET-Host-ag1sr1win19test",
+                        "TF-AG1-HOST-ag1srwphwcweb01",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-HOST-ag1srwphwcstl01",
+                        "TF-AG1-HOST-ag1srwphwcsrv01",
+                        "TF-AG1-IPSET-Ag1-Host-ag1srwphwcdb01",
+                        "TF-AG1-HOST-ag1srwphwcdb01",
+                        "TF-AG1-HOST-ag1srwphwcstr01"
+                    ]
+                }
+            }
+        }
+    }
+}

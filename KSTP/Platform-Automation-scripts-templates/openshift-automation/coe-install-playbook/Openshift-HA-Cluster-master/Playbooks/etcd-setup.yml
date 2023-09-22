@@ -1,0 +1,54 @@
+---
+- name: Create volume group
+  lvg:
+    vg: "{{etcd_volume_group}}"
+    pvs: /dev/{{etcd_disk}}
+  when: inventory_hostname in groups['masters']
+
+- name: Create logical
+  lvol:
+    vg: "{{etcd_volume_group}}"
+    lv: "{{etcd_logical_volume}}"
+    size: "{{etcd_data_size}}"
+  when: inventory_hostname in groups['masters']
+
+- name: Create filesystem
+  filesystem:
+    fstype: xfs
+    dev: /dev/mapper/"{{etcd_volume_group}}-{{etcd_logical_volume}}"
+  when: inventory_hostname in groups['masters']
+
+- name: Mount the filesystem
+  mount:
+    path: /var/lib/etcd
+    src: /dev/mapper/"{{etcd_volume_group}}-{{etcd_logical_volume}}"
+    fstype: xfs
+    state: mounted
+  when: inventory_hostname in groups['masters']
+
+- name: Create volume
+  lvg:
+    vg: "{{origin_volume_group}}"
+    pvs: /dev/{{origin_disk}}
+  when: inventory_hostname in groups['compute']
+
+- name: Create logical volume
+  lvol:
+    vg: "{{origin_volume_group}}"
+    lv: "{{origin_logical_volume}}"
+    size: "{{origin_data_size}}"
+  when: inventory_hostname in groups['compute']
+
+- name: Create filesystem
+  filesystem:
+    fstype: xfs
+    dev: /dev/mapper/"{{origin_volume_group}}-{{origin_logical_volume}}"
+  when: inventory_hostname in groups['compute']
+
+- name: Mount the filesystem
+  mount:
+    path: /var/lib/origin
+    src: /dev/mapper/"{{origin_volume_group}}-{{origin_logical_volume}}"
+    fstype: xfs
+    state: mounted
+  when: inventory_hostname in groups['compute']

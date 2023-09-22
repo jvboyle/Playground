@@ -1,0 +1,167 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-8443",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-eu1d265lpkt1sdp",
+            "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip",
+            "TF-EU1-HOST-eu1d265lpkt1tnp2",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1ecno2",
+            "TF-EU1-HOST-eu1srlpm1epno2",
+            "TF-EU1-HOST-eu1d265lpkt1sdc",
+            "TF-EU1-HOST-eu1srlpm1epnp2",
+            "TF-EU1-HOST-eu1d265lpkt1tnp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES265": {
+            "category": "Application",
+            "rules": {
+                "8295": {
+                    "display_name": "TF-8295-Netcool-MsgBus-Probe-Netcool-Omnibus",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CH50102785",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1"
+                    ]
+                },
+                "8553": {
+                    "display_name": "TF-8553-Event-Forwarding-for-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0114868",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpkt1tnp2",
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2",
+                        "TF-EU1-HOST-eu1d265lpkt1tnp1"
+                    ]
+                },
+                "8555": {
+                    "display_name": "TF-8555-SRES-to-DRES-API-Call",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0114868",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip"
+                    ]
+                },
+                "9067": {
+                    "display_name": "TF-9067-Copy-of-SL1-API-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144845",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d265lpkt1sdc"
+                    ]
+                },
+                "9068": {
+                    "display_name": "TF-9068-SL1-API",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d265lpkt1sdc",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144845\nRITM0152558",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d265lpkt1sdp",
+                        "TF-EU1-IPSET-SG-DR265-eu1d265lpkt1sd-vip",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d265lpkt1sdc"
+                    ]
+                }
+            }
+        }
+    }
+}

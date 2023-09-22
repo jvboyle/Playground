@@ -1,0 +1,62 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "NTP",
+            "DNS-UDP",
+            "DNS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+        ]
+    },
+    "map_policies": {
+        "TF-GRES": {
+            "category": "Application",
+            "rules": {
+                "1023": {
+                    "display_name": "TF-1023-DNS-Clients-",
+                    "disabled": false,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1024": {
+                    "display_name": "TF-1024-NTP-Clients-",
+                    "disabled": false,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                }
+            }
+        }
+    }
+}

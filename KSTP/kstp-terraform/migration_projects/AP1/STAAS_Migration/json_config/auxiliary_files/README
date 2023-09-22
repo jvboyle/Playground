@@ -1,0 +1,5 @@
+Files created but the 1st script run 
+
+- fix in file for missing parse function of the service_groups tab
+  - add 
+   - "Microsoft Active Directory": {"protocol": "TCP", "port": ["12345"], "init": false} 

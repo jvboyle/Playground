@@ -1,0 +1,24 @@
+---
+  - name: install dependencies sep
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - libnsl
+      - glibc.i686
+      - libgcc.i686
+      - libX11.i686
+
+  - name: copy sep rpm
+    copy:
+      src: files/sep-rpm.zip
+      dest: /tmp/sep-rpm.zip
+
+  - name: unarchive sep-rpm
+    shell:
+      unzip -o /tmp/sep-rpm.zip -d /tmp/
+
+  - name: install sep
+    shell:  
+      /tmp/install.sh -i      
+...

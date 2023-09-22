@@ -1,0 +1,74 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d115lpeaysldbc1",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-eu1d115lpeaysldb1-vip",
+            "TF-EU1-HOST-eu1d115lpeayslcol1",
+            "TF-EU1-HOST-eu1d115lpeaysldbp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES115": {
+            "category": "Application",
+            "rules": {
+                "5163": {
+                    "display_name": "TF-5163-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d115lpeayslcol1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d115lpeayslcol1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1"
+                    ]
+                },
+                "5175": {
+                    "display_name": "TF-5175-SL1-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-eu1d115lpeaysldb1-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-eu1d115lpeaysldb1-vip",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

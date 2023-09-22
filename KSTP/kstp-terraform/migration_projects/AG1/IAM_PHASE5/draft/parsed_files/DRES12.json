@@ -1,0 +1,116 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "DNS",
+            "DNS-UDP",
+            "SMTP",
+            "NTP",
+            "TCP-8088",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-HOST-ag1dr12stl",
+            "TF-AG1-HOST-ag1sr1wjmp01",
+            "TF-AG1-HOST-ag1dr12stw",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES12": {
+            "category": "Application",
+            "rules": {
+                "1099": {
+                    "display_name": "TF-1099-NTP_DRES12",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1100": {
+                    "display_name": "TF-1100-DNS_DRES12",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1142": {
+                    "display_name": "TF-1142-Netapp-Migration-Tool-Web-Interface",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr12stw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-8088"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "1278": {
+                    "display_name": "TF-1278-test-rule-Sendmail",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-HOST-ag1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr12stl"
+                    ],
+                    "destination_ips": [
+                        "100.64.76.7"
+                    ],
+                    "services": [
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr12stw",
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1dr12stl"
+                    ]
+                }
+            }
+        }
+    }
+}

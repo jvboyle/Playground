@@ -1,0 +1,26 @@
+{
+    "source and destination": [
+        "NET-IBM-Blue",
+        "ag1srlpgse1000",
+        "ag1pdr1smtp01",
+        "AG1-Host-ag1srlpgse1000",
+        "HOST-IBM-Bluepages",
+        "HOST-AP-ap1srlpgsehst01"
+    ],
+    "groups and ipsets": [
+        "HOST-IBM-Bluepages",
+        "HOST-AP-ap1srlpgsehst01",
+        "NET-IBM-Blue",
+        "AG1-Host-ag1srlpgse1000"
+    ],
+    "source and destination ips": [
+        "158.87.54.93",
+        "9.23.210.79",
+        "9.0.0.0/8",
+        "9.17.186.253",
+        "9.57.182.78",
+        "9.15.0.48",
+        "9.15.48.48",
+        "158.87.48.235"
+    ]
+}

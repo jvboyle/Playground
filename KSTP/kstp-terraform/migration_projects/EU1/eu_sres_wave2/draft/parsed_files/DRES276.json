@@ -1,0 +1,280 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "LDAP",
+            "WINS",
+            "BDS-8081",
+            "KERBEROS-UDP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "LDAP-UDP",
+            "NBDG-Broadcast",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "Windows-Global-Catalog",
+            "NBDG-Unicast",
+            "DHCP-Server",
+            "SOAP",
+            "KERBEROS",
+            "Active Directory Server UDP",
+            "DNS",
+            "DNS-UDP",
+            "MS-DS-UDP",
+            "TCP-123",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "HTTPS",
+            "NTP Time Server",
+            "Active Directory Server",
+            "Windows-Global-Catalog-over-SSL",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpabcmstr",
+            "TF-EU1-SG-DR276-ESG-LB-Source",
+            "TF-EU1-IPSET-DR276-LB-VIP4",
+            "TF-EU1-HOST-eu1d276lpcacprx1",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-HOST-eu1d276lprevpxy",
+            "TF-EU1-IPSET-DR276-LB-VIP5",
+            "TF-EU1-IPSET-DR276-LB-VIP2",
+            "TF-EU1-IPSET-DR276-LB-VIP3",
+            "TF-EU1-HOST-eu1d276lpcacprx2",
+            "TF-EU1-HOST-eu1d276wpDDE",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES276": {
+            "category": "Application",
+            "rules": {
+                "8667": {
+                    "display_name": "TF-8667-Client-DRES-CACF-Proxy",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d276lpcacprx1",
+                        "TF-EU1-HOST-eu1d276lpcacprx2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175960",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d276lpcacprx1",
+                        "TF-EU1-HOST-eu1d276lpcacprx2",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ]
+                },
+                "8988": {
+                    "display_name": "TF-8988-STaaS-AD-to-Reverse-Proxy",
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d276lprevpxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140603",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d276lprevpxy",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "8989": {
+                    "display_name": "TF-8989-CLS-PAM-DDE-and-reverse-proxy-to-STaaS-AD",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d276lprevpxy",
+                        "TF-EU1-HOST-eu1d276wpDDE"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140603",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d276lprevpxy",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-HOST-eu1d276wpDDE"
+                    ]
+                },
+                "9012": {
+                    "display_name": "TF-9012-DRES-ESG-to-SRES-STaaS-AD",
+                    "source_groups": [
+                        "TF-EU1-SG-DR276-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-123",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140825",
+                    "scope": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-DR276-ESG-LB-Source"
+                    ]
+                },
+                "9013": {
+                    "display_name": "TF-9013-SRES-STaaS-AD-to-NSX-LB-VIP",
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR276-LB-VIP3",
+                        "TF-EU1-IPSET-DR276-LB-VIP5",
+                        "TF-EU1-IPSET-DR276-LB-VIP2",
+                        "TF-EU1-IPSET-DR276-LB-VIP4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-123",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140825",
+                    "scope": [
+                        "TF-EU1-IPSET-DR276-LB-VIP4",
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-IPSET-DR276-LB-VIP5",
+                        "TF-EU1-IPSET-DR276-LB-VIP2",
+                        "TF-EU1-IPSET-DR276-LB-VIP3"
+                    ]
+                },
+                "9015": {
+                    "display_name": "TF-9015-Microstrategy-to-NSX-LB-VIP",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpabcmstr"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR276-LB-VIP3",
+                        "TF-EU1-IPSET-DR276-LB-VIP5",
+                        "TF-EU1-IPSET-DR276-LB-VIP2",
+                        "TF-EU1-IPSET-DR276-LB-VIP4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140825",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpabcmstr",
+                        "TF-EU1-IPSET-DR276-LB-VIP4",
+                        "TF-EU1-IPSET-DR276-LB-VIP5",
+                        "TF-EU1-IPSET-DR276-LB-VIP2",
+                        "TF-EU1-IPSET-DR276-LB-VIP3"
+                    ]
+                },
+                "9020": {
+                    "display_name": "TF-9020-DRES-ESG-to-CACF-BDS",
+                    "source_groups": [
+                        "TF-EU1-SG-DR276-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140825",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1",
+                        "TF-EU1-SG-DR276-ESG-LB-Source"
+                    ]
+                }
+            }
+        }
+    }
+}

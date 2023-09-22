@@ -1,0 +1,49 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-1026",
+            "TCP-1025",
+            "TCP-1024",
+            "TCP-1027"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR227-LB-VIP1",
+            "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES227": {
+            "category": "Application",
+            "rules": {
+                "3370": {
+                    "display_name": "TF-3370-SRES-EntAuto-VMs-to-DRES-LB-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR227-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-1027",
+                        "TCP-1024",
+                        "TCP-1026",
+                        "TCP-1025"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51391146 ",
+                    "scope": [
+                        "TF-AG1-IPSET-DR227-LB-VIP1",
+                        "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "IRES": {
+        "category": "Application",
+        "rules": {
+            "rule_1402": {
+                "display_name": " IRES DNS_to_SRES_AD",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES-STaaS-AD"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "DNS-UDP",
+                    "DNS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                    "AP1-SG-SRES-STaaS-AD"
+                ]
+            },
+            "rule_1401": {
+                "display_name": "SRES AD_to_IRES_DNS",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-STaaS-AD"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "ICMP Echo Request",
+                    "DNS-UDP",
+                    "DNS",
+                    "ICMP Echo Reply"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-STaaS-AD",
+                    "AP1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                ]
+            }
+        }
+    },
+    "staas": {
+        "category": "Application",
+        "rules": {
+            "rule_1312": {
+                "display_name": "SRES STaaS AD to SRES STaaS AD, DNS",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-STaaS-AD-Clients",
+                    "AP1-SG-SRES-STaaS-AD",
+                    "AP1-SG-SRES-STaaS-AD-DNS"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES-STaaS-AD",
+                    "AP1-SG-SRES-STaaS-AD-DNS"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "Microsoft Active Directory V1",
+                    "TCP-42",
+                    "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-STaaS-AD-Clients",
+                    "AP1-SG-SRES-STaaS-AD",
+                    "AP1-SG-SRES-STaaS-AD-DNS",
+                    "AP1-SG-SRES-STaaS-AD",
+                    "AP1-SG-SRES-STaaS-AD-DNS"
+                ]
+            },
+            "rule_1319": {
+                "display_name": "SRES_AD_Clients_to_AD",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-STaaS-AD-Clients"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES-STaaS-AD"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-53-389-636-88-464-3268-3269"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-STaaS-AD-Clients",
+                    "AP1-SG-SRES-STaaS-AD"
+                ]
+            }
+        }
+    }
+}

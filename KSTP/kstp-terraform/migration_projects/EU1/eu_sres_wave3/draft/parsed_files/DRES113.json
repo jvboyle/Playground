@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1epno3",
+            "TF-EU1-SG-DR113-ESG-LB-Source",
+            "TF-EU1-HOST-eu1srlpm1ecno3"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES113": {
+            "category": "Application",
+            "rules": {
+                "8383": {
+                    "display_name": "TF-8383-DRES-ESG-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR113-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0075063",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1epno3",
+                        "TF-EU1-SG-DR113-ESG-LB-Source",
+                        "TF-EU1-HOST-eu1srlpm1ecno3"
+                    ]
+                }
+            }
+        }
+    }
+}

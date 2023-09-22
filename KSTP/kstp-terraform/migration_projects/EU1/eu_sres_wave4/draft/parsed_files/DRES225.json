@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-30000",
+            "TCP-20000-23000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-CH50088519",
+            "TF-EU1-HOST-eu1d225lpisiams1",
+            "TF-EU1-HOST-eu1srlpisiwai01"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES225": {
+            "category": "Application",
+            "rules": {
+                "7509": {
+                    "display_name": "TF-7509-ISIM-proxy-mgmt",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpisiwai01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d225lpisiams1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-30000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50088519",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d225lpisiams1",
+                        "TF-EU1-HOST-eu1srlpisiwai01"
+                    ]
+                },
+                "7510": {
+                    "display_name": "TF-7510-ISIM-connect-to-DRES-proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-CH50088519"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d225lpisiams1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20000-23000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50088519",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d225lpisiams1",
+                        "TF-EU1-SG-SRES-ISIM-CH50088519"
+                    ]
+                }
+            }
+        }
+    }
+}

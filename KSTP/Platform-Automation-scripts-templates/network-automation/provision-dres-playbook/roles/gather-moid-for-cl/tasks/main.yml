@@ -1,0 +1,11 @@
+---
+- name: gather moid for cl
+  vcenter_gather_moids:
+    hostname: "{{ vcenter }}"
+    username: "{{ vcenter_user }}"
+    password: "{{ vcenter_pwd }}"
+    datacenter_name: "{{ vcenter_dc }}"
+    cluster_name: "{{ vcenter_edge_cluster }}"
+    validate_certs: False
+  register: gather_moids_cl
+  tags: moids

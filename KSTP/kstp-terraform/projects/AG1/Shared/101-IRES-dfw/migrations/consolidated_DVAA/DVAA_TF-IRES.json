@@ -1,0 +1,109 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "KERBEROS-TCP",
+            "SMB",
+            "HTTPS",
+            "LDAP",
+            "DNS-UDP",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "LDAP-UDP",
+            "LDAP-over-SSL",
+            "NetBios Session Service (TCP)",
+            "TCP-5985-5986",
+            "DNS",
+            "TCP-135"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-HOST-ag1srwphwcdb01",
+            "TF-AG1-HOST-ag1sr1win19test",
+            "TF-AG1-HOST-ag1srwphwcstl01",
+            "TF-AG1-HOST-ag1dc2",
+            "TF-AG1-HOST-ag1srwphwcgrfdb",
+            "TF-AG1-HOST-ag1srwphwcsrv01",
+            "TF-AG1-HOST-ag1srwphwcstr01",
+            "TF-AG1-SG-IRES-SL1-Collectors",
+            "TF-AG1-HOST-ag1srwphwcweb01"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "3044": {
+                    "display_name": "TF-3044-win19test-to-IRES-DNS",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1win19test"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1dc2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "LDAP",
+                        "DNS-UDP",
+                        "SMB",
+                        "LDAP-UDP",
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "KERBEROS-TCP",
+                        "NetBios Session Service (TCP)",
+                        "TCP-135"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51242059",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1sr1win19test"
+                    ]
+                },
+                "3381": {
+                    "display_name": "TF-3381-win19test-to-DC",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srwphwcsrv01",
+                        "TF-AG1-HOST-ag1srwphwcstl01",
+                        "TF-AG1-HOST-ag1srwphwcstr01",
+                        "TF-AG1-HOST-ag1srwphwcweb01",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-HOST-ag1sr1win19test",
+                        "TF-AG1-HOST-ag1srwphwcdb01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "DNS-UDP",
+                        "TCP-5985-5986",
+                        "LDAP-over-SSL",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": " RITM0073507 ",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srwphwcsrv01",
+                        "TF-AG1-HOST-ag1srwphwcstl01",
+                        "TF-AG1-HOST-ag1srwphwcstr01",
+                        "TF-AG1-HOST-ag1srwphwcweb01",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-HOST-ag1srwphwcdb01",
+                        "TF-AG1-HOST-ag1sr1win19test",
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ]
+                }
+            }
+        }
+    }
+}

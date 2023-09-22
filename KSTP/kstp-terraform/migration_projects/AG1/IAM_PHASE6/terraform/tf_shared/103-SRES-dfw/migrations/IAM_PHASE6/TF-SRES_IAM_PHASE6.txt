@@ -1,0 +1,205 @@
+######################################################
+# migration: IAM_PHASE6
+######################################################
+   rule {
+         display_name = "TF-3281-File-transfer"
+         notes        = "SR51364128"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-22"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcetl01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3310-NA-SRES-to-EU-SRES-SSH-flow"
+         notes        = "SR51385647"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfds"
+            ]
+         destination_groups = [
+               "158.87.53.178",
+               "158.87.52.69"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfds"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3456-DB-to-ag1srlphwcsss01-"
+         notes        = "RITM0094887"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-GACDW-AG-DB"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-50000",
+               "/infra/services/TCP-60000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-GACDW-AG-DB"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3457-ag1srlphwcsss01-to-DB"
+         notes        = "RITM0094887 RITM0115048"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-secure-file-service-ocp1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-GACDW-AG-DB"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-10548",
+               "/infra/services/TCP-10501",
+               "/infra/services/TCP-12051",
+               "/infra/services/TCP-12057"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-secure-file-service-ocp1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-GACDW-AG-DB"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3510-ANZ-SRES-to-NA-SRES"
+         notes        = "RITM0118072"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-anzproductionapp-hwsw-",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ap1sr1lpcacprx1-vip"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcmon01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-ap1sr1lpcacprx1-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcmon01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Host-anzproductionapp-hwsw-"
+            ]
+         disabled              = true
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3621-US-Only-GRF-to-NA-GRF"
+         notes        = "RITM0123640"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-US-GRF-SSS"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb",
+               "/infra/domains/default/groups/TF-AG1-IPSET-US-GRF-SSS"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3700-GACDW-EU-To-Sres"
+         notes        = "RITM0134328"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SRES-eu1srlngacdwdb"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-60000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcsss01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU1-SRES-eu1srlngacdwdb"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }

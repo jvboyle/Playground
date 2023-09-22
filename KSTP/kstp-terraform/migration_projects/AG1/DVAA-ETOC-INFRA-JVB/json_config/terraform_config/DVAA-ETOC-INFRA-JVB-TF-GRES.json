@@ -1,0 +1,115 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "ICP-Kubernetes-API-Server",
+            "ICP-Ingress-Service",
+            "ICP-Management-Console",
+            "ICP-Kubernetes-NodePort",
+            "ICP-WebSphere-Application-Server-Liberty",
+            "ICP-Docker-Registry"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-GRES01-ICp-Cluster01",
+            "TF-AG1-SG-GRES01-ICp-Cluster02",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-GRES01-ICp-Cluster03"
+        ]
+    },
+    "map_policies": {
+        "TF-GRES": {
+            "category": "Application",
+            "rules": {
+                "1051": {
+                    "display_name": "TF-1051-ICp-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes-API-Server",
+                        "ICP-Ingress-Service",
+                        "ICP-Management-Console",
+                        "ICP-Kubernetes-NodePort",
+                        "ICP-WebSphere-Application-Server-Liberty",
+                        "ICP-Docker-Registry"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-GRES01-ICp-Cluster01"
+                    ]
+                },
+                "1065": {
+                    "display_name": "TF-1065-ICp2-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes-API-Server",
+                        "ICP-Ingress-Service",
+                        "ICP-Management-Console",
+                        "ICP-Kubernetes-NodePort",
+                        "ICP-WebSphere-Application-Server-Liberty",
+                        "ICP-Docker-Registry"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-GRES01-ICp-Cluster02",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1261": {
+                    "display_name": "TF-1261-ICp-from-SRES-Jump",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-GRES01-ICp-Cluster03"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes-API-Server",
+                        "ICP-Ingress-Service",
+                        "ICP-Management-Console",
+                        "ICP-Kubernetes-NodePort",
+                        "ICP-WebSphere-Application-Server-Liberty",
+                        "ICP-Docker-Registry"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-GRES01-ICp-Cluster03",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

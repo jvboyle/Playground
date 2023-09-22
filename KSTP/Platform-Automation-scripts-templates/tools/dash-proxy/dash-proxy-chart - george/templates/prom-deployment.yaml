@@ -1,0 +1,45 @@
+{{- if .Values.prometheus.enabled }}
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-dash-prometheus
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dash-prometheus
+    spec:
+      serviceAccountName: {{ .Release.Name }}-dash-prometheus
+      containers:
+        - name: prometheus
+#          image: "ibmcb-docker-local.artifactory.swg-devops.com/prometheus"
+#          imagePullPolicy: "IfNotPresent"
+#          image: "{{- .Values.dash_proxy.repository }}"
+          image: ispw-dash.gravitant.net/prometheus
+          imagePullPolicy: {{ .Values.dash_proxy.pullPolicy }}
+          args:
+            - "--config.file=/etc/prometheus/prometheus.yml"
+            - "--storage.tsdb.path=/prometheus/"
+          ports:
+            - containerPort: 9090
+          securityContext:
+            runAsUser: 65534
+          volumeMounts:
+            - name: prometheus-config-volume
+              mountPath: /etc/prometheus/
+            - name: prometheus-storage-volume
+              mountPath: /prometheus/
+      volumes:
+        - name: prometheus-config-volume
+          configMap:
+            defaultMode: 420
+            name: {{ .Release.Name }}-prometheus-server-conf
+        - name: prometheus-storage-volume
+          emptyDir: {}
+      {{- if .Values.imageCredentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}-registrykey
+      {{- end }}
+{{- end }}

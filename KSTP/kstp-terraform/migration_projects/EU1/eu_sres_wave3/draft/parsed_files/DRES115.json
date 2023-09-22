@@ -1,0 +1,136 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8080",
+            "TCP-4500",
+            "TCP-8443",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-SG-eu1d115lpeaysldb1-vip",
+            "TF-EU1-HOST-eu1d115lpeaytnp1",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-eu1d115lpeaysldbc1",
+            "TF-EU1-HOST-eu1d115lpeaytnp2",
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-nlascno000m1ermp",
+            "TF-EU1-HOST-eu1d115lpeaysldbp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES115": {
+            "category": "Application",
+            "rules": {
+                "5165": {
+                    "display_name": "TF-5165-Sync-Daemon",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-eu1d115lpeaysldb1-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-SG-eu1d115lpeaysldb1-vip"
+                    ]
+                },
+                "5166": {
+                    "display_name": "TF-5166-Sync-Daemon",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8080"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1"
+                    ]
+                },
+                "5171": {
+                    "display_name": "TF-5171-Netcool-MsgBus-Probe",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1"
+                    ]
+                },
+                "5172": {
+                    "display_name": "TF-5172-Netcool-Omnibus-communication",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d115lpeaytnp2",
+                        "TF-EU1-HOST-eu1d115lpeaytnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d115lpeaytnp2",
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-eu1d115lpeaytnp1",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                }
+            }
+        }
+    }
+}

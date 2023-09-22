@@ -1,0 +1,16 @@
+  - name: Collecting vSphere Datacenter ID by name
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/datacenter?filter.names={{ vcenter_dc }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        #vmware-api-session-id: "{{ vc_login }}"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_vsphere_datacenter
+
+  - name: Save vSphere Datacenter ID to Variable
+    set_fact:
+      vsphere_datacenter_id: "{{ output_vsphere_datacenter.json.value[0].datacenter }}"

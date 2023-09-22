@@ -1,0 +1,42 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOSTS-LinuxOS-All",
+            "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+        ]
+    },
+    "map_policies": {
+        "TF-Monitoring": {
+            "category": "Application",
+            "rules": {
+                "8411": {
+                    "display_name": "TF-8411-SL1-Data-Collectors-to-All-Linux-VMs",
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOSTS-LinuxOS-All"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOSTS-LinuxOS-All",
+                        "TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+                    ]
+                }
+            }
+        }
+    }
+}

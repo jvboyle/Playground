@@ -1,0 +1,382 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "DNS",
+            "TCP-18080",
+            "SSH",
+            "HTTPS",
+            "TCP-10250",
+            "TCP-30167",
+            "TCP-8053",
+            "TCP-9000",
+            "TCP-31234",
+            "TCP-6443",
+            "HTTPS_9443",
+            "TCP-22623",
+            "TCP-5555",
+            "TCP-8080",
+            "TCP-30000-32767",
+            "TCP-8181",
+            "DNS-UDP",
+            "TCP-8500",
+            "TCP-50001",
+            "TCP-4789",
+            "TCP-8001",
+            "HTTP",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+            "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+            "TF-EU1-IPSET-AVI-NS1",
+            "TF-EU1-IPSET-BLUEIDP1-zkpw3uspriv-app-kyndryl-net-138-95-240-6",
+            "TF-EU1-IPSET-SRES-OCP8-Cluster-JP-VIP",
+            "TF-EU1-IPSET-SRES-OCP5-Cluster-MOM",
+            "TF-EU1-SG-SRES-HOST-eu1sr1wphwcweb",
+            "TF-EU1-HOST-eu1sr1wjmp01",
+            "TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+            "TF-EU1-IPSET-SRES-eu1srlPsat2",
+            "TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+            "TF-EU1-IPSET-Tanzu-Workload-03-Subnet",
+            "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+            "TF-EU1-IPSET-NET-IBM-Blue",
+            "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+            "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+            "TF-EU1-SG-SRES-WIN-DNS-NTP",
+            "TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+            "TF-EU1-SG-SRES01-OCP-Cluster02",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-IPSET-SRES-OCP10-Cluster-JP",
+            "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+            "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+            "TF-EU1-SG-SRES01-OCP-Cluster03",
+            "TF-EU1-IPSET-SRES-OCP10-Cluster-JP-VIP",
+            "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+            "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "7431": {
+                    "display_name": "TF-7431-OCP-4-6-Build-in-NSX-T",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP5-Cluster-MOM",
+                        "TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+                        "TF-EU1-IPSET-SRES-OCP10-Cluster-JP",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS",
+                        "TCP-18080",
+                        "SSH",
+                        "HTTPS",
+                        "TCP-10250",
+                        "TCP-8053",
+                        "TCP-9000",
+                        "TCP-6443",
+                        "TCP-22623",
+                        "TCP-8181",
+                        "TCP-8443",
+                        "TCP-30000-32767",
+                        "DNS-UDP",
+                        "TCP-9000",
+                        "TCP-8500",
+                        "TCP-4789",
+                        "TCP-8080",
+                        "TCP-8001",
+                        "HTTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51149156\nSR51149150\nSR51149158\nSR51149148\nSR51400220\nSR51400229\nSR51426120",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+                        "TF-EU1-IPSET-SRES-OCP10-Cluster-JP",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP5-Cluster-MOM"
+                    ]
+                },
+                "7456": {
+                    "display_name": "TF-7456-NSX-V-to-T-GSNI-Traffic",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-NET-IBM-Blue",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP10-Cluster-JP-VIP",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP8-Cluster-JP-VIP",
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51400220\nSR51400229\nSR51426120",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-OCP10-Cluster-JP-VIP",
+                        "TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+                        "TF-EU1-IPSET-NET-IBM-Blue",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+                        "TF-EU1-IPSET-SRES-OCP8-Cluster-JP-VIP",
+                        "TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+                    ]
+                },
+                "7941": {
+                    "display_name": "TF-7941-SRES-JH-to-TKG-Cluster-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-6443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51301068\nCHGEU0129386",
+                    "scope": [
+                        "TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ]
+                },
+                "7942": {
+                    "display_name": "TF-7942-Copy-of-Auth-login-to-TKG-clusters-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5555"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51301068",
+                    "scope": [
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "7943": {
+                    "display_name": "TF-7943-Auth-login-to-TKG-clusters",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-30167",
+                        "TCP-31234"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51301068\nCHGEU0129386",
+                    "scope": [
+                        "TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-mgmt-01-subnet",
+                        "TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ]
+                },
+                "8060": {
+                    "display_name": "TF-8060-DNS-delegation-to-AVI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-AVI-NS1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-DNS-NTP",
+                        "TF-EU1-IPSET-AVI-NS1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "8852": {
+                    "display_name": "TF-8852-SAT-NEXT_GEN",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-eu1srlPsat2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTPS_9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "CHGEU0185376",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlPsat2",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "9086": {
+                    "display_name": "TF-9086-TANZU3-Auth-login-to-TKG-clusters",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-30167",
+                        "TCP-31234"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144472",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "9087": {
+                    "display_name": "TF-9087-TANZU3-Access-the-installer-interface",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-5555"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144472",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+                    ]
+                },
+                "9118": {
+                    "display_name": "TF-9118-EU-HWSW-to-BlueID-Azure",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcweb",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-BLUEIDP1-zkpw3uspriv-app-kyndryl-net-138-95-240-6"
+                    ],
+                    "destination_ips": [
+                        "138.95.95.5"
+                    ],
+                    "services": [
+                        "TCP-50001",
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148927",
+                    "scope": [
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1wphwcweb",
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-IPSET-BLUEIDP1-zkpw3uspriv-app-kyndryl-net-138-95-240-6",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                }
+            }
+        }
+    }
+}

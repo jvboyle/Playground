@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-10443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-VDR2-ESG-LB-Source",
+            "TF-EU1-SG-SRES-MnEaaS-PRTG-SHR"
+        ]
+    },
+    "map_policies": {
+        "TF-VDR2": {
+            "category": "Application",
+            "rules": {
+                "9190": {
+                    "display_name": "TF-9190-DRES-ESG-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-VDR2-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MnEaaS-PRTG-SHR"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-10443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0202753",
+                    "scope": [
+                        "TF-EU1-SG-VDR2-ESG-LB-Source",
+                        "TF-EU1-SG-SRES-MnEaaS-PRTG-SHR"
+                    ]
+                }
+            }
+        }
+    }
+}

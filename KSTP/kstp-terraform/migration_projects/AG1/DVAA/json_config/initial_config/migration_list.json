@@ -1,0 +1,148 @@
+{
+    "migration_date": "03/24/2023 18:54",
+    "geography": "AG1",
+    "wave": "DVAA",
+    "rules": {
+        "total": 40,
+        "rules": [
+            "3202",
+            "1669",
+            "1670",
+            "1159",
+            "1160",
+            "1161",
+            "1162",
+            "1671",
+            "1672",
+            "3333",
+            "3352",
+            "3483",
+            "1822",
+            "2475",
+            "3381",
+            "3134",
+            "3262",
+            "3263",
+            "3270",
+            "3526",
+            "3527",
+            "3655",
+            "3656",
+            "3276",
+            "1240",
+            "1241",
+            "1245",
+            "1248",
+            "1249",
+            "1504",
+            "3044",
+            "1774",
+            "1651",
+            "2291",
+            "1653",
+            "1654",
+            "1655",
+            "1656",
+            "2294",
+            "3190"
+        ]
+    },
+    "vms": {
+        "agnsrlndvaweb01": {
+            "ip": "158.87.48.157",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-agnsrlndvaweb01"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "agnsrlndvadevdb": {
+            "ip": "158.87.49.133",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-agnsrlndvadevdb"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "agnsrlndvadeva1": {
+            "ip": "158.87.49.132",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-agnsrlndvadeva1"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "agnsrlndvadb01": {
+            "ip": "158.87.48.156",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-agnsrlndvadb01"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "agnsrlndvaapp01": {
+            "ip": "158.87.48.155",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-agnsrlndvaapp01"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1win19test": {
+            "ip": "158.87.49.158",
+            "groups": [
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1win19test"
+            ],
+            "original_groups": [
+                "SG-All-Windows-Hosts",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1sltestvm": {
+            "ip": "158.87.49.164",
+            "groups": [
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1sltestvm"
+            ],
+            "original_groups": [
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1bfrelay1": {
+            "ip": "158.87.48.71",
+            "groups": [
+                "TF-AG1-SG-BigFix-Relay",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1bfrelay1"
+            ],
+            "original_groups": [
+                "SG-BigFix-Relay",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1bfrelay2": {
+            "ip": "158.87.48.72",
+            "groups": [
+                "TF-AG1-SG-BigFix-Relay",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1bfrelay2"
+            ],
+            "original_groups": [
+                "SG-BigFix-Relay",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        }
+    }
+}

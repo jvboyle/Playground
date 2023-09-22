@@ -1,0 +1,281 @@
+{
+    "SRES": {
+        "category": "Application",
+        "section_id": 1005,
+        "rules": {
+            "rule_1548": {
+                "display_name": "JH_to_EZOPS",
+                "apply": true,
+                "rule_id": 1548,
+                "source_groups": [
+                    "SG-SRES-Linux-Jump-Servers",
+                    "SG-SRES-WIN-Jump-Servers"
+                ],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP/5000,50000",
+                    "SSH"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "SG-SRES-WIN-Jump-Servers",
+                    "SG-SRES-Linux-Jump-Servers"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1547": {
+                "display_name": "Blue to EZOPS",
+                "apply": true,
+                "rule_id": 1547,
+                "source_groups": [],
+                "source_ipsets": [
+                    "NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP/5000,50000"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1552": {
+                "display_name": "EZOPS TO CACF",
+                "apply": true,
+                "rule_id": 1552,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-ap1sr1lpta1-vip"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-sres1-lb1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1551": {
+                "display_name": "EZOPS to BluePages",
+                "apply": true,
+                "rule_id": 1551,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-IBM-Bluepages"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS",
+                    "LDAP-over-SSL"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1550": {
+                "display_name": "EZOPS to BMS",
+                "apply": true,
+                "rule_id": 1550,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-bldbmsa-boulder-ibm-com"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5508"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1549": {
+                "display_name": "EZOPS to SRM",
+                "apply": true,
+                "rule_id": 1549,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-w3-ibm-com"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1555": {
+                "display_name": "EZOPS to ITM",
+                "apply": true,
+                "rule_id": 1555,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-EZOPS-ITM-hkgsni"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/3631",
+                    "TCP/8080",
+                    "TCP/9090",
+                    "TCP/1920"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-ext-vpn1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            },
+            "rule_1554": {
+                "display_name": "EZOPS TO SMTP",
+                "apply": true,
+                "rule_id": 1554,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [
+                    "SG-PDR-SMTP-Relay"
+                ],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "SMTP"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-pdr-esg1",
+                    "SG-PDR-SMTP-Relay",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false
+            },
+            "rule_1553": {
+                "display_name": "EZOPS TO DEV",
+                "apply": true,
+                "rule_id": 1553,
+                "source_groups": [],
+                "source_ipsets": [],
+                "source_ips": [],
+                "source_vms": [
+                    "ap1srlpezoyess"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-EZOPS-DEV"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "HTTPS",
+                    "TCP/50000",
+                    "TCP/5000"
+                ],
+                "applied_to": [
+                    "ap1srlpezoyess",
+                    "ap1-agg-esg1",
+                    "ap1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true
+            }
+        }
+    }
+}

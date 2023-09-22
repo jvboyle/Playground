@@ -1,0 +1,23 @@
+# Log information about what is being requested
+
+- set_fact:
+    one_fact: something
+
+- set_fact:
+    apache_url: 'http://example.com/apache'
+
+- debug:
+    var: one_fact, vmtemplate, inventory_hostname, ansible_host, custom_ip, apache_url
+
+- name: log to file1
+  local_action: lineinfile line=inventory_hostname:{{ inventory_hostname | to_yaml}} insertafter=EOF dest=/tmp/setup-dump.yaml
+
+
+#- name: log to file2
+#  local_action: lineinfile line=custom_ip:{{ custom_ip | to_yaml}} insertafter=EOF dest=/tmp/setup-dump.yaml
+
+#- name: Information on the VM being requested
+#  local_action: lineinfile line=vmtemplate:{{ vmtemplate | to_yaml}}, custom_ip:{{ custom_ip | to_yaml}} insertafter=EOF dest=/tmp/setup-dump.yaml
+
+#- name: Information on the VM being requested2
+#  local_action: lineinfile line={{ ansible_host }} insertafter=EOF dest=/tmp/setup-dump.yaml

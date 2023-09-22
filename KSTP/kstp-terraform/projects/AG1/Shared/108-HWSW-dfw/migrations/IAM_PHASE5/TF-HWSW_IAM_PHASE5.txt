@@ -1,0 +1,59 @@
+######################################################
+# migration: IAM_PHASE5
+######################################################
+   rule {
+         display_name = "TF-3448-JMP-to-HWW-NA-"
+         notes        = "CHGEU0151097"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcmon01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1wjmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcmon01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3459-JMPSER-to-ag1srwphwcgrfdb"
+         notes        = "RITM0113729"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1sr1ljmp01",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwphwcgrfdb"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HWSW-AG1"
+            }
+      }

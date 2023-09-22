@@ -1,0 +1,391 @@
+######################################################
+# migration: eu_sres_wave5
+######################################################
+   rule {
+         display_name = "TF-7431-OCP-4-6-Build-in-NSX-T"
+         notes        = "SR51149156 SR51149150 SR51149158 SR51149148 SR51400220 SR51400229 SR51426120"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP5-Cluster-MOM",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP8-Cluster-JP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP10-Cluster-JP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8181",
+               "/infra/services/SSH",
+               "/infra/services/TCP-22623",
+               "/infra/services/DNS-C7hECM7oS",
+               "/infra/services/TCP-10250",
+               "/infra/services/TCP-8001",
+               "/infra/services/TCP-6443",
+               "/infra/services/DNS-UDP",
+               "/infra/services/TCP-8500",
+               "/infra/services/TCP-8053",
+               "/infra/services/TCP-9000",
+               "/infra/services/TCP-30000-32767",
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-4789",
+               "/infra/services/TCP-8080",
+               "/infra/services/TCP-18080",
+               "/infra/services/TCP-9000",
+               "/infra/services/HTTP",
+               "/infra/services/TCP-8443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7456-NSX-V-to-T-GSNI-Traffic"
+         notes        = "SR51400220 SR51400229 SR51426120"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP8-Cluster-JP-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP10-Cluster-JP-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP7-Cluster-EU2-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP6-Cluster-VIP",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7941-SRES-JH-to-TKG-Cluster-Access"
+         notes        = "SR51301068 CHGEU0129386"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-mgmt-01-subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS",
+               "/infra/services/TCP-6443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7943-Auth-login-to-TKG-clusters"
+         notes        = "SR51301068 CHGEU0129386"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-01-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-03-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-02-Subnet",
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-mgmt-01-subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/tcp-30167",
+               "/infra/services/tcp-31234"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8029-MCDS-V-to-T-"
+         notes        = "SR51327710 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1ljmp01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-IRES-NSXT-VC"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8127-MCDS-T-to-TV-"
+         notes        = "SR51327710 "
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-eu1srlpmcdanstw-VIP"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1ljmp01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8353-ARMS-ISI-to-HWSW-EU"
+         notes        = "CHGEU0131535"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1sr1lparmsisi"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1wphwcdb"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8968-MNE-Autobuild-Samba"
+         notes        = "CHGEU0192744"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-137",
+               "/infra/services/TCP-139",
+               "/infra/services/TCP-455",
+               "/infra/services/UDP-138",
+               "/infra/services/UDP-455",
+               "/infra/services/UDP-139",
+               "/infra/services/UDP-137",
+               "/infra/services/TCP-138"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8969-MNE-Autobuild-SSH"
+         notes        = "CHGEU0192744"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1epnp4",
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1ecnp4"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9053-GRF-secure-file-server"
+         notes        = "RITM0143910"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1srwphwcgrfds"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-OCP9-Cluster-EU3-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9086-TANZU3-Auth-login-to-TKG-clusters"
+         notes        = "RITM0144472"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/tcp-30167",
+               "/infra/services/tcp-31234"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9118-EU-HWSW-to-BlueID-Azure"
+         notes        = "RITM0148927"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1wphwcetl"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-BLUEIDP1-zkpw3uspriv-app-kyndryl-net-138-95-240-6"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50001"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9249-HWSW-Currency-Management"
+         notes        = "RITM0155091"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1wphwcetl"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpgacdwdb"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-50000"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-9270-Dynatrace-Monitoring"
+         notes        = "RITM0157338"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-SRES-eu1srlpm1ebcp3"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-nlasabuildm1e00p"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9999"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-EU1"
+            }
+      }

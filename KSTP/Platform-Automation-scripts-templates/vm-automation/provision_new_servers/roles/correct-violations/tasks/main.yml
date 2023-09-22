@@ -1,0 +1,37 @@
+---
+    - name: install monitoring
+      shell: ./Install_Unix.sh -inst_dir /opt/ibm/apm/agent -img_dir /repo/OS/MEaaS/APMADV_Agent_Install_8.1.4.0.1 -inst_type IPM8CLOUD -pc lz -tenant 41B8-4B51-AD3C-DF8D-E688-79D1-3B76-F9B0 -keyfiles /repo/OS/MEaaS/keyfiles -valid_port NO -upgr NO -keep_conf NO -pr NO -subscr 41b84b51ad3cdf8de68879d13b76f9b0 -dc eu  -proxy YES -ip '{{ proxy.stdout }}' -port 8080 -append YES -cus i2p
+      args:
+        chdir: /repo/OS/MEaaS/APMADV_Agent_Install_8.1.4.0.1
+      ignore_errors: yes
+
+#    - name: set hostname
+#      copy:
+#        src: files/hostname
+#        dest: /etc/hostname
+#        owner: root
+#        group: root
+#        mode: '0644'
+
+    - name: set root password expiration
+      shell: |
+        chage -d today root
+        chage -M 90 root
+
+    - name: remove unused users
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      with_items:
+        - icpenable
+
+    - name: take care of violations
+      shell: |
+        chmod 0755 /var/opt/BESCommon
+        chmod 0000 /etc/shadow-
+        chmod 0744 /var/log/wtmp 
+        chmod 0744 /var/log/messages
+        chmod 0740 /var/log/secure
+        chmod 0600 /var/log/tallylog
+...

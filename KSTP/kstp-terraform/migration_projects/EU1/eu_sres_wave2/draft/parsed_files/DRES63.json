@@ -1,0 +1,42 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DR63-SSH-Proxy",
+            "TF-EU1-SG-SRES-EU-CACF-BDS"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES63": {
+            "category": "Application",
+            "rules": {
+                "4136": {
+                    "display_name": "TF-4136-DRES-proxies->-SRES-Binary-repository-server",
+                    "source_groups": [
+                        "TF-EU1-SG-DR63-SSH-Proxy"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-EU-CACF-BDS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DR63-SSH-Proxy",
+                        "TF-EU1-SG-SRES-EU-CACF-BDS"
+                    ]
+                }
+            }
+        }
+    }
+}

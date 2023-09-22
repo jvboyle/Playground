@@ -1,0 +1,323 @@
+{
+    "migration_date": "06/19/2023 17:07",
+    "geography": "AG1",
+    "wave": "IAM_PHASE5",
+    "rules": {
+        "total": 156,
+        "rules": [
+            "1024",
+            "1025",
+            "1026",
+            "1027",
+            "1028",
+            "1029",
+            "1030",
+            "1031",
+            "2576",
+            "2065",
+            "2066",
+            "2578",
+            "2068",
+            "2069",
+            "2070",
+            "1560",
+            "1051",
+            "2082",
+            "1572",
+            "1065",
+            "2603",
+            "2604",
+            "1071",
+            "1072",
+            "3134",
+            "2111",
+            "1093",
+            "1094",
+            "1095",
+            "3657",
+            "1099",
+            "1100",
+            "1103",
+            "1104",
+            "1111",
+            "1114",
+            "2650",
+            "2141",
+            "3167",
+            "1120",
+            "2658",
+            "2660",
+            "3172",
+            "3174",
+            "1127",
+            "1128",
+            "1643",
+            "1645",
+            "2676",
+            "1142",
+            "1657",
+            "1661",
+            "2174",
+            "3202",
+            "3203",
+            "3204",
+            "1674",
+            "1675",
+            "3733",
+            "3734",
+            "2712",
+            "3736",
+            "3745",
+            "1192",
+            "3241",
+            "1209",
+            "1213",
+            "1725",
+            "3262",
+            "3263",
+            "1729",
+            "1730",
+            "1221",
+            "3270",
+            "3271",
+            "2248",
+            "3276",
+            "1741",
+            "1742",
+            "2765",
+            "2772",
+            "2773",
+            "3798",
+            "2778",
+            "3304",
+            "1261",
+            "2290",
+            "2291",
+            "1780",
+            "2297",
+            "2298",
+            "3833",
+            "1278",
+            "2818",
+            "2312",
+            "3852",
+            "2834",
+            "2835",
+            "3870",
+            "2848",
+            "2340",
+            "1321",
+            "1325",
+            "1326",
+            "1850",
+            "3386",
+            "2366",
+            "1858",
+            "2377",
+            "2889",
+            "1356",
+            "2896",
+            "2398",
+            "3448",
+            "3452",
+            "3459",
+            "1412",
+            "1927",
+            "2951",
+            "2952",
+            "1930",
+            "2959",
+            "3471",
+            "2969",
+            "3483",
+            "2460",
+            "2977",
+            "1456",
+            "2992",
+            "1975",
+            "2999",
+            "3526",
+            "3527",
+            "2505",
+            "1994",
+            "3023",
+            "2007",
+            "2008",
+            "2521",
+            "1498",
+            "2522",
+            "1505",
+            "1512",
+            "2025",
+            "2026",
+            "2544",
+            "2033",
+            "2545",
+            "2546",
+            "2547",
+            "2548",
+            "1014",
+            "1020",
+            "1021",
+            "1022",
+            "1023"
+        ]
+    },
+    "vms": {
+        "ag1srlpsatpxy2": {
+            "new_vm_group": "TF-AG1-HOST-ag1srlpsatpxy2",
+            "ip": "158.87.49.128",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srlpsatpxy2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1srlpsatpxy1": {
+            "new_vm_group": "TF-AG1-HOST-ag1srlpsatpxy1",
+            "ip": "158.87.49.127",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1srlpsatpxy1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wjmp02": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wjmp02",
+            "ip": "158.87.48.96",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-ISIM-WDCISPW-SRES-Members",
+                "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-SG-TS-Session-Hosts",
+                "TF-AG1-HOST-ag1sr1wjmp02"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-All-Windows-Hosts",
+                "SG-ISIM-WDCISPW-SRES-Members",
+                "SG-SRES-WIN-Jump-Servers",
+                "SG-SRES01-ICp-Cluster01",
+                "SG-TS-Session-Hosts"
+            ]
+        },
+        "ag1sr1wjmp01": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wjmp01",
+            "ip": "158.87.48.4",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-EDR-CarbonBlack",
+                "TF-AG1-SG-ISIM-WDCISPW-SRES-Members",
+                "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-SG-TS-Session-Hosts",
+                "TF-AG1-HOST-ag1sr1wjmp01"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-All-Windows-Hosts",
+                "SG-EDR-CarbonBlack",
+                "SG-ISIM-WDCISPW-SRES-Members",
+                "SG-SRES-WIN-Jump-Servers",
+                "SG-SRES01-ICp-Cluster01",
+                "SG-TS-Session-Hosts"
+            ]
+        },
+        "ag1sr1wdns02": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wdns02",
+            "ip": "158.87.48.3",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-EDR-CarbonBlack",
+                "TF-AG1-SG-ISIM-WDCISPW-SRES-Members",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wdns02"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-All-Windows-Hosts",
+                "SG-EDR-CarbonBlack",
+                "SG-ISIM-WDCISPW-SRES-Members",
+                "SG-SRES-WIN-DNS-NTP",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wdns01": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wdns01",
+            "ip": "158.87.48.2",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-EDR-CarbonBlack",
+                "TF-AG1-SG-ISIM-WDCISPW-SRES-Members",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wdns01"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-All-Windows-Hosts",
+                "SG-EDR-CarbonBlack",
+                "SG-ISIM-WDCISPW-SRES-Members",
+                "SG-SRES-WIN-DNS-NTP",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpsecgw1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpsecgw1",
+            "ip": "158.87.48.233",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpsecgw1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpi1pprx2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpi1pprx2",
+            "ip": "158.87.49.52",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-LPW-TEST",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpi1pprx2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-LPW-TEST",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1ljmp01": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1ljmp01",
+            "ip": "158.87.48.5",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1ljmp01"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES-Linux-Jump-Servers",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        }
+    }
+}

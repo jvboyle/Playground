@@ -1,0 +1,596 @@
+{
+    "migration_date": "05/23/2023 12:54",
+    "geography": "AG1",
+    "wave": "IAM_PHASE3",
+    "rules": {
+        "total": 68,
+        "rules": [
+            "3202",
+            "3587",
+            "3588",
+            "3589",
+            "3590",
+            "3591",
+            "3592",
+            "3593",
+            "3594",
+            "3595",
+            "3722",
+            "3723",
+            "3745",
+            "3743",
+            "3477",
+            "3610",
+            "3483",
+            "2331",
+            "3612",
+            "3738",
+            "3739",
+            "3740",
+            "3617",
+            "2978",
+            "3742",
+            "2980",
+            "3493",
+            "2982",
+            "3623",
+            "1192",
+            "2985",
+            "3624",
+            "3758",
+            "3759",
+            "3760",
+            "3764",
+            "3638",
+            "3262",
+            "3263",
+            "3270",
+            "3526",
+            "3527",
+            "3276",
+            "3661",
+            "3536",
+            "3537",
+            "3538",
+            "3539",
+            "3541",
+            "3546",
+            "3547",
+            "3548",
+            "3549",
+            "3550",
+            "3551",
+            "3552",
+            "3553",
+            "3176",
+            "3560",
+            "3561",
+            "3562",
+            "3563",
+            "3565",
+            "3566",
+            "3825",
+            "2291",
+            "3574",
+            "3832"
+        ]
+    },
+    "vms": {
+        "ag1sr1wpiamcit2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcit2",
+            "ip": "158.87.49.186",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcit2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcit1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcit1",
+            "ip": "158.87.49.185",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcit1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-SECRET-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcira": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcira",
+            "ip": "158.87.49.179",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-RAS-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcira"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-RAS-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcir3": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcir3",
+            "ip": "158.87.49.190",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcir3"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcir2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcir2",
+            "ip": "158.87.49.189",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcir2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcir1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcir1",
+            "ip": "158.87.49.188",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcir1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-RMQ-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamciq2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamciq2",
+            "ip": "169.254.1.228",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamciq2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamciq1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamciq1",
+            "ip": "158.87.49.207",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamciq1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-MSSQL-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcifs": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcifs",
+            "ip": "158.87.49.184",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcifs"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcie3": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcie3",
+            "ip": "158.87.49.193",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcie3"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcie2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcie2",
+            "ip": "158.87.49.192",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcie2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wpiamcie1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wpiamcie1",
+            "ip": "158.87.49.191",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-CIO-WIN-LIN-Servers",
+                "TF-AG1-SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wpiamcie1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-DE-PROD",
+                "SG-All-Windows-Hosts",
+                "SG-CIO-WIN-LIN-Servers",
+                "SG-SRES-IAM-CIO-WINDOWS-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wniamsbt1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wniamsbt1",
+            "ip": "158.87.49.197",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wniamsbt1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "SG-All-Windows-Hosts",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wniamsbr1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wniamsbr1",
+            "ip": "158.87.49.198",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wniamsbr1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "SG-All-Windows-Hosts",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wniamsbq1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wniamsbq1",
+            "ip": "158.87.49.196",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wniamsbq1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "SG-All-Windows-Hosts",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wniamsbfs": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wniamsbfs",
+            "ip": "158.87.49.202",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wniamsbfs"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "SG-All-Windows-Hosts",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1wniamsbe1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1wniamsbe1",
+            "ip": "158.87.49.199",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1wniamsbe1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-NODB",
+                "AG1-SG-SRES-IAM-SANDBOX-WINDOWS",
+                "SG-All-Windows-Hosts",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpiamuep6": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpiamuep6",
+            "ip": "158.87.49.144",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-THY-EPL2-UAT",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpiamuep6"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES-IAM-THY-EPL2-UAT",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpiamuep5": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpiamuep5",
+            "ip": "158.87.49.143",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-THY-EPL1-UAT",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpiamuep5"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "SG-SRES-IAM-THY-EPL1-UAT",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpiamciprx2": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpiamciprx2",
+            "ip": "158.87.49.181",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                "TF-AG1-SG-LPW-TEST",
+                "TF-AG1-SG-SRES-IAM-CIO-LINUX-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpiamciprx2"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                "SG-LPW-TEST",
+                "SG-SRES-IAM-CIO-LINUX-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpiamciprx1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpiamciprx1",
+            "ip": "158.87.49.180",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                "TF-AG1-SG-LPW-TEST",
+                "TF-AG1-SG-SRES-IAM-CIO-LINUX-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpiamciprx1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-PROXY-PROD",
+                "SG-LPW-TEST",
+                "SG-SRES-IAM-CIO-LINUX-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lpiamcibkl1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lpiamcibkl1",
+            "ip": "158.87.49.194",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-CIO-All-VMs",
+                "TF-AG1-SG-SRES-IAM-CIO-BLKLD-PROD",
+                "TF-AG1-SG-SRES-IAM-CIO-LINUX-PROD",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lpiamcibkl1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-CIO-All-VMs",
+                "AG1-SG-SRES-IAM-CIO-BLKLD-PROD",
+                "SG-SRES-IAM-CIO-LINUX-PROD",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lniamsbprx1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lniamsbprx1",
+            "ip": "158.87.49.195",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-LINUX",
+                "TF-AG1-SG-LPW-TEST",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lniamsbprx1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-LINUX",
+                "SG-LPW-TEST",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        },
+        "ag1sr1lniamsbbkl1": {
+            "new_vm_group": "TF-AG1-HOST-ag1sr1lniamsbbkl1",
+            "ip": "158.87.49.200",
+            "groups": [
+                "TF-AG1-SG-All-SRES-SERVERS",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "TF-AG1-SG-SRES-IAM-SANDBOX-LINUX",
+                "TF-AG1-SG-SRES-IAM-THY-All-VMs",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-HOST-ag1sr1lniamsbbkl1"
+            ],
+            "original_groups": [
+                "AG1-SG-All-SRES-SERVERS",
+                "AG1-SG-SRES-IAM-SANDBOX-All-VMs",
+                "AG1-SG-SRES-IAM-SANDBOX-LINUX",
+                "SG-SRES-IAM-THY-All-VMs",
+                "SG-SRES01-ICp-Cluster01"
+            ]
+        }
+    }
+}

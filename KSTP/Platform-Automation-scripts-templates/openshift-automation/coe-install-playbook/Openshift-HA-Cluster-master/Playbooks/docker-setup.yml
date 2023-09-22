@@ -1,0 +1,30 @@
+---
+- name: Stop docker
+  systemd:
+    name: docker
+    state: stopped
+- name: Delete docker directory
+  file:
+     path: /var/lib/docker
+     state: absent
+- name: Setup Docker Storage
+  command: rm -rf /etc/sysconfig/docker-storage
+  command: rm -rf /etc/sysconfig/docker-storage-setup
+- name: Creating docker-storage-setup
+  file:
+    path: /etc/sysconfig/docker-storage-setup
+    state: touch
+- name: Set the requirements
+  lineinfile:
+    path: /etc/sysconfig/docker-storage-setup
+    insertafter: EOF
+    line: "VG={{docker_volume_group}}\nDATA_SIZE={{docker_data_size}}"
+
+- name: Start Docker Storage Setup
+  command: docker-storage-setup
+- name: Restart and enable docker
+  systemd:
+    name: docker
+    daemon_reload: yes
+    state: restarted
+    enabled: yes

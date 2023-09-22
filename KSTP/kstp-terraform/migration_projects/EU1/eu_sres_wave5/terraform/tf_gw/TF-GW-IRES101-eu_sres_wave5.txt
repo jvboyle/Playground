@@ -1,0 +1,86 @@
+######################################################
+# migration: eu_sres_wave5
+######################################################
+   rule {
+         display_name = "TF-5681-SRES-Jump-to-SG-IRES-SL1-Collectors-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-IRES-SL1-Collectors"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/TCP-7700"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-6967-Jenkins-Server-Jenkins-Agent"
+         notes        = "SR51015109"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-MnEaaS-IBMCloud-K8s-Nodes"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlasabuildm1e00p"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-7855-test"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1ljmp01",
+               "10.175.10.130",
+               "10.175.10.131"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-eu1sr1ljmp01",
+               "10.175.10.130",
+               "10.175.10.131"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-135",
+               "/infra/services/TCP-8888",
+               "/infra/services/SSH",
+               "/infra/services/TCP-88",
+               "/infra/services/TCP-445"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-IRES-EU1"
+            }
+      }

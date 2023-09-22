@@ -1,0 +1,1023 @@
+{
+    "IRES": {
+        "category": "Application",
+        "rules": {
+            "rule_1488": {
+                "display_name": "1488_IRES_Qradar_to_SRES_netcool",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-AP-MSS-QRADAR-DC"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES-MNEAAS-AP-NCI",
+                    "AP1-SG-SRES-MNEAAS-AP-NWG"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "SSH"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-AP-MSS-QRADAR-DC",
+                    "AP1-SG-SRES-MNEAAS-AP-NCI",
+                    "AP1-SG-SRES-MNEAAS-AP-NWG"
+                ]
+            }
+        }
+    },
+    "PDR": {
+        "category": "Application",
+        "rules": {
+            "rule_1354": {
+                "display_name": "1354_PDR_Inside_to_New_Relic_",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-pdr-eAP1-SG01-inside"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-9443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-pdr-eAP1-SG01-inside"
+                ]
+            }
+        }
+    },
+    "NSX V-to-T": {
+        "category": "Application",
+        "rules": {
+            "rule_1484": {
+                "display_name": "1484_OCP_SRES_CLuster04_to_Netcool",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-OCP-Cluster04"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-9443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-OCP-Cluster04"
+                ]
+            }
+        }
+    },
+    "VPC": {
+        "category": "Application",
+        "rules": {
+            "rule_1520": {
+                "display_name": "1520_IKS_Portal_to_WebGUI_Listener",
+                "apply": true,
+                "source_groups": [
+                    "AP1-vpc-ap1-30-mneaas-prod-subnet1",
+                    "AP1-HOST-VPC-IKS Cloud Cluster"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.101"
+                ],
+                "services": [
+                    "TCP-16351"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-vpc-ap1-30-mneaas-prod-subnet1",
+                    "AP1-HOST-VPC-IKS Cloud Cluster"
+                ]
+            },
+            "rule_1519": {
+                "display_name": "1519_Sync_Daemon__to_IKS_Portal",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "destination_groups": [
+                    "AP1-vpc-ap1-30-mneaas-prod-subnet1",
+                    "AP1-HOST-VPC-IKS Cloud Cluster"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-vpc-ap1-30-mneaas-prod-subnet1",
+                    "AP1-HOST-VPC-IKS Cloud Cluster"
+                ]
+            }
+        }
+    },
+    "DRES110": {
+        "category": "Application",
+        "rules": {
+            "rule_1516": {
+                "display_name": "1516_Copy_of_DRES110_OCP_Cluster02_to_Netcool_",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-DRES110-OCP04-Cluster02"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-9443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-DRES110-OCP04-Cluster02"
+                ]
+            }
+        }
+    },
+    "DRES114": {
+        "category": "Application",
+        "rules": {
+            "rule_1497": {
+                "display_name": "1497_NSXT_DR114_cluster2vip_to_NSXV_SRES_Netcool",
+                "apply": true,
+                "source_groups": [
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-9443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02"
+                ]
+            }
+        }
+    },
+    "DRES230": {
+        "category": "Application",
+        "rules": {
+            "rule_1561": {
+                "display_name": "1561_Event_Forwarding",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "100.80.108.32",
+                    "100.80.108.33"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "TCP-4500"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1560": {
+                "display_name": "1560_ScienceLogic_PhoneHome",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "100.80.108.32",
+                    "100.80.108.33"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "services": [
+                    "TCP-7705"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            }
+        }
+    },
+    "MnE": {
+        "category": "Application",
+        "rules": {
+            "rule_1277": {
+                "display_name": "1277_Autobuild___APtoEU_ISPW",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.102",
+                    "158.87.54.109",
+                    "158.87.54.104",
+                    "158.87.54.108",
+                    "158.87.54.103",
+                    "158.87.54.101",
+                    "158.87.54.105",
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-nlasabuildm1e00p.sr1.eu1"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "NetBios Datagram (TCP)",
+                    "NetBios Datagram (UDP)",
+                    "NetBios Session Service (TCP)",
+                    "UDP-455",
+                    "NetBios Session Service (UDP)",
+                    "TCP-455",
+                    "NetBios Name Service (UDP)",
+                    "NetBios Name Service (TCP)"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-nlasabuildm1e00p.sr1.eu1"
+                ]
+            },
+            "rule_1276": {
+                "display_name": "1276_Autobuild___EUtoAP_ISPW",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-nlasabuildm1e00p.sr1.eu1"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.102",
+                    "158.87.54.108",
+                    "158.87.54.104",
+                    "158.87.54.103",
+                    "158.87.54.101",
+                    "158.87.54.105",
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "SSH"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-nlasabuildm1e00p.sr1.eu1"
+                ]
+            },
+            "rule_1280": {
+                "display_name": "1280_M&EaaS_VM_intecommunication",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.109",
+                    "158.87.54.102",
+                    "158.87.54.108",
+                    "158.87.54.104",
+                    "158.87.54.103",
+                    "158.87.54.101",
+                    "158.87.54.105",
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.102",
+                    "158.87.54.109",
+                    "158.87.54.108",
+                    "158.87.54.104",
+                    "158.87.54.103",
+                    "158.87.54.101",
+                    "158.87.54.105",
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "ANY"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1289": {
+                "display_name": "1289_M&EassVms_to_PDR_Proxy",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.102",
+                    "158.87.54.104",
+                    "158.87.54.101"
+                ],
+                "destination_groups": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-8080"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ]
+            },
+            "rule_1290": {
+                "display_name": "1290_SRES_Win_JH_to_M&E",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.102",
+                    "158.87.54.104",
+                    "158.87.54.101",
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "TCP-16311-16316-4500-6969"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ]
+            },
+            "rule_1298": {
+                "display_name": "1298_IRES_to_SRES_M&Eaas",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-ap1irlpm1esldc-VIP",
+                    "AP1-HOST-ap1irlpm1esldc02-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldc01-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldbs-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldbp-secondary-IP"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-8443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-ap1irlpm1esldc-VIP",
+                    "AP1-HOST-ap1irlpm1esldc02-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldc01-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldbs-secondary-IP",
+                    "AP1-HOST-ap1irlpm1esldbp-secondary-IP"
+                ]
+            },
+            "rule_1299": {
+                "display_name": "1299_SRES_to_SRES_Netcoolprobes",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "TCP-4500"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1303": {
+                "display_name": "1303_ANZ_ICD___Netcool_Impact",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ],
+                "source_ips": [
+                    "158.87.54.102",
+                    "158.87.54.104"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-ANZ_ICD_instance"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-WIN-Jump-Servers",
+                    "AP1-HOST-ANZ_ICD_instance"
+                ]
+            },
+            "rule_1328": {
+                "display_name": "1328_ICP_Worker_Nodes_to_M&EaaS_Portal",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.122",
+                    "158.87.54.123"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.101"
+                ],
+                "services": [
+                    "UDP-16351",
+                    "TCP-16351"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1327": {
+                "display_name": "1327_IBM_9.x_to_M&EaaS_Impact_GUI",
+                "apply": true,
+                "source_groups": [
+                    "AP-NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.102",
+                    "158.87.54.104"
+                ],
+                "services": [
+                    "TCP-16311"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP-NET-IBM-Blue"
+                ]
+            },
+            "rule_1326": {
+                "display_name": "1326_IBM_9.x_to_M&EaaS_WebGUI",
+                "apply": true,
+                "source_groups": [
+                    "AP-NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.101"
+                ],
+                "services": [
+                    "TCP-16311",
+                    "TCP-16316"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP-NET-IBM-Blue"
+                ]
+            },
+            "rule_1351": {
+                "display_name": "1351_Probe___>_SL1",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.108"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-eu1srlpm1esldb-vip"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-eu1srlpm1esldb-vip"
+                ]
+            },
+            "rule_1350": {
+                "display_name": "1350_Probe___>_M&EaaS_Portal",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.108"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-portal.ap1.mneaas.ams.sp.ibm.com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-portal.ap1.mneaas.ams.sp.ibm.com"
+                ]
+            },
+            "rule_1352": {
+                "display_name": "1352_Probe___>_AP_SL1",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.108"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-ap1irlpm1esldc-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-ap1irlpm1esldc-VIP"
+                ]
+            },
+            "rule_1358": {
+                "display_name": "1358_SRES_Cluster1toM&E",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "10.128.0.1",
+                    "10.129.0.1",
+                    "10.130.0.1"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-8443",
+                    "TCP-4500"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1364": {
+                "display_name": "1364_Prometheous_Integration",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES01-OCP-Cluster01",
+                    "AP1-SG-DRES114-OCP-Cluster01",
+                    "AP1-SG-DRES110-OCP-Cluster01",
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-9443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES01-OCP-Cluster01",
+                    "AP1-SG-DRES114-OCP-Cluster01",
+                    "AP1-SG-DRES110-OCP-Cluster01",
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02"
+                ]
+            },
+            "rule_1453": {
+                "display_name": "1453_ONENETCOOL_WEBGUI_Primary/Sec",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.171",
+                    "158.87.54.170"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-16311",
+                    "TCP-16316"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1452": {
+                "display_name": "1452_Omnibus_Primary/Sec",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.107",
+                    "158.87.54.106"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.171",
+                    "158.87.54.170"
+                ],
+                "services": [
+                    "TCP-4500",
+                    "TCP-6969"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1451": {
+                "display_name": "1451_Jump_Server_to_WebGUI",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.171",
+                    "158.87.54.170"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-16311",
+                    "TCP-16316"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ]
+            },
+            "rule_1450": {
+                "display_name": "1450_WebGui_4_users_",
+                "apply": true,
+                "source_groups": [
+                    "AP-NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.171",
+                    "158.87.54.170"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-16311",
+                    "TCP-16316"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP-NET-IBM-Blue"
+                ]
+            },
+            "rule_1473": {
+                "display_name": "1473_SRES_Science_logic_shared",
+                "apply": true,
+                "source_groups": [
+                    "AP1-AP1-SG-SRES-Sciencelogic-servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-AP1-SG-SRES-Sciencelogic-servers"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "ANY"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-AP1-SG-SRES-Sciencelogic-servers",
+                    "AP1-AP1-SG-SRES-Sciencelogic-servers"
+                ]
+            },
+            "rule_1477": {
+                "display_name": "1477_SRES_Science_Logic_t0_IRES",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-Sciencelogic-DB-servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "services": [
+                    "TCP-8443",
+                    "TCP-8080"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-Sciencelogic-DB-servers"
+                ]
+            },
+            "rule_1480": {
+                "display_name": "1480_SRES_M&Etoscience_logic",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.109",
+                    "158.87.54.108"
+                ],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-Sciencelogic-DB-servers",
+                    "AP1-HOST-ap1srlpm1esd1-vip"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-Sciencelogic-DB-servers",
+                    "AP1-HOST-ap1srlpm1esd1-vip"
+                ]
+            },
+            "rule_1562": {
+                "display_name": "1562_SL1_HB_communication",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.99",
+                    "158.87.54.100",
+                    "158.87.54.97",
+                    "158.87.54.98",
+                    "192.168.0.0/30",
+                    "158.87.54.96",
+                    "158.87.54.99",
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.99",
+                    "158.87.54.100",
+                    "158.87.54.97",
+                    "158.87.54.98",
+                    "192.168.0.0/30",
+                    "158.87.54.96",
+                    "158.87.54.98",
+                    "158.87.54.100",
+                    "158.87.54.97"
+                ],
+                "services": [
+                    "ANY"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1565": {
+                "display_name": "1565_SL1_infra_servers",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.99"
+                ],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.100"
+                ],
+                "services": [
+                    "ANY"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": []
+            },
+            "rule_1568": {
+                "display_name": "1568_SL1_to_Windows_NTP",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97",
+                    "158.87.54.100"
+                ],
+                "destination_groups": [
+                    "AP1-SG-SRES-WIN-DNS-NTP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "NTP"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-WIN-DNS-NTP"
+                ]
+            },
+            "rule_1567": {
+                "display_name": "1567_SL1_to_PDR_SMTP",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "destination_groups": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "SMTP",
+                    "SMTP_TLS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ]
+            },
+            "rule_1571": {
+                "display_name": "1571_SL1_to_Internet_Proxy",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "destination_groups": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-8080"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ]
+            },
+            "rule_1570": {
+                "display_name": "1570_Linux_Jump_to_SL1",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-Linux-Jump-Servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-SL1-DB Shared-VIP"
+                ],
+                "destination_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "services": [
+                    "SSH"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-Linux-Jump-Servers",
+                    "AP1-HOST-SL1-DB Shared-VIP"
+                ]
+            },
+            "rule_1569": {
+                "display_name": "1569_JH_to_SL1",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES-WIN-Jump-Servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-SL1-DB Shared-VIP"
+                ],
+                "destination_ips": [
+                    "158.87.54.98",
+                    "158.87.54.97"
+                ],
+                "services": [
+                    "TCP-7700"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES-WIN-Jump-Servers",
+                    "AP1-HOST-SL1-DB Shared-VIP"
+                ]
+            }
+        }
+    }
+}

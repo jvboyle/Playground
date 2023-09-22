@@ -1,0 +1,75 @@
+# Default values for dash-proxy-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+# hostAliases allows the modification of the hosts file inside a container
+hostAliases: []
+# - ip: "192.168.1.10"
+#   hostnames:
+#   - "example.com"
+#   - "www.example.com"
+
+## Additional environment variables to set
+extraEnvs: []
+# extraEnvs:
+#   - name: FOO
+#     valueFrom:
+#       secretKeyRef:
+#         key: FOO
+#         name: secret-resource
+
+# imageCredentials:
+#  Set these if your image repository requires authentication
+#  registry: ibmcb-docker-local.artifactory.swg-devops.com
+#  username: user@email.com
+#  password:
+imageCredentials:
+#  registry: ibmcb-docker-local.artifactory.swg-devops.com
+#  username: cbrkdev@us.ibm.com
+#  password: AKCp5bAtA2cvfXc7Br1HmmpnL7L6PZPyLGiegCpVzQHWd4Fr8QLtHtsxjvYat29F1imvxGTrb
+  registry: ispw-dash.gravitant.net
+  username: ispw-dash.gravitant.net
+  password: T8zJ9UwgI3Ufp62g4uqB1dIh75JQgHqss4OdcvWYegTN1QZRmgQGKQDVtGc9RSTW
+
+#  Default images, tags and repos set repository to "" to use local build
+dash_proxy:
+  pullPolicy: Always
+#  repository: ibmcb-docker-local.artifactory.swg-devops.com/dash/dash_proxy
+  repository: ispw-dash.gravitant.net/dash/dash_proxy:1.2.10
+  serviceType: ClusterIP
+  replicaCount: 1
+  tag: "0.1"
+  dashHost: "ispw-dash.gravitant.net"
+  dashToken: "dW3WpaRpDe5iU0fmidL_Y6sK5zPBGKdzba_kgWqeLXL8K4FIEYeGnkG7LKNuRZyu"
+  clusterID: ""
+  clusterName: ""
+  provider: "Platform"
+  clusterLocation: ""
+
+# Deploy prometheus for monitoring. If set we will deploy prometheus and node_exporter into the cluser
+prometheus:
+  enabled: true
+
+# Only one node export can bind to a host port, change this if there is a conflict
+nodeExporter:
+  port: "4100"

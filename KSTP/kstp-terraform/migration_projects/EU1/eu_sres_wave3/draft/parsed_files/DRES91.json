@@ -1,0 +1,76 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1eascno",
+            "TF-EU1-HOST-eu1srlpm1easbcp",
+            "TF-EU1-HOST-eu1srlpm1easpno",
+            "TF-EU1-HOST-eu1d91lptvgtnp2",
+            "TF-EU1-HOST-eu1d91lptvgtnp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES91": {
+            "category": "Application",
+            "rules": {
+                "8180": {
+                    "display_name": "TF-8180-ITM-Bluecare-sync",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d91lptvgtnp2",
+                        "TF-EU1-HOST-eu1d91lptvgtnp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51395690",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d91lptvgtnp2",
+                        "TF-EU1-HOST-eu1d91lptvgtnp1",
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ]
+                },
+                "8200": {
+                    "display_name": "TF-8200-Event-Forwarding",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d91lptvgtnp2",
+                        "TF-EU1-HOST-eu1d91lptvgtnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1srlpm1easpno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51403583",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d91lptvgtnp2",
+                        "TF-EU1-HOST-eu1srlpm1easpno",
+                        "TF-EU1-HOST-eu1d91lptvgtnp1",
+                        "TF-EU1-HOST-eu1srlpm1eascno"
+                    ]
+                }
+            }
+        }
+    }
+}

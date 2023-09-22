@@ -1,0 +1,637 @@
+{
+    "values": [
+        {
+            "name": "nsxManager",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "nsxmanager"
+        },
+        {
+            "name": "datacenterID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "datacenterID"
+        },
+        {
+            "name": "switchId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "vdsId"
+        },
+        {
+            "name": "segmentPoolId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "segmentPoolId"
+        },
+        {
+            "name": "multicastAddresssRangeId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "multicastAddresssRangeId"
+        },
+        {
+            "name": "portNumber",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "portNumber"
+        },
+        {
+            "name": "hostId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "hostId"
+        },
+        {
+            "name": "scopeId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "scopeId"
+        },
+        {
+            "name": "traceflowId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "traceflowId"
+        },
+        {
+            "name": "virtualWireID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "virtualWireID"
+        },
+        {
+            "name": "hardwareGatewayBindingId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "hardwareGatewayBindingId"
+        },
+        {
+            "name": "ID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ID"
+        },
+        {
+            "name": "jobId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "jobId"
+        },
+        {
+            "name": "controllerId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "controllerId"
+        },
+        {
+            "name": "applicationId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "applicationId"
+        },
+        {
+            "name": "applicationgroupId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "applicationgroupId"
+        },
+        {
+            "name": "moref",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "moref"
+        },
+        {
+            "name": "poolId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "poolId"
+        },
+        {
+            "name": "ipAddress",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ipAddress"
+        },
+        {
+            "name": "tagId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "tagId"
+        },
+        {
+            "name": "vmId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "vmId"
+        },
+        {
+            "name": "userId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "userId"
+        },
+        {
+            "name": "value",
+            "enabled": true,
+            "value": "",
+            "type": "integer",
+            "key": "value"
+        },
+        {
+            "name": "objectId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "objectId"
+        },
+        {
+            "name": "memberId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "memberId"
+        },
+        {
+            "name": "virtualMachineId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "virtualMachineId"
+        },
+        {
+            "name": "memberType",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "memberType"
+        },
+        {
+            "name": "scopeMoref",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "scopeMoref"
+        },
+        {
+            "name": "ipsetId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ipsetId"
+        },
+        {
+            "name": "nsxManagerID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "nsxManagerID"
+        },
+        {
+            "name": "componentID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "componentID"
+        },
+        {
+            "name": "command",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "command"
+        },
+        {
+            "name": "filename",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "filename"
+        },
+        {
+            "name": "parentResourceID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "parentResourceID"
+        },
+        {
+            "name": "resourceType",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "resourceType"
+        },
+        {
+            "name": "clusterID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "clusterID"
+        },
+        {
+            "name": "hostID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "hostID"
+        },
+        {
+            "name": "serviceID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "serviceID"
+        },
+        {
+            "name": "vmID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "vmID"
+        },
+        {
+            "name": "userID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "userID"
+        },
+        {
+            "name": "appID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "appID"
+        },
+        {
+            "name": "desktoppoolID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "desktoppoolID"
+        },
+        {
+            "name": "directorygroupID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "directorygroupID"
+        },
+        {
+            "name": "secgroupID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "secgroupID"
+        },
+        {
+            "name": "domainID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "domainID"
+        },
+        {
+            "name": "serverID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "serverID"
+        },
+        {
+            "name": "IP",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "IP"
+        },
+        {
+            "name": "agentID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "agentID"
+        },
+        {
+            "name": "deploymentunitID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "deploymentunitID"
+        },
+        {
+            "name": "macsetId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "macsetId"
+        },
+        {
+            "name": "sourceId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "sourceId"
+        },
+        {
+            "name": "alarmId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "alarmId"
+        },
+        {
+            "name": "vendorID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "vendorID"
+        },
+        {
+            "name": "altitude",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "altitude"
+        },
+        {
+            "name": "solutionID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "solutionID"
+        },
+        {
+            "name": "moid",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "moid"
+        },
+        {
+            "name": "sectionId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "sectionId"
+        },
+        {
+            "name": "ruleId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ruleId"
+        },
+        {
+            "name": "section",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "section"
+        },
+        {
+            "name": "ruleID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ruleID"
+        },
+        {
+            "name": "sectionID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "sectionID"
+        },
+        {
+            "name": "draftID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "draftID"
+        },
+        {
+            "name": "configId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "configId"
+        },
+        {
+            "name": "truefalse",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "truefalse"
+        },
+        {
+            "name": "contextId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "contextId"
+        },
+        {
+            "name": "SpoofGuardPolicyID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "policyID"
+        },
+        {
+            "name": "memberID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "memberID"
+        },
+        {
+            "name": "edgeId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "edgeId"
+        },
+        {
+            "name": "appProfileID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "appProfileID"
+        },
+        {
+            "name": "appruleID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "appruleID"
+        },
+        {
+            "name": "monitorID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "monitorID"
+        },
+        {
+            "name": "virtualserverID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "virtualserverID"
+        },
+        {
+            "name": "poolID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "poolID"
+        },
+        {
+            "name": "bindingID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "bindingID"
+        },
+        {
+            "name": "networkID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "networkID"
+        },
+        {
+            "name": "ipPoolID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "ippoolID"
+        },
+        {
+            "name": "packageID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "packageID"
+        },
+        {
+            "name": "imageType",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "imageType"
+        },
+        {
+            "name": "fileID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "fileID"
+        },
+        {
+            "name": "sessionID",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "sessionID"
+        },
+        {
+            "name": "haIndex",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "haIndex"
+        },
+        {
+            "name": "index",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "index"
+        },
+        {
+            "name": "certificateId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "certificateId"
+        },
+        {
+            "name": "csrId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "csrId"
+        },
+        {
+            "name": "crlId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "crlId"
+        },
+        {
+            "name": "managerId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "managerId"
+        },
+        {
+            "name": "oid",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "oid"
+        },
+        {
+            "name": "hardwareGatewayId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "hardwareGatewayId"
+        },
+        {
+            "name": "switchName",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "switchName"
+        },
+        {
+            "name": "bindingId",
+            "enabled": true,
+            "value": "",
+            "type": "string",
+            "key": "bindingId"
+        }
+    ],
+    "name": "VMware NSX for vSphere's Environment",
+    "id": "321f5a08-32c9-41f9-9dce-101433145b72",
+    "timestamp": 1517524545458
+}

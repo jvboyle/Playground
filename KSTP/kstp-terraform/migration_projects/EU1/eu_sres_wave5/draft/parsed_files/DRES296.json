@@ -1,0 +1,55 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7705"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-SRES-eu1srlpm1esd7-vip",
+            "TF-EU1-HOST-eu1d296lpptstnp1",
+            "TF-EU1-HOST-eu1srlpm1esdp7",
+            "TF-EU1-HOST-eu1srlpm1esdc7",
+            "TF-EU1-HOST-eu1d296lpptstnp2",
+            "TF-EU1-HOST-eu1srlpm1esbk7"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES296": {
+            "category": "Application",
+            "rules": {
+                "8906": {
+                    "display_name": "TF-8906-ScienceLogic-Phonehome",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d296lpptstnp2",
+                        "TF-EU1-HOST-eu1d296lpptstnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esdp7",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd7-vip",
+                        "TF-EU1-HOST-eu1srlpm1esdc7",
+                        "TF-EU1-HOST-eu1srlpm1esbk7"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7705"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0133426",
+                    "scope": [
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd7-vip",
+                        "TF-EU1-HOST-eu1d296lpptstnp1",
+                        "TF-EU1-HOST-eu1srlpm1esdp7",
+                        "TF-EU1-HOST-eu1srlpm1esdc7",
+                        "TF-EU1-HOST-eu1d296lpptstnp2",
+                        "TF-EU1-HOST-eu1srlpm1esbk7"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTP",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+            "TF-AG1-HOST-ag1d78lpaecprx1",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-HOST-ag1d78lpaecprx2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES78": {
+            "category": "Application",
+            "rules": {
+                "1643": {
+                    "display_name": "TF-1643-SRES-Jump-Servers-to-SSH-Proxy",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+                        "TF-AG1-HOST-ag1d78lpaecprx2",
+                        "TF-AG1-HOST-ag1d78lpaecprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTP",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+                        "TF-AG1-HOST-ag1d78lpaecprx1",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-HOST-ag1d78lpaecprx2"
+                    ]
+                }
+            }
+        }
+    }
+}

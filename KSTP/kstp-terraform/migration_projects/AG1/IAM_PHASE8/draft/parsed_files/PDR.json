@@ -1,0 +1,150 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SMTP_TLS",
+            "TCP-443",
+            "TCP-8081",
+            "SMTP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SMTP-Clients",
+            "TF-AG1-IPSET-Host-PDR-BDS",
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-IPSET-pdr-esg01-LB-VIP-4",
+            "TF-AG1-SG-PDR-SMTP-Server",
+            "TF-AG1-IPSET-pdr-esg01-inside"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "1192": {
+                    "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                    "disabled": true,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ]
+                },
+                "1264": {
+                    "display_name": "TF-1264-ST-SMTP-Client-to-PDR-SMTP-server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SMTP-Clients"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR-SMTP-Server",
+                        "TF-AG1-SG-SMTP-Clients"
+                    ]
+                },
+                "1852": {
+                    "display_name": "TF-1852-PDR-ESG-to-BDS-master",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-pdr-esg01-inside",
+                        "TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-IPSET-pdr-esg01-inside",
+                        "TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+                    ]
+                },
+                "2766": {
+                    "display_name": "TF-2766-Internet-to-PDR-ESG01-BDS-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-Host-PDR-BDS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-IPSET-Host-PDR-BDS",
+                        "TF-AG1-IPSET-pdr-esg01-LB-VIP-4"
+                    ]
+                },
+                "3197": {
+                    "display_name": "TF-3197-BDS-MCSM-",
+                    "disabled": false,
+                    "source_groups": [],
+                    "source_ips": [
+                        "169.47.188.164",
+                        "169.47.188.161",
+                        "169.47.188.165",
+                        "169.47.188.160/29",
+                        "169.47.188.163",
+                        "169.63.90.80/28",
+                        "169.47.188.162"
+                    ],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51302675",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                }
+            }
+        }
+    }
+}

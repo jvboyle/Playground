@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "BDS-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d140lpcacprx1",
+            "TF-EU1-HOST-eu1d140lpcacprx2",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES140": {
+            "category": "Application",
+            "rules": {
+                "6927": {
+                    "display_name": "TF-6927-CACF-Proxy-to-SRES-BDS",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d140lpcacprx1",
+                        "TF-EU1-HOST-eu1d140lpcacprx2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50080949\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d140lpcacprx1",
+                        "TF-EU1-HOST-eu1d140lpcacprx2",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

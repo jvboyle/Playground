@@ -1,0 +1,150 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "SSH",
+            "TCP-50000-50006",
+            "HTTPS",
+            "TCP-88",
+            "TCP-135",
+            "TCP-445",
+            "TCP-8888"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-IPSET-nlaspdb000iswrm",
+            "TF-EU1-HOST-nlaspdb000m1erms",
+            "TF-EU1-HOST-nlasabuildm1e00p",
+            "TF-EU1-IPSET-MnEaaS-IBMCloud-K8s-Nodes",
+            "TF-EU1-HOST-eu1sr1ljmp01",
+            "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+            "TF-EU1-IPSET-nlascdb000iswrm",
+            "TF-EU1-SG-IRES-SL1-Collectors",
+            "TF-EU1-SG-SRES-HOST-nlascdb000m1ermp"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "5681": {
+                    "display_name": "TF-5681-SRES-Jump-to-SG-IRES-SL1-Collectors-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-IRES-SL1-Collectors"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-IRES-SL1-Collectors"
+                    ]
+                },
+                "5951": {
+                    "display_name": "TF-5951-SL1-to-DB2-Servers",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-IRES-SL1-Collectors"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-IPSET-nlascdb000iswrm",
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000-50006"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1erms",
+                        "TF-EU1-IPSET-nlascdb000iswrm",
+                        "TF-EU1-SG-IRES-SL1-Collectors",
+                        "TF-EU1-SG-SRES-HOST-nlascdb000m1ermp"
+                    ]
+                },
+                "6967": {
+                    "display_name": "TF-6967-Jenkins-Server-Jenkins-Agent",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-MnEaaS-IBMCloud-K8s-Nodes"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlasabuildm1e00p"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51015109",
+                    "scope": [
+                        "TF-EU1-HOST-nlasabuildm1e00p",
+                        "TF-EU1-IPSET-MnEaaS-IBMCloud-K8s-Nodes"
+                    ]
+                },
+                "7855": {
+                    "display_name": "TF-7855-test",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1sr1ljmp01"
+                    ],
+                    "source_ips": [
+                        "10.175.10.130",
+                        "10.175.10.131"
+                    ],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1sr1ljmp01"
+                    ],
+                    "destination_ips": [
+                        "10.175.10.130",
+                        "10.175.10.131"
+                    ],
+                    "services": [
+                        "TCP-135",
+                        "TCP-8888",
+                        "SSH",
+                        "TCP-88",
+                        "TCP-445"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1sr1ljmp01"
+                    ]
+                }
+            }
+        }
+    }
+}

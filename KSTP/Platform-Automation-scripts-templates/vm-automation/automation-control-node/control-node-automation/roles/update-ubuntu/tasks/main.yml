@@ -1,0 +1,7 @@
+## not working yet
+
+- name: Update all packages to the latest version
+  apt:
+    name: "*"
+    state: force_apt_get=True
+  become: yes

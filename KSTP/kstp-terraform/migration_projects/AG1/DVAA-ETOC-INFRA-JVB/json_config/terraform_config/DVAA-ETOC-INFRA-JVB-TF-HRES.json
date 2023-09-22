@@ -1,0 +1,105 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTP",
+            "SSH",
+            "HTTPS",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+            "TF-AG1-SG-ag1h1lpta1hapProxy",
+            "TF-AG1-HOST-ag1sr1lpcactest",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-IPSET-HRES-RCP-VIP",
+            "TF-AG1-IPSET-RCP-PerfTest-Kafka",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-ag1h1lpta2hapProxy"
+        ]
+    },
+    "map_policies": {
+        "TF-HRES": {
+            "category": "Application",
+            "rules": {
+                "1675": {
+                    "display_name": "TF-1675-SRES-jump-to-hres-proxy",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-ag1h1lpta1hapProxy",
+                        "TF-AG1-SG-ag1h1lpta2hapProxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTP",
+                        "SSH",
+                        "HTTPS",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+                        "TF-AG1-SG-ag1h1lpta1hapProxy",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-ag1h1lpta2hapProxy"
+                    ]
+                },
+                "2305": {
+                    "display_name": "TF-2305-CACF-Test-to-RCP-Perftest-kafka",
+                    "source_groups": [
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-RCP-PerfTest-Kafka"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50941189",
+                    "scope": [
+                        "TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+                        "TF-AG1-HOST-ag1sr1lpcactest",
+                        "TF-AG1-IPSET-RCP-PerfTest-Kafka"
+                    ]
+                },
+                "2319": {
+                    "display_name": "TF-2319-CACF-Test-to-RCP-PerfTest-Kafka",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1lpcactest"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-HRES-RCP-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50941189",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1lpcactest",
+                        "TF-AG1-IPSET-HRES-RCP-VIP"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+global
+        log 127.0.0.1   local0
+        log 127.0.0.1   local1 debug
+        maxconn   45000 # Total Max Connections.
+        daemon
+        nbproc      1 # Number of processing cores.
+defaults
+        timeout server 86400000
+        timeout connect 86400000
+        timeout client 86400000
+        timeout queue   1000s
+
+listen  http_web {{ keepalived_vip }}:80
+        mode http
+        balance roundrobin  # Load Balancing algorithm
+        option httpchk
+        option forwardfor
+        server haproxy1 {{ keepalived_master }}:80 weight 1 maxconn 512 check
+        server haproxy2 {{ keepalived_slave }}:80 weight 1 maxconn 512 check
+
+#---------------------------------------------------------------------
+#  CACF Confs
+#---------------------------------------------------------------------           
+
+# Event Integration
+
+#frontend next01_frontend
+#        bind *:443
+#        mode tcp
+#        acl network_allowed src NETCOOL_IP01 NETCOOL_IP02
+#        tcp-request connection reject if !network_allowed
+#        default_backend next01_backend
+
+#backend next01_backend
+#        mode tcp
+#        server next01 NEXT_URL:443
+
+#frontend netcool01_frontend
+#        bind *:16443
+#        mode tcp
+#        acl network_allowed src OCP_WORKER_IP01 OCP_WORKER_IP02
+#        tcp-request connection reject if !network_allowed
+#        default_backend netcool01_backend
+
+#backend netcool01_backend
+#        mode tcp
+#        server netcool01 NETCOOL_IP01:16443
+#        server netcool02 NETCOOL_IP02:16443
+
+# BDS Integration
+
+#frontend bds01_frontend
+#        bind *:8081
+#        mode tcp
+#        acl network_allowed src CLIENT_SSH_PROXY_IP01 CLIENT_SSH_PROXY_IP02
+#        tcp-request connection reject if !network_allowed
+#        default_backend bds01_backend
+
+#backend bds01_backend
+#        mode tcp
+#        server next01 MASTER_BSD_REPO:8081

@@ -1,0 +1,79 @@
+  - name: GET static and default routes for AGG edge
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ agg_esg_id }}/routing/config/static"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: agg_esg_routes
+
+  - debug:
+      var: agg_esg_routes
+
+  - name: GET static and default routes for PDR edge
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ pdr_esg_id }}/routing/config/static"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: pdr_esg_routes
+
+  - debug:
+      var: pdr_esg_routes
+
+  - name: GET static and default routes for SL-SVC edge
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ sl_svc_esg_id }}/routing/config/static"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: agg_esg_routes
+
+  - debug:
+      var: sl_svc_esg_routes
+
+  - name: GET static and default routes for SRES edge
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ sres_esg_id }}/routing/config/static"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: sres_esg_routes
+
+  - debug:
+      var: sres_esg_routes

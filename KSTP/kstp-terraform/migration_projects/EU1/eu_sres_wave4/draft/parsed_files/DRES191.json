@@ -1,0 +1,52 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-24999-25999"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d191lpisimsg1",
+            "TF-EU1-HOST-eu1srlpisiwam82",
+            "TF-EU1-HOST-eu1srlpisiwam83",
+            "TF-EU1-HOST-eu1srlpisiwam80",
+            "TF-EU1-HOST-eu1srlpisiwam81"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES191": {
+            "category": "Application",
+            "rules": {
+                "7041": {
+                    "display_name": "TF-7041-ISIM-connect-to-DRES-proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpisiwam82",
+                        "TF-EU1-HOST-eu1srlpisiwam80",
+                        "TF-EU1-HOST-eu1srlpisiwam81",
+                        "TF-EU1-HOST-eu1srlpisiwam83"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d191lpisimsg1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-24999-25999"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51022645\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d191lpisimsg1",
+                        "TF-EU1-HOST-eu1srlpisiwam82",
+                        "TF-EU1-HOST-eu1srlpisiwam83",
+                        "TF-EU1-HOST-eu1srlpisiwam80",
+                        "TF-EU1-HOST-eu1srlpisiwam81"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-50000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1sr1wjmp01",
+            "TF-AG1-HOST-ag1sr1ljmp01",
+            "TF-AG1-HOST-ag1srlphwcmon01",
+            "TF-AG1-HOST-ag1srwphwcgrfdb"
+        ]
+    },
+    "map_policies": {
+        "TF-HWSW": {
+            "category": "Application",
+            "rules": {
+                "3448": {
+                    "display_name": "TF-3448-JMP-to-HWW-NA-",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlphwcmon01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0151097",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01",
+                        "TF-AG1-HOST-ag1srlphwcmon01"
+                    ]
+                },
+                "3459": {
+                    "display_name": "TF-3459-JMPSER-to-ag1srwphwcgrfdb",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1ljmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0113729",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1ljmp01",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb"
+                    ]
+                }
+            }
+        }
+    }
+}

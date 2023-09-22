@@ -1,0 +1,13 @@
+---
+
+- vmware_guest_disk:
+        hostname: '{{ vsphere_hostname }}'
+        username: '{{ vsphere_username }}'
+        password: '{{ vsphere_password }}'
+        validate_certs: false
+        datacenter: '{{ vsphere_datacenter }}'
+        name: '{{ item.name }}'
+        disk: '{{ item.disks }}'
+  delegate_to: localhost
+  loop: '{{ virtual_machines_additional_disks }}'
+...

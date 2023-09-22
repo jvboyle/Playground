@@ -1,0 +1,12 @@
+all:
+  hosts:
+    localhost: 
+        ansible_connection: local
+  children:
+    webservers:
+      hosts:
+        localhost:
+    registries:
+      hosts:
+        localhost:
+

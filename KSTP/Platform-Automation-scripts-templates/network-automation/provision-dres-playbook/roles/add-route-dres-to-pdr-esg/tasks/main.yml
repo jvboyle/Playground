@@ -1,0 +1,36 @@
+---
+  - name: GET check if static route exists
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ pdr_esg_id }}/routing/config/staticroute?network={{internal_net}}"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: internal_route_exists_check
+
+  - name: PUT new static route to specified edge for DRES Internal Network or skip if it already exists
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ pdr_esg_id }}/routing/config/staticroute?network={{internal_net}}"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 204
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ dres_internal_net }}"
+      return_content: no
+    when: internal_route_exists_check.json.nextHops == []

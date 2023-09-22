@@ -1,0 +1,48 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "RDP",
+            "TCP-8443",
+            "TCP-8080"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-DRES74-CRO-All-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES74": {
+            "category": "Application",
+            "rules": {
+                "1729": {
+                    "display_name": "TF-1729-Linux-jump-server-to-CRO-VMs-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES74-CRO-All-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "RDP",
+                        "TCP-8443",
+                        "TCP-8080"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-DRES74-CRO-All-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

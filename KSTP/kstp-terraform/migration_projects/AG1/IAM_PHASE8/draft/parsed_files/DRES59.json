@@ -1,0 +1,104 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "HTTPS",
+            "TCP-16443-17443",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-IPSET-ag1dr59lppr1-VIP",
+            "TF-AG1-HOST-ag1dr59lppr2",
+            "TF-AG1-HOST-ag1dr59lppr1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES59": {
+            "category": "Application",
+            "rules": {
+                "2262": {
+                    "display_name": "TF-2262-DRES-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr59lppr2",
+                        "TF-AG1-HOST-ag1dr59lppr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50924776",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-HOST-ag1dr59lppr2",
+                        "TF-AG1-HOST-ag1dr59lppr1"
+                    ]
+                },
+                "2264": {
+                    "display_name": "TF-2264-SSH-Proxy-to-OCP-VIP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dr59lppr2",
+                        "TF-AG1-HOST-ag1dr59lppr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50924776",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+                        "TF-AG1-HOST-ag1dr59lppr2",
+                        "TF-AG1-HOST-ag1dr59lppr1"
+                    ]
+                },
+                "2267": {
+                    "display_name": "TF-2267-OCP-Cluster1-to-SSH-Proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-ag1dr59lppr1-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "TCP-16443-17443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50924776\nSR50934752 - added port range - 17443",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr59lppr2",
+                        "TF-AG1-IPSET-ag1dr59lppr1-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01",
+                        "TF-AG1-HOST-ag1dr59lppr1"
+                    ]
+                }
+            }
+        }
+    }
+}

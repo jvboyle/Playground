@@ -1,0 +1,110 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d205lpkrnsdp",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d205lpkrntnp2",
+            "TF-EU1-HOST-eu1d205lpkrnsap",
+            "TF-EU1-HOST-eu1d205lpkrntnp1",
+            "TF-EU1-HOST-eu1d205lpkrnsc",
+            "TF-EU1-HOST-eu1d205lpkrnbkp",
+            "TF-EU1-HOST-eu1d205lpkrnsdc"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES205": {
+            "category": "Application",
+            "rules": {
+                "8676": {
+                    "display_name": "TF-8676-JH-to-SLI-UI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdc",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175842",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d205lpkrnsdp"
+                    ]
+                },
+                "8677": {
+                    "display_name": "TF-8677-JH-to-SL1-Web-Conf-Utility",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdp",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrnsc",
+                        "TF-EU1-HOST-eu1d205lpkrnbkp",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0175842",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrnsdp",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d205lpkrntnp2",
+                        "TF-EU1-HOST-eu1d205lpkrntnp1",
+                        "TF-EU1-HOST-eu1d205lpkrnsc",
+                        "TF-EU1-HOST-eu1d205lpkrnbkp",
+                        "TF-EU1-HOST-eu1d205lpkrnsdc"
+                    ]
+                },
+                "9097": {
+                    "display_name": "TF-9097-ScienceLogic",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d205lpkrnsap"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0199315",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d205lpkrnsap",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

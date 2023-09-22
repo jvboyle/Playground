@@ -1,0 +1,141 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP",
+            "TCP-636",
+            "NTP",
+            "DNS-UDP",
+            "DNS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+            "TF-AG1-IPSET-sres-tanzu-workload-06",
+            "TF-AG1-IPSET-sres-tanzu-workload-05",
+            "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+            "TF-AG1-IPSET-AVI-NS1",
+            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+            "TF-AG1-SG-SRES01-OCP-Cluster05",
+            "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+            "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+            "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+            "TF-AG1-IPSET-ag1d308-AD",
+            "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "2778": {
+                    "display_name": "TF-2778-Tanzu-Mgmt-to-IRES-LDAP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-sres-tanzu-workload-06",
+                        "TF-AG1-IPSET-sres-tanzu-workload-05",
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP",
+                        "TCP-636",
+                        "LDAP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "NSX-T POC/Migration",
+                    "scope": [
+                        "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                        "TF-AG1-IPSET-sres-tanzu-workload-06",
+                        "TF-AG1-IPSET-sres-tanzu-workload-05",
+                        "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                        "TF-AG1-SG-SRES01-OCP-Cluster05",
+                        "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                        "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                        "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                        "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                        "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                        "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "2889": {
+                    "display_name": "TF-2889-DNS-delegation-to-AVI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-AVI-NS1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                        "TF-AG1-IPSET-AVI-NS1"
+                    ]
+                },
+                "3870": {
+                    "display_name": "TF-3870-DRES308-NTP-DNS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-ag1d308-AD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP",
+                        "DNS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0149324",
+                    "scope": [
+                        "TF-AG1-IPSET-ag1d308-AD",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                }
+            }
+        }
+    }
+}

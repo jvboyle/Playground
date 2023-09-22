@@ -1,0 +1,75 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8443",
+            "SAT-range-2001-2050",
+            "TCP-8088"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dr19stw",
+            "TF-AG1-IPSET-DR19-Forwarding-IP",
+            "TF-AG1-HOST-ag1srlpsatpxy2",
+            "TF-AG1-HOST-Ag1srlpSATZcld",
+            "TF-AG1-HOST-ag1srlpsatpxy1",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES19": {
+            "category": "Application",
+            "rules": {
+                "1221": {
+                    "display_name": "TF-1221-Netapp-Migration-Tool-Web-Interface",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dr19stw"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "TCP-8088"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dr19stw",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "2522": {
+                    "display_name": "TF-2522-SAT-Proxy-to-DRES-ESG-Forwarding",
+                    "source_groups": [
+                        "TF-AG1-HOST-Ag1srlpSATZcld",
+                        "TF-AG1-HOST-ag1srlpsatpxy2",
+                        "TF-AG1-HOST-ag1srlpsatpxy1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR19-Forwarding-IP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SAT-range-2001-2050"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "JZerrich will add",
+                    "scope": [
+                        "TF-AG1-IPSET-DR19-Forwarding-IP",
+                        "TF-AG1-HOST-Ag1srlpSATZcld",
+                        "TF-AG1-HOST-ag1srlpsatpxy2",
+                        "TF-AG1-HOST-ag1srlpsatpxy1"
+                    ]
+                }
+            }
+        }
+    }
+}

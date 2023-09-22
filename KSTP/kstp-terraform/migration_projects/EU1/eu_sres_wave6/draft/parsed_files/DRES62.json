@@ -1,0 +1,328 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "RDP",
+            "SSH",
+            "HTTPS",
+            "TCP-80",
+            "TCP-9060",
+            "TCP-7700",
+            "TCP-443",
+            "HTTP",
+            "TCP-8443",
+            "TCP-22",
+            "TCP-9002"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DR62-WindowsClients",
+            "TF-EU1-SG-DR62-SolarWinds",
+            "TF-EU1-HOST-eu1d62pprkecia1",
+            "TF-EU1-HOST-eu1sr1wjmp02",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-DR62-JumpHost-NTP",
+            "TF-EU1-SG-DR62-CiscoISE",
+            "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-DR62-PSN-ISE",
+            "TF-EU1-SG-DR62-SDDC-RP",
+            "TF-EU1-HOST-eu1d62pprkecia2",
+            "TF-EU1-SG-DR62-eu1d62lpecnsmc",
+            "TF-EU1-HOST-eu1d62apprkssm1",
+            "TF-EU1-SG-DR62-RestorePoint",
+            "TF-EU1-SG-DR62-eu1d62apprkise",
+            "TF-EU1-SG-DR62-BlueCat",
+            "TF-EU1-HOST-eu1sr1wjmp01"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES62": {
+            "category": "Application",
+            "rules": {
+                "4110": {
+                    "display_name": "TF-4110-Win-Linux-Jump-DR62-solar-winds-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DR62-SolarWinds",
+                        "TF-EU1-SG-DR62-BlueCat",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4703": {
+                    "display_name": "TF-4703-FW-rules-for-Cisco-ISE-VMs",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-CiscoISE"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-80",
+                        "TCP-9002",
+                        "TCP-22",
+                        "TCP-443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DR62-CiscoISE",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "4789": {
+                    "display_name": "TF-4789-FW-rules-for-Cisco-ISE-VMs",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d62pprkecia1",
+                        "TF-EU1-HOST-eu1d62pprkecia2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9002"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d62pprkecia1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-HOST-eu1d62pprkecia2"
+                    ]
+                },
+                "6060": {
+                    "display_name": "TF-6060-ERS-REST-API",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d62pprkecia1",
+                        "TF-EU1-HOST-eu1d62pprkecia2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9060"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50886997",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-HOST-eu1d62pprkecia1",
+                        "TF-EU1-HOST-eu1d62pprkecia2",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9140": {
+                    "display_name": "TF-9140-ScienceLogic-SL1-WebConfUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0143541",
+                    "scope": [
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc"
+                    ]
+                },
+                "9141": {
+                    "display_name": "TF-9141-ScienceLogic-SL1-Admin-Access",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0143541",
+                    "scope": [
+                        "TF-EU1-SG-DR62-eu1d62lpecnsmc",
+                        "TF-EU1-SG-DR62-SL1-eu1d62lpecnsdc",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "9156": {
+                    "display_name": "TF-9156-Frontier-RP-Agent-SSH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR62-JumpHost-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-RestorePoint"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0152297",
+                    "scope": [
+                        "TF-EU1-SG-DR62-JumpHost-NTP",
+                        "TF-EU1-SG-DR62-RestorePoint",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "9169": {
+                    "display_name": "TF-9169-Frontier-Cisco-ISE-SSH-RDP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-WindowsClients",
+                        "TF-EU1-SG-DR62-PSN-ISE"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0152294",
+                    "scope": [
+                        "TF-EU1-SG-DR62-WindowsClients",
+                        "TF-EU1-SG-DR62-PSN-ISE",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                },
+                "9238": {
+                    "display_name": "TF-9238-Frontier-Cisco-Smart-AM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d62apprkssm1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0155171\nRITM0155676",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-HOST-eu1d62apprkssm1",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                },
+                "9262": {
+                    "display_name": "TF-9262-Frontier-SDDC-RP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR62-JumpHost-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-SDDC-RP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0210344",
+                    "scope": [
+                        "TF-EU1-SG-DR62-JumpHost-NTP",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-DR62-SDDC-RP"
+                    ]
+                },
+                "9309": {
+                    "display_name": "TF-9309-SAML-Application",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR62-eu1d62apprkise"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0166037",
+                    "scope": [
+                        "TF-EU1-SG-DR62-eu1d62apprkise",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

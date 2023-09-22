@@ -1,0 +1,7 @@
+proxyEnvs:
+  - name: HTTP_PROXY
+    value: "http://ag1pdr1prx.pdr1.poc.ispw.ibm.local:8080"
+  - name: HTTPS_PROXY
+    value: "http://ag1pdr1prx.pdr1.poc.ispw.ibm.local:8080"
+  - name: NO_PROXY
+    value: "localhost,127.0.0.1,158.87.63.66,ag1sr1icp3.sres03.poc.ispw.ibm.local:8500"

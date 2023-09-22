@@ -1,0 +1,5 @@
+- name: Cleanup OS repository
+  file:
+    dest: "{{ os_repo_path }}"
+    state: absent
+  tags: cleanup

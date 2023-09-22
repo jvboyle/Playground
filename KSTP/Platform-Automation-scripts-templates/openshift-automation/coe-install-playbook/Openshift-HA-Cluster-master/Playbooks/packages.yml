@@ -1,0 +1,17 @@
+---
+- yum:
+    name:
+      - wget
+      - git
+      - net-tools
+      - bind-utils
+      - yum-utils
+      - iptables-services
+      - bridge-utils
+      - bash-completion
+      - kexec-tools
+      - sos
+      - psacct
+      - docker.x86_64
+      - docker-distribution
+    state: present

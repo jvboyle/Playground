@@ -1,0 +1,53 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-50000-50001",
+            "HTTP",
+            "RDP",
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-DR75-HWSW-Win-Servers",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES75": {
+            "category": "Application",
+            "rules": {
+                "1572": {
+                    "display_name": "TF-1572-SRES-Jump-Servers-to-HWSW",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR75-HWSW-Win-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-50000-50001",
+                        "HTTP",
+                        "RDP",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-DR75-HWSW-Win-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

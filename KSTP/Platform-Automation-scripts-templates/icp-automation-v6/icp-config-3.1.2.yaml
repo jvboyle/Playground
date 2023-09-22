@@ -1,0 +1,47 @@
+password_rules: 
+    - '^([a-zA-Z0-9\-]{16,})$'
+calico_ipip_mode: Never
+auditlog_enabled: true
+kibana_install: true
+monitoring:
+  prometheus:
+    scrapeInterval: 1m
+    evaluationInterval: 1m
+    retention: 24h
+    persistentVolume:
+      enabled: false
+      storageClass: "-"
+    resources:
+      limits:
+        cpu: 500m
+        memory: 2048Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+  alertmanager:
+    persistentVolume:
+      enabled: false
+      storageClass: "-"
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 10m
+        memory: 64Mi
+  grafana:
+    persistentVolume:
+      enabled: false
+      storageClass: "-"
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+image-security-enforcement:
+  clusterImagePolicy:
+    - name: "docker.io/ibmcom/*"
+      policy:
+

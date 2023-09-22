@@ -1,0 +1,27 @@
+###
+#
+- name: copy Git clone script up.. workaround
+  copy:
+    src: "{{ role_path }}/files/clone-automation-git.sh"
+    dest: /home/icpenable
+    owner: icpenable
+    group: users
+    mode: 0555
+
+##### For some reasons this just isn't running... need to come back to this.
+## For now the clone needs to be done manually.
+#- name: Execute the script
+#  shell: /home/icpenable/clone-automation-git.sh
+
+#################################################################################################
+#- name: Create directory for automations
+#  file:
+#    path: /home/icpenable/automation
+#    state: directory
+
+#- name: Execute a clone of the automation Git repo
+#  git:
+#    repo: 'https://05a1126081259106ae52feae69d62e6954d51d94@github.ibm.com/CtspArchitecture/Platform-Automation-scripts-templates.git'
+#    dest: /home/icpenable/automation
+
+#  shell: git clone https://05a1126081259106ae52feae69d62e6954d51d94@github.ibm.com/CtspArchitecture/Platform-Automation-scripts-templates.git

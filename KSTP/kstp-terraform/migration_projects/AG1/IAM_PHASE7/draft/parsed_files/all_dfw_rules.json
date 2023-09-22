@@ -1,0 +1,1979 @@
+{
+    "TF-DRES01": {
+        "map_services": {
+            "SERVICES": [
+                "NTP",
+                "DNS-UDP",
+                "DNS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES01": {
+                "category": "Application",
+                "rules": {
+                    "1020": {
+                        "display_name": "TF-1020-DNS-",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1021": {
+                        "display_name": "TF-1021-NTP",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-DRES12": {
+        "map_services": {
+            "SERVICES": [
+                "NTP",
+                "DNS-UDP",
+                "DNS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES12": {
+                "category": "Application",
+                "rules": {
+                    "1099": {
+                        "display_name": "TF-1099-NTP_DRES12",
+                        "disabled": true,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1100": {
+                        "display_name": "TF-1100-DNS_DRES12",
+                        "disabled": true,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-DRES227": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-1026",
+                "TCP-1025",
+                "TCP-1024",
+                "TCP-1027"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-IPSET-DR227-LB-VIP1",
+                "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES227": {
+                "category": "Application",
+                "rules": {
+                    "3370": {
+                        "display_name": "TF-3370-SRES-EntAuto-VMs-to-DRES-LB-VIP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-DR227-LB-VIP1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-1027",
+                            "TCP-1024",
+                            "TCP-1026",
+                            "TCP-1025"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51391146 ",
+                        "scope": [
+                            "TF-AG1-IPSET-DR227-LB-VIP1",
+                            "TF-AG1-SG-SRES-EntAuto-VMs-POK"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-EDR-CarbonBlack": {
+        "map_services": {
+            "SERVICES": [
+                "HTTPS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-IPSET-EDR-CarbonBlack",
+                "TF-AG1-SG-EDR-CarbonBlack"
+            ]
+        },
+        "map_policies": {
+            "TF-EDR-CarbonBlack": {
+                "category": "Application",
+                "rules": {
+                    "1120": {
+                        "display_name": "TF-1120-Systems-to-CarbonBlack-Cloud",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-EDR-CarbonBlack"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-EDR-CarbonBlack"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-EDR-CarbonBlack",
+                            "TF-AG1-SG-EDR-CarbonBlack"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-GRES": {
+        "map_services": {
+            "SERVICES": [
+                "NTP",
+                "DNS-UDP",
+                "DNS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+        },
+        "map_policies": {
+            "TF-GRES": {
+                "category": "Application",
+                "rules": {
+                    "1023": {
+                        "display_name": "TF-1023-DNS-Clients-",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1024": {
+                        "display_name": "TF-1024-NTP-Clients-",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-IRES": {
+        "map_services": {
+            "SERVICES": [
+                "LDAP-over-SSL",
+                "NBSS",
+                "DHCP-Server",
+                "Active Directory Server UDP",
+                "NBDG-Broadcast",
+                "WINS-UDP",
+                "DNS",
+                "Windows-Global-Catalog-over-SSL",
+                "WINS",
+                "NBDG-Unicast",
+                "NTP Time Server",
+                "Active Directory Server",
+                "SMTP",
+                "Windows-Global-Catalog",
+                "NBNS-Broadcast",
+                "MS_RPC_TCP",
+                "MS-DS-UDP",
+                "MS-DS-TCP",
+                "KERBEROS",
+                "SOAP",
+                "LDAP",
+                "LDAP-UDP",
+                "NTP",
+                "DNS-UDP",
+                "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                "NBNS-Unicast",
+                "KERBEROS-UDP"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-HOST-ag1sr1staas1",
+                "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                "TF-AG1-HOST-ag1sr1wdns02",
+                "TF-AG1-HOST-ag1dc2",
+                "TF-AG1-HOST-ag1sr1staas2",
+                "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                "TF-AG1-HOST-ag1dc1",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                "TF-AG1-HOST-ag1sr1wdns01",
+                "TF-AG1-SG-IRES-SL1-Collectors",
+                "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+            ]
+        },
+        "map_policies": {
+            "TF-IRES": {
+                "category": "Application",
+                "rules": {
+                    "1927": {
+                        "display_name": "TF-1927-SG-IRES-SL1-Collectors-to-SRES-DNS-NTP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-IRES-SL1-Collectors",
+                            "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-IRES-SL1-Collectors",
+                            "TF-AG1-SG-IRES-Network-Automation-Server-Group",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "2290": {
+                        "display_name": "TF-2290-SG-IRES-SL1-Collectors-to-DC",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-IRES-SL1-Collectors"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1staas1",
+                            "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-HOST-ag1dc1",
+                            "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                            "TF-AG1-HOST-ag1sr1wdns01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                            "LDAP-over-SSL",
+                            "NBSS",
+                            "DHCP-Server",
+                            "Active Directory Server UDP",
+                            "NBDG-Broadcast",
+                            "WINS-UDP",
+                            "DNS",
+                            "Windows-Global-Catalog-over-SSL",
+                            "WINS",
+                            "NBDG-Unicast",
+                            "NTP Time Server",
+                            "Active Directory Server",
+                            "SMTP",
+                            "Windows-Global-Catalog",
+                            "NBNS-Broadcast",
+                            "MS_RPC_TCP",
+                            "MS-DS-UDP",
+                            "MS-DS-TCP",
+                            "KERBEROS",
+                            "SOAP",
+                            "LDAP",
+                            "LDAP-UDP",
+                            "DNS-UDP",
+                            "NBNS-Unicast",
+                            "KERBEROS-UDP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50942227 SR50943392",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1staas1",
+                            "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-HOST-ag1dc1",
+                            "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-SG-IRES-SL1-Collectors"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-NSX-V2T": {
+        "map_services": {
+            "SERVICES": [
+                "LDAP",
+                "TCP-636",
+                "NTP",
+                "DNS-UDP",
+                "DNS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                "TF-AG1-IPSET-sres-tanzu-workload-06",
+                "TF-AG1-IPSET-sres-tanzu-workload-05",
+                "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                "TF-AG1-IPSET-AVI-NS1",
+                "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                "TF-AG1-SG-SRES01-OCP-Cluster05",
+                "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                "TF-AG1-IPSET-ag1d308-AD",
+                "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP"
+            ]
+        },
+        "map_policies": {
+            "TF-NSX-V2T": {
+                "category": "Application",
+                "rules": {
+                    "2778": {
+                        "display_name": "TF-2778-Tanzu-Mgmt-to-IRES-LDAP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                            "TF-AG1-IPSET-sres-tanzu-workload-06",
+                            "TF-AG1-IPSET-sres-tanzu-workload-05",
+                            "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                            "TF-AG1-SG-SRES01-OCP-Cluster05",
+                            "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                            "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                            "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                            "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP",
+                            "TCP-636",
+                            "LDAP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "NSX-T POC/Migration",
+                        "scope": [
+                            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                            "TF-AG1-IPSET-sres-tanzu-workload-06",
+                            "TF-AG1-IPSET-sres-tanzu-workload-05",
+                            "TF-AG1-IPSET-Tanzu-Workload-01-Subnet",
+                            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster05-SNAT",
+                            "TF-AG1-SG-SRES01-OCP-Cluster05",
+                            "TF-AG1-IPSET-Tanzu-mgmt-subnets",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-IPSET-Tanzu-Workload-02-Subnet",
+                            "TF-AG1-IPSET-NSXT-SRES-OCP-Cluster04-SNAT",
+                            "TF-AG1-IPSET-NET-NSXT-OCP07-Subnet",
+                            "TF-AG1-IPSET-NET-NSXT-OCP06-Subnet",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "2889": {
+                        "display_name": "TF-2889-DNS-delegation-to-AVI",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-AVI-NS1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-IPSET-AVI-NS1"
+                        ]
+                    },
+                    "3870": {
+                        "display_name": "TF-3870-DRES308-NTP-DNS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-ag1d308-AD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP",
+                            "DNS-UDP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0149324",
+                        "scope": [
+                            "TF-AG1-IPSET-ag1d308-AD",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-PDR": {
+        "map_services": {
+            "SERVICES": [
+                "SMTP_TLS",
+                "SMTP",
+                "NTP",
+                "DNS-UDP",
+                "DNS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-SG-PDR-SMTP-Server"
+            ]
+        },
+        "map_policies": {
+            "TF-PDR": {
+                "category": "Application",
+                "rules": {
+                    "1103": {
+                        "display_name": "TF-1103-PDR-to-SRES-DNS",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1104": {
+                        "display_name": "TF-1104-pdr-app-internal1",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1192": {
+                        "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                        "disabled": true,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-PDR-SMTP-Server"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP_TLS",
+                            "SMTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-PDR-SMTP-Server"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-SRES": {
+        "map_services": {
+            "SERVICES": [
+                "LDAP-over-SSL",
+                "NBSS",
+                "TCP-1035",
+                "TCP-389",
+                "DHCP-Server",
+                "TCP-135",
+                "Active Directory Server UDP",
+                "TCP-8443",
+                "UDP-1194",
+                "NBDG-Broadcast",
+                "WINS-UDP",
+                "DNS",
+                "Windows-Global-Catalog-over-SSL",
+                "WINS",
+                "TCP-9043",
+                "UDP-53",
+                "TCP-16351",
+                "NBDG-Unicast",
+                "TCP-49152-65535",
+                "TCP-8200",
+                "TCP-139",
+                "NTP Time Server",
+                "HTTPS",
+                "TCP-9443",
+                "TCP-8001",
+                "UDP-389",
+                "Active Directory Server",
+                "TCP-445",
+                "SMTP",
+                "Windows-Global-Catalog",
+                "NBNS-Broadcast",
+                "TCP-53",
+                "TCP-88",
+                "MS_RPC_TCP",
+                "MS-DS-UDP",
+                "HTTP",
+                "MS-DS-TCP",
+                "KERBEROS",
+                "SOAP",
+                "LDAP",
+                "LDAP-UDP",
+                "NTP",
+                "DNS-UDP",
+                "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                "NBNS-Unicast",
+                "KERBEROS-UDP"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AG1-HOST-ag1sr1staas1",
+                "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                "TF-AG1-HOST-ag1vmon",
+                "TF-AG1-IPSET-SRES-DNS",
+                "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                "TF-AG1-HOST-ag1srlphcs0001",
+                "TF-AG1-SG-SRES-WIN-WSUS",
+                "TF-AG1-IPSET-NET-IBM-Blue",
+                "TF-AG1-HOST-agnsr1lnaiodev1",
+                "TF-AG1-HOST-ag1pdr1smtp01",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                "TF-AG1-SG-SRES01-ICp-Cluster01",
+                "TF-AG1-SG-SRES01-OCP-Cluster01",
+                "TF-AG1-IPSET-SL-WSUS",
+                "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                "TF-AG1-IPSET-Tanzu-Workload-03-Subnet",
+                "TF-AG1-IPSET-SRES-OCP-Cluster03-Temp",
+                "TF-AG1-HOST-ag1srwpenapok2",
+                "TF-AG1-SG-SRES-AGNSRLNICP1-ICP",
+                "TF-AG1-IPSET-AG-1-NSXT-SRES-IP",
+                "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                "TF-AG1-HOST-ag1dc2",
+                "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                "TF-AG1-HOST-ag1twin01",
+                "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-DevOps",
+                "TF-AG1-IPSET-Host-ag1sr1w19lic01",
+                "TF-AG1-IPSET-Host-NET-SRES-APP",
+                "TF-AG1-HOST-ag1wtslic01",
+                "TF-AG1-IPSET-IBM-Blue-DNS",
+                "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                "TF-AG1-HOST-ag1sr1wdns01",
+                "TF-AG1-IPSET-NET-WDC-CGN-subnets",
+                "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                "TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-PROD",
+                "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                "TF-AG1-HOST-ag1sr1wdns02",
+                "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                "TF-AG1-HOST-ag1sr1staas2",
+                "TF-AG1-HOST-ag1dc1",
+                "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                "TF-AG1-HOST-ag1srwpenapok1",
+                "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                "TF-AG1-SG-ISIM-WDCISPW-IRES-Members",
+                "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                "TF-AG1-HOST-ag1srlpchatixf1",
+                "TF-AG1-IPSET-Host-nlaspnp000m1erms",
+                "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                "TF-AG1-IPSET-ESLS-UAT",
+                "TF-AG1-IPSET-Host-ag1srwpsgesql01",
+                "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                "TF-AG1-IPSET-sres-tanzu-workload-05",
+                "TF-AG1-SG-SRES01-OCP-Cluster05",
+                "TF-AG1-SG-SRES-agnsrlnicp1p-vip",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                "TF-AG1-IPSET-IBM-Bluepages",
+                "TF-AG1-IPSET-SRES-ag1irlpipam01",
+                "TF-AG1-IPSET-atl-prod-vault-proxy-virt-x-force-red-com",
+                "TF-AG1-IPSET-test-rdszz-omnibus",
+                "TF-AG1-SG-All-Windows-Hosts",
+                "TF-AG1-IPSET-SL-NTP",
+                "TF-AG1-SG-ISIM-WDCISPW-SRES-Members",
+                "TF-AG1-SG-agnsrlnicp1p-vip",
+                "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                "TF-AG1-IPSET-Host-ag1sr1wniamsb-All",
+                "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                "TF-AG1-SG-SRES01-OCP-Cluster03",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                "TF-AG1-SG-SRES-WIN-SEPM",
+                "TF-AG1-IPSET-NET-WDC-GSNI-subnets",
+                "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                "TF-AG1-SG-SRES-WIN-DA",
+                "TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+                "TF-AG1-IPSET-Host-agnsrlnmnepen1",
+                "TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+                "TF-AG1-IPSET-Host-MNE-Dev-Test",
+                "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                "TF-AG1-IPSET-NET-SRES-APP-INTERNAL",
+                "TF-AG1-IPSET-Kyndryl-DNS",
+                "TF-AG1-SG-SRES-WIN-SQL",
+                "TF-AG1-IPSET-Tanzu-Workload-01-Host",
+                "TF-AG1-IPSET-HOSTna-rpt-atl-x-force-red-com",
+                "TF-AG1-IPSET-test-oc4q5-omnibus"
+            ]
+        },
+        "map_policies": {
+            "TF-SRES": {
+                "category": "Application",
+                "rules": {
+                    "1026": {
+                        "display_name": "TF-1026-DNS-Forwarder-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ]
+                    },
+                    "1027": {
+                        "display_name": "TF-1027-NTP-Server",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SL-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-SL-NTP",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ]
+                    },
+                    "1028": {
+                        "display_name": "TF-1028-DNS-Clients-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-SRES-APP-INTERNAL"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-NET-SRES-APP-INTERNAL",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1029": {
+                        "display_name": "TF-1029-NTP-Clients-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-WDC-GSNI-subnets"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-IPSET-NET-WDC-GSNI-subnets"
+                        ]
+                    },
+                    "1030": {
+                        "display_name": "TF-1030-AD-Clients-to-IRES",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-SG-SRES-WIN-SEPM",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-IPSET-Host-ag1srwpsgesql01",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                            "LDAP-over-SSL",
+                            "NBSS",
+                            "DHCP-Server",
+                            "Active Directory Server UDP",
+                            "NBDG-Broadcast",
+                            "WINS-UDP",
+                            "DNS",
+                            "Windows-Global-Catalog-over-SSL",
+                            "WINS",
+                            "NBDG-Unicast",
+                            "NTP Time Server",
+                            "Active Directory Server",
+                            "SMTP",
+                            "Windows-Global-Catalog",
+                            "NBNS-Broadcast",
+                            "MS_RPC_TCP",
+                            "MS-DS-UDP",
+                            "MS-DS-TCP",
+                            "KERBEROS",
+                            "SOAP",
+                            "LDAP",
+                            "LDAP-UDP",
+                            "DNS-UDP",
+                            "NBNS-Unicast",
+                            "KERBEROS-UDP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "RITM0152678-----added 158.87.48.150",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-SG-SRES-WIN-SEPM",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-IPSET-Host-ag1srwpsgesql01",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1031": {
+                        "display_name": "TF-1031-SL-WSUS-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SL-WSUS"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS",
+                            "HTTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-IPSET-SL-WSUS"
+                        ]
+                    },
+                    "1093": {
+                        "display_name": "TF-1093-SRES-DNS-to-IBM-Blue",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-SRES-DNS"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Kyndryl-DNS",
+                            "TF-AG1-IPSET-IBM-Blue-DNS"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-IBM-Blue-DNS",
+                            "TF-AG1-IPSET-Kyndryl-DNS",
+                            "TF-AG1-IPSET-SRES-DNS",
+                            "TF-AG1-HOST-ag1sr1wdns01"
+                        ]
+                    },
+                    "1127": {
+                        "display_name": "TF-1127-DRES-clients-to-SRES-NTP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-WDC-CGN-subnets"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-NET-WDC-CGN-subnets",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1128": {
+                        "display_name": "TF-1128-DRES-clients-to-SRES-DNS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-WDC-CGN-subnets"
+                        ],
+                        "source_ips": [
+                            "158.87.50.0/26"
+                        ],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-NET-WDC-CGN-subnets",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1505": {
+                        "display_name": "TF-1505-AD-to-ISIM",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1dc2"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-ISIM-WDCISPW-IRES-Members",
+                            "TF-AG1-SG-ISIM-WDCISPW-SRES-Members"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-445"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-SG-ISIM-WDCISPW-IRES-Members",
+                            "TF-AG1-SG-ISIM-WDCISPW-SRES-Members"
+                        ]
+                    },
+                    "1742": {
+                        "display_name": "TF-1742-OCP-Cluster03",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                            "TF-AG1-IPSET-SRES-OCP-Cluster03-Temp",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SRES01-OCP-Cluster03"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                            "TF-AG1-IPSET-SRES-OCP-Cluster03-Temp",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SRES01-OCP-Cluster03"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+                            "TF-AG1-SG-SRES01-OCP-Cluster03",
+                            "TF-AG1-IPSET-SRES-OCP-Cluster03-Temp",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "1850": {
+                        "display_name": "TF-1850-OCP-Cluster05",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-OCP-Cluster05",
+                            "TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES01-OCP-Cluster05",
+                            "TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-OCP-Cluster05",
+                            "TF-AG1-IPSET-SRES-LB-OCP-Cluster5-VIP-1",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "2291": {
+                        "display_name": "TF-2291-ALL-Win-Servers-to-Staas2-DNS02",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-All-Windows-Hosts"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "LDAP-over-SSL",
+                            "DNS",
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR50942226",
+                        "scope": [
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-SG-All-Windows-Hosts"
+                        ]
+                    },
+                    "2297": {
+                        "display_name": "TF-2297-DNS-Forwarding-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-HOST-ag1dc1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50943015",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1dc2",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-HOST-ag1dc1",
+                            "TF-AG1-HOST-ag1sr1wdns01"
+                        ]
+                    },
+                    "2298": {
+                        "display_name": "TF-2298-DNS-Forwarding",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1staas1",
+                            "TF-AG1-HOST-ag1sr1staas2"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50943015",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1staas1",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-HOST-ag1sr1staas2",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-HOST-ag1sr1wdns01"
+                        ]
+                    },
+                    "2312": {
+                        "display_name": "TF-2312-Certification-Authority",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                            "TF-AG1-HOST-ag1vmon",
+                            "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                            "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                            "TF-AG1-SG-SRES-WIN-SEPM",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SRES-WIN-DA",
+                            "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                            "TF-AG1-SG-SRES-WIN-WSUS",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-HOST-ag1twin01",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-HOST-ag1wtslic01",
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "MS_RPC_TCP",
+                            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR50945469\nSR50963446 - SG-SRES-IAM-WINDOWS-PEN\n SR50971783  SG-SRES-IAM-WINDOWS-SIDT added to existing source.\n\nCH50078675\u00a0and SR50970216 SG-SRES-IAM-WINDOWS-UAT added to existing source\n\nCH50079731 and SR50980015  SG-SRES-IAM-WINDOWS-PROD added to source",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                            "TF-AG1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+                            "TF-AG1-HOST-ag1vmon",
+                            "TF-AG1-SG-SL-IRES-WIN-Jump-Servers",
+                            "TF-AG1-IPSET-Host-ag1sr1daipwin01",
+                            "TF-AG1-SG-SRES-WIN-SEPM",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PEN",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-UAT",
+                            "TF-AG1-SG-SRES-WIN-DA",
+                            "TF-AG1-IPSET-Host-ag1srwpetpd1000",
+                            "TF-AG1-SG-SRES-WIN-WSUS",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-HOST-ag1twin01",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-SIDT",
+                            "TF-AG1-SG-SRES-WIN-SQL",
+                            "TF-AG1-HOST-ag1wtslic01",
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-SG-SRES-IAM-WINDOWS-PROD"
+                        ]
+                    },
+                    "2658": {
+                        "display_name": "TF-2658-NSX-T-to-SRES-NTP",
+                        "disabled": false,
+                        "source_groups": [],
+                        "source_ips": [
+                            "10.211.161.0/24"
+                        ],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All"
+                        ]
+                    },
+                    "2848": {
+                        "display_name": "TF-2848-IAMaaS-appliance-to-DNS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-DevOps",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-UAT"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51089515",
+                        "scope": [
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-DevOps",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PROD",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-PEN",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SRES-IAM-THY-SVG-UAT"
+                        ]
+                    },
+                    "2977": {
+                        "display_name": "TF-2977-OCP-Cluster-01-to-DNS-NTP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+                            "TF-AG1-SG-SRES01-OCP-Cluster01"
+                        ]
+                    },
+                    "2992": {
+                        "display_name": "TF-2992-SRES-JH-servers-to-hcs",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1srlphcs0001"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9043",
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50090359",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlphcs0001",
+                            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                        ]
+                    },
+                    "2993": {
+                        "display_name": "TF-2993-HCS-to-pdr",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1srlphcs0001"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1pdr1smtp01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50090359",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlphcs0001",
+                            "TF-AG1-HOST-ag1pdr1smtp01"
+                        ]
+                    },
+                    "2994": {
+                        "display_name": "TF-2994-SRES-HCS-to-IBM-bluepages",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1srlphcs0001"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-IBM-Bluepages"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "LDAP-over-SSL",
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50090359",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlphcs0001",
+                            "TF-AG1-IPSET-IBM-Bluepages"
+                        ]
+                    },
+                    "2995": {
+                        "display_name": "TF-2995-IBM-blue-to-hcs-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1srlphcs0001"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "CH50090359",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlphcs0001",
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ]
+                    },
+                    "3133": {
+                        "display_name": "TF-3133-ICP-to-to-AI-Ops-Dev-Server",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-agnsr1lnaiodev1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-agnsrlnicp1p-vip",
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                            "TF-AG1-SG-SRES01-ICp-agnsrlnicp1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-agnsrlnicp1p-vip",
+                            "TF-AG1-HOST-agnsr1lnaiodev1",
+                            "TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP"
+                        ]
+                    },
+                    "3176": {
+                        "display_name": "TF-3176-Licensing-server-AD-integration",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1srwpenapok1",
+                            "TF-AG1-IPSET-Host-ag1sr1w19lic01",
+                            "TF-AG1-HOST-ag1srwpenapok2",
+                            "TF-AG1-IPSET-Host-ag1sr1wniamsb-All"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-445",
+                            "TCP-53",
+                            "TCP-88",
+                            "TCP-389",
+                            "TCP-49152-65535",
+                            "TCP-139",
+                            "TCP-135",
+                            "UDP-53",
+                            "UDP-389"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "CH50096630\nSR51365221 - ag1srwpenaPOK1 \nSR51365221 - ag1srwpenaPOK2\nRITM0116949\t----add the below server \nag1sr1wpiamsbq1\t158.87.49.196\nag1sr1wpiamsbt1\t158.87.49.197\nag1sr1wpiamsbr1\t158.87.49.198\nag1sr1wpiamsbe1\t158.87.49.199",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srwpenapok1",
+                            "TF-AG1-IPSET-Host-ag1sr1w19lic01",
+                            "TF-AG1-SG-SL-IRES-WIN-AD-DNS-NTP",
+                            "TF-AG1-IPSET-Host-ag1sr1wniamsb-All",
+                            "TF-AG1-HOST-ag1srwpenapok2"
+                        ]
+                    },
+                    "3179": {
+                        "display_name": "TF-3179-Analytics-Dev-Server-to-TKG-nonProd-KSI-Elastic",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-agnsr1lnaiodev1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-sres-tanzu-workload-05",
+                            "TF-AG1-IPSET-Tanzu-Workload-01-Host",
+                            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51272609 \nSR51330117 - Add to destination:\nHOST-Tanzu-Workload-03-HOST\n\nRITM0137101-----add tanzu-05",
+                        "scope": [
+                            "TF-AG1-IPSET-sres-tanzu-workload-05",
+                            "TF-AG1-HOST-agnsr1lnaiodev1",
+                            "TF-AG1-IPSET-Tanzu-Workload-01-Host",
+                            "TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+                        ]
+                    },
+                    "3202": {
+                        "display_name": "TF-3202-SRES-to-ICP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-16351"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51306624",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                        ]
+                    },
+                    "3262": {
+                        "display_name": "TF-3262-ICP-to-SRES",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                            "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc"
+                        ]
+                    },
+                    "3263": {
+                        "display_name": "TF-3263-SRES-to-ICP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                            "TF-AG1-IPSET-test-rdszz-omnibus",
+                            "TF-AG1-IPSET-test-oc4q5-omnibus",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-meaas-noi-inn6y-nco-"
+                        ]
+                    },
+                    "3270": {
+                        "display_name": "TF-3270-PenTest-VM-for-ChatOps",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-ag1irlpipam01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8443",
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "CH50099191",
+                        "scope": [
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                            "TF-AG1-IPSET-SRES-ag1irlpipam01"
+                        ]
+                    },
+                    "3276": {
+                        "display_name": "TF-3276-SRES-to-ICP",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "146.89.238.165"
+                        ],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51357166",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ]
+                    },
+                    "3277": {
+                        "display_name": "TF-3277-Copy-of-SRES-to-ICP-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1srlpchatixf1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8443",
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR51339688/CH50099191",
+                        "scope": [
+                            "TF-AG1-SG-SRES-agnsrlnicp1p-vip",
+                            "TF-AG1-HOST-ag1srlpchatixf1",
+                            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                            "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                            "TF-AG1-SG-SRES-AGNSRLNICP1-ICP"
+                        ]
+                    },
+                    "3289": {
+                        "display_name": "TF-3289-PENTEST-to-Certificate-server",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-Host-agnsrlnmnepen1",
+                            "TF-AG1-HOST-ag1srlpchatixf1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-atl-prod-vault-proxy-virt-x-force-red-com"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8200"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "ag1srlpchatixf1 = na-vm0643-pt\nevilmog@ibm.com\nSCTASK0013658 - agnsrlnmnepen1",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlpchatixf1",
+                            "TF-AG1-IPSET-atl-prod-vault-proxy-virt-x-force-red-com",
+                            "TF-AG1-IPSET-Host-agnsrlnmnepen1"
+                        ]
+                    },
+                    "3290": {
+                        "display_name": "TF-3290-PENTEST",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-Host-agnsrlnmnepen1",
+                            "TF-AG1-HOST-ag1srlpchatixf1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-HOSTna-rpt-atl-x-force-red-com"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "UDP-1194"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "ag1srlpchatixf1 = na-vm0643-pt\nevilmog@ibm.com\nSCTASK0013658 - agnsrlnmnepen1",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srlpchatixf1",
+                            "TF-AG1-IPSET-HOSTna-rpt-atl-x-force-red-com",
+                            "TF-AG1-IPSET-Host-agnsrlnmnepen1"
+                        ]
+                    },
+                    "3294": {
+                        "display_name": "TF-3294-Chat-op-to-ICP-Cluster",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-HOST-ag1srlpchatixf1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-AGNSRLNICP1-ICP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8001"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR51374584",
+                        "scope": [
+                            "TF-AG1-SG-SRES-AGNSRLNICP1-ICP",
+                            "TF-AG1-HOST-ag1srlpchatixf1"
+                        ]
+                    },
+                    "3316": {
+                        "display_name": "TF-3316-Blue-to-SRES-POK",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-NET-IBM-Blue"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1srwpenapok1",
+                            "TF-AG1-HOST-ag1srwpenapok2"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-1035"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-HOST-ag1srwpenapok1",
+                            "TF-AG1-IPSET-NET-IBM-Blue",
+                            "TF-AG1-HOST-ag1srwpenapok2"
+                        ]
+                    },
+                    "3452": {
+                        "display_name": "TF-3452-NSXT-SRES-VM-Testing-Rules",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-AG-1-NSXT-SRES-IP"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "NTP",
+                            "DNS-UDP"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "temp",
+                        "scope": [
+                            "TF-AG1-IPSET-AG-1-NSXT-SRES-IP",
+                            "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                        ]
+                    },
+                    "3483": {
+                        "display_name": "TF-3483-NA-to-EU-Chatops-integration",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-nlaspnp000m1erms"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-9443"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Host-nlaspnp000m1erms"
+                        ]
+                    },
+                    "3526": {
+                        "display_name": "TF-3526-CHATOPS-to-ICD",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ]
+                    },
+                    "3527": {
+                        "display_name": "TF-3527-ICD-to-CHATOPS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "RITM0118985",
+                        "scope": [
+                            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                            "TF-AG1-SG-SRES01-ICp-Cluster01",
+                            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                            "TF-AG1-IPSET-ESLS-UAT"
+                        ]
+                    },
+                    "3745": {
+                        "display_name": "TF-3745-KSTP-2023-Pen-Test-SRES-scan",
+                        "disabled": true,
+                        "source_groups": [],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-IPSET-Host-NET-SRES-APP"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0139451",
+                        "scope": [
+                            "TF-AG1-IPSET-Host-NET-SRES-APP"
+                        ]
+                    },
+                    "3852": {
+                        "display_name": "TF-3852-Kyndryl-DNS-to-SRES-DNS",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AG1-IPSET-Kyndryl-DNS"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AG1-HOST-ag1sr1wdns01",
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-IPSET-SRES-DNS"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "DNS-UDP",
+                            "DNS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AG1-HOST-ag1sr1wdns02",
+                            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                            "TF-AG1-IPSET-Kyndryl-DNS",
+                            "TF-AG1-IPSET-SRES-DNS",
+                            "TF-AG1-HOST-ag1sr1wdns01"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

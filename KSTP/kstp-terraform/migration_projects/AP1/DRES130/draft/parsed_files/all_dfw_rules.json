@@ -1,0 +1,223 @@
+{
+    "TF-DRES130": {
+        "map_services": {
+            "SERVICES": [
+                "SSH",
+                "TCP-8081"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                "TF-AP1-SG-SRES01-OCP-Cluster01",
+                "TF-AP1-HOST-ap1srlpcacfbds1",
+                "TF-AP1-HOST-ap1d130lpcacpr1"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES130": {
+                "category": "Application",
+                "rules": {
+                    "1268": {
+                        "display_name": "TF-1268-CPREM-to-CACF-Proxy-VIP",
+                        "source_groups": [],
+                        "source_ips": [
+                            "172.16.32.40",
+                            "172.26.32.40"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                            "TF-AP1-HOST-ap1d130lpcacpr1"
+                        ]
+                    },
+                    "1269": {
+                        "display_name": "TF-1269-CACF-Proxy-to-BDS",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d130lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1srlpcacfbds1",
+                            "TF-AP1-HOST-ap1d130lpcacpr1"
+                        ]
+                    },
+                    "1270": {
+                        "display_name": "TF-1270-CACF-Proxy-to-CPREM",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d130lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "172.16.32.40",
+                            "172.26.32.40"
+                        ],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d130lpcacpr1"
+                        ]
+                    },
+                    "1271": {
+                        "display_name": "TF-1271-OCP-Cluster01-to-CACF-Proxy-VIP",
+                        "source_groups": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                            "TF-AP1-HOST-ap1d130lpcacpr1",
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-DRES258": {
+        "map_services": {
+            "SERVICES": [
+                "SSH",
+                "HTTPS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                "TF-AP1-IPSET-Host-DRES258-Proxy-VIP",
+                "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                "TF-AP1-HOST-ap1d258lpcacpr1",
+                "TF-AP1-HOST-ap1d258lpcacpr2",
+                "TF-AP1-SG-SRES-Linux-Jump-Servers"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES258": {
+                "category": "Application",
+                "rules": {
+                    "1612": {
+                        "display_name": "TF-1612-JH-to-Proxy-Servers",
+                        "source_groups": [
+                            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AP1-SG-SRES-Linux-Jump-Servers"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1d258lpcacpr2",
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                            "TF-AP1-IPSET-Host-DRES258-Proxy-VIP",
+                            "TF-AP1-HOST-ap1d258lpcacpr1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "HTTPS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+                            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AP1-IPSET-Host-DRES258-Proxy-VIP",
+                            "TF-AP1-HOST-ap1d258lpcacpr1",
+                            "TF-AP1-HOST-ap1d258lpcacpr2",
+                            "TF-AP1-SG-SRES-Linux-Jump-Servers"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-PDR": {
+        "map_services": {
+            "SERVICES": [
+                "SMTP",
+                "SMTP_TLS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-SG-PDR-SMTP-Relay",
+                "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ]
+        },
+        "map_policies": {
+            "TF-PDR": {
+                "category": "Application",
+                "rules": {
+                    "1315": {
+                        "display_name": "TF-1315-SSHproxy&DRESproxy_to_SMTP_Relay",
+                        "source_groups": [
+                            "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                            "TF-AP1-SG-DRES-Proxy-Servers"
+                        ],
+                        "source_ips": [
+                            "158.87.54.5"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-SG-PDR-SMTP-Relay"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP",
+                            "SMTP_TLS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR1390555",
+                        "scope": [
+                            "TF-AP1-SG-PDR-SMTP-Relay",
+                            "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                            "TF-AP1-SG-DRES-Proxy-Servers"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

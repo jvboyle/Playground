@@ -1,0 +1,2107 @@
+{
+    "migration_date": "07/18/2023 14:12",
+    "geography": "EU1",
+    "wave": "eu_sres_wave4",
+    "rules": {
+        "total": 313,
+        "rules": [
+            "8203",
+            "6156",
+            "6157",
+            "6158",
+            "6159",
+            "6161",
+            "6162",
+            "6163",
+            "6164",
+            "6165",
+            "6166",
+            "6167",
+            "8286",
+            "6251",
+            "8322",
+            "6316",
+            "6317",
+            "6318",
+            "6319",
+            "6320",
+            "6321",
+            "6322",
+            "6323",
+            "8367",
+            "8368",
+            "8407",
+            "8410",
+            "8411",
+            "6388",
+            "6389",
+            "8444",
+            "8448",
+            "8449",
+            "8450",
+            "8451",
+            "8452",
+            "6405",
+            "8454",
+            "8455",
+            "8456",
+            "6406",
+            "8453",
+            "6415",
+            "6416",
+            "6417",
+            "6418",
+            "8468",
+            "8533",
+            "8534",
+            "6525",
+            "6526",
+            "6527",
+            "6528",
+            "8577",
+            "6529",
+            "6530",
+            "6531",
+            "6532",
+            "6533",
+            "6534",
+            "6535",
+            "6536",
+            "6537",
+            "6538",
+            "6539",
+            "6540",
+            "8586",
+            "8587",
+            "8590",
+            "8591",
+            "8659",
+            "6620",
+            "6621",
+            "6623",
+            "6624",
+            "6625",
+            "6626",
+            "6627",
+            "6628",
+            "6629",
+            "6630",
+            "6631",
+            "6632",
+            "8701",
+            "8710",
+            "8711",
+            "8744",
+            "8745",
+            "6715",
+            "6716",
+            "6717",
+            "6718",
+            "6719",
+            "6720",
+            "8795",
+            "6754",
+            "6755",
+            "6756",
+            "6757",
+            "6758",
+            "6759",
+            "6760",
+            "6761",
+            "6763",
+            "8824",
+            "6800",
+            "6801",
+            "6802",
+            "6806",
+            "6807",
+            "6808",
+            "8855",
+            "6810",
+            "8858",
+            "6821",
+            "8878",
+            "8879",
+            "6852",
+            "6858",
+            "8912",
+            "8913",
+            "6866",
+            "6867",
+            "6869",
+            "6870",
+            "6892",
+            "6893",
+            "6894",
+            "8946",
+            "8954",
+            "8955",
+            "8956",
+            "6911",
+            "6912",
+            "8961",
+            "6913",
+            "6914",
+            "6915",
+            "6916",
+            "6918",
+            "8970",
+            "8971",
+            "6922",
+            "8972",
+            "6934",
+            "6935",
+            "6936",
+            "6937",
+            "6938",
+            "6939",
+            "6940",
+            "6941",
+            "6942",
+            "6943",
+            "6944",
+            "8992",
+            "6946",
+            "8996",
+            "9002",
+            "9003",
+            "6964",
+            "7038",
+            "7039",
+            "7041",
+            "9092",
+            "7069",
+            "7070",
+            "7071",
+            "7072",
+            "7073",
+            "7074",
+            "7075",
+            "7076",
+            "7077",
+            "7078",
+            "7079",
+            "7096",
+            "7097",
+            "7105",
+            "7106",
+            "7147",
+            "7148",
+            "7192",
+            "7194",
+            "7195",
+            "7196",
+            "7197",
+            "7198",
+            "7199",
+            "7200",
+            "7201",
+            "7202",
+            "7203",
+            "7204",
+            "7243",
+            "7244",
+            "7263",
+            "7264",
+            "7266",
+            "7267",
+            "7268",
+            "7269",
+            "7270",
+            "7271",
+            "7272",
+            "7273",
+            "7274",
+            "7275",
+            "7276",
+            "7277",
+            "7279",
+            "5270",
+            "5271",
+            "5272",
+            "5273",
+            "5274",
+            "7327",
+            "7334",
+            "7336",
+            "7374",
+            "7439",
+            "7482",
+            "7483",
+            "7484",
+            "7509",
+            "7510",
+            "7533",
+            "7534",
+            "7536",
+            "7538",
+            "7539",
+            "5495",
+            "7603",
+            "7626",
+            "7635",
+            "7636",
+            "7637",
+            "7638",
+            "7646",
+            "7647",
+            "7648",
+            "7649",
+            "7650",
+            "7651",
+            "7652",
+            "7653",
+            "7654",
+            "7655",
+            "5700",
+            "7753",
+            "7759",
+            "5720",
+            "7775",
+            "7785",
+            "7791",
+            "7792",
+            "7797",
+            "7808",
+            "7809",
+            "7810",
+            "7811",
+            "7812",
+            "7813",
+            "7818",
+            "5780",
+            "3753",
+            "7903",
+            "7904",
+            "7905",
+            "7921",
+            "7922",
+            "5879",
+            "7932",
+            "7933",
+            "7958",
+            "7959",
+            "7960",
+            "7961",
+            "7962",
+            "7963",
+            "7964",
+            "7965",
+            "7966",
+            "7995",
+            "7996",
+            "5954",
+            "5955",
+            "5956",
+            "5957",
+            "5959",
+            "5960",
+            "5961",
+            "5962",
+            "5963",
+            "5965",
+            "5966",
+            "5967",
+            "5968",
+            "8027",
+            "8061",
+            "8062",
+            "8076",
+            "8131",
+            "8132",
+            "6095",
+            "8150",
+            "8151",
+            "8152",
+            "8153",
+            "8154",
+            "8155",
+            "8162",
+            "8170"
+        ]
+    },
+    "vms": {
+        "eu1srlnisildap1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlnisildap1",
+            "ip": "158.87.52.246",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1srlnisildap1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1srlnisiwas01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlnisiwas01",
+            "ip": "158.87.52.245",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-HOST-eu1srlnisiwas01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List"
+            ]
+        },
+        "eu1srlpisiasodb": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiasodb",
+            "ip": "158.87.53.107",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisiasodb"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbi01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbi01",
+            "ip": "158.87.53.105",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbi01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbi90": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbi90",
+            "ip": "158.87.53.119",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbi90"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbm01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm01",
+            "ip": "158.87.53.62",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbm01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbm20": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm20",
+            "ip": "158.87.53.135",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbm20"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbm30": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm30",
+            "ip": "158.87.53.76",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbm30"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbm40": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm40",
+            "ip": "158.87.53.187",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-HOST-eu1srlpisidbm40"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM04"
+            ]
+        },
+        "eu1srlpisidbm50": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm50",
+            "ip": "158.87.53.155",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-HOST-eu1srlpisidbm50"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM05"
+            ]
+        },
+        "eu1srlpisidbm60": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm60",
+            "ip": "158.87.52.19",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-HOST-eu1srlpisidbm60"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM06"
+            ]
+        },
+        "eu1srlpisidbm70": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm70",
+            "ip": "158.87.53.97",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-HOST-eu1srlpisidbm70"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM07"
+            ]
+        },
+        "eu1srlpisidbm80": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm80",
+            "ip": "158.87.53.125",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbm80"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidbm95": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidbm95",
+            "ip": "158.87.53.113",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-DB",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidbm95"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-DB",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisidwhi": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisidwhi",
+            "ip": "158.87.53.106",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisidwhi"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildap": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildap",
+            "ip": "158.87.53.83",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-HOST-eu1srlpisildap"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All"
+            ]
+        },
+        "eu1srlpisildap1": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildap1",
+            "ip": "158.87.52.249",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildap1"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildi01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildi01",
+            "ip": "158.87.53.104",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildi01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildi90": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildi90",
+            "ip": "158.87.53.118",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildi90"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildm01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm01",
+            "ip": "158.87.53.61",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildm01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildm20": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm20",
+            "ip": "158.87.53.134",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildm20"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildm30": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm30",
+            "ip": "158.87.53.75",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildm30"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildm40": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm40",
+            "ip": "158.87.53.186",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-HOST-eu1srlpisildm40"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM04",
+                "SG-SRES-ISIM-LDAP"
+            ]
+        },
+        "eu1srlpisildm50": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm50",
+            "ip": "158.87.53.154",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-HOST-eu1srlpisildm50"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM05",
+                "SG-SRES-ISIM-LDAP"
+            ]
+        },
+        "eu1srlpisildm60": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm60",
+            "ip": "158.87.52.18",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-HOST-eu1srlpisildm60"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM06",
+                "SG-SRES-ISIM-LDAP"
+            ]
+        },
+        "eu1srlpisildm70": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm70",
+            "ip": "158.87.53.96",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-HOST-eu1srlpisildm70"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM07",
+                "SG-SRES-ISIM-LDAP"
+            ]
+        },
+        "eu1srlpisildm80": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm80",
+            "ip": "158.87.53.124",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildm80"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisildm95": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisildm95",
+            "ip": "158.87.53.112",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-LDAP",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisildm95"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-LDAP",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srlpisimail01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisimail01",
+            "ip": "158.87.53.137",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-MAIL",
+                "TF-EU1-HOST-eu1srlpisimail01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-MAIL"
+            ]
+        },
+        "eu1srlpisimail02": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisimail02",
+            "ip": "158.87.53.138",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-MAIL",
+                "TF-EU1-HOST-eu1srlpisimail02"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-MAIL"
+            ]
+        },
+        "eu1srlpisiwai01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai01",
+            "ip": "158.87.53.100",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CS",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CS",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-IAMInfra-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai02": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai02",
+            "ip": "158.87.53.101",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CS",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai02"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CS",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-IAMInfra-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai03": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai03",
+            "ip": "158.87.53.102",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CS",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai03"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CS",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-IAMInfra-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai04": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai04",
+            "ip": "158.87.53.103",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CS",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra",
+                "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai04"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CS",
+                "SG-SRES-ISIM-IAMInfra",
+                "SG-SRES-ISIM-IAMInfra-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai90": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai90",
+            "ip": "158.87.53.114",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-IAM09-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai90"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-IAM09-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai91": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai91",
+            "ip": "158.87.53.115",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-IAM09-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai91"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-IAM09-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai92": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai92",
+            "ip": "158.87.53.116",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-IAM09-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai92"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-IAM09-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwai93": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwai93",
+            "ip": "158.87.53.117",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM09",
+                "TF-EU1-SG-SRES-ISIM-IAM09-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwai93"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM09",
+                "SG-SRES-ISIM-IAM09-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam01",
+            "ip": "158.87.53.57",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-IAM01-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-IAM01-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam02": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam02",
+            "ip": "158.87.53.58",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-IAM01-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam02"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-IAM01-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam03": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam03",
+            "ip": "158.87.53.59",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-IAM01-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam03"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-IAM01-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam04": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam04",
+            "ip": "158.87.53.60",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM01",
+                "TF-EU1-SG-SRES-ISIM-IAM01-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam04"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM01",
+                "SG-SRES-ISIM-IAM01-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam20": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam20",
+            "ip": "158.87.53.130",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-ISIM2",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-IAM02-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam20"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-ISIM2",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-IAM02-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam21": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam21",
+            "ip": "158.87.53.131",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-ISIM2",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-IAM02-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam21"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-ISIM2",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-IAM02-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam22": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam22",
+            "ip": "158.87.53.132",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-ISIM2",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-IAM02-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam22"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-ISIM2",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-IAM02-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam23": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam23",
+            "ip": "158.87.53.133",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-ISIM2",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM02",
+                "TF-EU1-SG-SRES-ISIM-IAM02-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam23"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-ISIM2",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM02",
+                "SG-SRES-ISIM-IAM02-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam30": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam30",
+            "ip": "158.87.53.71",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CH50088519",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-IAM03-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam30"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CH50088519",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-IAM03-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam31": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam31",
+            "ip": "158.87.53.72",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CH50088519",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-IAM03-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam31"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CH50088519",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-IAM03-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam32": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam32",
+            "ip": "158.87.53.73",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CH50088519",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-IAM03-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam32"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CH50088519",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-IAM03-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam33": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam33",
+            "ip": "158.87.53.74",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-CH50088519",
+                "TF-EU1-SG-SRES-ISIM-IAM03",
+                "TF-EU1-SG-SRES-ISIM-IAM03-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam33"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-CH50088519",
+                "SG-SRES-ISIM-IAM03",
+                "SG-SRES-ISIM-IAM03-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam40": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam40",
+            "ip": "158.87.53.182",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-SG-SRES-ISIM-IAM04-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam40"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM04",
+                "SG-SRES-ISIM-IAM04-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam41": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam41",
+            "ip": "158.87.53.183",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-SG-SRES-ISIM-IAM04-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam41"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM04",
+                "SG-SRES-ISIM-IAM04-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam42": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam42",
+            "ip": "158.87.53.184",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-SG-SRES-ISIM-IAM04-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam42"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM04",
+                "SG-SRES-ISIM-IAM04-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam43": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam43",
+            "ip": "158.87.53.185",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM04",
+                "TF-EU1-SG-SRES-ISIM-IAM04-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam43"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM04",
+                "SG-SRES-ISIM-IAM04-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam50": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam50",
+            "ip": "158.87.53.150",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-ISIM-5",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-SG-SRES-ISIM-IAM05-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam50"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-ISIM-5",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM05",
+                "SG-SRES-ISIM-IAM05-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam51": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam51",
+            "ip": "158.87.53.151",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-5",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-SG-SRES-ISIM-IAM05-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam51"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-5",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM05",
+                "SG-SRES-ISIM-IAM05-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam52": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam52",
+            "ip": "158.87.53.152",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-5",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-SG-SRES-ISIM-IAM05-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam52"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-5",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM05",
+                "SG-SRES-ISIM-IAM05-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam53": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam53",
+            "ip": "158.87.53.153",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-5",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM05",
+                "TF-EU1-SG-SRES-ISIM-IAM05-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam53"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-5",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM05",
+                "SG-SRES-ISIM-IAM05-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam60": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam60",
+            "ip": "158.87.52.14",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-ISIM-6",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-SG-SRES-ISIM-IAM06-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam60"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-ISIM-6",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM06",
+                "SG-SRES-ISIM-IAM06-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam61": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam61",
+            "ip": "158.87.52.15",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-6",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-SG-SRES-ISIM-IAM06-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam61"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-6",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM06",
+                "SG-SRES-ISIM-IAM06-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam62": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam62",
+            "ip": "158.87.52.16",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-6",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-SG-SRES-ISIM-IAM06-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam62"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-6",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM06",
+                "SG-SRES-ISIM-IAM06-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam63": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam63",
+            "ip": "158.87.52.17",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-6",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM06",
+                "TF-EU1-SG-SRES-ISIM-IAM06-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam63"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-6",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM06",
+                "SG-SRES-ISIM-IAM06-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam70": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam70",
+            "ip": "158.87.53.92",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-SG-SRES-ISIM-IAM07-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam70"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM07",
+                "SG-SRES-ISIM-IAM07-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam71": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam71",
+            "ip": "158.87.53.93",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-SG-SRES-ISIM-IAM07-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam71"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM07",
+                "SG-SRES-ISIM-IAM07-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam72": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam72",
+            "ip": "158.87.53.94",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-SG-SRES-ISIM-IAM07-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam72"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM07",
+                "SG-SRES-ISIM-IAM07-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam73": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam73",
+            "ip": "158.87.53.95",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM07",
+                "TF-EU1-SG-SRES-ISIM-IAM07-WAS",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam73"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM07",
+                "SG-SRES-ISIM-IAM07-WAS",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam80": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam80",
+            "ip": "158.87.53.120",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam80"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-IAM08-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam81": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam81",
+            "ip": "158.87.53.121",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam81"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-IAM08-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam82": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam82",
+            "ip": "158.87.53.122",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam82"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-IAM08-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam83": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam83",
+            "ip": "158.87.53.123",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM08",
+                "TF-EU1-SG-SRES-ISIM-IAM08-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam83"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM08",
+                "SG-SRES-ISIM-IAM08-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam95": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam95",
+            "ip": "158.87.53.108",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM10-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam95"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM10-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam96": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam96",
+            "ip": "158.87.53.109",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM10-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam96"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM10-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam97": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam97",
+            "ip": "158.87.53.110",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM10-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam97"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM10-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwam98": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwam98",
+            "ip": "158.87.53.111",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                "TF-EU1-SG-ISIM-VM-Source-SMTP",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                "TF-EU1-SG-SRES-ISIM-ALL",
+                "TF-EU1-SG-SRES-ISIM-IAM10-WAS",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-SG-SRES-ISIM-WAS",
+                "TF-EU1-HOST-eu1srlpisiwam98"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-ISIM-VM-DESTINATION-SSH",
+                "SG-ISIM-VM-Source-SMTP",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-IAMaaS-RITM0140502",
+                "SG-SRES-ISIM-ALL",
+                "SG-SRES-ISIM-IAM10-WAS",
+                "SG-SRES-ISIM-SR51095897",
+                "SG-SRES-ISIM-WAS"
+            ]
+        },
+        "eu1srlpisiwas01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srlpisiwas01",
+            "ip": "158.87.52.248",
+            "groups": [
+                "TF-EU1-HOSTS-LinuxOS-All",
+                "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                "TF-EU1-SG-SRES-ISIM-SR51095897",
+                "TF-EU1-HOST-eu1srlpisiwas01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-LinuxOS-All",
+                "SG-SR50974892-DPT-22-VM-List",
+                "SG-SRES-ISIM-SR51095897"
+            ]
+        },
+        "eu1srwnisiwin01": {
+            "new_vm_group": "TF-EU1-HOST-eu1srwnisiwin01",
+            "ip": "158.87.52.247",
+            "groups": [
+                "TF-EU1-HOSTS-WindowsOS-All",
+                "TF-EU1-SG-ISIM-AMS-SRES-Standalone",
+                "TF-EU1-SG-SR50974892-DPT-45580-VM-List",
+                "TF-EU1-SG-SRES-WIN-ClientTerminals",
+                "TF-EU1-HOST-eu1srwnisiwin01"
+            ],
+            "original_groups": [
+                "EU1-HOSTS-WindowsOS-All",
+                "SG-ISIM-AMS-SRES-Standalone",
+                "SG-SR50974892-DPT-45580-VM-List",
+                "SG-SRES-WIN-ClientTerminals"
+            ]
+        }
+    }
+}

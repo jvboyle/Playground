@@ -1,0 +1,313 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "ICP-Kubernetes-NodePort",
+            "TCP-8080",
+            "HTTP",
+            "ICP-Ingress-Service",
+            "ICP-WebSphere-Application-Server-Liberty",
+            "SSH",
+            "TCP-2222",
+            "ICP-Docker-Registry",
+            "ICP-Management-Console",
+            "TCP-110",
+            "ICP-Kubernetes-API-Server",
+            "TCP-8443",
+            "TCP-50000-50001",
+            "HTTPS",
+            "TCP-995",
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1d78lpaecprx2",
+            "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+            "TF-AG1-HOST-ag1dlniamjpfua1",
+            "TF-AG1-HOST-ag1dlniamjpfua2",
+            "TF-AG1-HOST-ag1dlniamjpf2",
+            "TF-AG1-IPSET-DR180-LB-VIP1",
+            "TF-AG1-HOST-ag1dlniamjpfts1",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-ag1d95lpjllprx-Proxy-VIP",
+            "TF-AG1-HOST-ag1d78lpaecprx1",
+            "TF-AG1-SG-SRES-Automation-Control-Node",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-HOST-ag1dlniamjpfts2",
+            "TF-AG1-SG-DRES01-ICp-Cluster01",
+            "TF-AG1-HOST-ag1dlniamjpf1",
+            "TF-AG1-SG-DRES74-CRO-All-Servers",
+            "TF-AG1-SG-DR75-HWSW-Win-Servers",
+            "TF-AG1-HOST-ag1dit3lniamjpf",
+            "TF-AG1-HOST-ag1dit4lniamjpf"
+        ]
+    },
+    "map_policies": {
+        "TF-DVAA-ETOC-INFRA-JVB": {
+            "category": "Application",
+            "rules": {
+                "1014": {
+                    "display_name": "TF-1014-ICp-from-SRES-Jump-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes-API-Server",
+                        "ICP-Ingress-Service",
+                        "ICP-Management-Console",
+                        "ICP-Kubernetes-NodePort",
+                        "ICP-WebSphere-Application-Server-Liberty",
+                        "ICP-Docker-Registry"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-DRES01-ICp-Cluster01",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2620": {
+                    "display_name": "TF-2620-temp",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Automation-Control-Node"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR180-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-995",
+                        "TCP-110"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-DR180-LB-VIP1",
+                        "TF-AG1-SG-SRES-Automation-Control-Node"
+                    ]
+                },
+                "1729": {
+                    "display_name": "TF-1729-Linux-jump-server-to-CRO-VMs-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES74-CRO-All-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443",
+                        "SSH",
+                        "TCP-8080",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DRES74-CRO-All-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1572": {
+                    "display_name": "TF-1572-SRES-Jump-Servers-to-HWSW",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DR75-HWSW-Win-Servers"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "HTTPS",
+                        "HTTP",
+                        "TCP-50000-50001",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-DR75-HWSW-Win-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1643": {
+                    "display_name": "TF-1643-SRES-Jump-Servers-to-SSH-Proxy",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1d78lpaecprx2",
+                        "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+                        "TF-AG1-HOST-ag1d78lpaecprx1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTP",
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d78lpaecprx2",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-IPSET-DR78-SSH-Proxy-VIP",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-HOST-ag1d78lpaecprx1"
+                    ]
+                },
+                "1661": {
+                    "display_name": "TF-1661-SRES-jump-to-cacf-proxy",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-ag1d95lpjllprx-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTP",
+                        "SSH",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-ag1d95lpjllprx-Proxy-VIP",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2398": {
+                    "display_name": "TF-2398-IAM-SRES-Linux-Jump-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfts2",
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-HOST-ag1dlniamjpf2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2222",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50971783\nCH50079588 and SR50978536:\n\"Add to destination:\nag1dlniamjpfdv2\nag1dlniamjpfts2\nag1dlniamjpfua2\" \n\n",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-HOST-ag1dlniamjpf2",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-HOST-ag1dlniamjpfts2"
+                    ]
+                },
+                "2377": {
+                    "display_name": "TF-2377-IAM-SRES-Linux-Jump-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpf1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpfua1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2222",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50971783\n\nCH50079588 and SR50978536- \"Add to destination:\nag1dlniamjpfdv1\nag1dlniamjpfts1\nag1dlniamjpfua1",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1dlniamjpf1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "2340": {
+                    "display_name": "TF-2340-IAM-PEN-SRES-Linux-Jump-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2222",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50954319 ",
+                    "scope": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-HOST-ag1dit3lniamjpf"
+                    ]
+                },
+                "2460": {
+                    "display_name": "TF-2460-IAM-PEN-SRES-Linux-Jump-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dit4lniamjpf"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2222",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50973757 and CH50079008",
+                    "scope": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-HOST-ag1dit4lniamjpf"
+                    ]
+                }
+            }
+        }
+    }
+}

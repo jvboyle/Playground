@@ -1,0 +1,563 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-16311",
+            "SSH",
+            "Pentest-16351",
+            "HTTPS",
+            "TCP-50000",
+            "TCP-4500",
+            "TCP-6969",
+            "Netcool_16443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1dr64lpcfrpwg",
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-nlascdb000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1easpdb",
+            "TF-EU1-HOST-eu1dr64lpcfrcdb",
+            "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+            "TF-EU1-HOST-nlaspdb000m1erms",
+            "TF-EU1-HOST-nlaspni000m1ermp",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+            "TF-EU1-HOST-eu1srlpm1ejcwg",
+            "TF-EU1-HOST-nlascni000m1erms",
+            "TF-EU1-HOST-eu1srlpm1etnp1",
+            "TF-EU1-HOST-nlaspnw000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1etnp2",
+            "TF-EU1-HOST-eu1srlpm1ejtnp1",
+            "TF-EU1-HOST-nlaspdb000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1ecwg2",
+            "TF-EU1-HOST-eu1srlpm1epwg3",
+            "TF-EU1-HOST-eu1srlpm1epnp3",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2",
+            "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1ecwg1",
+            "TF-EU1-HOST-nlaspni000m1erms",
+            "TF-EU1-HOST-eu1srlpm1ejpwg",
+            "TF-EU1-HOST-eu1srlpm1ecdb3",
+            "TF-EU1-HOST-nlascdb000m1erms",
+            "TF-EU1-HOST-eu1srlpm1ecnp3",
+            "TF-EU1-HOST-nlascno000m1ermp",
+            "TF-EU1-IPSET-nlaspnw000iswrm",
+            "TF-EU1-HOST-eu1srlpm1easweb",
+            "TF-EU1-HOST-eu1srlpm1ecnp2",
+            "TF-EU1-IPSET-AG1-SRES-ag-work01",
+            "TF-EU1-HOST-nlascno000m1erms",
+            "TF-EU1-SG-SRES01-MEaaS-PreProd",
+            "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+            "TF-EU1-HOST-nlaspnw000m1erms",
+            "TF-EU1-HOST-eu1dr64lpcfrcwg",
+            "TF-EU1-HOST-eu1srlpm1ejpdb",
+            "TF-EU1-HOST-nlaspnp000m1erms",
+            "TF-EU1-HOST-eu1srlpm1ecwg3",
+            "TF-EU1-HOST-nlascni000m1ermp",
+            "TF-EU1-HOST-nlascni000dc1rm",
+            "TF-EU1-HOST-eu1srlpm1epwg2",
+            "TF-EU1-HOST-nlaspni000dc1rm",
+            "TF-EU1-HOST-eu1srlpm1eascdb",
+            "TF-EU1-HOST-eu1dr64lpcfrpdb",
+            "TF-EU1-HOST-eu1srlpm1ejcdb",
+            "TF-EU1-IPSET-nlaspdb000iswrm",
+            "TF-EU1-HOST-eu1srlpm1epdb3",
+            "TF-EU1-HOST-eu1srlpm1epdb2",
+            "TF-EU1-HOST-eu1srlpm1ejtnp2",
+            "TF-EU1-HOST-nlaspnw000dc1rm",
+            "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-eu1srlpm1epnp2",
+            "TF-EU1-HOST-eu1srlpm1ecdb2",
+            "TF-EU1-IPSET-nlascdb000iswrm"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "7064": {
+                    "display_name": "TF-7064-SRES-MnE-to-NOI-ROKS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50975710\nSR51101872\nSR51140506",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ]
+                },
+                "7065": {
+                    "display_name": "TF-7065-NOI-ROKS-to-SRES-MnE",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp",
+                        "TF-EU1-HOST-nlaspnw000m1ermp",
+                        "TF-EU1-SG-SRES01-MEaaS-PreProd"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-16311",
+                        "TCP-6969",
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50975710\nSR51101872",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-noi-nonprod-subnet1",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-nlascni000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-nlaspni000m1ermp",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp",
+                        "TF-EU1-HOST-nlaspnw000m1ermp",
+                        "TF-EU1-SG-SRES01-MEaaS-PreProd"
+                    ]
+                },
+                "7308": {
+                    "display_name": "TF-7308-IKS-MnE",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-HOST-nlaspnw000dc1rm",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-eu1srlpm1epwg2",
+                        "TF-EU1-HOST-eu1srlpm1ejpwg",
+                        "TF-EU1-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-IPSET-nlaspnw000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1easweb",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Pentest-16351"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51078642\nSR51115193",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-HOST-nlaspnw000dc1rm",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-eu1srlpm1epwg2",
+                        "TF-EU1-HOST-eu1srlpm1ejpwg",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-IPSET-nlaspnw000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1easweb",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ]
+                },
+                "7337": {
+                    "display_name": "TF-7337-SRES-sync-Daemon-VPC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ejtnp1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1srlpm1ejtnp2",
+                        "TF-EU1-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-nlaspnp000m1erms",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51108392\nSR51160840 \nSR51186346\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ejtnp1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1srlpm1ejtnp2",
+                        "TF-EU1-HOST-eu1srlpm1epnp3",
+                        "TF-EU1-HOST-nlaspnp000m1erms",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-HOST-eu1srlpm1epnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp2"
+                    ]
+                },
+                "7531": {
+                    "display_name": "TF-7531-IKS-Prod-DB2-Server",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlascdb000m1ermp",
+                        "TF-EU1-HOST-nlaspdb000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ejpdb",
+                        "TF-EU1-HOST-eu1srlpm1easpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-nlascni000dc1rm",
+                        "TF-EU1-HOST-nlaspni000dc1rm",
+                        "TF-EU1-HOST-eu1srlpm1epdb2",
+                        "TF-EU1-HOST-eu1srlpm1ecdb3",
+                        "TF-EU1-HOST-eu1srlpm1eascdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1srlpm1ejcdb",
+                        "TF-EU1-HOST-eu1srlpm1ecdb2",
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1epdb3",
+                        "TF-EU1-IPSET-nlascdb000iswrm"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51199156",
+                    "scope": [
+                        "TF-EU1-HOST-nlascdb000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1easpdb",
+                        "TF-EU1-HOST-nlaspdb000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ejpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1srlpm1epdb3",
+                        "TF-EU1-HOST-nlascni000dc1rm",
+                        "TF-EU1-HOST-nlaspni000dc1rm",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ecdb3",
+                        "TF-EU1-HOST-eu1srlpm1eascdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1srlpm1ejcdb",
+                        "TF-EU1-HOST-eu1srlpm1ecdb2",
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1epdb2",
+                        "TF-EU1-IPSET-nlascdb000iswrm"
+                    ]
+                },
+                "8128": {
+                    "display_name": "TF-8128-M-EaaS-Portal",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlascdb000m1ermp",
+                        "TF-EU1-HOST-nlaspdb000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ejpdb",
+                        "TF-EU1-HOST-eu1srlpm1easpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-nlascni000dc1rm",
+                        "TF-EU1-HOST-nlaspni000dc1rm",
+                        "TF-EU1-HOST-eu1srlpm1epdb2",
+                        "TF-EU1-HOST-eu1srlpm1ecdb3",
+                        "TF-EU1-HOST-eu1srlpm1eascdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1srlpm1ejcdb",
+                        "TF-EU1-HOST-eu1srlpm1ecdb2",
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1epdb3",
+                        "TF-EU1-IPSET-nlascdb000iswrm"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51368296",
+                    "scope": [
+                        "TF-EU1-HOST-nlascdb000m1ermp",
+                        "TF-EU1-HOST-nlaspdb000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1ejpdb",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2",
+                        "TF-EU1-HOST-eu1srlpm1easpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb",
+                        "TF-EU1-HOST-eu1srlpm1epdb3",
+                        "TF-EU1-HOST-nlascni000dc1rm",
+                        "TF-EU1-HOST-nlaspni000dc1rm",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ecdb3",
+                        "TF-EU1-HOST-eu1srlpm1eascdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1srlpm1ejcdb",
+                        "TF-EU1-HOST-eu1srlpm1ecdb2",
+                        "TF-EU1-IPSET-nlaspdb000iswrm",
+                        "TF-EU1-HOST-eu1srlpm1epdb2",
+                        "TF-EU1-IPSET-nlascdb000iswrm"
+                    ]
+                },
+                "8699": {
+                    "display_name": "TF-8699-IKS-Prod-WebGUI",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-HOST-nlaspnw000m1ermp",
+                        "TF-EU1-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-eu1srlpm1epwg2",
+                        "TF-EU1-HOST-eu1srlpm1ejpwg",
+                        "TF-EU1-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-HOST-nlascno000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16311"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0121297",
+                    "scope": [
+                        "TF-EU1-HOST-eu1dr64lpcfrpwg",
+                        "TF-EU1-HOST-eu1dr64lpcfrcwg",
+                        "TF-EU1-HOST-nlaspnw000m1erms",
+                        "TF-EU1-HOST-eu1srlpm1ecwg2",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2",
+                        "TF-EU1-HOST-eu1srlpm1epwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg3",
+                        "TF-EU1-HOST-eu1srlpm1ecwg1",
+                        "TF-EU1-HOST-eu1srlpm1epwg2",
+                        "TF-EU1-HOST-nlascno000m1erms",
+                        "TF-EU1-HOST-eu1srlpm1ejpwg",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ejcwg",
+                        "TF-EU1-HOST-nlaspnw000m1ermp"
+                    ]
+                },
+                "8700": {
+                    "display_name": "TF-8700-AIOPS-VPC-NA-to-EU-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-HOST-nlascdb000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0121556",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-HOST-nlascdb000m1erms",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ]
+                },
+                "9079": {
+                    "display_name": "TF-9079-Dynatrace-to-Portal",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144658",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1",
+                        "TF-EU1-HOST-eu1srlpm1ecnp3",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet2"
+                    ]
+                },
+                "9113": {
+                    "display_name": "TF-9113-Netcool-to-ag-work01",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-HOST-nlaspni000m1erms"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148555",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01"
+                    ]
+                },
+                "9114": {
+                    "display_name": "TF-9114-AG-VPC-to-Netcool-LDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-HOST-nlascdb000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148555",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-HOST-nlaspdb000m1erms",
+                        "TF-EU1-HOST-nlascdb000m1erms",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01"
+                    ]
+                },
+                "9115": {
+                    "display_name": "TF-9115-AG-VPC-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01",
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-HOST-nlaspni000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Netcool_16443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0148555",
+                    "scope": [
+                        "TF-EU1-IPSET-vpc-20-dx-platform-prod-subnet1",
+                        "TF-EU1-HOST-nlaspni000m1erms",
+                        "TF-EU1-IPSET-vpc-ag1-10-sh-nonprod-subnet1",
+                        "TF-EU1-HOST-nlascni000m1erms",
+                        "TF-EU1-IPSET-AG1-SRES-ag-work01"
+                    ]
+                },
+                "9153": {
+                    "display_name": "TF-9153-Netcool-Pre-prod-to-OCP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspnp000m1erms"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0152496",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1erms",
+                        "TF-EU1-IPSET-vpc-20-mneaas-prod-subnet1-nat"
+                    ]
+                }
+            }
+        }
+    }
+}

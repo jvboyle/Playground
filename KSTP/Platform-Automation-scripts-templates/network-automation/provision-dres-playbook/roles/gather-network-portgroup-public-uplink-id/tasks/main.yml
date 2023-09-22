@@ -1,0 +1,16 @@
+# pub_ns_portgroup
+  - name: Collect Edge Public Uplink Portgroup
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/network?filter.names={{ pub_ns_portgroup }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_pub_ns_portgroup
+
+  - name: Save Edge Public Uplink Portgroup ID to Variable
+    set_fact:
+      pub_ns_portgroup_id: "{{ output_pub_ns_portgroup.json.value[0].network }}"

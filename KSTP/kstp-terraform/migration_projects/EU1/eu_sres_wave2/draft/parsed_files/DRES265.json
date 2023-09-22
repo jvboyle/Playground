@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d265lpcacprx1",
+            "TF-EU1-HOST-eu1d265lpcacprx2",
+            "TF-EU1-HOST-eu1srlpcacfbds1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES265": {
+            "category": "Application",
+            "rules": {
+                "8399": {
+                    "display_name": "TF-8399-DRES-to-SRES-BDS-Flow",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d265lpcacprx1",
+                        "TF-EU1-HOST-eu1d265lpcacprx2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0073748",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d265lpcacprx1",
+                        "TF-EU1-HOST-eu1d265lpcacprx2",
+                        "TF-EU1-HOST-eu1srlpcacfbds1"
+                    ]
+                }
+            }
+        }
+    }
+}

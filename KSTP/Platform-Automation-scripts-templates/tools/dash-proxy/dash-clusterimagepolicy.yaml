@@ -1,0 +1,12 @@
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: dash-proxy-image-policy
+spec:
+   repositories:
+    # This enforces that all images deployed to this cluster pass trust and VA
+    # To override, set an ImagePolicy for a specific Kubernetes namespace or modify this policy
+    - name: ispw-dash.gravitant.net/*
+      policy:
+        va:
+          enabled: false

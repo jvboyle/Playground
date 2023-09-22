@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-50000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlaspnp000m1erms",
+            "TF-EU1-HOST-eu1dr64lpcfrpdb",
+            "TF-EU1-HOST-eu1dr64lpcfrcdb"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES64": {
+            "category": "Application",
+            "rules": {
+                "6859": {
+                    "display_name": "TF-6859-DB2-connection",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspnp000m1erms"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50992186\n",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspnp000m1erms",
+                        "TF-EU1-HOST-eu1dr64lpcfrpdb",
+                        "TF-EU1-HOST-eu1dr64lpcfrcdb"
+                    ]
+                }
+            }
+        }
+    }
+}

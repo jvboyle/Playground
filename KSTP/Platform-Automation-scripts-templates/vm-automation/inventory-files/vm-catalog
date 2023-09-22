@@ -1,0 +1,27 @@
+####
+## Instructions
+vmname: ''   # name of the VM
+
+
+vmtemplate: ''  # template name. Available Options. Drives the OS.
+vm-ram:  # 8192, 16384, 24576, 32768 ...
+vm-cpu:  # 1, 2, 4, 8, 16, 20
+vm-disk1-gb:  # e.g. 50, 75, 100.....
+vm-disk2-gb:
+vm-disk3-gb:
+vm-notes:
+
+## Specifications
+[group-1]
+ag1-test vmtemplate='' vm-ram='' vm-cpu='' vm-disk1-gb='' vm-disk2-gb='' vm-notes=''
+
+
+#  Examples .. build from these.
+[sample-windows]
+tst-windows1 vmtemplate='ag1TemplWin2016standard' vm-ram='16' vm-cpu='4' vm-disk1-gb='300' vm-disk2-gb='' vm-notes=''
+tst-windows2 vmtemplate='ag1TemplWin2016standard' vm-ram='16' vm-cpu='4' vm-disk1-gb='300' vm-disk2-gb='' vm-notes=''
+
+[sample-ubuntu]
+
+
+[sample-rhel]

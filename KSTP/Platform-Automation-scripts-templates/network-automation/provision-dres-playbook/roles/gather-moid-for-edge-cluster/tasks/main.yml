@@ -1,0 +1,15 @@
+  - name: Collecting Edge Cluster ID by name
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/cluster?filter.names={{ vcenter_edge_cluster }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_edge_cluster
+
+  - name: Save vSphere Cluster ID to Variable
+    set_fact:
+      edge_cluster_id: "{{ output_edge_cluster.json.value[0].cluster }}"

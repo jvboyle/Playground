@@ -1,0 +1,114 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-7705",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1eascno",
+            "TF-EU1-HOST-eu1srlpm1esdc3",
+            "TF-EU1-HOST-eu1d199lpbfstnp1",
+            "TF-EU1-IPSET-SRES-eu1srlpm1esd3-VIP",
+            "TF-EU1-HOST-eu1srlpm1easbcp",
+            "TF-EU1-HOST-eu1srlpm1easpno",
+            "TF-EU1-HOST-eu1srlpm1esdp3",
+            "TF-EU1-HOST-eu1d199lpbfstnp2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES199": {
+            "category": "Application",
+            "rules": {
+                "7101": {
+                    "display_name": "TF-7101-NOT-DEFINED-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1srlpm1easpno"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51044688",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-HOST-eu1srlpm1easpno",
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ]
+                },
+                "7103": {
+                    "display_name": "TF-7103-DRES-to-SRES-FIrewalls",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1srlpm1esdc3",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd3-VIP",
+                        "TF-EU1-HOST-eu1srlpm1easpno",
+                        "TF-EU1-HOST-eu1srlpm1esdp3"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500",
+                        "TCP-7705"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51044688",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1eascno",
+                        "TF-EU1-HOST-eu1srlpm1esdc3",
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-IPSET-SRES-eu1srlpm1esd3-VIP",
+                        "TF-EU1-HOST-eu1srlpm1easpno",
+                        "TF-EU1-HOST-eu1srlpm1esdp3",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ]
+                },
+                "8535": {
+                    "display_name": "TF-8535-ITM-Bluecare-sync-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0113600",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d199lpbfstnp1",
+                        "TF-EU1-HOST-eu1srlpm1easbcp",
+                        "TF-EU1-HOST-eu1d199lpbfstnp2"
+                    ]
+                }
+            }
+        }
+    }
+}

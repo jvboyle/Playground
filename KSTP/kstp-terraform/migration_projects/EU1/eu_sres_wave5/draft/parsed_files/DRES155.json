@@ -1,0 +1,81 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "NetBios Session Service (UDP)",
+            "NetBios Name Service (TCP)",
+            "SMB Server UDP",
+            "NetBios Session Service (TCP)",
+            "NetBios Name Service (UDP)",
+            "NetBios Datagram (TCP)",
+            "SMB Server",
+            "NetBios Datagram (UDP)"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP",
+            "TF-EU1-SG-MNEAAS-EU-SRES-AUTOBUILD"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES155": {
+            "category": "Application",
+            "rules": {
+                "5875": {
+                    "display_name": "TF-5875-VM-to-Autobuild",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-MNEAAS-EU-SRES-AUTOBUILD"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50863189",
+                    "scope": [
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP",
+                        "TF-EU1-SG-MNEAAS-EU-SRES-AUTOBUILD"
+                    ]
+                },
+                "5876": {
+                    "display_name": "TF-5876-Autobuild-to-VM",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-MNEAAS-EU-SRES-AUTOBUILD"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NetBios Datagram (TCP)",
+                        "NetBios Session Service (UDP)",
+                        "SMB Server UDP",
+                        "NetBios Name Service (TCP)",
+                        "NetBios Name Service (UDP)",
+                        "NetBios Session Service (TCP)",
+                        "SMB Server",
+                        "NetBios Datagram (UDP)"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50863189",
+                    "scope": [
+                        "TF-EU1-SG-DRES-MNEAAS-LR5-NCPP",
+                        "TF-EU1-SG-MNEAAS-EU-SRES-AUTOBUILD"
+                    ]
+                }
+            }
+        }
+    }
+}

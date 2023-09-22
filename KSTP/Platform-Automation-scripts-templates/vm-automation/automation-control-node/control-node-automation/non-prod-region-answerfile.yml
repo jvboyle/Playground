@@ -1,0 +1,13 @@
+## vSphere Specific
+vsphere_host: "ag1vc01.poc.ispw.ibm.local"
+vsphere_cluster: 'WDC04-PoC-CL1'
+vsphere_datacenter: "WDC04"
+
+## Note The vsphere userID and password, required to execute this playbook,
+## are need to be set on the VM running this BEFORE the playbook
+## is executed.
+# export vsphere_user=
+# export vsphere_password=
+
+### The store of the VMsi vSPhere.
+datastore: vsanDatastore

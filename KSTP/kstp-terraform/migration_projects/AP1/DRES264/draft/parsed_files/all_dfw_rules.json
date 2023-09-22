@@ -1,0 +1,116 @@
+{
+    "TF-DRES264": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-8081",
+                "SSH"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-IPSET-DRES264-CACF-VIP-NAT",
+                "TF-AP1-DRES264-CACF-Proxy",
+                "TF-AP1-IPSET-Host-ap1srlpcacfbds1",
+                "TF-AP1-IPSET-Host_DRES264-Client-premise-JH"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES264": {
+                "category": "Application",
+                "rules": {
+                    "1740": {
+                        "display_name": "TF-1740-With-in-CACF-Proxy-",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ],
+                        "destination_ips": [],
+                        "services": [],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0118889",
+                        "scope": [
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ]
+                    },
+                    "1741": {
+                        "display_name": "TF-1741-Client-JH-to-CACF-Proxy",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-IPSET-Host_DRES264-Client-premise-JH"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-DRES264-CACF-VIP-NAT",
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0118889",
+                        "scope": [
+                            "TF-AP1-DRES264-CACF-Proxy",
+                            "TF-AP1-IPSET-DRES264-CACF-VIP-NAT",
+                            "TF-AP1-IPSET-Host_DRES264-Client-premise-JH"
+                        ]
+                    },
+                    "1742": {
+                        "display_name": "TF-1742-CACF-Proxy-to-JH",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host_DRES264-Client-premise-JH"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "RITM0118889",
+                        "scope": [
+                            "TF-AP1-DRES264-CACF-Proxy",
+                            "TF-AP1-IPSET-Host_DRES264-Client-premise-JH"
+                        ]
+                    },
+                    "1790": {
+                        "display_name": "TF-1790-DRES-to-BDS-flow",
+                        "disabled": false,
+                        "source_groups": [
+                            "TF-AP1-DRES264-CACF-Proxy"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-DRES264-CACF-Proxy",
+                            "TF-AP1-IPSET-Host-ap1srlpcacfbds1"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

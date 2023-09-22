@@ -1,0 +1,54 @@
+[OSEv3:children]
+masters
+nodes
+etcd
+lb
+
+[OSEv3:vars]
+ansible_ssh_user=root
+openshift_release=v3.11
+openshift_deployment_type=origin
+#oreg_auth_user=vivinthanga
+#oreg_auth_password=Redhat2blue
+openshift_master_default_subdomain=apps.gtslabs.com
+openshift_docker_insecure_registries=172.30.0.0/16,localhost:5000
+os_firewall_use_firewalld=true
+openshift_master_console_port=8443
+openshift_master_api_port=8443
+openshift_master_cluster_method=native
+openshift_disable_check=memory_availability,disk_availability
+openshift_master_identity_providers=[{'name': 'htpasswd_auth','login': 'true', 'challenge': 'true','kind': 'HTPasswdPasswordIdentityProvider',}]
+openshift_master_htpasswd_users={'admin': '$apr1$AN9wzSeA$W/lJqrglIucSMIwG7aNmM1', 'developer': '$apr1$gBHJ0Mjb$TsIrCgL3/KZJwS.DjthGR0'}
+osm_cluster_network_cidr=10.128.0.0/14
+openshift_portal_net=172.30.0.0/16
+openshift_enable_unsupported_configurations=True
+#openshift_hosted_registry_storage_kind=nfs
+#openshift_hosted_registry_storage_access_modes=['ReadWriteMany']
+#openshift_hosted_registry_storage_host=fsf-sng0101f-fz.service.softlayer.com
+#openshift_hosted_registry_storage_nfs_directory=/IBM02SEV284483_2/data01
+#openshift_hosted_registry_storage_volume_name=registry
+#openshift_hosted_registry_storage_volume_size=20Gi
+use_openshift_sdn=true
+os_sdn_network_plugin_name='redhat/openshift-ovs-multitenant'
+
+[masters]
+CoE-Redhat3-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master" openshift_node_problem_detector_install=true openshift_ip=10.117.247.41 openshift_public_ip=119.81.216.76
+CoE-Redhat4-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.42 openshift_public_ip=119.81.216.87
+CoE-Redhat5-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.54 openshift_public_ip=119.81.216.74
+
+[lb]
+CoE-Redhat6-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.60 openshift_public_ip=119.81.216.81
+
+[etcd]
+CoE-Redhat3-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master" openshift_node_problem_detector_install=true openshift_ip=10.117.247.41 openshift_public_ip=119.81.216.76
+CoE-Redhat4-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.42 openshift_public_ip=119.81.216.87
+CoE-Redhat5-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.54 openshift_public_ip=119.81.216.74
+
+[nodes]
+CoE-Redhat3-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master" openshift_node_problem_detector_install=true openshift_ip=10.117.247.41 openshift_public_ip=119.81.216.76
+CoE-Redhat4-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.42 openshift_public_ip=119.81.216.87
+CoE-Redhat5-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-master-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.54 openshift_public_ip=119.81.216.74
+CoE-Redhat6-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-infra" openshift_node_problem_detector_install=true openshift_ip=10.117.247.60 openshift_public_ip=119.81.216.81
+CoE-Redhat7-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-compute" openshift_node_problem_detector_install=true openshift_ip=10.117.247.23 openshift_public_ip=119.81.216.88
+CoE-Redhat8-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-compute" openshift_node_problem_detector_install=true openshift_ip=10.117.247.33 openshift_public_ip=119.81.216.93
+CoE-Redhat9-softlayer.gtslabs.com openshift_schedulable=true openshift_node_group_name="node-config-compute" openshift_node_problem_detector_install=true openshift_ip=10.117.247.29 openshift_public_ip=119.81.216.70

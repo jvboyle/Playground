@@ -1,0 +1,84 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-IPSET-SRES-OCP-Cluster05-SNAT",
+            "TF-AP1-IPSET-Host-ap1sr1lcacfjump01",
+            "TF-AP1-IPSET-ap1sr1lpta1-vip",
+            "TF-AP1-IPSET-SRES-OCP-Cluster04-SNAT",
+            "TF-AP1-IPSET-SG-SRES-OCP-Cluster04",
+            "TF-AP1-IPSET-OCP4-3-Cluster",
+            "TF-AP1-HOST-ap1sr1lcacfjump01",
+            "TF-AP1-HOST-ap1sr1lcacfjump02",
+            "TF-AP1-IPSET-Host-ap1sr1lcacfjump02",
+            "TF-AP1-IPSET-EU1-SRES-CACF-Proxy"
+        ]
+    },
+    "map_policies": {
+        "TF-NSX-V2T": {
+            "category": "Application",
+            "rules": {
+                "1517": {
+                    "display_name": "TF-1517-EU-MOM-Proxy-to-AP-Proxy",
+                    "source_groups": [
+                        "TF-AP1-IPSET-EU1-SRES-CACF-Proxy"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-OCP4-3-Cluster"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51185459",
+                    "scope": [
+                        "TF-AP1-IPSET-OCP4-3-Cluster",
+                        "TF-AP1-IPSET-EU1-SRES-CACF-Proxy"
+                    ]
+                },
+                "1523": {
+                    "display_name": "TF-1523-OCP-SRES-Cluster04-to-CACF-Jump",
+                    "source_groups": [
+                        "TF-AP1-IPSET-ap1sr1lpta1-vip",
+                        "TF-AP1-IPSET-SRES-OCP-Cluster04-SNAT",
+                        "TF-AP1-IPSET-SG-SRES-OCP-Cluster04",
+                        "TF-AP1-IPSET-SRES-OCP-Cluster05-SNAT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1sr1lcacfjump01",
+                        "TF-AP1-IPSET-Host-ap1sr1lcacfjump01",
+                        "TF-AP1-IPSET-Host-ap1sr1lcacfjump02",
+                        "TF-AP1-HOST-ap1sr1lcacfjump02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-IPSET-SRES-OCP-Cluster05-SNAT",
+                        "TF-AP1-IPSET-Host-ap1sr1lcacfjump01",
+                        "TF-AP1-IPSET-ap1sr1lpta1-vip",
+                        "TF-AP1-IPSET-SRES-OCP-Cluster04-SNAT",
+                        "TF-AP1-IPSET-SG-SRES-OCP-Cluster04",
+                        "TF-AP1-HOST-ap1sr1lcacfjump01",
+                        "TF-AP1-HOST-ap1sr1lcacfjump02",
+                        "TF-AP1-IPSET-Host-ap1sr1lcacfjump02"
+                    ]
+                }
+            }
+        }
+    }
+}

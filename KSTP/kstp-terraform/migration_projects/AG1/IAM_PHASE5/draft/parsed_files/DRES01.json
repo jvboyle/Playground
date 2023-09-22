@@ -1,0 +1,98 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "DNS",
+            "ICP-Kubernetes API-Server",
+            "ICP-Docker Registry",
+            "ICP-Ingress Service",
+            "DNS-UDP",
+            "NTP",
+            "ICP-Management Console",
+            "ICP-WebSphere Application Server Liberty",
+            "ICP-Kubernetes NodePort"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DRES01-ICp-Cluster01",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES01": {
+            "category": "Application",
+            "rules": {
+                "1014": {
+                    "display_name": "TF-1014-ICp-from-SRES-Jump-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Docker Registry",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Kubernetes NodePort"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DRES01-ICp-Cluster01",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "1020": {
+                    "display_name": "TF-1020-DNS-",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "DNS-UDP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "1021": {
+                    "display_name": "TF-1021-NTP",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+  - name: GET Edge Details
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: get_vpn_esg
+
+  - name: GET Edge HA Status
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/highavailability/config"
+      force_basic_auth: yes
+      method: GET
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 200
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      return_content: yes
+    register: get_vpn_esg_ha_status
+
+  - name: PUT Edge Appliance Folder when HA enabled
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/appliances?async=true"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 202
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_folder_location_ha }}"
+      return_content: no
+    when:
+      - get_vpn_esg_ha_status.json.enabled == true
+      - get_vpn_esg.json.type == "gatewayServices"
+      - get_vpn_esg.json.appliances.appliances[0].vmFolderName != vcenter_edgevm_folder or get_vpn_esg.json.appliances.applianceSize != vpn_esg_edge_size
+
+  - name: PUT Edge Appliance Folder when HA NOT enabled
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/appliances?async=true"
+      force_basic_auth: yes
+      method: PUT
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 202
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      body_format: json
+      body: "{{ edge_folder_location_noha }}"
+      return_content: no
+    when:
+      - get_vpn_esg_ha_status.json.enabled == false
+      - get_vpn_esg.json.type == "gatewayServices"
+      - get_vpn_esg.json.appliances.appliances[0].vmFolderName != vcenter_edgevm_folder or get_vpn_esg.json.appliances.applianceSize != vpn_esg_edge_size
+
+  - name: sleep for 60 seconds and continue with play
+    wait_for:
+      timeout: 60

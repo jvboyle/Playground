@@ -1,0 +1,49 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SMTP",
+            "SMTP_TLS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-SG-HRES-TALOS-SSHProxy",
+            "TF-AP1-SG-PDR-SMTP-Relay",
+            "TF-AP1-SG-DRES-Proxy-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "1315": {
+                    "display_name": "TF-1315-SSHproxy&DRESproxy_to_SMTP_Relay",
+                    "source_groups": [
+                        "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                        "TF-AP1-SG-DRES-Proxy-Servers"
+                    ],
+                    "source_ips": [
+                        "158.87.54.5"
+                    ],
+                    "destination_groups": [
+                        "TF-AP1-SG-PDR-SMTP-Relay"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP",
+                        "SMTP_TLS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR1390555",
+                    "scope": [
+                        "TF-AP1-SG-PDR-SMTP-Relay",
+                        "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                        "TF-AP1-SG-DRES-Proxy-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

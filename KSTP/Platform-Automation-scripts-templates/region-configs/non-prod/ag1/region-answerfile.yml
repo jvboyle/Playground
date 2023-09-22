@@ -1,0 +1,61 @@
+---
+
+#################
+#vCenter Details
+#################
+vcenter: 'ag1vc01.poc.ispw.ibm.local'
+vcenter_dc: 'WDC04'
+vcenter_compute_cluster: 'WDC04-PoC-CL1'
+vcenter_compute_datastore: 'vsanDatastore'
+vcenter_mgmt_cluster: 'WDC04-PoC-CL1'
+vcenter_mgmt_datastore: 'vsanDatastore'
+vcenter_edge_cluster: 'WDC04-PoC-CL1'
+vcenter_edge_datastore: 'vsanDatastore'
+
+
+region_gateway:  "158.87.63.1"
+region_dns_servers: "158.87.63.3"
+region_netmask: "255.255.255.192"
+
+vsphere_clusters:
+  compute_cluster: {name: 'WDC04-PoC-CL1', dvswitch: 'wdc04-poc-priv-dvs01', datastore: 'vsanDatastore'}
+  mgmt_cluster: {name: 'WDC04-PoC-CL1', dvswitch: 'wdc04-poc-priv-dvs01', datastore: 'vsanDatastore'}
+  edge_cluster: {name: 'WDC04-PoC-CL1', dvswitch: 'wdc04-poc-priv-dvs01', datastore: 'vsanDatastore'}
+  remote_cluster: {name: 'DAL-Remote-Edge', dvswitch: 'dal09-poc-priv-dvs01', datastore: 'vsanDatastore'}
+
+####################
+#NSX Manager details
+####################
+nsx_manager: 'ag1nsxm01.poc.ispw.ibm.local'
+
+#Regional Provider Transit Edge IP's
+agg_esg_provider_ip: '100.120.32.1'
+svc_esg_provider_ip: '100.120.32.2'
+sres_esg_provider_ip: '100.120.32.3'
+gres_esg_provider_ip: '100.120.32.4'
+vdr_esg_provider_ip: '100.120.32.252'
+pdr_esg_provider_ip: '100.120.32.253'
+ext1_vpn_provider_ip: '100.120.32.254'
+
+#Regional ISPW Infrastructure Networks
+gres_gsni_routeable_net: '158.87.63.64/27'
+sres_gsni_routeable_net: '158.87.63.0/26'
+ires_sl_nat_net: '100.120.33.0/24'
+pdr_net: '100.120.35.0/25'
+vdr_net: '100.120.35.128/25'
+
+#Customer Premises GSNI Routable NAT Network
+cp_gsni_routeable_net: '158.87.104.0/24'
+
+#Regional Pre-existing Public, Private, and Provider Transit uplink porgtroups
+provider_transit: 'provider-agg-transit'
+pub_ns_portgroup: 'pub-edge-ns-946'
+priv_ns_portgroup: 'priv-edge-ns-1194'
+priv_dlr_mgmt_portgroup: 'priv-edge-ns-1194'
+
+# Transport Zone for logical switches (VXLAN's)
+transport_zone: 'AG1-GlobalTZ'
+cp_mode: 'UNICAST_MODE'
+
+## .... END
+############################################################################

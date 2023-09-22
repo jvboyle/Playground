@@ -1,0 +1,48 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700",
+            "TCP-7705"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-HOST-eu1d109lplegsldb2",
+            "TF-EU1-HOST-eu1d109lplegsldb1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES109": {
+            "category": "Application",
+            "rules": {
+                "8005": {
+                    "display_name": "TF-8005-ScienceLogic-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d109lplegsldb2",
+                        "TF-EU1-HOST-eu1d109lplegsldb1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7705",
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51306679",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d109lplegsldb2",
+                        "TF-EU1-HOST-eu1d109lplegsldb1",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

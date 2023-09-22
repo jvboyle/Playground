@@ -1,0 +1,55 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "ICP-Kubernetes API-Server",
+            "ICP-Ingress Service",
+            "ICP-Management Console",
+            "ICP-Kubernetes NodePort",
+            "ICP-WebSphere Application Server Liberty",
+            "ICP-Docker Registry"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-SG-DRES01-ICp-Cluster01",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES01": {
+            "category": "Application",
+            "rules": {
+                "1014": {
+                    "display_name": "TF-1014-ICp-from-SRES-Jump-",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICP-Kubernetes API-Server",
+                        "ICP-Ingress Service",
+                        "ICP-Management Console",
+                        "ICP-Kubernetes NodePort",
+                        "ICP-WebSphere Application Server Liberty",
+                        "ICP-Docker Registry"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-DRES01-ICp-Cluster01",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-50000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1srwphwcgrfdb",
+            "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+            "TF-AG1-HOST-ag1srlpcardb1000"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "3338": {
+                    "display_name": "TF-3338-DX-plat-IKS-Prod-to-GRF-DB",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-HOST-ag1srlpcardb1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51402877\nRITM0128417---added the ag1srlpcardb1000 to the destination ",
+                    "scope": [
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+                        "TF-AG1-HOST-ag1srlpcardb1000",
+                        "TF-AG1-HOST-ag1srwphwcgrfdb"
+                    ]
+                }
+            }
+        }
+    }
+}

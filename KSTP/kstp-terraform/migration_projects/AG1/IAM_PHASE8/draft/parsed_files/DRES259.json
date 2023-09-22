@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-DRES259-CACF-Proxy",
+            "TF-AG1-SG-SRES-CACF-BDS",
+            "TF-AG1-SG-SRES01-OCP-Cluster01"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES259": {
+            "category": "Application",
+            "rules": {
+                "3297": {
+                    "display_name": "TF-3297-OCP-to-CACF-Prosy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-DRES259-CACF-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DRES259-CACF-Proxy",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                },
+                "3298": {
+                    "display_name": "TF-3298-CACF-Proxy-to-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-DRES259-CACF-Proxy"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-CACF-BDS"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-DRES259-CACF-Proxy",
+                        "TF-AG1-SG-SRES-CACF-BDS"
+                    ]
+                }
+            }
+        }
+    }
+}

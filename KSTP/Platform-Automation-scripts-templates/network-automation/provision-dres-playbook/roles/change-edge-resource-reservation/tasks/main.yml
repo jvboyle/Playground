@@ -1,0 +1,47 @@
+  - name: POST DLR Edge System Resource Reservation
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ dlr_id }}/appliances?action=applySystemResourceReservation&async=true"
+      force_basic_auth: yes
+      method: POST
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 202
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+    register: dlr_systemresresv_config
+
+  - name: POST RES-ESG Edge System Resource Reservation
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ res_esg_id }}/appliances?action=applySystemResourceReservation&async=true"
+      force_basic_auth: yes
+      method: POST
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 202
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+    register: res_esg_systemresresv_config
+
+  - name: POST VPN-ESG Edge System Resource Reservation
+    uri:
+      url: "https://{{ nsx_manager }}/api/4.0/edges/{{ vpn_esg_id }}/appliances?action=applySystemResourceReservation&async=true"
+      force_basic_auth: yes
+      method: POST
+      user: "{{ vcenter_user }}"
+      password: "{{ vcenter_pwd }}"
+      status_code:
+        - 202
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+    register: vpn_esg_systemresresv_config

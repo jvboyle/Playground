@@ -1,0 +1,55 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "RDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-RPA-Jump-Servers",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+            "TF-EU1-SG-PDR-OKTA-ASA-GW",
+            "TF-EU1-IPSET-SRES-eu1sr1wpiamprra",
+            "TF-EU1-IPSET-sres-esg1-rpards-lb-vip-2"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "9180": {
+                    "display_name": "TF-9180-ASA-GW-to-Windows-JH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-PDR-OKTA-ASA-GW"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-RPA-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+                        "TF-EU1-IPSET-SRES-eu1sr1wpiamprra",
+                        "TF-EU1-IPSET-sres-esg1-rpards-lb-vip-2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0150241\nRITM0157024",
+                    "scope": [
+                        "TF-EU1-SG-SRES-RPA-Jump-Servers",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-SRES-Win-Jump-Servers-VIP",
+                        "TF-EU1-SG-PDR-OKTA-ASA-GW",
+                        "TF-EU1-IPSET-SRES-eu1sr1wpiamprra",
+                        "TF-EU1-IPSET-sres-esg1-rpards-lb-vip-2"
+                    ]
+                }
+            }
+        }
+    }
+}

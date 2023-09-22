@@ -1,0 +1,22 @@
+    os_repo_path: /repo/OS
+    CarbonBlack_installation_script: CarbonBlackClientSetup-linux-v6.1.8.10098.sh
+    APM_installation_path: APMADV_Agent_Install_8.1.4.0.1
+    APM_installation_script: Install_Unix.sh
+    BigFix_rhel_package: BESAgent-9.5.9.62-rhe6.x86_64.rpm
+    BigFix_ubuntu_package: BESAgent-9.5.9.62-ubuntu10.amd64.deb
+    BigFix_masthead_file: ag1sr1bfrelay1/unix/actionsite.afxm
+    BigFix_besclient_configuration_relay1: eu1sr1bfrelay1/unix/besclient.config
+    BigFix_besclient_configuration_relay2: eu1sr1bfrelay2/unix/besclient.config
+    qradar_host: 10.175.236.89
+    ntp_servers:
+       - NTP1
+       - NTP2
+    proxy_host: 100.72.69.4
+    proxy_port: 8080
+    audisp:
+        active:
+         regexp: '^active'
+         line: 'active = yes'
+        args:
+         regexp: '^args'
+         line: 'args = LOG_LOCAL6'

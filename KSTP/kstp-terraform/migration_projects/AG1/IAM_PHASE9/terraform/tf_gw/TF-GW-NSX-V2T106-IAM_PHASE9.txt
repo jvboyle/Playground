@@ -1,0 +1,106 @@
+######################################################
+# migration: IAM_PHASE9
+######################################################
+   rule {
+         display_name = "TF-3315-HWSH-to-AIOps-Tanzu"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-Brazil-Maximo-Shared-Dev-QA",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Brazil-Maximo-Shared-Prod",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcls01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-EU-eu1sr1dxdev02",
+               "158.87.52.5"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphwcls01",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3869-DRES308-AD"
+         notes        = "RITM0148619"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-ag1d308-Server"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/Win_2008_-_RPC,_DCOM,_EPM,_DRSUAPI,_NetLogonR,_SamR,_FRS",
+               "/infra/services/LDAP-UDP",
+               "/infra/services/NBSS",
+               "/infra/services/DNS-YgYUhldeX",
+               "/infra/services/WINS-UDP",
+               "/infra/services/Active_Directory_Server_UDP",
+               "/infra/services/NBDG-Unicast",
+               "/infra/services/NTP_Time_Server",
+               "/infra/services/Active_Directory_Server",
+               "/infra/services/SOAP",
+               "/infra/services/NBNS-Unicast",
+               "/infra/services/SMTP",
+               "/infra/services/Windows-Global-Catalog-over-SSL",
+               "/infra/services/WINS",
+               "/infra/services/NBDG-Broadcast",
+               "/infra/services/MS-DS-TCP",
+               "/infra/services/DHCP-Server",
+               "/infra/services/NBNS-Broadcast",
+               "/infra/services/KERBEROS-UDP",
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/MS-DS-UDP",
+               "/infra/services/MS_RPC_TCP",
+               "/infra/services/Windows-Global-Catalog",
+               "/infra/services/KERBEROS",
+               "/infra/services/LDAP",
+               "/infra/services/DNS-UDP"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3878-DRES327-AD-"
+         notes        = "RITM0148619"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-DR327-VMs"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-STaaS-AD-DNS"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-60014"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-NSX-V2T-AG1"
+            }
+      }

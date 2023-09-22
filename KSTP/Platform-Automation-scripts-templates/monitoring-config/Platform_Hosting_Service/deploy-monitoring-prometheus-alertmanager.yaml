@@ -1,0 +1,147 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"extensions/v1beta1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"monitoring-prometheus","component":"alertmanager"},"name":"monitoring-prometheus-alertmanager","namespace":"kube-system"},"spec":{"replicas":1,"template":{"metadata":{"labels":{"app":"monitoring-prometheus","component":"alertmanager"}},"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"beta.kubernetes.io/arch","operator":"In","values":["amd64"]},{"key":"management","operator":"In","values":["true"]}]}]}}},"containers":[{"args":["--volume-dir=/etc/config","--webhook-url=http://localhost:9093/-/reload"],"image":"ibmcom/configmap-reload:v0.1","imagePullPolicy":"IfNotPresent","name":"configmap-reload","volumeMounts":[{"mountPath":"/etc/config","name":"config-volume","readOnly":true}]},{"args":["--config.file=/etc/config/alertmanager.yml","--storage.path=/var/lib/alertmanager/data"],"image":"ibmcom/alertmanager:v0.13.0","imagePullPolicy":"IfNotPresent","name":"alertmanager","ports":[{"containerPort":9093,"name":"web"}],"resources":{},"volumeMounts":[{"mountPath":"/etc/config","name":"config-volume"},{"mountPath":"/var/lib/alertmanager/data","name":"storage-volume"}]},{"command":["/opt/ibm/router/entry/entrypoint.sh"],"image":"ibmcom/icp-router:2.2.0","imagePullPolicy":"IfNotPresent","name":"router","ports":[{"containerPort":8080,"name":"router"}],"volumeMounts":[{"mountPath":"/opt/ibm/router/conf","name":"router-config"},{"mountPath":"/opt/ibm/router/certs","name":"monitoring-certs"},{"mountPath":"/opt/ibm/router/ca-certs","name":"monitoring-ca-cert"},{"mountPath":"/opt/ibm/router/entry","name":"router-entry"}]}],"tolerations":[{"effect":"NoSchedule","key":"dedicated","operator":"Exists"}],"volumes":[{"configMap":{"name":"monitoring-prometheus-alertmanager"},"name":"config-volume"},{"name":"storage-volume","persistentVolumeClaim":{"claimName":"monitoring-prometheus-alertmanager-pvc"}},{"configMap":{"name":"alertmanager-router-nginx-config"},"name":"router-config"},{"name":"monitoring-certs","secret":{"secretName":"monitoring-certs"}},{"name":"monitoring-ca-cert","secret":{"secretName":"monitoring-ca-cert"}},{"configMap":{"defaultMode":484,"name":"monitoring-router-entry-config"},"name":"router-entry"}]}}}}
+  creationTimestamp: 2018-03-21T05:20:08Z
+  generation: 2
+  labels:
+    app: monitoring-prometheus
+    component: alertmanager
+  name: monitoring-prometheus-alertmanager
+  namespace: kube-system
+  resourceVersion: "48803538"
+  selfLink: /apis/extensions/v1beta1/namespaces/kube-system/deployments/monitoring-prometheus-alertmanager
+  uid: 8593edfe-2cc7-11e8-bc77-005056bbded7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitoring-prometheus
+      component: alertmanager
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: monitoring-prometheus
+        component: alertmanager
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+              - key: management
+                operator: In
+                values:
+                - "true"
+      containers:
+      - args:
+        - --volume-dir=/etc/config
+        - --webhook-url=http://localhost:9093/-/reload
+        image: ibmcom/configmap-reload:v0.1
+        imagePullPolicy: IfNotPresent
+        name: configmap-reload
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/config
+          name: config-volume
+          readOnly: true
+      - args:
+        - --config.file=/etc/config/alertmanager.yml
+        - --storage.path=/var/lib/alertmanager/data
+        image: ibmcom/alertmanager:v0.13.0
+        imagePullPolicy: IfNotPresent
+        name: alertmanager
+        ports:
+        - containerPort: 9093
+          name: web
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/config
+          name: config-volume
+        - mountPath: /var/lib/alertmanager/data
+          name: storage-volume
+      - command:
+        - /opt/ibm/router/entry/entrypoint.sh
+        image: ibmcom/icp-router:2.2.0
+        imagePullPolicy: IfNotPresent
+        name: router
+        ports:
+        - containerPort: 8080
+          name: router
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /opt/ibm/router/conf
+          name: router-config
+        - mountPath: /opt/ibm/router/certs
+          name: monitoring-certs
+        - mountPath: /opt/ibm/router/ca-certs
+          name: monitoring-ca-cert
+        - mountPath: /opt/ibm/router/entry
+          name: router-entry
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: dedicated
+        operator: Exists
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: monitoring-prometheus-alertmanager
+        name: config-volume
+      - name: storage-volume
+        persistentVolumeClaim:
+          claimName: monitoring-prometheus-alertmanager-pvc
+      - configMap:
+          defaultMode: 420
+          name: alertmanager-router-nginx-config
+        name: router-config
+      - name: monitoring-certs
+        secret:
+          defaultMode: 420
+          secretName: monitoring-certs
+      - name: monitoring-ca-cert
+        secret:
+          defaultMode: 420
+          secretName: monitoring-ca-cert
+      - configMap:
+          defaultMode: 484
+          name: monitoring-router-entry-config
+        name: router-entry
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: 2018-03-21T05:20:08Z
+    lastUpdateTime: 2018-03-21T05:20:08Z
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

@@ -1,0 +1,43 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7700"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-DR209-M-EaaS-lphlcs"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES209": {
+            "category": "Application",
+            "rules": {
+                "7229": {
+                    "display_name": "TF-7229-Web-Administration",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR209-M-EaaS-lphlcs"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7700"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51078977",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-DR209-M-EaaS-lphlcs"
+                    ]
+                }
+            }
+        }
+    }
+}

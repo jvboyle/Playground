@@ -1,0 +1,52 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d115lpeayslbak1",
+            "TF-EU1-HOST-eu1d115lpeayslcol1",
+            "TF-EU1-HOST-eu1d115lpeaysldbc1",
+            "TF-EU1-HOST-eu1d115lpeaysldbp1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES115": {
+            "category": "Application",
+            "rules": {
+                "5164": {
+                    "display_name": "TF-5164-SSH",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d115lpeayslbak1",
+                        "TF-EU1-HOST-eu1d115lpeayslcol1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d115lpeayslbak1",
+                        "TF-EU1-HOST-eu1d115lpeayslcol1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbp1",
+                        "TF-EU1-HOST-eu1d115lpeaysldbc1"
+                    ]
+                }
+            }
+        }
+    }
+}

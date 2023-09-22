@@ -1,0 +1,202 @@
+{
+    "TF-DRES256": {
+        "map_services": {
+            "SERVICES": [
+                "SSH",
+                "TCP-8081",
+                "HTTPS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-HOST-ap1srlpcacfbds1",
+                "TF-AP1-IPSET-ap1irlpm1esldc02",
+                "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+                "TF-AP1-SG-SRES01-OCP-Cluster01",
+                "TF-AP1-IPSET-ap1irlpm1esldc01",
+                "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                "TF-AP1-HOST-ap1d256lpcacpr1",
+                "TF-AP1-SG-SRES-Linux-Jump-Servers",
+                "TF-AP1-IPSET-MCS-CPREM-Jump",
+                "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES256": {
+                "category": "Application",
+                "rules": {
+                    "1600": {
+                        "display_name": "TF-1600-To-esldc",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1irlpm1esldc02",
+                            "TF-AP1-IPSET-ap1irlpm1esldc01"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-IPSET-ap1irlpm1esldc02",
+                            "TF-AP1-HOST-ap1d256lpcacpr1",
+                            "TF-AP1-IPSET-ap1irlpm1esldc01"
+                        ]
+                    },
+                    "1606": {
+                        "display_name": "TF-1606-Jump-to-Dres-Proxy",
+                        "source_groups": [
+                            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AP1-SG-SRES-Linux-Jump-Servers"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "HTTPS",
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1436550",
+                        "scope": [
+                            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                            "TF-AP1-HOST-ap1d256lpcacpr1",
+                            "TF-AP1-SG-SRES-Linux-Jump-Servers",
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP"
+                        ]
+                    },
+                    "1607": {
+                        "display_name": "TF-1607-CPREM-to-Proxy-VIP",
+                        "source_groups": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1436550",
+                        "scope": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump",
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+                        ]
+                    },
+                    "1608": {
+                        "display_name": "TF-1608-Proxy-to-CPREM",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1436550",
+                        "scope": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump",
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ]
+                    },
+                    "1610": {
+                        "display_name": "TF-1610-Proxy-to-BDS",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1srlpcacfbds1",
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ]
+                    },
+                    "1632": {
+                        "display_name": "TF-1632-OCP-to-DRES",
+                        "source_groups": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01",
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ]
+                    },
+                    "1666": {
+                        "display_name": "TF-1666-CPREM-to-Proxy",
+                        "source_groups": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+                            "TF-AP1-HOST-ap1d256lpcacpr1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH",
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": false,
+                        "notes": "SR1436550",
+                        "scope": [
+                            "TF-AP1-IPSET-MCS-CPREM-Jump",
+                            "TF-AP1-HOST-ap1d256lpcacpr1",
+                            "TF-AP1-IPSET-Host-DRES256-Proxy-VIP"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

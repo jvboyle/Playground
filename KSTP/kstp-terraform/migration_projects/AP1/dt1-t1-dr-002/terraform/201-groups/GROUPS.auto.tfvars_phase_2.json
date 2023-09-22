@@ -1,0 +1,30 @@
+{
+    "map_grp": {
+        "AP1-HOST_NAT_CACF_Proxy": {
+            "IP": [
+                "158.87.104.52",
+                "158.87.104.51"
+            ]
+        },
+        "AP1-Host-TEST-CP-SUBNET": {
+            "IP": [
+                "100.120.5.0/24"
+            ]
+        },
+        "AP1-HOST-ap1d290lpcacpr2": {
+            "VM": [
+                "ap1d290lpcacpr2"
+            ]
+        },
+        "AP1-HOST-ap1d290lpcacpr1": {
+            "VM": [
+                "ap1d290lpcacpr1"
+            ]
+        },
+        "AP1-HOST-ap1srlpcacfbds1": {
+            "VM": [
+                "ap1srlpcacfbds1"
+            ]
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-nlaspno000m1ermp",
+            "TF-EU1-HOST-nlaspnp000bgerm",
+            "TF-EU1-HOST-nlascno000m1ermp",
+            "TF-EU1-HOST-nlaspre00bgeerm"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES20": {
+            "category": "Application",
+            "rules": {
+                "1238": {
+                    "display_name": "TF-1238-Netcool-Ping-Probe-OMNibus-Prim-Sec",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspnp000bgerm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlaspnp000bgerm",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ]
+                },
+                "1402": {
+                    "display_name": "TF-1402-Netcool-Ping-Probe-OMNibus-Prim-Sec",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-nlaspre00bgeerm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-nlaspno000m1ermp",
+                        "TF-EU1-HOST-nlascno000m1ermp",
+                        "TF-EU1-HOST-nlaspre00bgeerm"
+                    ]
+                }
+            }
+        }
+    }
+}

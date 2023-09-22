@@ -1,0 +1,154 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "RDP",
+            "SSH",
+            "HTTPS",
+            "BDS-8081",
+            "HTTP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1sr1wjmp02",
+            "TF-EU1-SG-eu1h1lpta1hap-Proxy",
+            "TF-EU1-SG-SRES01-OCP-Cluster02",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-SRES01-OCP-Cluster01",
+            "TF-EU1-HOST-eu1sr1wjmp01",
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+            "TF-EU1-SG-HRES-TALOS-SSHProxy-SharedProd",
+            "TF-EU1-SG-SRES01-OCP-Cluster03",
+            "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+            "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP",
+            "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP",
+            "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP",
+            "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds"
+        ]
+    },
+    "map_policies": {
+        "TF-HRES": {
+            "category": "Application",
+            "rules": {
+                "3703": {
+                    "display_name": "TF-3703-WIN-Jump-EU-AT-to-HRES-SSH-Proxy-for-EU-Shared-FSS-Prod-Instance",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-SharedProd",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster01",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-FSSProd",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-SharedProd",
+                        "TF-EU1-SG-SRES01-OCP-Cluster03",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta2ssh-VIP",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta1ssh-VIP"
+                    ]
+                },
+                "3876": {
+                    "display_name": "TF-3876-WIN-Jump-JP-AT-to-HRES-SSH-Proxy-for-JP-Shared-Instance",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES01-OCP-Cluster02",
+                        "TF-EU1-SG-HRES-TALOS-SSHProxy-JP-Shared-Prod",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-IPSET-HRES-eu1h1lpta3ssh-VIP"
+                    ]
+                },
+                "4664": {
+                    "display_name": "TF-4664-SRES-jump-to-hres-proxy",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                        "TF-EU1-SG-eu1h1lpta1hap-Proxy"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "RDP",
+                        "SSH",
+                        "HTTPS",
+                        "BDS-8081",
+                        "HTTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-HRES-Proxy-eu1h1lpta2hap",
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-eu1h1lpta1hap-Proxy",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                },
+                "8959": {
+                    "display_name": "TF-8959-SRES-to-HRES-BDS-child",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "BDS-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0138596",
+                    "scope": [
+                        "TF-EU1-HOST-eu1sr1wjmp02",
+                        "TF-EU1-SG-HRES-HOST-eu1hr1lpcacfbds",
+                        "TF-EU1-HOST-eu1sr1wjmp01"
+                    ]
+                }
+            }
+        }
+    }
+}

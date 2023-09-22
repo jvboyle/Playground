@@ -1,0 +1,60 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-vpc-10-csc-subnet1-nat",
+            "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1",
+            "TF-AG1-IPSET-NET-IBM-Blue",
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-SG-SRES-WIN-Jump-Servers",
+            "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+            "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1-nat",
+            "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1-nat"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "2818": {
+                    "display_name": "TF-2818-Access-to-VPC",
+                    "source_groups": [
+                        "TF-AG1-IPSET-NET-IBM-Blue",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-vpc-10-csc-subnet1-nat",
+                        "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1",
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+                        "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1-nat",
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1-nat"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1",
+                        "TF-AG1-IPSET-vpc-10-csc-subnet1-nat",
+                        "TF-AG1-IPSET-NET-IBM-Blue",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1",
+                        "TF-AG1-IPSET-vpc-10-sh-nonprod-subnet1-nat",
+                        "TF-AG1-IPSET-vpc-10-dx-platform-prod-subnet1-nat"
+                    ]
+                }
+            }
+        }
+    }
+}

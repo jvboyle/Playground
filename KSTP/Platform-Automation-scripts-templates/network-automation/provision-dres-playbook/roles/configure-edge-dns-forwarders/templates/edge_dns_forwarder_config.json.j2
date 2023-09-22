@@ -1,0 +1,40 @@
+{
+    "featureType": "dns",
+    "enabled": true,
+    "cacheSize": 16,
+    "listeners": {
+        "type": "dhs_listener",
+        "vnic": [
+            "any"
+        ]
+    },
+    "dnsViews": {
+        "dnsView": [
+            {
+                "viewId": "view-0",
+                "name": "vsm-default-view",
+                "enabled": true,
+                "viewMatch": {
+                    "ipAddress": [
+                        "any"
+                    ],
+                    "vnic": [
+                        "any"
+                    ],
+                    "ipSet": []
+                },
+                "recursion": false,
+                "forwarders": {
+                    "ipAddress": [
+                        "{{sres_dns1_ip}}",
+                        "{{sres_dns2_ip}}"
+                    ]
+                }
+            }
+        ]
+    },
+    "logging": {
+        "enable": true,
+        "logLevel": "emergency"
+    }
+}

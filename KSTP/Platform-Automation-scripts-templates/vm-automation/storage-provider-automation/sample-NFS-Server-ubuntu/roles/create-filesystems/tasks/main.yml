@@ -1,0 +1,5 @@
+# The purpose of this task will be to create and export
+# the filesystems required by the Consumable service
+
+# Note that they will need to created on the disk(s) created to hold the
+# Consumable Service data  ( e.g. /dev/sdb, /dev/sbc .....)

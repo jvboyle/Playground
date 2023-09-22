@@ -1,0 +1,51 @@
+{
+    "migration_date": "05/12/2023 12:24",
+    "geography": "AP1",
+    "wave": "DRES101",
+    "rules": {
+        "total": 10,
+        "rules": [
+            "1315",
+            "1257",
+            "1258",
+            "1259",
+            "1137",
+            "1138",
+            "1139",
+            "1140",
+            "1429",
+            "1715"
+        ]
+    },
+    "vms": {
+        "ap1d101lpcacprx1": {
+            "new_vm_group": "TF-AP1-HOST-ap1d101lpcacprx1",
+            "ip": "100.80.78.51",
+            "groups": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers",
+                "TF-AP1-HOST-ap1d101lpcacprx1"
+            ],
+            "original_groups": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ]
+        },
+        "ap1d101lpcacprx2": {
+            "new_vm_group": "TF-AP1-HOST-ap1d101lpcacprx2",
+            "ip": "100.80.78.52",
+            "groups": [
+                "TF-AP1-HOST-ap1d101lpcacprx2"
+            ],
+            "original_groups": []
+        },
+        "ap1d101lpcacprx_vip": {
+            "new_vm_group": "TF-AP1-HOST-ap1d101lpcacprx_vip",
+            "ip": "100.80.78.50",
+            "groups": [
+                "TF-AP1-HOST-ap1d101lpcacprx_vip"
+            ],
+            "original_groups": []
+        }
+    }
+}

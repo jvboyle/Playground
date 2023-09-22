@@ -1,0 +1,27 @@
+######################################################
+# migration: eu_sres_wave3
+######################################################
+   rule {
+         display_name = "TF-8419-SL1-Data-Collectors-to-Netcool-WebGUI"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-NET-SL-IRES-EM7-Data-Collector"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Netcool-WebGUI"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-16311"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-Monitoring-EU1"
+            }
+      }

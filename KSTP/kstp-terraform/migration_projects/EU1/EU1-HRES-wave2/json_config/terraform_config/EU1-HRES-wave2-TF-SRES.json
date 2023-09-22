@@ -1,0 +1,83 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+            "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+            "TF-EU1-IPSET-SRES-eu1rhellic01",
+            "TF-EU1-HOST-eu1srlpisiwai01",
+            "TF-EU1-HOST-eu1srlpisiwai04",
+            "TF-EU1-HOST-eu1srlpisiwai03",
+            "TF-EU1-SG-SR51023015-DPT-22-VM-List",
+            "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+            "TF-EU1-HOSTS-LinuxOS-All",
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+            "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+            "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+            "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+            "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+            "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+            "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+            "TF-EU1-HOST-eu1srlpisiwai02"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES": {
+            "category": "Application",
+            "rules": {
+                "6800": {
+                    "display_name": "TF-6800-ISIM-connect-to-server",
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-HOSTS-LinuxOS-All",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-SG-SR50974892-DPT-22-VM-List",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SR51023015-DPT-22-VM-List"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50974892\nSR51023015",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-IAMInfra-WAS",
+                        "TF-EU1-SG-ISIM-VM-DESTINATION-SSH",
+                        "TF-EU1-IPSET-SRES-eu1rhellic01",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1srlpisiwai02",
+                        "TF-EU1-HOST-eu1srlpisiwai04",
+                        "TF-EU1-HOST-eu1srlpisiwai03",
+                        "TF-EU1-SG-SR51023015-DPT-22-VM-List",
+                        "TF-EU1-IPSET-SRES-eu1sr1lnbzztest",
+                        "TF-EU1-HOSTS-LinuxOS-All",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzprod2",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1lpbzzprod",
+                        "TF-EU1-IPSET-SRES-eu1sr1cntrl1",
+                        "TF-EU1-IPSET-SRES-eu1sr1lpi2pprx1",
+                        "TF-EU1-SG-SRES-HOST-eu1sr1dxdev02",
+                        "TF-EU1-SG-SRES-HOST-eu1srlpmsatcld1",
+                        "TF-EU1-SG-SR50974892-DPT-22-VM-List"
+                    ]
+                }
+            }
+        }
+    }
+}

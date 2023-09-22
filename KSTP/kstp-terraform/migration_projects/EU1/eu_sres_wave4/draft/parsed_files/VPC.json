@@ -1,0 +1,148 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-7443",
+            "HTTPS",
+            "TCP-8443"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpisiwam20",
+            "TF-EU1-HOST-eu1srlpisiwai90",
+            "TF-EU1-SG-SRES-ISIM-MAIL",
+            "TF-EU1-HOST-eu1srlpisiwam01",
+            "TF-EU1-HOST-eu1srwnisiwin01",
+            "TF-EU1-HOST-eu1srlpisiwam70",
+            "TF-EU1-HOST-eu1srlpisiwam50",
+            "TF-EU1-HOST-eu1srlpisiwai01",
+            "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+            "TF-EU1-HOST-eu1srlpisiwam30",
+            "TF-EU1-HOST-eu1srlpisiwam40",
+            "TF-EU1-HOST-eu1srlpisiwam60",
+            "TF-EU1-HOST-eu1srlpisiwam80",
+            "TF-EU1-HOST-eu1srlpisiwam95",
+            "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+        ]
+    },
+    "map_policies": {
+        "TF-VPC": {
+            "category": "Application",
+            "rules": {
+                "8824": {
+                    "display_name": "TF-8824-VPC-IKS-to-IAMaaS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpisiwam20",
+                        "TF-EU1-HOST-eu1srlpisiwam01",
+                        "TF-EU1-HOST-eu1srlpisiwam70",
+                        "TF-EU1-HOST-eu1srlpisiwam50",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1srlpisiwam30",
+                        "TF-EU1-HOST-eu1srlpisiwam95",
+                        "TF-EU1-HOST-eu1srlpisiwam40",
+                        "TF-EU1-HOST-eu1srlpisiwam60",
+                        "TF-EU1-HOST-eu1srlpisiwam80",
+                        "TF-EU1-HOST-eu1srlpisiwai90"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0127132",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpisiwam20",
+                        "TF-EU1-HOST-eu1srlpisiwam01",
+                        "TF-EU1-HOST-eu1srlpisiwam80",
+                        "TF-EU1-HOST-eu1srlpisiwam70",
+                        "TF-EU1-HOST-eu1srlpisiwam50",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1srlpisiwam30",
+                        "TF-EU1-HOST-eu1srlpisiwam40",
+                        "TF-EU1-HOST-eu1srlpisiwam60",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2",
+                        "TF-EU1-HOST-eu1srlpisiwam95",
+                        "TF-EU1-HOST-eu1srlpisiwai90"
+                    ]
+                },
+                "8956": {
+                    "display_name": "TF-8956-VPC-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srwnisiwin01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-7443",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0137233",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srwnisiwin01",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ]
+                },
+                "8971": {
+                    "display_name": "TF-8971-SSP-mailing",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-MAIL"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0138822\nRITM0142793",
+                    "scope": [
+                        "TF-EU1-SG-SRES-ISIM-MAIL",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ]
+                },
+                "8996": {
+                    "display_name": "TF-8996-VPC-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-IAMaaS-RITM0140502"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0140502",
+                    "scope": [
+                        "TF-EU1-SG-SRES-IAMaaS-RITM0140502",
+                        "TF-EU1-IPSET-vpc-20-sh-prod-subnet2"
+                    ]
+                }
+            }
+        }
+    }
+}

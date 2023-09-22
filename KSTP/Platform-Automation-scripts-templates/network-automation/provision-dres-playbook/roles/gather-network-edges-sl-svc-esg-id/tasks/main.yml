@@ -1,0 +1,4 @@
+  - set_fact:
+      sl_svc_esg_id: "{{ get_edges | json_query(query) | first }}"
+    vars:
+      query: "json.edgePage.data[?name=='{{ sl_svc_esg_name }}'].id"

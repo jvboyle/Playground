@@ -1,0 +1,129 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "LDAP",
+            "WINS",
+            "KERBEROS-UDP",
+            "MS_RPC_TCP",
+            "SMTP",
+            "LDAP-UDP",
+            "NBDG-Broadcast",
+            "NBNS-Unicast",
+            "NBNS-Broadcast",
+            "Windows-Global-Catalog",
+            "NBDG-Unicast",
+            "DHCP-Server",
+            "SOAP",
+            "KERBEROS",
+            "Active Directory Server UDP",
+            "TCP-3306",
+            "DNS",
+            "DNS-UDP",
+            "MS-DS-UDP",
+            "MS-DS-TCP",
+            "WINS-UDP",
+            "NTP Time Server",
+            "Active Directory Server",
+            "Windows-Global-Catalog-over-SSL",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-nlascno000iswrm",
+            "TF-EU1-HOST-eu1srlPtmmch",
+            "TF-EU1-HOST-eu1srlPdshbrd",
+            "TF-EU1-SG-SRES-STaaS-AD-DNS",
+            "TF-EU1-SG-SRES-RPA-AD-DNS",
+            "TF-EU1-SG-DR62-SolarWinds-DC",
+            "TF-EU1-IPSET-nlaspno000iswrm",
+            "TF-EU1-SG-IRES-SL1-Collectors"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "5752": {
+                    "display_name": "TF-5752-Connectivity-between-SL-and-domain-controllers",
+                    "source_groups": [
+                        "TF-EU1-SG-IRES-SL1-Collectors"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-SRES-RPA-AD-DNS",
+                        "TF-EU1-SG-DR62-SolarWinds-DC"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "LDAP",
+                        "WINS",
+                        "KERBEROS-UDP",
+                        "MS_RPC_TCP",
+                        "SMTP",
+                        "LDAP-UDP",
+                        "NBDG-Broadcast",
+                        "NBNS-Unicast",
+                        "NBNS-Broadcast",
+                        "Windows-Global-Catalog",
+                        "NBDG-Unicast",
+                        "DHCP-Server",
+                        "SOAP",
+                        "KERBEROS",
+                        "Active Directory Server UDP",
+                        "DNS",
+                        "DNS-UDP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "WINS-UDP",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "Windows-Global-Catalog-over-SSL"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-STaaS-AD-DNS",
+                        "TF-EU1-SG-IRES-SL1-Collectors",
+                        "TF-EU1-SG-SRES-RPA-AD-DNS",
+                        "TF-EU1-SG-DR62-SolarWinds-DC"
+                    ]
+                },
+                "7600": {
+                    "display_name": "TF-7600-JDBC-Integration-for-STaaS-Dashboard",
+                    "source_groups": [
+                        "TF-EU1-IPSET-nlascno000iswrm",
+                        "TF-EU1-IPSET-nlaspno000iswrm"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlPtmmch",
+                        "TF-EU1-HOST-eu1srlPdshbrd"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3306"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51201165",
+                    "scope": [
+                        "TF-EU1-IPSET-nlascno000iswrm",
+                        "TF-EU1-IPSET-nlaspno000iswrm",
+                        "TF-EU1-HOST-eu1srlPtmmch",
+                        "TF-EU1-HOST-eu1srlPdshbrd"
+                    ]
+                }
+            }
+        }
+    }
+}

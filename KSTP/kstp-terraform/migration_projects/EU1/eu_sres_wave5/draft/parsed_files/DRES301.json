@@ -1,0 +1,54 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-HOST-eu1d301lpcacprx2",
+            "TF-EU1-HOST-eu1d301lpcacprx1",
+            "TF-EU1-IPSET-DRES301-CACF-Proxy-VIP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES301": {
+            "category": "Application",
+            "rules": {
+                "8953": {
+                    "display_name": "TF-8953-SRES-JH-to-CAFCF-Proxy-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d301lpcacprx2",
+                        "TF-EU1-HOST-eu1d301lpcacprx1",
+                        "TF-EU1-IPSET-DRES301-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0191751",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-HOST-eu1d301lpcacprx2",
+                        "TF-EU1-HOST-eu1d301lpcacprx1",
+                        "TF-EU1-IPSET-DRES301-CACF-Proxy-VIP"
+                    ]
+                }
+            }
+        }
+    }
+}

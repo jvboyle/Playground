@@ -1,0 +1,546 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-22",
+            "LDAP-over-SSL",
+            "TCP-50000",
+            "TCP-60000",
+            "SMTP_TLS",
+            "TCP-16351",
+            "SMTP",
+            "TCP-8443",
+            "TCP-10548",
+            "SSH",
+            "HTTPS",
+            "TCP-12057",
+            "TCP-12051",
+            "TCP-10501",
+            "TCP-9443",
+            "DNS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-ESLS-UAT",
+            "TF-AG1-IPSET-Host-ag1srlpdvadb01",
+            "TF-AG1-IPSET-secure-file-service-ocp1",
+            "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+            "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+            "TF-AG1-IPSET-agnsrlnicp1p-vip",
+            "TF-AG1-SG-PDR-SMTP-Server",
+            "TF-AG1-IPSET-test-oc4q5-omnibus",
+            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+            "TF-AG1-HOST-ag1srlphwcmon01",
+            "TF-AG1-IPSET-Host-nlaspnp000m1erms",
+            "TF-AG1-IPSET-ag1srwpdvaapp",
+            "TF-AG1-IPSET-test-rdszz-omnibus",
+            "TF-AG1-IPSET-Host-MNE-Dev-Test",
+            "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+            "TF-AG1-IPSET-meaas-noi-inn6y-nc2",
+            "TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+            "TF-AG1-HOST-ag1srwphwcgrfdb",
+            "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+            "TF-AG1-HOST-ag1srlphwcsss01",
+            "TF-AG1-SG-SRES01-ICp-Cluster01",
+            "TF-AG1-IPSET-EU1-SRES-eu1srlngacdwdb",
+            "TF-AG1-SG-All-Windows-Hosts",
+            "TF-AG1-IPSET-ap1sr1lpcacprx1-vip",
+            "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+            "TF-AG1-IPSET-me-test-e4v7g-netcool",
+            "TF-AG1-IPSET-SRES-ag1irlpipam01",
+            "TF-AG1-HOST-ag1sr1wdns02",
+            "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+            "TF-AG1-IPSET-US-GRF-SSS",
+            "TF-AG1-HOST-ag1srwphwcgrfds",
+            "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+            "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+            "TF-AG1-HOST-ag1srwphwcetl01",
+            "TF-AG1-IPSET-Host-GACDW-AG-DB",
+            "TF-AG1-IPSET-Host-NET-SRES-APP",
+            "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+            "TF-AG1-HOST-ag1sr1staas2",
+            "TF-AG1-IPSET-Host-ag1srlpdvaapp01",
+            "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+            "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+            "TF-AG1-IPSET-Host-anzproductionapp-hwsw-"
+        ]
+    },
+    "map_policies": {
+        "TF-SRES": {
+            "category": "Application",
+            "rules": {
+                "1894": {
+                    "display_name": "TF-1894-DVAA-Prod-VMs-to-PDR-SMTP-Server-SR50790165",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-IPSET-Host-ag1srlpdvadb01",
+                        "TF-AG1-IPSET-Host-ag1srlpdvaapp01",
+                        "TF-AG1-HOST-ag1srwphwcgrfds",
+                        "TF-AG1-IPSET-ag1srwpdvaapp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-IPSET-Host-ag1srlpdvadb01",
+                        "TF-AG1-IPSET-Host-ag1srlpdvaapp01",
+                        "TF-AG1-HOST-ag1srwphwcgrfds",
+                        "TF-AG1-SG-PDR-SMTP-Server",
+                        "TF-AG1-IPSET-ag1srwpdvaapp"
+                    ]
+                },
+                "2291": {
+                    "display_name": "TF-2291-ALL-Win-Servers-to-Staas2-DNS02",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-All-Windows-Hosts"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                        "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-HOST-ag1sr1wdns02"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "LDAP-over-SSL",
+                        "HTTPS",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50942226",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-SG-All-Windows-Hosts",
+                        "TF-AG1-IPSET-IRES-NAT-ag1sr1staas2",
+                        "TF-AG1-IPSET-IRES-NAT-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1sr1wdns02"
+                    ]
+                },
+                "3202": {
+                    "display_name": "TF-3202-SRES-to-ICP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-16351"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51306624",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-Host-MNE-Dev-Test"
+                    ]
+                },
+                "3262": {
+                    "display_name": "TF-3262-ICP-to-SRES",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                        "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-test-oc4q5-omnibus",
+                        "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                        "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                        "TF-AG1-IPSET-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nc2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc",
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-NAT-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-NAT-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-test-oc4q5-omnibus",
+                        "TF-AG1-IPSET-NAT-meaas-noi-inn6y-nc2",
+                        "TF-AG1-IPSET-NAT-test-oc4q5-omnibus",
+                        "TF-AG1-IPSET-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nc2"
+                    ]
+                },
+                "3263": {
+                    "display_name": "TF-3263-SRES-to-ICP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nco-",
+                        "TF-AG1-IPSET-test-oc4q5-omnibus"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-test-oc4q5-omnibus",
+                        "TF-AG1-IPSET-test-rdszz-omnibus",
+                        "TF-AG1-IPSET-me-test-e4v7g-netcool",
+                        "TF-AG1-IPSET-meaas-noi-inn6y-nco-"
+                    ]
+                },
+                "3270": {
+                    "display_name": "TF-3270-PenTest-VM-for-ChatOps",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                        "TF-AG1-IPSET-agnsrlnicp1p-vip"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-SRES-ag1irlpipam01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50099191",
+                    "scope": [
+                        "TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+                        "TF-AG1-IPSET-agnsrlnicp1p-vip",
+                        "TF-AG1-IPSET-SRES-ag1irlpipam01"
+                    ]
+                },
+                "3276": {
+                    "display_name": "TF-3276-SRES-to-ICP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "146.89.238.165"
+                    ],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51357166",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ]
+                },
+                "3281": {
+                    "display_name": "TF-3281-File-transfer",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srlphwcsss01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srwphwcetl01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-22"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51364128",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlphwcsss01",
+                        "TF-AG1-HOST-ag1srwphwcetl01"
+                    ]
+                },
+                "3310": {
+                    "display_name": "TF-3310-NA-SRES-to-EU-SRES-SSH-flow",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srwphwcgrfds"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "158.87.53.178",
+                        "158.87.52.69"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51385647",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srwphwcgrfds"
+                    ]
+                },
+                "3456": {
+                    "display_name": "TF-3456-DB-to-ag1srlphwcsss01-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-Host-GACDW-AG-DB"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlphwcsss01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-50000",
+                        "TCP-60000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0094887",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlphwcsss01",
+                        "TF-AG1-IPSET-Host-GACDW-AG-DB"
+                    ]
+                },
+                "3457": {
+                    "display_name": "TF-3457-ag1srlphwcsss01-to-DB",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1srlphwcsss01",
+                        "TF-AG1-IPSET-secure-file-service-ocp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Host-GACDW-AG-DB"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-10548",
+                        "TCP-10501",
+                        "TCP-12051",
+                        "TCP-12057"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0094887\nRITM0115048",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlphwcsss01",
+                        "TF-AG1-IPSET-secure-file-service-ocp1",
+                        "TF-AG1-IPSET-Host-GACDW-AG-DB"
+                    ]
+                },
+                "3483": {
+                    "display_name": "TF-3483-NA-to-EU-Chatops-integration",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Host-nlaspnp000m1erms"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-9443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-Host-nlaspnp000m1erms"
+                    ]
+                },
+                "3510": {
+                    "display_name": "TF-3510-ANZ-SRES-to-NA-SRES",
+                    "disabled": true,
+                    "source_groups": [
+                        "TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+                        "TF-AG1-IPSET-Host-anzproductionapp-hwsw-",
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+                        "TF-AG1-IPSET-ap1sr1lpcacprx1-vip"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlphwcmon01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0118072",
+                    "scope": [
+                        "TF-AG1-IPSET-AP-SRES-OCP-Cluster1-VIP",
+                        "TF-AG1-IPSET-SRES-LB-OCP-Cluster1-VIP",
+                        "TF-AG1-IPSET-ap1sr1lpcacprx1-vip",
+                        "TF-AG1-HOST-ag1srlphwcmon01",
+                        "TF-AG1-IPSET-Host-anzproductionapp-hwsw-"
+                    ]
+                },
+                "3526": {
+                    "display_name": "TF-3526-CHATOPS-to-ICD",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-ESLS-UAT"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet",
+                        "TF-AG1-IPSET-ESLS-UAT"
+                    ]
+                },
+                "3527": {
+                    "display_name": "TF-3527-ICD-to-CHATOPS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-ESLS-UAT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0118985",
+                    "scope": [
+                        "TF-AG1-SG-SRES01-ICp-Cluster01",
+                        "TF-AG1-IPSET-ESLS-UAT",
+                        "TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+                        "TF-AG1-IPSET-Tanzu-Workload-04-Subnet"
+                    ]
+                },
+                "3621": {
+                    "display_name": "TF-3621-US-Only-GRF-to-NA-GRF",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-US-GRF-SSS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-50000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "RITM0123640",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srwphwcgrfdb",
+                        "TF-AG1-IPSET-US-GRF-SSS"
+                    ]
+                },
+                "3700": {
+                    "display_name": "TF-3700-GACDW-EU-To-Sres",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-IPSET-EU1-SRES-eu1srlngacdwdb"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlphwcsss01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-60000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0134328",
+                    "scope": [
+                        "TF-AG1-HOST-ag1srlphwcsss01",
+                        "TF-AG1-IPSET-EU1-SRES-eu1srlngacdwdb"
+                    ]
+                },
+                "3745": {
+                    "display_name": "TF-3745-KSTP-2023-Pen-Test-SRES-scan",
+                    "disabled": true,
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-Host-NET-SRES-APP"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0139451",
+                    "scope": [
+                        "TF-AG1-IPSET-Host-NET-SRES-APP"
+                    ]
+                }
+            }
+        }
+    }
+}

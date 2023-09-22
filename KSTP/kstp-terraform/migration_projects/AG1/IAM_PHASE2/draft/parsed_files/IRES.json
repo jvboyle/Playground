@@ -1,0 +1,110 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "NetBios Datagram (UDP)",
+            "MS_RPC_TCP",
+            "NetBios Session Service (TCP)",
+            "TCP-5986",
+            "SMB",
+            "TCP-5985",
+            "NetBios Name Service (UDP)",
+            "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-NET-SL-IRES-Portable",
+            "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+            "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+            "TF-AG1-HOST-ag1sr1wniamptr1",
+            "TF-AG1-HOST-ag1sr1wniamptt1",
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-HOST-ag1sr1wniamptr2",
+            "TF-AG1-HOST-ag1sr1wniamptq2",
+            "TF-AG1-SG-TS-Session-Hosts",
+            "TF-AG1-HOST-ag1sr1wniamptra",
+            "TF-AG1-HOST-ag1sr1wniamptt2",
+            "TF-AG1-HOST-ag1sr1wniamptq1",
+            "TF-AG1-SG-IRES-TS-License-Server",
+            "TF-AG1-HOST-ag1dc2",
+            "TF-AG1-HOST-ag1jump02"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "1114": {
+                    "display_name": "TF-1114-Terminal-servers-to-License-server",
+                    "source_groups": [
+                        "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                        "TF-AG1-SG-TS-Session-Hosts"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-IRES-TS-License-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NetBios Datagram (UDP)",
+                        "TCP-5986",
+                        "MS_RPC_TCP",
+                        "NetBios Session Service (TCP)",
+                        "SMB",
+                        "NetBios Name Service (UDP)",
+                        "TCP-5985",
+                        "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR51015869 -  source  SG-SRES-IAM-THY-RAS-PROD,SG-SRES-IAM-THY-RAS-NONPROD added to the source",
+                    "scope": [
+                        "TF-AG1-IPSET-NET-SL-IRES-Portable",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-PROD",
+                        "TF-AG1-SG-SRES-IAM-THY-RAS-NONPROD",
+                        "TF-AG1-SG-TS-Session-Hosts",
+                        "TF-AG1-SG-IRES-TS-License-Server",
+                        "TF-AG1-HOST-ag1jump02"
+                    ]
+                },
+                "2331": {
+                    "display_name": "TF-2331-IAMaas--Thycotic-Pentest",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1wniamptr1",
+                        "TF-AG1-HOST-ag1sr1wniamptt1",
+                        "TF-AG1-HOST-ag1sr1wniamptr2",
+                        "TF-AG1-HOST-ag1sr1wniamptra",
+                        "TF-AG1-HOST-ag1sr1wniamptq2",
+                        "TF-AG1-HOST-ag1sr1wniamptq1",
+                        "TF-AG1-HOST-ag1sr1wniamptt2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1dc1"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955390",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1wniamptr1",
+                        "TF-AG1-HOST-ag1sr1wniamptt1",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-HOST-ag1sr1wniamptr2",
+                        "TF-AG1-HOST-ag1sr1wniamptq2",
+                        "TF-AG1-HOST-ag1sr1wniamptra",
+                        "TF-AG1-HOST-ag1sr1wniamptq1",
+                        "TF-AG1-HOST-ag1sr1wniamptt2",
+                        "TF-AG1-HOST-ag1dc2"
+                    ]
+                }
+            }
+        }
+    }
+}

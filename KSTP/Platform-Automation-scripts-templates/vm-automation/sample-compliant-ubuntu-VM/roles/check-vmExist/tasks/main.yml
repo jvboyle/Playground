@@ -1,0 +1,25 @@
+# Ansible - VMware playbook to check if VM with specific name exist
+- name: Check if VM with name {{ inventory_hostname }} exist on vCenter {{ vcenter }}
+  vmware_vm_facts:
+    hostname: "{{ vcenter }}"
+    username: "{{ lookup('env','vsphere_user') }}"
+    password: "{{ lookup('env','vsphere_password') }}"
+    validate_certs: no
+    vm_type: all
+  delegate_to: localhost
+  register: facts_check
+- set_fact:
+    vm_exist: "no"
+  when: inventory_hostname not in facts_check.virtual_machines
+
+- set_fact:
+    vm_exist: "yes"
+  when: inventory_hostname in facts_check.virtual_machines
+
+- debug:
+    msg: VM with name {{ inventory_hostname }} does not exist on vCenter {{ vcenter }}
+  when: inventory_hostname not in facts_check.virtual_machines
+
+- debug:
+    msg: VM with name {{ inventory_hostname }} already exist on vCenter {{ vcenter }}
+  when: inventory_hostname in facts_check.virtual_machines

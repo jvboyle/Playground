@@ -1,0 +1,13 @@
+[gluster_peers]
+158.87.48.66 ansible_host=158.87.48.66
+158.87.48.67 ansible_host=158.87.48.67
+
+[gluster_client]
+158.87.48.68 ansible_host=158.87.48.68
+
+[gluster:children]
+gluster_peers
+gluster_client
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3

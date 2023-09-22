@@ -1,0 +1,63 @@
+- name: install BESAgent rpm from a local file
+  yum:
+    name: "{{ os_repo_path }}/BESAgent/BESAgent-9.5.9.62-rhe6.x86_64.rpm"
+    state: present
+  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+  tags: bigfix
+- name: install BESAgent deb from a local file
+  apt:
+   deb: "{{ os_repo_path }}/BESAgent/BESAgent-9.5.9.62-ubuntu10.amd64.deb"
+  when: ansible_distribution == "Ubuntu"
+  tags: bigfix
+- name: Stop besclient service
+  service:
+    name: besclient
+    state: stopped
+  tags: bigfix,bigfix_relay1, bigfix_relay2
+- name: Delete directory /var/opt/BESClient
+  file:
+    dest: /var/opt/BESClient
+    state: absent
+  tags: bigfix,bigfix_relay1,bigfix_relay2
+- name: Create directory /etc/opt/BESClient and /var/opt/BESClient
+  file:
+    dest: "{{ item }}"
+    state: directory
+    mode: 0755
+  with_list:
+   - /var/opt/BESClient
+   - /etc/opt/BESClient
+  tags: bigfix,bigfix_relay1,bigfix_relay2
+- name: Copy the masthead file to /etc/opt/BESClient/actionsite.afxm
+  copy:
+    src: "{{ os_repo_path }}/BESAgent/{{ BigFix_masthead_file }}"
+    dest: /etc/opt/BESClient/
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: True
+  tags: bigfix,bigfix_relay1,bigfix_relay2
+- name: Copy besclient.config to /var/opt/BESClient ( relay 1 )
+  copy:
+    src: "{{ os_repo_path }}/BESAgent/{{ BigFix_besclient_configuration_relay1 }}"
+    dest: /var/opt/BESClient/
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: True
+  tags: bigfix_relay1
+- name: Copy besclient.config to /var/opt/BESClient ( relay 2 )
+  copy:
+    src: "{{ os_repo_path }}/BESAgent/{{ BigFix_besclient_configuration_relay2 }}"
+    dest: /var/opt/BESClient/
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: True
+  tags: bigfix_relay2
+- name: Start besclient service
+  service:
+    name: besclient
+    state: started
+    enabled: yes
+  tags: bigfix,bigfix_relay1, bigfix_relay2

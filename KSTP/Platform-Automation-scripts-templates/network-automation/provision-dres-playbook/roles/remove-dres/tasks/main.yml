@@ -1,0 +1,53 @@
+---
+  - name: RES DLR Delete
+    nsx_dlr:
+      nsxmanager_spec: "{{ nsxmanager_spec }}"
+      state: absent
+      name: "{{ dlr_name }}"
+      resourcepool_moid: ''
+      datastore_moid: ''
+      datacenter_moid: ''
+      mgmt_portgroup_moid: ''
+      interfaces: []
+    register: delete_dlr
+    tags: dlr_delete
+    when: confirm_dres_remove == "yes"
+
+  - name: RES ESG Delete
+    nsx_edge_router:
+      nsxmanager_spec: "{{ nsxmanager_spec }}"
+      state: absent
+      name: "{{ res_esg_name }}"
+      resourcepool_moid: ''
+      datastore_moid: ''
+      datacenter_moid: ''
+      interfaces: {}
+    register: delete_res_esg
+    tags: res_esg_delete
+    when: confirm_dres_remove == "yes"
+
+  - name: RES VPN Delete
+    nsx_edge_router:
+      nsxmanager_spec: "{{ nsxmanager_spec }}"
+      state: absent
+      name: "{{ vpn_esg_name }}"
+      resourcepool_moid: ''
+      datastore_moid: ''
+      datacenter_moid: ''
+      interfaces: {}
+    register: delete_vpn_esg
+    tags: res_vpn_delete
+    when: confirm_dres_remove == "yes"
+
+  - name: delete logical switches
+    nsx_logical_switch:
+      nsxmanager_spec: "{{ nsxmanager_spec }}"
+      state: absent
+      transportzone: "{{ transport_zone }}"
+      name: "{{ item.value.name }}"
+      controlplanemode: "{{ cp_mode }}"
+      description: "{{ item.value.name }}"
+    with_dict: "{{ new_ls }}"
+    register: logical_switch
+    tags: lswitch_delete
+    when: confirm_dres_remove == "yes"

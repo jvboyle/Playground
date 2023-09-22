@@ -1,0 +1,4 @@
+dres_internal_net: "{{ lookup('template', 'dres_internal_net.json.j2') }}"
+dres_transit_net: "{{ lookup('template', 'dres_transit_net.json.j2') }}"
+internal_net: '{{app_internal_subnet}}/{{app_internal_subnet_prefix}}'
+transit_net: '{{dres_transit_subnet}}/{{dres_transit_subnet_prefix}}'

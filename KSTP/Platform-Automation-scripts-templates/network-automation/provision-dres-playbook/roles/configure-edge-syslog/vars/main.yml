@@ -1,0 +1,1 @@
+edge_syslog_config: "{{ lookup('template', 'edge_syslog_config.json.j2') }}"

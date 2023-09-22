@@ -1,0 +1,1289 @@
+{
+    "geography": "AP1",
+    "wave": "DRES_256",
+    "migration_date": "05/08/2023 13:39",
+    "dynamic_groups": {
+        "TF-AP1-DRES264-CACF-Proxy": {
+            "original_name": "DRES264 CACF Proxy",
+            "type": "dynamic",
+            "query_value": "VM.NAME",
+            "criteria": {
+                "starts_with": [
+                    "ap1d264lpcacpr"
+                ]
+            }
+        },
+        "TF-AP1-SG-DRES110-OCP-Cluster02": {
+            "original_name": "SG-DRES110-OCP-Cluster02",
+            "type": "dynamic",
+            "query_value": "VM.NAME",
+            "criteria": {
+                "starts_with": [
+                    "ap1dbpilp"
+                ]
+            }
+        },
+        "TF-AP1-SG-IRES-SPPLUS": {
+            "original_name": "SG-IRES-SPPLUS",
+            "type": "dynamic",
+            "query_value": "VM.NAME",
+            "criteria": {
+                "starts_with": [
+                    "spplus"
+                ]
+            }
+        },
+        "TF-AP1-SG-ap1sr1wppd": {
+            "original_name": "SG-ap1sr1wppd",
+            "type": "dynamic",
+            "query_value": "VM.NAME",
+            "criteria": {
+                "starts_with": [
+                    "ap1sr1"
+                ]
+            }
+        }
+    },
+    "static_groups": {
+        "empty_groups": [
+            "SG-IRES-LIN-MSS-Qradar-EC",
+            "SG-SRES-RHEL-Licensing",
+            "SG-IRES-WIN-VMware-vROPS",
+            "SG-IRES-WIN-VMware-vLI",
+            "SG-SRES-WIN-SEPM",
+            "SG-SRES-Sciencelogic-DB-servers"
+        ],
+        "valid_groups": {
+            "TF-AP1-SG-AP-MSS-QRADAR-DC": {
+                "original_name": "SG-AP-MSS-QRADAR-DC",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1lmssqr01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-DRES-ALL-CACF-Proxy": {
+                "original_name": "SG-DRES-ALL-CACF-Proxy",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1h1lpta1ssh2",
+                        "ap1d105lpcacpr1",
+                        "ap1d105lpcacpr2",
+                        "ap1d107lpcacpr1",
+                        "ap1d129lpcacpr1",
+                        "ap1d127lpcacpr1",
+                        "ap1d108lpcacpr1",
+                        "ap1d130lpcacpr1",
+                        "ap1pdr1prx01",
+                        "ap1sr1lpcacprx2",
+                        "ap1d128lpcacpr1",
+                        "ap1d103lpcacprx1",
+                        "ap1d110lpcacpr1",
+                        "ap1d101lpcacprx1",
+                        "ap1h1lpta1ssh1",
+                        "ap1d110lpcacpr2",
+                        "ap1pdr1prx02",
+                        "ap1sr1lpcacprx1",
+                        "ap1d107lpcacpr2",
+                        "ap1d114lpcacpr2",
+                        "ap1d141lpcacpr1",
+                        "ap1d114lpcacpr1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-DRES-Proxy-Servers": {
+                "original_name": "SG-DRES-Proxy-Servers",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1d107lpcacpr1",
+                        "ap1d128lpcacpr1",
+                        "ap1d127lpcacpr1",
+                        "ap1d103lpcacprx1",
+                        "ap1d105lpcacpr1",
+                        "ap1d110lpcacpr1",
+                        "ap1d101lpcacprx1",
+                        "ap1d141lpcacpr1",
+                        "ap1d108lpcacpr1",
+                        "ap1d130lpcacpr1",
+                        "ap1d105lpcacpr2"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-HRES-HA-Proxy-IN": {
+                "original_name": "SG-HRES-HA-Proxy-IN",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1h1lpta1hap2",
+                        "ap1h1lpta1hap1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-HRES-HA-Proxy-OUT": {
+                "original_name": "SG-HRES-HA-Proxy-OUT",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1h1lpta2hap1",
+                        "ap1h1lpta2hap2"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-HRES-TALOS-SSHProxy": {
+                "original_name": "SG-HRES-TALOS-SSHProxy",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1h1lpta1ssh1",
+                        "ap1h1lpta1ssh2"
+                    ],
+                    "IPSet": [
+                        "HOST-SNAT-to-DA"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-IRES-WIN-TS-Licensing": {
+                "original_name": "SG-IRES-WIN-TS-Licensing",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1wtslic01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-IRES-WIN-VMware-Monitoring": {
+                "original_name": "SG-IRES-WIN-VMware-Monitoring",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1vmon"
+                    ],
+                    "IPSet": [
+                        "HOST-ap1vmon"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-IRES-WIN-VMware-vRO": {
+                "original_name": "SG-IRES-WIN-VMware-vRO",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1vro01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-PDR-Internet-Proxy-Server": {
+                "original_name": "SG-PDR-Internet-Proxy-Server",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1pdr1prx01",
+                        "ap1pdr1prx02"
+                    ],
+                    "IPSet": [
+                        "HOST-PDR-Proxy-VIP",
+                        "HOST-dnat-to-PDR-Proxy-from-IRES"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-PDR-SMTP-Relay": {
+                "original_name": "SG-PDR-SMTP-Relay",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1pdr1smtp01"
+                    ],
+                    "IPSet": [
+                        "HOST-ap1pdr1smtp01-IRES-NAT"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-IRES-WIN-AD-DNS-NTP": {
+                "original_name": "SG-SL-IRES-WIN-AD-DNS-NTP",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1dc1",
+                        "ap1dc2"
+                    ],
+                    "IPSet": [
+                        "IPSET-SL-IRES-WIN-AD-DNS-NTP"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-IRES-WIN-Jump-Servers": {
+                "original_name": "SG-SL-IRES-WIN-Jump-Servers",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1jump02"
+                    ],
+                    "IPSet": [
+                        "HOST-SL-IRES-VSI-WIN-Jump-Servers"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-VCS-WIN-AD-DNS-NTP": {
+                "original_name": "SG-SL-VCS-WIN-AD-DNS-NTP",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ADNSap11",
+                        "ADNSap12"
+                    ],
+                    "IPSet": [
+                        "HOST-SL-VCS-WIN-AD-DNS-NTP"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-Automation-Control-Node": {
+                "original_name": "SG-SRES-Automation-Control-Node",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1sr1cntrl1_old"
+                    ],
+                    "IPSet": [
+                        "Host-ap1sr1cntrl1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-PROXY-PROD": {
+                "original_name": "SG-SRES-IAM-THY-PROXY-PROD",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        NaN
+                    ],
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-PROXY-PROD",
+                        "HOST-SRES-IAM-THY-PROXY-PROD-VIP"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-ap1sr1lpcacprx": {
+                "original_name": "SG-SRES-ap1sr1lpcacprx",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1sr1lpcacprx1",
+                        "ap1sr1lpcacprx2"
+                    ],
+                    "IPSet": [
+                        "HOST-ap1sr1lpcacprx1-vip"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-TEST-SG-SRES01-Icp-Cluster01": {
+                "original_name": "TEST-SG-SRES01-Icp-Cluster01",
+                "type": "static",
+                "members": {
+                    "VirtualMachine": [
+                        "ap1srlpcacfbds1",
+                        "ap1sr1lcacfjump02",
+                        "New RHEL_Template 7",
+                        "RHEltest",
+                        "ap1-etn-v2t-03a",
+                        "ap1sr1lpcacprx2",
+                        "rhel7 2022 -Latest Version",
+                        "Windows 2019 Template",
+                        "WIN2016stdApr_template_Base",
+                        "ap1-etn-v2t-03b",
+                        "WIN2016SQLTemplate",
+                        "ap1rhel08 -RHEL 8",
+                        "ap1sr1ptr1_test",
+                        "ap1sr1lcacfjump01",
+                        "ag1sr1utkgbase",
+                        "ap1sr1lpcacprx1",
+                        "ap1sr1cntrl1_old"
+                    ],
+                    "VirtualWire": [
+                        "ap1-sres1-app-internal1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-EU1-SR1-Server": {
+                "original_name": "EU1-SR1-Server",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "eu1sr1lparmsisi"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-EU1-SRES-SEPM": {
+                "original_name": "EU1-SRES-SEPM",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "eu1sr1sepm1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-HOST-SRES-HWSW-PROD": {
+                "original_name": "HOST-SRES-HWSW-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES-HWSW-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-BigFix-Relay": {
+                "original_name": "SG-BigFix-Relay",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1sr1bfrelay2",
+                        "Host-ap1sr1bfrelay1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-DR264-ESG-Interfaces": {
+                "original_name": "SG-DR264-ESG-Interfaces",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-DR264-ESG-vpn-vNic_1",
+                        "HOST-DR264-ESG-agg-vNic_0",
+                        "HOST-DR264-LB-vNIC_3",
+                        "HOST-DR264-ESG-dlr-vNic_2"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-DRES110-OCP-Cluster01": {
+                "original_name": "SG-DRES110-OCP-Cluster01",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-DR110-LB1-PrimaryIP",
+                        "HOST-DRES110-LB-OCP-Cluster1-VIP-1",
+                        "HOST-DRES110-LB-OCP-Cluster1-VIP-2"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1d110lpbpi"
+                    ]
+                }
+            },
+            "TF-AP1-SG-DRES114-OCP-Cluster01": {
+                "original_name": "SG-DRES114-OCP-Cluster01",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-DRES114-LB-OCP-Cluster1-VIP-2",
+                        "HOST-DR114-LB1-PrimaryIP",
+                        "HOST-DRES114-LB-OCP-Cluster1-VIP-1"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1d114lpnab"
+                    ]
+                }
+            },
+            "TF-AP1-SG-DRES164-OCP-Cluster01": {
+                "original_name": "SG-DRES164-OCP-Cluster01",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-DRES164-LB-OCP-Cluster1-VIP-1",
+                        "HOST-DRES164-LB-OCP-Cluster1-VIP-2"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1d164lptest"
+                    ]
+                }
+            },
+            "TF-AP1-SG-IRES-LIN-SFTP-Backup": {
+                "original_name": "SG-IRES-LIN-SFTP-Backup",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-ap1sftp02-IRES-NAT"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-IRES-Network-Automation-Server-Group": {
+                "original_name": "SG-IRES-Network-Automation-Server-Group",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-IRES-ap1irlptfa01",
+                        "HOST-IRES-ap1irlpipam01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-IRES-Internet-Proxy-Clients": {
+                "original_name": "SG-SL-IRES-Internet-Proxy-Clients",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "NET-SL-IRES-Portable"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-IRES-NSX-Management": {
+                "original_name": "SG-SL-IRES-NSX-Management",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SL-IRES-NSXM"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SL-IRES-VMWARE-Management": {
+                "original_name": "SG-SL-IRES-VMWARE-Management",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SL-IRES-vCenter"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SMTP-Clients": {
+                "original_name": "SG-SMTP-Clients",
+                "type": "static",
+                "members": {
+                    "SecurityGroup": [
+                        "SG-SRES-IAM-THY-PROXY-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SMTP-sendgrid-net": {
+                "original_name": "SG-SMTP-sendgrid-net",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-smtp-sendgrid-net"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-LINUX-PROD": {
+                "original_name": "SG-SRES-IAM-LINUX-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-LINUX-PROD"
+                    ],
+                    "SecurityGroup": [
+                        "SG-SRES-IAM-THY-SDI-PROD",
+                        "SG-SRES-IAM-THY-SVG-PROD",
+                        "SG-SRES-IAM-THY-DB2-PROD",
+                        "SG-SRES-IAM-THY-PROXY-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-NODB-PROD": {
+                "original_name": "SG-SRES-IAM-NODB-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-NODB-PROD"
+                    ],
+                    "SecurityGroup": [
+                        "SG-SRES-IAM-THY-DE-PROD",
+                        "SG-SRES-IAM-THY-SECRET-PROD",
+                        "SG-SRES-IAM-THY-SDI-PROD",
+                        "SG-SRES-IAM-THY-RMQ-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-All-VMs": {
+                "original_name": "SG-SRES-IAM-THY-All-VMs",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-All-VMs"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1sr1wpiam",
+                        "ap1sr1lpiam"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES-IAM-THY-DB2-PROD": {
+                "original_name": "SG-SRES-IAM-THY-DB2-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-DB2-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-DE-PROD": {
+                "original_name": "SG-SRES-IAM-THY-DE-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-DE-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-MSSQL-PROD": {
+                "original_name": "SG-SRES-IAM-THY-MSSQL-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES-IAM-THY-MSSQL-PROD-VIP",
+                        "IPSET-SRES-IAM-THY-MSSQL-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-RAS-PROD": {
+                "original_name": "SG-SRES-IAM-THY-RAS-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-RAS-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-RDP-PROD": {
+                "original_name": "SG-SRES-IAM-THY-RDP-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES-IAM-THY-PROXY-PROD-VIP",
+                        "HOST-SRES-IAM-THY-RMQ-PROD-VIP",
+                        "HOST-SRES-IAM-THY-MSSQL-PROD-VIP",
+                        "HOST-SRES-IAM-THY-SVG-PROD",
+                        "IPSET-SRES-IAM-THY-RDP-PROD"
+                    ]
+                },
+                "criteria": {
+                    "contains": [
+                        "piam"
+                    ],
+                    "starts_with": [
+                        "ap1sr1"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES-IAM-THY-RMQ-PROD": {
+                "original_name": "SG-SRES-IAM-THY-RMQ-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-RMQ-PROD",
+                        "HOST-SRES-IAM-THY-RMQ-PROD-VIP"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-SDI-PROD": {
+                "original_name": "SG-SRES-IAM-THY-SDI-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-SDI-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-SECRET-PROD": {
+                "original_name": "SG-SRES-IAM-THY-SECRET-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-THY-SECRET-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-THY-SVG-PROD": {
+                "original_name": "SG-SRES-IAM-THY-SVG-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-ap1sr1apiamprsvg1-secondary-IP",
+                        "HOST-SRES-IAM-THY-SVG-PROD",
+                        "HOST-ap1sr1apiamprsvg2-secondary-IP",
+                        "IPSET-SRES-IAM-THY-SVG-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-WINDOWS-PROD": {
+                "original_name": "SG-SRES-IAM-WINDOWS-PROD",
+                "type": "static",
+                "members": {
+                    "SecurityGroup": [
+                        "SG-SRES-IAM-THY-MSSQL-PROD",
+                        "SG-SRES-IAM-THY-RAS-PROD",
+                        "SG-SRES-IAM-THY-DE-PROD",
+                        "SG-SRES-IAM-THY-SECRET-PROD",
+                        "SG-SRES-IAM-THY-RMQ-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-IAM-WINDOWS-PROD-AD": {
+                "original_name": "SG-SRES-IAM-WINDOWS-PROD-AD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-IAM-WINDOWS-PROD-AD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-Linux-Jump-Servers": {
+                "original_name": "SG-SRES-Linux-Jump-Servers",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-dnat-to-ap1sr1ljmp01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-MNEAAS-AP-NCI": {
+                "original_name": "SG-SRES-MNEAAS-AP-NCI",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1srlpm1epni",
+                        "Host-ap1srlpm1ecni"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1srlpm1e*ni*"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES-MNEAAS-AP-NWG": {
+                "original_name": "SG-SRES-MNEAAS-AP-NWG",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1srlpm1epwg"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1srlpm1e*wg*"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES-MNEAAS-AP-SHR1-NCO": {
+                "original_name": "SG-SRES-MNEAAS-AP-SHR1-NCO",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-SRES-MNEAAS-AP-SHR1-NCO"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-NAB-RDP-PROD": {
+                "original_name": "SG-SRES-NAB-RDP-PROD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES-NAB-RDP-PROD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-STaaS-AD": {
+                "original_name": "SG-SRES-STaaS-AD",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-STaaS-AD"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-STaaS-AD-Clients": {
+                "original_name": "SG-SRES-STaaS-AD-Clients",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-STaaS-AD-Clients"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-STaaS-AD-DNS": {
+                "original_name": "SG-SRES-STaaS-AD-DNS",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-STaaS-AD-DNS"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-Sciencelogic-servers": {
+                "original_name": "SG-SRES-Sciencelogic-servers",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1srlpm1esc1",
+                        "Host-ap1srlpm1esbk1"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-WIN-DNS-NTP": {
+                "original_name": "SG-SRES-WIN-DNS-NTP",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "IPSET-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-WIN-Jump-Servers": {
+                "original_name": "SG-SRES-WIN-Jump-Servers",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1sr1wjmp02",
+                        "HOST-SRES-WIN-Jump-Servers-VIP",
+                        "Host-ap1sr1wjmp01",
+                        "HOST-dnat-to-ap1sr1wjmp00"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-WIN-SQL": {
+                "original_name": "SG-SRES-WIN-SQL",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1sr1sql01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-WIN-WSUS": {
+                "original_name": "SG-SRES-WIN-WSUS",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1sr1wsus01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES-Windows-Servers": {
+                "original_name": "SG-SRES-Windows-Servers",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "NET-SYD-SRES-GSNI-subnet"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES01-Icp-Cluster01": {
+                "original_name": "SG-SRES01-Icp-Cluster01",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "NET-ICp-Pod-Network",
+                        "NET-ICp-ClusterIP-Service-Network",
+                        "HOST-ICp-VRRP-IP",
+                        "HOST-SRES01-ICP-Cluster01"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1sr1icp1"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES01-OCP-Build": {
+                "original_name": "SG-SRES01-OCP-Build",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "Host-ap1sr1wdns01"
+                    ]
+                },
+                "criteria": {}
+            },
+            "TF-AP1-SG-SRES01-OCP-Cluster01": {
+                "original_name": "SG-SRES01-OCP-Cluster01",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES1-LB-OCP-Cluster1-VIP",
+                        "HOST-SRES-OCP-Cluster04-SNAT",
+                        "HOST-SRES1-LB-VIP-OCP1",
+                        "HOST-SRES01-ICP-Cluster01",
+                        "HOST-SRES1-LB1-PrimaryIP"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1sr1lpta1"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES01-OCP-Cluster02": {
+                "original_name": "SG-SRES01-OCP-Cluster02",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES1-LB-OCP-Cluster2-VIP",
+                        "HOST-SRES1-LB1-PrimaryIP",
+                        "HOST-SRES1-LB-VIP-OCP2"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1sr1lpta2"
+                    ]
+                }
+            },
+            "TF-AP1-SG-SRES01-OCP-Cluster03": {
+                "original_name": "SG-SRES01-OCP-Cluster03",
+                "type": "static",
+                "members": {
+                    "IPSet": [
+                        "HOST-SRES-LB-OCP-Cluster03-VIP",
+                        "HOST-SRES-LB-OCP-Cluster03-VIP1",
+                        "HOST-SRES1-LB1-PrimaryIP"
+                    ]
+                },
+                "criteria": {
+                    "starts_with": [
+                        "ap1sr1lpta3"
+                    ]
+                }
+            }
+        }
+    },
+    "vms_and_groups": {
+        "new_groups": {
+            "ap1d264lpcacpr2": [
+                "TF-AP1-DRES264-CACF-Proxy"
+            ],
+            "ap1d264lpcacpr1": [
+                "TF-AP1-DRES264-CACF-Proxy"
+            ],
+            "ap1lmssqr01": [
+                "TF-AP1-SG-AP-MSS-QRADAR-DC"
+            ],
+            "ap1d101lpcacprx1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1ssh1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-HRES-TALOS-SSHProxy"
+            ],
+            "ap1pdr1prx02": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-PDR-Internet-Proxy-Server"
+            ],
+            "ap1d103lpcacprx1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d107lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d105lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1ssh2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-HRES-TALOS-SSHProxy"
+            ],
+            "ap1d107lpcacpr2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d114lpcacpr2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1sr1lpcacprx1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-SRES-ap1sr1lpcacprx",
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1d130lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d110lpcacpr2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1sr1lpcacprx2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-SRES-ap1sr1lpcacprx",
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1d141lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1pdr1prx01": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-PDR-Internet-Proxy-Server"
+            ],
+            "ap1d129lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d114lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d105lpcacpr2": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d108lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d110lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d127lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1d128lpcacpr1": [
+                "TF-AP1-SG-DRES-ALL-CACF-Proxy",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1hap2": [
+                "TF-AP1-SG-HRES-HA-Proxy-IN"
+            ],
+            "ap1h1lpta1hap1": [
+                "TF-AP1-SG-HRES-HA-Proxy-IN"
+            ],
+            "ap1h1lpta2hap2": [
+                "TF-AP1-SG-HRES-HA-Proxy-OUT"
+            ],
+            "ap1h1lpta2hap1": [
+                "TF-AP1-SG-HRES-HA-Proxy-OUT"
+            ],
+            "ap1wtslic01": [
+                "TF-AP1-SG-IRES-WIN-TS-Licensing"
+            ],
+            "ap1vmon": [
+                "TF-AP1-SG-IRES-WIN-VMware-Monitoring"
+            ],
+            "ap1vro01": [
+                "TF-AP1-SG-IRES-WIN-VMware-vRO"
+            ],
+            "ap1pdr1smtp01": [
+                "TF-AP1-SG-PDR-SMTP-Relay"
+            ],
+            "ap1dc1": [
+                "TF-AP1-SG-SL-IRES-WIN-AD-DNS-NTP"
+            ],
+            "ap1dc2": [
+                "TF-AP1-SG-SL-IRES-WIN-AD-DNS-NTP"
+            ],
+            "ap1jump02": [
+                "TF-AP1-SG-SL-IRES-WIN-Jump-Servers"
+            ],
+            "ADNSap11": [
+                "TF-AP1-SG-SL-VCS-WIN-AD-DNS-NTP"
+            ],
+            "ADNSap12": [
+                "TF-AP1-SG-SL-VCS-WIN-AD-DNS-NTP"
+            ],
+            "ap1sr1cntrl1_old": [
+                "TF-AP1-SG-SRES-Automation-Control-Node",
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "NaN": [
+                "TF-AP1-SG-SRES-IAM-THY-PROXY-PROD"
+            ],
+            "ap1sr1lcacfjump01": [
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1sr1ptr1_test": [
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1sr1lcacfjump02": [
+                "TF-AP1-SG-ap1sr1wppd",
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1srlpcacfbds1": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "New RHEL_Template 7": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "RHEltest": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1-etn-v2t-03a": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "rhel7 2022 -Latest Version": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "Windows 2019 Template": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "WIN2016stdApr_template_Base": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1-etn-v2t-03b": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "WIN2016SQLTemplate": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1rhel08 -RHEL 8": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ag1sr1utkgbase": [
+                "TF-AP1-TEST-SG-SRES01-Icp-Cluster01"
+            ]
+        },
+        "original_groups": {
+            "ap1d264lpcacpr2": [
+                "DRES264 CACF Proxy"
+            ],
+            "ap1d264lpcacpr1": [
+                "DRES264 CACF Proxy"
+            ],
+            "ap1lmssqr01": [
+                "SG-AP-MSS-QRADAR-DC"
+            ],
+            "ap1d101lpcacprx1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1ssh1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-HRES-TALOS-SSHProxy"
+            ],
+            "ap1pdr1prx02": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-PDR-Internet-Proxy-Server"
+            ],
+            "ap1d103lpcacprx1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d107lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d105lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1ssh2": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-HRES-TALOS-SSHProxy"
+            ],
+            "ap1d107lpcacpr2": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d114lpcacpr2": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1sr1lpcacprx1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-SRES-ap1sr1lpcacprx",
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1d130lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d110lpcacpr2": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1sr1lpcacprx2": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-SRES-ap1sr1lpcacprx",
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1d141lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1pdr1prx01": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-PDR-Internet-Proxy-Server"
+            ],
+            "ap1d129lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d114lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy"
+            ],
+            "ap1d105lpcacpr2": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d108lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d110lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d127lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1d128lpcacpr1": [
+                "SG-DRES-ALL-CACF-Proxy",
+                "SG-DRES-Proxy-Servers"
+            ],
+            "ap1h1lpta1hap2": [
+                "SG-HRES-HA-Proxy-IN"
+            ],
+            "ap1h1lpta1hap1": [
+                "SG-HRES-HA-Proxy-IN"
+            ],
+            "ap1h1lpta2hap2": [
+                "SG-HRES-HA-Proxy-OUT"
+            ],
+            "ap1h1lpta2hap1": [
+                "SG-HRES-HA-Proxy-OUT"
+            ],
+            "ap1wtslic01": [
+                "SG-IRES-WIN-TS-Licensing"
+            ],
+            "ap1vmon": [
+                "SG-IRES-WIN-VMware-Monitoring"
+            ],
+            "ap1vro01": [
+                "SG-IRES-WIN-VMware-vRO"
+            ],
+            "ap1pdr1smtp01": [
+                "SG-PDR-SMTP-Relay"
+            ],
+            "ap1dc1": [
+                "SG-SL-IRES-WIN-AD-DNS-NTP"
+            ],
+            "ap1dc2": [
+                "SG-SL-IRES-WIN-AD-DNS-NTP"
+            ],
+            "ap1jump02": [
+                "SG-SL-IRES-WIN-Jump-Servers"
+            ],
+            "ADNSap11": [
+                "SG-SL-VCS-WIN-AD-DNS-NTP"
+            ],
+            "ADNSap12": [
+                "SG-SL-VCS-WIN-AD-DNS-NTP"
+            ],
+            "ap1sr1cntrl1_old": [
+                "SG-SRES-Automation-Control-Node",
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "NaN": [
+                "SG-SRES-IAM-THY-PROXY-PROD"
+            ],
+            "ap1sr1lcacfjump01": [
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1sr1ptr1_test": [
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1sr1lcacfjump02": [
+                "SG-ap1sr1wppd",
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1srlpcacfbds1": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "New RHEL_Template 7": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "RHEltest": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1-etn-v2t-03a": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "rhel7 2022 -Latest Version": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "Windows 2019 Template": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "WIN2016stdApr_template_Base": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1-etn-v2t-03b": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "WIN2016SQLTemplate": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ap1rhel08 -RHEL 8": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ],
+            "ag1sr1utkgbase": [
+                "TEST-SG-SRES01-Icp-Cluster01"
+            ]
+        }
+    }
+}

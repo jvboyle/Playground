@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-DR48-ESG-LB-Source",
+            "TF-EU1-HOST-eu1srlpm1ecno2",
+            "TF-EU1-HOST-eu1srlpm1epno2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES48": {
+            "category": "Application",
+            "rules": {
+                "8514": {
+                    "display_name": "TF-8514-DRES-ESG-to-SRES-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR48-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0092092",
+                    "scope": [
+                        "TF-EU1-SG-DR48-ESG-LB-Source",
+                        "TF-EU1-HOST-eu1srlpm1ecno2",
+                        "TF-EU1-HOST-eu1srlpm1epno2"
+                    ]
+                }
+            }
+        }
+    }
+}

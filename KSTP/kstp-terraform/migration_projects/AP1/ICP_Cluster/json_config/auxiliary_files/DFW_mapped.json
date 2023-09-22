@@ -1,0 +1,875 @@
+{
+    "PDR": {
+        "category": "Application",
+        "rules": {
+            "rule_1333": {
+                "display_name": "1333_PDR_Inside_to_PDR_Proxy_VIP",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-pdr-eAP1-SG01-inside"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-pdr-eAP1-SG01-inside",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1475": {
+                "display_name": "1475_SRES_Sciencelogic_DB_to_smtp",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-Sciencelogic-DB-servers"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "SMTP"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-Sciencelogic-DB-servers",
+                    "AP1-SG-PDR-SMTP-Relay"
+                ]
+            }
+        }
+    },
+    "NSX V-to-T": {
+        "category": "Application",
+        "rules": {
+            "rule_1577": {
+                "display_name": "1577_TKG_to_SRES_NFS_",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-Tanzu-mgmt-subAP1-SG"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.112"
+                ],
+                "services": [
+                    "TCP-45180-51004-41839-50920-111-2049",
+                    "UDP-111-2049-46002-56379-48693"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-Tanzu-mgmt-subAP1-SG"
+                ]
+            },
+            "rule_1647": {
+                "display_name": "1647_Tanzu_to_ICP",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-Tanzu-Workload-01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-Tanzu-Workload-01",
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1646": {
+                "display_name": "1646_ICP_to_Tanzu",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-Tanzu-Workload-01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-Tanzu-Workload-01"
+                ]
+            },
+            "rule_1651": {
+                "display_name": "1651_IKS_to_ICP",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-vpc-ap1-30-dx-platform-prod-subnet1"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-vpc-ap1-30-dx-platform-prod-subnet1",
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1662": {
+                "display_name": "1662_MCMS_Netcool_\u2192_KSI_",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-slsydimpacttest01",
+                    "AP1-HOST-SLSydImpactnode02",
+                    "AP1-HOST-SLSydImpactnode01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [
+                    "158.87.54.129"
+                ],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-slsydimpacttest01",
+                    "AP1-HOST-SLSydImpactnode02",
+                    "AP1-HOST-SLSydImpactnode01",
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1681": {
+                "display_name": "1681_AP1SRWPHWC",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-AP1SRWPHWC"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.129"
+                ],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-AP1SRWPHWC"
+                ]
+            }
+        }
+    },
+    "DRES110": {
+        "category": "Application",
+        "rules": {
+            "rule_1448": {
+                "display_name": "1448_DRES_DR110__proxy_to_DX_instance",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-DRES110-OCP-Cluster01",
+                    "AP1-HOST-DRES110-OCP04-Cluster02"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "TCP-9200"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-DRES110-OCP-Cluster01",
+                    "AP1-HOST-DRES110-OCP04-Cluster02",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            }
+        }
+    },
+    "DRES114": {
+        "category": "Application",
+        "rules": {
+            "rule_1470": {
+                "display_name": "1470_OCP_NAB_to_DX",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-DRES114-OCP-Cluster01",
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-DRES114-OCP-Cluster01",
+                    "AP1-NSXT-DRES114-OCP4-CLUSTER02",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            }
+        }
+    },
+    "ICP_Cluster": {
+        "category": "Application",
+        "rules": {
+            "rule_1599": {
+                "display_name": "1599_Netcool_to_SRES_ICP_Cluster",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-Netcool-MCI-Dev-Reporter-DB",
+                    "AP1-HOST-Netcool-MCI-AU-Reporter-DB"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-Netcool-MCI-Dev-Reporter-DB",
+                    "AP1-HOST-Netcool-MCI-AU-Reporter-DB",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1616": {
+                "display_name": "1616_KSI_Elastic_to_GACDW_AU",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-OCP-Cluster04"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-gacdw-ap.w3cloud.ibm.com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES-OCP-Cluster04",
+                    "AP1-HOST-gacdw-ap.w3cloud.ibm.com"
+                ]
+            },
+            "rule_1311": {
+                "display_name": "1311_ICP_Cluster01_Intercommunication",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1309": {
+                "display_name": "1309_ICP_Cluster01_to_IBM_Blue",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-PDR-SMTP-Relay",
+                    "AP1-HOST-IBM-Bluepages",
+                    "AP1-HOST-IBM-Blue-Sendmail",
+                    "AP1-HOST-IBM-Blue-API-Connect"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "LDAP-over-SSL",
+                    "SMTP"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-PDR-SMTP-Relay",
+                    "AP1-HOST-IBM-Bluepages",
+                    "AP1-HOST-IBM-Blue-Sendmail",
+                    "AP1-HOST-IBM-Blue-API-Connect"
+                ]
+            },
+            "rule_1308": {
+                "display_name": "1308_IBM_Blue_to_ICP_Cluster01",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "ICMP Echo Request",
+                    "ICMP Echo Reply"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-IBM-Blue",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1307": {
+                "display_name": "1307_ICP_Cluster01_to_MEaaS_Netcool",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [],
+                "services": [
+                    "TCP-8443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": true,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1306": {
+                "display_name": "1306_ICP_Cluster01_to_PDR_Proxy",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-8080"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ]
+            },
+            "rule_1313": {
+                "display_name": "1313_SRES_NFS_ICP_Servers",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "158.87.54.112"
+                ],
+                "services": [
+                    "UDP-111-2049",
+                    "TCP-111-2049"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1330": {
+                "display_name": "1330_ICP_Worker_Nodes_to_Bluepages",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.122",
+                    "158.87.54.123"
+                ],
+                "destination_groups": [
+                    "AP1-HOST-IBM-Bluepages"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "LDAP-over-SSL"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-IBM-Bluepages"
+                ]
+            },
+            "rule_1329": {
+                "display_name": "1329_ICP_Worker_Nodes_to_PDR_Proxy",
+                "apply": true,
+                "source_groups": [],
+                "source_ips": [
+                    "158.87.54.122",
+                    "158.87.54.123"
+                ],
+                "destination_groups": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-8080"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-PDR-Internet-Proxy-Server"
+                ]
+            },
+            "rule_1325": {
+                "display_name": "1325_IBM_9.x_to_ICP_AP_Namespace",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-IBM-Blue"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-ICP-AP-Namespace"
+                ],
+                "destination_ips": [
+                    "158.87.54.122",
+                    "158.87.54.123"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-8443"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-IBM-Blue",
+                    "AP1-HOST-ICP-AP-Namespace"
+                ]
+            },
+            "rule_1342": {
+                "display_name": "1342_SRES_Cluster01_3_11toICP1",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-OCP-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "TCP-9200"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-OCP-Cluster01",
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1363": {
+                "display_name": "1363_ChatOps___Prod_ICP_Cluster_to_IBM_Cloud_Services",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SL-Private-Service-Endpoints"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS",
+                    "TCP-31420"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-SL-Private-Service-Endpoints"
+                ]
+            },
+            "rule_1440": {
+                "display_name": "1440_ICP_to_IS_Togerther/TLT",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-bat.cz.ibm.com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-bat.cz.ibm.com"
+                ]
+            },
+            "rule_1455": {
+                "display_name": "1455_Chatops_to_ISA_ICD",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "10.120.10.17-10.120.10.18",
+                    "10.120.10.20",
+                    "10.120.10.13-10.120.10.14"
+                ],
+                "services": [
+                    "HTTPS",
+                    "TCP-9081-9082",
+                    "HTTP",
+                    "TCP-8445"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1471": {
+                "display_name": "1471_ChatOps_to_IBM_Cloud_EventStreams_Kafka_",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-9093"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD"
+                ]
+            },
+            "rule_1587": {
+                "display_name": "1587_ISA_BDS_Cprem_to_ICP_VIP",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-ISA-BDS-CPREM"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-ISA-BDS-CPREM",
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ]
+            },
+            "rule_1586": {
+                "display_name": "1586_ICP_Proxy_to_ISA_BDS_Cprem",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-ISA-BDS-CPREM"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-SRES-ICp-icp1-Ingress-VIP",
+                    "AP1-HOST-ISA-BDS-CPREM"
+                ]
+            },
+            "rule_1592": {
+                "display_name": "1592_ICP_Cluster01_to_SMTP",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-PDR-SMTP-Relay"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "SMTP"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-SG-PDR-SMTP-Relay"
+                ]
+            },
+            "rule_1598": {
+                "display_name": "1598_SRES_to_AP_ICD",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [],
+                "destination_ips": [
+                    "169.38.79.43"
+                ],
+                "services": [
+                    "TCP-9081"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1618": {
+                "display_name": "1618_KSI_Elastic_to_RDMS_Claim",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-bldbmsa-boulder-ibm-com"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-5031"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-bldbmsa-boulder-ibm-com"
+                ]
+            },
+            "rule_1669": {
+                "display_name": "1669_MCI_NZ_Netcool_to_KSI_Elastic",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-MCI-NZ-nzchctk01sr01rz"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-MCI-NZ-nzchctk01sr01rz",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1668": {
+                "display_name": "1668_MCI_NZ_Netcool_to_KSI_Elastic",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-MCI-NZ-nzakptk01sr01rz"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-MCI-NZ-nzakptk01sr01rz",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1667": {
+                "display_name": "1667_MCI_NZ_Netcool_to_KSI_Elastic",
+                "apply": true,
+                "source_groups": [
+                    "AP1-HOST-MCI-NZ-nzakptk01sr02rz"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "HTTPS"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-HOST-MCI-NZ-nzakptk01sr02rz",
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ]
+            },
+            "rule_1683": {
+                "display_name": "1683_SRES01_to_GACDW_REST_API",
+                "apply": true,
+                "source_groups": [
+                    "AP1-SG-SRES01-Icp-Cluster01"
+                ],
+                "source_ips": [],
+                "destination_groups": [
+                    "AP1-HOST-HWSW-GACDW-AP-DB"
+                ],
+                "destination_ips": [],
+                "services": [
+                    "TCP-12052"
+                ],
+                "action": "ALLOW",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "scope": [
+                    "AP1-SG-SRES01-Icp-Cluster01",
+                    "AP1-HOST-HWSW-GACDW-AP-DB"
+                ]
+            }
+        }
+    }
+}

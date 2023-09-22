@@ -1,0 +1,63 @@
+{
+    "delta_rules": {
+        "tf-1192-icp-clusters-to-smtp-relay": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-1885-dvaa-app01-to-web-prod": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-1886-dvaa-app01-to-db-prod": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-1948-backend-flow": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-1949-backend-flow": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-2675-db-to-etoc": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-2709-etoc-was-to-bluepages": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-3532-sreu13469554": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-3608-db-servers-connectivity": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-3640-agnsrlnetocddb-to-agnsrlnetocdwas": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-3692-etoc-8": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-3745-kstp-2023-pen-test-sres-scan": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-2772-block-direct-internet-access-from-sres-jh": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        },
+        "tf-1278-test-rule-sendmail": {
+            "NXS-T disabled": false,
+            "NXS-V disabled": true
+        }
+    },
+    "duplicated_rules": [
+        "tanzu cluster to blue"
+    ]
+}

@@ -1,0 +1,9 @@
+section_name: DR31
+rule_name: BP SRES GTS Horizon server ->  BP DRES GTS robots
+source: SG-SRES-RPA-Horizon-Servers
+destination: SG-DR31-RPA-AA-Desktop-Pool
+service: RDP,tcp/22443
+action: allow
+logging: yes
+direction: In/Out
+applied_to: eu1-dr31-esg1,SG-SRES-RPA-Horizon-Servers,SG-DR31-RPA-AA-Desktop-Pool

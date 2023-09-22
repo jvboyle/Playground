@@ -1,0 +1,1 @@
+edge_dns_forwarder_config: "{{ lookup('template', 'edge_dns_forwarder_config.json.j2') }}"

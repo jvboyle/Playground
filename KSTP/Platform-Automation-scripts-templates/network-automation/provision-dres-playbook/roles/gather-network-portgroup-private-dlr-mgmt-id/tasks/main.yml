@@ -1,0 +1,15 @@
+  - name: Collect DLR Management Portgroup ID
+    uri:
+      url: "https://{{ vcenter }}/rest/vcenter/network?filter.names={{ priv_dlr_mgmt_portgroup }}"
+      validate_certs: no
+      headers:
+        Accept: "application/json"
+        Content-Type: "application/json"
+        Cookie: "{{vc_login.set_cookie}}"
+      method: get
+      body_format: json
+    register: output_priv_dlr_mgmt_portgroup
+
+  - name: Save DLR Management Portgroup ID to Variable
+    set_fact:
+      priv_dlr_mgmt_portgroup_id: "{{ output_priv_dlr_mgmt_portgroup.json.value[0].network }}"

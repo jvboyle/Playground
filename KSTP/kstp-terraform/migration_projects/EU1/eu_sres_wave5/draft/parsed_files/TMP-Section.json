@@ -1,0 +1,35 @@
+{
+    "map_services": {
+        "SERVICES": []
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-Linux-Jump-Servers"
+        ]
+    },
+    "map_policies": {
+        "TF-TMP-Section": {
+            "category": "Application",
+            "rules": {
+                "9271": {
+                    "display_name": "TF-9271-EMERGENCY-JH-RULE-Keep-Disabled-",
+                    "disabled": true,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ]
+                }
+            }
+        }
+    }
+}

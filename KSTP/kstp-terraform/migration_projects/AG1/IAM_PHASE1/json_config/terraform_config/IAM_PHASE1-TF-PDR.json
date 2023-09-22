@@ -1,0 +1,64 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SMTP_TLS",
+            "SMTP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SMTP-Clients",
+            "TF-AG1-SG-PDR-SMTP-Server"
+        ]
+    },
+    "map_policies": {
+        "TF-PDR": {
+            "category": "Application",
+            "rules": {
+                "1192": {
+                    "display_name": "TF-1192-ICP-clusters-to-SMTP-relay",
+                    "source_groups": [],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ]
+                },
+                "1264": {
+                    "display_name": "TF-1264-ST-SMTP-Client-to-PDR-SMTP-server",
+                    "source_groups": [
+                        "TF-AG1-SG-SMTP-Clients"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SMTP_TLS",
+                        "SMTP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-SMTP-Clients",
+                        "TF-AG1-SG-PDR-SMTP-Server"
+                    ]
+                }
+            }
+        }
+    }
+}

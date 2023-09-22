@@ -1,0 +1,165 @@
+{
+    "TF-DRES141": {
+        "map_services": {
+            "SERVICES": [
+                "TCP-8081",
+                "SSH"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-HOST-ap1srlpcacfbds1",
+                "TF-AP1-SG-SRES01-OCP-Cluster01",
+                "TF-AP1-HOST-ap1d141lpcacpr1",
+                "TF-AP1-IPSET-ap1d141lpcacpr-vip",
+                "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range"
+            ]
+        },
+        "map_policies": {
+            "TF-DRES141": {
+                "category": "Application",
+                "rules": {
+                    "1214": {
+                        "display_name": "TF-1214-OCP-Cluster01-to-CACF-Proxy-VIP-",
+                        "source_groups": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-ap1d141lpcacpr-vip"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-SG-SRES01-OCP-Cluster01",
+                            "TF-AP1-HOST-ap1d141lpcacpr1",
+                            "TF-AP1-IPSET-ap1d141lpcacpr-vip"
+                        ]
+                    },
+                    "1222": {
+                        "display_name": "TF-1222-CACF-Proxy1-to-CPREM-",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d141lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [],
+                        "destination_ips": [
+                            "10.116.103.175"
+                        ],
+                        "services": [
+                            "SSH"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d141lpcacpr1"
+                        ]
+                    },
+                    "1223": {
+                        "display_name": "TF-1223-CPREM-to-CACF-Proxy-VIP-",
+                        "source_groups": [],
+                        "source_ips": [
+                            "10.116.103.175"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d141lpcacpr-vip"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d141lpcacpr1",
+                            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                            "TF-AP1-IPSET-ap1d141lpcacpr-vip"
+                        ]
+                    },
+                    "1224": {
+                        "display_name": "TF-1224-CACF-Proxy1-to-BDS",
+                        "source_groups": [
+                            "TF-AP1-HOST-ap1d141lpcacpr1"
+                        ],
+                        "source_ips": [],
+                        "destination_groups": [
+                            "TF-AP1-HOST-ap1srlpcacfbds1"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "TCP-8081"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "",
+                        "scope": [
+                            "TF-AP1-HOST-ap1d141lpcacpr1",
+                            "TF-AP1-HOST-ap1srlpcacfbds1"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "TF-PDR": {
+        "map_services": {
+            "SERVICES": [
+                "SMTP",
+                "SMTP_TLS"
+            ]
+        },
+        "map_groups": {
+            "GROUPS": [
+                "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                "TF-AP1-SG-PDR-SMTP-Relay",
+                "TF-AP1-SG-DRES-Proxy-Servers"
+            ]
+        },
+        "map_policies": {
+            "TF-PDR": {
+                "category": "Application",
+                "rules": {
+                    "1315": {
+                        "display_name": "TF-1315-SSHproxy&DRESproxy_to_SMTP_Relay",
+                        "source_groups": [
+                            "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                            "TF-AP1-SG-DRES-Proxy-Servers"
+                        ],
+                        "source_ips": [
+                            "158.87.54.5"
+                        ],
+                        "destination_groups": [
+                            "TF-AP1-SG-PDR-SMTP-Relay"
+                        ],
+                        "destination_ips": [],
+                        "services": [
+                            "SMTP",
+                            "SMTP_TLS"
+                        ],
+                        "action": "ALLOW",
+                        "direction": "IN_OUT",
+                        "logged": true,
+                        "notes": "SR1390555",
+                        "scope": [
+                            "TF-AP1-SG-PDR-SMTP-Relay",
+                            "TF-AP1-SG-HRES-TALOS-SSHProxy",
+                            "TF-AP1-SG-DRES-Proxy-Servers"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

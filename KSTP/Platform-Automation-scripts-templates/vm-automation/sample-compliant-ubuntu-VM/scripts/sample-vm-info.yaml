@@ -1,0 +1,43 @@
+vm_information:changed: true
+failed: false
+instance:
+  annotation: 'sample VM #1'
+  current_snapshot: null
+  customvalues: {}
+  guest_consolidation_needed: false
+  guest_question: null
+  guest_tools_status: guestToolsRunning
+  guest_tools_version: '10304'
+  hw_cores_per_socket: 1
+  hw_datastores: [vsanDatastore]
+  hw_esxi_host: ag1esxm06.poc.ispw.ibm.local
+  hw_eth0:
+    addresstype: assigned
+    ipaddresses: [158.87.63.62]
+    label: Network adapter 1
+    macaddress: 00:50:56:82:7c:0f
+    macaddress_dash: 00-50-56-82-7c-0f
+    portgroup_key: dvportgroup-99
+    portgroup_portkey: '1222'
+    summary: 'DVSwitch: 50 02 3b 9d 08 c9 83 7a-7e 3e ae 43 f4 22 68 0c'
+  hw_files: ['[vsanDatastore] d395bc5c-fdfc-c9bd-8da9-0cc47aa4ed4e/test-vm1.vmx',
+    '[vsanDatastore] d395bc5c-fdfc-c9bd-8da9-0cc47aa4ed4e/test-vm1.nvram', '[vsanDatastore]
+      d395bc5c-fdfc-c9bd-8da9-0cc47aa4ed4e/test-vm1.vmsd', '[vsanDatastore] d395bc5c-fdfc-c9bd-8da9-0cc47aa4ed4e/test-vm1.vmdk',
+    '[vsanDatastore] d395bc5c-fdfc-c9bd-8da9-0cc47aa4ed4e/test-vm1_1.vmdk']
+  hw_folder: /WDC04/vm
+  hw_guest_full_name: Ubuntu Linux (64-bit)
+  hw_guest_ha_state: true
+  hw_guest_id: ubuntu64Guest
+  hw_interfaces: [eth0]
+  hw_is_template: false
+  hw_memtotal_mb: 8192
+  hw_name: test-vm1
+  hw_power_status: poweredOn
+  hw_processor_count: 4
+  hw_product_uuid: 420270de-c339-3402-f97c-ae08d6a4daa0
+  hw_version: vmx-13
+  instance_uuid: 5002125d-daa2-68f9-bf79-aacdd9b9998e
+  ipv4: 158.87.63.62
+  ipv6: null
+  module_hw: true
+  snapshots: []

@@ -1,0 +1,14 @@
+    - name: Generate the ignition manifests
+      command: "openshift-install create manifests --dir={{ playbook_dir }}/install-dir"
+
+    - name: Apply the patch to set mastersSchedulable to false
+      patch:
+        src: "cluster-scheduler-02-config.yml.patch"
+        dest: "{{ playbook_dir }}/install-dir/manifests/cluster-scheduler-02-config.yml"
+
+    - name: Configure custom ntp servers for masters and workers
+      when: ntp.custom
+      include_tasks: configure_ntp.yml 
+
+    - name: Generate the ignition configs
+      command: "openshift-install create ignition-configs --dir={{ playbook_dir }}/install-dir"

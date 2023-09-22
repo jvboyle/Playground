@@ -1,0 +1,78 @@
+######################################################
+# migration: IAM_PHASE5
+######################################################
+   rule {
+         display_name = "TF-1412-WIN-Jump-AT-to-HRES-SSH-Proxy-for-AG-Prod-Instance"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-HRES-ag1h1lpta1ssh-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-HRES-TALOS-SSHProxy-SharedProd"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-HRES-TALOS-SSHProxy-SharedProd",
+               "/infra/domains/default/groups/TF-AG1-IPSET-HRES-ag1h1lpta1ssh-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster03",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-OCP-Cluster6-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster05",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster02",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-OCP-Cluster01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-1675-SRES-jump-to-hres-proxy"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-hres1-lb1-PrimaryIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-ag1h1lpta2hapProxy",
+               "/infra/domains/default/groups/TF-AG1-SG-ag1h1lpta1hapProxy"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SSH",
+               "/infra/services/HTTPS",
+               "/infra/services/HTTP",
+               "/infra/services/RDP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-Linux-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-WIN-Jump-Servers",
+               "/infra/domains/default/groups/TF-AG1-SG-ag1h1lpta2hapProxy",
+               "/infra/domains/default/groups/TF-AG1-SG-ag1h1lpta1hapProxy",
+               "/infra/domains/default/groups/TF-AG1-IPSET-hres1-lb1-PrimaryIP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-HRES-AG1"
+            }
+      }

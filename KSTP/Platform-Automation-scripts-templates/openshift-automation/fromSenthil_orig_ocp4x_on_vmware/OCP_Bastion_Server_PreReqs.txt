@@ -1,0 +1,25 @@
+Bastion Server - PreReqs
+==========================
+yum install git -y
+yum install epel-release -y
+yum install jq -y
+yum install python-setuptools.noarch -y
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+pip install ansible --user   
+yum install python-jinja2.noarch -y
+vi ~/.bashrc
+export PATH=$PATH:$HOME/.local/bin 
+source .bashrc
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --reload
+yum install httpd -y
+systemctl enable httpd
+systemctl start httpd
+yum install lsof -y
+copy  oc , kubectl, govc and helm in the /usr/local/bin
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+From Senthil, Aug 6, 2020
+Senthil used centos as baseion server

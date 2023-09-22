@@ -1,0 +1,60 @@
+---
+    - name: Create directory for actionsite.afxm
+      file:
+        path: /etc/opt/BESClient
+        state: directory
+        owner: root
+        group: root
+        mode: 0755
+    - name: Copy actionsite file to BESClient directory
+      copy:
+        src: files/actionsite.afxm
+        dest: /etc/opt/BESClient
+        owner: root
+        group: root
+        mode: 0600
+    - name: Create besclient config directory
+      file:
+        path: /var/opt/BESClient
+        owner: root
+        group: root
+        state: directory
+        mode: 0755
+    - name: Copy besclient.config to besclient directory
+      copy:
+        src: files/besclient.config
+        dest: /var/opt/BESClient
+        owner: root
+        group: root
+        mode: 0644
+    - name: Create BESClient installer directory
+      file:
+        path: /root/BESClient
+        state: directory
+        mode: 0755
+        owner: root
+        group: root
+    - name: Copy installer to BESClient directory
+      copy:
+        src: files/BESAgent-9.5.14.73-rhe6.x86_64.rpm
+        dest: /root/BESClient/
+        owner: root
+        group: root
+        mode: 0755
+    - name: Copy installer to BESClient directory
+      copy:
+        src: files/BESAgent-9.5.14.73-rhe6.x86_64.rpm
+        dest: /root/BESClient/
+        owner: root
+        group: root
+        mode: 0755
+    - name: Install BESAgent
+      yum:
+        name: /root/BESClient/BESAgent-9.5.14.73-rhe6.x86_64.rpm 
+        state: present
+    - name: Start BESClient
+      service:
+        name: besclient
+        state: started
+...
+

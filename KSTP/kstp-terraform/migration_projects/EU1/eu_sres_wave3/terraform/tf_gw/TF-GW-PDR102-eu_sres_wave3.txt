@@ -1,0 +1,52 @@
+######################################################
+# migration: eu_sres_wave3
+######################################################
+   rule {
+         display_name = "TF-8859-NewRelic-Pre-Prod-"
+         notes        = "SR50855491 RITM0129564"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-pdr-esg01-inside"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnp000m1erms"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/HTTPS_9443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-EU1"
+            }
+      }
+   rule {
+         display_name = "TF-8925-M-EaaS-Frontier-LogicMonitor"
+         notes        = "RITM0137141"
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-IPSET-pdr-esg01-inside"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-EU1-HOST-nlaspnp000m1ermp"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443"
+            ]
+         scope = [local.gw_scope]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-PDR-EU1"
+            }
+      }

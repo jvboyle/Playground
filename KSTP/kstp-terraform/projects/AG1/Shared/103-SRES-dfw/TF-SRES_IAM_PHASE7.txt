@@ -1,0 +1,235 @@
+######################################################
+# migration: IAM_PHASE7
+######################################################
+   rule {
+         display_name = "TF-2993-HCS-to-pdr"
+         notes        = "CH50090359"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1pdr1smtp01"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/SMTP"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1pdr1smtp01"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2994-SRES-HCS-to-IBM-bluepages"
+         notes        = "CH50090359"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/LDAP-over-SSL",
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001",
+               "/infra/domains/default/groups/TF-AG1-IPSET-IBM-Bluepages"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-2995-IBM-blue-to-hcs-"
+         notes        = "CH50090359"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-9443"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlphcs0001",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3133-ICP-to-to-AI-Ops-Dev-Server"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-agnsr1lnaiodev1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-agnsrlnicp1p-vip",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-agnsrlnicp1p-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-agnsr1lnaiodev1",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES01-ICp-agnsrlnicp1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-SRES-Icp-icp1-Ingress-VIP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3179-Analytics-Dev-Server-to-TKG-nonProd-KSI-Elastic"
+         notes        = "SR51272609 SR51330117 - Add to destination HOST-Tanzu-Workload-03-HOST RITM0137101-----add tanzu-05"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-agnsr1lnaiodev1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-sres-tanzu-workload-05",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Host",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-sres-tanzu-workload-05",
+               "/infra/domains/default/groups/TF-AG1-HOST-agnsr1lnaiodev1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-01-Host",
+               "/infra/domains/default/groups/TF-AG1-IPSET-Tanzu-Workload-03-Subnet"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3277-Copy-of-SRES-to-ICP-"
+         notes        = "SR51339688 CH50099191"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpchatixf1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-agnsrlnicp1p-vip",
+               "/infra/domains/default/groups/TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8443",
+               "/infra/services/HTTPS"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-agnsrlnicp1p-vip",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpchatixf1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-AGNSRLNICP1-ICP-VIP",
+               "/infra/domains/default/groups/TF-AG1-IPSET-agnsrlnicp1p-vip",
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-AGNSRLNICP1-ICP"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3294-Chat-op-to-ICP-Cluster"
+         notes        = "SR51374584"
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpchatixf1"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-AGNSRLNICP1-ICP"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-8001"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-SG-SRES-AGNSRLNICP1-ICP",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srlpchatixf1"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }
+   rule {
+         display_name = "TF-3316-Blue-to-SRES-POK"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue"
+            ]
+         destination_groups = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwpenapok1",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwpenapok2"
+            ]
+         action = "ALLOW"
+         services = [
+               "/infra/services/TCP-1035"
+            ]
+         scope = [
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwpenapok1",
+               "/infra/domains/default/groups/TF-AG1-IPSET-NET-IBM-Blue",
+               "/infra/domains/default/groups/TF-AG1-HOST-ag1srwpenapok2"
+            ]
+         disabled              = false
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = true
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-SRES-AG1"
+            }
+      }

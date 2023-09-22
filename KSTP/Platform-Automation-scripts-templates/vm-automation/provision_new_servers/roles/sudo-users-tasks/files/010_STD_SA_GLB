@@ -1,0 +1,37 @@
+# Begin Global SA standard template Ver 2.0.0  Date 2015-04-01  * Master * Refer xxxxx Begin #
+#
+#
+# Version control
+# April 2015 Update V 2.0.0
+#   Initial release as stand alone template.  Moved standard negations out of
+#     sudoers.sampleconfig.8.3 into this template. No content change.
+#       except <:%unixsa>
+#------------------------------------------------------------------------------
+
+#==============================================================================
+# User Aliases
+#==============================================================================
+# Replace sample group names with real group names for your account.
+# The User_Alias name must start with IBM_UNIX_SA to identify the Alias
+#   as an SA alias
+#
+User_Alias      IBM_SA_BAU = %ispwux, %ispwicp, %tmproot
+#
+#==============================================================================
+# Host Aliases
+#==============================================================================
+Host_Alias      IBM_SA_HOSTS = ALL # Use ALL or indicate
+#                                    indicate subsets as appropriate.
+#
+#==============================================================================
+# IBM SA command Alias - sample
+#==============================================================================
+#
+# NOTE This Cmnd_Alias can only be used if secondary logging are in place
+#   on the server.
+#
+IBM_SA_BAU  IBM_SA_HOSTS = ALL,!IBM_NONE_SA,!IBM_SHELLS_ALL,IBM_UNIX_SA_CMDS, \
+     NOEXEC: IBM_SHELLESCAPE_ALL,!IBM_NONE_EDITOR
+#
+# End Global SA standard template Ver 2.0.0  Date 2015-04-01   * Master * Refer xxxxx End #
+

@@ -1,0 +1,33 @@
+- name: Create empty file for Qradar SIEM configuration
+  copy:
+    content: ""
+    dest: /etc/rsyslog.d/qradar.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: qradar
+- name: Qradar SIEM configuration
+  blockinfile:
+    dest: /etc/rsyslog.d/qradar.conf
+    block: |
+     authpriv,auth,local6.* @{{qradar_host}}
+    marker:  "# Ansible managed block: Qradar"
+  tags: qradar
+- name: Enable audit event plugin for syslog and dispatch audit events to LOCAL6
+  lineinfile:
+    dest: /etc/audisp/plugins.d/syslog.conf
+    regexp: "{{ item.value.regexp }}"
+    line: "{{ item.value.line }}"
+  with_dict: "{{ audisp }}"
+  tags: qradar
+- name: Service auditd restart
+  service:
+    name: auditd
+    state: restarted
+#            use: service
+  tags: qradar
+- name: Service rsyslog restart
+  service:
+    name: rsyslog
+    state: restarted
+  tags: qradar

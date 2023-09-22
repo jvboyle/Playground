@@ -1,0 +1,3463 @@
+{
+    "map_grp": {
+        "TF-AP1-IPSET-NET-SL-IRES-Primary-ESXi-vmk0": {
+            "name": "NET-SL-IRES-Primary-ESXi-vmk0",
+            "IP": [
+                "10.63.60.128/26"
+            ]
+        },
+        "TF-AP1-IPSET-sres1-esg1-inside": {
+            "name": "HOST-sres1-esg1-inside",
+            "IP": [
+                "100.80.0.1"
+            ]
+        },
+        "TF-AP1-IPSET-ap1spplusvsnap": {
+            "name": "HOST-ap1spplusvsnap",
+            "IP": [
+                "10.63.60.130",
+                "10.63.60.164"
+            ]
+        },
+        "TF-AP1-IPSET-UAT-ANZ": {
+            "name": "HOST-UAT-ANZ",
+            "IP": [
+                "146.89.238.228"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1apiamprsvg1-secondary-IP": {
+            "name": "HOST-ap1sr1apiamprsvg1-secondary-IP",
+            "IP": [
+                "158.87.54.186"
+            ]
+        },
+        "TF-AP1-IPSET-SWIT-Gateway-zw2uspriv-app-kyndryl-net": {
+            "name": "HOST-SWIT-Gateway-zw2uspriv.app.kyndryl.net",
+            "IP": [
+                "138.95.238.13",
+                "138.95.238.17",
+                "138.95.238.9",
+                "138.95.238.14",
+                "138.95.238.15",
+                "138.95.238.10",
+                "138.95.238.12",
+                "138.95.238.16",
+                "138.95.238.18",
+                "138.95.238.11"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1bfrelay1-IRES-NAT": {
+            "name": "HOST-ap1sr1bfrelay1-IRES-NAT",
+            "IP": [
+                "10.63.9.101"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1epwg": {
+            "name": "Host-ap1srlpm1epwg",
+            "IP": [
+                "158.87.54.101"
+            ]
+        },
+        "TF-AP1-IPSET-pdr-esg01-LB-VIP-2": {
+            "name": "HOST-pdr-esg01-LB-VIP-2",
+            "IP": [
+                "130.198.75.98"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Blue-SRM": {
+            "name": "HOST-IBM-Blue-SRM",
+            "IP": [
+                "9.17.204.124",
+                "9.17.204.143",
+                "9.17.204.160",
+                "9.17.204.45",
+                "9.214.16.211-9.214.16.215",
+                "9.16.7.127",
+                "9.17.204.26",
+                "9.214.96.116-9.214.96.119",
+                "9.17.204.59",
+                "9.17.204.159",
+                "9.17.204.68"
+            ]
+        },
+        "TF-AP1-IPSET-Host-b01zvi21899630-ahe-pok": {
+            "name": "Host-b01zvi21899630.ahe.pok",
+            "IP": [
+                "9.56.22.229"
+            ]
+        },
+        "TF-AP1-IPSET-cngcgnoi": {
+            "name": "AP1-HOST-cngcgnoi",
+            "IP": [
+                "158.87.1.168",
+                "158.87.1.167"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-CGN-subnet": {
+            "name": "NET-SYD-CGN-subnet",
+            "IP": [
+                "100.80.0.0/13"
+            ]
+        },
+        "TF-AP1-IPSET-NET-Internet-DUO": {
+            "name": "NET-Internet-DUO",
+            "IP": [
+                "52.59.243.192/26",
+                "52.19.127.192/26",
+                "52.32.63.128/26",
+                "54.241.191.128/26",
+                "35.182.14.128/26",
+                "54.236.251.192/26"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wdns01": {
+            "name": "Host-ap1sr1wdns01",
+            "IP": [
+                "158.87.54.2"
+            ]
+        },
+        "TF-AP1-IPSET-ap1rhel08": {
+            "name": "HOST-ap1rhel08",
+            "IP": [
+                "158.87.54.90"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1wpgrfds": {
+            "name": "HOST-in1sr1wpgrfds",
+            "IP": [
+                "158.87.61.29"
+            ]
+        },
+        "TF-AP1-IPSET-EZOPS-DEV": {
+            "name": "HOST-EZOPS-DEV",
+            "IP": [
+                "9.115.5.175",
+                "9.115.1.175",
+                "9.115.3.175"
+            ]
+        },
+        "TF-AP1-IPSET-EU-eu1sr1pcacfgit1": {
+            "name": "HOST-EU-eu1sr1pcacfgit1",
+            "IP": [
+                "158.87.52.251"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1lpcacprx2": {
+            "name": "Host-ap1sr1lpcacprx2",
+            "IP": [
+                "158.87.54.83"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1bfrelay1": {
+            "name": "Host-ap1sr1bfrelay1",
+            "IP": [
+                "158.87.54.71"
+            ]
+        },
+        "TF-AP1-IPSET-gacdw-ap-w3cloud-ibm-com": {
+            "name": "HOST-gacdw-ap.w3cloud.ibm.com",
+            "IP": [
+                "146.89.203.170"
+            ]
+        },
+        "TF-AP1-IPSET-HWSW-EU-SRES": {
+            "name": "HOST-HWSW-EU SRES",
+            "IP": [
+                "158.87.53.178",
+                "158.87.52.69"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-DNS": {
+            "name": "HOST-IBM-DNS",
+            "IP": [
+                "9.0.144.50",
+                "9.0.146.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d105lpcacpr-vip": {
+            "name": "HOST-ap1d105lpcacpr-vip",
+            "IP": [
+                "100.80.82.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldbp": {
+            "name": "HOST-ap1irlpm1esldbp",
+            "IP": [
+                "10.63.60.174",
+                "10.63.60.173",
+                "10.63.60.149"
+            ]
+        },
+        "TF-AP1-IPSET-AG1-SRES-ICp-Cluster2-WorkerNodes": {
+            "name": "HOST-AG1-SRES-ICp-Cluster2-WorkerNodes",
+            "IP": [
+                "158.87.48.17-158.87.48.19",
+                "158.87.48.55-158.87.48.60",
+                "158.87.48.82-158.87.48.84",
+                "158.87.48.45"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-b01zvi21899632-ahe-pok": {
+            "name": "Host-blue-b01zvi21899632.ahe.pok",
+            "IP": [
+                "9.56.22.235"
+            ]
+        },
+        "TF-AP1-IPSET-ap1h1lpta1hap-vip": {
+            "name": "HOST-ap1h1lpta1hap-vip",
+            "IP": [
+                "100.87.240.12"
+            ]
+        },
+        "TF-AP1-IPSET-EU-Host-Nexus-Repo": {
+            "name": "EU-Host-Nexus Repo",
+            "IP": [
+                "158.87.53.209"
+            ]
+        },
+        "TF-AP1-IPSET-Netcool-MCI-AU-Reporter-DB": {
+            "name": "HOST-Netcool MCI AU Reporter DB",
+            "IP": [
+                "130.103.171.132"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Bluepages": {
+            "name": "HOST-IBM-Bluepages",
+            "IP": [
+                "9.57.182.78",
+                "9.23.210.79",
+                "9.15.48.48",
+                "9.15.0.48",
+                "9.17.186.253"
+            ]
+        },
+        "TF-AP1-IPSET-IP-KSTP-IN-OCP-01": {
+            "name": "IP-HOST-KSTP-IN-OCP-01",
+            "IP": [
+                "100.126.132.5",
+                "100.126.133.1/27",
+                "158.87.61.141"
+            ]
+        },
+        "TF-AP1-IPSET-Qantas-Jumphost": {
+            "name": "HOST-Qantas-Jumphost",
+            "IP": [
+                "202.81.27.200-202.81.27.203"
+            ]
+        },
+        "TF-AP1-IPSET-pdr-esg01-LB-VIP-3": {
+            "name": "HOST-pdr-esg01-LB-VIP-3",
+            "IP": [
+                "168.1.103.204"
+            ]
+        },
+        "TF-AP1-IPSET-New-EU-JH-eu1srlpmcdjump": {
+            "name": "New-EU-JH-eu1srlpmcdjump",
+            "IP": [
+                "158.87.53.229"
+            ]
+        },
+        "TF-AP1-IPSET-HRES-ap1h1lpta1ssh-VIP": {
+            "name": "HOST-HRES-ap1h1lpta1ssh-VIP",
+            "IP": [
+                "100.87.240.3"
+            ]
+        },
+        "TF-AP1-IPSET-ag1srlphwcls01": {
+            "name": "HOST-ag1srlphwcls01",
+            "IP": [
+                "158.87.49.152"
+            ]
+        },
+        "TF-AP1-IPSET-CPREM-DR110": {
+            "name": "AP1-HOST-CPREM-DR110",
+            "IP": [
+                "172.20.0.111",
+                "172.20.0.112"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-CPREM-NETCOOL-PROBE": {
+            "name": "HOST-DR264-CPREM-NETCOOL-PROBE",
+            "IP": [
+                "10.172.203.8",
+                "10.172.203.7",
+                "10.172.203.6",
+                "10.172.203.5"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpezoyess": {
+            "name": "Host-ap1srlpezoyess",
+            "IP": [
+                "158.87.54.88"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srwphwcstr": {
+            "name": "Host-ap1srwphwcstr",
+            "IP": [
+                "158.87.54.234"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldc01": {
+            "name": "HOST-ap1irlpm1esldc01",
+            "IP": [
+                "10.63.60.175"
+            ]
+        },
+        "TF-AP1-IPSET-tpysydecmap01-sl-bluecloud-ibm-com": {
+            "name": "HOST-tpysydecmap01.sl.bluecloud.ibm.com",
+            "IP": [
+                "9.220.132.112"
+            ]
+        },
+        "TF-AP1-IPSET-NET-IBM-Blue": {
+            "name": "NET-IBM-Blue",
+            "IP": [
+                "9.0.0.0/8"
+            ]
+        },
+        "TF-AP1-IPSET-DRES114-LB-OCP-Cluster1-VIP-2": {
+            "name": "HOST-DRES114-LB-OCP-Cluster1-VIP-2",
+            "IP": [
+                "100.80.92.12"
+            ]
+        },
+        "TF-AP1-IPSET-IRES-ap1irlpipam01": {
+            "name": "HOST-IRES-ap1irlpipam01",
+            "IP": [
+                "10.63.210.151"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-TOKYO": {
+            "name": "IBM  TOKYO",
+            "IP": [
+                "158.87.123.68"
+            ]
+        },
+        "TF-AP1-IPSET-NET-Akamai-IBMID": {
+            "name": "NET-Akamai-IBMID",
+            "IP": [
+                "23.202.230.75",
+                "192.201.218.0/24",
+                "192.201.219.0/24",
+                "23.32.5.55",
+                "23.202.230.73",
+                "23.32.5.48"
+            ]
+        },
+        "TF-AP1-IPSET-NSXT-DRES114-OCP4-CLUSTER02": {
+            "name": "NSXT-DRES114-OCP4-CLUSTER02",
+            "IP": [
+                "100.80.92.114",
+                "100.80.92.150-100.80.92.165",
+                "100.80.92.100-100.80.92.113"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RMQ-PROD": {
+            "name": "IPSET-SRES-IAM-THY-RMQ-PROD",
+            "IP": [
+                "158.87.54.204",
+                "158.87.54.203",
+                "158.87.54.205"
+            ]
+        },
+        "TF-AP1-IPSET-NET_dr110-app-internal1": {
+            "name": "NET_dr110-app-internal1",
+            "IP": [
+                "100.80.90.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1esdp1": {
+            "name": "host-ap1srlpm1esdp1",
+            "IP": [
+                "158.87.54.97"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-ALL-SNAT": {
+            "name": "HOST-SL-IRES-ALL-SNAT",
+            "IP": [
+                "10.63.9.84"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1esdc1": {
+            "name": "Host-ap1srlpm1esdc1",
+            "IP": [
+                "158.87.54.98"
+            ]
+        },
+        "TF-AP1-IPSET-ICP-AP-Namespace": {
+            "name": "HOST-ICP-AP-Namespace",
+            "IP": [
+                "158.87.54.110"
+            ]
+        },
+        "TF-AP1-IPSET-Fortigate": {
+            "name": "HOST-Fortigate",
+            "IP": [
+                "130.198.72.145",
+                "10.63.67.4",
+                "130.198.75.97",
+                "130.198.112.241"
+            ]
+        },
+        "TF-AP1-IPSET-CDI-AP-Proxy-New": {
+            "name": "HOST-CDI-AP-Proxy-New",
+            "IP": [
+                "146.89.203.166",
+                "146.89.203.186",
+                "146.89.203.165"
+            ]
+        },
+        "TF-AP1-IPSET-DR114-LB1-PrimaryIP": {
+            "name": "HOST-DR114-LB1-PrimaryIP",
+            "IP": [
+                "100.80.92.10"
+            ]
+        },
+        "TF-AP1-IPSET-ag1srwphwcetl01": {
+            "name": "HOST-ag1srwphwcetl01",
+            "IP": [
+                "158.87.49.149"
+            ]
+        },
+        "TF-AP1-IPSET-Integ-Svcs-Test-AP": {
+            "name": "HOST-Integ-Svcs-Test-AP",
+            "IP": [
+                "146.89.203.225-146.89.203.226",
+                "146.89.203.235-146.89.203.238"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srwphwcstr": {
+            "name": "AP1-host-ap1srwphwcstr",
+            "IP": [
+                "158.87.54.234"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Blue-Sendmail": {
+            "name": "HOST-IBM-Blue-Sendmail",
+            "IP": [
+                "9.44.14.14"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1bfrelay2-IRES-NAT": {
+            "name": "HOST-ap1sr1bfrelay2-IRES-NAT",
+            "IP": [
+                "10.63.9.102"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-MSSQL-PROD": {
+            "name": "IPSET-SRES-IAM-THY-MSSQL-PROD",
+            "IP": [
+                "158.87.54.195",
+                "158.87.54.196"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SDI-PROD": {
+            "name": "IPSET-SRES-IAM-THY-SDI-PROD",
+            "IP": [
+                "158.87.54.184",
+                "158.87.54.183",
+                "158.87.54.185"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1epni": {
+            "name": "Host-ap1srlpm1epni",
+            "IP": [
+                "158.87.54.104"
+            ]
+        },
+        "TF-AP1-IPSET-SL-DNS": {
+            "name": "HOST-SL-DNS",
+            "IP": [
+                "10.0.80.12",
+                "10.0.80.11"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1esc1": {
+            "name": "Host-ap1srlpm1esc1",
+            "IP": [
+                "158.87.54.100"
+            ]
+        },
+        "TF-AP1-IPSET-SL-clouddriver": {
+            "name": "HOST-SL-clouddriver",
+            "IP": [
+                "10.63.60.174"
+            ]
+        },
+        "TF-AP1-IPSET-IN1-KSTP-Lite-MGMT": {
+            "name": "IN1-KSTP-Lite-MGMT",
+            "IP": [
+                "10.162.63.192/26",
+                "10.162.173.192/26",
+                "10.162.42.0/26",
+                "10.162.152.192/26",
+                "10.162.101.192/26"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-CPREM-OEM-ADAPTER": {
+            "name": "HOST-DR264-CPREM-OEM-ADAPTER",
+            "IP": [
+                "10.172.203.8",
+                "10.172.203.7",
+                "10.172.203.6",
+                "10.172.203.5"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Tanzu-Workload-01-NAT": {
+            "name": "Host-Tanzu-Workload-01-NAT",
+            "IP": [
+                "158.87.50.67"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-NODB-PROD": {
+            "name": "IPSET-SRES-IAM-NODB-PROD",
+            "IP": [
+                "158.87.54.204",
+                "158.87.54.183",
+                "158.87.54.201",
+                "158.87.54.205",
+                "158.87.54.207",
+                "158.87.54.199",
+                "158.87.54.184",
+                "158.87.54.206",
+                "158.87.54.200",
+                "158.87.54.185",
+                "158.87.54.203"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1lcacfjump02": {
+            "name": "Host-ap1sr1lcacfjump02",
+            "IP": [
+                "158.87.54.85"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d127lpcacpr-vip": {
+            "name": "HOST-ap1d127lpcacpr-vip",
+            "IP": [
+                "100.80.94.50"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srwphwcetl": {
+            "name": "Host-ap1srwphwcetl",
+            "IP": [
+                "158.87.54.233"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1epdb": {
+            "name": "Host-ap1srlpm1epdb",
+            "IP": [
+                "158.87.54.103"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-DA-JH-1-2": {
+            "name": "HOST-IMI-DA-JH-1-2",
+            "IP": [
+                "168.1.208.178",
+                "168.1.208.177"
+            ]
+        },
+        "TF-AP1-IPSET-AG1-IP-SET-AG1SRWPHWCS": {
+            "name": "AG1-IP-SET-AG1SRWPHWCS",
+            "IP": [
+                "158.87.49.151",
+                "158.87.49.153",
+                "158.87.48.8",
+                "158.87.49.150",
+                "158.87.49.148",
+                "158.87.49.149"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1bfrelay2": {
+            "name": "Host-ap1sr1bfrelay2",
+            "IP": [
+                "158.87.54.72"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-ICp-icp1-Ingress-VIP": {
+            "name": "HOST-SRES-ICp-icp1-Ingress-VIP",
+            "IP": [
+                "158.87.54.111"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-LB-OCP-Cluster03-VIP": {
+            "name": "HOST-SRES-LB-OCP-Cluster03-VIP",
+            "IP": [
+                "158.87.54.82"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d114lpcacpr-vip": {
+            "name": "HOST-ap1d114lpcacpr-vip",
+            "IP": [
+                "100.80.92.50"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-All-VMs": {
+            "name": "IPSET-SRES-IAM-THY-All-VMs",
+            "IP": [
+                "158.87.54.183",
+                "158.87.54.207",
+                "158.87.54.184",
+                "158.87.54.181",
+                "158.87.54.186",
+                "158.87.54.182",
+                "158.87.54.191",
+                "158.87.54.185",
+                "158.87.54.188",
+                "158.87.54.205",
+                "158.87.54.203",
+                "158.87.54.204",
+                "158.87.54.201",
+                "158.87.54.192",
+                "158.87.54.199",
+                "158.87.54.206",
+                "158.87.54.196",
+                "158.87.54.180",
+                "158.87.54.195",
+                "158.87.54.198",
+                "158.87.54.200",
+                "169.254.1.129",
+                "158.87.54.179",
+                "158.87.54.197"
+            ]
+        },
+        "TF-AP1-IPSET-pdr-esg01-LB-VIP-4": {
+            "name": "HOST-pdr-esg01-LB-VIP-4",
+            "IP": [
+                "130.198.112.247"
+            ]
+        },
+        "TF-AP1-IPSET-SL-VCS-WIN-AD-DNS-NTP": {
+            "name": "HOST-SL-VCS-WIN-AD-DNS-NTP",
+            "IP": [
+                "10.63.63.131",
+                "10.63.63.130"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-NAB-RDP-PROD": {
+            "name": "HOST-SRES-NAB-RDP-PROD",
+            "IP": [
+                "158.87.54.69",
+                "158.87.54.70"
+            ]
+        },
+        "TF-AP1-IPSET-PDR-SMTP-Emailserver": {
+            "name": "HOST-PDR-SMTP-Emailserver",
+            "IP": [
+                "100.80.69.5"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1wpgrfdb": {
+            "name": "HOST-in1sr1wpgrfdb",
+            "IP": [
+                "158.87.61.28"
+            ]
+        },
+        "TF-AP1-IPSET-eu1sr1sepm1": {
+            "name": "eu1sr1sepm1",
+            "IP": [
+                "158.87.52.85"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1icp1p-vip": {
+            "name": "HOST-ap1sr1icp1p-vip",
+            "IP": [
+                "158.87.54.126"
+            ]
+        },
+        "TF-AP1-IPSET-bldbmsa-boulder-ibm-com": {
+            "name": "HOST-bldbmsa-boulder-ibm-com",
+            "IP": [
+                "9.16.252.114"
+            ]
+        },
+        "TF-AP1-IPSET-DR232-CPREM": {
+            "name": "HOST-DR232-CPREM",
+            "IP": [
+                "100.96.2.22",
+                "100.96.2.21"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-ESG-dlr-vNic_2": {
+            "name": "HOST-DR264-ESG-dlr-vNic_2",
+            "IP": [
+                "100.80.1.201"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d271lpcacpr1-VIP": {
+            "name": "HOST-ap1d271lpcacpr1-VIP",
+            "IP": [
+                "100.80.128.50"
+            ]
+        },
+        "TF-AP1-IPSET-DRES-VMS": {
+            "name": "HOST-AP1-DRES VMS",
+            "IP": [
+                "100.87.232.66",
+                "100.87.232.67",
+                "100.80.92.102",
+                "100.87.243.130",
+                "100.80.90.102",
+                "100.87.242.3"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-DNS": {
+            "name": "HOST-SRES-DNS",
+            "IP": [
+                "158.87.54.3",
+                "158.87.54.2"
+            ]
+        },
+        "TF-AP1-IPSET-SL1-DB-Shared-VIP": {
+            "name": "HOST-SL1-DB Shared-VIP",
+            "IP": [
+                "158.87.54.96"
+            ]
+        },
+        "TF-AP1-IPSET-EU-Host-Execution-Node": {
+            "name": "EU-Host-Execution Node",
+            "IP": [
+                "158.87.53.210"
+            ]
+        },
+        "TF-AP1-IPSET-iP-in1sr1lpcacfbds": {
+            "name": "iP-HOST-in1sr1lpcacfbds",
+            "IP": [
+                "158.87.61.46"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-1": {
+            "name": "HOST-DRES110-LB-OCP-Cluster1-VIP-1",
+            "IP": [
+                "100.80.90.11"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-DB2-PROD": {
+            "name": "IPSET-SRES-IAM-THY-DB2-PROD",
+            "IP": [
+                "158.87.54.181",
+                "158.87.54.182"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpcacfbds1": {
+            "name": "Host-ap1srlpcacfbds1",
+            "IP": [
+                "158.87.54.225"
+            ]
+        },
+        "TF-AP1-IPSET-SRES1-LB-OCP-Cluster2-VIP": {
+            "name": "HOST-SRES1-LB-OCP-Cluster2-VIP",
+            "IP": [
+                "158.87.54.39"
+            ]
+        },
+        "TF-AP1-IPSET-DR271-ergsdplmivm04": {
+            "name": "HOST-DR271-ergsdplmivm04",
+            "IP": [
+                "10.72.8.24"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d108lpcacpr-vip": {
+            "name": "HOST-ap1d108lpcacpr-vip",
+            "IP": [
+                "100.80.88.50"
+            ]
+        },
+        "TF-AP1-IPSET-INTERNET-O365": {
+            "name": "HOST-INTERNET-O365",
+            "IP": [
+                "52.96.0.0/14",
+                "23.103.160.0/20",
+                "40.104.0.0/15",
+                "40.96.0.0/13",
+                "191.234.140.0/22",
+                "132.245.0.0/16",
+                "150.171.32.0/22",
+                "13.107.6.152/31",
+                "131.253.33.215/32",
+                "204.79.197.215/32",
+                "13.107.128.0/22"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-BLUEID": {
+            "name": "HOST-IBM-BLUEID",
+            "IP": [
+                "9.63.40.251"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-WINDOWS-PROD-AD": {
+            "name": "IPSET-SRES-IAM-WINDOWS-PROD-AD",
+            "IP": [
+                "158.87.54.204",
+                "158.87.54.205",
+                "158.87.54.201",
+                "158.87.54.207",
+                "158.87.54.231",
+                "158.87.54.199",
+                "158.87.54.180",
+                "158.87.54.198",
+                "158.87.54.206",
+                "169.254.1.129",
+                "158.87.54.200",
+                "169.254.2.152",
+                "158.87.54.203",
+                "158.87.54.197"
+            ]
+        },
+        "TF-AP1-IPSET-SRES1-LB-VIP-OCP2": {
+            "name": "HOST-SRES1-LB-VIP-OCP2",
+            "IP": [
+                "158.87.54.39"
+            ]
+        },
+        "TF-AP1-IPSET-NET-All-CGN-subnet": {
+            "name": "NET-All-CGN-subnet",
+            "IP": [
+                "100.64.0.0/10"
+            ]
+        },
+        "TF-AP1-IPSET-SRES1-LB1-PrimaryIP": {
+            "name": "HOST-SRES1-LB1-PrimaryIP",
+            "IP": [
+                "158.87.54.18"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1epno": {
+            "name": "Host-ap1srlpm1epno",
+            "IP": [
+                "158.87.54.107"
+            ]
+        },
+        "TF-AP1-IPSET-IRES-ap1irlptfa01": {
+            "name": "HOST-IRES-ap1irlptfa01",
+            "IP": [
+                "10.63.210.163"
+            ]
+        },
+        "TF-AP1-IPSET-HWSW-ap1srlphwcsssaz": {
+            "name": "HOST-AP1-HWSW-ap1srlphwcsssaz",
+            "IP": [
+                "158.87.54.144"
+            ]
+        },
+        "TF-AP1-IPSET-NA-HWSW-ag1srlphwcmon01": {
+            "name": "HOST-NA-HWSW-ag1srlphwcmon01",
+            "IP": [
+                "158.87.49.178"
+            ]
+        },
+        "TF-AP1-IPSET-pdr-esg01-LB-VIP-1": {
+            "name": "HOST-pdr-esg01-LB-VIP-1",
+            "IP": [
+                "130.198.112.246"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1etnp1": {
+            "name": "Host-ap1srlpm1etnp1",
+            "IP": [
+                "158.87.54.108"
+            ]
+        },
+        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range": {
+            "name": "NET-CPREM-GSNI-NAT-range",
+            "IP": [
+                "158.87.104.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-AG1-TANZU-WL04-NAT": {
+            "name": "AG1-HOST-TANZU-WL04-NAT",
+            "IP": [
+                "158.87.50.44"
+            ]
+        },
+        "TF-AP1-IPSET-DRES114-LB-OCP-Cluster1-VIP-1": {
+            "name": "HOST-DRES114-LB-OCP-Cluster1-VIP-1",
+            "IP": [
+                "100.80.92.11"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-OCP-Cluster05-SNAT": {
+            "name": "HOST-SRES-OCP-Cluster05-SNAT",
+            "IP": [
+                "158.87.54.27",
+                "100.87.232.64/27"
+            ]
+        },
+        "TF-AP1-IPSET-MHjumphost": {
+            "name": "HOST-MHjumphost",
+            "IP": [
+                "10.178.172.140",
+                "24.100.100.3"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-NSXM": {
+            "name": "HOST-SL-IRES-NSXM",
+            "IP": [
+                "10.63.63.133"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d103lpcacprx1-vip": {
+            "name": "HOST-ap1d103lpcacprx1-vip",
+            "IP": [
+                "100.80.80.50"
+            ]
+        },
+        "TF-AP1-IPSET-Fortigate10G": {
+            "name": "HOST-Fortigate10G",
+            "IP": [
+                "168.1.103.193"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srwphwcdb": {
+            "name": "Host-ap1srwphwcdb",
+            "IP": [
+                "158.87.54.232"
+            ]
+        },
+        "TF-AP1-IPSET-GACDW-Blue": {
+            "name": "HOST-GACDW Blue",
+            "IP": [
+                "9.217.0.113"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Splunk-NAT": {
+            "name": "Host-Splunk-NAT",
+            "IP": [
+                "100.80.68.140"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1d271lpcacpr1": {
+            "name": "Host-ap1d271lpcacpr1",
+            "IP": [
+                "100.80.128.51"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP": {
+            "name": "HOST-ap1d232lpwnzpr1-VIP",
+            "IP": [
+                "100.80.112.50"
+            ]
+        },
+        "TF-AP1-IPSET-Omnibus": {
+            "name": "HOST-Omnibus",
+            "IP": [
+                "100.80.90.78",
+                "100.80.90.82"
+            ]
+        },
+        "TF-AP1-IPSET-CPREM-Netcool-Probe": {
+            "name": "HOST-CPREM-Netcool-Probe",
+            "IP": [
+                "10.226.11.75-10.226.11.78"
+            ]
+        },
+        "TF-AP1-IPSET-esxc_esxm_CloudDevices": {
+            "name": "HOST-esxc_esxm_CloudDevices",
+            "IP": [
+                "10.63.60.144",
+                "10.63.60.140",
+                "10.63.60.150",
+                "10.63.60.138",
+                "10.63.60.189",
+                "10.63.60.181",
+                "10.63.60.187",
+                "10.63.60.179",
+                "10.63.60.156",
+                "10.63.60.167",
+                "10.63.60.178",
+                "10.63.60.151",
+                "10.63.60.157",
+                "10.63.60.148",
+                "10.63.60.182",
+                "10.63.60.161",
+                "10.63.60.168",
+                "10.63.60.159",
+                "10.63.60.143",
+                "10.63.60.145",
+                "10.63.60.184",
+                "10.63.60.169",
+                "10.63.60.146"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-PDR-subnet": {
+            "name": "NET-SYD-PDR-subnet",
+            "IP": [
+                "100.80.69.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wpiampre1": {
+            "name": "Host-ap1sr1wpiampre1",
+            "IP": [
+                "158.87.54.206"
+            ]
+        },
+        "TF-AP1-IPSET-DA-NESSUS-146-89-203-216": {
+            "name": "HOST-DA-NESSUS-146.89.203.216",
+            "IP": [
+                "146.89.203.216"
+            ]
+        },
+        "TF-AP1-IPSET-NET-ICp-Pod-Network": {
+            "name": "NET-ICp-Pod-Network",
+            "IP": [
+                "100.127.0.0/17"
+            ]
+        },
+        "TF-AP1-IPSET-hres1-lb1-PrimaryIP": {
+            "name": "HOST-ap1-hres1-lb1-PrimaryIP",
+            "IP": [
+                "100.87.240.2"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sftp02-IRES-NAT": {
+            "name": "HOST-ap1sftp02-IRES-NAT",
+            "IP": [
+                "10.63.9.73"
+            ]
+        },
+        "TF-AP1-IPSET-KAFKA": {
+            "name": "HOST-KAFKA",
+            "IP": [
+                "169.47.26.90"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Blue-ADE-ANZ": {
+            "name": "HOST-IBM-Blue-ADE-ANZ",
+            "IP": [
+                "9.112.189.170"
+            ]
+        },
+        "TF-AP1-IPSET-NSXT-VC": {
+            "name": "HOST-NSXT-VC",
+            "IP": [
+                "10.63.70.196"
+            ]
+        },
+        "TF-AP1-IPSET-NSXT-VC2-MGMT-Subnet": {
+            "name": "HOST-NSXT-VC2-MGMT-Subnet",
+            "IP": [
+                "10.63.70.192/26"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1lpcacprx1-vip": {
+            "name": "HOST-ap1sr1lpcacprx1-vip",
+            "IP": [
+                "158.87.54.84"
+            ]
+        },
+        "TF-AP1-IPSET-ISA-BDS-CPREM": {
+            "name": "HOST-ISA-BDS-CPREM",
+            "IP": [
+                "100.124.64.2-100.124.64.13"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-HOSTS": {
+            "name": "HOST-DRES110-HOSTS",
+            "IP": [
+                "100.80.90.83",
+                "100.80.90.81",
+                "100.80.90.82",
+                "100.80.90.76",
+                "100.80.90.75",
+                "100.80.90.80",
+                "100.80.90.84",
+                "100.80.90.78",
+                "100.80.90.77",
+                "100.80.90.79"
+            ]
+        },
+        "TF-AP1-IPSET-Tanzu-mgmt-subnet": {
+            "name": "HOST-Tanzu-mgmt-subnet",
+            "IP": [
+                "100.87.243.128/27"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Blue-API-Connect": {
+            "name": "HOST-IBM-Blue-API-Connect",
+            "IP": [
+                "9.131.50.167",
+                "9.17.253.233",
+                "9.44.14.146"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1ecno": {
+            "name": "Host-ap1srlpm1ecno",
+            "IP": [
+                "158.87.54.106"
+            ]
+        },
+        "TF-AP1-IPSET-NZ-shared": {
+            "name": "HOST-NZ shared",
+            "IP": [
+                "100.96.2.180",
+                "100.96.2.150",
+                "100.112.2.150"
+            ]
+        },
+        "TF-AP1-IPSET-SRES1-LB-OCP-Cluster1-VIP": {
+            "name": "HOST-SRES1-LB-OCP-Cluster1-VIP",
+            "IP": [
+                "158.87.55.230",
+                "100.87.232.4",
+                "100.87.232.2",
+                "158.87.54.20"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d141lpcacpr-vip": {
+            "name": "HOST-ap1d141lpcacpr-vip",
+            "IP": [
+                "100.80.102.50"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-2": {
+            "name": "HOST-DRES110-LB-OCP-Cluster1-VIP-2",
+            "IP": [
+                "100.80.90.12"
+            ]
+        },
+        "TF-AP1-IPSET-Integ-Svcs-Prod-AP": {
+            "name": "HOST-Integ-Svcs-Prod-AP",
+            "IP": [
+                "146.89.238.148-146.89.238.153"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-SRES-GSNI-subnet": {
+            "name": "NET-SYD-SRES-GSNI-subnet",
+            "IP": [
+                "158.87.54.0/23"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-Solarwinds-IRES-NAT": {
+            "name": "HOST-IMI-Solarwinds-IRES-NAT",
+            "IP": [
+                "10.63.9.100"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-Services": {
+            "name": "NET-SL-Services",
+            "IP": [
+                "10.0.0.0/14",
+                "166.8.0.0/14",
+                "161.26.0.0/16",
+                "10.198.0.0/15",
+                "10.200.0.0/14"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlphsts1ntcl": {
+            "name": "Host-ap1srlphsts1ntcl",
+            "IP": [
+                "158.87.54.171"
+            ]
+        },
+        "TF-AP1-IPSET-GSNI-SR-AU-SHR-BC-DEV": {
+            "name": "HOST-GSNI-SR-AU-SHR-BC-DEV",
+            "IP": [
+                "130.103.171.197"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-Netcool": {
+            "name": "HOST-IMI-Netcool",
+            "IP": [
+                "168.1.208.190"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1lcacfjump01": {
+            "name": "Host-ap1sr1lcacfjump01",
+            "IP": [
+                "158.87.54.75"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-LB-OCP-Cluster03-VIP1": {
+            "name": "HOST-SRES-LB-OCP-Cluster03-VIP1",
+            "IP": [
+                "158.87.54.83"
+            ]
+        },
+        "TF-AP1-IPSET-DRES114-OCP-Cluster01-Temp": {
+            "name": "HOST-DRES114-OCP-Cluster01-Temp",
+            "IP": [
+                "100.80.92.13-100.80.92.30"
+            ]
+        },
+        "TF-AP1-IPSET-DR110-LB1-PrimaryIP": {
+            "name": "HOST-DR110-LB1-PrimaryIP",
+            "IP": [
+                "100.80.90.10"
+            ]
+        },
+        "TF-AP1-IPSET-ag1srwphwcgrfds": {
+            "name": "HOST-ag1srwphwcgrfds",
+            "IP": [
+                "158.87.49.159"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1d114lpcacpr2": {
+            "name": "Host-ap1d114lpcacpr2",
+            "IP": [
+                "100.80.92.52"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d130lpcacpr-vip": {
+            "name": "HOST-ap1d130lpcacpr-vip",
+            "IP": [
+                "100.80.100.50"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-TEMP": {
+            "name": "HOST-DRES110-LB-OCP-Cluster1-VIP-TEMP",
+            "IP": [
+                "100.80.90.31"
+            ]
+        },
+        "TF-AP1-IPSET-Host-DRES258-Proxy-VIP": {
+            "name": "Host-DRES258-Proxy VIP",
+            "IP": [
+                "100.80.120.50"
+            ]
+        },
+        "TF-AP1-IPSET-NET-All-GSNI-routable": {
+            "name": "NET-All-GSNI-routable",
+            "IP": [
+                "158.87.48.0/20",
+                "158.87.104.0/23"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-CGN-Edge-DLR-Transit-subnet": {
+            "name": "NET-SYD-CGN-Edge-DLR-Transit-subnet",
+            "IP": [
+                "100.80.0.0/18"
+            ]
+        },
+        "TF-AP1-IPSET-DRES-DNAT-to-vCenter": {
+            "name": "HOST-DRES-DNAT-to-vCenter",
+            "IP": [
+                "100.80.68.1"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-b01zvi21899630-ahe-pok": {
+            "name": "Host-blue-b01zvi21899630.ahe.pok",
+            "IP": [
+                "9.56.22.229"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpsatsts01": {
+            "name": "HOST-AP1-ap1srlpsatsts01",
+            "IP": [
+                "158.87.54.161"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srwphwcgadb1": {
+            "name": "HOST-ap1srwphwcgadb1",
+            "IP": [
+                "158.87.54.236"
+            ]
+        },
+        "TF-AP1-IPSET-DRES114-OCP-Cluster1-GSNI-NAT": {
+            "name": "HOST-DRES114-OCP-Cluster1-GSNI-NAT",
+            "IP": [
+                "158.87.60.130"
+            ]
+        },
+        "TF-AP1-IPSET-Host-pimpact1": {
+            "name": "Host -pimpact1",
+            "IP": [
+                "24.100.100.1"
+            ]
+        },
+        "TF-AP1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM": {
+            "name": "EU1-SG-SRES-OCP-Cluster05-MOM",
+            "IP": [
+                "100.79.232.4",
+                "158.87.50.130"
+            ]
+        },
+        "TF-AP1-IPSET-IP-EU-VIP": {
+            "name": "HOST-IP -EU-VIP",
+            "IP": [
+                "100.72.71.67"
+            ]
+        },
+        "TF-AP1-IPSET-DRES114-CPREM-Cyberark": {
+            "name": "HOST-DRES114-CPREM-Cyberark",
+            "IP": [
+                "10.41.166.7"
+            ]
+        },
+        "TF-AP1-IPSET-KOREA-NETCOOL": {
+            "name": "HOST-KOREA-NETCOOL",
+            "IP": [
+                "169.56.67.69",
+                "169.56.67.70"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d128lpcacpr-vip": {
+            "name": "HOST-ap1d128lpcacpr-vip",
+            "IP": [
+                "100.80.96.50"
+            ]
+        },
+        "TF-AP1-IPSET-eu1sr1lparmsisi": {
+            "name": "eu1sr1lparmsisi",
+            "IP": [
+                "158.87.52.72"
+            ]
+        },
+        "TF-AP1-IPSET-LA-UAT": {
+            "name": "HOST-LA UAT",
+            "IP": [
+                "158.87.106.64/27"
+            ]
+        },
+        "TF-AP1-IPSET-Host-TEST-CP-SUBNET": {
+            "name": "Host-TEST-CP-SUBNET",
+            "IP": [
+                "100.120.5.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d110lpcacpr-vip": {
+            "name": "HOST-ap1d110lpcacpr-vip",
+            "IP": [
+                "100.80.90.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldbp-secondary-IP": {
+            "name": "HOST-ap1irlpm1esldbp-secondary-IP",
+            "IP": [
+                "100.80.68.130"
+            ]
+        },
+        "TF-AP1-IPSET-NSXT-DRES114-OCP4-CLUSTER02-LB-VIP": {
+            "name": "NSXT-DRES114-OCP4-CLUSTER02-LB-VIP",
+            "IP": [
+                "100.80.92.11"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srwphwcweb": {
+            "name": "Host-ap1srwphwcweb",
+            "IP": [
+                "158.87.54.231"
+            ]
+        },
+        "TF-AP1-IPSET-SG-SRES-OCP-Cluster04": {
+            "name": "SG-SRES-OCP-Cluster04",
+            "IP": [
+                "100.87.232.32/27"
+            ]
+        },
+        "TF-AP1-IPSET-Host-DRES256-Proxy-VIP": {
+            "name": "Host-DRES256-Proxy VIP",
+            "IP": [
+                "100.80.118.50"
+            ]
+        },
+        "TF-AP1-IPSET-AP1DR230LPLOETNP": {
+            "name": "AP1-HOST-AP1DR230LPLOETNP",
+            "IP": [
+                "100.80.108.32",
+                "100.80.108.33"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-vRLI": {
+            "name": "HOST-SL-IRES-vRLI",
+            "IP": [
+                "10.63.9.79"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d101lpcacprx1-vip": {
+            "name": "HOST-ap1d101lpcacprx1-vip",
+            "IP": [
+                "100.80.78.50"
+            ]
+        },
+        "TF-AP1-IPSET-Tanzu-Workload-01": {
+            "name": "HOST-Tanzu-Workload-01",
+            "IP": [
+                "100.87.242.0/27",
+                "158.87.50.67",
+                "100.87.242.242"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ecmapprod-sl-bluecloud-ibm-com": {
+            "name": "Host-ecmapprod.sl.bluecloud.ibm.com",
+            "IP": [
+                "9.200.132.37"
+            ]
+        },
+        "TF-AP1-IPSET-MnE-Servers": {
+            "name": "AP1-MnE Servers",
+            "IP": [
+                "158.87.54.183",
+                "158.87.54.192",
+                "158.87.54.102",
+                "158.87.54.106",
+                "158.87.54.105",
+                "158.87.54.101",
+                "158.87.54.109",
+                "158.87.54.104",
+                "158.87.54.108",
+                "158.87.54.103",
+                "158.87.54.191",
+                "158.87.54.155",
+                "158.87.54.154",
+                "158.87.54.107"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1wpiamprt1": {
+            "name": "ap1-ap1sr1wpiamprt1",
+            "IP": [
+                "158.87.54.199"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-IAM-THY-MSSQL-PROD-VIP": {
+            "name": "HOST-SRES-IAM-THY-MSSQL-PROD-VIP",
+            "IP": [
+                "158.87.54.193",
+                "158.87.54.194"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-b01zvi21899631-ahe-pok": {
+            "name": "Host-blue-b01zvi21899631.ahe.pok",
+            "IP": [
+                "9.56.22.231"
+            ]
+        },
+        "TF-AP1-IPSET-ap1rhelreposerver": {
+            "name": "HOST-ap1rhelreposerver",
+            "IP": [
+                "158.87.54.73"
+            ]
+        },
+        "TF-AP1-IPSET-Host-MnE-Build-Destination": {
+            "name": "Host-MnE Build Destination",
+            "IP": [
+                "158.87.54.3",
+                "100.80.90.72",
+                "100.80.90.70",
+                "100.80.90.76",
+                "158.87.54.109",
+                "100.80.90.75",
+                "158.87.52.32",
+                "100.80.90.71",
+                "100.80.90.73",
+                "158.87.54.108",
+                "158.87.54.2",
+                "100.80.69.4",
+                "100.80.90.74",
+                "100.80.69.5"
+            ]
+        },
+        "TF-AP1-IPSET-Host-CPREM258-Ausgrid-JH-2": {
+            "name": "Host-CPREM258-Ausgrid JH-2",
+            "IP": [
+                "163.8.168.198"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1lpta1-vip": {
+            "name": "HOST-ap1sr1lpta1-vip",
+            "IP": [
+                "158.87.54.20"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1wphwcweb": {
+            "name": "HOST-in1sr1wphwcweb",
+            "IP": [
+                "158.87.61.21"
+            ]
+        },
+        "TF-AP1-IPSET-vpc-30-mneaas-prod-subnet1": {
+            "name": "vpc-ap1-30-mneaas-prod-subnet1",
+            "IP": [
+                "100.80.71.1",
+                "158.87.60.131",
+                "192.168.64.0/27"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlphsts1ntcl": {
+            "name": "HOST-ap1srlphsts1ntcl",
+            "IP": [
+                "158.87.54.171"
+            ]
+        },
+        "TF-AP1-IPSET-BigFix-Server": {
+            "name": "HOST-BigFix-Server",
+            "IP": [
+                "146.89.182.134"
+            ]
+        },
+        "TF-AP1-IPSET-eu1srlpgsenexgen": {
+            "name": "HOST-eu1srlpgsenexgen",
+            "IP": [
+                "158.87.52.74"
+            ]
+        },
+        "TF-AP1-IPSET-Net_dr114-app-internal1": {
+            "name": "Net_dr114-app-internal1",
+            "IP": [
+                "100.80.92.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-OCP04-Cluster02": {
+            "name": "HOST-DRES110-OCP04-Cluster02",
+            "IP": [
+                "100.80.90.83",
+                "100.80.90.150-100.80.90.165",
+                "100.80.90.81",
+                "100.80.90.100-100.80.90.114",
+                "100.80.90.77",
+                "100.80.90.79"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Blue-dgawdcdev01": {
+            "name": "Host-Blue-dgawdcdev01",
+            "IP": [
+                "9.209.228.88"
+            ]
+        },
+        "TF-AP1-IPSET-ag1srlpgse1000": {
+            "name": "HOST-ag1srlpgse1000",
+            "IP": [
+                "158.87.48.235"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1lpiamnfs": {
+            "name": "Host-ap1sr1lpiamnfs",
+            "IP": [
+                "158.87.54.179"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srwpdwskms01": {
+            "name": "HOST-ap1srwpdwskms01",
+            "IP": [
+                "158.87.54.239"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1icp1n01": {
+            "name": "Host-ap1sr1icp1n01",
+            "IP": [
+                "158.87.54.122"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1cntrl1": {
+            "name": "Host-ap1sr1cntrl1",
+            "IP": [
+                "158.87.54.8"
+            ]
+        },
+        "TF-AP1-IPSET-IN-IHOSTin1sr1wphwcdb": {
+            "name": "IN-IHOSTin1sr1wphwcdb",
+            "IP": [
+                "158.87.61.22"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-IRES-vCenter-HA": {
+            "name": "NET-SL-IRES-vCenter-HA",
+            "IP": [
+                "10.63.255.136/29"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d114lpnab-vip2": {
+            "name": "HOST-ap1d114lpnab-vip2",
+            "IP": [
+                "100.80.92.12"
+            ]
+        },
+        "TF-AP1-IPSET-VM-AP1SRWPHWC": {
+            "name": "AP1-VM-AP1SRWPHWC",
+            "IP": [
+                "158.87.54.236",
+                "158.87.54.237",
+                "158.87.54.234",
+                "158.87.54.231",
+                "158.87.54.232",
+                "158.87.54.233",
+                "158.87.54.235",
+                "158.87.54.238"
+            ]
+        },
+        "TF-AP1-IPSET-NSX-T-vROPS": {
+            "name": "HOST-NSX-T-vROPS",
+            "IP": [
+                "100.80.67.254"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SL-IRES-WIN-AD-DNS-NTP": {
+            "name": "IPSET-SL-IRES-WIN-AD-DNS-NTP",
+            "IP": [
+                "10.63.9.76",
+                "10.63.9.75"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1esd1-vip": {
+            "name": "HOST-ap1srlpm1esd1-vip",
+            "IP": [
+                "158.87.54.96"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1esbk1": {
+            "name": "Host-ap1srlpm1esbk1",
+            "IP": [
+                "158.87.54.99"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-PROXY-PROD": {
+            "name": "IPSET-SRES-IAM-THY-PROXY-PROD",
+            "IP": [
+                "158.87.54.191",
+                "158.87.54.192"
+            ]
+        },
+        "TF-AP1-IPSET-GSENNA": {
+            "name": "HOST-GSENNA",
+            "IP": [
+                "158.87.48.235"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-Chip-p": {
+            "name": "Host-blue-Chip-p",
+            "IP": [
+                "9.45.90.158"
+            ]
+        },
+        "TF-AP1-IPSET-MCI-NZ-nzchctk01sr01rz": {
+            "name": "HOST-MCI-NZ-nzchctk01sr01rz",
+            "IP": [
+                "130.103.163.67"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-CPREM-LB-VIP1": {
+            "name": "HOST-DR264-CPREM-LB-VIP1",
+            "IP": [
+                "100.80.125.244"
+            ]
+        },
+        "TF-AP1-IPSET-AVI-NS1": {
+            "name": "HOST-AP1-AVI-NS1",
+            "IP": [
+                "158.87.50.66"
+            ]
+        },
+        "TF-AP1-IPSET-pdr-esg01-inside": {
+            "name": "HOST-pdr-esg01-inside",
+            "IP": [
+                "100.80.64.253"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1eslbak": {
+            "name": "HOST-ap1irlpm1eslbak",
+            "IP": [
+                "10.63.60.135"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RAS-PROD": {
+            "name": "IPSET-SRES-IAM-THY-RAS-PROD",
+            "IP": [
+                "158.87.54.180"
+            ]
+        },
+        "TF-AP1-IPSET-dnat-to-ap1sr1ljmp01": {
+            "name": "HOST-dnat-to-ap1sr1ljmp01",
+            "IP": [
+                "10.63.9.68",
+                "158.87.54.5"
+            ]
+        },
+        "TF-AP1-IPSET-SL-SNMP-Proxy": {
+            "name": "HOST-SL-SNMP-Proxy",
+            "IP": [
+                "10.2.163.170"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-Private-Service-Endpoints": {
+            "name": "NET-SL-Private-Service-Endpoints",
+            "IP": [
+                "166.8.0.0/14"
+            ]
+        },
+        "TF-AP1-IPSET-vpc-30-dx-platform-prod-subnet1": {
+            "name": "vpc-ap1-30-dx-platform-prod-subnet1",
+            "IP": [
+                "100.80.71.2",
+                "192.168.64.32/27",
+                "100.80.71.1"
+            ]
+        },
+        "TF-AP1-IPSET-SL-WSUS": {
+            "name": "HOST-SL-WSUS",
+            "IP": [
+                "10.0.77.53"
+            ]
+        },
+        "TF-AP1-IPSET-ecmapprod-sl-bluecloud-ibm-com": {
+            "name": "HOST-ecmapprod.sl.bluecloud.ibm.com",
+            "IP": [
+                "9.220.132.37"
+            ]
+        },
+        "TF-AP1-IPSET-ap1vmon": {
+            "name": "HOST-ap1vmon",
+            "IP": [
+                "10.63.9.78"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-sl-bluecloud-ibm-com": {
+            "name": "Host-blue-sl.bluecloud.ibm.com",
+            "IP": [
+                "9.209.239.20"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1ecni": {
+            "name": "Host-ap1srlpm1ecni",
+            "IP": [
+                "158.87.54.102"
+            ]
+        },
+        "TF-AP1-IPSET-NET-MSS-Qradar-Nextwatch": {
+            "name": "NET-MSS-Qradar-Nextwatch",
+            "IP": [
+                "209.134.187.8/29",
+                "209.134.187.16/29"
+            ]
+        },
+        "TF-AP1-IPSET-ISA-CACF": {
+            "name": "HOST-ISA-CACF",
+            "IP": [
+                "10.118.10.18",
+                "10.118.10.21",
+                "100.124.64.2-100.124.64.13",
+                "10.118.10.29",
+                "10.118.10.27",
+                "10.118.10.20",
+                "10.118.10.12",
+                "10.118.10.28",
+                "10.118.10.13",
+                "10.162.236.131",
+                "10.118.10.11",
+                "10.118.10.19",
+                "10.118.10.17"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wpiamprfs": {
+            "name": "Host-ap1sr1wpiamprfs",
+            "IP": [
+                "158.87.54.198"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-SNAT-to-Internet": {
+            "name": "HOST-SL-IRES-SNAT-to-Internet",
+            "IP": [
+                "100.80.68.25/32"
+            ]
+        },
+        "TF-AP1-IPSET-ANZ_ICD_instance": {
+            "name": "HOST-ANZ_ICD_instance",
+            "IP": [
+                "10.138.90.76"
+            ]
+        },
+        "TF-AP1-IPSET-ICp-VRRP-IP": {
+            "name": "HOST-ICp-VRRP-IP",
+            "IP": [
+                "224.0.0.18"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-DE-PROD": {
+            "name": "IPSET-SRES-IAM-THY-DE-PROD",
+            "IP": [
+                "158.87.54.207",
+                "158.87.54.206"
+            ]
+        },
+        "TF-AP1-IPSET-HOst-MnE-Build-Source": {
+            "name": "HOst- MnE Build Source",
+            "IP": [
+                "100.80.90.70",
+                "100.80.90.72",
+                "100.80.90.76",
+                "158.87.54.109",
+                "158.87.54.6",
+                "158.87.52.32",
+                "100.80.90.75",
+                "100.80.90.71",
+                "158.87.54.108",
+                "158.87.54.5",
+                "100.80.90.73",
+                "158.87.54.4",
+                "100.80.90.74",
+                "100.80.90.77-100.80.90.84"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-OCP-Cluster03-Temp": {
+            "name": "HOST-SRES-OCP-Cluster03-Temp",
+            "IP": [
+                "158.87.54.85-158.87.54.98"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-NA-RELAY": {
+            "name": "HOST-IBM-NA-RELAY",
+            "IP": [
+                "9.57.199.109",
+                "9.57.199.107",
+                "9.17.130.237",
+                "9.17.130.236",
+                "9.17.130.234",
+                "9.57.199.106",
+                "9.57.199.108",
+                "9.17.130.235",
+                "9.57.199.110",
+                "9.17.130.232",
+                "9.17.130.233",
+                "9.57.199.111"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-KIWISyslog": {
+            "name": "HOST-IMI-KIWISyslog",
+            "IP": [
+                "168.1.208.171"
+            ]
+        },
+        "TF-AP1-IPSET-Ausgrid-Jumphost": {
+            "name": "HOST-Ausgrid-Jumphost",
+            "IP": [
+                "202.81.27.198-202.81.27.199"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1esc1": {
+            "name": "HOST-ap1srlpm1esc1",
+            "IP": [
+                "158.87.54.100"
+            ]
+        },
+        "TF-AP1-IPSET-in1-sres-tanzu-workload-01-ingress": {
+            "name": "in1-sres-tanzu-workload-01-ingress",
+            "IP": [
+                "158.87.61.130"
+            ]
+        },
+        "TF-AP1-IPSET-OCP4-3-Cluster": {
+            "name": "HOST-HOST-OCP4.3-Cluster",
+            "IP": [
+                "158.87.54.40-158.87.54.59",
+                "158.87.54.75",
+                "158.87.54.80"
+            ]
+        },
+        "TF-AP1-IPSET-ap1pdr1smtp01-IRES-NAT": {
+            "name": "HOST-ap1pdr1smtp01-IRES-NAT",
+            "IP": [
+                "10.63.9.71"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-IAM-THY-RMQ-PROD-VIP": {
+            "name": "HOST-SRES-IAM-THY-RMQ-PROD-VIP",
+            "IP": [
+                "158.87.54.202"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-VSI-WIN-Jump-Servers": {
+            "name": "HOST-SL-IRES-VSI-WIN-Jump-Servers",
+            "IP": [
+                "10.63.9.95",
+                "10.63.60.176",
+                "10.63.9.94",
+                "10.63.60.174"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpgsehst01": {
+            "name": "Host-ap1srlpgsehst01",
+            "IP": [
+                "158.87.54.93"
+            ]
+        },
+        "TF-AP1-IPSET-PHPIPAM-VMs": {
+            "name": "HOST-PHPIPAM-VMs",
+            "IP": [
+                "10.162.173.219",
+                "10.162.173.209"
+            ]
+        },
+        "TF-AP1-IPSET-MSS-Qradar-Event-Collector": {
+            "name": "HOST-MSS-Qradar-Event-Collector",
+            "IP": [
+                "10.63.9.81"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldc02": {
+            "name": "HOST-ap1irlpm1esldc02",
+            "IP": [
+                "10.63.60.162"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-DAJumphosts": {
+            "name": "HOST-IMI-DAJumphosts",
+            "IP": [
+                "168.1.208.178-168.1.208.180"
+            ]
+        },
+        "TF-AP1-IPSET-dnat-to-PDR-Proxy-from-IRES": {
+            "name": "HOST-dnat-to-PDR-Proxy-from-IRES",
+            "IP": [
+                "10.63.9.70"
+            ]
+        },
+        "TF-AP1-IPSET-AP1SRWPHWCGADS1": {
+            "name": "HOST-AP1-AP1SRWPHWCGADS1",
+            "IP": [
+                "158.87.54.237"
+            ]
+        },
+        "TF-AP1-IPSET-SNAT-to-SL-SVC": {
+            "name": "HOST-SNAT-to-SL-SVC",
+            "IP": [
+                "10.63.9.84"
+            ]
+        },
+        "TF-AP1-IPSET-nlasabuildm1e00p-sr1-eu1": {
+            "name": "HOST-nlasabuildm1e00p.sr1.eu1",
+            "IP": [
+                "158.87.52.32"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1esdc1": {
+            "name": "HOST-ap1srlpm1esdc1",
+            "IP": [
+                "158.87.54.98"
+            ]
+        },
+        "TF-AP1-IPSET-prdpcbmgwcms02-Primary": {
+            "name": "HOST-prdpcbmgwcms02-Primary",
+            "IP": [
+                "9.220.27.78"
+            ]
+        },
+        "TF-AP1-IPSET-VPC-IKS-Cloud-Cluster": {
+            "name": "HOST-VPC-IKS Cloud Cluster",
+            "IP": [
+                "192.168.64.0/27"
+            ]
+        },
+        "TF-AP1-IPSET-Telstra-JumpCGNNAT": {
+            "name": "HOST-Telstra-Jumphost-CGNNAT",
+            "IP": [
+                "100.87.236.11-100.87.236.42"
+            ]
+        },
+        "TF-AP1-IPSET-GSENEU": {
+            "name": "HOST-GSENEU",
+            "IP": [
+                "158.87.52.243"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-WIN-Jump-Servers-VIP": {
+            "name": "HOST-SRES-WIN-Jump-Servers-VIP",
+            "IP": [
+                "158.87.54.7"
+            ]
+        },
+        "TF-AP1-IPSET-SRES1-LB-VIP-OCP1": {
+            "name": "HOST-SRES1-LB-VIP-OCP1",
+            "IP": [
+                "158.87.55.230",
+                "100.87.232.4",
+                "100.87.232.2",
+                "158.87.54.20"
+            ]
+        },
+        "TF-AP1-IPSET-hres-lb1": {
+            "name": "HOST-ap1-hres-lb1",
+            "IP": [
+                "100.87.240.2"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-STaaS-AD": {
+            "name": "IPSET-SRES-STaaS-AD",
+            "IP": [
+                "158.87.54.151",
+                "158.87.54.150"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpm1etnp2": {
+            "name": "Host-ap1srlpm1etnp2",
+            "IP": [
+                "158.87.54.109"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wpiamprra": {
+            "name": "Host-ap1sr1wpiamprra",
+            "IP": [
+                "158.87.54.180"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-wdcdmyyz945126": {
+            "name": "Host-blue-wdcdmyyz945126",
+            "IP": [
+                "9.45.126.100"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d193lpcacpr-vip": {
+            "name": "HOST-ap1d193lpcacpr-vip",
+            "IP": [
+                "100.80.106.50"
+            ]
+        },
+        "TF-AP1-IPSET-IBM-Sametime": {
+            "name": "HOST-IBM-Sametime",
+            "IP": [
+                "9.16.19.207"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-OCP-Cluster04-SNAT": {
+            "name": "HOST-SRES-OCP-Cluster04-SNAT",
+            "IP": [
+                "158.87.54.27",
+                "100.87.232.32/27"
+            ]
+        },
+        "TF-AP1-IPSET-EU-DB2": {
+            "name": "HOST-EU-DB2",
+            "IP": [
+                "158.87.52.33"
+            ]
+        },
+        "TF-AP1-IPSET-NET-AG1-GRES-subnet": {
+            "name": "NET-AG1-GRES-subnet",
+            "IP": [
+                "158.87.50.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-IKS_Cluster_External_VIP-2": {
+            "name": "IKS_Cluster_External_VIP-2",
+            "IP": [
+                "158.87.60.132"
+            ]
+        },
+        "TF-AP1-IPSET-SL-NTP": {
+            "name": "HOST-SL-NTP",
+            "IP": [
+                "10.0.77.54"
+            ]
+        },
+        "TF-AP1-IPSET-DRES110-OCP-Cluster01-Temp": {
+            "name": "HOST-DRES110-OCP-Cluster01-Temp",
+            "IP": [
+                "100.80.90.13-100.80.90.30"
+            ]
+        },
+        "TF-AP1-IPSET-SLSydImpactnode02": {
+            "name": "SLSydImpactnode02",
+            "IP": [
+                "168.1.208.182"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlphstp1ntcl": {
+            "name": "Host-ap1srlphstp1ntcl",
+            "IP": [
+                "158.87.54.170"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wjmp01": {
+            "name": "Host-ap1sr1wjmp01",
+            "IP": [
+                "158.87.54.4"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Myer-CPREM-JH": {
+            "name": "Host Myer CPREM JH",
+            "IP": [
+                "10.95.30.137",
+                "10.95.30.138"
+            ]
+        },
+        "TF-AP1-IPSET-DR271-ergsdplmivm03": {
+            "name": "HOST-DR271-ergsdplmivm03",
+            "IP": [
+                "10.72.8.23"
+            ]
+        },
+        "TF-AP1-IPSET-EU1-IP-EU1SRLPCARDB1000": {
+            "name": "EU1-IP-EU1SRLPCARDB1000",
+            "IP": [
+                "158.87.52.253"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d114lpnab-vip1": {
+            "name": "HOST-ap1d114lpnab-vip1",
+            "IP": [
+                "100.80.92.11"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1icp1n02": {
+            "name": "Host-ap1sr1icp1n02",
+            "IP": [
+                "158.87.54.123"
+            ]
+        },
+        "TF-AP1-IPSET-eu1srlpcarwas1000": {
+            "name": "HOST-eu1srlpcarwas1000",
+            "IP": [
+                "158.87.52.252"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1sql01": {
+            "name": "Host-ap1sr1sql01",
+            "IP": [
+                "158.87.54.10"
+            ]
+        },
+        "TF-AP1-IPSET-Host-bjy7vr1-tms-stglab": {
+            "name": "Host-bjy7vr1.tms.stglab",
+            "IP": [
+                "9.19.151.124"
+            ]
+        },
+        "TF-AP1-IPSET-HOst-pimpact2": {
+            "name": "HOst-pimpact2",
+            "IP": [
+                "24.100.100.2"
+            ]
+        },
+        "TF-AP1-IPSET-SL-IRES-vCenter": {
+            "name": "HOST-SL-IRES-vCenter",
+            "IP": [
+                "10.63.63.132"
+            ]
+        },
+        "TF-AP1-IPSET-vserv-eu-sos-ibm-com": {
+            "name": "HOST-vserv-eu.sos.ibm.com",
+            "IP": [
+                "159.8.231.231",
+                "159.8.100.21",
+                "169.50.33.166"
+            ]
+        },
+        "TF-AP1-IPSET-gtscdi-ap-proxy-gacdw-sl-ibm-com": {
+            "name": "HOST-gtscdi-ap-proxy.gacdw.sl.ibm.com",
+            "IP": [
+                "146.89.203.167"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1esbk1": {
+            "name": "HOST-ap1srlpm1esbk1",
+            "IP": [
+                "158.87.54.99"
+            ]
+        },
+        "TF-AP1-IPSET-AG1-IP-SET-AG1SRWPHWCS-1": {
+            "name": "AG1-IP-SET-AG1SRWPHWCS-1",
+            "IP": [
+                "158.87.49.153",
+                "158.87.49.149"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-LB-VIP1": {
+            "name": "HOST-DR264-LB-VIP1",
+            "IP": [
+                "100.80.125.242"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-ESG-vpn-vNic_1": {
+            "name": "HOST-DR264-ESG-vpn-vNic_1",
+            "IP": [
+                "100.80.1.194"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1d114lpcacpr1": {
+            "name": "Host-ap1d114lpcacpr1",
+            "IP": [
+                "100.80.92.51"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-IAM-THY-SVG-PROD": {
+            "name": "HOST-SRES-IAM-THY-SVG-PROD",
+            "IP": [
+                "158.87.54.187",
+                "158.87.54.189"
+            ]
+        },
+        "TF-AP1-IPSET-Netcool-MCI-Dev-Reporter-DB": {
+            "name": "HOST-Netcool MCI Dev Reporter DB",
+            "IP": [
+                "130.103.171.227"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1etnp2": {
+            "name": "HOST-ap1srlpm1etnp2",
+            "IP": [
+                "158.87.54.109"
+            ]
+        },
+        "TF-AP1-IPSET-CACF-tool": {
+            "name": "HOST-CACF-tool",
+            "IP": [
+                "169.60.136.183",
+                "169.60.136.148",
+                "169.60.136.161",
+                "169.60.136.184"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1srlpgse1000": {
+            "name": "Host-ap1srlpgse1000",
+            "IP": [
+                "158.87.54.91"
+            ]
+        },
+        "TF-AP1-IPSET-IN1SR1WPHWCETL": {
+            "name": "HOST-IN1SR1WPHWCETL",
+            "IP": [
+                "158.87.61.23"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldbs": {
+            "name": "HOST-ap1irlpm1esldbs",
+            "IP": [
+                "10.63.60.136",
+                "10.63.60.134"
+            ]
+        },
+        "TF-AP1-IPSET-DRES-DNAT-to-vLi": {
+            "name": "HOST-DRES-DNAT-to-vLi",
+            "IP": [
+                "100.80.68.2"
+            ]
+        },
+        "TF-AP1-IPSET-AP_Linux_Machines": {
+            "name": "AP_Linux_Machines",
+            "IP": [
+                "100.87.240.0-100.87.240.255",
+                "158.87.54.0-158.87.54.255",
+                "10.63.9.73",
+                "100.80.69.0-100.80.69.255"
+            ]
+        },
+        "TF-AP1-IPSET-ap1h1lpta2hap-vip": {
+            "name": "HOST-ap1h1lpta2hap-vip",
+            "IP": [
+                "100.87.240.15"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-MNEAAS-AP-MIG1-BC": {
+            "name": "HOST-SRES-MNEAAS-AP-MIG1-BC",
+            "IP": [
+                "158.87.54.135",
+                "158.87.54.136"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-Solarwinds": {
+            "name": "HOST-IMI-Solarwinds",
+            "IP": [
+                "168.1.208.164-168.1.208.166"
+            ]
+        },
+        "TF-AP1-IPSET-prdpcbmgwcms02-Secondary": {
+            "name": "HOST-prdpcbmgwcms02-Secondary",
+            "IP": [
+                "9.45.90.158"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Blue-pgawdcstetl01": {
+            "name": "Host-Blue-pgawdcstetl01",
+            "IP": [
+                "9.209.239.20"
+            ]
+        },
+        "TF-AP1-IPSET-INDOSAT-NETCOOL-114-6-2-142": {
+            "name": "HOST-INDOSAT-NETCOOL-114.6.2.142",
+            "IP": [
+                "114.6.2.142"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d107lpcacpr-vip": {
+            "name": "HOST-ap1d107lpcacpr-vip",
+            "IP": [
+                "100.80.86.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1apiamprsvg2-secondary-IP": {
+            "name": "HOST-ap1sr1apiamprsvg2-secondary-IP",
+            "IP": [
+                "158.87.54.188"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-ESG-agg-vNic_0": {
+            "name": "HOST-DR264-ESG-agg-vNic_0",
+            "IP": [
+                "100.80.64.31"
+            ]
+        },
+        "TF-AP1-IPSET-DRES164-LB-OCP-Cluster1-VIP-1": {
+            "name": "HOST-DRES164-LB-OCP-Cluster1-VIP-1",
+            "IP": [
+                "100.80.104.11"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SVG-PROD": {
+            "name": "IPSET-SRES-IAM-THY-SVG-PROD",
+            "IP": [
+                "158.87.54.186"
+            ]
+        },
+        "TF-AP1-IPSET-s3-private-au-syd-cloud-object-storage-appdomain-cloud": {
+            "name": "HOST-s3.private.au-syd.cloud-object-storage.appdomain.cloud",
+            "IP": [
+                "10.1.129.67"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-GSNI-subnet": {
+            "name": "NET-SYD-GSNI-subnet",
+            "IP": [
+                "158.87.60.128/25",
+                "158.87.54.0/23"
+            ]
+        },
+        "TF-AP1-IPSET-IMI-CISCO-INTEGRATION": {
+            "name": "HOST-IMI-CISCO-INTEGRATION",
+            "IP": [
+                "168.1.211.113-168.1.211.114"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1lphwcls": {
+            "name": "HOST-in1sr1lphwcls",
+            "IP": [
+                "158.87.61.25"
+            ]
+        },
+        "TF-AP1-IPSET-portal-mneaas-ams-sp-ibm-com": {
+            "name": "HOST-portal.ap1.mneaas.ams.sp.ibm.com",
+            "IP": [
+                "158.87.54.111"
+            ]
+        },
+        "TF-AP1-IPSET-MCI-NZ-nzakptk01sr02rz": {
+            "name": "HOST-MCI-NZ-nzakptk01sr02rz",
+            "IP": [
+                "130.103.163.68"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-LINUX-PROD": {
+            "name": "IPSET-SRES-IAM-LINUX-PROD",
+            "IP": [
+                "158.87.54.183",
+                "158.87.54.192",
+                "158.87.54.184",
+                "158.87.54.181",
+                "158.87.54.182",
+                "158.87.54.191",
+                "158.87.54.186",
+                "158.87.54.188",
+                "158.87.54.185"
+            ]
+        },
+        "TF-AP1-IPSET-Asset_Management": {
+            "name": "HOST-Asset_Management",
+            "IP": [
+                "9.220.132.40",
+                "9.220.132.60"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SECRET-PROD": {
+            "name": "IPSET-SRES-IAM-THY-SECRET-PROD",
+            "IP": [
+                "158.87.54.200",
+                "158.87.54.201",
+                "158.87.54.199"
+            ]
+        },
+        "TF-AP1-IPSET-HWSW-eu1sr1wphwcdb": {
+            "name": "HOST-HWSW-eu1sr1wphwcdb",
+            "IP": [
+                "158.87.52.152"
+            ]
+        },
+        "TF-AP1-IPSET-NET-ICp-ClusterIP-Service-Network": {
+            "name": "NET-ICp-ClusterIP-Service-Network",
+            "IP": [
+                "100.127.128.0/24"
+            ]
+        },
+        "TF-AP1-IPSET-DAAP-OVPN-SSHProxy-146-89-203-200": {
+            "name": "HOST-DAAP-OVPN-SSHProxy-146.89.203.200",
+            "IP": [
+                "146.89.203.200"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-IRES-ISPW-MGMT": {
+            "name": "NET-SL-IRES-ISPW-MGMT",
+            "IP": [
+                "10.63.9.64/26"
+            ]
+        },
+        "TF-AP1-IPSET-Host-CPREM258-Ausgrid-JH": {
+            "name": "Host-CPREM258-Ausgrid JH",
+            "IP": [
+                "163.8.72.198"
+            ]
+        },
+        "TF-AP1-IPSET-Host-SRES-MNEAAS-AP-SHR1-NCO": {
+            "name": "Host-SRES-MNEAAS-AP-SHR1-NCO",
+            "IP": [
+                "158.87.54.106",
+                "158.87.54.107"
+            ]
+        },
+        "TF-AP1-IPSET-Host_ap1sr1lpiamprsdi1": {
+            "name": "Host_ap1sr1lpiamprsdi1",
+            "IP": [
+                "158.87.54.183"
+            ]
+        },
+        "TF-AP1-IPSET-GSNI-SR-AU-SHR-HTEMS": {
+            "name": "HOST-GSNI-SR-AU-SHR-HTEMS",
+            "IP": [
+                "130.103.171.133",
+                "130.103.171.168"
+            ]
+        },
+        "TF-AP1-IPSET-SLSydImpactnode01": {
+            "name": "SLSydImpactnode01",
+            "IP": [
+                "168.1.208.181"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1ecdb": {
+            "name": "host-ap1srlpm1ecdb",
+            "IP": [
+                "158.87.54.105"
+            ]
+        },
+        "TF-AP1-IPSET-Host_DRES264-Client-premise-JH": {
+            "name": "Host_DRES264 Client premise JH",
+            "IP": [
+                "10.172.203.0/28"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-hwsw360-w3-969": {
+            "name": "Host-blue-hwsw360.w3-969",
+            "IP": [
+                "9.220.27.85"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-STaaS-AD-Clients": {
+            "name": "IPSET-SRES-STaaS-AD-Clients",
+            "IP": [
+                "158.87.54.155",
+                "158.87.54.153",
+                "158.87.54.152",
+                "158.87.54.154"
+            ]
+        },
+        "TF-AP1-IPSET-HOST_NAT_CACF_Proxy": {
+            "name": "HOST_NAT_CACF_Proxy",
+            "IP": [
+                "158.87.104.52",
+                "158.87.104.51"
+            ]
+        },
+        "TF-AP1-IPSET-EnergyAustralia-Jumphost": {
+            "name": "HOST-EnergyAustralia-Jumphost",
+            "IP": [
+                "202.81.27.194-202.81.27.197",
+                "202.81.27.204-202.81.27.205"
+            ]
+        },
+        "TF-AP1-IPSET-SRES01-ICP-Cluster01": {
+            "name": "HOST-SRES01-ICP-Cluster01",
+            "IP": [
+                "158.87.54.113",
+                "158.87.54.128",
+                "158.87.54.112",
+                "158.87.54.111",
+                "158.87.54.125",
+                "158.87.54.122",
+                "158.87.54.129",
+                "158.87.54.110",
+                "158.87.54.115",
+                "158.87.54.118",
+                "158.87.54.114",
+                "158.87.54.119",
+                "158.87.54.126",
+                "158.87.54.127",
+                "158.87.54.120",
+                "158.87.54.117",
+                "158.87.54.121",
+                "158.87.54.123"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1wphwcstr": {
+            "name": "HOST-in1sr1wphwcstr",
+            "IP": [
+                "158.87.61.24"
+            ]
+        },
+        "TF-AP1-IPSET-DRES164-LB-OCP-Cluster1-VIP-2": {
+            "name": "HOST-DRES164-LB-OCP-Cluster1-VIP-2",
+            "IP": [
+                "100.80.104.12"
+            ]
+        },
+        "TF-AP1-IPSET-DRES164-OCP-Cluster01-Temp": {
+            "name": "HOST-DRES164-OCP-Cluster01-Temp",
+            "IP": [
+                "100.80.104.14-100.80.104.30"
+            ]
+        },
+        "TF-AP1-IPSET-IAMAAS-ZABBIX": {
+            "name": "HOST-IAMAAS ZABBIX",
+            "IP": [
+                "158.87.106.86",
+                "158.87.106.87"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Dres268-cacf-Proxy-VIP": {
+            "name": "Host Dres268 cacf Proxy VIP",
+            "IP": [
+                "158.87.104.50",
+                "100.80.126.50"
+            ]
+        },
+        "TF-AP1-IPSET-slsydimpacttest01": {
+            "name": "slsydimpacttest01",
+            "IP": [
+                "168.1.211.97"
+            ]
+        },
+        "TF-AP1-IPSET-dnat-to-ap1sr1wjmp00": {
+            "name": "HOST-dnat-to-ap1sr1wjmp00",
+            "IP": [
+                "10.63.9.69"
+            ]
+        },
+        "TF-AP1-IPSET-in1-sres-tanzu-workload-02-ingress": {
+            "name": "in1-sres-tanzu-workload-02-ingress",
+            "IP": [
+                "158.87.60.131"
+            ]
+        },
+        "TF-AP1-IPSET-EU1-SRES-CACF-Proxy": {
+            "name": "EU1-HOST-SRES-CACF-Proxy",
+            "IP": [
+                "158.87.53.52",
+                "158.87.53.51"
+            ]
+        },
+        "TF-AP1-IPSET-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD": {
+            "name": "HOST-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD",
+            "IP": [
+                "168.1.1.227",
+                "135.90.66.243",
+                "130.198.87.170"
+            ]
+        },
+        "TF-AP1-IPSET-pjumplinux1": {
+            "name": "HOST-pjumplinux1",
+            "IP": [
+                "10.50.2.60"
+            ]
+        },
+        "TF-AP1-IPSET-NET-MSS-Qradar-Console": {
+            "name": "NET-MSS-Qradar-Console",
+            "IP": [
+                "206.253.234.192/27"
+            ]
+        },
+        "TF-AP1-IPSET-INTERNET-GMAIL": {
+            "name": "HOST-INTERNET-GMAIL",
+            "IP": [
+                "216.239.32.0/19",
+                "66.249.80.0/20",
+                "66.102.0.0/20",
+                "172.217.0.0/19",
+                "216.58.192.0/19",
+                "209.85.128.0/17",
+                "64.233.160.0/19",
+                "74.125.0.0/16",
+                "108.177.8.0/21",
+                "207.126.144.0/20",
+                "173.194.0.0/16",
+                "64.18.0.0/20",
+                "108.177.96.0/19",
+                "72.14.192.0/18"
+            ]
+        },
+        "TF-AP1-IPSET-MCS-CPREM-Jump": {
+            "name": "HOST-MCS-CPREM Jump",
+            "IP": [
+                "172.16.4.2",
+                "172.16.4.3"
+            ]
+        },
+        "TF-AP1-IPSET-MSS-Admin-Access": {
+            "name": "HOST-MSS-Admin-Access",
+            "IP": [
+                "209.134.191.18",
+                "206.253.234.197",
+                "207.231.156.68",
+                "209.134.191.19",
+                "207.231.156.67"
+            ]
+        },
+        "TF-AP1-IPSET-uat-br-ibm-com": {
+            "name": "HOST-uat.br.ibm.com",
+            "IP": [
+                "158.87.106.93"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldbs-secondary-IP": {
+            "name": "HOST-ap1irlpm1esldbs-secondary-IP",
+            "IP": [
+                "100.80.68.131"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RDP-PROD": {
+            "name": "IPSET-SRES-IAM-THY-RDP-PROD",
+            "IP": [
+                "158.87.54.183",
+                "158.87.54.207",
+                "158.87.54.184",
+                "158.87.54.181",
+                "158.87.54.182",
+                "158.87.54.185",
+                "158.87.54.191",
+                "158.87.54.205",
+                "169.254.2.152",
+                "158.87.54.203",
+                "158.87.54.204",
+                "158.87.54.201",
+                "158.87.54.192",
+                "158.87.54.199",
+                "158.87.54.206",
+                "158.87.54.180",
+                "158.87.54.198",
+                "158.87.54.200",
+                "169.254.1.129",
+                "158.87.54.179",
+                "158.87.54.197"
+            ]
+        },
+        "TF-AP1-IPSET-Host-blue-pgawdchwswu01": {
+            "name": "Host-blue-pgawdchwswu01",
+            "IP": [
+                "9.209.228.85"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sppappliance": {
+            "name": "HOST-ap1sppappliance",
+            "IP": [
+                "158.87.54.87"
+            ]
+        },
+        "TF-AP1-IPSET-bat-cz-ibm-com": {
+            "name": "HOST-bat.cz.ibm.com",
+            "IP": [
+                "9.138.247.8"
+            ]
+        },
+        "TF-AP1-IPSET-Host-GSNI-SR-AU-SHR-HTEMS": {
+            "name": "Host-GSNI-SR-AU-SHR-HTEMS",
+            "IP": [
+                "130.103.171.133",
+                "130.103.171.168"
+            ]
+        },
+        "TF-AP1-IPSET-DRES264-CACF-VIP-NAT": {
+            "name": "DRES264-CACF-VIP-NAT",
+            "IP": [
+                "158.87.104.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sftp01": {
+            "name": "HOST-ap1sftp01",
+            "IP": [
+                "158.87.54.130"
+            ]
+        },
+        "TF-AP1-IPSET-MCI-NZ-nzakptk01sr01rz": {
+            "name": "HOST-MCI-NZ-nzakptk01sr01rz",
+            "IP": [
+                "130.103.163.66"
+            ]
+        },
+        "TF-AP1-IPSET-SL-NEW-AD-DNS-NTP": {
+            "name": "HOST-SL-NEW-AD-DNS-NTP",
+            "IP": [
+                "10.63.70.194",
+                "10.63.70.195",
+                "10.63.70.196"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wjmp02": {
+            "name": "Host-ap1sr1wjmp02",
+            "IP": [
+                "158.87.54.6"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wpiampre2": {
+            "name": "Host-ap1sr1wpiampre2",
+            "IP": [
+                "158.87.54.207"
+            ]
+        },
+        "TF-AP1-IPSET-INDOSAT-NETCOOL": {
+            "name": "HOST-INDOSAT-NETCOOL",
+            "IP": [
+                "114.7.95.15"
+            ]
+        },
+        "TF-AP1-IPSET-GSENBEU": {
+            "name": "HOST-GSENBEU",
+            "IP": [
+                "158.87.52.244"
+            ]
+        },
+        "TF-AP1-IPSET-eu1srlpm1esldb-vip": {
+            "name": "HOST-eu1srlpm1esldb-vip",
+            "IP": [
+                "158.87.52.21"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlphstp1ntcl": {
+            "name": "HOST-ap1srlphstp1ntcl",
+            "IP": [
+                "158.87.54.170"
+            ]
+        },
+        "TF-AP1-IPSET-AG1-Tanzu-Workload-03-NAT": {
+            "name": "AG1-HOST-Tanzu-Workload-03-NAT",
+            "IP": [
+                "158.87.50.45"
+            ]
+        },
+        "TF-AP1-IPSET-in1sr1lpsssdb2": {
+            "name": "HOST-in1sr1lpsssdb2",
+            "IP": [
+                "158.87.61.30"
+            ]
+        },
+        "TF-AP1-IPSET-PDR-Proxy-VIP": {
+            "name": "HOST-PDR-Proxy-VIP",
+            "IP": [
+                "100.80.69.4"
+            ]
+        },
+        "TF-AP1-IPSET-in1-sres-tanzu-mgmt-01": {
+            "name": "in1-sres-tanzu-mgmt-01",
+            "IP": [
+                "100.126.129.64/26"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-LB-VIP1-NAT": {
+            "name": "HOST-DR264-LB-VIP1-NAT",
+            "IP": [
+                "158.87.104.242"
+            ]
+        },
+        "TF-AP1-IPSET-Host-SRES-MNEAAS-AP-SHR1-NCP": {
+            "name": "Host-SRES-MNEAAS-AP-SHR1-NCP",
+            "IP": [
+                "158.87.54.108",
+                "158.87.54.109"
+            ]
+        },
+        "TF-AP1-IPSET-DR264-LB-vNIC_3": {
+            "name": "HOST-DR264-LB-vNIC_3",
+            "IP": [
+                "100.80.125.241"
+            ]
+        },
+        "TF-AP1-IPSET-ap1sr1lcacfjump02-IRES-NAT": {
+            "name": "HOST-ap1sr1lcacfjump02-IRES-NAT",
+            "IP": [
+                "10.63.9.103"
+            ]
+        },
+        "TF-AP1-IPSET-EU1-Host-eu1sr1dxdev02": {
+            "name": "EU1-Host-eu1sr1dxdev02",
+            "IP": [
+                "158.87.53.32"
+            ]
+        },
+        "TF-AP1-IPSET-SL1LOREAL-CPREM": {
+            "name": "HOST-SL1LOREAL-CPREM",
+            "IP": [
+                "10.187.1.141",
+                "10.186.1.141"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-IRES-VCS-MGMT": {
+            "name": "NET-SL-IRES-VCS-MGMT",
+            "IP": [
+                "10.63.63.128/26"
+            ]
+        },
+        "TF-AP1-IPSET-IBM_Github": {
+            "name": "IBM_Github",
+            "IP": [
+                "169.60.70.162"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldc-VIP": {
+            "name": "HOST-ap1irlpm1esldc-VIP",
+            "IP": [
+                "100.80.68.135"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlpm1etnp1": {
+            "name": "HOST-ap1srlpm1etnp1",
+            "IP": [
+                "158.87.54.108"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SYD-NAT-GSNI-subnet": {
+            "name": "NET-SYD-NAT-GSNI-subnet",
+            "IP": [
+                "158.87.60.128/25"
+            ]
+        },
+        "TF-AP1-IPSET-CDI-AP-Proxy": {
+            "name": "HOST-CDI-AP-Proxy",
+            "IP": [
+                "146.89.203.166",
+                "146.89.203.167",
+                "146.89.203.165"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-WIN-DNS-NTP": {
+            "name": "IPSET-SRES-WIN-DNS-NTP",
+            "IP": [
+                "158.87.54.3",
+                "158.87.54.2"
+            ]
+        },
+        "TF-AP1-IPSET-ap1d97lpsiaprx-vip": {
+            "name": "HOST-ap1d97lpsiaprx-vip",
+            "IP": [
+                "100.80.76.50"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldc01-secondary-IP": {
+            "name": "HOST-ap1irlpm1esldc01-secondary-IP",
+            "IP": [
+                "100.80.68.132"
+            ]
+        },
+        "TF-AP1-IPSET-smtp-sendgrid-net": {
+            "name": "HOST-smtp-sendgrid-net",
+            "IP": [
+                "169.38.103.42",
+                "159.122.219.55",
+                "159.122.219.43",
+                "161.202.148.182",
+                "161.202.148.179",
+                "13.114.210.107",
+                "169.38.103.39",
+                "52.220.95.193"
+            ]
+        },
+        "TF-AP1-IPSET-HWSW-GACDW-AP-DB": {
+            "name": "HOST-HWSW-GACDW AP - DB",
+            "IP": [
+                "10.195.5.34"
+            ]
+        },
+        "TF-AP1-IPSET-SG-SRES-OCP-Cluster05": {
+            "name": "SG-SRES-OCP-Cluster05",
+            "IP": [
+                "100.87.232.64/27"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1lpcacprx1": {
+            "name": "Host-ap1sr1lpcacprx1",
+            "IP": [
+                "158.87.54.82"
+            ]
+        },
+        "TF-AP1-IPSET-ap1srlphwcls": {
+            "name": "HOST-ap1srlphwcls",
+            "IP": [
+                "158.87.54.235"
+            ]
+        },
+        "TF-AP1-IPSET-ap1spplusvsnap-secondary-IP": {
+            "name": "HOST-ap1spplusvsnap-secondary-IP",
+            "IP": [
+                "100.80.68.136"
+            ]
+        },
+        "TF-AP1-IPSET-SNAT-to-DA": {
+            "name": "HOST-SNAT-to-DA",
+            "IP": [
+                "158.87.63.1"
+            ]
+        },
+        "TF-AP1-IPSET-Host-Infra-Servers": {
+            "name": "Host-Infra-Servers",
+            "IP": [
+                "158.87.54.73",
+                "158.87.54.70",
+                "158.87.54.5",
+                "158.87.54.2",
+                "158.87.54.72",
+                "158.87.54.87",
+                "158.87.54.77",
+                "158.87.54.12",
+                "158.87.54.71",
+                "158.87.54.69",
+                "158.87.54.8",
+                "158.87.54.130",
+                "158.87.54.90",
+                "158.87.54.3",
+                "158.87.54.81",
+                "158.87.54.6",
+                "158.87.54.76",
+                "158.87.54.10",
+                "158.87.54.4"
+            ]
+        },
+        "TF-AP1-IPSET-IRES-VROPS-Server": {
+            "name": "HOST-IRES-VROPS-Server",
+            "IP": [
+                "10.63.9.97",
+                "10.63.9.80",
+                "10.63.9.96",
+                "10.63.9.82"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-IAM-THY-PROXY-PROD-VIP": {
+            "name": "HOST-SRES-IAM-THY-PROXY-PROD-VIP",
+            "IP": [
+                "158.87.54.190"
+            ]
+        },
+        "TF-AP1-IPSET-EZOPS-ITM-hkgsni": {
+            "name": "HOST-EZOPS-ITM-hkgsni",
+            "IP": [
+                "146.89.226.178",
+                "146.89.226.164",
+                "146.89.226.177"
+            ]
+        },
+        "TF-AP1-IPSET-NET-All-RFC1918": {
+            "name": "NET-All-RFC1918",
+            "IP": [
+                "10.0.0.0/8",
+                "172.16.0.0/12",
+                "192.168.0.0/16"
+            ]
+        },
+        "TF-AP1-IPSET-NET-SL-IRES-Portable": {
+            "name": "NET-SL-IRES-Portable",
+            "IP": [
+                "10.63.63.128/26",
+                "10.63.70.192/26",
+                "10.63.9.64/26",
+                "10.63.60.128/26"
+            ]
+        },
+        "TF-AP1-IPSET-IRES-QRADAR-NAT-IP": {
+            "name": "HOST-IRES-QRADAR-NAT-IP",
+            "IP": [
+                "100.80.68.3",
+                "100.87.243.193"
+            ]
+        },
+        "TF-AP1-IPSET-UAT-AU": {
+            "name": "HOST-UAT-AU",
+            "IP": [
+                "146.89.238.233"
+            ]
+        },
+        "TF-AP1-IPSET-IKS_Cluster_External_VIP": {
+            "name": "IKS_Cluster_External_VIP",
+            "IP": [
+                "158.87.60.131"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1d271lpcacpr2": {
+            "name": "Host-ap1d271lpcacpr2",
+            "IP": [
+                "100.80.128.52"
+            ]
+        },
+        "TF-AP1-IPSET-Host-ap1sr1wsus01": {
+            "name": "Host-ap1sr1wsus01",
+            "IP": [
+                "158.87.54.12"
+            ]
+        },
+        "TF-AP1-IPSET-DRES264-LB-NAT": {
+            "name": "HOST-DRES264-LB-NAT",
+            "IP": [
+                "158.87.104.241"
+            ]
+        },
+        "TF-AP1-IPSET-w3-ibm-com": {
+            "name": "HOST-w3-ibm-com",
+            "IP": [
+                "9.17.185.146"
+            ]
+        },
+        "TF-AP1-IPSET-HOSt-ap1d110lpbp1tnp": {
+            "name": "HOSt-ap1d110lpbp1tnp",
+            "IP": [
+                "100.80.90.75",
+                "100.80.90.76"
+            ]
+        },
+        "TF-AP1-IPSET-IPSET-SRES-STaaS-AD-DNS": {
+            "name": "IPSET-SRES-STaaS-AD-DNS",
+            "IP": [
+                "158.87.54.150",
+                "158.87.54.152",
+                "158.87.54.151"
+            ]
+        },
+        "TF-AP1-IPSET-SRES-HWSW-PROD": {
+            "name": "HOST-SRES-HWSW-PROD",
+            "IP": [
+                "158.87.54.233",
+                "158.87.54.234",
+                "158.87.54.231",
+                "158.87.54.232"
+            ]
+        },
+        "TF-AP1-IPSET-ap1irlpm1esldc02-secondary-IP": {
+            "name": "HOST-ap1irlpm1esldc02-secondary-IP",
+            "IP": [
+                "100.80.68.133"
+            ]
+        }
+    },
+    "ipset_mapping": {
+        "NET-SL-IRES-Primary-ESXi-vmk0": "TF-AP1-IPSET-NET-SL-IRES-Primary-ESXi-vmk0",
+        "HOST-sres1-esg1-inside": "TF-AP1-IPSET-sres1-esg1-inside",
+        "HOST-ap1spplusvsnap": "TF-AP1-IPSET-ap1spplusvsnap",
+        "HOST-UAT-ANZ": "TF-AP1-IPSET-UAT-ANZ",
+        "HOST-ap1sr1apiamprsvg1-secondary-IP": "TF-AP1-IPSET-ap1sr1apiamprsvg1-secondary-IP",
+        "HOST-SWIT-Gateway-zw2uspriv.app.kyndryl.net": "TF-AP1-IPSET-SWIT-Gateway-zw2uspriv-app-kyndryl-net",
+        "HOST-ap1sr1bfrelay1-IRES-NAT": "TF-AP1-IPSET-ap1sr1bfrelay1-IRES-NAT",
+        "Host-ap1srlpm1epwg": "TF-AP1-IPSET-Host-ap1srlpm1epwg",
+        "HOST-pdr-esg01-LB-VIP-2": "TF-AP1-IPSET-pdr-esg01-LB-VIP-2",
+        "HOST-IBM-Blue-SRM": "TF-AP1-IPSET-IBM-Blue-SRM",
+        "Host-b01zvi21899630.ahe.pok": "TF-AP1-IPSET-Host-b01zvi21899630-ahe-pok",
+        "AP1-HOST-cngcgnoi": "TF-AP1-IPSET-cngcgnoi",
+        "NET-SYD-CGN-subnet": "TF-AP1-IPSET-NET-SYD-CGN-subnet",
+        "NET-Internet-DUO": "TF-AP1-IPSET-NET-Internet-DUO",
+        "Host-ap1sr1wdns01": "TF-AP1-IPSET-Host-ap1sr1wdns01",
+        "HOST-ap1rhel08": "TF-AP1-IPSET-ap1rhel08",
+        "HOST-in1sr1wpgrfds": "TF-AP1-IPSET-in1sr1wpgrfds",
+        "HOST-EZOPS-DEV": "TF-AP1-IPSET-EZOPS-DEV",
+        "HOST-EU-eu1sr1pcacfgit1": "TF-AP1-IPSET-EU-eu1sr1pcacfgit1",
+        "Host-ap1sr1lpcacprx2": "TF-AP1-IPSET-Host-ap1sr1lpcacprx2",
+        "Host-ap1sr1bfrelay1": "TF-AP1-IPSET-Host-ap1sr1bfrelay1",
+        "HOST-gacdw-ap.w3cloud.ibm.com": "TF-AP1-IPSET-gacdw-ap-w3cloud-ibm-com",
+        "HOST-HWSW-EU SRES": "TF-AP1-IPSET-HWSW-EU-SRES",
+        "HOST-IBM-DNS": "TF-AP1-IPSET-IBM-DNS",
+        "HOST-ap1d105lpcacpr-vip": "TF-AP1-IPSET-ap1d105lpcacpr-vip",
+        "HOST-ap1irlpm1esldbp": "TF-AP1-IPSET-ap1irlpm1esldbp",
+        "HOST-AG1-SRES-ICp-Cluster2-WorkerNodes": "TF-AP1-IPSET-AG1-SRES-ICp-Cluster2-WorkerNodes",
+        "Host-blue-b01zvi21899632.ahe.pok": "TF-AP1-IPSET-Host-blue-b01zvi21899632-ahe-pok",
+        "HOST-ap1h1lpta1hap-vip": "TF-AP1-IPSET-ap1h1lpta1hap-vip",
+        "EU-Host-Nexus Repo": "TF-AP1-IPSET-EU-Host-Nexus-Repo",
+        "HOST-Netcool MCI AU Reporter DB": "TF-AP1-IPSET-Netcool-MCI-AU-Reporter-DB",
+        "HOST-IBM-Bluepages": "TF-AP1-IPSET-IBM-Bluepages",
+        "IP-HOST-KSTP-IN-OCP-01": "TF-AP1-IPSET-IP-KSTP-IN-OCP-01",
+        "HOST-Qantas-Jumphost": "TF-AP1-IPSET-Qantas-Jumphost",
+        "HOST-pdr-esg01-LB-VIP-3": "TF-AP1-IPSET-pdr-esg01-LB-VIP-3",
+        "New-EU-JH-eu1srlpmcdjump": "TF-AP1-IPSET-New-EU-JH-eu1srlpmcdjump",
+        "HOST-HRES-ap1h1lpta1ssh-VIP": "TF-AP1-IPSET-HRES-ap1h1lpta1ssh-VIP",
+        "HOST-ag1srlphwcls01": "TF-AP1-IPSET-ag1srlphwcls01",
+        "AP1-HOST-CPREM-DR110": "TF-AP1-IPSET-CPREM-DR110",
+        "HOST-DR264-CPREM-NETCOOL-PROBE": "TF-AP1-IPSET-DR264-CPREM-NETCOOL-PROBE",
+        "Host-ap1srlpezoyess": "TF-AP1-IPSET-Host-ap1srlpezoyess",
+        "Host-ap1srwphwcstr": "TF-AP1-IPSET-Host-ap1srwphwcstr",
+        "HOST-ap1irlpm1esldc01": "TF-AP1-IPSET-ap1irlpm1esldc01",
+        "HOST-tpysydecmap01.sl.bluecloud.ibm.com": "TF-AP1-IPSET-tpysydecmap01-sl-bluecloud-ibm-com",
+        "NET-IBM-Blue": "TF-AP1-IPSET-NET-IBM-Blue",
+        "HOST-DRES114-LB-OCP-Cluster1-VIP-2": "TF-AP1-IPSET-DRES114-LB-OCP-Cluster1-VIP-2",
+        "HOST-IRES-ap1irlpipam01": "TF-AP1-IPSET-IRES-ap1irlpipam01",
+        "IBM  TOKYO": "TF-AP1-IPSET-IBM-TOKYO",
+        "NET-Akamai-IBMID": "TF-AP1-IPSET-NET-Akamai-IBMID",
+        "NSXT-DRES114-OCP4-CLUSTER02": "TF-AP1-IPSET-NSXT-DRES114-OCP4-CLUSTER02",
+        "IPSET-SRES-IAM-THY-RMQ-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RMQ-PROD",
+        "NET_dr110-app-internal1": "TF-AP1-IPSET-NET_dr110-app-internal1",
+        "HOST-ap1srlpm1esdp1": "TF-AP1-IPSET-ap1srlpm1esdp1",
+        "HOST-SL-IRES-ALL-SNAT": "TF-AP1-IPSET-SL-IRES-ALL-SNAT",
+        "Host-ap1srlpm1esdc1": "TF-AP1-IPSET-Host-ap1srlpm1esdc1",
+        "HOST-ICP-AP-Namespace": "TF-AP1-IPSET-ICP-AP-Namespace",
+        "HOST-Fortigate": "TF-AP1-IPSET-Fortigate",
+        "HOST-CDI-AP-Proxy-New": "TF-AP1-IPSET-CDI-AP-Proxy-New",
+        "HOST-DR114-LB1-PrimaryIP": "TF-AP1-IPSET-DR114-LB1-PrimaryIP",
+        "HOST-ag1srwphwcetl01": "TF-AP1-IPSET-ag1srwphwcetl01",
+        "HOST-Integ-Svcs-Test-AP": "TF-AP1-IPSET-Integ-Svcs-Test-AP",
+        "AP1-host-ap1srwphwcstr": "TF-AP1-IPSET-ap1srwphwcstr",
+        "HOST-IBM-Blue-Sendmail": "TF-AP1-IPSET-IBM-Blue-Sendmail",
+        "HOST-ap1sr1bfrelay2-IRES-NAT": "TF-AP1-IPSET-ap1sr1bfrelay2-IRES-NAT",
+        "IPSET-SRES-IAM-THY-MSSQL-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-MSSQL-PROD",
+        "IPSET-SRES-IAM-THY-SDI-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SDI-PROD",
+        "Host-ap1srlpm1epni": "TF-AP1-IPSET-Host-ap1srlpm1epni",
+        "HOST-SL-DNS": "TF-AP1-IPSET-SL-DNS",
+        "Host-ap1srlpm1esc1": "TF-AP1-IPSET-Host-ap1srlpm1esc1",
+        "HOST-SL-clouddriver": "TF-AP1-IPSET-SL-clouddriver",
+        "IN1-KSTP-Lite-MGMT": "TF-AP1-IPSET-IN1-KSTP-Lite-MGMT",
+        "HOST-DR264-CPREM-OEM-ADAPTER": "TF-AP1-IPSET-DR264-CPREM-OEM-ADAPTER",
+        "Host-Tanzu-Workload-01-NAT": "TF-AP1-IPSET-Host-Tanzu-Workload-01-NAT",
+        "IPSET-SRES-IAM-NODB-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-NODB-PROD",
+        "Host-ap1sr1lcacfjump02": "TF-AP1-IPSET-Host-ap1sr1lcacfjump02",
+        "HOST-ap1d127lpcacpr-vip": "TF-AP1-IPSET-ap1d127lpcacpr-vip",
+        "Host-ap1srwphwcetl": "TF-AP1-IPSET-Host-ap1srwphwcetl",
+        "Host-ap1srlpm1epdb": "TF-AP1-IPSET-Host-ap1srlpm1epdb",
+        "HOST-IMI-DA-JH-1-2": "TF-AP1-IPSET-IMI-DA-JH-1-2",
+        "AG1-IP-SET-AG1SRWPHWCS": "TF-AP1-IPSET-AG1-IP-SET-AG1SRWPHWCS",
+        "Host-ap1sr1bfrelay2": "TF-AP1-IPSET-Host-ap1sr1bfrelay2",
+        "HOST-SRES-ICp-icp1-Ingress-VIP": "TF-AP1-IPSET-SRES-ICp-icp1-Ingress-VIP",
+        "HOST-SRES-LB-OCP-Cluster03-VIP": "TF-AP1-IPSET-SRES-LB-OCP-Cluster03-VIP",
+        "HOST-ap1d114lpcacpr-vip": "TF-AP1-IPSET-ap1d114lpcacpr-vip",
+        "IPSET-SRES-IAM-THY-All-VMs": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-All-VMs",
+        "HOST-pdr-esg01-LB-VIP-4": "TF-AP1-IPSET-pdr-esg01-LB-VIP-4",
+        "HOST-SL-VCS-WIN-AD-DNS-NTP": "TF-AP1-IPSET-SL-VCS-WIN-AD-DNS-NTP",
+        "HOST-SRES-NAB-RDP-PROD": "TF-AP1-IPSET-SRES-NAB-RDP-PROD",
+        "HOST-PDR-SMTP-Emailserver": "TF-AP1-IPSET-PDR-SMTP-Emailserver",
+        "HOST-in1sr1wpgrfdb": "TF-AP1-IPSET-in1sr1wpgrfdb",
+        "eu1sr1sepm1": "TF-AP1-IPSET-eu1sr1sepm1",
+        "HOST-ap1sr1icp1p-vip": "TF-AP1-IPSET-ap1sr1icp1p-vip",
+        "HOST-bldbmsa-boulder-ibm-com": "TF-AP1-IPSET-bldbmsa-boulder-ibm-com",
+        "HOST-DR232-CPREM": "TF-AP1-IPSET-DR232-CPREM",
+        "HOST-DR264-ESG-dlr-vNic_2": "TF-AP1-IPSET-DR264-ESG-dlr-vNic_2",
+        "HOST-ap1d271lpcacpr1-VIP": "TF-AP1-IPSET-ap1d271lpcacpr1-VIP",
+        "HOST-AP1-DRES VMS": "TF-AP1-IPSET-DRES-VMS",
+        "HOST-SRES-DNS": "TF-AP1-IPSET-SRES-DNS",
+        "HOST-SL1-DB Shared-VIP": "TF-AP1-IPSET-SL1-DB-Shared-VIP",
+        "EU-Host-Execution Node": "TF-AP1-IPSET-EU-Host-Execution-Node",
+        "iP-HOST-in1sr1lpcacfbds": "TF-AP1-IPSET-iP-in1sr1lpcacfbds",
+        "HOST-DRES110-LB-OCP-Cluster1-VIP-1": "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-1",
+        "IPSET-SRES-IAM-THY-DB2-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-DB2-PROD",
+        "Host-ap1srlpcacfbds1": "TF-AP1-IPSET-Host-ap1srlpcacfbds1",
+        "HOST-SRES1-LB-OCP-Cluster2-VIP": "TF-AP1-IPSET-SRES1-LB-OCP-Cluster2-VIP",
+        "HOST-DR271-ergsdplmivm04": "TF-AP1-IPSET-DR271-ergsdplmivm04",
+        "HOST-ap1d108lpcacpr-vip": "TF-AP1-IPSET-ap1d108lpcacpr-vip",
+        "HOST-INTERNET-O365": "TF-AP1-IPSET-INTERNET-O365",
+        "HOST-IBM-BLUEID": "TF-AP1-IPSET-IBM-BLUEID",
+        "IPSET-SRES-IAM-WINDOWS-PROD-AD": "TF-AP1-IPSET-IPSET-SRES-IAM-WINDOWS-PROD-AD",
+        "HOST-SRES1-LB-VIP-OCP2": "TF-AP1-IPSET-SRES1-LB-VIP-OCP2",
+        "NET-All-CGN-subnet": "TF-AP1-IPSET-NET-All-CGN-subnet",
+        "HOST-SRES1-LB1-PrimaryIP": "TF-AP1-IPSET-SRES1-LB1-PrimaryIP",
+        "Host-ap1srlpm1epno": "TF-AP1-IPSET-Host-ap1srlpm1epno",
+        "HOST-IRES-ap1irlptfa01": "TF-AP1-IPSET-IRES-ap1irlptfa01",
+        "HOST-AP1-HWSW-ap1srlphwcsssaz": "TF-AP1-IPSET-HWSW-ap1srlphwcsssaz",
+        "HOST-NA-HWSW-ag1srlphwcmon01": "TF-AP1-IPSET-NA-HWSW-ag1srlphwcmon01",
+        "HOST-pdr-esg01-LB-VIP-1": "TF-AP1-IPSET-pdr-esg01-LB-VIP-1",
+        "Host-ap1srlpm1etnp1": "TF-AP1-IPSET-Host-ap1srlpm1etnp1",
+        "NET-CPREM-GSNI-NAT-range": "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+        "AG1-HOST-TANZU-WL04-NAT": "TF-AP1-IPSET-AG1-TANZU-WL04-NAT",
+        "HOST-DRES114-LB-OCP-Cluster1-VIP-1": "TF-AP1-IPSET-DRES114-LB-OCP-Cluster1-VIP-1",
+        "HOST-SRES-OCP-Cluster05-SNAT": "TF-AP1-IPSET-SRES-OCP-Cluster05-SNAT",
+        "HOST-MHjumphost": "TF-AP1-IPSET-MHjumphost",
+        "HOST-SL-IRES-NSXM": "TF-AP1-IPSET-SL-IRES-NSXM",
+        "HOST-ap1d103lpcacprx1-vip": "TF-AP1-IPSET-ap1d103lpcacprx1-vip",
+        "HOST-Fortigate10G": "TF-AP1-IPSET-Fortigate10G",
+        "Host-ap1srwphwcdb": "TF-AP1-IPSET-Host-ap1srwphwcdb",
+        "HOST-GACDW Blue": "TF-AP1-IPSET-GACDW-Blue",
+        "Host-Splunk-NAT": "TF-AP1-IPSET-Host-Splunk-NAT",
+        "Host-ap1d271lpcacpr1": "TF-AP1-IPSET-Host-ap1d271lpcacpr1",
+        "HOST-ap1d232lpwnzpr1-VIP": "TF-AP1-IPSET-ap1d232lpwnzpr1-VIP",
+        "HOST-Omnibus": "TF-AP1-IPSET-Omnibus",
+        "HOST-CPREM-Netcool-Probe": "TF-AP1-IPSET-CPREM-Netcool-Probe",
+        "HOST-esxc_esxm_CloudDevices": "TF-AP1-IPSET-esxc_esxm_CloudDevices",
+        "NET-SYD-PDR-subnet": "TF-AP1-IPSET-NET-SYD-PDR-subnet",
+        "Host-ap1sr1wpiampre1": "TF-AP1-IPSET-Host-ap1sr1wpiampre1",
+        "HOST-DA-NESSUS-146.89.203.216": "TF-AP1-IPSET-DA-NESSUS-146-89-203-216",
+        "NET-ICp-Pod-Network": "TF-AP1-IPSET-NET-ICp-Pod-Network",
+        "HOST-ap1-hres1-lb1-PrimaryIP": "TF-AP1-IPSET-hres1-lb1-PrimaryIP",
+        "HOST-ap1sftp02-IRES-NAT": "TF-AP1-IPSET-ap1sftp02-IRES-NAT",
+        "HOST-KAFKA": "TF-AP1-IPSET-KAFKA",
+        "HOST-IBM-Blue-ADE-ANZ": "TF-AP1-IPSET-IBM-Blue-ADE-ANZ",
+        "HOST-NSXT-VC": "TF-AP1-IPSET-NSXT-VC",
+        "HOST-NSXT-VC2-MGMT-Subnet": "TF-AP1-IPSET-NSXT-VC2-MGMT-Subnet",
+        "HOST-ap1sr1lpcacprx1-vip": "TF-AP1-IPSET-ap1sr1lpcacprx1-vip",
+        "HOST-ISA-BDS-CPREM": "TF-AP1-IPSET-ISA-BDS-CPREM",
+        "HOST-DRES110-HOSTS": "TF-AP1-IPSET-DRES110-HOSTS",
+        "HOST-Tanzu-mgmt-subnet": "TF-AP1-IPSET-Tanzu-mgmt-subnet",
+        "HOST-IBM-Blue-API-Connect": "TF-AP1-IPSET-IBM-Blue-API-Connect",
+        "Host-ap1srlpm1ecno": "TF-AP1-IPSET-Host-ap1srlpm1ecno",
+        "HOST-NZ shared": "TF-AP1-IPSET-NZ-shared",
+        "HOST-SRES1-LB-OCP-Cluster1-VIP": "TF-AP1-IPSET-SRES1-LB-OCP-Cluster1-VIP",
+        "HOST-ap1d141lpcacpr-vip": "TF-AP1-IPSET-ap1d141lpcacpr-vip",
+        "HOST-DRES110-LB-OCP-Cluster1-VIP-2": "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-2",
+        "HOST-Integ-Svcs-Prod-AP": "TF-AP1-IPSET-Integ-Svcs-Prod-AP",
+        "NET-SYD-SRES-GSNI-subnet": "TF-AP1-IPSET-NET-SYD-SRES-GSNI-subnet",
+        "HOST-IMI-Solarwinds-IRES-NAT": "TF-AP1-IPSET-IMI-Solarwinds-IRES-NAT",
+        "NET-SL-Services": "TF-AP1-IPSET-NET-SL-Services",
+        "Host-ap1srlphsts1ntcl": "TF-AP1-IPSET-Host-ap1srlphsts1ntcl",
+        "HOST-GSNI-SR-AU-SHR-BC-DEV": "TF-AP1-IPSET-GSNI-SR-AU-SHR-BC-DEV",
+        "HOST-IMI-Netcool": "TF-AP1-IPSET-IMI-Netcool",
+        "Host-ap1sr1lcacfjump01": "TF-AP1-IPSET-Host-ap1sr1lcacfjump01",
+        "HOST-SRES-LB-OCP-Cluster03-VIP1": "TF-AP1-IPSET-SRES-LB-OCP-Cluster03-VIP1",
+        "HOST-DRES114-OCP-Cluster01-Temp": "TF-AP1-IPSET-DRES114-OCP-Cluster01-Temp",
+        "HOST-DR110-LB1-PrimaryIP": "TF-AP1-IPSET-DR110-LB1-PrimaryIP",
+        "HOST-ag1srwphwcgrfds": "TF-AP1-IPSET-ag1srwphwcgrfds",
+        "Host-ap1d114lpcacpr2": "TF-AP1-IPSET-Host-ap1d114lpcacpr2",
+        "HOST-ap1d130lpcacpr-vip": "TF-AP1-IPSET-ap1d130lpcacpr-vip",
+        "HOST-DRES110-LB-OCP-Cluster1-VIP-TEMP": "TF-AP1-IPSET-DRES110-LB-OCP-Cluster1-VIP-TEMP",
+        "Host-DRES258-Proxy VIP": "TF-AP1-IPSET-Host-DRES258-Proxy-VIP",
+        "NET-All-GSNI-routable": "TF-AP1-IPSET-NET-All-GSNI-routable",
+        "NET-SYD-CGN-Edge-DLR-Transit-subnet": "TF-AP1-IPSET-NET-SYD-CGN-Edge-DLR-Transit-subnet",
+        "HOST-DRES-DNAT-to-vCenter": "TF-AP1-IPSET-DRES-DNAT-to-vCenter",
+        "Host-blue-b01zvi21899630.ahe.pok": "TF-AP1-IPSET-Host-blue-b01zvi21899630-ahe-pok",
+        "HOST-AP1-ap1srlpsatsts01": "TF-AP1-IPSET-ap1srlpsatsts01",
+        "HOST-ap1srwphwcgadb1": "TF-AP1-IPSET-ap1srwphwcgadb1",
+        "HOST-DRES114-OCP-Cluster1-GSNI-NAT": "TF-AP1-IPSET-DRES114-OCP-Cluster1-GSNI-NAT",
+        "Host -pimpact1": "TF-AP1-IPSET-Host-pimpact1",
+        "EU1-SG-SRES-OCP-Cluster05-MOM": "TF-AP1-IPSET-EU1-SG-SRES-OCP-Cluster05-MOM",
+        "HOST-IP -EU-VIP": "TF-AP1-IPSET-IP-EU-VIP",
+        "HOST-DRES114-CPREM-Cyberark": "TF-AP1-IPSET-DRES114-CPREM-Cyberark",
+        "HOST-KOREA-NETCOOL": "TF-AP1-IPSET-KOREA-NETCOOL",
+        "HOST-ap1d128lpcacpr-vip": "TF-AP1-IPSET-ap1d128lpcacpr-vip",
+        "eu1sr1lparmsisi": "TF-AP1-IPSET-eu1sr1lparmsisi",
+        "HOST-LA UAT": "TF-AP1-IPSET-LA-UAT",
+        "Host-TEST-CP-SUBNET": "TF-AP1-IPSET-Host-TEST-CP-SUBNET",
+        "HOST-ap1d110lpcacpr-vip": "TF-AP1-IPSET-ap1d110lpcacpr-vip",
+        "HOST-ap1irlpm1esldbp-secondary-IP": "TF-AP1-IPSET-ap1irlpm1esldbp-secondary-IP",
+        "NSXT-DRES114-OCP4-CLUSTER02-LB-VIP": "TF-AP1-IPSET-NSXT-DRES114-OCP4-CLUSTER02-LB-VIP",
+        "Host-ap1srwphwcweb": "TF-AP1-IPSET-Host-ap1srwphwcweb",
+        "SG-SRES-OCP-Cluster04": "TF-AP1-IPSET-SG-SRES-OCP-Cluster04",
+        "Host-DRES256-Proxy VIP": "TF-AP1-IPSET-Host-DRES256-Proxy-VIP",
+        "AP1-HOST-AP1DR230LPLOETNP": "TF-AP1-IPSET-AP1DR230LPLOETNP",
+        "HOST-SL-IRES-vRLI": "TF-AP1-IPSET-SL-IRES-vRLI",
+        "HOST-ap1d101lpcacprx1-vip": "TF-AP1-IPSET-ap1d101lpcacprx1-vip",
+        "HOST-Tanzu-Workload-01": "TF-AP1-IPSET-Tanzu-Workload-01",
+        "Host-ecmapprod.sl.bluecloud.ibm.com": "TF-AP1-IPSET-Host-ecmapprod-sl-bluecloud-ibm-com",
+        "AP1-MnE Servers": "TF-AP1-IPSET-MnE-Servers",
+        "ap1-ap1sr1wpiamprt1": "TF-AP1-IPSET-ap1sr1wpiamprt1",
+        "HOST-SRES-IAM-THY-MSSQL-PROD-VIP": "TF-AP1-IPSET-SRES-IAM-THY-MSSQL-PROD-VIP",
+        "Host-blue-b01zvi21899631.ahe.pok": "TF-AP1-IPSET-Host-blue-b01zvi21899631-ahe-pok",
+        "HOST-ap1rhelreposerver": "TF-AP1-IPSET-ap1rhelreposerver",
+        "Host-MnE Build Destination": "TF-AP1-IPSET-Host-MnE-Build-Destination",
+        "Host-CPREM258-Ausgrid JH-2": "TF-AP1-IPSET-Host-CPREM258-Ausgrid-JH-2",
+        "HOST-ap1sr1lpta1-vip": "TF-AP1-IPSET-ap1sr1lpta1-vip",
+        "HOST-in1sr1wphwcweb": "TF-AP1-IPSET-in1sr1wphwcweb",
+        "vpc-ap1-30-mneaas-prod-subnet1": "TF-AP1-IPSET-vpc-30-mneaas-prod-subnet1",
+        "HOST-ap1srlphsts1ntcl": "TF-AP1-IPSET-ap1srlphsts1ntcl",
+        "HOST-BigFix-Server": "TF-AP1-IPSET-BigFix-Server",
+        "eu1srlpgsenexgen": "TF-AP1-IPSET-eu1srlpgsenexgen",
+        "Net_dr114-app-internal1": "TF-AP1-IPSET-Net_dr114-app-internal1",
+        "HOST-DRES110-OCP04-Cluster02": "TF-AP1-IPSET-DRES110-OCP04-Cluster02",
+        "Host-Blue-dgawdcdev01": "TF-AP1-IPSET-Host-Blue-dgawdcdev01",
+        "HOST-ag1srlpgse1000": "TF-AP1-IPSET-ag1srlpgse1000",
+        "Host-ap1sr1lpiamnfs": "TF-AP1-IPSET-Host-ap1sr1lpiamnfs",
+        "HOST-ap1srwpdwskms01": "TF-AP1-IPSET-ap1srwpdwskms01",
+        "Host-ap1sr1icp1n01": "TF-AP1-IPSET-Host-ap1sr1icp1n01",
+        "Host-ap1sr1cntrl1": "TF-AP1-IPSET-Host-ap1sr1cntrl1",
+        "IN-IHOSTin1sr1wphwcdb": "TF-AP1-IPSET-IN-IHOSTin1sr1wphwcdb",
+        "NET-SL-IRES-vCenter-HA": "TF-AP1-IPSET-NET-SL-IRES-vCenter-HA",
+        "HOST-ap1d114lpnab-vip2": "TF-AP1-IPSET-ap1d114lpnab-vip2",
+        "AP1-VM-AP1SRWPHWC": "TF-AP1-IPSET-VM-AP1SRWPHWC",
+        "HOST-NSX-T-vROPS": "TF-AP1-IPSET-NSX-T-vROPS",
+        "IPSET-SL-IRES-WIN-AD-DNS-NTP": "TF-AP1-IPSET-IPSET-SL-IRES-WIN-AD-DNS-NTP",
+        "HOST-ap1srlpm1esd1-vip": "TF-AP1-IPSET-ap1srlpm1esd1-vip",
+        "Host-ap1srlpm1esbk1": "TF-AP1-IPSET-Host-ap1srlpm1esbk1",
+        "IPSET-SRES-IAM-THY-PROXY-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-PROXY-PROD",
+        "HOST-GSENNA": "TF-AP1-IPSET-GSENNA",
+        "Host-blue-Chip-p": "TF-AP1-IPSET-Host-blue-Chip-p",
+        "HOST-MCI-NZ-nzchctk01sr01rz": "TF-AP1-IPSET-MCI-NZ-nzchctk01sr01rz",
+        "HOST-DR264-CPREM-LB-VIP1": "TF-AP1-IPSET-DR264-CPREM-LB-VIP1",
+        "HOST-AP1-AVI-NS1": "TF-AP1-IPSET-AVI-NS1",
+        "HOST-pdr-esg01-inside": "TF-AP1-IPSET-pdr-esg01-inside",
+        "HOST-ap1irlpm1eslbak": "TF-AP1-IPSET-ap1irlpm1eslbak",
+        "IPSET-SRES-IAM-THY-RAS-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RAS-PROD",
+        "HOST-dnat-to-ap1sr1ljmp01": "TF-AP1-IPSET-dnat-to-ap1sr1ljmp01",
+        "HOST-SL-SNMP-Proxy": "TF-AP1-IPSET-SL-SNMP-Proxy",
+        "NET-SL-Private-Service-Endpoints": "TF-AP1-IPSET-NET-SL-Private-Service-Endpoints",
+        "vpc-ap1-30-dx-platform-prod-subnet1": "TF-AP1-IPSET-vpc-30-dx-platform-prod-subnet1",
+        "HOST-SL-WSUS": "TF-AP1-IPSET-SL-WSUS",
+        "HOST-ecmapprod.sl.bluecloud.ibm.com": "TF-AP1-IPSET-ecmapprod-sl-bluecloud-ibm-com",
+        "HOST-ap1vmon": "TF-AP1-IPSET-ap1vmon",
+        "Host-blue-sl.bluecloud.ibm.com": "TF-AP1-IPSET-Host-blue-sl-bluecloud-ibm-com",
+        "Host-ap1srlpm1ecni": "TF-AP1-IPSET-Host-ap1srlpm1ecni",
+        "NET-MSS-Qradar-Nextwatch": "TF-AP1-IPSET-NET-MSS-Qradar-Nextwatch",
+        "HOST-ISA-CACF": "TF-AP1-IPSET-ISA-CACF",
+        "Host-ap1sr1wpiamprfs": "TF-AP1-IPSET-Host-ap1sr1wpiamprfs",
+        "HOST-SL-IRES-SNAT-to-Internet": "TF-AP1-IPSET-SL-IRES-SNAT-to-Internet",
+        "HOST-ANZ_ICD_instance": "TF-AP1-IPSET-ANZ_ICD_instance",
+        "HOST-ICp-VRRP-IP": "TF-AP1-IPSET-ICp-VRRP-IP",
+        "IPSET-SRES-IAM-THY-DE-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-DE-PROD",
+        "HOst- MnE Build Source": "TF-AP1-IPSET-HOst-MnE-Build-Source",
+        "HOST-SRES-OCP-Cluster03-Temp": "TF-AP1-IPSET-SRES-OCP-Cluster03-Temp",
+        "HOST-IBM-NA-RELAY": "TF-AP1-IPSET-IBM-NA-RELAY",
+        "HOST-IMI-KIWISyslog": "TF-AP1-IPSET-IMI-KIWISyslog",
+        "HOST-Ausgrid-Jumphost": "TF-AP1-IPSET-Ausgrid-Jumphost",
+        "HOST-ap1srlpm1esc1": "TF-AP1-IPSET-ap1srlpm1esc1",
+        "in1-sres-tanzu-workload-01-ingress": "TF-AP1-IPSET-in1-sres-tanzu-workload-01-ingress",
+        "HOST-HOST-OCP4.3-Cluster": "TF-AP1-IPSET-OCP4-3-Cluster",
+        "HOST-ap1pdr1smtp01-IRES-NAT": "TF-AP1-IPSET-ap1pdr1smtp01-IRES-NAT",
+        "HOST-SRES-IAM-THY-RMQ-PROD-VIP": "TF-AP1-IPSET-SRES-IAM-THY-RMQ-PROD-VIP",
+        "HOST-SL-IRES-VSI-WIN-Jump-Servers": "TF-AP1-IPSET-SL-IRES-VSI-WIN-Jump-Servers",
+        "Host-ap1srlpgsehst01": "TF-AP1-IPSET-Host-ap1srlpgsehst01",
+        "HOST-PHPIPAM-VMs": "TF-AP1-IPSET-PHPIPAM-VMs",
+        "HOST-MSS-Qradar-Event-Collector": "TF-AP1-IPSET-MSS-Qradar-Event-Collector",
+        "HOST-ap1irlpm1esldc02": "TF-AP1-IPSET-ap1irlpm1esldc02",
+        "HOST-IMI-DAJumphosts": "TF-AP1-IPSET-IMI-DAJumphosts",
+        "HOST-dnat-to-PDR-Proxy-from-IRES": "TF-AP1-IPSET-dnat-to-PDR-Proxy-from-IRES",
+        "HOST-AP1-AP1SRWPHWCGADS1": "TF-AP1-IPSET-AP1SRWPHWCGADS1",
+        "HOST-SNAT-to-SL-SVC": "TF-AP1-IPSET-SNAT-to-SL-SVC",
+        "HOST-nlasabuildm1e00p.sr1.eu1": "TF-AP1-IPSET-nlasabuildm1e00p-sr1-eu1",
+        "HOST-ap1srlpm1esdc1": "TF-AP1-IPSET-ap1srlpm1esdc1",
+        "HOST-prdpcbmgwcms02-Primary": "TF-AP1-IPSET-prdpcbmgwcms02-Primary",
+        "HOST-VPC-IKS Cloud Cluster": "TF-AP1-IPSET-VPC-IKS-Cloud-Cluster",
+        "HOST-Telstra-Jumphost-CGNNAT": "TF-AP1-IPSET-Telstra-JumpCGNNAT",
+        "HOST-GSENEU": "TF-AP1-IPSET-GSENEU",
+        "HOST-SRES-WIN-Jump-Servers-VIP": "TF-AP1-IPSET-SRES-WIN-Jump-Servers-VIP",
+        "HOST-SRES1-LB-VIP-OCP1": "TF-AP1-IPSET-SRES1-LB-VIP-OCP1",
+        "HOST-ap1-hres-lb1": "TF-AP1-IPSET-hres-lb1",
+        "IPSET-SRES-STaaS-AD": "TF-AP1-IPSET-IPSET-SRES-STaaS-AD",
+        "Host-ap1srlpm1etnp2": "TF-AP1-IPSET-Host-ap1srlpm1etnp2",
+        "Host-ap1sr1wpiamprra": "TF-AP1-IPSET-Host-ap1sr1wpiamprra",
+        "Host-blue-wdcdmyyz945126": "TF-AP1-IPSET-Host-blue-wdcdmyyz945126",
+        "HOST-ap1d193lpcacpr-vip": "TF-AP1-IPSET-ap1d193lpcacpr-vip",
+        "HOST-IBM-Sametime": "TF-AP1-IPSET-IBM-Sametime",
+        "HOST-SRES-OCP-Cluster04-SNAT": "TF-AP1-IPSET-SRES-OCP-Cluster04-SNAT",
+        "HOST-EU-DB2": "TF-AP1-IPSET-EU-DB2",
+        "NET-AG1-GRES-subnet": "TF-AP1-IPSET-NET-AG1-GRES-subnet",
+        "IKS_Cluster_External_VIP-2": "TF-AP1-IPSET-IKS_Cluster_External_VIP-2",
+        "HOST-SL-NTP": "TF-AP1-IPSET-SL-NTP",
+        "HOST-DRES110-OCP-Cluster01-Temp": "TF-AP1-IPSET-DRES110-OCP-Cluster01-Temp",
+        "SLSydImpactnode02": "TF-AP1-IPSET-SLSydImpactnode02",
+        "Host-ap1srlphstp1ntcl": "TF-AP1-IPSET-Host-ap1srlphstp1ntcl",
+        "Host-ap1sr1wjmp01": "TF-AP1-IPSET-Host-ap1sr1wjmp01",
+        "Host Myer CPREM JH": "TF-AP1-IPSET-Host-Myer-CPREM-JH",
+        "HOST-DR271-ergsdplmivm03": "TF-AP1-IPSET-DR271-ergsdplmivm03",
+        "EU1-IP-EU1SRLPCARDB1000": "TF-AP1-IPSET-EU1-IP-EU1SRLPCARDB1000",
+        "HOST-ap1d114lpnab-vip1": "TF-AP1-IPSET-ap1d114lpnab-vip1",
+        "Host-ap1sr1icp1n02": "TF-AP1-IPSET-Host-ap1sr1icp1n02",
+        "HOST-eu1srlpcarwas1000": "TF-AP1-IPSET-eu1srlpcarwas1000",
+        "Host-ap1sr1sql01": "TF-AP1-IPSET-Host-ap1sr1sql01",
+        "Host-bjy7vr1.tms.stglab": "TF-AP1-IPSET-Host-bjy7vr1-tms-stglab",
+        "HOst-pimpact2": "TF-AP1-IPSET-HOst-pimpact2",
+        "HOST-SL-IRES-vCenter": "TF-AP1-IPSET-SL-IRES-vCenter",
+        "HOST-vserv-eu.sos.ibm.com": "TF-AP1-IPSET-vserv-eu-sos-ibm-com",
+        "HOST-gtscdi-ap-proxy.gacdw.sl.ibm.com": "TF-AP1-IPSET-gtscdi-ap-proxy-gacdw-sl-ibm-com",
+        "HOST-ap1srlpm1esbk1": "TF-AP1-IPSET-ap1srlpm1esbk1",
+        "AG1-IP-SET-AG1SRWPHWCS-1": "TF-AP1-IPSET-AG1-IP-SET-AG1SRWPHWCS-1",
+        "HOST-DR264-LB-VIP1": "TF-AP1-IPSET-DR264-LB-VIP1",
+        "HOST-DR264-ESG-vpn-vNic_1": "TF-AP1-IPSET-DR264-ESG-vpn-vNic_1",
+        "Host-ap1d114lpcacpr1": "TF-AP1-IPSET-Host-ap1d114lpcacpr1",
+        "HOST-SRES-IAM-THY-SVG-PROD": "TF-AP1-IPSET-SRES-IAM-THY-SVG-PROD",
+        "HOST-Netcool MCI Dev Reporter DB": "TF-AP1-IPSET-Netcool-MCI-Dev-Reporter-DB",
+        "HOST-ap1srlpm1etnp2": "TF-AP1-IPSET-ap1srlpm1etnp2",
+        "HOST-CACF-tool": "TF-AP1-IPSET-CACF-tool",
+        "Host-ap1srlpgse1000": "TF-AP1-IPSET-Host-ap1srlpgse1000",
+        "HOST-IN1SR1WPHWCETL": "TF-AP1-IPSET-IN1SR1WPHWCETL",
+        "HOST-ap1irlpm1esldbs": "TF-AP1-IPSET-ap1irlpm1esldbs",
+        "HOST-DRES-DNAT-to-vLi": "TF-AP1-IPSET-DRES-DNAT-to-vLi",
+        "AP_Linux_Machines": "TF-AP1-IPSET-AP_Linux_Machines",
+        "HOST-ap1h1lpta2hap-vip": "TF-AP1-IPSET-ap1h1lpta2hap-vip",
+        "HOST-SRES-MNEAAS-AP-MIG1-BC": "TF-AP1-IPSET-SRES-MNEAAS-AP-MIG1-BC",
+        "HOST-IMI-Solarwinds": "TF-AP1-IPSET-IMI-Solarwinds",
+        "HOST-prdpcbmgwcms02-Secondary": "TF-AP1-IPSET-prdpcbmgwcms02-Secondary",
+        "Host-Blue-pgawdcstetl01": "TF-AP1-IPSET-Host-Blue-pgawdcstetl01",
+        "HOST-INDOSAT-NETCOOL-114.6.2.142": "TF-AP1-IPSET-INDOSAT-NETCOOL-114-6-2-142",
+        "HOST-ap1d107lpcacpr-vip": "TF-AP1-IPSET-ap1d107lpcacpr-vip",
+        "HOST-ap1sr1apiamprsvg2-secondary-IP": "TF-AP1-IPSET-ap1sr1apiamprsvg2-secondary-IP",
+        "HOST-DR264-ESG-agg-vNic_0": "TF-AP1-IPSET-DR264-ESG-agg-vNic_0",
+        "HOST-DRES164-LB-OCP-Cluster1-VIP-1": "TF-AP1-IPSET-DRES164-LB-OCP-Cluster1-VIP-1",
+        "IPSET-SRES-IAM-THY-SVG-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SVG-PROD",
+        "HOST-s3.private.au-syd.cloud-object-storage.appdomain.cloud": "TF-AP1-IPSET-s3-private-au-syd-cloud-object-storage-appdomain-cloud",
+        "NET-SYD-GSNI-subnet": "TF-AP1-IPSET-NET-SYD-GSNI-subnet",
+        "HOST-IMI-CISCO-INTEGRATION": "TF-AP1-IPSET-IMI-CISCO-INTEGRATION",
+        "HOST-in1sr1lphwcls": "TF-AP1-IPSET-in1sr1lphwcls",
+        "HOST-portal.ap1.mneaas.ams.sp.ibm.com": "TF-AP1-IPSET-portal-mneaas-ams-sp-ibm-com",
+        "HOST-MCI-NZ-nzakptk01sr02rz": "TF-AP1-IPSET-MCI-NZ-nzakptk01sr02rz",
+        "IPSET-SRES-IAM-LINUX-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-LINUX-PROD",
+        "HOST-Asset_Management": "TF-AP1-IPSET-Asset_Management",
+        "IPSET-SRES-IAM-THY-SECRET-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-SECRET-PROD",
+        "HOST-HWSW-eu1sr1wphwcdb": "TF-AP1-IPSET-HWSW-eu1sr1wphwcdb",
+        "NET-ICp-ClusterIP-Service-Network": "TF-AP1-IPSET-NET-ICp-ClusterIP-Service-Network",
+        "HOST-DAAP-OVPN-SSHProxy-146.89.203.200": "TF-AP1-IPSET-DAAP-OVPN-SSHProxy-146-89-203-200",
+        "NET-SL-IRES-ISPW-MGMT": "TF-AP1-IPSET-NET-SL-IRES-ISPW-MGMT",
+        "Host-CPREM258-Ausgrid JH": "TF-AP1-IPSET-Host-CPREM258-Ausgrid-JH",
+        "Host-SRES-MNEAAS-AP-SHR1-NCO": "TF-AP1-IPSET-Host-SRES-MNEAAS-AP-SHR1-NCO",
+        "Host_ap1sr1lpiamprsdi1": "TF-AP1-IPSET-Host_ap1sr1lpiamprsdi1",
+        "HOST-GSNI-SR-AU-SHR-HTEMS": "TF-AP1-IPSET-GSNI-SR-AU-SHR-HTEMS",
+        "SLSydImpactnode01": "TF-AP1-IPSET-SLSydImpactnode01",
+        "host-ap1srlpm1ecdb": "TF-AP1-IPSET-ap1srlpm1ecdb",
+        "Host_DRES264 Client premise JH": "TF-AP1-IPSET-Host_DRES264-Client-premise-JH",
+        "Host-blue-hwsw360.w3-969": "TF-AP1-IPSET-Host-blue-hwsw360-w3-969",
+        "IPSET-SRES-STaaS-AD-Clients": "TF-AP1-IPSET-IPSET-SRES-STaaS-AD-Clients",
+        "HOST_NAT_CACF_Proxy": "TF-AP1-IPSET-HOST_NAT_CACF_Proxy",
+        "HOST-EnergyAustralia-Jumphost": "TF-AP1-IPSET-EnergyAustralia-Jumphost",
+        "HOST-SRES01-ICP-Cluster01": "TF-AP1-IPSET-SRES01-ICP-Cluster01",
+        "HOST-in1sr1wphwcstr": "TF-AP1-IPSET-in1sr1wphwcstr",
+        "HOST-DRES164-LB-OCP-Cluster1-VIP-2": "TF-AP1-IPSET-DRES164-LB-OCP-Cluster1-VIP-2",
+        "HOST-DRES164-OCP-Cluster01-Temp": "TF-AP1-IPSET-DRES164-OCP-Cluster01-Temp",
+        "HOST-IAMAAS ZABBIX": "TF-AP1-IPSET-IAMAAS-ZABBIX",
+        "Host Dres268 cacf Proxy VIP": "TF-AP1-IPSET-Host-Dres268-cacf-Proxy-VIP",
+        "slsydimpacttest01": "TF-AP1-IPSET-slsydimpacttest01",
+        "HOST-dnat-to-ap1sr1wjmp00": "TF-AP1-IPSET-dnat-to-ap1sr1wjmp00",
+        "in1-sres-tanzu-workload-02-ingress": "TF-AP1-IPSET-in1-sres-tanzu-workload-02-ingress",
+        "EU1-HOST-SRES-CACF-Proxy": "TF-AP1-IPSET-EU1-SRES-CACF-Proxy",
+        "HOST-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD": "TF-AP1-IPSET-KAFKA-SVC01-AU-SYD-EVENTSTREAMS-IBM-CLOUD",
+        "HOST-pjumplinux1": "TF-AP1-IPSET-pjumplinux1",
+        "NET-MSS-Qradar-Console": "TF-AP1-IPSET-NET-MSS-Qradar-Console",
+        "HOST-INTERNET-GMAIL": "TF-AP1-IPSET-INTERNET-GMAIL",
+        "HOST-MCS-CPREM Jump": "TF-AP1-IPSET-MCS-CPREM-Jump",
+        "HOST-MSS-Admin-Access": "TF-AP1-IPSET-MSS-Admin-Access",
+        "HOST-uat.br.ibm.com": "TF-AP1-IPSET-uat-br-ibm-com",
+        "HOST-ap1irlpm1esldbs-secondary-IP": "TF-AP1-IPSET-ap1irlpm1esldbs-secondary-IP",
+        "IPSET-SRES-IAM-THY-RDP-PROD": "TF-AP1-IPSET-IPSET-SRES-IAM-THY-RDP-PROD",
+        "Host-blue-pgawdchwswu01": "TF-AP1-IPSET-Host-blue-pgawdchwswu01",
+        "HOST-ap1sppappliance": "TF-AP1-IPSET-ap1sppappliance",
+        "HOST-bat.cz.ibm.com": "TF-AP1-IPSET-bat-cz-ibm-com",
+        "Host-GSNI-SR-AU-SHR-HTEMS": "TF-AP1-IPSET-Host-GSNI-SR-AU-SHR-HTEMS",
+        "DRES264-CACF-VIP-NAT": "TF-AP1-IPSET-DRES264-CACF-VIP-NAT",
+        "HOST-ap1sftp01": "TF-AP1-IPSET-ap1sftp01",
+        "HOST-MCI-NZ-nzakptk01sr01rz": "TF-AP1-IPSET-MCI-NZ-nzakptk01sr01rz",
+        "HOST-SL-NEW-AD-DNS-NTP": "TF-AP1-IPSET-SL-NEW-AD-DNS-NTP",
+        "Host-ap1sr1wjmp02": "TF-AP1-IPSET-Host-ap1sr1wjmp02",
+        "Host-ap1sr1wpiampre2": "TF-AP1-IPSET-Host-ap1sr1wpiampre2",
+        "HOST-INDOSAT-NETCOOL": "TF-AP1-IPSET-INDOSAT-NETCOOL",
+        "HOST-GSENBEU": "TF-AP1-IPSET-GSENBEU",
+        "HOST-eu1srlpm1esldb-vip": "TF-AP1-IPSET-eu1srlpm1esldb-vip",
+        "HOST-ap1srlphstp1ntcl": "TF-AP1-IPSET-ap1srlphstp1ntcl",
+        "host-ap1srlpm1esdp1": "TF-AP1-IPSET-ap1srlpm1esdp1",
+        "AG1-HOST-Tanzu-Workload-03-NAT": "TF-AP1-IPSET-AG1-Tanzu-Workload-03-NAT",
+        "HOST-in1sr1lpsssdb2": "TF-AP1-IPSET-in1sr1lpsssdb2",
+        "HOST-PDR-Proxy-VIP": "TF-AP1-IPSET-PDR-Proxy-VIP",
+        "in1-sres-tanzu-mgmt-01": "TF-AP1-IPSET-in1-sres-tanzu-mgmt-01",
+        "HOST-DR264-LB-VIP1-NAT": "TF-AP1-IPSET-DR264-LB-VIP1-NAT",
+        "Host-SRES-MNEAAS-AP-SHR1-NCP": "TF-AP1-IPSET-Host-SRES-MNEAAS-AP-SHR1-NCP",
+        "HOST-DR264-LB-vNIC_3": "TF-AP1-IPSET-DR264-LB-vNIC_3",
+        "HOST-ap1sr1lcacfjump02-IRES-NAT": "TF-AP1-IPSET-ap1sr1lcacfjump02-IRES-NAT",
+        "EU1-Host-eu1sr1dxdev02": "TF-AP1-IPSET-EU1-Host-eu1sr1dxdev02",
+        "HOST-SL1LOREAL-CPREM": "TF-AP1-IPSET-SL1LOREAL-CPREM",
+        "NET-SL-IRES-VCS-MGMT": "TF-AP1-IPSET-NET-SL-IRES-VCS-MGMT",
+        "IBM_Github": "TF-AP1-IPSET-IBM_Github",
+        "HOST-ap1irlpm1esldc-VIP": "TF-AP1-IPSET-ap1irlpm1esldc-VIP",
+        "HOST-ap1srlpm1etnp1": "TF-AP1-IPSET-ap1srlpm1etnp1",
+        "NET-SYD-NAT-GSNI-subnet": "TF-AP1-IPSET-NET-SYD-NAT-GSNI-subnet",
+        "HOST-CDI-AP-Proxy": "TF-AP1-IPSET-CDI-AP-Proxy",
+        "IPSET-SRES-WIN-DNS-NTP": "TF-AP1-IPSET-IPSET-SRES-WIN-DNS-NTP",
+        "HOST-ap1d97lpsiaprx-vip": "TF-AP1-IPSET-ap1d97lpsiaprx-vip",
+        "HOST-ap1irlpm1esldc01-secondary-IP": "TF-AP1-IPSET-ap1irlpm1esldc01-secondary-IP",
+        "HOST-smtp-sendgrid-net": "TF-AP1-IPSET-smtp-sendgrid-net",
+        "HOST-HWSW-GACDW AP - DB": "TF-AP1-IPSET-HWSW-GACDW-AP-DB",
+        "SG-SRES-OCP-Cluster05": "TF-AP1-IPSET-SG-SRES-OCP-Cluster05",
+        "Host-ap1sr1lpcacprx1": "TF-AP1-IPSET-Host-ap1sr1lpcacprx1",
+        "HOST-ap1srlphwcls": "TF-AP1-IPSET-ap1srlphwcls",
+        "HOST-ap1spplusvsnap-secondary-IP": "TF-AP1-IPSET-ap1spplusvsnap-secondary-IP",
+        "HOST-SNAT-to-DA": "TF-AP1-IPSET-SNAT-to-DA",
+        "Host-Infra-Servers": "TF-AP1-IPSET-Host-Infra-Servers",
+        "HOST-IRES-VROPS-Server": "TF-AP1-IPSET-IRES-VROPS-Server",
+        "HOST-SRES-IAM-THY-PROXY-PROD-VIP": "TF-AP1-IPSET-SRES-IAM-THY-PROXY-PROD-VIP",
+        "HOST-EZOPS-ITM-hkgsni": "TF-AP1-IPSET-EZOPS-ITM-hkgsni",
+        "NET-All-RFC1918": "TF-AP1-IPSET-NET-All-RFC1918",
+        "NET-SL-IRES-Portable": "TF-AP1-IPSET-NET-SL-IRES-Portable",
+        "HOST-eu1srlpgsenexgen": "TF-AP1-IPSET-eu1srlpgsenexgen",
+        "HOST-IRES-QRADAR-NAT-IP": "TF-AP1-IPSET-IRES-QRADAR-NAT-IP",
+        "HOST-UAT-AU": "TF-AP1-IPSET-UAT-AU",
+        "IKS_Cluster_External_VIP": "TF-AP1-IPSET-IKS_Cluster_External_VIP",
+        "Host-ap1d271lpcacpr2": "TF-AP1-IPSET-Host-ap1d271lpcacpr2",
+        "Host-ap1sr1wsus01": "TF-AP1-IPSET-Host-ap1sr1wsus01",
+        "HOST-DRES264-LB-NAT": "TF-AP1-IPSET-DRES264-LB-NAT",
+        "HOST-w3-ibm-com": "TF-AP1-IPSET-w3-ibm-com",
+        "HOSt-ap1d110lpbp1tnp": "TF-AP1-IPSET-HOSt-ap1d110lpbp1tnp",
+        "IPSET-SRES-STaaS-AD-DNS": "TF-AP1-IPSET-IPSET-SRES-STaaS-AD-DNS",
+        "HOST-SRES-HWSW-PROD": "TF-AP1-IPSET-SRES-HWSW-PROD",
+        "HOST-ap1irlpm1esldc02-secondary-IP": "TF-AP1-IPSET-ap1irlpm1esldc02-secondary-IP"
+    }
+}

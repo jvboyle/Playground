@@ -1,0 +1,48 @@
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: ibmcloud-default-cluster-image-policy
+spec:
+   repositories:
+    # This enforces that all images deployed to this cluster pass trust and VA
+    # To override, set an ImagePolicy for a specific Kubernetes namespace or modify this policy
+    - name:  registry.bluemix.net/ibm/*
+    - name:  docker.io/hybridcloudibm/*
+    - name:  docker.io/ibmcom/*
+    - name:  docker.io/db2eventstore/*
+    - name:  docker.io/icpdashdb/*
+    - name:  docker.io/iighostd/*
+    - name:  docker.io/store/ibmcorp/*
+    - name:  docker.io/alpine*
+    - name:  docker.io/busybox*
+    - name:  docker.io/dduportal/bats:*
+    - name:  docker.io/cassandra:*
+    - name:  docker.io/haproxy:*
+    - name:  docker.io/hazelcast/hazelcast-kubernetes:*
+    - name:  docker.io/library/busybox:*
+    - name:  docker.io/minio/mc:*
+    - name:  docker.io/minio/minio:*
+    - name:  docker.io/nginx:*
+    - name:  docker.io/open-liberty:*
+    - name:  docker.io/rabbitmq:*
+    - name:  docker.io/radial/busyboxplus:*
+    - name:  docker.io/ubuntu*
+    - name:  docker.io/websphere-liberty:*
+    - name:  docker.io/wurstmeister/kafka:*
+    - name:  docker.io/zookeeper:*
+    - name:  docker.io/ibmcloudcontainers/strongswan:*
+    - name:  docker.io/opsh2oai/dai-ppc64le:*
+    - name:  docker.io/redis*
+    - name:  docker.io/f5networks/k8s-bigip-ctlr:*
+    - name:  docker.io/rook/rook:*
+    - name:  docker.io/couchdb:*
+    - name:  docker.elastic.co/beats/filebeat:*
+    - name:  docker.io/prom/statsd-exporter:*
+    - name:  docker.elastic.co/elasticsearch/elasticsearch:*
+    - name:  docker.elastic.co/kibana/kibana:*
+    - name:  docker.elastic.co/logstash/logstash:*
+    - name:  quay.io/k8scsi/csi-attacher:*
+    - name:  quay.io/k8scsi/driver-registrar:*
+    - name:  quay.io/k8scsi/nfsplugin:*
+    - name:  k8s.gcr.io/hyperkube:*
+    - name:  registry.bluemix.net/armada-master/ibm-worker-recovery:*

@@ -1,0 +1,147 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-1024-1030",
+            "TCP-20010",
+            "RDP",
+            "TCP-3390",
+            "TCP-20009",
+            "TCP-20000-20006",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1dlniamjpfua1",
+            "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+            "TF-AG1-HOST-ag1sr1wniamuae1",
+            "TF-AG1-HOST-ag1dlniamjpfts1",
+            "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+            "TF-AG1-HOST-ag1dlniamjpf1",
+            "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+            "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+            "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+            "TF-AG1-SG-SRES-IAM-THY-SDI-UAT"
+        ]
+    },
+    "map_policies": {
+        "TF-DRIAMAASTHY": {
+            "category": "Application",
+            "rules": {
+                "1982": {
+                    "display_name": "TF-1982-Distributed-Engine-to-DRES-JH",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-SIDT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpf1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20000-20006",
+                        "TCP-1024-1030"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50971783  \"SG-SRES-IAM-THY-DE-SIDT\" added to the existing source.\n\n CH50078675\u00a0and SR50970216  SG-SRES-IAM-THY-DE-UAT added to the existing source\n\nCH50079588 and SR50978536- \"Add to destination:\nag1dlniamjpfdv1\nag1dlniamjpfts1\nag1dlniamjpfua1",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpf1",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-UAT"
+                    ]
+                },
+                "2075": {
+                    "display_name": "TF-2075-DRES-JH-to-Distributed-Engine-",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpf1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-DE-UAT",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-SIDT"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH",
+                        "TCP-3390",
+                        "RDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50971783\"SG-SRES-IAM-THY-DE-SIDT\"   added to the existing destination \n   CH50078675\u00a0and SR50970216 SG-SRES-IAM-THY-DE-UAT added to the existing destination.\n\n\nCH50079588 and SR50978536- \"Add to source:\nag1dlniamjpfdv1\nag1dlniamjpfts1\nag1dlniamjpfua1",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-SIDT",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpf1",
+                        "TF-AG1-SG-SRES-IAM-THY-DE-UAT"
+                    ]
+                },
+                "2376": {
+                    "display_name": "TF-2376-IAM-SVG-and-SDI-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-UAT"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-HOST-ag1dlniamjpf1"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50971783\n\n\nCH50078675\u00a0and SR50970216   SG-SRES-IAM-THY-SVG-UAT & \nSG-SRES-IAM-THY-SDI-UAT added to the existing source\n\n\nCH50079588 and SR50978536- \"Add to destination:\nag1dlniamjpfdv1\nag1dlniamjpfts1\nag1dlniamjpfua1",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1dlniamjpfts1",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-SIDT",
+                        "TF-AG1-HOST-ag1dlniamjpf1",
+                        "TF-AG1-SG-SRES-IAM-THY-SVG-UAT",
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-UAT",
+                        "TF-AG1-SG-SRES-IAM-THY-SDI-SIDT"
+                    ]
+                },
+                "2901": {
+                    "display_name": "TF-2901-DE-to-JPF",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1wniamuae1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-20010",
+                        "SSH",
+                        "TCP-20009"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51154776 \nSR51247305 - 20009/20010",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua1",
+                        "TF-AG1-HOST-ag1sr1wniamuae1"
+                    ]
+                }
+            }
+        }
+    }
+}

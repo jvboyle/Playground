@@ -1,0 +1,9 @@
+﻿segment_name,rule_name,source,destination,protocol,xxx,yyy,in_out,targets
+DRxx,AA DRES robots TO  AA DRES robots,SG-DR22-RPA-AA-Desktop-Pool,SG-DRxx-RPA-AA-Desktop-Pool,tcp/445,allow,no,In/Out,SG-DRxx-RPA-AA-Desktop-Pool
+DRxx,BP SRES GTS Jumpserver TO  BP DRES GTS robots,SG-SRES-RPA-GTS-Jump-Servers,SG-DRxx-RPA-AA-Desktop-Pool,"RDP
+tcp/135 445 8181 9427 22443
+udp/22443",allow,yes,In/Out,"eu1-sres-esg1
+eu1-drxx-esg1
+SG-SRES-RPA-GTS-Jump-Servers
+SG-DRxx-RPA-AA-Desktop-Pool"
+xx-RPA-AA-Desktop-Pool"

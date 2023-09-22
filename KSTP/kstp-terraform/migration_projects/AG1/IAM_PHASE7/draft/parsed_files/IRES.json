@@ -1,0 +1,146 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "LDAP-over-SSL",
+            "NBSS",
+            "DHCP-Server",
+            "Active Directory Server UDP",
+            "NBDG-Broadcast",
+            "WINS-UDP",
+            "DNS",
+            "Windows-Global-Catalog-over-SSL",
+            "WINS",
+            "NBDG-Unicast",
+            "NTP Time Server",
+            "Active Directory Server",
+            "SMTP",
+            "Windows-Global-Catalog",
+            "NBNS-Broadcast",
+            "MS_RPC_TCP",
+            "MS-DS-UDP",
+            "MS-DS-TCP",
+            "KERBEROS",
+            "SOAP",
+            "LDAP",
+            "LDAP-UDP",
+            "NTP",
+            "DNS-UDP",
+            "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+            "NBNS-Unicast",
+            "KERBEROS-UDP"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1sr1staas1",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+            "TF-AG1-HOST-ag1sr1wdns02",
+            "TF-AG1-HOST-ag1dc2",
+            "TF-AG1-HOST-ag1sr1staas2",
+            "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+            "TF-AG1-HOST-ag1dc1",
+            "TF-AG1-SG-SRES-WIN-DNS-NTP",
+            "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+            "TF-AG1-HOST-ag1sr1wdns01",
+            "TF-AG1-SG-IRES-SL1-Collectors",
+            "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+        ]
+    },
+    "map_policies": {
+        "TF-IRES": {
+            "category": "Application",
+            "rules": {
+                "1927": {
+                    "display_name": "TF-1927-SG-IRES-SL1-Collectors-to-SRES-DNS-NTP",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "NTP",
+                        "DNS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AG1-SG-IRES-SL1-Collectors",
+                        "TF-AG1-SG-IRES-Network-Automation-Server-Group",
+                        "TF-AG1-SG-SRES-WIN-DNS-NTP"
+                    ]
+                },
+                "2290": {
+                    "display_name": "TF-2290-SG-IRES-SL1-Collectors-to-DC",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-HOST-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                        "TF-AG1-HOST-ag1sr1wdns01"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS",
+                        "LDAP-over-SSL",
+                        "NBSS",
+                        "DHCP-Server",
+                        "Active Directory Server UDP",
+                        "NBDG-Broadcast",
+                        "WINS-UDP",
+                        "DNS",
+                        "Windows-Global-Catalog-over-SSL",
+                        "WINS",
+                        "NBDG-Unicast",
+                        "NTP Time Server",
+                        "Active Directory Server",
+                        "SMTP",
+                        "Windows-Global-Catalog",
+                        "NBNS-Broadcast",
+                        "MS_RPC_TCP",
+                        "MS-DS-UDP",
+                        "MS-DS-TCP",
+                        "KERBEROS",
+                        "SOAP",
+                        "LDAP",
+                        "LDAP-UDP",
+                        "DNS-UDP",
+                        "NBNS-Unicast",
+                        "KERBEROS-UDP"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50942227 SR50943392",
+                    "scope": [
+                        "TF-AG1-HOST-ag1sr1staas1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt1",
+                        "TF-AG1-HOST-ag1sr1wdns02",
+                        "TF-AG1-HOST-ag1dc2",
+                        "TF-AG1-HOST-ag1sr1staas2",
+                        "TF-AG1-IPSET-Ag1-Host-ag1sr1wdns-All",
+                        "TF-AG1-HOST-ag1dc1",
+                        "TF-AG1-IPSET-NSXT-ADNSnsxt2",
+                        "TF-AG1-HOST-ag1sr1wdns01",
+                        "TF-AG1-SG-IRES-SL1-Collectors"
+                    ]
+                }
+            }
+        }
+    }
+}

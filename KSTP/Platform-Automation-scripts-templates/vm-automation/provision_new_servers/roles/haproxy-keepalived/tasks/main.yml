@@ -1,0 +1,120 @@
+---
+  - name: install dependencies
+    yum: 
+      name: "{{ item }}" 
+      state: installed
+    with_items:
+      - haproxy
+      - keepalived
+#      - openssl-devel 
+#      - pcre-devel
+#      - make
+#      - gcc
+#      - socat
+
+#  - name: haproxy src is downloaded
+#    get_url:
+#      dest: "{{ haproxy_src_dir }}" 
+#      url: "{{ haproxy_download_url }}"
+
+#  - name: unarchive haproxy
+#    shell:
+#      tar xvf "{{ haproxy_src_dir }}"/haproxy-"{{ haproxy_major_version }}"."{{ haproxy_minor_version }}".tar.gz -C "{{ haproxy_src_dir }}"/
+#      creates="{{ haproxy_src_dir }}"/haproxy-"{{ haproxy_major_version }}"."{{ haproxy_minor_version }}"
+
+#  - name: configure haproxy makefile
+#    shell:
+#      cd "{{ haproxy_src_dir }}"/haproxy-"{{ haproxy_major_version }}"."{{ haproxy_minor_version }}"  && make "{{ haproxy_make_option }}"  && make install
+#    args:
+#      creates: /usr/local/sbin/haproxy
+
+#  - name: ensure haproxy user is enabled
+#    user: 
+#      name: "{{ haproxy_user }}"
+#      shell: /sbin/nologin
+
+#  - name: haproxy directory is present
+#    file: 
+#      path: "{{ item }}"
+#      state: directory
+#    with_items:
+#      - "/etc/haproxy"
+#      - "/var/lib/haproxy"
+
+#  - name: ensure haproxy binary file is copied to path enabled directory
+#    shell:
+#      cp /usr/local/sbin/"{{ item }}" /usr/sbin/"{{ item }}"
+#    args:
+#      creates: /usr/sbin/"{{ item }}"
+#    with_items:
+#      - haproxy
+#    - haproxy-systemd-wrapper
+
+#  - name: copy haproxy init script
+#    shell:
+#      cp "{{ haproxy_src_dir }}"/haproxy-"{{ haproxy_major_version }}"."{{ haproxy_minor_version }}"/examples/haproxy.init /etc/init.d/haproxy
+#    args:
+#      creates: /etc/init.d/haproxy
+
+#  - name: haproxy init script is executable
+#    file:
+#      path: /etc/init.d/haproxy
+#      mode: 0755
+
+  - name: set haproxy conf
+    template: 
+      src: templates/haproxy.cfg.j2 
+      dest: /etc/haproxy/haproxy.cfg
+      owner: root
+      group: toweradm
+      mode: 0660
+
+  - name: set nonlocal bind kernel parameter
+    sysctl:
+      name: net.ipv4.ip_nonlocal_bind
+      value: '1'
+      sysctl_set: yes
+      state: present
+      reload: yes
+    
+  - name: enable routing haproxy
+    sysctl:
+      name: net.ipv4.ip_forward
+      value: '1'
+      sysctl_set: yes
+      state: present
+      reload: yes
+
+  - name: start haproxy
+    service:
+      name: haproxy 
+      state: started
+      enabled: yes
+
+#  - name: set keepalived conf
+#    template:
+#      src: templates/keepalived.conf.j2
+#      dest: /etc/keepalived/keepalived.conf
+
+#  - name: start keepalived
+#    service:
+#      name: keepalived
+#      state: started
+#      enabled: yes
+
+  - name: copy ansible log
+    copy:
+      src: ansible.log
+      dest: /home/ansible.log
+
+#  - name: sending email
+#    mail:
+#      host: localhost
+#      port: 25
+#      from: ansible@{{ ansible_hostname }}
+#      to: Cornel Badea <root@localhost>
+#      subject: Ansible-report
+#      body: System {{ ansible_hostname }} has been successfully provisioned.
+#      attach:
+#        - /home/ansible.log
+...

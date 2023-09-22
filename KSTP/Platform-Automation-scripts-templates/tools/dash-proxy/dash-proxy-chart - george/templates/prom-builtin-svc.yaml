@@ -1,0 +1,10 @@
+{{- if .Values.prometheus_builtin.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-prometheus
+  namespace: {{ .Release.Namespace }}
+spec:
+  type: ExternalName
+  externalName: {{ .Values.prometheus_builtin.svc_name }}.{{ .Values.prometheus_builtin.namespace }}.svc.cluster.local
+  {{- end}}

@@ -1,0 +1,6741 @@
+{
+    "SAP Start Service 2": {
+        "protocol": "TCP",
+        "port": [
+            "50014"
+        ],
+        "init": true
+    },
+    "SAP PAW Servlet Engine": {
+        "protocol": "TCP",
+        "port": [
+            "1089"
+        ],
+        "init": true
+    },
+    "SAP JDBCAdapter": {
+        "protocol": "TCP",
+        "port": [
+            "8220"
+        ],
+        "init": true
+    },
+    "Syslog (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "SAP gateway - CPIC/RFC": {
+        "protocol": "TCP",
+        "port": [
+            "3300"
+        ],
+        "init": true
+    },
+    "SAP JMS": {
+        "protocol": "TCP",
+        "port": [
+            "50010"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Horizon Client Communication": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "SAP printer spooler": {
+        "protocol": "TCP",
+        "port": [
+            "515"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS traffic from Agent to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "SAP Index Server": {
+        "protocol": "TCP",
+        "port": [
+            "30003"
+        ],
+        "init": true
+    },
+    "Win 2008 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+        "protocol": "TCP",
+        "port": [
+            "49152-65535"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Security Server to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "Syslog (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "SAP Enqueue Repl 2": {
+        "protocol": "TCP",
+        "port": [
+            "50116"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-advertisement"
+        ],
+        "init": true
+    },
+    "SIP 5061": {
+        "protocol": "UDP",
+        "port": [
+            "5061"
+        ],
+        "init": true
+    },
+    "SAP Name Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8355"
+        ],
+        "init": true
+    },
+    "SIP 5060": {
+        "protocol": "UDP",
+        "port": [
+            "5060"
+        ],
+        "init": true
+    },
+    "SAP Cruiser": {
+        "protocol": "TCP",
+        "port": [
+            "30008"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure JMS Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "MSN (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "1863"
+        ],
+        "init": true
+    },
+    "Horizon 6 HTML access to Security Server": {
+        "protocol": "TCP",
+        "port": [
+            "8443"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS traffic Agent to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "SAP Exchange Groupware Connector (DCOM)": {
+        "protocol": "TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "IKE (Key Exchange)": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "SAP Inst on IBM": {
+        "protocol": "TCP",
+        "port": [
+            "59975",
+            "59976"
+        ],
+        "init": true
+    },
+    "SAP Upgrade": {
+        "protocol": "TCP",
+        "port": [
+            "4238",
+            "4239",
+            "4240",
+            "4241"
+        ],
+        "init": true
+    },
+    "SAP ICM HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "SAP HostControl": {
+        "protocol": "TCP",
+        "port": [
+            "1128"
+        ],
+        "init": true
+    },
+    "SAP SNC secured gateway": {
+        "protocol": "TCP",
+        "port": [
+            "4800"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Report": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-report"
+        ],
+        "init": true
+    },
+    "ORACLE_TNS": {
+        "protocol": "ORACLE_TNS",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "T120 (Whiteboard A43)": {
+        "protocol": "TCP",
+        "port": [
+            "1503"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Duplicate Address Request": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "duplicate-address-request"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Time Exceeded": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "time-exceeded"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Certification Path Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "certification-path-solicitation"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP NMobile Prefix Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mobile-prefix-solicitation"
+        ],
+        "init": true
+    },
+    "SAP Telnet": {
+        "protocol": "TCP",
+        "port": [
+            "50008"
+        ],
+        "init": true
+    },
+    "SAP Message Server HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8100"
+        ],
+        "init": true
+    },
+    "SAP Queue Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8352"
+        ],
+        "init": true
+    },
+    "SAP Alert Server": {
+        "protocol": "TCP",
+        "port": [
+            "30011"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Destination Unreachable": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "destination-unreachable"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure LDAP replication between Connection Servers": {
+        "protocol": "TCP",
+        "port": [
+            "22636"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Security Server": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP FMIPv6": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "fmipv6"
+        ],
+        "init": true
+    },
+    "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - UDP": {
+        "protocol": "UDP",
+        "port": [
+            "1025-65535"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Security Server": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP Enqueue Svr": {
+        "protocol": "TCP",
+        "port": [
+            "3201"
+        ],
+        "init": true
+    },
+    "SAP Gateway Netweaver App Server": {
+        "protocol": "UDP",
+        "port": [
+            "3300"
+        ],
+        "init": true
+    },
+    "ICMP Redirect": {
+        "protocol": "ICMP",
+        "port": [
+            "redirect"
+        ],
+        "init": true
+    },
+    "Win - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS - TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1025-65535"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Home Agent Address Discovery Request": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "home-agent-address-discovery-request"
+        ],
+        "init": true
+    },
+    "TELNET": {
+        "protocol": "TCP",
+        "port": [
+            "23"
+        ],
+        "init": true
+    },
+    "SAP JMS Adapter": {
+        "protocol": "TCP",
+        "port": [
+            "8210"
+        ],
+        "init": true
+    },
+    "IPv6-NoExt": {
+        "protocol": "IPV6NONXT",
+        "port": "",
+        "init": true
+    },
+    "SAP IPC Dispatcher Mobile client 2": {
+        "protocol": "TCP",
+        "port": [
+            "4363"
+        ],
+        "init": true
+    },
+    "SAP Content Server": {
+        "protocol": "TCP",
+        "port": [
+            "1090"
+        ],
+        "init": true
+    },
+    "Win 2003 - RPC, DCOM, EPM, DRSUAPI, NetLogonR, SamR, FRS": {
+        "protocol": "TCP",
+        "port": [
+            "1025-5000"
+        ],
+        "init": true
+    },
+    "DHCPv6 Server": {
+        "protocol": "UDP",
+        "port": [
+            "547"
+        ],
+        "init": true
+    },
+    "SAP HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "50000"
+        ],
+        "init": true
+    },
+    "APP_MSSQL_UDP": {
+        "protocol": "UDP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "SUN_RPC_UDP": {
+        "protocol": "SUN_RPC_UDP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "SAP Java Debug": {
+        "protocol": "TCP",
+        "port": [
+            "50021"
+        ],
+        "init": true
+    },
+    "APP_MSSQL_TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Connection Server traffic": {
+        "protocol": "TCP",
+        "port": [
+            "48080"
+        ],
+        "init": true
+    },
+    "SAP Layout Server": {
+        "protocol": "TCP",
+        "port": [
+            "31596",
+            "31597",
+            "31604"
+        ],
+        "init": true
+    },
+    "NetBios Name Service (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "ICMP Source Quench": {
+        "protocol": "ICMP",
+        "port": [
+            "source-quench"
+        ],
+        "init": true
+    },
+    "ICMP Router Solicitation": {
+        "protocol": "ICMP",
+        "port": [
+            "router-solicitation"
+        ],
+        "init": true
+    },
+    "SAP Layout Server Quark Express": {
+        "protocol": "TCP",
+        "port": [
+            "31602"
+        ],
+        "init": true
+    },
+    "SNMP": {
+        "protocol": "UDP",
+        "port": [
+            "161"
+        ],
+        "init": true
+    },
+    "SAP Backup Server": {
+        "protocol": "TCP",
+        "port": [
+            "30017"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Utilized by Experimental Mobility Protocols": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "utilized-by-experimental-mobility-protocols"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic using IPsec without NAT": {
+        "protocol": "ESP",
+        "port": "",
+        "init": true
+    },
+    "OC4J Forms / Reports Instance": {
+        "protocol": "TCP",
+        "port": [
+            "8888"
+        ],
+        "init": true
+    },
+    "SUN_RPC_TCP": {
+        "protocol": "SUN_RPC_TCP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "SAP Dispatcher Netweaver App Server": {
+        "protocol": "UDP",
+        "port": [
+            "3200"
+        ],
+        "init": true
+    },
+    "ICMP Router Advertisement": {
+        "protocol": "ICMP",
+        "port": [
+            "router-advertisement"
+        ],
+        "init": true
+    },
+    "VMware Consolidated Backup": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "SMB": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Duplicate Address Confirmation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "duplicate-address-confirmation"
+        ],
+        "init": true
+    },
+    "NetBios Name Service (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "SAP Dispatcher": {
+        "protocol": "TCP",
+        "port": [
+            "3200"
+        ],
+        "init": true
+    },
+    "Horizon 6 Interpod Communication between Connection Servers": {
+        "protocol": "TCP",
+        "port": [
+            "8472"
+        ],
+        "init": true
+    },
+    "TCP-9093-9095": {
+        "protocol": "TCP",
+        "port": [
+            "9093-9095"
+        ],
+        "init": true
+    },
+    "SAP Oracle Listener": {
+        "protocol": "TCP",
+        "port": [
+            "1527"
+        ],
+        "init": true
+    },
+    "SAP MDM Server": {
+        "protocol": "TCP",
+        "port": [
+            "2000-2002"
+        ],
+        "init": true
+    },
+    "FTP": {
+        "protocol": "FTP",
+        "port": [
+            "21"
+        ],
+        "init": true
+    },
+    "Horizon 6 JMS Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "SAP Layout Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "31596"
+        ],
+        "init": true
+    },
+    "Terminal Services (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Node Information Query": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "node-information-query"
+        ],
+        "init": true
+    },
+    "DHCPv6 Client": {
+        "protocol": "UDP",
+        "port": [
+            "546"
+        ],
+        "init": true
+    },
+    "ORACLE-FORM-SERVICES": {
+        "protocol": "TCP",
+        "port": [
+            "9000"
+        ],
+        "init": true
+    },
+    "RTSP (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "554"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Inverse Neighbor Discovery Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "inverse-neighbor-discovery-advertisement"
+        ],
+        "init": true
+    },
+    "Terminal Services (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "H323 Call Signaling": {
+        "protocol": "TCP",
+        "port": [
+            "1720"
+        ],
+        "init": true
+    },
+    "SAP IPC Dispatcher Mobile client": {
+        "protocol": "TCP",
+        "port": [
+            "4444"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP RPL Control": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "rpl-control"
+        ],
+        "init": true
+    },
+    "SAP Monitoring (GRMG)": {
+        "protocol": "TCP",
+        "port": [
+            "8366"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Query": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-query"
+        ],
+        "init": true
+    },
+    "Horizon 6 Composer Service to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "18443"
+        ],
+        "init": true
+    },
+    "RTSP (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "554"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic using IPsec with NAT from Security Server to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "4500"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-solicitation"
+        ],
+        "init": true
+    },
+    "SAP JMS/JDBC/File Adapter Server": {
+        "protocol": "TCP",
+        "port": [
+            "8200"
+        ],
+        "init": true
+    },
+    "SAP Import Mgr": {
+        "protocol": "TCP",
+        "port": [
+            "20006"
+        ],
+        "init": true
+    },
+    "Horizon 6 APJ13 Forwarded Web Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "8009"
+        ],
+        "init": true
+    },
+    "H323 Gatekeeper Discovery": {
+        "protocol": "UDP",
+        "port": [
+            "1718"
+        ],
+        "init": true
+    },
+    "SAP File Adapter": {
+        "protocol": "TCP",
+        "port": [
+            "8230"
+        ],
+        "init": true
+    },
+    "SAP Queue Server": {
+        "protocol": "TCP",
+        "port": [
+            "30004"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-advertisement"
+        ],
+        "init": true
+    },
+    "NFS (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Renumbering": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-renumbering"
+        ],
+        "init": true
+    },
+    "TCP-16443": {
+        "protocol": "TCP",
+        "port": [
+            "16443"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "55000"
+        ],
+        "init": true
+    },
+    "Horizon 6 Secure Connection Server to View Composer Service communication": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "Horizon 6 View Composer to ESXi Host Traffic": {
+        "protocol": "TCP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr 2": {
+        "protocol": "TCP",
+        "port": [
+            "3601"
+        ],
+        "init": true
+    },
+    "SAP LiveCache": {
+        "protocol": "TCP",
+        "port": [
+            "7200",
+            "7210",
+            "7269",
+            "7270",
+            "7575"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Client": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "Horizon 6 USB Access to desktops": {
+        "protocol": "TCP",
+        "port": [
+            "32111"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Connection Server": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP PAW Communication Server": {
+        "protocol": "TCP",
+        "port": [
+            "1099"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Router Termination": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-router-termination"
+        ],
+        "init": true
+    },
+    "Horizon 6 Default HTTPS Client to Connection and Security Servers": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "Horizon 6 Microsoft RDP traffic to View Desktop": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "SAP Inter Server COmm": {
+        "protocol": "TCP",
+        "port": [
+            "20004"
+        ],
+        "init": true
+    },
+    "Horizon 6 Wyse MMR redirection": {
+        "protocol": "TCP",
+        "port": [
+            "9427"
+        ],
+        "init": true
+    },
+    "SAP Mapping Manager": {
+        "protocol": "TCP",
+        "port": [
+            "3909"
+        ],
+        "init": true
+    },
+    "NFS (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "ICMP Echo Reply": {
+        "protocol": "ICMP",
+        "port": [
+            "echo-reply"
+        ],
+        "init": true
+    },
+    "Oracle Connection Manager (CMAN)": {
+        "protocol": "TCP",
+        "port": [
+            "1630"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "RPC, DFSR (SYSVOL)": {
+        "protocol": "TCP",
+        "port": [
+            "5722"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Echo Reply": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "echo-reply"
+        ],
+        "init": true
+    },
+    "SAP Comm": {
+        "protocol": "TCP",
+        "port": [
+            "20003"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Security Server to Desktop Agent": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP Index Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8351"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Mobile Prefix Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mobile-prefix-advertisement"
+        ],
+        "init": true
+    },
+    "SAP P4 over HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "50005"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to vCenter server communication": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "SAP Syndicator Service": {
+        "protocol": "TCP",
+        "port": [
+            "20007"
+        ],
+        "init": true
+    },
+    "ISAKMP": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "SAP Pre Processor": {
+        "protocol": "TCP",
+        "port": [
+            "30002"
+        ],
+        "init": true
+    },
+    "SAP IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "50007"
+        ],
+        "init": true
+    },
+    "IGMP Leave Group": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "SAP HTTP Server 2": {
+        "protocol": "TCP",
+        "port": [
+            "8353"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Client": {
+        "protocol": "UDP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "H323 Gatekeeper RAS": {
+        "protocol": "UDP",
+        "port": "",
+        "init": true
+    },
+    "SAP P4": {
+        "protocol": "TCP",
+        "port": [
+            "50004"
+        ],
+        "init": true
+    },
+    "SAP Admin console": {
+        "protocol": "TCP",
+        "port": [
+            "20005"
+        ],
+        "init": true
+    },
+    "NetBios Datagram (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "SAP Name Server": {
+        "protocol": "TCP",
+        "port": [
+            "30001"
+        ],
+        "init": true
+    },
+    "SAP Cache Server": {
+        "protocol": "TCP",
+        "port": [
+            "1095"
+        ],
+        "init": true
+    },
+    "MS-DS": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP TCP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Echo": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "echo-request"
+        ],
+        "init": true
+    },
+    "MS_RPC_UDP": {
+        "protocol": "MS_RPC_UDP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "NetBios Datagram (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "Horizon 6 USB communication from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "32111"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP traffic from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP IIOPS": {
+        "protocol": "TCP",
+        "port": [
+            "50003"
+        ],
+        "init": true
+    },
+    "Horizon 6 IPSec Negotiation Traffic from Security Server to Connection Server": {
+        "protocol": "UDP",
+        "port": [
+            "500"
+        ],
+        "init": true
+    },
+    "Office Server Web Services, HTTP, SSL": {
+        "protocol": "TCP",
+        "port": [
+            "56737",
+            "56738"
+        ],
+        "init": true
+    },
+    "KERBEROS-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "IKE (Traversal)": {
+        "protocol": "UDP",
+        "port": [
+            "4500"
+        ],
+        "init": true
+    },
+    "SAP SDM/SL": {
+        "protocol": "TCP",
+        "port": [
+            "50017",
+            "50018",
+            "50019"
+        ],
+        "init": true
+    },
+    "ICMP Destination Unreachable": {
+        "protocol": "ICMP",
+        "port": [
+            "destination-unreachable"
+        ],
+        "init": true
+    },
+    "SAP HTTP Server": {
+        "protocol": "TCP",
+        "port": [
+            "30005"
+        ],
+        "init": true
+    },
+    "Horizon 6 Wyse MMR traffic from connection server to desktop agent": {
+        "protocol": "TCP",
+        "port": [
+            "9427"
+        ],
+        "init": true
+    },
+    "IPv6-Opts": {
+        "protocol": "IPV6OPTS",
+        "port": "",
+        "init": true
+    },
+    "IPv6-ICMP Node Information Response": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "node-information-response"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Multicast Listener Done": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "multicast-listener-done"
+        ],
+        "init": true
+    },
+    "SAP Start Service": {
+        "protocol": "TCP",
+        "port": [
+            "50013"
+        ],
+        "init": true
+    },
+    "Yahoo Messenger (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "5050"
+        ],
+        "init": true
+    },
+    "SAP Pre Processor 2": {
+        "protocol": "TCP",
+        "port": [
+            "8357"
+        ],
+        "init": true
+    },
+    "Oracle Connection Manager Admin (CMAN)": {
+        "protocol": "TCP",
+        "port": [
+            "1830"
+        ],
+        "init": true
+    },
+    "SAP Inst": {
+        "protocol": "TCP",
+        "port": [
+            "21212",
+            "21213"
+        ],
+        "init": true
+    },
+    "Yahoo Messenger (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "5050"
+        ],
+        "init": true
+    },
+    "SAP IBM": {
+        "protocol": "TCP",
+        "port": [
+            "50000",
+            "4402"
+        ],
+        "init": true
+    },
+    "IGMP V2 Membership Report": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "SAP P4 over SSL": {
+        "protocol": "TCP",
+        "port": [
+            "50006"
+        ],
+        "init": true
+    },
+    "SAP Central Software Deployment Manager": {
+        "protocol": "TCP",
+        "port": [
+            "20201"
+        ],
+        "init": true
+    },
+    "NetBios Session Service (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "SAP Router": {
+        "protocol": "TCP",
+        "port": [
+            "3299"
+        ],
+        "init": true
+    },
+    "SAP IPC data loader": {
+        "protocol": "TCP",
+        "port": [
+            "4445"
+        ],
+        "init": true
+    },
+    "SAP Design Time Repository": {
+        "protocol": "TCP",
+        "port": [
+            "50015"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Home Agent Address Discovery Reply": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "home-agent-address-discovery-reply"
+        ],
+        "init": true
+    },
+    "SAP network Test Program": {
+        "protocol": "TCP",
+        "port": [
+            "3298"
+        ],
+        "init": true
+    },
+    "MGCP (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "2427"
+        ],
+        "init": true
+    },
+    "SAP IIOP initial": {
+        "protocol": "TCP",
+        "port": [
+            "50002"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP ILNPv6 Locator Update": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "ilnpv6-locator-update"
+        ],
+        "init": true
+    },
+    "SAP GRMG Service (Heartbeat)": {
+        "protocol": "TCP",
+        "port": [
+            "30006"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to View Desktop Agent Communication": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Version 2 Multicast Listener": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "version-2-multicast-listener"
+        ],
+        "init": true
+    },
+    "MGCP (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "2428"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr": {
+        "protocol": "TCP",
+        "port": [
+            "3600"
+        ],
+        "init": true
+    },
+    "NTP": {
+        "protocol": "UDP",
+        "port": [
+            "123"
+        ],
+        "init": true
+    },
+    "ICMP Echo": {
+        "protocol": "ICMP",
+        "port": [
+            "echo-request"
+        ],
+        "init": true
+    },
+    "IGMP Membership Query": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "IPv6-ICMP Neighbor Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "neighbor-advertisement"
+        ],
+        "init": true
+    },
+    "DHCP, MADCAP": {
+        "protocol": "UDP",
+        "port": [
+            "2535"
+        ],
+        "init": true
+    },
+    "Horizon 6 Default HTTPS Client connection to Connection and Security Servers": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to View Composer Service communication": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "ORACLE-XDB-FTP": {
+        "protocol": "TCP",
+        "port": [
+            "2100"
+        ],
+        "init": true
+    },
+    "SAP Java Join": {
+        "protocol": "TCP",
+        "port": [
+            "50020"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Router Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "router-solicitation"
+        ],
+        "init": true
+    },
+    "ORACLE-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "7777"
+        ],
+        "init": true
+    },
+    "NetBios Session Service (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Packet Too Big": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "packet-too-big"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Connection Server JMS traffic": {
+        "protocol": "TCP",
+        "port": [
+            "4100"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Desktop Agent RDP traffic": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "IGMP V3 Membership Report": {
+        "protocol": "IGMP",
+        "port": "",
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP traffic from View Agent to Security Server": {
+        "protocol": "UDP",
+        "port": [
+            "55000"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP MPL Control": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "mpl-control"
+        ],
+        "init": true
+    },
+    "SAP Lotus Domino - Proxy": {
+        "protocol": "TCP",
+        "port": [
+            "62126-62129"
+        ],
+        "init": true
+    },
+    "SAP gateway/replication": {
+        "protocol": "TCP",
+        "port": [
+            "3301"
+        ],
+        "init": true
+    },
+    "HTTPS, net.tcp binding": {
+        "protocol": "TCP",
+        "port": [
+            "32843",
+            "32844",
+            "32845"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to vCenter Server communication": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(non-SSL, 4032)": {
+        "protocol": "TCP",
+        "port": [
+            "4032"
+        ],
+        "init": true
+    },
+    "SAP RFC Server": {
+        "protocol": "TCP",
+        "port": [
+            "30007"
+        ],
+        "init": true
+    },
+    "SAP IPC Server": {
+        "protocol": "TCP",
+        "port": [
+            "9999"
+        ],
+        "init": true
+    },
+    "Microsoft Media Server (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "1755"
+        ],
+        "init": true
+    },
+    "Skinny": {
+        "protocol": "TCP",
+        "port": [
+            "2000"
+        ],
+        "init": true
+    },
+    "PC Anywhere (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "5632"
+        ],
+        "init": true
+    },
+    "Horizon 6 LDAP repllication between connection servers": {
+        "protocol": "TCP",
+        "port": [
+            "22389"
+        ],
+        "init": true
+    },
+    "Horizon 6 Connection Server to Composer Service": {
+        "protocol": "TCP",
+        "port": [
+            "18443"
+        ],
+        "init": true
+    },
+    "MSN (UDP)": {
+        "protocol": "UDP",
+        "port": [
+            "1863"
+        ],
+        "init": true
+    },
+    "SAP Layout Server Adobe InDesign": {
+        "protocol": "TCP",
+        "port": [
+            "31603"
+        ],
+        "init": true
+    },
+    "SAP Msg Svr HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8101"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Inverse Neighbor Discovery Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "inverse-neighbor-discovery-solicitation"
+        ],
+        "init": true
+    },
+    "PC Anywhere (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "5631"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Parameter Problem": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "parameter-problem"
+        ],
+        "init": true
+    },
+    "Horizon 6 PCoIP UDP Secure Gateway Traffic from Horizon Client to Desktop Agent": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "SAP Lotus Domino - Connector": {
+        "protocol": "TCP",
+        "port": [
+            "62026-62029"
+        ],
+        "init": true
+    },
+    "VMware-DataRecovery": {
+        "protocol": "TCP",
+        "port": [
+            "22024"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Certification Path Advertisement": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "certification-path-advertisement"
+        ],
+        "init": true
+    },
+    "ICMP Time Exceeded": {
+        "protocol": "ICMP",
+        "port": [
+            "time-exceeded"
+        ],
+        "init": true
+    },
+    "Horizon 6 HTMP Access from Security Server to Desktop Agent": {
+        "protocol": "TCP",
+        "port": [
+            "22443"
+        ],
+        "init": true
+    },
+    "SAP HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "50001"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(SSL, 4031)": {
+        "protocol": "TCP",
+        "port": [
+            "4031"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Redirect": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "redirect"
+        ],
+        "init": true
+    },
+    "IPv6-ICMP Neighbor Solicitation": {
+        "protocol": "IPV6ICMP",
+        "port": [
+            "neighbor-solicitation"
+        ],
+        "init": true
+    },
+    "OC4J Forms / Reports Instance (8889)": {
+        "protocol": "TCP",
+        "port": [
+            "8889"
+        ],
+        "init": true
+    },
+    "SAP HostControlS": {
+        "protocol": "TCP",
+        "port": [
+            "1129"
+        ],
+        "init": true
+    },
+    "Microsoft Media Server (TCP)": {
+        "protocol": "TCP",
+        "port": [
+            "1755"
+        ],
+        "init": true
+    },
+    "VMware-VC-Syslog": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": true
+    },
+    "Vmware-Heartbeat-PrimarySecondary": {
+        "protocol": "TCP",
+        "port": [
+            "57348"
+        ],
+        "init": true
+    },
+    "Vmware-VCHeartbeat": {
+        "protocol": "TCP",
+        "port": [
+            "52267"
+        ],
+        "init": true
+    },
+    "EdgeSync service/ADAM": {
+        "protocol": "TCP",
+        "port": [
+            "50389"
+        ],
+        "init": true
+    },
+    "MS Unified Messaging server": {
+        "protocol": "TCP",
+        "port": [
+            "5060",
+            "5061",
+            "5062"
+        ],
+        "init": true
+    },
+    "MS Replication service": {
+        "protocol": "TCP",
+        "port": [
+            "808"
+        ],
+        "init": true
+    },
+    "Office communication server": {
+        "protocol": "TCP",
+        "port": [
+            "5075",
+            "5076",
+            "5077"
+        ],
+        "init": true
+    },
+    "MS Customizable": {
+        "protocol": "TCP",
+        "port": [
+            "64327"
+        ],
+        "init": true
+    },
+    "EdgeSync service": {
+        "protocol": "TCP",
+        "port": [
+            "50636"
+        ],
+        "init": true
+    },
+    "SMTP_TLS": {
+        "protocol": "TCP",
+        "port": [
+            "587"
+        ],
+        "init": true
+    },
+    "MS Unified Messaging server - Client Access": {
+        "protocol": "TCP",
+        "port": [
+            "5075",
+            "5076",
+            "5077"
+        ],
+        "init": true
+    },
+    "MS Unified Messaging server-Phone": {
+        "protocol": "TCP",
+        "port": [
+            "5060",
+            "5061",
+            "5065",
+            "5066",
+            "5067",
+            "5068"
+        ],
+        "init": true
+    },
+    "LDAP Global Catalog": {
+        "protocol": "TCP",
+        "port": [
+            "3268"
+        ],
+        "init": true
+    },
+    "SQL Server Browser service": {
+        "protocol": "TCP",
+        "port": [
+            "2382"
+        ],
+        "init": true
+    },
+    "SQL Analysis service": {
+        "protocol": "TCP",
+        "port": [
+            "2383"
+        ],
+        "init": true
+    },
+    "MS-SQL-M-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "1434"
+        ],
+        "init": true
+    },
+    "WINS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "42"
+        ],
+        "init": true
+    },
+    "SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "9389"
+        ],
+        "init": true
+    },
+    "Active Directory Server": {
+        "protocol": "TCP",
+        "port": [
+            "464"
+        ],
+        "init": true
+    },
+    "NTP Time Server": {
+        "protocol": "UDP",
+        "port": [
+            "123"
+        ],
+        "init": true
+    },
+    "Windows-Global-Catalog-over-SSL": {
+        "protocol": "TCP",
+        "port": [
+            "3269"
+        ],
+        "init": true
+    },
+    "Windows-Global-Catalog": {
+        "protocol": "TCP",
+        "port": [
+            "3268"
+        ],
+        "init": true
+    },
+    "WINS": {
+        "protocol": "TCP",
+        "port": [
+            "42"
+        ],
+        "init": true
+    },
+    "Exchange ActiveSync": {
+        "protocol": "UDP",
+        "port": [
+            "2883"
+        ],
+        "init": true
+    },
+    "IMAP_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "993"
+        ],
+        "init": true
+    },
+    "For X.400 connections over TCP": {
+        "protocol": "TCP",
+        "port": [
+            "102"
+        ],
+        "init": true
+    },
+    "Site Replication service": {
+        "protocol": "TCP",
+        "port": [
+            "379"
+        ],
+        "init": true
+    },
+    "NNTP": {
+        "protocol": "TCP",
+        "port": [
+            "119"
+        ],
+        "init": true
+    },
+    "NNTP_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "563"
+        ],
+        "init": true
+    },
+    "POP3": {
+        "protocol": "TCP",
+        "port": [
+            "110"
+        ],
+        "init": true
+    },
+    "IMAP": {
+        "protocol": "TCP",
+        "port": [
+            "143"
+        ],
+        "init": true
+    },
+    "Routing Engine service": {
+        "protocol": "TCP",
+        "port": [
+            "691"
+        ],
+        "init": true
+    },
+    "POP3_SSL": {
+        "protocol": "TCP",
+        "port": [
+            "995"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Clickstream Collector Agent": {
+        "protocol": "TCP",
+        "port": [
+            "6668"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service request port": {
+        "protocol": "TCP",
+        "port": [
+            "6003"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server SSL port": {
+        "protocol": "TCP",
+        "port": [
+            "4443"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Diagnostic Port": {
+        "protocol": "TCP",
+        "port": [
+            "7200"
+        ],
+        "init": true
+    },
+    "Java Object Cache port": {
+        "protocol": "TCP",
+        "port": [
+            "7000"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1754)": {
+        "protocol": "TCP",
+        "port": [
+            "1754"
+        ],
+        "init": true
+    },
+    "Oracle Forms Server 6 / 6i": {
+        "protocol": "TCP",
+        "port": [
+            "9000"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache HTTP Listen(non-SSL) port": {
+        "protocol": "TCP",
+        "port": [
+            "7779"
+        ],
+        "init": true
+    },
+    "DCM Java Object Cache port": {
+        "protocol": "TCP",
+        "port": [
+            "7100"
+        ],
+        "init": true
+    },
+    "OracleAS Certificate Authority (OCA) - Server Authentication": {
+        "protocol": "TCP",
+        "port": [
+            "4400"
+        ],
+        "init": true
+    },
+    "Oracle OC4J AJP": {
+        "protocol": "TCP",
+        "port": [
+            "3301"
+        ],
+        "init": true
+    },
+    "Enterprise Manager Reporting port": {
+        "protocol": "TCP",
+        "port": [
+            "3339"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1809)": {
+        "protocol": "TCP",
+        "port": [
+            "1809"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Port Tunneling": {
+        "protocol": "TCP",
+        "port": [
+            "7501"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Admin port": {
+        "protocol": "TCP",
+        "port": [
+            "4000"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server listen port": {
+        "protocol": "TCP",
+        "port": [
+            "7778"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server port": {
+        "protocol": "TCP",
+        "port": [
+            "7777"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache HTTP Listen(SSL) port": {
+        "protocol": "TCP",
+        "port": [
+            "4444"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOPS1": {
+        "protocol": "TCP",
+        "port": [
+            "3501"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOPS2": {
+        "protocol": "TCP",
+        "port": [
+            "3601"
+        ],
+        "init": true
+    },
+    "OracleAS Certificate Authority (OCA) - Mutual Authentication": {
+        "protocol": "TCP",
+        "port": [
+            "4401"
+        ],
+        "init": true
+    },
+    "OS Agent": {
+        "protocol": "TCP",
+        "port": [
+            "14000"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service local port": {
+        "protocol": "TCP",
+        "port": [
+            "6100"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1748)": {
+        "protocol": "TCP",
+        "port": [
+            "1748"
+        ],
+        "init": true
+    },
+    "Oracle Intelligent Agent (1808)": {
+        "protocol": "TCP",
+        "port": [
+            "1808"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(SSL)": {
+        "protocol": "TCP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "Oracle OC4J JMS": {
+        "protocol": "TCP",
+        "port": [
+            "3701"
+        ],
+        "init": true
+    },
+    "Oracle SOAP Server": {
+        "protocol": "TCP",
+        "port": [
+            "9998"
+        ],
+        "init": true
+    },
+    "Oracle HTTP Server Jserv port": {
+        "protocol": "TCP",
+        "port": [
+            "8007"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Invalidation port": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "Oracle OC4J IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "3401"
+        ],
+        "init": true
+    },
+    "Oracle Internet Directory(non-SSL)": {
+        "protocol": "TCP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "Oracle Notification Service remote port": {
+        "protocol": "TCP",
+        "port": [
+            "6200"
+        ],
+        "init": true
+    },
+    "Oracle OC4J RMI": {
+        "protocol": "TCP",
+        "port": [
+            "3201"
+        ],
+        "init": true
+    },
+    "Oracle9iAS Web Cache Statistics port": {
+        "protocol": "TCP",
+        "port": [
+            "4002"
+        ],
+        "init": true
+    },
+    "Oracle Names": {
+        "protocol": "TCP",
+        "port": [
+            "1575"
+        ],
+        "init": true
+    },
+    "Oracle Net Listener": {
+        "protocol": "TCP",
+        "port": [
+            "1526"
+        ],
+        "init": true
+    },
+    "Oracle GIOP IIOP": {
+        "protocol": "TCP",
+        "port": [
+            "2481"
+        ],
+        "init": true
+    },
+    "Oracle XMLDB HTTP port": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": true
+    },
+    "Oracle XMLDB FTP Port": {
+        "protocol": "TCP",
+        "port": [
+            "2100"
+        ],
+        "init": true
+    },
+    "Oracle GIOP IIOP for SSL": {
+        "protocol": "TCP",
+        "port": [
+            "2482"
+        ],
+        "init": true
+    },
+    "Oracle Net Listener / Enterprise Manager Repository port": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "Enterprise Manager RMI port": {
+        "protocol": "TCP",
+        "port": [
+            "1850"
+        ],
+        "init": true
+    },
+    "Enterprise ManagerAgent port": {
+        "protocol": "TCP",
+        "port": [
+            "1831"
+        ],
+        "init": true
+    },
+    "Enterprise Manager Servlet port SSL": {
+        "protocol": "TCP",
+        "port": [
+            "1810"
+        ],
+        "init": true
+    },
+    "Log Loader": {
+        "protocol": "TCP",
+        "port": [
+            "44000"
+        ],
+        "init": true
+    },
+    "Oracle Enterprise Manager Web Console": {
+        "protocol": "TCP",
+        "port": [
+            "5500"
+        ],
+        "init": true
+    },
+    "Oracle JDBC for Rdb Thin Server": {
+        "protocol": "TCP",
+        "port": [
+            "1701"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15004)": {
+        "protocol": "TCP",
+        "port": [
+            "15004"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4766)": {
+        "protocol": "TCP",
+        "port": [
+            "4766"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen": {
+        "protocol": "TCP",
+        "port": [
+            "4662"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4761)": {
+        "protocol": "TCP",
+        "port": [
+            "4761"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4758)": {
+        "protocol": "TCP",
+        "port": [
+            "4758"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15000)": {
+        "protocol": "TCP",
+        "port": [
+            "15000"
+        ],
+        "init": true
+    },
+    "Oracle Times Ten (15002)": {
+        "protocol": "TCP",
+        "port": [
+            "15002"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4764)": {
+        "protocol": "TCP",
+        "port": [
+            "4764"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4767)": {
+        "protocol": "TCP",
+        "port": [
+            "4767"
+        ],
+        "init": true
+    },
+    "Oracle TimesTen (4759)": {
+        "protocol": "TCP",
+        "port": [
+            "4759"
+        ],
+        "init": true
+    },
+    "iSQLPlus 10g (5580)": {
+        "protocol": "TCP",
+        "port": [
+            "5580"
+        ],
+        "init": true
+    },
+    "iSQLPlus 10g": {
+        "protocol": "TCP",
+        "port": [
+            "5560"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Data": {
+        "protocol": "TCP",
+        "port": [
+            "8244"
+        ],
+        "init": true
+    },
+    "VMware-VCO-WebHTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8280"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Command": {
+        "protocol": "TCP",
+        "port": [
+            "8240"
+        ],
+        "init": true
+    },
+    "VMware-VCO-Messaging": {
+        "protocol": "TCP",
+        "port": [
+            "8250"
+        ],
+        "init": true
+    },
+    "Vmware-VCO-Lookup": {
+        "protocol": "TCP",
+        "port": [
+            "8230"
+        ],
+        "init": true
+    },
+    "PostgreSQL": {
+        "protocol": "TCP",
+        "port": [
+            "5432"
+        ],
+        "init": true
+    },
+    "VMware-VCO-VCO-HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "8283"
+        ],
+        "init": true
+    },
+    "VMware-VCO-WebHTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "8281"
+        ],
+        "init": true
+    },
+    "MySQL": {
+        "protocol": "TCP",
+        "port": [
+            "3306"
+        ],
+        "init": true
+    },
+    "NBDG-Unicast": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "Server Message Block (SMB)": {
+        "protocol": "TCP",
+        "port": [
+            "137",
+            "138",
+            "139"
+        ],
+        "init": true
+    },
+    "NBNS-Unicast": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "SMB Server": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "LDAP-over-SSL-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "NBDG-Broadcast": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": true
+    },
+    "NBNS-Broadcast": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": true
+    },
+    "SMB Server UDP": {
+        "protocol": "UDP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "NBSS": {
+        "protocol": "TCP",
+        "port": [
+            "139"
+        ],
+        "init": true
+    },
+    "Active Directory Server UDP": {
+        "protocol": "UDP",
+        "port": [
+            "464"
+        ],
+        "init": true
+    },
+    "Directory Services": {
+        "protocol": "TCP",
+        "port": [
+            "5725"
+        ],
+        "init": true
+    },
+    "VMware-SRM-Replication": {
+        "protocol": "TCP",
+        "port": [
+            "8123"
+        ],
+        "init": true
+    },
+    "Vmware-SRM-WSDL-vCentreServer": {
+        "protocol": "TCP",
+        "port": [
+            "9007"
+        ],
+        "init": true
+    },
+    "VMware-SRM-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "9008"
+        ],
+        "init": true
+    },
+    "VMware-SRMClient-Server": {
+        "protocol": "TCP",
+        "port": [
+            "8095"
+        ],
+        "init": true
+    },
+    "Oracle-2": {
+        "protocol": "TCP",
+        "port": [
+            "1526"
+        ],
+        "init": true
+    },
+    "Vmware-VCO-VCO-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "8282"
+        ],
+        "init": true
+    },
+    "VMware-SRM-vSphereReplication": {
+        "protocol": "TCP",
+        "port": [
+            "31031",
+            "44046"
+        ],
+        "init": true
+    },
+    "IBM DB2": {
+        "protocol": "TCP",
+        "port": [
+            "5000"
+        ],
+        "init": true
+    },
+    "VMware-SRM-SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "8043"
+        ],
+        "init": true
+    },
+    "VMware-SRM-vCentreServer": {
+        "protocol": "TCP",
+        "port": [
+            "8096"
+        ],
+        "init": true
+    },
+    "VMware-SRM-UI": {
+        "protocol": "TCP",
+        "port": [
+            "9085"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-VUM": {
+        "protocol": "TCP",
+        "port": [
+            "9084"
+        ],
+        "init": true
+    },
+    "Vmware-UpdateMgr-update": {
+        "protocol": "TCP",
+        "port": [
+            "9087"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr": {
+        "protocol": "TCP",
+        "port": [
+            "9000-9100"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-SOAP": {
+        "protocol": "TCP",
+        "port": [
+            "8084"
+        ],
+        "init": true
+    },
+    "VMware-UpdateMgr-Patching": {
+        "protocol": "TCP",
+        "port": [
+            "735"
+        ],
+        "init": true
+    },
+    "AD Server": {
+        "protocol": "TCP",
+        "port": [
+            "1024"
+        ],
+        "init": true
+    },
+    "VMware-CIMSLP": {
+        "protocol": "UDP",
+        "port": [
+            "427"
+        ],
+        "init": true
+    },
+    "VMware-SPS": {
+        "protocol": "TCP",
+        "port": [
+            "31100",
+            "31000"
+        ],
+        "init": true
+    },
+    "Vmware-FT-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "8100",
+            "8200"
+        ],
+        "init": true
+    },
+    "Syslog-Server": {
+        "protocol": "TCP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "Vmware-FT-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8100",
+            "8200"
+        ],
+        "init": true
+    },
+    "DHCP-Client": {
+        "protocol": "UDP",
+        "port": [
+            "68"
+        ],
+        "init": true
+    },
+    "NFS-Server-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "VMware-iSCSI-Server": {
+        "protocol": "TCP",
+        "port": [
+            "3260"
+        ],
+        "init": true
+    },
+    "NFS Client": {
+        "protocol": "TCP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "VMware-HA-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "8182"
+        ],
+        "init": true
+    },
+    "DHCP-Server": {
+        "protocol": "UDP",
+        "port": [
+            "67"
+        ],
+        "init": true
+    },
+    "VMware VMotion": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "Syslog-Server-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "514"
+        ],
+        "init": true
+    },
+    "DNS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "53"
+        ],
+        "init": true
+    },
+    "NFS-Server-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "2049"
+        ],
+        "init": true
+    },
+    "NFS Client UDP": {
+        "protocol": "UDP",
+        "port": [
+            "111"
+        ],
+        "init": true
+    },
+    "VMware-DVS": {
+        "protocol": "TCP",
+        "port": [
+            "8301",
+            "8302"
+        ],
+        "init": true
+    },
+    "RFB": {
+        "protocol": "TCP",
+        "port": [
+            "5900-5964"
+        ],
+        "init": true
+    },
+    "VMware-HA-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8182"
+        ],
+        "init": true
+    },
+    "VMware-VC-DumpSvr": {
+        "protocol": "UDP",
+        "port": [
+            "6500"
+        ],
+        "init": true
+    },
+    "VMware-View5.x-PCoIP-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "VMware-View-PCoIP": {
+        "protocol": "TCP",
+        "port": [
+            "4172"
+        ],
+        "init": true
+    },
+    "VMware-VDM2.x-RGS": {
+        "protocol": "TCP",
+        "port": [
+            "42966"
+        ],
+        "init": true
+    },
+    "Vmware-VDM2.x-AJP": {
+        "protocol": "TCP",
+        "port": [
+            "8009"
+        ],
+        "init": true
+    },
+    "MS_RPC_TCP": {
+        "protocol": "MS_RPC_TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "VMware-VDM2.x-Ephemeral": {
+        "protocol": "TCP",
+        "port": [
+            "1024-65535"
+        ],
+        "init": true
+    },
+    "VMware-View5.x-JMS": {
+        "protocol": "TCP",
+        "port": [
+            "4001"
+        ],
+        "init": true
+    },
+    "MS-DS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "MS-DS-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": true
+    },
+    "Vmware-VDM2.x-JMS": {
+        "protocol": "TCP",
+        "port": [
+            "4100"
+        ],
+        "init": true
+    },
+    "RDP": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": true
+    },
+    "LDAP": {
+        "protocol": "TCP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "LDAP-over-SSL": {
+        "protocol": "TCP",
+        "port": [
+            "636"
+        ],
+        "init": true
+    },
+    "VMware-VC-ESXi": {
+        "protocol": "TCP",
+        "port": [
+            "51915"
+        ],
+        "init": true
+    },
+    "VMware-VC-RemoteConsole": {
+        "protocol": "TCP",
+        "port": [
+            "903"
+        ],
+        "init": true
+    },
+    "SMTP": {
+        "protocol": "TCP",
+        "port": [
+            "25"
+        ],
+        "init": true
+    },
+    "VMware-SRM-VAMI": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": true
+    },
+    "VMware-ESXi5.x-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "VMware-ESXi5.x-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "902"
+        ],
+        "init": true
+    },
+    "KERBEROS-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "CIM-HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "5989"
+        ],
+        "init": true
+    },
+    "DNS": {
+        "protocol": "TCP",
+        "port": [
+            "53"
+        ],
+        "init": true
+    },
+    "Vmware-VC-WebAccess": {
+        "protocol": "TCP",
+        "port": [
+            "8443",
+            "9443",
+            "10443"
+        ],
+        "init": true
+    },
+    "VMware-VC-DumpCollector-TCP": {
+        "protocol": "TCP",
+        "port": [
+            "8000"
+        ],
+        "init": true
+    },
+    "Vmware-VC-VC-Internal": {
+        "protocol": "TCP",
+        "port": [
+            "7500",
+            "8005",
+            "8006",
+            "8083",
+            "8085",
+            "8086",
+            "8087",
+            "8443",
+            "10109",
+            "10111",
+            "60099"
+        ],
+        "init": true
+    },
+    "KERBEROS": {
+        "protocol": "TCP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "LDAP-UDP": {
+        "protocol": "UDP",
+        "port": [
+            "389"
+        ],
+        "init": true
+    },
+    "SNMP-Recieve": {
+        "protocol": "UDP",
+        "port": [
+            "161"
+        ],
+        "init": true
+    },
+    "MS-SQL-S": {
+        "protocol": "TCP",
+        "port": [
+            "1433"
+        ],
+        "init": true
+    },
+    "VMware-VC-DPM": {
+        "protocol": "UDP",
+        "port": [
+            "623"
+        ],
+        "init": true
+    },
+    "MS-SQL-M": {
+        "protocol": "UDP",
+        "port": [
+            "1434"
+        ],
+        "init": true
+    },
+    "Vmware-VC-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "10080"
+        ],
+        "init": true
+    },
+    "SNMP-Send": {
+        "protocol": "UDP",
+        "port": [
+            "162"
+        ],
+        "init": true
+    },
+    "ISPW-CDI": {
+        "protocol": "TCP",
+        "port": [
+            "12010",
+            "12041"
+        ],
+        "init": true
+    },
+    "CIM-HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "5988"
+        ],
+        "init": true
+    },
+    "Oracle": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "VMware-VCOStdAln-Heartbeat": {
+        "protocol": "TCP",
+        "port": [
+            "1199"
+        ],
+        "init": true
+    },
+    "Vmware-VCOStdAln-Remote": {
+        "protocol": "TCP",
+        "port": [
+            "61616"
+        ],
+        "init": true
+    },
+    "VMware-VCOMgr-UI": {
+        "protocol": "TCP",
+        "port": [
+            "1194"
+        ],
+        "init": true
+    },
+    "HTTP": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": true
+    },
+    "HBR Server App": {
+        "protocol": "TCP",
+        "port": [
+            "5480"
+        ],
+        "init": true
+    },
+    "SSH": {
+        "protocol": "TCP",
+        "port": [
+            "22"
+        ],
+        "init": true
+    },
+    "HTTPS": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": true
+    },
+    "ICP-Management Console": {
+        "protocol": "TCP",
+        "port": [
+            "8080",
+            "8443"
+        ],
+        "init": true
+    },
+    "ICP-Ingress Service": {
+        "protocol": "TCP",
+        "port": [
+            "80",
+            "443",
+            "8181",
+            "18080"
+        ],
+        "init": true
+    },
+    "ICP-Docker Registry": {
+        "protocol": "TCP",
+        "port": [
+            "8500",
+            "8600"
+        ],
+        "init": true
+    },
+    "ICP-Kubernetes NodePort": {
+        "protocol": "TCP",
+        "port": [
+            "30000-32767"
+        ],
+        "init": true
+    },
+    "ICP-Kubernetes API-Server": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": true
+    },
+    "ICP-WebSphere Application Server Liberty": {
+        "protocol": "TCP",
+        "port": [
+            "9443"
+        ],
+        "init": true
+    },
+    "test-8200": {
+        "protocol": "TCP",
+        "port": [
+            "8200"
+        ],
+        "init": true
+    },
+    "App Access 1": {
+        "protocol": "TCP",
+        "port": [
+            "20",
+            "21",
+            "22",
+            "25",
+            "80",
+            "123",
+            "161",
+            "162",
+            "441",
+            "443",
+            "465",
+            "514",
+            "536",
+            "612"
+        ],
+        "init": true
+    },
+    "App Access 2": {
+        "protocol": "TCP",
+        "port": [
+            "636",
+            "1433",
+            "3801",
+            "4369",
+            "5432",
+            "5433",
+            "5985",
+            "5988",
+            "5989",
+            "7778",
+            "8080",
+            "8090",
+            "8092",
+            "8443",
+            "8761"
+        ],
+        "init": true
+    },
+    "App Access 3": {
+        "protocol": "TCP",
+        "port": [
+            "24602",
+            "24603",
+            "24604",
+            "24605",
+            "24606",
+            "24607",
+            "24608",
+            "24609",
+            "24610",
+            "24611",
+            "24612",
+            "24613",
+            "24614",
+            "27017",
+            "27018"
+        ],
+        "init": true
+    },
+    "APP_FTP": {
+        "protocol": "TCP",
+        "port": [
+            "21"
+        ],
+        "init": true
+    },
+    "APP_TFTP": {
+        "protocol": "UDP",
+        "port": [
+            "69"
+        ],
+        "init": true
+    },
+    "TFTP": {
+        "protocol": "UDP",
+        "port": [
+            "69"
+        ],
+        "init": true
+    },
+    "APP_DCERPC_TCP": {
+        "protocol": "TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "APP_DCERPC_UDP": {
+        "protocol": "UDP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "APP_ORACLE": {
+        "protocol": "TCP",
+        "port": [
+            "1521"
+        ],
+        "init": true
+    },
+    "ASC-G Flows": {
+        "protocol": "TCP",
+        "port": [
+            "80",
+            "443",
+            "22",
+            "161"
+        ],
+        "init": true
+    },
+    "TCP-Port-25": {
+        "protocol": "TCP",
+        "port": [
+            "25",
+            "8080"
+        ],
+        "init": true
+    },
+    "TCP-PORT-8030": {
+        "protocol": "TCP",
+        "port": [
+            "8030"
+        ],
+        "init": true
+    },
+    "TCP-50000": {
+        "protocol": "TCP",
+        "port": [
+            "50000"
+        ],
+        "init": true
+    },
+    "TCP-9443": {
+        "protocol": "TCP",
+        "port": [
+            "9443"
+        ],
+        "init": true
+    },
+    "TCP-9043": {
+        "protocol": "TCP",
+        "port": [
+            "9043"
+        ],
+        "init": true
+    },
+    "TCP-88": {
+        "protocol": "TCP",
+        "port": [
+            "88"
+        ],
+        "init": true
+    },
+    "TCP-135": {
+        "protocol": "TCP",
+        "port": [
+            "135"
+        ],
+        "init": true
+    },
+    "SAT-range-2001-2050": {
+        "protocol": "TCP",
+        "port": [
+            "2001-2050"
+        ],
+        "init": true
+    },
+    "TCP-16351": {
+        "protocol": "TCP",
+        "port": [
+            "16351"
+        ],
+        "init": false
+    },
+    "TCP-8443": {
+        "protocol": "TCP",
+        "port": [
+            "8443"
+        ],
+        "init": false
+    },
+    "TCP-8001": {
+        "protocol": "TCP",
+        "port": [
+            "8001"
+        ],
+        "init": false
+    },
+    "TCP-50034": {
+        "protocol": "TCP",
+        "port": [
+            "50034"
+        ],
+        "init": false
+    },
+    "TCP-50004": {
+        "protocol": "TCP",
+        "port": [
+            "50004"
+        ],
+        "init": false
+    },
+    "TCP-50114": {
+        "protocol": "TCP",
+        "port": [
+            "50114"
+        ],
+        "init": false
+    },
+    "TCP-50714": {
+        "protocol": "TCP",
+        "port": [
+            "50714"
+        ],
+        "init": false
+    },
+    "TCP-50414": {
+        "protocol": "TCP",
+        "port": [
+            "50414"
+        ],
+        "init": false
+    },
+    "TCP-50914": {
+        "protocol": "TCP",
+        "port": [
+            "50914"
+        ],
+        "init": false
+    },
+    "TCP-51014": {
+        "protocol": "TCP",
+        "port": [
+            "51014"
+        ],
+        "init": false
+    },
+    "TCP-50214": {
+        "protocol": "TCP",
+        "port": [
+            "50214"
+        ],
+        "init": false
+    },
+    "TCP-50514": {
+        "protocol": "TCP",
+        "port": [
+            "50514"
+        ],
+        "init": false
+    },
+    "TCP-50314": {
+        "protocol": "TCP",
+        "port": [
+            "50314"
+        ],
+        "init": false
+    },
+    "TCP-51114": {
+        "protocol": "TCP",
+        "port": [
+            "51114"
+        ],
+        "init": false
+    },
+    "TCP-30500": {
+        "protocol": "TCP",
+        "port": [
+            "30500"
+        ],
+        "init": false
+    },
+    "TCP-7918": {
+        "protocol": "TCP",
+        "port": [
+            "7918"
+        ],
+        "init": false
+    },
+    "TCP-8080": {
+        "protocol": "TCP",
+        "port": [
+            "8080"
+        ],
+        "init": false
+    },
+    "TCP-52311": {
+        "protocol": "TCP",
+        "port": [
+            "52311"
+        ],
+        "init": false
+    },
+    "UDP-52311": {
+        "protocol": "UDP",
+        "port": [
+            "52311"
+        ],
+        "init": false
+    },
+    "TCP-2968": {
+        "protocol": "TCP",
+        "port": [
+            "2968"
+        ],
+        "init": false
+    },
+    "TCP-445": {
+        "protocol": "TCP",
+        "port": [
+            "445"
+        ],
+        "init": false
+    },
+    "TCP-2967": {
+        "protocol": "TCP",
+        "port": [
+            "2967"
+        ],
+        "init": false
+    },
+    "TCP-8014": {
+        "protocol": "TCP",
+        "port": [
+            "8014"
+        ],
+        "init": false
+    },
+    "TCP-20000-30000": {
+        "protocol": "TCP",
+        "port": [
+            "20000-30000"
+        ],
+        "init": false
+    },
+    "TCP-10890": {
+        "protocol": "TCP",
+        "port": [
+            "10890"
+        ],
+        "init": false
+    },
+    "TCP-34952": {
+        "protocol": "TCP",
+        "port": [
+            "34952"
+        ],
+        "init": false
+    },
+    "TCP-12058": {
+        "protocol": "TCP",
+        "port": [
+            "12058"
+        ],
+        "init": false
+    },
+    "TCP-12504": {
+        "protocol": "TCP",
+        "port": [
+            "12504"
+        ],
+        "init": false
+    },
+    "TCP-12503": {
+        "protocol": "TCP",
+        "port": [
+            "12503"
+        ],
+        "init": false
+    },
+    "TCP-12529": {
+        "protocol": "TCP",
+        "port": [
+            "12529"
+        ],
+        "init": false
+    },
+    "TCP-12528": {
+        "protocol": "TCP",
+        "port": [
+            "12528"
+        ],
+        "init": false
+    },
+    "TCP-12531": {
+        "protocol": "TCP",
+        "port": [
+            "12531"
+        ],
+        "init": false
+    },
+    "TCP-12532": {
+        "protocol": "TCP",
+        "port": [
+            "12532"
+        ],
+        "init": false
+    },
+    "TCP-8091": {
+        "protocol": "TCP",
+        "port": [
+            "8091"
+        ],
+        "init": false
+    },
+    "TCP-22": {
+        "protocol": "TCP",
+        "port": [
+            "22"
+        ],
+        "init": false
+    },
+    "TCP-9000": {
+        "protocol": "TCP",
+        "port": [
+            "9000"
+        ],
+        "init": false
+    },
+    "TCP-8181": {
+        "protocol": "TCP",
+        "port": [
+            "8181"
+        ],
+        "init": false
+    },
+    "TCP-53": {
+        "protocol": "TCP",
+        "port": [
+            "53"
+        ],
+        "init": false
+    },
+    "TCP-80": {
+        "protocol": "TCP",
+        "port": [
+            "80"
+        ],
+        "init": false
+    },
+    "TCP-10250": {
+        "protocol": "TCP",
+        "port": [
+            "10250"
+        ],
+        "init": false
+    },
+    "TCP-6443": {
+        "protocol": "TCP",
+        "port": [
+            "6443"
+        ],
+        "init": false
+    },
+    "TCP-4789": {
+        "protocol": "TCP",
+        "port": [
+            "4789"
+        ],
+        "init": false
+    },
+    "TCP-8053": {
+        "protocol": "TCP",
+        "port": [
+            "8053"
+        ],
+        "init": false
+    },
+    "TCP-443": {
+        "protocol": "TCP",
+        "port": [
+            "443"
+        ],
+        "init": false
+    },
+    "TCP-22623": {
+        "protocol": "TCP",
+        "port": [
+            "22623"
+        ],
+        "init": false
+    },
+    "TCP-8500": {
+        "protocol": "TCP",
+        "port": [
+            "8500"
+        ],
+        "init": false
+    },
+    "TCP-30000-32767": {
+        "protocol": "TCP",
+        "port": [
+            "30000-32767"
+        ],
+        "init": false
+    },
+    "TCP-18080": {
+        "protocol": "TCP",
+        "port": [
+            "18080"
+        ],
+        "init": false
+    },
+    "TCP-5601": {
+        "protocol": "TCP",
+        "port": [
+            "5601"
+        ],
+        "init": false
+    },
+    "TCP-9600": {
+        "protocol": "TCP",
+        "port": [
+            "9600"
+        ],
+        "init": false
+    },
+    "TCP-5000": {
+        "protocol": "TCP",
+        "port": [
+            "5000"
+        ],
+        "init": false
+    },
+    "TCP-9114": {
+        "protocol": "TCP",
+        "port": [
+            "9114"
+        ],
+        "init": false
+    },
+    "TCP-9100": {
+        "protocol": "TCP",
+        "port": [
+            "9100"
+        ],
+        "init": false
+    },
+    "TCP-30871": {
+        "protocol": "TCP",
+        "port": [
+            "30871"
+        ],
+        "init": false
+    },
+    "TCP-1433": {
+        "protocol": "TCP",
+        "port": [
+            "1433"
+        ],
+        "init": false
+    },
+    "TCP-2638": {
+        "protocol": "TCP",
+        "port": [
+            "2638"
+        ],
+        "init": false
+    },
+    "TCP-1500-1510": {
+        "protocol": "TCP",
+        "port": [
+            "1500-1510"
+        ],
+        "init": false
+    },
+    "TCP-45580": {
+        "protocol": "TCP",
+        "port": [
+            "45580"
+        ],
+        "init": false
+    },
+    "TCP-17443": {
+        "protocol": "TCP",
+        "port": [
+            "17443"
+        ],
+        "init": false
+    },
+    "TCP-16311": {
+        "protocol": "TCP",
+        "port": [
+            "16311"
+        ],
+        "init": false
+    },
+    "TCP-16316": {
+        "protocol": "TCP",
+        "port": [
+            "16316"
+        ],
+        "init": false
+    },
+    "TCP-12083": {
+        "protocol": "TCP",
+        "port": [
+            "12083"
+        ],
+        "init": false
+    },
+    "TCP-12084": {
+        "protocol": "TCP",
+        "port": [
+            "12084"
+        ],
+        "init": false
+    },
+    "TCP-30984": {
+        "protocol": "TCP",
+        "port": [
+            "30984"
+        ],
+        "init": false
+    },
+    "TCP-31880": {
+        "protocol": "TCP",
+        "port": [
+            "31880"
+        ],
+        "init": false
+    },
+    "TCP-8531": {
+        "protocol": "TCP",
+        "port": [
+            "8531"
+        ],
+        "init": false
+    },
+    "TCP-8530": {
+        "protocol": "TCP",
+        "port": [
+            "8530"
+        ],
+        "init": false
+    },
+    "TCP-13004": {
+        "protocol": "TCP",
+        "port": [
+            "13004"
+        ],
+        "init": false
+    },
+    "TCP-13001": {
+        "protocol": "TCP",
+        "port": [
+            "13001"
+        ],
+        "init": false
+    },
+    "TCP-13002": {
+        "protocol": "TCP",
+        "port": [
+            "13002"
+        ],
+        "init": false
+    },
+    "TCP-5432": {
+        "protocol": "TCP",
+        "port": [
+            "5432"
+        ],
+        "init": false
+    },
+    "TCP-30327": {
+        "protocol": "TCP",
+        "port": [
+            "30327"
+        ],
+        "init": false
+    },
+    "TCP-30017": {
+        "protocol": "TCP",
+        "port": [
+            "30017"
+        ],
+        "init": false
+    },
+    "TCP-32337": {
+        "protocol": "TCP",
+        "port": [
+            "32337"
+        ],
+        "init": false
+    },
+    "TCP-32062": {
+        "protocol": "TCP",
+        "port": [
+            "32062"
+        ],
+        "init": false
+    },
+    "TCP-8081": {
+        "protocol": "TCP",
+        "port": [
+            "8081"
+        ],
+        "init": false
+    },
+    "TCP-5985": {
+        "protocol": "TCP",
+        "port": [
+            "5985"
+        ],
+        "init": false
+    },
+    "TCP-5986": {
+        "protocol": "TCP",
+        "port": [
+            "5986"
+        ],
+        "init": false
+    },
+    "TCP-13001-13002": {
+        "protocol": "TCP",
+        "port": [
+            "13001-13002"
+        ],
+        "init": false
+    },
+    "TCP-1751": {
+        "protocol": "TCP",
+        "port": [
+            "1751"
+        ],
+        "init": false
+    },
+    "TCP-1752": {
+        "protocol": "TCP",
+        "port": [
+            "1752"
+        ],
+        "init": false
+    },
+    "TCP-25": {
+        "protocol": "TCP",
+        "port": [
+            "25"
+        ],
+        "init": false
+    },
+    "TCP-1352": {
+        "protocol": "TCP",
+        "port": [
+            "1352"
+        ],
+        "init": false
+    },
+    "TCP-30489": {
+        "protocol": "TCP",
+        "port": [
+            "30489"
+        ],
+        "init": false
+    },
+    "TCP-31421": {
+        "protocol": "TCP",
+        "port": [
+            "31421"
+        ],
+        "init": false
+    },
+    "TCP-32391": {
+        "protocol": "TCP",
+        "port": [
+            "32391"
+        ],
+        "init": false
+    },
+    "TCP-32494": {
+        "protocol": "TCP",
+        "port": [
+            "32494"
+        ],
+        "init": false
+    },
+    "TCP-30805": {
+        "protocol": "TCP",
+        "port": [
+            "30805"
+        ],
+        "init": false
+    },
+    "TCP-32212": {
+        "protocol": "TCP",
+        "port": [
+            "32212"
+        ],
+        "init": false
+    },
+    "TCP-31355": {
+        "protocol": "TCP",
+        "port": [
+            "31355"
+        ],
+        "init": false
+    },
+    "TCP-32143": {
+        "protocol": "TCP",
+        "port": [
+            "32143"
+        ],
+        "init": false
+    },
+    "TCP-31844": {
+        "protocol": "TCP",
+        "port": [
+            "31844"
+        ],
+        "init": false
+    },
+    "TCP-2222": {
+        "protocol": "TCP",
+        "port": [
+            "2222"
+        ],
+        "init": false
+    },
+    "TCP-60000": {
+        "protocol": "TCP",
+        "port": [
+            "60000"
+        ],
+        "init": false
+    },
+    "TCP-9343": {
+        "protocol": "TCP",
+        "port": [
+            "9343"
+        ],
+        "init": false
+    },
+    "TCP-50010": {
+        "protocol": "TCP",
+        "port": [
+            "50010"
+        ],
+        "init": false
+    },
+    "TCP-51010": {
+        "protocol": "TCP",
+        "port": [
+            "51010"
+        ],
+        "init": false
+    },
+    "TCP-9437-9439": {
+        "protocol": "TCP",
+        "port": [
+            "9437-9439"
+        ],
+        "init": false
+    },
+    "TCP-2821": {
+        "protocol": "TCP",
+        "port": [
+            "2821"
+        ],
+        "init": false
+    },
+    "TCP-1098-1099": {
+        "protocol": "TCP",
+        "port": [
+            "1098-1099"
+        ],
+        "init": false
+    },
+    "UDP-2821": {
+        "protocol": "UDP",
+        "port": [
+            "2821"
+        ],
+        "init": false
+    },
+    "UDP-1098-1099": {
+        "protocol": "UDP",
+        "port": [
+            "1098-1099"
+        ],
+        "init": false
+    },
+    "TCP-8892": {
+        "protocol": "TCP",
+        "port": [
+            "8892"
+        ],
+        "init": false
+    },
+    "TCP-9112": {
+        "protocol": "TCP",
+        "port": [
+            "9112"
+        ],
+        "init": false
+    },
+    "TCP-139": {
+        "protocol": "TCP",
+        "port": [
+            "139"
+        ],
+        "init": false
+    },
+    "TCP-5672": {
+        "protocol": "TCP",
+        "port": [
+            "5672"
+        ],
+        "init": false
+    },
+    "TCP-10444": {
+        "protocol": "TCP",
+        "port": [
+            "10444"
+        ],
+        "init": false
+    },
+    "TCP-11443": {
+        "protocol": "TCP",
+        "port": [
+            "11443"
+        ],
+        "init": false
+    },
+    "TCP-5985-5986": {
+        "protocol": "TCP",
+        "port": [
+            "5985-5986"
+        ],
+        "init": false
+    },
+    "TCP-30263": {
+        "protocol": "TCP",
+        "port": [
+            "30263"
+        ],
+        "init": false
+    },
+    "TCP-30270": {
+        "protocol": "TCP",
+        "port": [
+            "30270"
+        ],
+        "init": false
+    },
+    "TCP-32527": {
+        "protocol": "TCP",
+        "port": [
+            "32527"
+        ],
+        "init": false
+    },
+    "TCP-31480": {
+        "protocol": "TCP",
+        "port": [
+            "31480"
+        ],
+        "init": false
+    },
+    "TCP-31220": {
+        "protocol": "TCP",
+        "port": [
+            "31220"
+        ],
+        "init": false
+    },
+    "TCP-30079": {
+        "protocol": "TCP",
+        "port": [
+            "30079"
+        ],
+        "init": false
+    },
+    "TCP-32422": {
+        "protocol": "TCP",
+        "port": [
+            "32422"
+        ],
+        "init": false
+    },
+    "TCP-30183": {
+        "protocol": "TCP",
+        "port": [
+            "30183"
+        ],
+        "init": false
+    },
+    "TCP-1500": {
+        "protocol": "TCP",
+        "port": [
+            "1500"
+        ],
+        "init": false
+    },
+    "TCP-55010-55011": {
+        "protocol": "TCP",
+        "port": [
+            "55010-55011"
+        ],
+        "init": false
+    },
+    "TCP-28210": {
+        "protocol": "TCP",
+        "port": [
+            "28210"
+        ],
+        "init": false
+    },
+    "TCP-50001": {
+        "protocol": "TCP",
+        "port": [
+            "50001"
+        ],
+        "init": false
+    },
+    "TCP-60000-60011": {
+        "protocol": "TCP",
+        "port": [
+            "60000-60011"
+        ],
+        "init": false
+    },
+    "TCP-3390": {
+        "protocol": "TCP",
+        "port": [
+            "3390"
+        ],
+        "init": false
+    },
+    "TCP-9201": {
+        "protocol": "TCP",
+        "port": [
+            "9201"
+        ],
+        "init": false
+    },
+    "TCP-50005": {
+        "protocol": "TCP",
+        "port": [
+            "50005"
+        ],
+        "init": false
+    },
+    "TCP-12083-12084": {
+        "protocol": "TCP",
+        "port": [
+            "12083-12084"
+        ],
+        "init": false
+    },
+    "TCP-50004-50001": {
+        "protocol": "TCP",
+        "port": [
+            "50004,50001"
+        ],
+        "init": false
+    },
+    "TCP-5671-5672": {
+        "protocol": "TCP",
+        "port": [
+            "5671,5672"
+        ],
+        "init": false
+    },
+    "TCP-10443": {
+        "protocol": "TCP",
+        "port": [
+            "10443"
+        ],
+        "init": false
+    },
+    "TCP-5671": {
+        "protocol": "TCP",
+        "port": [
+            "5671"
+        ],
+        "init": false
+    },
+    "UDP-50010-51010": {
+        "protocol": "UDP",
+        "port": [
+            "50010,51010"
+        ],
+        "init": false
+    },
+    "TCP-50010-51010": {
+        "protocol": "TCP",
+        "port": [
+            "50010,51010"
+        ],
+        "init": false
+    },
+    "UDP-1099": {
+        "protocol": "UDP",
+        "port": [
+            "1099"
+        ],
+        "init": false
+    },
+    "TCP-1099": {
+        "protocol": "TCP",
+        "port": [
+            "1099"
+        ],
+        "init": false
+    },
+    "UDP-1098": {
+        "protocol": "UDP",
+        "port": [
+            "1098"
+        ],
+        "init": false
+    },
+    "TCP-1098": {
+        "protocol": "TCP",
+        "port": [
+            "1098"
+        ],
+        "init": false
+    },
+    "TCP-3343": {
+        "protocol": "TCP",
+        "port": [
+            "3343"
+        ],
+        "init": false
+    },
+    "UDP-3343": {
+        "protocol": "UDP",
+        "port": [
+            "3343"
+        ],
+        "init": false
+    },
+    "TCP-10548": {
+        "protocol": "TCP",
+        "port": [
+            "10548"
+        ],
+        "init": false
+    },
+    "TCP-10503": {
+        "protocol": "TCP",
+        "port": [
+            "10503"
+        ],
+        "init": false
+    },
+    "TCP-9000-9343-9443-5672": {
+        "protocol": "TCP",
+        "port": [
+            "9000,9343,9443,5672"
+        ],
+        "init": false
+    },
+    "TCP-3389": {
+        "protocol": "TCP",
+        "port": [
+            "3389"
+        ],
+        "init": false
+    },
+    "UDP-3389": {
+        "protocol": "UDP",
+        "port": [
+            "3389"
+        ],
+        "init": false
+    },
+    "TCP-9343-9443-10444-11443": {
+        "protocol": "TCP",
+        "port": [
+            "9343,9443,10444,11443"
+        ],
+        "init": false
+    },
+    "TCP-50010-51010-135-139-443-445-9000-9343-9443-5672": {
+        "protocol": "TCP",
+        "port": [
+            "50010,51010,135,139,443,445,9000,9343,9443,5672"
+        ],
+        "init": false
+    },
+    "UDP-50010-51010-1098-1099-2821": {
+        "protocol": "UDP",
+        "port": [
+            "50010,51010,1098,1099,2821"
+        ],
+        "init": false
+    },
+    "TCP-1098-1099-2821-8892-9112-9437-9438-9439-9443-9343": {
+        "protocol": "TCP",
+        "port": [
+            "1098,1099,2821,8892,9112,9437,9438,9439,9443,9343"
+        ],
+        "init": false
+    },
+    "TCP-135-139-445-1433": {
+        "protocol": "TCP",
+        "port": [
+            "135,139,445,1433"
+        ],
+        "init": false
+    },
+    "UDP-1098-1099-2821": {
+        "protocol": "UDP",
+        "port": [
+            "1098,1099,2821"
+        ],
+        "init": false
+    },
+    "TCP-9343-9443-9000-5672": {
+        "protocol": "TCP",
+        "port": [
+            "9343,9443,9000,5672"
+        ],
+        "init": false
+    },
+    "TCP-135-139-445-443-9000-9343-9443-5672-8892-9112-9437-9438-9439-9443-9343": {
+        "protocol": "TCP",
+        "port": [
+            "135,139,445,443,9000,9343,9443,5672,8892,9112,9437,9438,9439,9443,9343"
+        ],
+        "init": false
+    },
+    "TCP-50010-51010-1098-1099-2821": {
+        "protocol": "TCP",
+        "port": [
+            "50010,51010,1098,1099,2821"
+        ],
+        "init": false
+    },
+    "TCP-49152-65535": {
+        "protocol": "TCP",
+        "port": [
+            "49152-65535"
+        ],
+        "init": false
+    },
+    "TCP-22-161-1098-1099-2821-8892-9112-9343-9443-9437-9438-9439": {
+        "protocol": "TCP",
+        "port": [
+            "22,161,1098,1099,2821,8892,9112,9343,9443,9437,9438,9439"
+        ],
+        "init": false
+    },
+    "UDP-22-161-1098-1099-2821-8892-9112-9343-9443-9437-9438-9439": {
+        "protocol": "UDP",
+        "port": [
+            "22,161,1098,1099,2821,8892,9112,9343,9443,9437,9438,9439"
+        ],
+        "init": false
+    },
+    "TCP-12051": {
+        "protocol": "TCP",
+        "port": [
+            "12051"
+        ],
+        "init": false
+    },
+    "TCP-12057": {
+        "protocol": "TCP",
+        "port": [
+            "12057"
+        ],
+        "init": false
+    },
+    "TCP-9438": {
+        "protocol": "TCP",
+        "port": [
+            "9438"
+        ],
+        "init": false
+    },
+    "TCP-9437": {
+        "protocol": "TCP",
+        "port": [
+            "9437"
+        ],
+        "init": false
+    },
+    "TCP-9439": {
+        "protocol": "TCP",
+        "port": [
+            "9439"
+        ],
+        "init": false
+    },
+    "TCP-135-139-445-9000-9343-9443-5672-8892-9112-9437-9439-9443-9343": {
+        "protocol": "TCP",
+        "port": [
+            "135,139,445,9000,9343,9443,5672,8892,9112,9437-9439,9443,9343"
+        ],
+        "init": false
+    },
+    "UDP-51010": {
+        "protocol": "UDP",
+        "port": [
+            "51010"
+        ],
+        "init": false
+    },
+    "UDP-50010": {
+        "protocol": "UDP",
+        "port": [
+            "50010"
+        ],
+        "init": false
+    },
+    "UDP-137": {
+        "protocol": "UDP",
+        "port": [
+            "137"
+        ],
+        "init": false
+    },
+    "UDP-138": {
+        "protocol": "UDP",
+        "port": [
+            "138"
+        ],
+        "init": false
+    },
+    "UDP-28210": {
+        "protocol": "UDP",
+        "port": [
+            "28210"
+        ],
+        "init": false
+    },
+    "UDP-9180": {
+        "protocol": "UDP",
+        "port": [
+            "9180"
+        ],
+        "init": false
+    },
+    "TCP-9180": {
+        "protocol": "TCP",
+        "port": [
+            "9180"
+        ],
+        "init": false
+    },
+    "UDP-3390": {
+        "protocol": "UDP",
+        "port": [
+            "3390"
+        ],
+        "init": false
+    },
+    "UDP-5985-5986": {
+        "protocol": "UDP",
+        "port": [
+            "5985,5986"
+        ],
+        "init": false
+    },
+    "UDP-49152-65535": {
+        "protocol": "UDP",
+        "port": [
+            "49152-65535"
+        ],
+        "init": false
+    },
+    "TCP-1100": {
+        "protocol": "TCP",
+        "port": [
+            "1100"
+        ],
+        "init": false
+    },
+    "TCP-5986-5985-389-636-45580-443": {
+        "protocol": "TCP",
+        "port": [
+            "5986,5985,389,636,45580,443"
+        ],
+        "init": false
+    },
+    "TCP-514": {
+        "protocol": "TCP",
+        "port": [
+            "514"
+        ],
+        "init": false
+    },
+    "UDP-514": {
+        "protocol": "UDP",
+        "port": [
+            "514"
+        ],
+        "init": false
+    },
+    "TCP-28210-9180": {
+        "protocol": "TCP",
+        "port": [
+            "28210,9180"
+        ],
+        "init": false
+    },
+    "UDP-28210-9180": {
+        "protocol": "UDP",
+        "port": [
+            "28210,9180"
+        ],
+        "init": false
+    },
+    "TCP-10000-50000": {
+        "protocol": "TCP",
+        "port": [
+            "10000-50000"
+        ],
+        "init": false
+    },
+    "UDP-10000-50000": {
+        "protocol": "UDP",
+        "port": [
+            "10000-50000"
+        ],
+        "init": false
+    },
+    "TCP-22-3390": {
+        "protocol": "TCP",
+        "port": [
+            "22,3390"
+        ],
+        "init": false
+    },
+    "TCP-443-50000-9043-9443-60000": {
+        "protocol": "TCP",
+        "port": [
+            "443,50000,9043,9443,60000"
+        ],
+        "init": false
+    },
+    "TCP-50000-60000": {
+        "protocol": "TCP",
+        "port": [
+            "50000,60000"
+        ],
+        "init": false
+    },
+    "TCP-443-636": {
+        "protocol": "TCP",
+        "port": [
+            "443,636"
+        ],
+        "init": false
+    },
+    "TCP-80-443-8443": {
+        "protocol": "TCP",
+        "port": [
+            "80,443,8443"
+        ],
+        "init": false
+    },
+    "TCP-6443-22623": {
+        "protocol": "TCP",
+        "port": [
+            "6443,22623"
+        ],
+        "init": false
+    },
+    "TCP-6443-8443": {
+        "protocol": "TCP",
+        "port": [
+            "6443,8443"
+        ],
+        "init": false
+    },
+    "TCP-80-8443-443": {
+        "protocol": "TCP",
+        "port": [
+            "80,8443,443"
+        ],
+        "init": false
+    },
+    "TCP-51010-50010": {
+        "protocol": "TCP",
+        "port": [
+            "51010,50010"
+        ],
+        "init": false
+    },
+    "UDP-51010-50010": {
+        "protocol": "UDP",
+        "port": [
+            "51010,50010"
+        ],
+        "init": false
+    },
+    "UDP-1100": {
+        "protocol": "UDP",
+        "port": [
+            "1100"
+        ],
+        "init": false
+    },
+    "TCP-31466": {
+        "protocol": "TCP",
+        "port": [
+            "31466"
+        ],
+        "init": false
+    },
+    "TCP-31026": {
+        "protocol": "TCP",
+        "port": [
+            "31026"
+        ],
+        "init": false
+    },
+    "TCP-31357": {
+        "protocol": "TCP",
+        "port": [
+            "31357"
+        ],
+        "init": false
+    },
+    "TCP-4500": {
+        "protocol": "TCP",
+        "port": [
+            "4500"
+        ],
+        "init": false
+    },
+    "TCP-135-139": {
+        "protocol": "TCP",
+        "port": [
+            "135,139"
+        ],
+        "init": false
+    },
+    "TCP-587": {
+        "protocol": "TCP",
+        "port": [
+            "587"
+        ],
+        "init": false
+    },
+    "TCP-995": {
+        "protocol": "TCP",
+        "port": [
+            "995"
+        ],
+        "init": false
+    },
+    "TCP-993": {
+        "protocol": "TCP",
+        "port": [
+            "993"
+        ],
+        "init": false
+    },
+    "TCP-9093": {
+        "protocol": "TCP",
+        "port": [
+            "9093"
+        ],
+        "init": false
+    },
+    "TCP-5693": {
+        "protocol": "TCP",
+        "port": [
+            "5693"
+        ],
+        "init": false
+    },
+    "UDP-5693": {
+        "protocol": "UDP",
+        "port": [
+            "5693"
+        ],
+        "init": false
+    },
+    "TCP-27017": {
+        "protocol": "TCP",
+        "port": [
+            "27017"
+        ],
+        "init": false
+    },
+    "TCP-464": {
+        "protocol": "TCP",
+        "port": [
+            "464"
+        ],
+        "init": false
+    },
+    "UDP-389": {
+        "protocol": "UDP",
+        "port": [
+            "389"
+        ],
+        "init": false
+    },
+    "TCP-3269": {
+        "protocol": "TCP",
+        "port": [
+            "3269"
+        ],
+        "init": false
+    },
+    "UDP-53": {
+        "protocol": "UDP",
+        "port": [
+            "53"
+        ],
+        "init": false
+    },
+    "TCP-2001": {
+        "protocol": "TCP",
+        "port": [
+            "2001"
+        ],
+        "init": false
+    },
+    "TCP-88-135-139-389-445": {
+        "protocol": "TCP",
+        "port": [
+            "88,135,139,389,445"
+        ],
+        "init": false
+    },
+    "UDP-53-389": {
+        "protocol": "UDP",
+        "port": [
+            "53,389"
+        ],
+        "init": false
+    },
+    "UDP-443": {
+        "protocol": "UDP",
+        "port": [
+            "443"
+        ],
+        "init": false
+    },
+    "TCP-10003-10503": {
+        "protocol": "TCP",
+        "port": [
+            "10003,10503"
+        ],
+        "init": false
+    },
+    "TCP-88-135-139-389-445-53-49152-65535": {
+        "protocol": "TCP",
+        "port": [
+            "88,135,139,389,445,53,49152-65535"
+        ],
+        "init": false
+    },
+    "TCP-9095": {
+        "protocol": "TCP",
+        "port": [
+            "9095"
+        ],
+        "init": false
+    },
+    "TCP-9094": {
+        "protocol": "TCP",
+        "port": [
+            "9094"
+        ],
+        "init": false
+    },
+    "TCP-902": {
+        "protocol": "TCP",
+        "port": [
+            "902"
+        ],
+        "init": false
+    },
+    "UDP-1433": {
+        "protocol": "UDP",
+        "port": [
+            "1433"
+        ],
+        "init": false
+    },
+    "UDP-1194": {
+        "protocol": "UDP",
+        "port": [
+            "1194"
+        ],
+        "init": false
+    },
+    "TCP-8200": {
+        "protocol": "TCP",
+        "port": [
+            "8200"
+        ],
+        "init": false
+    },
+    "TCP-1035": {
+        "protocol": "TCP",
+        "port": [
+            "1035"
+        ],
+        "init": false
+    },
+    "TCP-10501": {
+        "protocol": "TCP",
+        "port": [
+            "10501"
+        ],
+        "init": false
+    },
+    "TCP-3000": {
+        "protocol": "TCP",
+        "port": [
+            "3000"
+        ],
+        "init": false
+    },
+    "TCP-3306": {
+        "protocol": "TCP",
+        "port": [
+            "3306"
+        ],
+        "init": false
+    },
+    "TCP-22-50000-443-9093-9443": {
+        "protocol": "TCP",
+        "port": [
+            "22,50000,443,9093,9443"
+        ],
+        "init": false
+    },
+    "TCP-1718-1719-1750-1751-1755-8451-8455": {
+        "protocol": "TCP",
+        "port": [
+            "1718,1719,1750,1751,1755,8451-8455"
+        ],
+        "init": false
+    },
+    "TCP-50000-53000": {
+        "protocol": "TCP",
+        "port": [
+            "50000-53000"
+        ],
+        "init": false
+    },
+    "TCP-9182": {
+        "protocol": "TCP",
+        "port": [
+            "9182"
+        ],
+        "init": false
+    },
+    "TCP-4790": {
+        "protocol": "TCP",
+        "port": [
+            "4790"
+        ],
+        "init": false
+    },
+    "TCP-17777-17778": {
+        "protocol": "TCP",
+        "port": [
+            "17777-17778"
+        ],
+        "init": false
+    },
+    "TCP-12000-12999": {
+        "protocol": "TCP",
+        "port": [
+            "12000-12999"
+        ],
+        "init": false
+    },
+    "TCP-10000-10999": {
+        "protocol": "TCP",
+        "port": [
+            "10000-10999"
+        ],
+        "init": false
+    },
+    "TCP-25010": {
+        "protocol": "TCP",
+        "port": [
+            "25010"
+        ],
+        "init": false
+    },
+    "TCP-9081": {
+        "protocol": "TCP",
+        "port": [
+            "9081"
+        ],
+        "init": false
+    },
+    "TCP-9092-9093": {
+        "protocol": "TCP",
+        "port": [
+            "9092-9093"
+        ],
+        "init": false
+    },
+    "TCP-5000-5001": {
+        "protocol": "TCP",
+        "port": [
+            "5000-5001"
+        ],
+        "init": false
+    },
+    "TCP-3000-3024": {
+        "protocol": "TCP",
+        "port": [
+            "3000-3024"
+        ],
+        "init": false
+    },
+    "TCP-4000-4001": {
+        "protocol": "TCP",
+        "port": [
+            "4000-4001"
+        ],
+        "init": false
+    },
+    "TCP-135-9000-8892-9112-9437-9439": {
+        "protocol": "TCP",
+        "port": [
+            "135,9000,8892,9112,9437-9439"
+        ],
+        "init": false
+    },
+    "TCP-16443-17443": {
+        "protocol": "TCP",
+        "port": [
+            "16443-17443"
+        ],
+        "init": false
+    },
+    "TCP-5480": {
+        "protocol": "TCP",
+        "port": [
+            "5480"
+        ],
+        "init": false
+    },
+    "TCP-3128": {
+        "protocol": "TCP",
+        "port": [
+            "3128"
+        ],
+        "init": false
+    },
+    "TCP-7971": {
+        "protocol": "TCP",
+        "port": [
+            "7971"
+        ],
+        "init": false
+    },
+    "TCP-7970": {
+        "protocol": "TCP",
+        "port": [
+            "7970"
+        ],
+        "init": false
+    },
+    "TCP-20081": {
+        "protocol": "TCP",
+        "port": [
+            "20081"
+        ],
+        "init": false
+    },
+    "TCP-7916": {
+        "protocol": "TCP",
+        "port": [
+            "7916"
+        ],
+        "init": false
+    },
+    "TCP-20080": {
+        "protocol": "TCP",
+        "port": [
+            "20080"
+        ],
+        "init": false
+    },
+    "UDP-162": {
+        "protocol": "UDP",
+        "port": [
+            "162"
+        ],
+        "init": false
+    },
+    "TCP-162": {
+        "protocol": "TCP",
+        "port": [
+            "162"
+        ],
+        "init": false
+    },
+    "UDP-6061": {
+        "protocol": "UDP",
+        "port": [
+            "6061"
+        ],
+        "init": false
+    },
+    "TCP-20000-20010": {
+        "protocol": "TCP",
+        "port": [
+            "20000-20010"
+        ],
+        "init": false
+    },
+    "UDP-40404": {
+        "protocol": "UDP",
+        "port": [
+            "40404"
+        ],
+        "init": false
+    },
+    "TCP-10000-10010": {
+        "protocol": "TCP",
+        "port": [
+            "10000-10010"
+        ],
+        "init": false
+    },
+    "TCP-40404": {
+        "protocol": "TCP",
+        "port": [
+            "40404"
+        ],
+        "init": false
+    },
+    "TCP-1235": {
+        "protocol": "TCP",
+        "port": [
+            "1235"
+        ],
+        "init": false
+    },
+    "TCP-5443": {
+        "protocol": "TCP",
+        "port": [
+            "5443"
+        ],
+        "init": false
+    },
+    "UDP-123": {
+        "protocol": "UDP",
+        "port": [
+            "123"
+        ],
+        "init": false
+    },
+    "TCP-9042": {
+        "protocol": "TCP",
+        "port": [
+            "9042"
+        ],
+        "init": false
+    },
+    "TCP-7001": {
+        "protocol": "TCP",
+        "port": [
+            "7001"
+        ],
+        "init": false
+    },
+    "UDP-20000-20010": {
+        "protocol": "UDP",
+        "port": [
+            "20000-20010"
+        ],
+        "init": false
+    },
+    "UDP-10000-10010": {
+        "protocol": "UDP",
+        "port": [
+            "10000-10010"
+        ],
+        "init": false
+    },
+    "TCP-6061": {
+        "protocol": "TCP",
+        "port": [
+            "6061"
+        ],
+        "init": false
+    },
+    "TCP-7705": {
+        "protocol": "TCP",
+        "port": [
+            "7705"
+        ],
+        "init": false
+    },
+    "TCP-7700": {
+        "protocol": "TCP",
+        "port": [
+            "7700"
+        ],
+        "init": false
+    },
+    "UDP-161": {
+        "protocol": "UDP",
+        "port": [
+            "161"
+        ],
+        "init": false
+    },
+    "TCP-3121": {
+        "protocol": "TCP",
+        "port": [
+            "3121"
+        ],
+        "init": false
+    },
+    "TCP-21064": {
+        "protocol": "TCP",
+        "port": [
+            "21064"
+        ],
+        "init": false
+    },
+    "UDP-5405": {
+        "protocol": "UDP",
+        "port": [
+            "5405"
+        ],
+        "init": false
+    },
+    "TCP-2224": {
+        "protocol": "TCP",
+        "port": [
+            "2224"
+        ],
+        "init": false
+    },
+    "UDP-5404": {
+        "protocol": "UDP",
+        "port": [
+            "5404"
+        ],
+        "init": false
+    },
+    "TCP-5403": {
+        "protocol": "TCP",
+        "port": [
+            "5403"
+        ],
+        "init": false
+    },
+    "TCP-9300": {
+        "protocol": "TCP",
+        "port": [
+            "9300"
+        ],
+        "init": false
+    },
+    "TCP-8500-8181-18080-8080-8443-8001-8053-4789-9000-10250-6443-22623": {
+        "protocol": "TCP",
+        "port": [
+            "8500,8181,18080,8080,8443,8001,8053,4789,9000,10250,6443,22623"
+        ],
+        "init": false
+    },
+    "TCP-5555-31234-30167-6443": {
+        "protocol": "TCP",
+        "port": [
+            "5555,31234,30167,6443"
+        ],
+        "init": false
+    },
+    "TCP-31234": {
+        "protocol": "TCP",
+        "port": [
+            "31234"
+        ],
+        "init": false
+    },
+    "TCP-30167": {
+        "protocol": "TCP",
+        "port": [
+            "30167"
+        ],
+        "init": false
+    },
+    "TCP-31531": {
+        "protocol": "TCP",
+        "port": [
+            "31531"
+        ],
+        "init": false
+    },
+    "TCP-31637": {
+        "protocol": "TCP",
+        "port": [
+            "31637"
+        ],
+        "init": false
+    },
+    "UDP-111-2049": {
+        "protocol": "UDP",
+        "port": [
+            "111,2049"
+        ],
+        "init": false
+    },
+    "TCP-45180-51004-41839-50920": {
+        "protocol": "TCP",
+        "port": [
+            "45180,51004,41839,50920"
+        ],
+        "init": false
+    },
+    "UDP-46002-56379-48693": {
+        "protocol": "UDP",
+        "port": [
+            "46002,56379,48693"
+        ],
+        "init": false
+    },
+    "TCP-111-2049": {
+        "protocol": "TCP",
+        "port": [
+            "111,2049"
+        ],
+        "init": false
+    },
+    "UDP-2049": {
+        "protocol": "UDP",
+        "port": [
+            "2049"
+        ],
+        "init": false
+    },
+    "TCP-2049": {
+        "protocol": "TCP",
+        "port": [
+            "2049"
+        ],
+        "init": false
+    },
+    "TCP-12531-12532-12528-12529-12058": {
+        "protocol": "TCP",
+        "port": [
+            "12531,12532,12528,12529,12058"
+        ],
+        "init": false
+    },
+    "TCP-12083-13004-12084-13001-13002": {
+        "protocol": "TCP",
+        "port": [
+            "12083,13004,12084,13001,13002"
+        ],
+        "init": false
+    },
+    "TCP-12058-12504-12503": {
+        "protocol": "TCP",
+        "port": [
+            "12058,12504,12503"
+        ],
+        "init": false
+    },
+    "TCP-9201-12083-12084": {
+        "protocol": "TCP",
+        "port": [
+            "9201,12083,12084"
+        ],
+        "init": false
+    },
+    "TCP-2181": {
+        "protocol": "TCP",
+        "port": [
+            "2181"
+        ],
+        "init": false
+    },
+    "TCP-9300-9200": {
+        "protocol": "TCP",
+        "port": [
+            "9300,9200"
+        ],
+        "init": false
+    },
+    "TCP-16483": {
+        "protocol": "TCP",
+        "port": [
+            "16483"
+        ],
+        "init": false
+    },
+    "TCP-52662": {
+        "protocol": "TCP",
+        "port": [
+            "52662"
+        ],
+        "init": false
+    },
+    "TCP-18000-19500-2049-111-20048": {
+        "protocol": "TCP",
+        "port": [
+            "18000,19500,2049,111,20048"
+        ],
+        "init": false
+    },
+    "UDP-2049-111": {
+        "protocol": "UDP",
+        "port": [
+            "2049,111"
+        ],
+        "init": false
+    },
+    "TCP-12201": {
+        "protocol": "TCP",
+        "port": [
+            "12201"
+        ],
+        "init": false
+    },
+    "TCP-60084": {
+        "protocol": "TCP",
+        "port": [
+            "60084"
+        ],
+        "init": false
+    },
+    "TCP-52000": {
+        "protocol": "TCP",
+        "port": [
+            "52000"
+        ],
+        "init": false
+    },
+    "TCP-59000": {
+        "protocol": "TCP",
+        "port": [
+            "59000"
+        ],
+        "init": false
+    },
+    "UDP-137-138": {
+        "protocol": "UDP",
+        "port": [
+            "137,138"
+        ],
+        "init": false
+    },
+    "TCP-138": {
+        "protocol": "TCP",
+        "port": [
+            "138"
+        ],
+        "init": false
+    },
+    "TCP-137": {
+        "protocol": "TCP",
+        "port": [
+            "137"
+        ],
+        "init": false
+    },
+    "TCP-3201": {
+        "protocol": "TCP",
+        "port": [
+            "3201"
+        ],
+        "init": false
+    },
+    "TCP-51000": {
+        "protocol": "TCP",
+        "port": [
+            "51000"
+        ],
+        "init": false
+    },
+    "TCP-50002": {
+        "protocol": "TCP",
+        "port": [
+            "50002"
+        ],
+        "init": false
+    },
+    "TCP-50012": {
+        "protocol": "TCP",
+        "port": [
+            "50012"
+        ],
+        "init": false
+    },
+    "TCP-60004": {
+        "protocol": "TCP",
+        "port": [
+            "60004"
+        ],
+        "init": false
+    },
+    "TCP-22222": {
+        "protocol": "TCP",
+        "port": [
+            "22222"
+        ],
+        "init": false
+    },
+    "TCP-446": {
+        "protocol": "TCP",
+        "port": [
+            "446"
+        ],
+        "init": false
+    },
+    "TCP-3182": {
+        "protocol": "TCP",
+        "port": [
+            "3182"
+        ],
+        "init": false
+    },
+    "TCP-3181": {
+        "protocol": "TCP",
+        "port": [
+            "3181"
+        ],
+        "init": false
+    },
+    "TCP-444": {
+        "protocol": "TCP",
+        "port": [
+            "444"
+        ],
+        "init": false
+    },
+    "TCP-9093-9443-8190-8192-8193-8194-8195-8196-8197-8198-8199-8191": {
+        "protocol": "TCP",
+        "port": [
+            "9093,9443,8190,8192,8193,8194,8195,8196,8197,8198,8199,8191"
+        ],
+        "init": false
+    },
+    "TCP-60443": {
+        "protocol": "TCP",
+        "port": [
+            "60443"
+        ],
+        "init": false
+    },
+    "TCP-50443": {
+        "protocol": "TCP",
+        "port": [
+            "50443"
+        ],
+        "init": false
+    },
+    "TCP-10001": {
+        "protocol": "TCP",
+        "port": [
+            "10001"
+        ],
+        "init": false
+    },
+    "TCP-636": {
+        "protocol": "TCP",
+        "port": [
+            "636"
+        ],
+        "init": false
+    },
+    "TCP-10050": {
+        "protocol": "TCP",
+        "port": [
+            "10050"
+        ],
+        "init": false
+    },
+    "TCP-10051": {
+        "protocol": "TCP",
+        "port": [
+            "10051"
+        ],
+        "init": false
+    },
+    "TCP-5020": {
+        "protocol": "TCP",
+        "port": [
+            "5020"
+        ],
+        "init": false
+    },
+    "TCP-31538": {
+        "protocol": "TCP",
+        "port": [
+            "31538"
+        ],
+        "init": false
+    },
+    "TCP-8444": {
+        "protocol": "TCP",
+        "port": [
+            "8444"
+        ],
+        "init": false
+    },
+    "TCP-9446": {
+        "protocol": "TCP",
+        "port": [
+            "9446"
+        ],
+        "init": false
+    },
+    "TCP-8446": {
+        "protocol": "TCP",
+        "port": [
+            "8446"
+        ],
+        "init": false
+    },
+    "TCP-8445": {
+        "protocol": "TCP",
+        "port": [
+            "8445"
+        ],
+        "init": false
+    },
+    "TCP-541": {
+        "protocol": "TCP",
+        "port": [
+            "541"
+        ],
+        "init": false
+    },
+    "TCP-441": {
+        "protocol": "TCP",
+        "port": [
+            "441"
+        ],
+        "init": false
+    },
+    "TCP-465": {
+        "protocol": "TCP",
+        "port": [
+            "465"
+        ],
+        "init": false
+    },
+    "TCP-7778": {
+        "protocol": "TCP",
+        "port": [
+            "7778"
+        ],
+        "init": false
+    },
+    "TCP-5988": {
+        "protocol": "TCP",
+        "port": [
+            "5988"
+        ],
+        "init": false
+    },
+    "TCP-3801": {
+        "protocol": "TCP",
+        "port": [
+            "3801"
+        ],
+        "init": false
+    },
+    "TCP-5989": {
+        "protocol": "TCP",
+        "port": [
+            "5989"
+        ],
+        "init": false
+    },
+    "UDP-24600-24614": {
+        "protocol": "UDP",
+        "port": [
+            "24600-24614"
+        ],
+        "init": false
+    },
+    "TCP-24600-24614": {
+        "protocol": "TCP",
+        "port": [
+            "24600-24614"
+        ],
+        "init": false
+    },
+    "TCP-5696": {
+        "protocol": "TCP",
+        "port": [
+            "5696"
+        ],
+        "init": false
+    },
+    "UDP-9443": {
+        "protocol": "UDP",
+        "port": [
+            "9443"
+        ],
+        "init": false
+    },
+    "TCP-19094": {
+        "protocol": "TCP",
+        "port": [
+            "19094"
+        ],
+        "init": false
+    },
+    "TCP-29094": {
+        "protocol": "TCP",
+        "port": [
+            "29094"
+        ],
+        "init": false
+    },
+    "TCP-19092": {
+        "protocol": "TCP",
+        "port": [
+            "19092"
+        ],
+        "init": false
+    },
+    "TCP-29092": {
+        "protocol": "TCP",
+        "port": [
+            "29092"
+        ],
+        "init": false
+    },
+    "UDP-6514": {
+        "protocol": "UDP",
+        "port": [
+            "6514"
+        ],
+        "init": false
+    },
+    "TCP-39094": {
+        "protocol": "TCP",
+        "port": [
+            "39094"
+        ],
+        "init": false
+    },
+    "TCP-39092": {
+        "protocol": "TCP",
+        "port": [
+            "39092"
+        ],
+        "init": false
+    },
+    "TCP-1812": {
+        "protocol": "TCP",
+        "port": [
+            "1812"
+        ],
+        "init": false
+    },
+    "TCP-49": {
+        "protocol": "TCP",
+        "port": [
+            "49"
+        ],
+        "init": false
+    },
+    "TCP-26": {
+        "protocol": "TCP",
+        "port": [
+            "26"
+        ],
+        "init": false
+    },
+    "UDP-25": {
+        "protocol": "UDP",
+        "port": [
+            "25"
+        ],
+        "init": false
+    },
+    "TCP-445-3268": {
+        "protocol": "TCP",
+        "port": [
+            "445,3268"
+        ],
+        "init": false
+    },
+    "TCP-27000-27009": {
+        "protocol": "TCP",
+        "port": [
+            "27000-27009"
+        ],
+        "init": false
+    },
+    "TCP-3729": {
+        "protocol": "TCP",
+        "port": [
+            "3729"
+        ],
+        "init": false
+    },
+    "TCP-2233": {
+        "protocol": "TCP",
+        "port": [
+            "2233"
+        ],
+        "init": false
+    },
+    "TCP-9083": {
+        "protocol": "TCP",
+        "port": [
+            "9083"
+        ],
+        "init": false
+    },
+    "TCP-8088": {
+        "protocol": "TCP",
+        "port": [
+            "8088"
+        ],
+        "init": false
+    },
+    "TCP-7777": {
+        "protocol": "TCP",
+        "port": [
+            "7777"
+        ],
+        "init": false
+    },
+    "UDP-10000": {
+        "protocol": "UDP",
+        "port": [
+            "10000"
+        ],
+        "init": false
+    },
+    "TCP-10000": {
+        "protocol": "TCP",
+        "port": [
+            "10000"
+        ],
+        "init": false
+    },
+    "TCP-4369": {
+        "protocol": "TCP",
+        "port": [
+            "4369"
+        ],
+        "init": false
+    },
+    "TCP-8090": {
+        "protocol": "TCP",
+        "port": [
+            "8090"
+        ],
+        "init": false
+    },
+    "TCP-8092": {
+        "protocol": "TCP",
+        "port": [
+            "8092"
+        ],
+        "init": false
+    },
+    "TCP-27018": {
+        "protocol": "TCP",
+        "port": [
+            "27018"
+        ],
+        "init": false
+    },
+    "TCP-8761": {
+        "protocol": "TCP",
+        "port": [
+            "8761"
+        ],
+        "init": false
+    },
+    "TCP-27017-27018": {
+        "protocol": "TCP",
+        "port": [
+            "27017-27018"
+        ],
+        "init": false
+    },
+    "TCP-24602-24614": {
+        "protocol": "TCP",
+        "port": [
+            "24602-24614"
+        ],
+        "init": false
+    },
+    "UDP-441": {
+        "protocol": "UDP",
+        "port": [
+            "441"
+        ],
+        "init": false
+    },
+    "UDP-465": {
+        "protocol": "UDP",
+        "port": [
+            "465"
+        ],
+        "init": false
+    },
+    "TCP-22-443-80": {
+        "protocol": "TCP",
+        "port": [
+            "22,443,80"
+        ],
+        "init": false
+    },
+    "TCP-389": {
+        "protocol": "TCP",
+        "port": [
+            "389"
+        ],
+        "init": false
+    },
+    "TCP-6514": {
+        "protocol": "TCP",
+        "port": [
+            "6514"
+        ],
+        "init": false
+    },
+    "UDP-65149": {
+        "protocol": "UDP",
+        "port": [
+            "65149"
+        ],
+        "init": false
+    },
+    "TCP-18081": {
+        "protocol": "TCP",
+        "port": [
+            "18081"
+        ],
+        "init": false
+    },
+    "TCP-19095": {
+        "protocol": "TCP",
+        "port": [
+            "19095"
+        ],
+        "init": false
+    },
+    "TCP-18082": {
+        "protocol": "TCP",
+        "port": [
+            "18082"
+        ],
+        "init": false
+    },
+    "TCP-45443": {
+        "protocol": "TCP",
+        "port": [
+            "45443"
+        ],
+        "init": false
+    },
+    "TCP-45000": {
+        "protocol": "TCP",
+        "port": [
+            "45000"
+        ],
+        "init": false
+    },
+    "TCP-42443": {
+        "protocol": "TCP",
+        "port": [
+            "42443"
+        ],
+        "init": false
+    },
+    "TCP-8162": {
+        "protocol": "TCP",
+        "port": [
+            "8162"
+        ],
+        "init": false
+    },
+    "TCP-137-139": {
+        "protocol": "TCP",
+        "port": [
+            "137-139"
+        ],
+        "init": false
+    },
+    "TCP-1918": {
+        "protocol": "TCP",
+        "port": [
+            "1918"
+        ],
+        "init": false
+    },
+    "TCP-16310-16311": {
+        "protocol": "TCP",
+        "port": [
+            "16310-16311"
+        ],
+        "init": false
+    },
+    "TCP-9550": {
+        "protocol": "TCP",
+        "port": [
+            "9550"
+        ],
+        "init": false
+    },
+    "TCP-7777-7778": {
+        "protocol": "TCP",
+        "port": [
+            "7777-7778"
+        ],
+        "init": false
+    },
+    "TCP-8452": {
+        "protocol": "TCP",
+        "port": [
+            "8452"
+        ],
+        "init": false
+    },
+    "TCP-1750-1751": {
+        "protocol": "TCP",
+        "port": [
+            "1750-1751"
+        ],
+        "init": false
+    },
+    "UDP-1162": {
+        "protocol": "UDP",
+        "port": [
+            "1162"
+        ],
+        "init": false
+    },
+    "TCP-1111": {
+        "protocol": "TCP",
+        "port": [
+            "1111"
+        ],
+        "init": false
+    },
+    "TCP-9569": {
+        "protocol": "TCP",
+        "port": [
+            "9569"
+        ],
+        "init": false
+    },
+    "TCP-3700": {
+        "protocol": "TCP",
+        "port": [
+            "3700"
+        ],
+        "init": false
+    },
+    "TCP-8030": {
+        "protocol": "TCP",
+        "port": [
+            "8030"
+        ],
+        "init": false
+    },
+    "UDP-162-514": {
+        "protocol": "UDP",
+        "port": [
+            "162,514"
+        ],
+        "init": false
+    },
+    "TCP-8040": {
+        "protocol": "TCP",
+        "port": [
+            "8040"
+        ],
+        "init": false
+    },
+    "TCP-123": {
+        "protocol": "TCP",
+        "port": [
+            "123"
+        ],
+        "init": false
+    },
+    "TCP-5988-5989": {
+        "protocol": "TCP",
+        "port": [
+            "5988-5989"
+        ],
+        "init": false
+    },
+    "TCP-5432-5433": {
+        "protocol": "TCP",
+        "port": [
+            "5432-5433"
+        ],
+        "init": false
+    },
+    "TCP-612": {
+        "protocol": "TCP",
+        "port": [
+            "612"
+        ],
+        "init": false
+    },
+    "TCP-20": {
+        "protocol": "TCP",
+        "port": [
+            "20"
+        ],
+        "init": false
+    },
+    "TCP-536": {
+        "protocol": "TCP",
+        "port": [
+            "536"
+        ],
+        "init": false
+    },
+    "TCP-161-162": {
+        "protocol": "TCP",
+        "port": [
+            "161-162"
+        ],
+        "init": false
+    },
+    "UDP-161-162": {
+        "protocol": "UDP",
+        "port": [
+            "161-162"
+        ],
+        "init": false
+    },
+    "TCP-9669": {
+        "protocol": "TCP",
+        "port": [
+            "9669"
+        ],
+        "init": false
+    },
+    "TCP-445-139-3268-3269-53": {
+        "protocol": "TCP",
+        "port": [
+            "445,139,3268-3269,53"
+        ],
+        "init": false
+    },
+    "TCP-50000-50001": {
+        "protocol": "TCP",
+        "port": [
+            "50000-50001"
+        ],
+        "init": false
+    },
+    "UDP-464": {
+        "protocol": "UDP",
+        "port": [
+            "464"
+        ],
+        "init": false
+    },
+    "TCP-1433-7778-8443-3801-441-465": {
+        "protocol": "TCP",
+        "port": [
+            "1433,7778,8443,3801,441,465"
+        ],
+        "init": false
+    },
+    "TCP-161": {
+        "protocol": "TCP",
+        "port": [
+            "161"
+        ],
+        "init": false
+    },
+    "TCP-3268-3269": {
+        "protocol": "TCP",
+        "port": [
+            "3268-3269"
+        ],
+        "init": false
+    },
+    "UDP-88": {
+        "protocol": "UDP",
+        "port": [
+            "88"
+        ],
+        "init": false
+    },
+    "TCP-1441": {
+        "protocol": "TCP",
+        "port": [
+            "1441"
+        ],
+        "init": false
+    },
+    "TCP-69": {
+        "protocol": "TCP",
+        "port": [
+            "69"
+        ],
+        "init": false
+    },
+    "TCP-33000-33499": {
+        "protocol": "TCP",
+        "port": [
+            "33000-33499"
+        ],
+        "init": false
+    },
+    "UDP-2162": {
+        "protocol": "UDP",
+        "port": [
+            "2162"
+        ],
+        "init": false
+    },
+    "TCP-24602-27018": {
+        "protocol": "TCP",
+        "port": [
+            "24602-27018"
+        ],
+        "init": false
+    },
+    "TCP-5969": {
+        "protocol": "TCP",
+        "port": [
+            "5969"
+        ],
+        "init": false
+    },
+    "UDP-67-514-1163-1170-2162": {
+        "protocol": "UDP",
+        "port": [
+            "67,514,1163-1170,2162"
+        ],
+        "init": false
+    },
+    "TCP-7777-7778-443-22": {
+        "protocol": "TCP",
+        "port": [
+            "7777,7778,443,22"
+        ],
+        "init": false
+    },
+    "TCP-514-536-612-636-1433": {
+        "protocol": "TCP",
+        "port": [
+            "514,536,612,636,1433"
+        ],
+        "init": false
+    },
+    "TCP-3801-4369-5432-5433-5985-5988": {
+        "protocol": "TCP",
+        "port": [
+            "3801,4369,5432,5433,5985,5988"
+        ],
+        "init": false
+    },
+    "TCP-24610-24611-24612-24613-24614-27017-27018": {
+        "protocol": "TCP",
+        "port": [
+            "24610,24611,24612,24613,24614,27017,27018"
+        ],
+        "init": false
+    },
+    "TCP-5989-7778-8080-8090-8092-8443-8761-24602-24603-24604-24605-24606-24607-24608-24609": {
+        "protocol": "TCP",
+        "port": [
+            "5989,7778,8080,8090,8092,8443,8761,24602,24603,24604,24605,24606,24607,24608,24609"
+        ],
+        "init": false
+    },
+    "TCP-20-21-22-25-80-123-161-162-441-443-465": {
+        "protocol": "TCP",
+        "port": [
+            "20,21,22,25,80,123,161,162,441,443,465"
+        ],
+        "init": false
+    },
+    "TCP-22-5696": {
+        "protocol": "TCP",
+        "port": [
+            "22,5696"
+        ],
+        "init": false
+    },
+    "TCP-3268": {
+        "protocol": "TCP",
+        "port": [
+            "3268"
+        ],
+        "init": false
+    },
+    "TCP-20000-20006": {
+        "protocol": "TCP",
+        "port": [
+            "20000-20006"
+        ],
+        "init": false
+    },
+    "TCP-1024-1030": {
+        "protocol": "TCP",
+        "port": [
+            "1024-1030"
+        ],
+        "init": false
+    },
+    "TCP-1025": {
+        "protocol": "TCP",
+        "port": [
+            "1025"
+        ],
+        "init": false
+    },
+    "TCP-20000-20008": {
+        "protocol": "TCP",
+        "port": [
+            "20000-20008"
+        ],
+        "init": false
+    },
+    "TCP-1024": {
+        "protocol": "TCP",
+        "port": [
+            "1024"
+        ],
+        "init": false
+    },
+    "TCP-20000": {
+        "protocol": "TCP",
+        "port": [
+            "20000"
+        ],
+        "init": false
+    },
+    "TCP-20007-20008": {
+        "protocol": "TCP",
+        "port": [
+            "20007-20008"
+        ],
+        "init": false
+    },
+    "TCP-20010": {
+        "protocol": "TCP",
+        "port": [
+            "20010"
+        ],
+        "init": false
+    },
+    "TCP-20009": {
+        "protocol": "TCP",
+        "port": [
+            "20009"
+        ],
+        "init": false
+    },
+    "UDP-5986": {
+        "protocol": "UDP",
+        "port": [
+            "5986"
+        ],
+        "init": false
+    },
+    "UDP-5985": {
+        "protocol": "UDP",
+        "port": [
+            "5985"
+        ],
+        "init": false
+    },
+    "TCP-1024-1027": {
+        "protocol": "TCP",
+        "port": [
+            "1024-1027"
+        ],
+        "init": false
+    },
+    "TCP-20007": {
+        "protocol": "TCP",
+        "port": [
+            "20007"
+        ],
+        "init": false
+    },
+    "TCP-3389-3390": {
+        "protocol": "TCP",
+        "port": [
+            "3389,3390"
+        ],
+        "init": false
+    },
+    "TCP-1260": {
+        "protocol": "TCP",
+        "port": [
+            "1260"
+        ],
+        "init": false
+    },
+    "TCP-6000-6001-6002": {
+        "protocol": "TCP",
+        "port": [
+            "6000,6001,6002"
+        ],
+        "init": false
+    },
+    "UDP-7003": {
+        "protocol": "UDP",
+        "port": [
+            "7003"
+        ],
+        "init": false
+    },
+    "UDP-6000-6001-6002": {
+        "protocol": "UDP",
+        "port": [
+            "6000,6001,6002"
+        ],
+        "init": false
+    },
+    "TCP-16026": {
+        "protocol": "TCP",
+        "port": [
+            "16026"
+        ],
+        "init": false
+    },
+    "TCP-14141": {
+        "protocol": "TCP",
+        "port": [
+            "14141"
+        ],
+        "init": false
+    },
+    "TCP-2162": {
+        "protocol": "TCP",
+        "port": [
+            "2162"
+        ],
+        "init": false
+    },
+    "TCP-57500": {
+        "protocol": "TCP",
+        "port": [
+            "57500"
+        ],
+        "init": false
+    },
+    "TCP-53-123": {
+        "protocol": "TCP",
+        "port": [
+            "53,123"
+        ],
+        "init": false
+    },
+    "UDP-53-123": {
+        "protocol": "UDP",
+        "port": [
+            "53,123"
+        ],
+        "init": false
+    },
+    "TCP-7777-7778-443": {
+        "protocol": "TCP",
+        "port": [
+            "7777,7778,443"
+        ],
+        "init": false
+    },
+    "UDP-514-25": {
+        "protocol": "UDP",
+        "port": [
+            "514,25"
+        ],
+        "init": false
+    },
+    "TCP-22-25": {
+        "protocol": "TCP",
+        "port": [
+            "22,25"
+        ],
+        "init": false
+    },
+    "UDP-161-162-514-6514": {
+        "protocol": "UDP",
+        "port": [
+            "161,162,514,6514"
+        ],
+        "init": false
+    },
+    "TCP-22-80-443-8081-18082-19094-19095": {
+        "protocol": "TCP",
+        "port": [
+            "22,80,443,8081,18082,19094,19095"
+        ],
+        "init": false
+    },
+    "TCP-8099": {
+        "protocol": "TCP",
+        "port": [
+            "8099"
+        ],
+        "init": false
+    },
+    "TCP-8100": {
+        "protocol": "TCP",
+        "port": [
+            "8100"
+        ],
+        "init": false
+    },
+    "TCP-8966": {
+        "protocol": "TCP",
+        "port": [
+            "8966"
+        ],
+        "init": false
+    },
+    "TCP-8988": {
+        "protocol": "TCP",
+        "port": [
+            "8988"
+        ],
+        "init": false
+    },
+    "TCP-51000-53000": {
+        "protocol": "TCP",
+        "port": [
+            "51000-53000"
+        ],
+        "init": false
+    },
+    "UDP-51514": {
+        "protocol": "UDP",
+        "port": [
+            "51514"
+        ],
+        "init": false
+    },
+    "TCP-16445": {
+        "protocol": "TCP",
+        "port": [
+            "16445"
+        ],
+        "init": false
+    },
+    "TCP-16444": {
+        "protocol": "TCP",
+        "port": [
+            "16444"
+        ],
+        "init": false
+    },
+    "TCP-17778": {
+        "protocol": "TCP",
+        "port": [
+            "17778"
+        ],
+        "init": false
+    },
+    "TCP-17776": {
+        "protocol": "TCP",
+        "port": [
+            "17776"
+        ],
+        "init": false
+    },
+    "TCP-17777": {
+        "protocol": "TCP",
+        "port": [
+            "17777"
+        ],
+        "init": false
+    },
+    "TCP-2056-2060": {
+        "protocol": "TCP",
+        "port": [
+            "2056-2060"
+        ],
+        "init": false
+    },
+    "TCP-2051-2054": {
+        "protocol": "TCP",
+        "port": [
+            "2051-2054"
+        ],
+        "init": false
+    },
+    "TCP-2055": {
+        "protocol": "TCP",
+        "port": [
+            "2055"
+        ],
+        "init": false
+    },
+    "UDP-53-123-389-636-49152-65535": {
+        "protocol": "UDP",
+        "port": [
+            "53,123,389,636,49152-65535"
+        ],
+        "init": false
+    },
+    "TCP-53-123-389-636-49152-65535": {
+        "protocol": "TCP",
+        "port": [
+            "53,123,389,636,49152-65535"
+        ],
+        "init": false
+    },
+    "TCP-8081-19092-19094-29092-29094-39092-39094-22-80-443": {
+        "protocol": "TCP",
+        "port": [
+            "8081,19092,19094,29092,29094,39092,39094,22,80,443"
+        ],
+        "init": false
+    },
+    "TCP-60001": {
+        "protocol": "TCP",
+        "port": [
+            "60001"
+        ],
+        "init": false
+    },
+    "TCP-110": {
+        "protocol": "TCP",
+        "port": [
+            "110"
+        ],
+        "init": false
+    },
+    "TCP-30710": {
+        "protocol": "TCP",
+        "port": [
+            "30710"
+        ],
+        "init": false
+    },
+    "TCP-8180": {
+        "protocol": "TCP",
+        "port": [
+            "8180"
+        ],
+        "init": false
+    },
+    "TCP-1443": {
+        "protocol": "TCP",
+        "port": [
+            "1443"
+        ],
+        "init": false
+    },
+    "TCP-1444": {
+        "protocol": "TCP",
+        "port": [
+            "1444"
+        ],
+        "init": false
+    },
+    "TCP-2051-2060": {
+        "protocol": "TCP",
+        "port": [
+            "2051-2060"
+        ],
+        "init": false
+    },
+    "TCP-9083-443-5696": {
+        "protocol": "TCP",
+        "port": [
+            "9083,443,5696"
+        ],
+        "init": false
+    },
+    "TCP-80-443-8080-9443-8443": {
+        "protocol": "TCP",
+        "port": [
+            "80,443,8080,9443,8443"
+        ],
+        "init": false
+    },
+    "TCP-443-8443": {
+        "protocol": "TCP",
+        "port": [
+            "443,8443"
+        ],
+        "init": false
+    },
+    "TCP-24602-24603-24604-24605-24606-24607-24608-24609-24610-24611-24612-24613-24614-27017-27018": {
+        "protocol": "TCP",
+        "port": [
+            "24602,24603,24604,24605,24606,24607,24608,24609,24610,24611,24612,24613,24614,27017,27018"
+        ],
+        "init": false
+    },
+    "TCP-636-1433-3801-4369-5432-5433-5985-5988-5989-7778-8080-8090-8092-8443-8761": {
+        "protocol": "TCP",
+        "port": [
+            "636,1433,3801,4369,5432,5433,5985,5988,5989,7778,8080,8090,8092,8443,8761"
+        ],
+        "init": false
+    },
+    "TCP-20-21-22-25-80-123-161-162-441-443-465-514-536-612": {
+        "protocol": "TCP",
+        "port": [
+            "20,21,22,25,80,123,161,162,441,443,465,514,536,612"
+        ],
+        "init": false
+    },
+    "TCP-22-5985": {
+        "protocol": "TCP",
+        "port": [
+            "22,5985"
+        ],
+        "init": false
+    },
+    "TCP-80-161-443-8080-9443-8443": {
+        "protocol": "TCP",
+        "port": [
+            "80,161,443,8080,9443,8443"
+        ],
+        "init": false
+    },
+    "TCP-25-514-465-587-6514": {
+        "protocol": "TCP",
+        "port": [
+            "25,514,465,587,6514"
+        ],
+        "init": false
+    },
+    "TCP-6514-162-161": {
+        "protocol": "TCP",
+        "port": [
+            "6514,162,161"
+        ],
+        "init": false
+    },
+    "TCP-1027": {
+        "protocol": "TCP",
+        "port": [
+            "1027"
+        ],
+        "init": false
+    },
+    "TCP-1026": {
+        "protocol": "TCP",
+        "port": [
+            "1026"
+        ],
+        "init": false
+    },
+    "TCP-2524": {
+        "protocol": "TCP",
+        "port": [
+            "2524"
+        ],
+        "init": false
+    },
+    "TCP-88-135-139-389-445-53": {
+        "protocol": "TCP",
+        "port": [
+            "88,135,139,389,445,53"
+        ],
+        "init": false
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-2222"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-SG-SRES-Linux-Jump-Servers",
+            "TF-AG1-HOST-ag1dlniamjpfts2",
+            "TF-AG1-HOST-ag1dlniamjpfua2",
+            "TF-AG1-HOST-ag1dlniamjpf2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRIAMAAS2": {
+            "category": "Application",
+            "rules": {
+                "2398": {
+                    "display_name": "TF-2398-IAM-SRES-Linux-Jump-to-DRES-port-forwarder",
+                    "source_groups": [
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1dlniamjpfts2",
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-HOST-ag1dlniamjpf2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-2222",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "SR50971783\nCH50079588 and SR50978536:\n\"Add to destination:\nag1dlniamjpfdv2\nag1dlniamjpfts2\nag1dlniamjpfua2\" \n\n",
+                    "scope": [
+                        "TF-AG1-HOST-ag1dlniamjpfua2",
+                        "TF-AG1-HOST-ag1dlniamjpf2",
+                        "TF-AG1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AG1-HOST-ag1dlniamjpfts2"
+                    ]
+                }
+            }
+        }
+    }
+}

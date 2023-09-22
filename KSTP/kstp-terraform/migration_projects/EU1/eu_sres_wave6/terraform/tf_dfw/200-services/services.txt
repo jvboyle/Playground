@@ -1,0 +1,174 @@
+resource "nsxt_policy_service" "svc_icp-kubernetes-nodeport" {
+      display_name = "ICP-Kubernetes-NodePort"
+      nsx_id = "ICP-Kubernetes-NodePort"
+}
+
+resource "nsxt_policy_service" "svc_icp-kubernetes-api-server" {
+      display_name = "ICP-Kubernetes-API-Server"
+      nsx_id = "ICP-Kubernetes-API-Server"
+}
+
+resource "nsxt_policy_service" "svc_icp-management-console" {
+      display_name = "ICP-Management-Console"
+      nsx_id = "ICP-Management-Console"
+}
+
+resource "nsxt_policy_service" "svc_icp-ingress-service" {
+      display_name = "ICP-Ingress-Service"
+      nsx_id = "ICP-Ingress-Service"
+}
+
+resource "nsxt_policy_service" "svc_icp-docker-registry" {
+      display_name = "ICP-Docker-Registry"
+      nsx_id = "ICP-Docker-Registry"
+}
+
+resource "nsxt_policy_service" "svc_icp-websphere-application-server-liberty" {
+      display_name = "ICP-WebSphere-Application-Server-Liberty"
+      nsx_id = "ICP-WebSphere-Application-Server-Liberty"
+}
+
+resource "nsxt_policy_service" "svc_tcp-8014" {
+      display_name = "TCP-8014"
+      nsx_id = "TCP-8014"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8014"
+                  protocol = "TCP"
+                  destination_ports = ["8014"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-2001" {
+      display_name = "TCP-2001"
+      nsx_id = "TCP-2001"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-2001"
+                  protocol = "TCP"
+                  destination_ports = ["2001"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-2968" {
+      display_name = "TCP-2968"
+      nsx_id = "TCP-2968"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-2968"
+                  protocol = "TCP"
+                  destination_ports = ["2968"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-3128" {
+      display_name = "TCP-3128"
+      nsx_id = "TCP-3128"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-3128"
+                  protocol = "TCP"
+                  destination_ports = ["3128"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-2967" {
+      display_name = "TCP-2967"
+      nsx_id = "TCP-2967"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-2967"
+                  protocol = "TCP"
+                  destination_ports = ["2967"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-8090" {
+      display_name = "TCP-8090"
+      nsx_id = "TCP-8090"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-8090"
+                  protocol = "TCP"
+                  destination_ports = ["8090"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-2000" {
+      display_name = "TCP-2000"
+      nsx_id = "TCP-2000"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-2000"
+                  protocol = "TCP"
+                  destination_ports = ["2000"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-3200-3399" {
+      display_name = "TCP-3200-3399"
+      nsx_id = "TCP-3200-3399"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-3200-3399"
+                  protocol = "TCP"
+                  destination_ports = ["3200-3399"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_udp-123" {
+      display_name = "UDP-123"
+      nsx_id = "UDP-123"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "UDP_UDP-123"
+                  protocol = "UDP"
+                  destination_ports = ["123"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-2000-3000" {
+      display_name = "TCP-2000-3000"
+      nsx_id = "TCP-2000-3000"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-2000-3000"
+                  protocol = "TCP"
+                  destination_ports = ["2000-3000"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-6014" {
+      display_name = "TCP-6014"
+      nsx_id = "TCP-6014"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-6014"
+                  protocol = "TCP"
+                  destination_ports = ["6014"]
+            }
+      }
+}
+
+resource "nsxt_policy_service" "svc_tcp-9002" {
+      display_name = "TCP-9002"
+      nsx_id = "TCP-9002"
+      dynamic "l4_port_set_entry" {
+            content {
+                  display_name = "TCP_TCP-9002"
+                  protocol = "TCP"
+                  destination_ports = ["9002"]
+            }
+      }
+}
+

@@ -1,0 +1,60 @@
+---
+- name: VPN ESG creation
+  nsx_edge_router:
+    nsxmanager_spec: "{{ nsxmanager_spec }}"
+    state: "{{ requested_state }}"
+    name: "{{ vpn_esg_name }}"
+    description: 'This ESG is created by nsxansible'
+    appliance_size: "{{ vpn_esg_size }}"
+    resourcepool_moid: "{{ gather_moids_cl.object_id }}"
+    datastore_moid: "{{ gather_moids_ds.object_id }}"
+    datacenter_moid: "{{ gather_moids_cl.datacenter_moid }}"
+    interfaces:
+      vnic0:
+        ip: "{{ vpn_esg_vnic0.ip }}"
+        prefix_len: "{{ vpn_esg_vnic0.prefix }}"
+        portgroup_id: "{{ vpn_esg_vnic0.portgroup_id }}"
+        name: "{{ vpn_esg_vnic0.name }}"
+        iftype: "{{ vpn_esg_vnic0.iftype }}"
+      vnic1:
+        ip: "{{ vpn_esg_vnic1.ip }}"
+        prefix_len: "{{ vpn_esg_vnic1.prefix }}"
+        logical_switch: "{{ vpn_esg_vnic1.logical_switch }}"
+        name: "{{ vpn_esg_vnic1.name }}"
+        iftype: "{{ vpn_esg_vnic1.iftype }}"
+    routes:
+      - "{{ vpn_esg_route1 }}"
+      - "{{ vpn_esg_route2 }}"
+      - "{{ vpn_esg_route3 }}"
+      - "{{ vpn_esg_route4 }}"
+    remote_access: 'true'
+    # username: "{{ vpn_esg_admin_username }}"
+    # password: "{{ vpn_esg_admin_password }}"
+    username: "{{ esg_admin_username }}"
+    password: "{{ esg_admin_password }}"
+    firewall: "{{ vpn_esg_firewall_on_off }}"
+    ha_enabled: "{{ vpn_esg_ha_enable }}"
+  register: create_vpn_esg
+  tags: vpn_esg_create
+
+# The following tasks were commented out on 26-Aug-2020 to workaround Issue #3
+# https://github.ibm.com/CtspArchitecture/Platform-Automation-scripts-templates/issues/3
+# - name: Remove default OSPF Configuration
+#   nsx_ospf:
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     state: absent
+#     edge_name: "{{ vpn_esg_name }}"
+#     router_id: ''
+#     areas: ''
+#     area_map: ''
+#   register: ospf_remove
+#   tags: ospf_remove
+#
+# - name: Remove default Route Redistribution Configuration
+#   nsx_redistribution:
+#     ospf_state: absent
+#     bgp_state: absent
+#     nsxmanager_spec: "{{ nsxmanager_spec }}"
+#     edge_name: "{{ vpn_esg_name }}"
+#   register: route_redist_remove
+#   tags: route_redist_remove

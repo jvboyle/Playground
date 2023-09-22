@@ -1,0 +1,73 @@
+---
+#################
+#Regional Domain
+#################
+region_domain: ap1.sp.ibm.local
+
+#################
+#vCenter Details
+#################
+vcenter: 'ispwap1-vc.sp.ibm.local'
+vcenter_dc: 'datacenter-syd04'
+vcenter_compute_cluster: 'ap1-c1'
+vcenter_compute_datastore: 'ap1-c1-vsan'
+vcenter_mgmt_cluster: 'ap1-m1'
+vcenter_mgmt_datastore: 'ap1-m1-vsan'
+vcenter_edge_cluster: 'ap1-e1'
+vcenter_edge_datastore: 'ap1-e1-Vsan'
+
+vsphere_clusters:
+  compute_cluster: {name: 'ap1-c1', dvswitch: 'ispw-ap1-ap1-c1-syd04-private', datastore: 'ap1-c1-vsan'}
+  mgmt_cluster: {name: 'ap1-m1', dvswitch: 'ispwap1-ap1-m1-syd04-private', datastore: 'ap1-m1-vsan'}
+  edge_cluster: {name: 'ap1-e1', dvswitch: 'ispwap1-ap1-e1-syd04-private', datastore: 'ap1-e1-Vsan'}
+
+vcenter_edgevm_folder: 'NSX_EDGEs'
+vcenter_dlrvm_folder: 'NSX_DLRs'
+
+####################
+#NSX Manager details
+####################
+nsx_manager: 'ispwap1-nsx.sp.ibm.local'
+
+#Regional Provider Transit Edge's
+pdr_esg_name: ap1-pdr-esg1
+agg_esg_name: ap1-agg-esg1
+sres_esg_name: ap1-sres1-esg1
+sl_svc_esg_name: ap1-sl-svc-esg1
+# gres_esg_name: 'NA'
+# vdr_esg_name: 'NA'
+# ext1_vpn_name: 'NA'
+
+#Regional Provider Transit Edge IP's
+agg_esg_provider_ip: '100.80.64.1'
+svc_esg_provider_ip: '100.80.64.2'
+sres_esg_provider_ip: '100.80.64.3'
+pdr_esg_provider_ip: '100.80.64.253'
+ext1_vpn_provider_ip: '100.80.64.254'
+
+#Regional ISPW Infrastructure Networks
+gres_gsni_routeable_net: '158.87.50.0/24'
+sres_gsni_routeable_net: '158.87.54.0/23'
+ires_sl_nat_net: '100.80.68.0/24'
+pdr_net: '100.80.69.0/24'
+
+#Customer Premises GSNI Routable NAT Network
+cp_gsni_routeable_net: '158.87.104.0/24'
+
+#Regional syslog and DNS servers
+ires_vrli_dnat_ip: '100.80.68.2'
+sres_dns1_ip: '158.87.54.2'
+sres_dns2_ip: '158.87.54.3'
+
+#Regional Pre-existing Public, Private, and Provider Transit uplink porgtroups
+provider_transit: 'ap1-provider-agg-transit1'
+pub_ns_portgroup: 'ap1-e-dvs1-pub-dvpg-edge-pub-ns-908'
+priv_ns_portgroup: 'ap1-e-dvs1-priv-dvpg-edge-sl-svc-946'
+priv_dlr_mgmt_portgroup: 'ap1-e-dvs1-priv-dvpg-edge-sl-svc-946'
+
+# Transport Zone for logical switches (VXLAN's)
+transport_zone: 'transport-1'
+cp_mode: 'UNICAST_MODE'
+
+## .... END
+############################################################################

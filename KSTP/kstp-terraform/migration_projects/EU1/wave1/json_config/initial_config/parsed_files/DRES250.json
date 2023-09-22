@@ -1,0 +1,45 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+            "TF-EU1-SG-DR250-ESG-LB-Source",
+            "TF-EU1-HOST-eu1srlpcarwas1000"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES250": {
+            "category": "Application",
+            "rules": {
+                "7935": {
+                    "display_name": "TF-7935-DRES-ESG-to-OCP-SFS-Relay",
+                    "source_groups": [
+                        "TF-EU1-SG-DR250-ESG-LB-Source"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1",
+                        "TF-EU1-HOST-eu1srlpcarwas1000"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CH50097474\nSR51349698",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpcarwas1000",
+                        "TF-EU1-SG-DR250-ESG-LB-Source",
+                        "TF-EU1-IPSET-SRES-OCP6-Cluster-EU1"
+                    ]
+                }
+            }
+        }
+    }
+}

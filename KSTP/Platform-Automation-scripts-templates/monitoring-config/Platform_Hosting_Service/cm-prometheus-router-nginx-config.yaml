@@ -1,0 +1,65 @@
+apiVersion: v1
+data:
+  nginx.conf: |-
+    error_log stderr warn;
+
+    events {
+        worker_connections 1024;
+    }
+
+
+    http {
+        access_log syslog:server=unix:/dev/log;
+
+        include mime.types;
+        default_type application/octet-stream;
+        sendfile on;
+        keepalive_timeout 65;
+
+        # Without this, cosocket-based code in worker
+        # initialization cannot resolve localhost.
+
+        upstream prometheus {
+            server localhost:9090;
+        }
+
+        proxy_cache_path /tmp/nginx-mesos-cache levels=1:2 keys_zone=mesos:1m inactive=10m;
+
+        server {
+            listen 8443 ssl default_server;
+            ssl_certificate server.crt;
+            ssl_certificate_key server.key;
+            ssl_client_certificate /opt/ibm/router/ca-certs/ca.pem;
+            ssl_verify_client on;
+            ssl_protocols TLSv1.2;
+            # Ref: https://github.com/cloudflare/sslconfig/blob/master/conf
+            # Modulo ChaCha20 cipher.
+            ssl_ciphers EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:!EECDH+3DES:!RSA+3DES:!MD5;
+            ssl_prefer_server_ciphers on;
+
+            server_name dcos.*;
+            root /opt/ibm/router/nginx/html;
+
+
+            location / {
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header Host $http_host;
+              proxy_pass http://prometheus/;
+            }
+
+        }
+    }
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"nginx.conf":"error_log stderr warn;\n\nevents {\n    worker_connections 1024;\n}\n\n\nhttp {\n    access_log syslog:server=unix:/dev/log;\n\n    include mime.types;\n    default_type application/octet-stream;\n    sendfile on;\n    keepalive_timeout 65;\n\n    # Without this, cosocket-based code in worker\n    # initialization cannot resolve localhost.\n\n    upstream prometheus {\n        server localhost:9090;\n    }\n\n    proxy_cache_path /tmp/nginx-mesos-cache levels=1:2 keys_zone=mesos:1m inactive=10m;\n\n    server {\n        listen 8443 ssl default_server;\n        ssl_certificate server.crt;\n        ssl_certificate_key server.key;\n        ssl_client_certificate /opt/ibm/router/ca-certs/ca.pem;\n        ssl_verify_client on;\n        ssl_protocols TLSv1.2;\n        # Ref: https://github.com/cloudflare/sslconfig/blob/master/conf\n        # Modulo ChaCha20 cipher.\n        ssl_ciphers EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:!EECDH+3DES:!RSA+3DES:!MD5;\n        ssl_prefer_server_ciphers on;\n\n        server_name dcos.*;\n        root /opt/ibm/router/nginx/html;\n\n\n        location / {\n          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n          proxy_set_header Host $http_host;\n          proxy_pass http://prometheus/;\n        }\n\n    }\n}"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"monitoring-prometheus","component":"prometheus"},"name":"prometheus-router-nginx-config","namespace":"kube-system"}}
+  creationTimestamp: 2018-03-21T05:20:09Z
+  labels:
+    app: monitoring-prometheus
+    component: prometheus
+  name: prometheus-router-nginx-config
+  namespace: kube-system
+  resourceVersion: "3654"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/prometheus-router-nginx-config
+  uid: 860df2b1-2cc7-11e8-bc77-005056bbded7

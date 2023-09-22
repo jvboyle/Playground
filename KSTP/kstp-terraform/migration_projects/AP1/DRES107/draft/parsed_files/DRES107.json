@@ -1,0 +1,171 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-HOST-ap1d107lpcacpr1",
+            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+            "TF-AP1-HOST-ap1srlpcacfbds1",
+            "TF-AP1-SG-SRES01-OCP-Cluster01",
+            "TF-AP1-SG-SRES-WIN-Jump-Servers",
+            "TF-AP1-SG-SRES-Linux-Jump-Servers",
+            "TF-AP1-HOST-ap1d107lpcacpr2",
+            "TF-AP1-IPSET-ap1d107lpcacpr-vip"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES107": {
+            "category": "Application",
+            "rules": {
+                "1202": {
+                    "display_name": "TF-1202-OCP-Cluster01-to-CACF-Proxy-VIP-",
+                    "source_groups": [
+                        "TF-AP1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-SG-SRES01-OCP-Cluster01",
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ]
+                },
+                "1204": {
+                    "display_name": "TF-1204-CACF-Proxy1-to-CPREM-",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "10.129.31.149"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1"
+                    ]
+                },
+                "1205": {
+                    "display_name": "TF-1205--CACF-Proxy1-to-BDS-",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ]
+                },
+                "1206": {
+                    "display_name": "TF-1206-CPREM-to-CACF-Proxy-VIP-",
+                    "source_groups": [],
+                    "source_ips": [
+                        "10.129.31.149"
+                    ],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ]
+                },
+                "1207": {
+                    "display_name": "TF-1207-CACF-Proxy-Communication-",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ],
+                    "destination_ips": [],
+                    "services": [],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": false,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ]
+                },
+                "1208": {
+                    "display_name": "TF-1208-SRES-Jumpservers-to-CACF-Proxy-",
+                    "source_groups": [
+                        "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AP1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip",
+                        "TF-AP1-HOST-ap1d107lpcacpr2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS",
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d107lpcacpr1",
+                        "TF-AP1-SG-SRES-WIN-Jump-Servers",
+                        "TF-AP1-SG-SRES-Linux-Jump-Servers",
+                        "TF-AP1-HOST-ap1d107lpcacpr2",
+                        "TF-AP1-IPSET-ap1d107lpcacpr-vip"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+{
+    "SRES": {
+        "category": "Application",
+        "section_id": 1007,
+        "rules": {
+            "rule_2330": {
+                "display_name": "2330_IBM_Blue__to_SRES",
+                "apply": true,
+                "rule_id": 2330,
+                "source_groups": [],
+                "source_ipsets": [
+                    "NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ag1-agg-esg1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": ""
+            },
+            "rule_2335": {
+                "display_name": "2335_SRES_GSE_Host_to_IBM_BluePages",
+                "apply": true,
+                "rule_id": 2335,
+                "source_groups": [],
+                "source_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "source_ips": [],
+                "source_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-IBM-Bluepages"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "LDAP-over-SSL",
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ag1srlpgse1000",
+                    "ag1-agg-esg1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": "SR50951941"
+            },
+            "rule_2334": {
+                "display_name": "2334_SRE_GSE_Host_to_PDR_SNMP_Relay",
+                "apply": true,
+                "rule_id": 2334,
+                "source_groups": [],
+                "source_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "source_ips": [],
+                "source_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ag1pdr1smtp01"
+                ],
+                "services": [
+                    "SMTP"
+                ],
+                "applied_to": [
+                    "ag1pdr1smtp01",
+                    "ag1srlpgse1000",
+                    "ag1-pdr-esg1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": false,
+                "notes": "SR50958760"
+            },
+            "rule_2361": {
+                "display_name": "2361_IBM_Blue_to_GSE",
+                "apply": true,
+                "rule_id": 2361,
+                "source_groups": [],
+                "source_ipsets": [
+                    "NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "services": [
+                    "HTTPS"
+                ],
+                "applied_to": [
+                    "ag1srlpgse1000",
+                    "ag1-agg-esg1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": "SR50952031"
+            },
+            "rule_2949": {
+                "display_name": "2949_AP_HST_to_NA_GSENNA",
+                "apply": true,
+                "rule_id": 2949,
+                "source_groups": [],
+                "source_ipsets": [
+                    "HOST-AP-ap1srlpgsehst01"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "services": [
+                    "ICMP Echo",
+                    "TCP/5693",
+                    "ICMP Echo Reply",
+                    "SSH",
+                    "HTTPS",
+                    "UDP/5693",
+                    "TCP/27017"
+                ],
+                "applied_to": [
+                    "ag1srlpgse1000",
+                    "ag1-ext-vpn1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": "SR51187586"
+            },
+            "rule_2950": {
+                "display_name": "2950_NA_GSENNA_to_AP_HST",
+                "apply": true,
+                "rule_id": 2950,
+                "source_groups": [],
+                "source_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "source_ips": [],
+                "source_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "HOST-AP-ap1srlpgsehst01"
+                ],
+                "destination_ips": [],
+                "destination_vms": [],
+                "services": [
+                    "TCP/5693",
+                    "SSH",
+                    "HTTPS",
+                    "TCP/27017"
+                ],
+                "applied_to": [
+                    "ag1srlpgse1000",
+                    "ag1-ext-vpn1",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": "SR51187586"
+            },
+            "rule_3311": {
+                "display_name": "3311_Blue_to_SDDC_Prod_DB_",
+                "apply": true,
+                "rule_id": 3311,
+                "source_groups": [],
+                "source_ipsets": [
+                    "NET-IBM-Blue"
+                ],
+                "source_ips": [],
+                "source_vms": [],
+                "destination_groups": [],
+                "destination_ipsets": [
+                    "AG1-Host-ag1srlpgse1000"
+                ],
+                "destination_ips": [],
+                "destination_vms": [
+                    "ag1srlpgse1000"
+                ],
+                "services": [
+                    "TCP/27017"
+                ],
+                "applied_to": [
+                    "ag1-agg-esg1",
+                    "ag1srlpgse1000",
+                    "ag1-sres1-esg1"
+                ],
+                "action": "allow",
+                "direction": "IN_OUT",
+                "disabled": false,
+                "logged": true,
+                "notes": "SR51383025"
+            }
+        }
+    }
+}

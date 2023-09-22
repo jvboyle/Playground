@@ -1,0 +1,104 @@
+Transit: 
+      description: SBB & Transit Networks
+      Parent: Root
+      strictMode: Yes
+      Group Permissions:
+          Operators: rw
+          Guests: rw
+      Subfolders:    
+      - name: SBB- Provider Transit
+        Subnets:
+        - subnet: 100.64.65.0/24  
+          description: ag1-provider-transit-01  
+          vlan:  
+      - name: T0 Router Links
+        Subnets:
+        - subnet: 100.64.32.0/19
+          description: T0 Router Links  
+          vlan:
+          Subnets:
+          - subnet: 100.64.32.0/24
+            description: ag1-t0-sres-01  
+      Subnets:
+
+Public:     
+      description: IBM Cloud Public
+      Parent: Root
+      Strict mode: Yes
+      Group Permissions:
+          Operators: rw
+          Guests: rw
+      Subfolders:   
+      Subnets:
+      - subnet: 150.239.66.0/24 
+        description: Public SDDC - Gateways   
+        vlan: 786 - wdc04.fcr04a.786 
+
+IRES:     
+      description: IRES Subnets
+      Parent: Root
+      Strict mode: Yes
+      Group Permissions:
+          Operators: rw
+          Guests: rw     
+      Subfolders:
+      - name: CGN
+      - name: IBM Cloud
+        Subnets:
+        - subnet: 10.65.209.0/26
+          description: Edge Node Mgmt - Portable  
+          vlan: 909 - wdc04.bcr04.909                   
+
+SRES:     
+      description: SRES subnets
+      Parent: Root
+      Strict mode: Yes
+      Group Permissions:
+          Operators: rw
+          Guests: rw
+      Subfolders:
+      - name: OCP (CGN)
+        Subnets:
+        - subnet: 100.71.244.0/24 
+          description: OCP  
+          vlan:
+      - name: SRES (GSNI Routable)
+        Subnets:
+        - subnet: 158.87.48.0/23
+          description: SRES - Commercial range  
+          vlan:
+        - subnet: 158.87.50.0/26 
+          description: SRES - GSNI Routable AVI VIPs 
+          vlan:    
+      - name: TKG (CGN)
+        Subnets:
+        - subnet: 100.71.242.0/24
+          description: SRES - TKG Workload clusters  
+          vlan: 
+        - subnet: 100.71.243.128/27
+          description: ag1-sres-tanzu-mgmt-01  
+          vlan:               
+
+DRES Customers:     
+      description: DRES Customes
+      Parent: Root
+      Strict mode: Yes
+      Group Permissions:
+          Operators: rw
+          Guests: rw
+      Subnets:
+      - subnet: 100.64.72.0/21
+        description: DRES Customes  
+        vlan:
+      - subnet: 100.64.80.0/20
+        description: DRES Customes  
+        vlan:
+      - subnet: 100.64.96.0/19 
+        description: DRES Customes  
+        vlan:
+      - subnet: 100.64.128.0/17 
+        description: DRES Customes  
+        vlan:
+      - subnet: 100.65.0.0/16 
+        description: DRES Customes  
+        vlan:                          

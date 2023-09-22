@@ -1,0 +1,68 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-4500",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+            "TF-EU1-HOST-eu1srlpm1easbcp",
+            "TF-EU1-SG-DRES86-MNEAAS-H3G-NCPP"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES86": {
+            "category": "Application",
+            "rules": {
+                "5343": {
+                    "display_name": "TF-5343-BlueCare-sync-HTEMS-post-migration-",
+                    "disabled": true,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES86-MNEAAS-H3G-NCPP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-DRES86-MNEAAS-H3G-NCPP",
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ]
+                },
+                "5348": {
+                    "display_name": "TF-5348-HTEMS-event-forward-to-Netcool",
+                    "disabled": true,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES86-MNEAAS-H3G-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+                        "TF-EU1-SG-DRES86-MNEAAS-H3G-NCPP"
+                    ]
+                }
+            }
+        }
+    }
+}

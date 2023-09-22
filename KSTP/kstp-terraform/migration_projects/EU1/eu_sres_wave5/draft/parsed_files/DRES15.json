@@ -1,0 +1,46 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-SG-SRES-WIN-Jump-Servers",
+            "TF-EU1-SG-SRES-Linux-Jump-Servers",
+            "TF-EU1-SG-DR15-MNEAAS-SL1-ALL-EU-DV1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES15": {
+            "category": "Application",
+            "rules": {
+                "5989": {
+                    "display_name": "TF-5989-SRES-ssh-WIN-LINUX-to-DR15",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR15-MNEAAS-SL1-ALL-EU-DV1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-WIN-Jump-Servers",
+                        "TF-EU1-SG-SRES-Linux-Jump-Servers",
+                        "TF-EU1-SG-DR15-MNEAAS-SL1-ALL-EU-DV1"
+                    ]
+                }
+            }
+        }
+    }
+}

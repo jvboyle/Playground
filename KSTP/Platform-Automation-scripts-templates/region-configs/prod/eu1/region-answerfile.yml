@@ -1,0 +1,77 @@
+---
+#################
+#Regional Domain
+#################
+region_domain: eu1.sp.ibm.local
+
+#################
+#vCenter Details
+#################
+vcenter: 'eu1vc1.eu1.sp.ibm.local'
+vcenter_dc: 'EU1-AMS03'
+vcenter_compute_cluster: 'EU1-C1'
+vcenter_compute_datastore: 'eu1-c1-vsan'
+vcenter_mgmt_cluster: 'EU1-M1'
+vcenter_mgmt_datastore: 'eu1-m1-vsan'
+vcenter_edge_cluster: 'EU1-E1'
+vcenter_edge_datastore: 'eu1-e1-vsan'
+
+vsphere_clusters:
+  compute_cluster: {name: 'EU1-C1', dvswitch: 'eu1-c-priv-dvs1', datastore: 'eu1-c1-vsan'}
+  mgmt_cluster: {name: 'EU1-M1', dvswitch: 'eu1-m-priv-dvs1', datastore: 'eu1-m1-vsan'}
+  edge_cluster: {name: 'EU1-E1', dvswitch: 'eu1-e-priv-dvs1', datastore: 'eu1-e1-vsan'}
+  rpa_cluster: {name: 'EU1-R1', dvswitch: 'eu1-r-priv-dvs1', datastore: 'eu1-r1-vsan'}
+
+vcenter_edgevm_folder: 'NSX_EDGEs'
+vcenter_dlrvm_folder: 'NSX_DLRs'
+
+####################
+#NSX Manager details
+####################
+nsx_manager: 'eu1nsxm1.eu1.sp.ibm.local'
+
+#Regional Provider Transit Edge's
+pdr_esg_name: eu1-pdr-esg1
+agg_esg_name: eu1-agg-esg1
+sres_esg_name: eu1-sres1-esg1
+sl_svc_esg_name: eu1-sl-svc-esg1
+# gres_esg_name: 'NA'
+# vdr_esg_name: 'NA'
+# ext1_vpn_name: 'NA'
+
+#Regional Provider Transit Edge IP's
+agg_esg_provider_ip: '100.72.64.1'
+svc_esg_provider_ip: '100.72.64.2'
+sres_esg_provider_ip: '100.72.64.3'
+gres_esg_provider_ip: 'NA'
+vdr_esg_provider_ip: 'NA'
+pdr_esg_provider_ip: '100.72.64.253'
+ext1_vpn_provider_ip: '100.72.64.254'
+
+#Regional ISPW Infrastructure Networks
+gres_gsni_routeable_net: '158.87.50.0/24'
+sres_gsni_routeable_net: '158.87.52.0/23'
+ires_sl_nat_net: '100.72.68.0/24'
+pdr_net: '100.72.69.0/24'
+vdr_net: '100.72.69.0/24'
+
+#Customer Premises GSNI Routable NAT Network
+cp_gsni_routeable_net: '158.87.104.0/24'
+
+#Regional syslog and DNS servers
+ires_vrli_dnat_ip: '100.72.68.2'
+sres_dns1_ip: '158.87.52.2'
+sres_dns2_ip: '158.87.52.3'
+
+#Regional Pre-existing Public, Private, and Provider Transit uplink porgtroups
+provider_transit: 'eu1-provider-agg-transit1'
+pub_ns_portgroup: 'eu1-e-dvs1-pub-dvpg-edge-pub-ns-1137'
+priv_ns_portgroup: 'eu1-e-dvs1-priv-dvpg-edge-sl-svc-1406'
+priv_dlr_mgmt_portgroup: 'eu1-e-dvs1-priv-dvpg-edge-sl-svc-1406'
+
+# Transport Zone for logical switches (VXLAN's)
+transport_zone: 'EU1-GlobalTZ'
+cp_mode: 'UNICAST_MODE' 
+
+## .... END
+############################################################################

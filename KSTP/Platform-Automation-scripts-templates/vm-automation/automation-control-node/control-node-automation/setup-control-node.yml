@@ -1,0 +1,28 @@
+---
+# This is the file the drives the orchestration of the steps ( i.e. roles and tasks)
+# the 'hosts' variable references the elements of the inventory that will
+# be provisions
+- hosts: all
+  gather_facts: false
+#  remote_user: root
+  # The variables required to perform the tasks are split into a set
+  # of variable files. The variables are segregated into different
+  # files, named acccordingly.
+  vars_files:
+  # the following should be changed based on the region running in.
+    - prod-ag-region-answerfile.yml
+  # the following should be changed based on the target segment
+    - prod-ag-sres-answerfile.yml
+  # the following represent the tasks that will be executed to provision this VM
+  # each of these roles is associated to a subdirectory under the roles directory
+  # These are executed in the order they are listed.
+  roles:
+     - provision-vm
+     - configure-vm
+#     - check-proxy
+     - setup-users
+     - install-ansible
+#     - install-terraform
+#     - clone-git-repository
+#    - install-powernsx
+#    - install-configure-duo-pam

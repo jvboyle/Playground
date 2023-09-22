@@ -1,0 +1,73 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-43000-49999",
+            "TCP-30000"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1d18lpcacprx1",
+            "TF-EU1-HOST-eu1srlpisiwai01",
+            "TF-EU1-HOST-eu1d18lpcacprx2",
+            "TF-EU1-SG-SRES-ISIM-IAM05-WAS"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES18": {
+            "category": "Application",
+            "rules": {
+                "8586": {
+                    "display_name": "TF-8586-ISIM-proxy-mgmt",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpisiwai01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d18lpcacprx1",
+                        "TF-EU1-HOST-eu1d18lpcacprx2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-30000"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0114858",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d18lpcacprx1",
+                        "TF-EU1-HOST-eu1srlpisiwai01",
+                        "TF-EU1-HOST-eu1d18lpcacprx2"
+                    ]
+                },
+                "8587": {
+                    "display_name": "TF-8587-ISIM-proxy-listeners",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-SRES-ISIM-IAM05-WAS"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d18lpcacprx1",
+                        "TF-EU1-HOST-eu1d18lpcacprx2"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-43000-49999"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0114858",
+                    "scope": [
+                        "TF-EU1-HOST-eu1d18lpcacprx1",
+                        "TF-EU1-HOST-eu1d18lpcacprx2",
+                        "TF-EU1-SG-SRES-ISIM-IAM05-WAS"
+                    ]
+                }
+            }
+        }
+    }
+}

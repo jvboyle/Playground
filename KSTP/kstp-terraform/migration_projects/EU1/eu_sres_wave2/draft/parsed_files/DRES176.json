@@ -1,0 +1,78 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-IPSET-dr176-LB-VIP1",
+            "TF-EU1-HOST-eu1srlpm1ecni2",
+            "TF-EU1-HOST-eu1srlplmt3",
+            "TF-EU1-HOST-eu1srlpm1epni2",
+            "TF-EU1-HOST-eu1sr1wphwcetl",
+            "TF-EU1-HOST-eu1srlplmt5"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES176": {
+            "category": "Application",
+            "rules": {
+                "6766": {
+                    "display_name": "TF-6766-SRES-to-LB-VIP",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-eu1srlplmt3",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-HOST-eu1srlplmt5"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50967845",
+                    "scope": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1",
+                        "TF-EU1-HOST-eu1srlpm1ecni2",
+                        "TF-EU1-HOST-eu1srlplmt3",
+                        "TF-EU1-HOST-eu1srlpm1epni2",
+                        "TF-EU1-HOST-eu1sr1wphwcetl",
+                        "TF-EU1-HOST-eu1srlplmt5"
+                    ]
+                },
+                "7256": {
+                    "display_name": "TF-7256-SRES-to-LB-to-CPREM",
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlplmt3"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1"
+                    ],
+                    "destination_ips": [
+                        "57.56.58.153"
+                    ],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51013896 ",
+                    "scope": [
+                        "TF-EU1-IPSET-dr176-LB-VIP1",
+                        "TF-EU1-HOST-eu1srlplmt3"
+                    ]
+                }
+            }
+        }
+    }
+}

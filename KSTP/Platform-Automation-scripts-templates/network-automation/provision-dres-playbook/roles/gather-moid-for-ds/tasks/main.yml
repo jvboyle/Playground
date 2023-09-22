@@ -1,0 +1,11 @@
+---
+- name: gather moid for ds
+  vcenter_gather_moids:
+    hostname: "{{ vcenter }}"
+    username: "{{ vcenter_user }}"
+    password: "{{ vcenter_pwd }}"
+    datacenter_name: "{{ vcenter_dc }}"
+    datastore_name: "{{ vcenter_edge_datastore }}"
+    validate_certs: False
+  register: gather_moids_ds
+  tags: moids

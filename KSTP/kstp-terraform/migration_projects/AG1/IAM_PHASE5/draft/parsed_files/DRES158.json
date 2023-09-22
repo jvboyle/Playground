@@ -1,0 +1,86 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "HTTPS",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-IPSET-DR158-CPREM-JHOSTS",
+            "TF-AG1-IPSET-NET-CPREM-DR158-NAT-Range",
+            "TF-AG1-IPSET-DR158-LB-VIP1",
+            "TF-AG1-HOST-ag1sr1wjmp01",
+            "TF-AG1-HOST-ag1sr1ljmp01",
+            "TF-AG1-IPSET-DR158-LB-VIP1-NAT",
+            "TF-AG1-IPSET-DR158-CPREM-NETCOOL"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES158": {
+            "category": "Application",
+            "rules": {
+                "2576": {
+                    "display_name": "TF-2576-CPREM-Netcool-to-DRES-LB-VIP-CACF",
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01",
+                        "TF-AG1-IPSET-DR158-CPREM-NETCOOL"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR158-LB-VIP1",
+                        "TF-AG1-IPSET-DR158-LB-VIP1-NAT",
+                        "TF-AG1-IPSET-NET-CPREM-DR158-NAT-Range"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801",
+                    "scope": [
+                        "TF-AG1-IPSET-NET-CPREM-DR158-NAT-Range",
+                        "TF-AG1-IPSET-DR158-LB-VIP1",
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01",
+                        "TF-AG1-IPSET-DR158-LB-VIP1-NAT",
+                        "TF-AG1-IPSET-DR158-CPREM-NETCOOL"
+                    ]
+                },
+                "2578": {
+                    "display_name": "TF-2578-CPREM-JH-to-DRES-LB-VIP1-CACF",
+                    "source_groups": [
+                        "TF-AG1-IPSET-DR158-CPREM-JHOSTS",
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DR158-LB-VIP1",
+                        "TF-AG1-IPSET-DR158-LB-VIP1-NAT",
+                        "TF-AG1-IPSET-NET-CPREM-DR158-NAT-Range"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50955801",
+                    "scope": [
+                        "TF-AG1-IPSET-DR158-CPREM-JHOSTS",
+                        "TF-AG1-IPSET-NET-CPREM-DR158-NAT-Range",
+                        "TF-AG1-IPSET-DR158-LB-VIP1",
+                        "TF-AG1-HOST-ag1sr1wjmp01",
+                        "TF-AG1-HOST-ag1sr1ljmp01",
+                        "TF-AG1-IPSET-DR158-LB-VIP1-NAT"
+                    ]
+                }
+            }
+        }
+    }
+}

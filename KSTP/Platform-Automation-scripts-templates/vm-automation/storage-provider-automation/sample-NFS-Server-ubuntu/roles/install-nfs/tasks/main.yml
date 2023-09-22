@@ -1,0 +1,17 @@
+
+#- name: make sure the mount drive has a filesystem
+#  filesystem: fstype=ext4 dev={{ mountable_share_drive | default('/dev/xvdb') }}
+
+#- name: set mountpoints
+#  mount: name=/share src={{ mountable_share_drive | default('/dev/xvdb') }} fstype=auto opts=defaults,nobootwait dump=0 passno=2 state=mounted
+
+- name: Ensure NFS utilities are installed.
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - nfs-common
+    - nfs-kernel-server
+  become: yes
+
+- name: Create mountable dir
+  file: path=/share state=directory mode=777 owner=root group=root
+  become: yes

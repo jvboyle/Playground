@@ -1,0 +1,115 @@
+---
+    - name: copy new sudoers file
+      copy:
+        src: files/sudoers
+        dest: /etc/sudoers
+        owner: root
+        group: root
+        mode: '0640'
+        backup: yes
+#        validate: /usr/sbin/visudo -csf %s
+
+    - name: remove content of sudoers.d
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_fileglob:
+        - "/etc/sudoers.d/*"
+
+    - name: copy 010_STD_ALIAS_GLB sudo file
+      copy:
+        src: files/010_STD_ALIAS_GLB
+        dest: /etc/sudoers.d/010_STD_ALIAS_GLB
+        owner: root
+        group: root
+        mode: '0440'
+#        backup: yes
+
+    - name: copy 010_STD_NEG_GLB sudo file
+      copy:
+        src: files/010_STD_NEG_GLB
+        dest: /etc/sudoers.d/010_STD_NEG_GLB
+        owner: root
+        group: root
+        mode: '0440'
+#        backup: yes
+
+    - name: copy 010_STD_SA_GLB sudo file
+      copy:
+        src: files/010_STD_SA_GLB
+        dest: /etc/sudoers.d/010_STD_SA_GLB
+        owner: root
+        group: root
+        mode: '0440'
+#        backup: yes
+
+    - name: copy MANIAM sudo file
+      copy:
+        src: files/104_MANIAMLinux_GLB
+        dest: /etc/sudoers.d/104_MANIAMLinux_GLB
+        owner: root
+        group: root
+        mode: '0440'
+#        backup: yes
+
+    - name: copy 411LOG sudo file
+      copy:
+        src: files/411_LOG_LCL
+        dest: /etc/sudoers.d/411_LOG_LCL
+        owner: root
+        group: root
+        mode: '0440'
+#        backup: yes
+#        validate: /usr/sbin/visudo -csf %s
+
+
+
+    - name: create group toweradm
+      group:
+        name: toweradm
+        gid: '668'
+        state: present
+
+    - name: "Create Users Rhel"
+      user:
+        name: "{{ item.username }}"
+        group: "{{ item.group }}"
+        groups: "{{ item.groups }}"
+        expires: "{{ item.expire }}"
+        comment: "{{ item.comment }}"
+        password: "{{ item.password }}"
+        shell: "{{ item.shell }}"
+        home:
+        state: present
+      with_items: "{{ users_rhel }}"
+
+    - name: Set up authorized keys for Cornel
+      authorized_key: 
+        user: cbadea
+        state: present
+        key: "{{ lookup('file', 'files/cbadea.id_rsa.pub') }}"
+
+    - name: Set up authorized keys for Luca
+      authorized_key: 
+        user: lcavallin
+        state: present
+        key: "{{ lookup('file', 'files/lcavallin.id_rsa.pub') }}"
+
+    - name: Set up authorized keys for Aleksandre
+      authorized_key: 
+        user: akhachaturov
+        state: present
+        key: "{{ lookup('file', 'files/akachaturov.id_rsa.pub') }}"
+
+    - name: Set up authorized keys for Mark
+      authorized_key: 
+        user: mvasi
+        state: present
+        key: "{{ lookup('file', 'files/mvasi.id_rsa.pub') }}"
+
+    - name: Set up authorized keys for Autom802
+      authorized_key: 
+        user: autom802
+        state: present
+        key: "{{ lookup('file', 'files/autom802.id_rsa.pub') }}"
+...

@@ -1,0 +1,183 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8080",
+            "TCP-8443",
+            "HTTPS",
+            "TCP-4500",
+            "TCP-3661"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1ecnp",
+            "TF-EU1-HOST-eu1d109lplegsldb2",
+            "TF-EU1-IPSET-DR109-eu1d109lplegsldb-vip",
+            "TF-EU1-HOST-nlaspnp000m1ermp",
+            "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+            "TF-EU1-HOST-eu1srlpm1easbcp",
+            "TF-EU1-SG-DR109-MnE-SL1-DB",
+            "TF-EU1-HOST-eu1srlpm1etnp1",
+            "TF-EU1-SG-DRES109-MNEAAS-LEG-NCPP",
+            "TF-EU1-HOST-eu1d109lplegsldb1",
+            "TF-EU1-HOST-eu1srlpm1etnp2"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES109": {
+            "category": "Application",
+            "rules": {
+                "4997": {
+                    "display_name": "TF-4997-BlueCare-sync-HTEMS-post-migration-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DRES109-MNEAAS-LEG-NCPP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-3661"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1easbcp",
+                        "TF-EU1-SG-DRES109-MNEAAS-LEG-NCPP"
+                    ]
+                },
+                "5000": {
+                    "display_name": "TF-5000-HTEMS-event-forward-to-Netcool",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DRES109-MNEAAS-LEG-NCPP"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-4500"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "",
+                    "scope": [
+                        "TF-EU1-SG-SRES-MNEAAS-UKI-NCO",
+                        "TF-EU1-SG-DRES109-MNEAAS-LEG-NCPP"
+                    ]
+                },
+                "8326": {
+                    "display_name": "TF-8326-Sync-Deamon-Portal-Push",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-SG-DR109-MnE-SL1-DB"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1etnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8080"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51427119",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1etnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1",
+                        "TF-EU1-SG-DR109-MnE-SL1-DB"
+                    ]
+                },
+                "8327": {
+                    "display_name": "TF-8327-Sync-Deamon-SL1",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1etnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-SG-DR109-MnE-SL1-DB"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR51427119",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1etnp2",
+                        "TF-EU1-HOST-eu1srlpm1etnp1",
+                        "TF-EU1-SG-DR109-MnE-SL1-DB"
+                    ]
+                },
+                "8975": {
+                    "display_name": "TF-8975-Copy-of-SL1-API-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-IPSET-DR109-eu1d109lplegsldb-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "HTTPS"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0139957",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d109lplegsldb2",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d109lplegsldb1",
+                        "TF-EU1-IPSET-DR109-eu1d109lplegsldb-vip"
+                    ]
+                },
+                "9063": {
+                    "display_name": "TF-9063-Copy-of-Copy-of-SL1-API-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-IPSET-DR109-eu1d109lplegsldb-vip"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-nlaspnp000m1ermp"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8443"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0144845",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1ecnp",
+                        "TF-EU1-HOST-eu1d109lplegsldb2",
+                        "TF-EU1-HOST-nlaspnp000m1ermp",
+                        "TF-EU1-HOST-eu1d109lplegsldb1",
+                        "TF-EU1-IPSET-DR109-eu1d109lplegsldb-vip"
+                    ]
+                }
+            }
+        }
+    }
+}

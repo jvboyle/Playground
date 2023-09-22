@@ -1,0 +1,51 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "ICMP Echo",
+            "SSH",
+            "TCP-7706",
+            "SNMP",
+            "ICMP Echo Reply"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-EU1-HOST-eu1srlpm1esldc1",
+            "TF-EU1-HOST-eu1d184lpnxtsldc"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES184": {
+            "category": "Application",
+            "rules": {
+                "6865": {
+                    "display_name": "TF-6865-Sciencelogic-collector-selfmon",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-EU1-HOST-eu1srlpm1esldc1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-EU1-HOST-eu1d184lpnxtsldc"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "ICMP Echo",
+                        "SSH",
+                        "SNMP",
+                        "TCP-7706",
+                        "ICMP Echo Reply"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR50990884\n",
+                    "scope": [
+                        "TF-EU1-HOST-eu1srlpm1esldc1",
+                        "TF-EU1-HOST-eu1d184lpnxtsldc"
+                    ]
+                }
+            }
+        }
+    }
+}

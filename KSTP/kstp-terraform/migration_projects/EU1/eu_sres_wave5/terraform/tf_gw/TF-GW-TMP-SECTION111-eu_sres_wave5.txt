@@ -1,0 +1,27 @@
+######################################################
+# migration: eu_sres_wave5
+######################################################
+   rule {
+         display_name = "TF-9271-EMERGENCY-JH-RULE-Keep-Disabled-"
+         notes        = ""
+         source_groups = [
+               "/infra/domains/default/groups/TF-EU1-SG-SRES-Linux-Jump-Servers"
+            ]
+         destination_groups = [
+
+            ]
+         action = "ALLOW"
+         services = [
+
+            ]
+         scope = [local.gw_scope]
+         disabled              = true
+         direction             = "IN_OUT"
+         ip_version            = "IPV4_IPV6"
+         logged                = false
+         sources_excluded      = false
+         destinations_excluded = false
+         tag {
+               tag = "TF-TMP-Section-EU1"
+            }
+      }

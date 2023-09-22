@@ -1,0 +1,72 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "SSH",
+            "TCP-8081"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AG1-HOST-ag1d299lpcacpr2",
+            "TF-AG1-IPSET-DRES299-CACF-Proxy-VIP",
+            "TF-AG1-SG-SRES01-OCP-Cluster01",
+            "TF-AG1-HOST-ag1srlpcacfbds1",
+            "TF-AG1-HOST-ag1d299lpcacpr1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES299": {
+            "category": "Application",
+            "rules": {
+                "3728": {
+                    "display_name": "TF-3728-CACF-tp-BDS",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-HOST-ag1d299lpcacpr1",
+                        "TF-AG1-HOST-ag1d299lpcacpr2"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-HOST-ag1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "CHGEU0192290",
+                    "scope": [
+                        "TF-AG1-HOST-ag1d299lpcacpr1",
+                        "TF-AG1-HOST-ag1srlpcacfbds1",
+                        "TF-AG1-HOST-ag1d299lpcacpr2"
+                    ]
+                },
+                "3750": {
+                    "display_name": "TF-3750-Ansible-to-CACF-Proxy-VIP-",
+                    "disabled": false,
+                    "source_groups": [
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AG1-IPSET-DRES299-CACF-Proxy-VIP"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "RITM0136150",
+                    "scope": [
+                        "TF-AG1-IPSET-DRES299-CACF-Proxy-VIP",
+                        "TF-AG1-SG-SRES01-OCP-Cluster01"
+                    ]
+                }
+            }
+        }
+    }
+}

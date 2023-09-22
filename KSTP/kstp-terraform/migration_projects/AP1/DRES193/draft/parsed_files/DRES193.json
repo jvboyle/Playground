@@ -1,0 +1,118 @@
+{
+    "map_services": {
+        "SERVICES": [
+            "TCP-8081",
+            "SSH"
+        ]
+    },
+    "map_groups": {
+        "GROUPS": [
+            "TF-AP1-HOST-ap1srlpcacfbds1",
+            "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+            "TF-AP1-IPSET-ap1d193lpcacpr-vip",
+            "TF-AP1-SG-SRES01-OCP-Cluster01",
+            "TF-AP1-HOST-ap1d193lpcacpr1"
+        ]
+    },
+    "map_policies": {
+        "TF-DRES193": {
+            "category": "Application",
+            "rules": {
+                "1414": {
+                    "display_name": "TF-1414-CPREM-to-CACF-Proxy-VIP",
+                    "source_groups": [],
+                    "source_ips": [
+                        "158.177.100.109",
+                        "67.228.116.82",
+                        "10.100.34.56"
+                    ],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-IPSET-ap1d193lpcacpr-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR1418327\n\nSR1418527 -removed 10.187.121.119\n10.85.147.117  then added   67.228.116.82\n158.177.100.109 ",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d193lpcacpr1",
+                        "TF-AP1-IPSET-NET-CPREM-GSNI-NAT-range",
+                        "TF-AP1-IPSET-ap1d193lpcacpr-vip"
+                    ]
+                },
+                "1415": {
+                    "display_name": "TF-1415-CACF-Proxy-to-BDS",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d193lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "TCP-8081"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR1418327",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d193lpcacpr1",
+                        "TF-AP1-HOST-ap1srlpcacfbds1"
+                    ]
+                },
+                "1416": {
+                    "display_name": "TF-1416-CACF-Proxy-to-CPREM",
+                    "source_groups": [
+                        "TF-AP1-HOST-ap1d193lpcacpr1"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [],
+                    "destination_ips": [
+                        "158.177.100.109",
+                        "67.228.116.82",
+                        "10.100.34.56"
+                    ],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR1418327\nSR1418527 -removed 10.187.121.119\n10.85.147.117  then added   67.228.116.82\n158.177.100.109 ",
+                    "scope": [
+                        "TF-AP1-HOST-ap1d193lpcacpr1"
+                    ]
+                },
+                "1417": {
+                    "display_name": "TF-1417-OCP-Cluster01-to-CACF-Proxy-VIP",
+                    "source_groups": [
+                        "TF-AP1-SG-SRES01-OCP-Cluster01"
+                    ],
+                    "source_ips": [],
+                    "destination_groups": [
+                        "TF-AP1-IPSET-ap1d193lpcacpr-vip"
+                    ],
+                    "destination_ips": [],
+                    "services": [
+                        "SSH"
+                    ],
+                    "action": "ALLOW",
+                    "direction": "IN_OUT",
+                    "logged": true,
+                    "notes": "SR1418327",
+                    "scope": [
+                        "TF-AP1-SG-SRES01-OCP-Cluster01",
+                        "TF-AP1-HOST-ap1d193lpcacpr1",
+                        "TF-AP1-IPSET-ap1d193lpcacpr-vip"
+                    ]
+                }
+            }
+        }
+    }
+}
