@@ -1,0 +1,17 @@
+[Unit]
+Description=SJHP Service for %i
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/usr/local/bin/docker-compose down -v
+ExecStartPre=-/usr/local/bin/docker-compose rm -fv
+ExecStartPre=/sasg/bin/HA/pre-start_master.sh %i
+ExecStart=/usr/local/bin/docker-compose up
+ExecStop=/usr/local/bin/docker-compose down -v
+ExecStartPost=/sasg/bin/HA/post-start_master.sh %i
+
+[Install]
+WantedBy=multi-user.target

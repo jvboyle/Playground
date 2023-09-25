@@ -1,0 +1,33 @@
+/sasg/logs/Nginx/*.log
+{
+    daily
+    missingok
+    rotate 10
+    compress
+    delaycompress
+    notifempty
+    create 640 root users
+    sharedscripts
+    postrotate
+       if [ -f /var/run/nginx.pid ]; then
+          kill -USR1 `cat /var/run/nginx.pid` 2> /dev/null || true
+       fi
+    endscript
+}
+
+# Nginx LogoRotate End
+
+/sasg/logs/Firewall/sasgfw
+/sasg/logs/VPN/sasvpn01
+{
+    daily
+    dateext
+    rotate 10
+    compress
+    sharedscripts
+    create 650 root users
+    postrotate
+       ps -eaf | grep ulogd |grep -v grep|awk '{print $1}' | xargs kill
+       ulogd -d
+    endscript
+}

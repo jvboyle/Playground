@@ -1,0 +1,12 @@
+[Unit]
+Description=SJHP Watchdog Service
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/
+ExecStart=/sasg/bin/HA/watchdog.sh
+
+[Install]
+WantedBy=multi-user.target

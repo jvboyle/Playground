@@ -1,0 +1,26 @@
+Dockerfile_v1
+#
+# SASGaaS Shared Docker Host Deployment
+#
+#FROM centos:7
+FROM gliderlabs/alpine:3.4
+MAINTAINER Jinho Hwang "jinho@us.ibm.com"
+
+# Run updates and install development tools
+RUN rm /etc/apk/repositories
+RUN echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+RUN echo "http://alpine.gliderlabs.com/alpine/v3.4/community" >> /etc/apk/repositories
+RUN apk add --no-cache ipsec-tools openvpn \
+                   iptables ulogd \
+                   ipset openrc \
+                   tcpdump bash bash-doc bash-completion \
+                   nginx netcat-openbsd \
+                   util-linux pciutils usbutils \ 
+		   coreutils binutils findutils grep
+
+RUN mkdir -p /opt/sasg/
+RUN mkdir -p /opt/sasg/sasg_install
+ADD sasg_install /opt/sasg/sasg_install
+ADD run.sh /opt/sasg/
+WORKDIR /opt/sasg/
+CMD ./run.sh

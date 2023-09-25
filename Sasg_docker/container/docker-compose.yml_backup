@@ -1,0 +1,26 @@
+# Command to create Docker Network 
+# Subnet = subnet for Vips assigned to container expand it to include the GW subnet range
+# Gateway = Upstream Router to reach the internet to connect to Sasfw
+## docker network create -d macvlan --subnet=10.186.0.0/16 --gateway=10.186.22.3 -o parent=eth0 macvlan
+
+version: '2'
+networks:
+  default:
+    external:
+      name: macvlan
+
+services:
+  sasgc:
+# Image with tag name 
+    image: sla/sasgc
+    cap_add:
+      - NET_ADMIN
+    networks:
+      default:
+        ipv4_address: ${IP}
+    volumes:
+#        - ${CLIENTDIR}/${SASFW}/sasg_install:/opt/sasg/sasg_install
+        - ${CLIENTDIR}/${SASFW}/vars:/opt/sasg/sasg_install/vars 
+        - ${CLIENTDIR}/${SASFW}/keys:/opt/sasg/sasg_install/keys 
+        - ${CLIENTDIR}/${SASFW}/logs:/sasg/logs
+        - ${CLIENTDIR}/${SASFW}/Nginx:/sasg/Nginx 

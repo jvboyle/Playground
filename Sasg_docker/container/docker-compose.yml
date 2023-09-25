@@ -1,0 +1,58 @@
+# Command to create Docker Network
+# Subnet = subnet for Vips assigned to container expand it to include the GW subnet range
+# Gateway = Upstream Router to reach the internet to connect to Sasfw
+## docker network create -d ipvlan --subnet=10.186.0.0/16 --gateway=10.186.22.3 -o parent=eth0 ipvlan
+
+services:
+  sasgc:
+    image: gts-tia-sasg-dev-docker-local.artifactory.swg-devops.com/sasg_build:latest
+    read_only: true
+    tmpfs:
+      - /etc/nginx/conf.d:exec
+      - /sasg:exec
+      - /var:exec
+      - /tmp:exec
+      - /tmp/log:exec
+      - /run:exec
+    cap_add:
+      - NET_ADMIN
+    networks:
+      default:
+        ipv4_address: ${IP}
+    volumes:
+        - ${CLIENTDIR}/${SASFW}/vars:/opt/sasg/sasg_install/vars
+        - ${CLIENTDIR}/${SASFW}/keys:/opt/sasg/sasg_install/keys
+        - ${CLIENTDIR}/${SASFW}/logs:/sasg/logs
+        - ${CLIENTDIR}/${SASFW}/Nginx:/sasg/Nginx
+        - iptables:/etc/iptables
+        - ipset:/etc/ipset.d
+        - sasg-configs:/sasg/configs
+  checker:
+    image: gts-tia-sasg-dev-docker-local.artifactory.swg-devops.com/sasg-sidecar-checker:latest
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/spool/cron
+    volumes:
+      - ${CERT}:/certs/client.cert:ro
+      - ${KEY}:/certs/client.key:ro
+      - /var/log:/host/logs/
+      - ./logs/Firewall:/host/logs/fw
+      - ./logs/VPN:/host/logs/vpn
+      - /var/log/audit:/host/logs/audit
+      - /etc/ssh/sshd_config:/host/configs/sshd_config:ro
+      - iptables:/sasg/iptables:ro
+      - ipset:/sasg/ipset:ro
+      - sasg-configs:/sasg/configs:ro
+    network_mode: "service:sasgc"
+    environment:
+      - DOCKER_HOST_NAME=${DOCKER_HOST_NAME}
+      - LOGPUSH_IP=${LOGPUSH_IP}
+      - LOGPUSH_PORT=${LOGPUSH_PORT}
+      - CRON_UPLOAD_LOGS=${CRON_UPLOAD_LOGS}
+      - CRON_CHECK_CONFIG=${CRON_CHECK_CONFIG}
+
+volumes:
+  iptables:
+  ipset:
+  sasg-configs:

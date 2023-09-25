@@ -1,0 +1,14 @@
+[Unit]
+Description=SJHP Slave Service for %i
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/sasg/bin/HA/pre-start_slave.sh %i
+ExecStart=/sasg/bin/HA/watchdog_slave.sh %i
+ExecStartPost=/sasg/bin/HA/post-start_slave.sh %i
+
+[Install]
+WantedBy=multi-user.target
