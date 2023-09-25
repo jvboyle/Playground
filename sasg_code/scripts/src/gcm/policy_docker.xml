@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cdf:Benchmark xmlns:scm="?" xmlns:cdf="http://checklists.nist.gov/xccdf/1.0" id="Docker-Engine-UNIX-CSD-1.0">
+<cdf:status date="Fri Jan 11 08:12:38 GMT 2019"/>
+<cdf:title>Docker-Engine-UNIX-CSD-1.0</cdf:title>
+<cdf:techSpec type="CSD" version="1.0"/>
+<cdf:platform osId="Linux" family="UNIX">
+<cdf:supportedplatform id="RedHat Enterprise Linux" versionId=""/>
+</cdf:platform>
+<cdf:middleware id="Docker" subid="Engine">
+<version>Docker Engine versions 1.1.2 or later </version>
+</cdf:middleware>
+<cdf:description>GCM Docker Engine policy for UNIX Last Modified: 20181211
+According to single instance CSD Version 1.0 / March, 2018</cdf:description>
+<cdf:version></cdf:version>
+<cdf:Profile/>
+<cdf:Group>
+<cdf:Rule id="1">
+<cdf:TechSpecsEntriesRef id="35,37,39,41,49,51,53"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Protecting Resources - OSRs/Files Permissions</cdf:title>
+<cdf:ruleName>Files_Permissions_1</cdf:ruleName>
+<cdf:description>Files 'docker.service' which file location getting by command 'systemctl show -p FragmentPath docker.service', 'docker.socket' which file location getting by command 'systemctl show -p FragmentPath docker.socket', '/etc/docker/daemon.json' and '/etc/default/docker' must have permissions '644'.
+File '/etc/docker' must have permissions '755'.
+File '/etc/docker/certs.d/&lt;registry-name&gt;/* must have permissions '444'.
+File '/var/run/docker.sock' must have permissions 660.
+Note:  More restrictive permissions are allowed</cdf:description>
+<scm:violationMessage>File {1} have illegal permissions {3}.</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID, a."PATH",a.FILE_EXIST, a.PERMISSIONS
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_FILES_ATTRIBUTES_V1 a
+WHERE (a."PATH" = '/etc/docker' AND  a.PERMISSIONS NOT LIKE '____-__-_') OR
+((a."PATH" LIKE '%docker.socket' OR
+a."PATH" = '/etc/docker/daemon.json' OR
+a."PATH" = '/etc/default/docker' OR
+a."PATH" LIKE '%docker.service') AND a.PERMISSIONS NOT LIKE '__-_--_--') OR
+(a."PATH" = ' /etc/docker/certs.d%' AND  a.PERMISSIONS NOT LIKE '_--_--_--') OR
+(a."PATH" = '/var/run/docker.sock' AND  a.PERMISSIONS NOT LIKE '__-__----')</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="2">
+<cdf:TechSpecsEntriesRef id="34,36,38,40,48,50,52"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Protecting Resources - OSRs/Files Owners</cdf:title>
+<cdf:ruleName>Files_Owners_2</cdf:ruleName>
+<cdf:description>File '/var/run/docker.sock' must be owned by 'root' and group-owned by 'docker'.
+Files 'docker.service' which file location getting by command 'systemctl show -p FragmentPath docker.service', 'docker.socket' which file location getting by command 'systemctl show -p FragmentPath docker.socket', '/etc/docker/daemon.json', '/etc/docker/certs.d/&lt;registry-name&gt;/*' and '/etc/default/docker' must be owned by 'root' and group-owned by 'root'.</cdf:description>
+<scm:violationMessage>File '{1}' have illegal owner '{3}' or 'group-owner' {4}.</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID, a."PATH",a.FILE_EXIST, a.USER_OWNER, a.GROUP_OWNER
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_FILES_ATTRIBUTES_V1 a
+WHERE ((a."PATH" = '/etc/docker' OR
+a."PATH" LIKE '%docker.socket' OR
+a."PATH" = '/etc/docker/daemon.json' OR
+a."PATH" = '/etc/default/docker' OR
+a."PATH" = '/etc/docker/certs.d%' OR
+a."PATH" LIKE '%docker.service') AND
+(a.USER_OWNER != 'root' OR a.GROUP_OWNER != 'root')) OR
+(a."PATH" = '/var/run/docker.sock' AND
+(a.USER_OWNER != 'root' OR a.GROUP_OWNER != 'docker'))</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="3">
+<cdf:TechSpecsEntriesRef id="2"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Logging/Log Level</cdf:title>
+<cdf:ruleName>Log_Level_3</cdf:ruleName>
+<cdf:description>The '--log-level' parameter of Docker daemon must not be present or if present must set to false.</cdf:description>
+<scm:violationMessage>The '{1}' parameter set to '{2}' must be set to 'false'. </scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID,a."OPTION" ,a.VALUE
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_PROCESS_OPTIONS_V1 a
+WHERE (a."OPTION" LIKE '%--log-level%' AND
+a.VALUE NOT LIKE '%info%')
+UNION
+SELECT DISTINCT b.CLI_ID,b.OPTION_NAME,b.OPTION_VALUE
+FROM JAC_DATA.UNIX_DOCKER_DAEMON_FILE_OPTIONS_V1 b
+WHERE (b.OPTION_NAME LIKE '%log-level%' AND
+b.OPTION_VALUE NOT LIKE '%info%')</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="4">
+<cdf:TechSpecsEntriesRef id="15"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>System Settings/Docker legacy registry</cdf:title>
+<cdf:ruleName>Docker_legacy_registry_4</cdf:ruleName>
+<cdf:description>Docker legacy registry should be restricted. The --disable-legacy-registry' parameter of the docker daemon must be present</cdf:description>
+<scm:violationMessage>{1}</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID, 'Docker daemon option --disable-legacy-registry is not present'
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_PROCESS_OPTIONS_V1 a
+WHERE a.CLI_ID NOT IN (SELECT b.CLI_ID FROM JAC_DATA.UNIX_DOCKER_ENGINE_PROCESS_OPTIONS_V1 b
+WHERE b."OPTION" LIKE '%--disable-legacy-registry%'
+UNION
+SELECT DISTINCT c.CLI_ID
+FROM JAC_DATA.UNIX_DOCKER_DAEMON_FILE_OPTIONS_V1 c
+WHERE (c.OPTION_NAME LIKE '%disable-legacy-registry%'))</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="5">
+<cdf:TechSpecsEntriesRef id="3,4,5,6,7,8"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Logging/Audit Rules</cdf:title>
+<cdf:ruleName>Audit_Rules_5</cdf:ruleName>
+<cdf:description>Files '/etc/default/docker', '/etc/docker', '/etc/docker/daemon.json', '/usr/bin/docker', 'docker.service' which file location getting by command 'systemctl show -p FragmentPath docker.service' must have rules in file '/etc/audit/audit.rules'. Rules must be loaded by the audit daemon'</cdf:description>
+<scm:violationMessage>Audit rules for '{1}' not exist in '/etc/audit/audit.rules'</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID, a."PATH",a.FILE_EXIST, a.AUDIT_RULE
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_FILES_ATTRIBUTES_V1 a
+WHERE (a."PATH" != '/var/run/docker.sock' AND
+a."PATH" NOT LIKE '/etc/docker/certs.d%') AND
+(a.AUDIT_RULE = FALSE OR a.AUDIT_RULE IS NULL) </scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="6">
+<cdf:TechSpecsEntriesRef id="14"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>System Settings/Insecure Registries</cdf:title>
+<cdf:ruleName>Insecure_Registries_6</cdf:ruleName>
+<cdf:description>You should not be using any insecure registries in the production environment. The '--insecure-registry' parameter of Docker daemon must not be present.</cdf:description>
+<scm:violationMessage>You should not be using any insecure registries</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_INFO_V1 a
+WHERE a.INSECURE_REGISTRIES = TRUE</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="7">
+<cdf:TechSpecsEntriesRef id="25"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>System Settings/Swarm Mode</cdf:title>
+<cdf:ruleName>Swarm_Mode_7</cdf:ruleName>
+<cdf:description>Run Docker swarm manager in auto-lock mode. Docker daemon must be running with '--autolock' flag</cdf:description>
+<scm:violationMessage>Swarm was NOT initialized with the --autolock flag</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID,a.SWARM_AUTOLOCK
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_INFO_V1 a
+WHERE a.SWARM_AUTOLOCK LIKE '%not autolock%'</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="8">
+<cdf:TechSpecsEntriesRef id="28"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>System Settings/Server Experimental</cdf:title>
+<cdf:ruleName>Server_Experimental_8</cdf:ruleName>
+<cdf:description>Avoid experimental features in production. Do not pass '--experimental' as a runtime parameter to the Docker daemon.</cdf:description>
+<scm:violationMessage>Experimental property is set to 'true' in the Server section. Must be set to 'false'</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_INFO_V1 a
+WHERE a.SERVER_EXPERIMENTAL = TRUE</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="9">
+<cdf:TechSpecsEntriesRef id="29"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Network Settings/Inter container communication</cdf:title>
+<cdf:ruleName>Inter_container_communication_7</cdf:ruleName>
+<cdf:description>Restrict the inter container communication. Run the Docker in daemon mode and pass '--icc=false' as argument.</cdf:description>
+<scm:violationMessage>Inter container communication parameter set to 'true' in network '{1}'. Must be set to 'false'.</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID, a.NETWORK_NAME
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_NETWORK_OPTIONS_V1 a
+WHERE a.ICC_ENABLE = TRUE</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="10">
+<cdf:TechSpecsEntriesRef id="32"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Network Settings/Userland proxy</cdf:title>
+<cdf:ruleName>Userland_proxy_10</cdf:ruleName>
+<cdf:description>The userland proxy should be disabled on startup to reduce the attack surface of the installation. Run the Docker in daemon mode and pass '--userland-proxy=false' as argument.</cdf:description>
+<scm:violationMessage>The '{1}' parameter set to '{2}'. Must be set to 'false'</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID,a."OPTION",a.VALUE
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_PROCESS_OPTIONS_V1 a
+WHERE (a."OPTION" LIKE '%--userland-proxy%' AND
+UPPER(a.VALUE) NOT LIKE '%FALSE%')
+UNION
+SELECT DISTINCT b.CLI_ID,b.OPTION_NAME,b.OPTION_VALUE
+FROM JAC_DATA.UNIX_DOCKER_DAEMON_FILE_OPTIONS_V1 b
+WHERE (b.OPTION_NAME LIKE '%userland-proxy%' AND
+UPPER(b.OPTION_VALUE) NOT LIKE '%FALSE%')  </scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="11">
+<cdf:TechSpecsEntriesRef id="18"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>System Settings/Cgroup parent</cdf:title>
+<cdf:ruleName>Cgroup_parent_11</cdf:ruleName>
+<cdf:description>The '--cgroup-parent' parameter is mast not set or is set as appropriate non-default cgroup.</cdf:description>
+<scm:violationMessage>The '--cgroup-parent' parameter set to default cgroup</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID,a."OPTION",a.VALUE
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_PROCESS_OPTIONS_V1 a
+WHERE(a."OPTION" LIKE '%--cgroup-parent%' AND
+a.VALUE LIKE '%/docker')
+UNION
+SELECT DISTINCT b.CLI_ID,b.OPTION_NAME,b.OPTION_VALUE
+FROM JAC_DATA.UNIX_DOCKER_DAEMON_FILE_OPTIONS_V1 b
+WHERE (b.OPTION_NAME LIKE '%cgroup-parent%' AND
+b.OPTION_VALUE LIKE '%/docker%')
+</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:Rule id="12">
+<cdf:TechSpecsEntriesRef id="3,4,5,6,7,8"/>
+<cdf:requires idref="DockerV1"></cdf:requires>
+<cdf:title>Logging/Audit File</cdf:title>
+<cdf:ruleName>Audit_File_12</cdf:ruleName>
+<cdf:description>The /etc/audit/audit.rules file must be present on the system</cdf:description>
+<scm:violationMessage>{1}</scm:violationMessage>
+<scm:priority>normal</scm:priority>
+<cdf:check>
+<scm:sql>SELECT DISTINCT
+a.CLI_ID,'Audit file /etc/audit/audit.rules is not exist'
+FROM JAC_DATA.UNIX_DOCKER_ENGINE_FILES_ATTRIBUTES_V1 a
+WHERE a."PATH" LIKE '%/etc/audit/audit.rules%' AND
+a.FILE_EXIST = FALSE
+</scm:sql>
+</cdf:check>
+</cdf:Rule>
+<cdf:TechSpecsEntriesList>
+<cdf:TechSpecsEntries id="1">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.1.0</cdf:SectionNumber>
+<cdf:SectionHeading>Password Requirements</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="2">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.0</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>log-level</cdf:SystemValue_Parameter>
+<cdf:Description>Setting up an appropriate log level, configures the Docker daemon to log events that you would want to review later. A base log level of 'info' and above would capture all logs except debug logs. Until and unless required, you should not run Docker daemon at 'debug' log level.</cdf:Description>
+<cdf:RecommendedValue>ps ef |grep dockerd
+
+Ensure that either the '--log-level' parameter is not present or if present, then it is set to 'info'.
+Remediation:
+Run the Docker daemon as below:
+Dockerd log-level=info
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="3">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.1</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>Docker daemon runs with 'root' privileges. It is thus necessary to audit its activities and usage.</cdf:Description>
+<cdf:RecommendedValue>Verify that there is an audit rule for Docker daemon. For example, execute below command:
+Command:  auditctl l |grep /usr/bin/docker
+This should list a rule for Docker daemon.
+Remediation:
+Add a rule for Docker daemon
+For example,
+Add the line as below line in /etc/audit/audit.rules file:
+-w /usr/bin/docker k docker
+Then, restart the audit daemon
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="4">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.2</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/docker contains certificates and keys used for TLS communication between Docker daemon and Docker client. </cdf:Description>
+<cdf:RecommendedValue>Verify that there is an audit rule corresponding to /etc/docker directory.
+For example, execute below command:
+Command: auditctl l |grep /etc/docker
+This should list a rule for /etc/docker directory.
+Remediation:
+Add a rule for /etc/docker directory.
+Add the line as below in /etc/audit/audit.rules file:
+-w /etc/docker k docker
+Then, restart the audit daemon.
+
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="5">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.3</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>The docker.service file contains all the configuration options for the docker process. Changes to docker.service file can change behavior of Docker daemon. It must be audited if applicable</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+systemctl show  -p FragmentPath docker.service
+If the file does not exist, this recommendation is not applicable. If the file exists, verify that there is an audit rule corresponding to the file: For example, execute below command:
+Command: auditctl l |grep docker.service
+This should list a rule for docker.service as per its location.
+Remediation:
+If the file exists, add a rule for it.
+Add the line to include file location  as below in /etc/audit/audit.rules file:
+Example:
+-w /usr/lib/system/system/docker.service k docker
+Then, restart the audit daemon
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="6">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.4</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>The daemon.json file is another file where Docker daemon configuration optoons can be set. Changes to this file can impact the way Docker daemon behavior so this file must be audited, if applicable</cdf:Description>
+<cdf:RecommendedValue>The default location of the configuration file on Linux is /etc/docker/daemon.json
+Verify that there is an audit rule corresponding to /etc/docker/daemon.json file.
+Command: auditctl l |grep /etc/docker/daemon.json
+This should list a rule for /etc/docker/daemon.json file.
+Remediation:
+Add a rule for /etc/docker/daemon.json file.
+Add the line as below in /etc/audit/audit.rules file:
+-w /etc/docker/daemon.json k
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="7">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.5</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>The docker.socket file contains configuration parameters for Docker daemon socket,  like ListenStream. This file must be audited, if applicable</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+Command: systemctl show -p FragmentPath docker.socket
+If the file does not exist, this recommendation is not applicable. If the file exists, verify that there is an audit rule corresponding to the file:
+For example, execute the below command:
+auditctl  -l |grep docker.socket
+This should list a rule for docker.socket as per its location.
+Remediation:
+If the file exists, add a rule for it.
+Example,
+Add the line as below in /etc/audit/audit.rules file:
+-w /lib/systemd/system/docker.socket k docker
+Then, restart the audit daemon.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="8">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.6</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/audit/audit.rules</cdf:SystemValue_Parameter>
+<cdf:Description>The file /etc/default/docker is used for configuring Docker daemon parameters on systems systems running upstart and sysvinit. Docker daemon runs with 'root' privileges. Its behavior depends on various parameters in that file. . It must be audited, if applicable.</cdf:Description>
+<cdf:RecommendedValue>Verify that there is an audit rule corresponding to /etc/default/docker file.
+For example, execute below command:
+auditctl  -l |grep /etc/default.docker
+This should list a rule for /etc/default/docker file.
+Remediation:
+Add a rule for /etc/default/docker file.
+For example,
+Add the line as below in /etc/audit/audit.rules file:
+-w /etc/default/docker k docker
+Then, restart the audit daemon.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="9">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.2.7</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Centralized and remote logging ensures that all important log records are safe despite catastrophic events. Docker now supports various such logging drivers. Use the one that suits your environment the best</cdf:Description>
+<cdf:RecommendedValue> Run docker info and ensure that the Logging Driver property set as appropriate.
+docker info --format '{{ .LoggingDriver }}'
+Alternatively the below command would give you the --log-driver setting, if configured. Ensure that it is set as appropriate.
+ps -ef | grep dockerd
+Remediation:
+Step 1: Setup the desired log driver by following its documentation.
+Step 2: Start the docker daemon with that logging driver.
+For example,
+dockerd --log-driver=syslog --log-opt syslog-address=tcp://192.xxx.xxx.xxx
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="10">
+<cdf:Coverage>Orange</cdf:Coverage>
+<cdf:operation>baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.2.8</cdf:SectionNumber>
+<cdf:SectionHeading>Logging</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>Log record retention time</cdf:SystemValue_Parameter>
+<cdf:Description>Period of time to retain above logs</cdf:Description>
+<cdf:RecommendedValue>90 days</cdf:RecommendedValue>
+<cdf:Comments>This is manual check. </cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="11">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.3.0</cdf:SectionNumber>
+<cdf:SectionHeading>AntiVirus</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="12">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.4.0</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>Docker Host System</cdf:SystemValue_Parameter>
+<cdf:Description>Containers run on a Linux host. A container host can run one or more containers. It is of utmost importance to harden the host to mitigate host security misconfiguration.</cdf:Description>
+<cdf:RecommendedValue>You should follow appropriate Security Tech Specifications and harden your host OS. Keeping the host system hardened would ensure that the host vulnerabilities are mitigated. Not hardening the host system could lead to security exposures and breaches.</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="13">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.1</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/var/lib/docker</cdf:SystemValue_Parameter>
+<cdf:Description>All Docker containers and their data and metadata is stored under /var/lib/docker directory. By default, /var/lib/docker would be mounted under / or /var partitions based on availability.</cdf:Description>
+<cdf:RecommendedValue>Docker depends on /var/lib/docker as the default directory where all Docker related files, including the images, are stored. This directory might fill up fast and soon Docker and the host could become unusable. So, it is advisable to create a separate partition (logical volume) for storing Docker files.
+At the Docker host execute the below command:
+grep /var/lib/docker /etc/fstab
+
+This should return the partition details for /var/lib/docker mount point.
+Remediation:
+For new installations, create a separate partition for /var/lib/docker mount point. For systems that were previously installed, use the Logical Volume Manager (LVM) to create partitions.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="14">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.2</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>image registry</cdf:SystemValue_Parameter>
+<cdf:Description>You should not be using any insecure registries in the production environment. Insecure registries can be tampered with leading to possible compromise to your production system.</cdf:Description>
+<cdf:RecommendedValue>Rundocker infoor execute the below command to find out if any insecure registries are used:
+docker info |grep -i "Insecure Registries"
+ps -ef | grep dockerd
+
+Ensure that the '--insecure-registry' parameter is not present.
+Remediation:
+Do not use any insecure registries. Follow the Docker documentation to setup secure registry.</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="15">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="null"/>
+<cdf:SectionNumber>HZ.1.4.3</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>image registry</cdf:SystemValue_Parameter>
+<cdf:Description>Docker registry v2 brings in many performance and security improvements over v1. It supports container image provenance and other security features such as image signing and verification. Hence, operations on Docker legacy registry should be restricted.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+The above command should list --disable-legacy-registry as an option passed to the docker daemon.
+Remediation:
+Start the docker daemon as below:
+dockerd --disable-legacy-registry
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="16">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.4</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>Docker </cdf:SystemValue_Parameter>
+<cdf:Description>By staying up to date on Docker updates, vulnerabilities in the Docker software can be mitigated</cdf:Description>
+<cdf:RecommendedValue>Execute the below command and verify that the Docker version is up to date as deemed necessary. It is not a mandate to be on the latest one, though.
+docker version
+Remediation:
+Keep a track of Docker releases and update as necessary.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="17">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.5</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Enable user namespace support in Docker daemon to utilize container user to host user re-mapping.  It allows a container to have a unique range of user and group IDs which are outside the traditional user and group range utilized by the host system.  This recommendation is beneficial where containers you are using do not have an explicit container user defined in the container image. If container images that you are using have a pre-defined non-root user, this recommendation may be skipped.</cdf:Description>
+<cdf:RecommendedValue>
+ps -p $(docker inspect --format='{{ .State.Pid }}' &amp;lt;CONTAINER ID&amp;gt;) -o pid,user
+
+CONTAINER ID, the container id of container you are checking.
+The above command would find the PID of the container and then would list the host user associated with the container process. If the container process is running as root, then this recommendation is non-compliant
+Alternatively, you can run docker info to ensure that the userns is listed under Security Options:
+
+Please consult Docker documentation for various ways in which this can be configured depending upon your requirements. Your steps might also vary based on platform - For example, on Red Hat, sub-UIDs and sub-GIDs mapping creation does not work automatically. You might have to create your own mapping.
+
+However, the high-level steps are as below:
+Ensure that the files /etc/subuid and /etc/subgid exist.
+touch /etc/subuid /etc/subgid
+Start the docker daemon with --userns-remap flag
+dockerd --userns-remap=default
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="18">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.6</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>System administrators typically define cgroups under which containers are supposed to run. Even if cgroups are not explicitly defined by the system administrators, containers run under docker cgroup by default.</cdf:Description>
+<cdf:RecommendedValue>Audit:
+ps -ef | grep dockerd
+
+Ensure that the '--cgroup-parent' parameter is either not set or is set as appropriate non-default cgroup.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="19">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.7</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>In certain circumstances, you might need containers bigger than 10G in size. In these cases, carefully choose the base device size. A user can use this option to expand the base device size however shrinking is not permitted. This value affects the system-wide base empty filesystem and will use more space</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+Execute the above command and it should not show any --storage-opt dm.basesize parameters.
+Remediation:
+Do not set --storage-opt dm.basesize until needed.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="20">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.8</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>authorization plugin</cdf:SystemValue_Parameter>
+<cdf:Description>Dockers out-of-the-box authorization model is all or nothing. Any user with permission to access the Docker daemon can run any Docker client command. The same is true for callers using Dockers remote API to contact the daemon. If you require greater access control, you can create authorization plugins and add them to your Docker daemon configuration. Using an authorization plugin, a Docker administrator can configure granular access policies for managing access to Docker daemon.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+Ensure that the '--authorization-plugin' parameter is set as appropriate.
+Remediation:
+Install/Create an authorization plugin
+Configure the authorization policy as desired.
+Start the docker daemon as below:
+dockerd --authorization-plugin=&amp;lt;PLUGIN_ID&amp;gt;
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="21">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.9</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>Do not enable swarm mode on a docker engine instance unless needed. When Docker swarm mode is enabled on a docker engine instance, multiple network ports are opened on the system.  Opening network ports on a system increase its attack surface and this should be avoided unless required.</cdf:Description>
+<cdf:RecommendedValue>Review the output of the docker info command. If the output includes Swarm: active it indicates that swarm mode has been activated on the Docker engine. Confirm if swarm mode on the docker engine instance is actually needed.
+Remediation:
+If swarm mode has been enabled on a system in error, run
+docker swarm leave
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="22">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.10</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>Manager nodes within a swarm have control over the swarm and change its configuration modifying security parameters.  Having excessive manager nodes could render the swarm more susceptible to compromise</cdf:Description>
+<cdf:RecommendedValue>Run docker info and verify the number of managers.
+docker info
+Alternatively run the below command.
+docker node ls | grep 'Leader'
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="23">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.11</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>When a swarm is initialized the default value for the --listen-addr flag is 0.0.0.0:2377 which means that the swarm services will listen on all interfaces on the host. If a host has multiple network interfaces this may be undesirable as it may expose the docker swarm services to networks which are not involved in the operation of the swarm.</cdf:Description>
+<cdf:RecommendedValue>List the network listener on port 2377/TCP (the default for docker swarm) and confirm that it is only listening on specific interfaces.
+Remediation:
+Remediation of this requires re-initialization of the swarm specifying a specific interface for the --listen-addr parameter.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="24">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.12</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>Use Docker's in-built secret management command.</cdf:Description>
+<cdf:RecommendedValue>On a swarm manager node, run the below command and ensure docker secret management is used in your environment, if applicable.
+docker secret ls
+Remediation:
+Follow docker secret documentation and use it to manage secrets effectively.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="25">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.13</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>Run Docker swarm manager in auto-lock mode.</cdf:Description>
+<cdf:RecommendedValue>Run the below command. If it outputs the key, it means swarm was initialized with the --autolock flag. If the output is no unlock key is set, it means that swarm was NOT initialized with the --autolock flag and is non-compliant with respect to this recommendation.
+docker swarm unlock-key
+Remediation:
+If you are initializing swarm, use the below command.
+docker swarm init --autolock
+
+If you want to set --autolock on an existing swarm manager node, use the below command.
+docker swarm update --autolock
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="26">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.14</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>swarm</cdf:SystemValue_Parameter>
+<cdf:Description>Rotate swarm manager auto-lock key periodically</cdf:Description>
+<cdf:RecommendedValue>Currently, there is no mechanism to find out when the key was last rotated on a swarm manager node. You should check with the system administrator if there is a key rotation record and the keys were rotated at a pre-defined frequency.
+Remediation:
+Run the below command to rotate the keys.
+docker swarm unlock-key --rotate
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="27">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.15</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>You can choose to apply your custom seccomp profile at the daemon-wide level if needed and override Docker's default seccomp profile.</cdf:Description>
+<cdf:RecommendedValue></cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="28">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.4.16</cdf:SectionNumber>
+<cdf:SectionHeading>System Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Avoid experimental features in production.</cdf:Description>
+<cdf:RecommendedValue>Run the below command and ensure that the Experimental property is set to false in the Server section.
+docker version |grep i Experimental
+Remediation:
+Do not pass --experimental as a runtime parameter to the docker daemon.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="29">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.5.0</cdf:SectionNumber>
+<cdf:SectionHeading>Network Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>By default, unrestricted network traffic is enabled between all containers on the same host. Thus, each container has the potential of reading all packets across the container network on the same host. This might lead to unintended and unwanted disclosure of information to other containers. Hence, restrict the inter container communication.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+Ensure that the '--icc' parameter is set to 'false' or verify by running the below command.
+docker network ls --quiet | xargs xargs docker network inspect --format '{{ .Name }}: {{ .Options }}'
+It should return com.docker.network.bridge.enable_icc:false.
+?
+Remediation:
+Run the docker in daemon mode and pass '--icc=false' as argument.
+For Example,
+/usr/bin/dockerd --icc=false
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="30">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.5.1</cdf:SectionNumber>
+<cdf:SectionHeading>Network Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Docker server would automatically make the needed changes to iptables based on how you choose your networking options for the containers if it is allowed to do so. It is recommended to let Docker server make changes to iptables automatically to avoid networking misconfiguration that might hamper the communication between containers and to the outside world.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+
+Ensure that the '--iptables' parameter is either not present or not set to 'false'.
+Remediation:
+Do not run the Docker daemon with '--iptables=false' parameter.
+
+For example, do not start the Docker daemon as below:
+dockerd --iptables=false
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="31">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.5.2</cdf:SectionNumber>
+<cdf:SectionHeading>Network Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>It is possible to make the Docker daemon to listen on a specific IP and port and any other Unix socket other than default Unix socket. Configure TLS authentication to restrict access to Docker daemon via IP and port.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+
+Ensure that the below parameters are present:
+'--tlsverify'
+'--tlscacert'
+'--tlscert'
+'--tlskey'
+Remediation:
+Follow the steps mentioned in the Docker documentation or other references.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="32">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="null"/>
+<cdf:SectionNumber>HZ.1.5.3</cdf:SectionNumber>
+<cdf:SectionHeading>Network Settings</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Docker engine provides two mechanisms for forwarding ports from the host to containers, hairpin NAT, and a userland proxy.  Where hairpin NAT is available, the userland proxy should be disabled on startup to reduce the attack surface of the installation.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+Ensure that the --userland-proxy parameter is set to false.
+Remediation:
+Create a file named /etc/docker/daemon.json if it does not exist, and add the "userland-proxy": false setting. The daemon.json file should be valid JSON; if this is the only configuration in that file, it should look like;
+{
+"userland-proxy": false
+}
+After saving the file, restart the daemon using (if your host uses systemd);
+sudo systemctl restart docker
+
+Run the Docker daemon as below:
+dockerd --userland-proxy=false
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="33">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.7.0</cdf:SectionNumber>
+<cdf:SectionHeading>Identify and Authenticate Users</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No additional authentication requirements for Docker, other than Operating System requirements of Host System.</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="34">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.0</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker.service</cdf:SystemValue_Parameter>
+<cdf:Description>docker.service' file contains  parameters that can alter the behavior of Docker daemon. Hence, it should be owned and group-owned by 'root' to maintain the integrity of the file.</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+systemctl show -p FragmentPath docker.service
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to verify that the file is owned and group-owned by 'root'.
+For example,
+stat -c %U:%G `systemctl show --property=FragmentPath docker.service | cut -f2 -d =` |grep  -v root:root
+The above command should not return anything.
+Remediation: Find out the file location:
+systemctl show -p FragmentPath docker.service
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to set the ownership and group ownership for the file to 'root'.
+For example
+chown root:root /usr/lib/systemd/system/docker.service
+
+
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="35">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.1</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker.service</cdf:SystemValue_Parameter>
+<cdf:Description>docker.service' file contains  parameters that can alter the behavior of Docker daemon. Hence, it should not be writable by any other user other than 'root' to maintain the integrity of the file.</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+systemctl show -p FragmentPath docker.service
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to verify that the file permissions are set to '644' or more restrictive.
+For example,
+stat -c %a `systemctl show --property=FragmentPath docker.service | cut -f2 -d =`
+Remediation:
+Find out the file location:
+systemctl show -p FragmentPath docker.service
+
+Find out the file location:
+systemctl show -p FragmentPath docker.service
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to set the file permissions to '644'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="36">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.2</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker.socket</cdf:SystemValue_Parameter>
+<cdf:Description>docker.socket' file contains  parameters that can alter the behavior of Docker remote API. Hence, it should be owned and group-owned by 'root' to maintain the integrity of the file.</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+systemctl show -p FragmentPath docker.socket
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to verify that the file is owned and group-owned by 'root'.
+For example,
+stat -c %U:%G `systemctl show --property=FragmentPath docker.socket | cut -f2 -d =` |grep  -v root:root
+The above command should not return anything.
+Remediation:
+Find out the file location:
+systemctl show -p FragmentPath docker.socket
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to set the ownership and group ownership for the file to 'root'.
+For example
+chown root:root /usr/lib/systemd/system/docker.socket
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="37">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.3</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker.socket</cdf:SystemValue_Parameter>
+<cdf:Description>docker.socket' file contains  parameters that can alter the behavior of Docker remote API. Hence, it should not be writable by any other user other than 'root' to maintain the integrity of the file.</cdf:Description>
+<cdf:RecommendedValue>Find out the file location:
+systemctl show -p FragmentPath docker.socket
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to verify that the file permissions are set to '644' or more restrictive.
+For example,
+stat -c %a `systemctl show --property=FragmentPath docker.socket | cut -f2 -d =`
+Remediation:
+Find out the file location:
+systemctl show -p FragmentPath docker.socket
+
+Find out the file location:
+systemctl show -p FragmentPath docker.socket
+
+If the file does not exist, this recommendation is not applicable. If the file exists, execute the below command with the correct file path to set the file permissions to '644'
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="38">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.4</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/docker</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/docker' directory contains certificates and keys in addition to various sensitive files. Hence, it should be owned and group-owned by 'root' to maintain the integrity of the directory.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the directory is owned and group-owned by 'root':
+stat -c %U:%G /etc/docker | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root /etc/docker
+This would set the ownership and group-ownership for the directory to 'root'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="39">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.5</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/docker</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/docker' directory contains certificates and keys in addition to various sensitive files. Hence, it should only be writable by 'root' to maintain the integrity of the directory.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the directory has permissions of '755' or more restrictive:
+stat -c %a /etc/docker
+Remediation:
+chmod 755 /etc/docker
+This would set the permissions for the directory to '755'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="40">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.6</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/docker/certs.d/*</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/docker/certs.d/&amp;lt;registry-name&amp;gt; directory contains Docker registry certificates. These certificate files must be owned and group-owned by 'root' to maintain the integrity of the certificates.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the registry certificate files areowned and group-owned by 'root':
+stat -c %U:%G /etc/docker/certs.d/* | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root /etc/docker/certs.d/&amp;lt;registry-name&amp;gt;/*
+?This would set the ownership and group-ownership for the registry certificate files to 'root'.</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="41">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.7</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/docker/certs.d/*</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/docker/certs.d/&amp;lt;registry-name&amp;gt; directory contains Docker registry certificates. These certificate files must have permissions of '444' to maintain the integrity of the certificates.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the registry certificate files have permissions of '444' or more restrictive:
+stat -c %a /etc/docker/certs.d/&amp;lt;registry-name&amp;gt;/*
+Remediation:
+chmod 444 /etc/docker/certs.d/&amp;lt;registry-name&amp;gt;/*
+
+This would set the permissions for registry certificate files to '444'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="42">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.8</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSCACERT</cdf:SystemValue_Parameter>
+<cdf:Description>The TLS CA certificate file should be protected from any tampering. It is used to authenticate Docker server based on given CA certificate. Hence, it must be owned and group-owned by 'root' to maintain the integrity of the CA certificate.
+stat -c %U:%G &amp;lt;path to TLS CA certificate file&amp;gt; | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root &amp;lt;path to TLS CA certificate file&amp;gt;
+
+This would set the ownership and group-ownership for the TLS CA certificate file to 'root'.
+</cdf:Description>
+<cdf:RecommendedValue>"Execute the below command to verify that the TLS CA certificate file is owned and group-owned by 'root':
+stat -c %U:%G &amp;lt;path to TLS CA certificate file&amp;gt; | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root &amp;lt;path to TLS CA certificate file&amp;gt;
+
+This would set the ownership and group-ownership for the TLS CA certificate file to 'root'.
+"</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="43">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.9</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSCACERT</cdf:SystemValue_Parameter>
+<cdf:Description>The TLS CA certificate file should be protected from any tampering. It is used to authenticate Docker server based on given CA certificate. Hence, it must have permissions of '444' to maintain the integrity of the CA certificate.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the TLS CA certificate file has permissions of '444' or more restrictive:
+stat -c %a &amp;lt;path to TLS CA certificate file&amp;gt;
+Remediation:
+chmod 444 &amp;lt;path to TLS CA certificate file&amp;gt;
+
+This would set the file permissions of the TLS CA file to '444'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="44">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.10</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSCERT</cdf:SystemValue_Parameter>
+<cdf:Description>The Docker server certificate file should be protected from any tampering. It is used to authenticate Docker server based on the given server certificate. Hence, it must be owned and group-owned by 'root' to maintain the integrity of the certificate.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker server certificate file is owned and group-owned by 'root':
+stat -c %U:%G &amp;lt;path to Docker server certificate file&amp;gt; | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root &amp;lt;path to Docker server certificate file&amp;gt;
+
+This would set the ownership and group-ownership for the Docker server certificate file to 'root'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="45">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.11</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSCERT</cdf:SystemValue_Parameter>
+<cdf:Description>The Docker server certificate file should be protected from any tampering. It is used to authenticate Docker server based on the given server certificate. Hence, it must have permissions of '444' to maintain the integrity of the certificate.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker server certificate file has permissions of '444' or more restrictive:
+stat -c %a &amp;lt;path to Docker server certificate file&amp;gt;
+Remediation:
+chmod 444 &amp;lt;path to Docker server certificate file&amp;gt;
+
+This would set the file permissions of the Docker server file to '444'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="46">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.12</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSKEY</cdf:SystemValue_Parameter>
+<cdf:Description>The Docker server certificate key file should be protected from any tampering or unneeded reads. It holds the private key for the Docker server certificate. Hence, it must be owned and group-owned by 'root' to maintain the integrity of the Docker server certificate.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker server certificate key file is owned and group-owned by 'root':
+stat -c %U:%G &amp;lt;path to Docker server certificate key file&amp;gt; | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root &amp;lt;path to Docker server certificate key file&amp;gt;
+
+This would set the ownership and group-ownership for the Docker server certificate key file to 'root'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="47">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.13</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>TLSKEY</cdf:SystemValue_Parameter>
+<cdf:Description>The Docker server certificate key file should be protected from any tampering or unneeded reads. It holds the private key for the Docker server certificate.  Hence, it must have permissions of '400' to maintain the integrity of the Docker server certificate.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker server certificate key file has permissions of '400':
+stat -c %a &amp;lt;path to Docker server certificate key file&amp;gt;
+Remediation:
+chmod 400 &amp;lt;path to Docker server certificate key file&amp;gt;
+
+This would set the Docker server certificate key file permissions to '400'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="48">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.14</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/var/run/docker.sock</cdf:SystemValue_Parameter>
+<cdf:Description>Docker primarily works as a client that communicates with a daemon process (dockerd). Typically that socket is a UNIX domain socket called /var/run/docker.sock. That daemon is highly privileged; effectively having root access. Any process that can write to the dockerd socket also effectively has root access. Hence, the default Docker Unix socket file must be owned by 'root' and group-owned by 'docker' to maintain the integrity of the socket file</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker socket file is owned by 'root' and group-owned by 'docker':
+stat -c %U:%G /var/run/docker.sock | grep -v root:docker
+The above command should not return anything.
+Remediation:
+chown root:docker /var/run/docker.sock
+
+This would set the ownership to 'root' and group-ownership to 'docker' for default Docker socket file.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="49">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.15</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/var/run/docker.sock</cdf:SystemValue_Parameter>
+<cdf:Description>Only 'root' and members of 'docker' group should be allowed to read and write to default Docker Unix socket. Hence, the Docket socket file must have permissions of '660' or more restrictive.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the Docker socket file has permissions of '660' or more restrictive:
+stat -c %a /var/run/docker.sock
+Remediation:
+chmod 660 /var/run/docker.sock
+
+This would set the file permissions of the Docker socket file to '660'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="50">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.16</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>daemon.json</cdf:SystemValue_Parameter>
+<cdf:Description>daemon.json' file contains sensitive parameters that may alter the behavior of docker daemon. Hence, it should be owned and group-owned by 'root' to maintain the integrity of the file.</cdf:Description>
+<cdf:RecommendedValue>The default location of the configuration file on Linux is /etc/docker/daemon.json
+
+Execute the below command to verify that the file is owned and group-owned by 'root':
+stat -c %U:%G /etc/docker/daemon.json | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root /etc/docker/daemon.json
+
+This would set the ownership and group-ownership for the file to 'root'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="51">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.17</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>daemon.json</cdf:SystemValue_Parameter>
+<cdf:Description>daemon.json' file contains sensitive parameters that may alter the behavior of docker daemon.
+Only 'root' and members of 'docker' group should be allowed to read and write to the file. Hence, daemon.json file must have permissions of '660' or more restrictive.
+</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the file permissions are correctly set to '644' or more restrictive:
+stat -c %a /etc/docker/daemon.json
+Remediation:
+chmod 644 /etc/docker/daemon.json
+
+This would set the file permissions for this file to '644'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="52">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.18</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/default/docker</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/default/docker' file contains sensitive parameters that may alter the behavior of docker daemon. Hence, it should be owned and group-owned by 'root' to maintain the integrity of the file</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the file is owned and group-owned by 'root':
+stat -c %U:%G /etc/default/docker | grep -v root:root
+The above command should not return anything.
+Remediation:
+chown root:root /etc/default/docker
+
+This would set the ownership and group-ownership for the file to 'root'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="53">
+<cdf:Coverage>Green</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.1.8.19</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>/etc/default/docker</cdf:SystemValue_Parameter>
+<cdf:Description>/etc/default/docker file contains sensitive parameters that may alter the behavior of docker daemon.  Only writable only by 'root' and readable by members of 'docker' group should be allowed to read.  Hence, /etc/default/docker file must have permissions of '644' or more restrictive.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command to verify that the file permissions are correctly set to '644' or more restrictive:
+stat -c %a /etc/default/docker
+Remediation:
+chmod 644 /etc/default/docker
+
+This would set the file permissions for this file to '644'.
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="54">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.20</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Setting default ulimit for the Docker daemon would enforce the ulimit for all container instances. You would not need to setup ulimit for each container instance. However, the default ulimit can be overridden during container runtime, if needed. Hence, to control the system resources, define a default ulimit as needed in your environment.</cdf:Description>
+<cdf:RecommendedValue>ps -ef | grep dockerd
+Ensure that the '--default-ulimit' parameter is set as appropriate.
+Remediation:
+Run the docker in daemon mode and pass '--default-ulimit' as argument with respective ulimits as appropriate in your environment.
+For Example,
+</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="55">
+<cdf:Coverage>Orange</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.8.21</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - OSRs</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>dockerd</cdf:SystemValue_Parameter>
+<cdf:Description>Verify SELinux security options, if applicable. SELinux is an effective and easy-to-use Linux application security system. It is available on quite a few Linux distributions by default such as Red Hat and Fedora.</cdf:Description>
+<cdf:RecommendedValue>docker ps --quiet --all | xargs docker inspect --format '{{ .Id }}: SecurityOpt={{ .HostConfig.SecurityOpt }}'
+The above command should return all the security options currently configured for the containers.
+Remediation:
+If SELinux is applicable for your Linux OS, use it. You may have to follow below set of steps:
+1. Set the SELinux State.
+2. Set the SELinux Policy.
+3. Create or import a SELinux policy template for Docker containers.
+4. Start Docker in daemon mode with SELinux enabled. For example,
+docker daemon --selinux-enabled
+5. Start your Docker container using the security options</cdf:RecommendedValue>
+<cdf:Comments>This is manual check. We don't know which security options are required.</cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="56">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Informational requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.1.9.0</cdf:SectionNumber>
+<cdf:SectionHeading>Protecting Resources - User Resources</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker group</cdf:SystemValue_Parameter>
+<cdf:Description>Access to Docker must be restricted to a method that provides accountability to an individual.</cdf:Description>
+<cdf:RecommendedValue>Access to Docker Enginebe restricted to a method that provides accountability to an individual.</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="57">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.2.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>Business Use Notice</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="58">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.2.1.0</cdf:SectionNumber>
+<cdf:SectionHeading>Encryption</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter> Data Transmission
+</cdf:SystemValue_Parameter>
+<cdf:Description>By default, data exchanged between containers on different nodes on the overlay network is not encrypted. This could potentially expose traffic between the container nodes. If applicable</cdf:Description>
+<cdf:RecommendedValue>Run the below command to list overlay networks
+docker network ls --filter driver=overlay
+If there are overlay network. Run the below command and ensure that each overlay network has been encrypted.
+docker network ls --filter driver=overlay --quiet | xargs docker network inspect --format '{{.Name}} {{ .Options }}'
+
+Remediation:
+Create overlay network with--opt encrypted flag.</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="59">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.3.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>Process Exceptions</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="60">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.5.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>Privileged Authorizations / Userids</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>Note</cdf:SystemValue_Parameter>
+<cdf:Description>Description of privileged IDs: The rows in Section 5 below describe the list of Userids or groups that have Privileged authority.</cdf:Description>
+<cdf:RecommendedValue>No value to be set</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="61">
+<cdf:Coverage>Orange</cdf:Coverage>
+<cdf:operation>health check and baseline</cdf:operation>
+<cdf:Foundation isFoundation="true"/>
+<cdf:SectionNumber>HZ.5.0.1</cdf:SectionNumber>
+<cdf:SectionHeading>Privileged Authorizations / Userids</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>docker group</cdf:SystemValue_Parameter>
+<cdf:Description>The Docker daemon currently requires 'root' privileges. A user added to the 'docker' group gives him full 'root' access rights.</cdf:Description>
+<cdf:RecommendedValue>Execute the below command on the docker host and ensure thatonly trusted users are members of the 'docker' group.
+getent group docker
+Remediation:
+Remove any users from the 'docker' group that are not trusted. Additionally, do not create a mapping of sensitive directories on host to container volumes.</cdf:RecommendedValue>
+<cdf:Comments>This is manual check. We don't know which users are trusted.</cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="62">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.6.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>Additional Customer Controls</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="63">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.10.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>HIPAA controls</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+<cdf:TechSpecsEntries id="64">
+<cdf:Coverage>Blue</cdf:Coverage>
+<cdf:operation>Process requirement, no requirement to B or S</cdf:operation>
+<cdf:Foundation isFoundation="false"/>
+<cdf:SectionNumber>HZ.20.0.0</cdf:SectionNumber>
+<cdf:SectionHeading>Privileged Monitoring Service</cdf:SectionHeading>
+<cdf:subSection></cdf:subSection>
+<cdf:SystemValue_Parameter>No requirements in this category</cdf:SystemValue_Parameter>
+<cdf:Description>No requirements in this category</cdf:Description>
+<cdf:RecommendedValue>No requirements in this category</cdf:RecommendedValue>
+<cdf:Comments></cdf:Comments>
+<cdf:Audit type="default" replacedBy=""/>
+</cdf:TechSpecsEntries>
+</cdf:TechSpecsEntriesList>
+<scm:collector id="DockerV1" scm:classname="unix.any.docker.DockerV1" scm:minimumVersion="1">
+<scm:configFile usage="missing" type="name"/>
+</scm:collector>
+</cdf:Group>
+</cdf:Benchmark>

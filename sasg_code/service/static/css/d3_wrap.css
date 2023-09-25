@@ -1,0 +1,73 @@
+/*
+ * D3 Graphing CSS File
+ * Partner with d3_wrap.js
+ */
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+
+/* tell the SVG path to be a thin blue line without any area fill */
+path {
+    stroke: steelblue;
+    stroke-width: 1;
+    fill: none;
+}
+
+.axis {
+    shape-rendering: crispEdges;
+}
+
+.x.axis line {
+    stroke: lightgrey;
+}
+
+.x.axis .minor {
+    stroke-opacity: .5;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.y.axis line, .y.axis path {
+    fill: none;
+    stroke: #000;
+}
+
+/*path {  stroke: #fff; }*/
+
+path:hover {  opacity:0.9; }
+rect:hover {  fill:blue; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}

@@ -1,0 +1,367 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.footer-label-icon {
+    cursor: pointer; 
+    padding-right: 5px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.sidebyside{
+    display:flex;
+    padding-bottom:10px;
+}
+
+.fixed-item{
+    width:80px;
+}
+
+.flex-item{
+    margin-left:10px;
+}
+
+.full-item{
+    width:100%;
+    margin-left:10px;
+}
+
+/* message-box */
+.message-wrapper {
+    position: absolute;
+    right: 1%;
+    top: 8%;
+    width: 20%;
+    z-index: 9999;
+}
+
+.message-box {
+    color: #555;
+    opacity: 0.9;
+    border-radius: 4px;
+    font-family:'Candal', Arial, Helvetica, Tahoma, sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.message-box span {
+    font-weight: bold;
+}
+
+.error-message {
+    background: #ffecec;
+    opacity: 10%;
+    border:1px solid #f5aca6;
+}
+
+.ok-message {
+    background: #e9ffd9;
+    border:1px solid #a6ca8a;
+}
+
+.other-message {
+    background: #7FC1F5;
+    border:1px solid #a6ca8a;
+}
+
+.message-close {
+    padding-top:-5px;
+    cursor:pointer;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color: #404040;
+    text-shadow: none;
+    opacity: 0.8;
+    filter: alpha(opacity=20);
+}
+
+/* spinner */
+.spinner {
+    cursor: wait;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background:#ffffff url('../img/spinner.gif') no-repeat center center;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+}
+
+.spinner-message {
+    position: relative;
+    color: #0066ff;
+    font-family:'Candal', Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 15px;
+    top: 55%;
+    text-align: center;
+    display: none;
+}
+
+.progress-wrap {
+    cursor: wait;
+    background:#ffffff;
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";*/
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+}
+
+.progress {
+    position: relative;
+    width: 70%;
+    top: 50%;
+    font-family: 'Candal', Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.p-message {
+    position: relative;
+    top: 48.5%;
+    text-align: center;
+    font-family: 'Candal', Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 1.3em;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+
+/* upload form */
+.drop-area {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border: 2px dotted #00A6FA;
+    border-radius: 5px;
+    padding: 10px;
+    /*margin-bottom: 2em;
+    margin-right: 5em;*/
+}
+
+.drop-instructions {
+    display: block;
+    /*height: 50px;*/
+    /*margin-right: 5em;*/
+}
+
+.drop-over {
+    display: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*margin-right: 5em;*/
+}
+
+.over {
+    background: #7ac5ff;
+    border: 2px dotted #ddd;
+    border-radius: 5px;
+    text-align: center;
+    /*width:25em;*/
+    /*height: 50px;*/
+    /*padding: 20px;*/
+    /*margin-bottom: 2em;
+    margin-right: 5em;*/
+}
+
+.over .drop-instructions {
+    display: none;
+}
+
+.over .drop-over {
+    display: block;
+}
+
+.over .drop-over {
+    display: block;
+    /*font-size: 25px;*/
+}
+
+.file-list {
+    width: 40%;
+    list-style: none;
+    margin-bottom: 3em;
+    /*width: 25em;*/
+}
+
+.file-list li {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.file-list li.no-items {
+    border-bottom: none;
+}
+
+.file-list div {
+    margin-bottom: 0.5em;
+}
+
+
+.file-list .progress-bar-container {
+    /*width: 25em;*/
+    height: 10px;
+    border: 1px dotted #555;
+    margin-bottom: 20px;
+}
+
+.file-list .progress-bar-container.uploaded {
+    height: auto;
+    border: none;
+}
+
+.file-list .progress-bar {
+    width: 0;
+    height: 10px;
+    font-weight: bold;
+    background: #4AA0E4;
+}
+
+.progress-bar-error {
+    width: 0;
+    height: 10px;
+    font-weight: bold;
+    background: red;
+}
+
+.file-list .progress-bar-container.uploaded .progress-bar {
+    display: inline-block;
+    width: auto;
+    color: #4AA0E4;
+    background: transparent;
+}
+.project_table{
+    width:100%;
+    padding: 5px;
+}
+.project_table td {
+    font-size: 150%;
+    /*font-weight: bold;*/
+
+    padding: 4px;
+
+}
+
+.right_column a {
+    color:#00A6FA;
+    padding-left:20px;
+}
+
+.animated {
+    transition: all .5s ease;
+}

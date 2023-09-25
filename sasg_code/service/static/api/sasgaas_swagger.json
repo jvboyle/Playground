@@ -1,0 +1,521 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.1.0",
+        "title": "BlueSight API",
+        "description": "Public API for the BlueSight server discovery service."
+    },
+    "host": "+HOSTURL+",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/",
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "basic": {
+            "type": "basic",
+            "description": "Use username and password (we will change to apikey later)"
+        }
+    },
+    "security": [
+        {
+            "basic": []
+        }
+    ],
+    "paths": {
+        "/upload": {
+            "get": {
+                "summary": "Simple UI to upload files.",
+                "responses": {
+                    "200": {
+                        "description": "Returns a simple UI for uploading files."
+                    }
+                },
+                "tags": [
+                    "Upload"
+                ]
+            },
+            "post": {
+                "summary": "Upload files",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "",
+                        "required": true,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error during upload",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Upload"
+                ]
+            }
+        },
+        "/files": {
+            "get": {
+                "summary": "View list of uploaded files.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while listing files.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Files"
+                ]
+            }
+        },
+        "/host": {
+            "get": {
+                "summary": "Returns a list of hostnames.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving hostnames.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Host"
+                ]
+            }
+        },
+        "/spec": {
+            "get": {
+                "summary": "Returns the spec json.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving the spec.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Spec"
+                ]
+            }
+        },
+        "/visjs": {
+            "get": {
+                "summary": "Returns the visjs json.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving visjs.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Visjs"
+                ]
+            }
+        },
+        "/geo": {
+            "get": {
+                "summary": "Get geographic server details.",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retriving geographical data.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Geo"
+                ]
+            }
+        },
+        "/sysconfig": {
+            "get": {
+                "summary": "Returns the sysconfig json.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving sysconfig.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Sysconfig"
+                ]
+            }
+        },
+        "/migration": {
+            "get": {
+                "summary": "Returns the migration json.",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving migration json.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Sysconfig"
+                ]
+            }
+        },
+        "/questionnaire": {
+            "get": {
+                "summary": "Returns requested questionnaire json.",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "application",
+                        "in": "query",
+                        "description": "Name of specific application for transformation.",
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while retrieving questionnaire."
+                    }
+                },
+                "tags": [
+                    "Questionnaire"
+                ]
+            },
+            "post": {
+                "summary": "Submit questionnaire answers.",
+                "description": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "formData",
+                        "description": "Answers to questionnaire form.",
+                        "schema": {
+                            "$ref": "#/definitions/Questionnaire"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/SUCCESS"
+                        }
+                    }
+                },
+                "tags": [
+                    "Questionnaire"
+                ]
+            }
+        },
+        "/servers": {
+            "get": {
+                "summary": "",
+                "description": "Updates collector progress and returns a list of servers.",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    }
+                },
+                "tags": [
+                    "Servers"
+                ]
+            },
+            "post": {
+                "summary": "Begin discovery process on specified server.",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "server_os_type",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "server_address",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "server_username",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "server_password",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "server_interval",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "server_days",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    }
+                },
+                "tags": [
+                    "Servers"
+                ]
+            },
+            "delete": {
+                "summary": "Remove specified host.",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "hostname",
+                        "in": "query",
+                        "description": "Name of the host to be removed.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Error while removing host.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Servers"
+                ]
+            }
+        },
+        "/parse": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Parse"
+                ]
+            }
+        },
+        "/cluster": {
+            "get": {
+                "summary": "Cluster hosts by a user-defined metric.",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "algorithm",
+                        "in": "query",
+                        "descripton": "Name of algorithm to be used.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "stat",
+                        "in": "query",
+                        "description": "Name of the metric to cluster by.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "k",
+                        "in": "query",
+                        "description": "Number of clusters to be created.",
+                        "requred": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully clustered hosts.",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unable to cluster hosts.",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                },
+                "tags": [
+                    "Cluster"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "OK": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "OK"
+                },
+                "message": {
+                    "type": "object",
+                    "description": "Requested JSON data"
+                }
+            }
+        },
+        "ERROR": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "ERROR"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "A short message about the error."
+                }
+            }
+        },
+        "SUCCESS": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "SUCCESS"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "A short message about successful action."
+                }
+            }
+        },
+        "Questionnaire": {
+            "type": "object"
+        }
+    }
+}

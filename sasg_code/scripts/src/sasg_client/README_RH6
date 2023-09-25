@@ -1,0 +1,6 @@
+Files to be provided for RH6 installation which need to be in the same folder:
+- 3 .sh scripts(sasg_main6.sh/sasg_customer_build6.sh/master-backup.sh)
+- client.conf with openVPN configuration;
+- keepalived_[host_ip] with keepalived configuration;
+- iptables.[host_ip] with iptables rules;
+- vars file.

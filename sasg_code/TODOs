@@ -1,0 +1,24 @@
+- change user-based -> group-based (bluepage group). 
+  + a person may belong to multiple groups (a person does not own customer, but a group does)
+  + Need an admin group that can control all groups.
+
+
+- make script running wider and max height (when too long, it does not show buttons)
+- customer delegating (not sure how to manage the info)
+- bluegroup (there is a shared info between users, so only authorized user needs to be logged in) -> only gsni network related. command is fine.
+- vyos and tools server dump
+- vyatta dest, source nat info. implementation
+- put the sasg_install.sh file into EE server and provide a link to IT admin? (how can they access to the file?)
+- detach network setup from network address reservation
+- SASG_VIP1 should be changed to be flexible -> multiple SASG_VIP[]
+- Recreate the package button (refresh)
+
+- testing, testing, testing...
+
+When RSA key is crypted.....??
+09-28 18:48 root         ERROR    *** Caught exception: <class 'paramiko.ssh_exception.AuthenticationException'>: Authentication failed.
+
+DONE---
+- bluepage ip address
+- a consolidated button
+- Think about how to handle 2222 port if need to rerun the scripts? or never rerun? 

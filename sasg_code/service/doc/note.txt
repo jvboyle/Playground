@@ -1,0 +1,77 @@
+Flask Web Buildup
+
+Requirements: https
+
+Nginx is just a web server that routes http or https requests to uwsgi service (sock), so uwsgi needs to be run first (create sock file).
+
+# setup uwsgi + nginx
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-14-04
+
+# https setup
+http://nginx.org/en/docs/http/configuring_https_servers.html
+
+# https self-signed certificate
+https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04
+
+# /etc/nginx/sites-available
+server {
+    listen 80;
+    server_name 192.168.56.101;
+    return 301 https://192.168.56.101;
+}
+ 
+server {
+    listen 443 ssl spdy;
+    listen [::]:443 ipv6only=on;
+    server_name 192.168.56.101;
+ 
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
+ 
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/vagrant/gsni2/gsni2.sock;
+    }
+}
+
+
+
+
+
+
+# Flask built-in HTTPS
+http://flask.pocoo.org/snippets/111/
+
+Create a SSL context (http://werkzeug.pocoo.org/docs/serving/)
+
+#from OpenSSL import SSL
+#context = SSL.Context(SSL.SSLv23_METHOD)
+#context.use_privatekey_file('yourserver.key')
+#context.use_certificate_file('yourserver.crt')
+
+from OpenSSL import SSL 
+context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+context.load_cert_chain('yourserver.crt', 'yourserver.key')
+
+then
+
+app.run(host='127.0.0.1',port='12344', 
+        debug = False/True, ssl_context=context)
+
+
+Per the below SO link, for Werkzeug 0.10+, you can just use:
+
+if __name__ == "__main__":
+    context = ('cert.crt', 'key.key')
+    app.run(host='0.0.0.0', port=80, ssl_context=context, threaded=True, debug=True)
+
+Linux-related:
+
+there is a confirmed bug in pyOpenSSL that generates a runtime error: https://bugs.launchpad.net/pyopenssl/+bug/900792
+
+The workaround is to put these 2 lines in werkzeug/serving.py
+
+in class BaseWSGIServer(HTTPServer, object):
+...
+ def shutdown_request(self,request):
+        request.shutdown()

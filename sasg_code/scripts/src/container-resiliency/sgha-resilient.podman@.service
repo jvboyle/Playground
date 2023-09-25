@@ -1,0 +1,16 @@
+[Unit]
+Description=SGHA Resiliency Service for %i
+
+[Service]
+Environment="SYSTEMD_ENV_CLIENT_PATH=/sasg/clients/%i"
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/sasg/bin/HA/manage-host-only-docker-route.sh %i add
+ExecStart=/sasg/bin/HA/sasg-runner.sh
+ExecStartPost=/usr/bin/systemctl start sgha-watcher@%i.resiliency
+ExecStop=/usr/bin/systemctl stop sgha-watcher@%i.resiliency
+ExecStop=/sasg/bin/HA/sasg-runner.sh stop
+ExecStopPost=/sasg/bin/HA/manage-host-only-docker-route.sh %i del
+
+[Install]
+WantedBy=multi-user.target

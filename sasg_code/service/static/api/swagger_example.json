@@ -1,0 +1,671 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "API",
+        "description": "TBD - APIs shown in this page are just examples."
+    },
+    "host": "+HOSTURL+",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/",
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "basic": {
+            "type": "basic",
+            "description": "Use username and password (we will change to apikey later)"
+        }
+    },
+    "security": [
+        {
+            "basic": []
+        }
+    ],
+    "paths": {
+        "/policy": {
+            "get": {
+                "summary": "Retrieve policy",
+                "description": "Patterns, Policies, Devices, Configurations are managed through this API",
+                "parameters": [
+                    {
+                        "name": "item",
+                        "in": "query",
+                        "description": "one of patterns, policies, devices, configs, all, etc. default is all.",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "Policy"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Manipulate policy",
+                "description": "Patterns, Policies, Devices, Configurations are managed through this API",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "firewall",
+                        "schema": {
+                            "$ref": "#/definitions/Policy"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Policy"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Commit, save, discard policy",
+                "description": "Patterns, Policies, Devices, Configurations are managed through this API",
+                "parameters": [
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "description": "one of commit, save, discard",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "Policy"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete policy",
+                "description": "Patterns, Policies, Devices, Configurations are managed through this API",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "policy delete",
+                        "schema": {
+                            "$ref": "#/definitions/Policy"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Policy"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            }
+        },
+        "/firewall": {
+            "get": {
+                "summary": "Retrieve firewall information",
+                "description": "The Firewall get returns the firewall query results in json format.",
+                "parameters": [
+                    {
+                        "name": "device",
+                        "in": "query",
+                        "description": "A device name registered to BlueWall.",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "A rule name that needs to be queried",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "rule",
+                        "in": "query",
+                        "description": "A rule number that needs to be queried",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "Firewall"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A json of firewalls",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Firewall Management",
+                "description": "The Firewall post manages the firewall the same way that is handled with CLI or API in a json format.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "firewall",
+                        "schema": {
+                            "$ref": "#/definitions/Firewall"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Firewall"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Save firewall information",
+                "description": "The Firewall get returns the firewall query results in json format.",
+                "parameters": [
+                    {
+                        "name": "device",
+                        "in": "query",
+                        "description": "device name",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "description": "only save",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "Firewall"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Firewall Management",
+                "description": "The Firewall post manages the firewall the same way that is handled with CLI or API in a json format.",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "firewall",
+                        "schema": {
+                            "$ref": "#/definitions/Firewall"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Firewall"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            }
+        },
+        "/verify": {
+            "post": {
+                "summary": "Verify a rule is approved",
+                "description": "Validate a rule against policies",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "verify form",
+                        "schema": {
+                            "$ref": "#/definitions/Verify"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Verify"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            }
+        },
+        "/flows": {
+            "get": {
+                "summary": "Find traffic flows",
+                "description": "Find a sqeuence of devices the traffic passes through",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/source_network"
+                    },
+                    {
+                        "$ref": "#/parameters/destination_network"
+                    }
+                ],
+                "tags": [
+                    "Flows"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            }
+        },
+        "/patterns": {
+            "get": {
+                "summary": "Find policy and patterns",
+                "description": "With source and destination IPs, it retrieves corresponding policy and patterns",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/source_network"
+                    },
+                    {
+                        "$ref": "#/parameters/destination_network"
+                    }
+                ],
+                "tags": [
+                    "Patterns"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Execution results",
+                        "schema": {
+                            "$ref": "#/definitions/OK"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/ERROR"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "parameters": {
+        "source_network": {
+            "name": "source_network",
+            "in": "query",
+            "description": "Source network address (IP, Subnet, IP range)",
+            "type": "string",
+            "required": true
+        },
+        "destination_network": {
+            "name": "destination_network",
+            "in": "query",
+            "description": "Destination network address (IP, Subnet, IP range)",
+            "type": "string",
+            "required": true
+        }
+    },
+    "definitions": {
+        "Firewall": {
+            "type": "object",
+            "description": "Firewall object",
+            "properties": {
+                "rules": {
+                    "type": "array",
+                    "description": "rule object",
+                    "items": {
+                        "$ref": "#/definitions/Rule"
+                    }
+                }
+            }
+        },
+        "Rule": {
+            "type": "object",
+            "description": "individual rule",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "a key to find an item"
+                },
+                "sequence": {
+                    "type": "integer",
+                    "description": "rule sequence number"
+                },
+                "pattern": {
+                    "type": "string",
+                    "description": "pattern"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "firewall rule name"
+                },
+                "rule": {
+                    "type": "string",
+                    "description": "rule number or any if not known"
+                },
+                "protocol": {
+                    "type": "string",
+                    "description": "rule protocol"
+                },
+                "action": {
+                    "type": "string",
+                    "description": "rule action (accept or reject)"
+                },
+                "source": {
+                    "type": "object",
+                    "description": "source information",
+                    "properties": {
+                        "address": {
+                            "type": "string",
+                            "description": "source network address"
+                        },
+                        "port": {
+                            "type": "string",
+                            "description": "source network port"
+                        }
+                    }
+                },
+                "destination": {
+                    "type": "object",
+                    "description": "destination information",
+                    "properties": {
+                        "address": {
+                            "type": "string",
+                            "description": "destination network address"
+                        },
+                        "port": {
+                            "type": "string",
+                            "description": "destination network port"
+                        }
+                    }
+                },
+                "device": {
+                    "$ref": "#/definitions/Device"
+                }
+            }
+        },
+        "Device": {
+            "type": "object",
+            "description": "device object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "device name"
+                },
+                "username": {
+                    "type": "string",
+                    "description": "username"
+                },
+                "address": {
+                    "type": "string",
+                    "description": "device network address"
+                },
+                "passkey": {
+                    "type": "string",
+                    "description": "device password or apikey"
+                },
+                "vlans": {
+                    "type": "array",
+                    "description": "vlan object",
+                    "items": {
+                        "$ref": "#/definitions/Vlan"
+                    }
+                }
+            }
+        },
+        "Vlan": {
+            "type": "object",
+            "description": "vlan object",
+            "properties": {
+                "vlanid": {
+                    "type": "string",
+                    "description": "vlan number"
+                },
+                "subnets": {
+                    "type": "array",
+                    "description": "subnets",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Policy": {
+            "type": "object",
+            "properties": {
+                "item": {
+                    "type": "string",
+                    "description": "patterns, policies, devices, configs"
+                },
+                "rules": {
+                    "type": "array",
+                    "description": "rule json",
+                    "items": {
+                        "$ref": "#/definitions/PolicyRule"
+                    }
+                }
+            }
+        },
+        "Verify": {
+            "type": "object",
+            "properties": {
+                "policies": {
+                    "type": "array",
+                    "description": "policies comparing against",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "rule": {
+                    "$ref": "#/definitions/Elements"
+                }
+            }
+        },
+        "PolicyRule": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "a key to find an item"
+                },
+                "elements": {
+                    "type": "array",
+                    "description": "elements included in the item - key",
+                    "items": {
+                        "$ref": "#/definitions/Elements"
+                    }
+                }
+            }
+        },
+        "Elements": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "a key to find an item"
+                },
+                "pattern": {
+                    "type": "string",
+                    "description": "pattern name"
+                },
+                "protocol": {
+                    "type": "string",
+                    "description": "network protocol"
+                },
+                "port": {
+                    "type": "string",
+                    "description": "network port"
+                },
+                "authentication": {
+                    "type": "string",
+                    "description": "key, certificate, secret, password"
+                },
+                "confidential_information": {
+                    "type": "boolean",
+                    "description": "confidential information"
+                },
+                "sensitive_personal_information": {
+                    "type": "boolean",
+                    "description": "sensitive personal information"
+                },
+                "encrypted": {
+                    "type": "boolean",
+                    "description": "connection is encrypted"
+                },
+                "tunnel": {
+                    "type": "boolean",
+                    "description": "connection uses a tunneling"
+                },
+                "interactive_login": {
+                    "type": "boolean",
+                    "description": "conenction uses a interactive login"
+                }
+            }
+        },
+        "OK": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "OK"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "A short message about the execution"
+                },
+                "input": {
+                    "type": "object",
+                    "description": "Returns an input in json format with additional information filled by BlueWall"
+                },
+                "output": {
+                    "type": "object",
+                    "description": "Returns the output of the execution in json format"
+                }
+            }
+        },
+        "ERROR": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "ERROR"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "A short message about the error"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+[Unit]
+Description=SGHA Service for %i
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/usr/local/bin/docker-compose down -v
+ExecStartPre=-/usr/local/bin/docker-compose rm -fv
+ExecStartPre=/usr/bin/bash /sasg/bin/HA/pre-start_master.sh %i
+ExecStartPre=/usr/bin/bash /sasg/bin/HA/manage-host-only-docker-route.sh %i add
+ExecStart=/usr/local/bin/docker-compose up
+ExecStartPost=/usr/bin/bash /sasg/bin/HA/post-start_master.sh %i
+ExecStartPost=/usr/bin/systemctl start sgha-watcher@%i.master
+ExecStop=/usr/local/bin/docker-compose down -v
+ExecStop=/usr/bin/systemctl stop sgha-watcher@%i.master
+ExecStopPost=/usr/bin/bash /sasg/bin/HA/manage-host-only-docker-route.sh %i del
+
+[Install]
+WantedBy=multi-user.target

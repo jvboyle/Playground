@@ -1,0 +1,103 @@
+#!/bin/bash
+# script to display basic vpn / config file checks on sasfw
+# 14Nov2017 - SBraun -updated to look if site0.conf exists then show ipsec data - not secrets file in sasg/configs
+#----------------------------------------------------------------------------
+source /sasg/bin/sasg_common.sh
+
+DETAIL="false"
+while getopts "l" opt; do
+case ${opt} in
+  l ) # set flag to show more sasgcheck details
+      DETAIL="true"
+      ;;
+esac
+done
+
+HNAME=`hostname -s`
+VERSION=$(cat $SAS_BIN/VERSION)
+echo -e "\nsasfw version: $VERSION"
+
+ALERT(){
+  msg=$1
+  # vars to set text to red for errors
+  tput setaf 1
+  echo -e "$msg"
+  tput sgr0
+}
+  
+
+echo -e "\n--- ip  interfaces  -------------------------"
+ip addr | egrep "^[0-9]:|inet|vti|link"
+echo -e "\n---  routes  -------------------------"
+ip route
+
+# if there's an openvpn config file, then for each one listed, check openvpn process & echo err if not found
+if [ -f "$SAS_CONFIG/server_vtun0.conf" ];then
+  echo -e "\n---  Openvpn status --------------------------"
+  for conf_file in $(ls ${SAS_CONFIG} |  egrep "server_vtun[0-9]{1,}.conf")
+  do
+      OPS="/usr/sbin/openvpn --config ${SAS_CONFIG}/$conf_file --log-append ${SAS_VPNLOG_DIR}/sasvpn01"
+      ps -ef|grep -v grep |grep -q "$OPS"
+      if [ $? -ne 0 ];then
+         # openvpn process not found - echo err msg otherwise show process
+         ALERT "openvpn process for $conf_file Not Found...."
+      else
+         ps -ef|grep -v grep |grep  "$OPS"
+         TUNIP=$(grep "^ifconfig" ${SAS_CONFIG}/$conf_file |awk '{print $NF}')
+         [[ "$DETAIL" == "true" ]] && ls -l ${SAS_CONFIG}/server*.conf
+         [[ "$DETAIL" == "true" ]] && ls -l ${SAS_CONFIG}/auth.*
+         [[ "$DETAIL" == "true" ]] && ls -l ${SAS_VPNLOG_DIR}/sas*
+         ping -c2 $TUNIP
+      fi
+  done
+
+  # check if tls monitor cronjob exists & is not commented
+    TLSCRON=$(sudo crontab -l |grep "start_tlsmon.sh")
+    if [ -z "$TLSCRON" ];then 
+       ALERT "No start_tlsmon.sh root cronjob found!"
+    else
+      echo "$TLSCRON" |grep -q "^#"
+      [ "$?" -eq 0 ] && ALERT "start_tlsmon.sh root cronjob exists but is commented out - $TLSCRON"
+    fi
+  
+fi
+
+IPSECPSKFILES=$(sudo su - root -c "ls /etc/ipsec.d/site0.conf" 2>/dev/null)
+if [ ! -z "$IPSECPSKFILES" ];then
+  echo -e "\n---  IPsec status --------------------------"
+  IPS=$(ps -ef|grep -v grep |grep "ipsec/pluto")
+  [[ "$DETAIL" == "true" ]] && sudo su - root -c "systemctl status -l ipsec"
+  if [ ! -z "$IPS" ];then
+    echo -e "IPSec process found: $IPS\nestablished sessions:"
+    ES=$(sudo su - root -c "ipsec whack --status"|grep -A1 -i "ipsec sa established")
+    if [ -z "$ES" ];then
+      ALERT "No established ipsec tunnnels found. run $0 -l for detailed ipsec output."
+      [[ "$DETAIL" == "true" ]] && sudo su - root -c "ipsec whack --status"
+    else
+      # if established sessions found, report traffic status
+      sudo su - root -c "ipsec whack --trafficstatus"
+    fi
+  fi
+
+  # check if ipsec monitor cronjob exists & is not commented
+    IPSECCRON=$(sudo crontab -l |grep "start_ipsecmon.sh")
+    if [ -z "$IPSECCRON" ];then 
+       ALERT "No start_ipsecmon.sh root cronjob found!"
+    else
+      echo "$IPSECCRON" |grep -q "^#"
+      [ "$?" -eq 0 ] && ALERT "start_ipsecmon.sh root cronjob exists but is commented out - $IPSECCRON"
+    fi
+
+fi 
+
+  
+# check if mrtg cronjob exists & is not commented
+  if [ -z "$DETAIL" ];then
+    MRTGCRON=$(sudo crontab -l |grep "generic.pl")
+    if [ -z "$MRTGCRON" ];then 
+       ALERT "No MRTG generic.pl root cronjob found!"
+    else
+      echo "$MRTGCRON" |grep -q "^#"
+      [ "$?" -eq 0 ] && ALERT "MRTG generic.pl root cronjob exists but is commented out - $MRTGCRON"
+    fi
+  fi

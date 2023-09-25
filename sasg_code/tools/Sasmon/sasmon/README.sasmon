@@ -1,0 +1,54 @@
+History:
+v4.14 - 25sep2019 - 
+  SASFW_nginxcheck.sh - fix check to ignore jumphost trying to pull master/config.sha256 file & it not existing.  Alerts for ipset/iptables on jumphost changing are already generated in this case.
+
+v4.13 - 19sep2019 - 
+  SASFW_nginxcheck.sh - check nginx access.log on sasfw (nginx used for sasg-listener) for 404 errors on GETs...should not see any as jumphost container code should know where to pull files.  
+
+v4.12 - 31jul2019 - 
+  ALL_GenSasautoReport.sh - decouple EE & Sasfw - report Jumphost IPs on sasfw using vars, still report jh onboarded status on ee.  Check if log listener is active on sasfw & report ine new sasfw_sasg_loglistener xml tag.
+
+v4.10 -v4.11 - 26jul2019 - 
+  SASFW_LogListenerCheck.sh updates
+v4.9 - 18jul2019 - 
+  SASFW_LogListenerCheck.sh - new check script to check if sasg-listener service is installed on sasfw 
+                          if so, check/restart the service  if it's down or log error if restart fails
+v4.8 - 22may2019 - 
+  SASFW_sshcheck.sh - check sshd_config on sasfw for ListenAddress <private_ip>
+                     update sshd_config & restart sshd if not found
+
+v4.7 - 10may2019 -
+  SASFW_VPNcheck.sh - fixed tunnel count - err when > 2 multi-sasg sites.
+  
+v4.6 - 01may2019 -
+  SASFW_VPNcheck.sh
+    . Fix in ALL_GenSasautoReport.sh - add -o ServerAliveCountMax=1 -o ServerAliveInterval=5 to ssh checks of Jumphosts from ee server - only affects systems running code older than v4.x but prevents script hangs if server up but not responding.
+
+v4.5 - 30apr2019 -
+  SASFW_VPNcheck.sh
+    . checks openvpn & ipsec tunnels to cust sasg.
+    . ipsec check looks at trafficstatus output & looks for peer #'s -  if not found for one peer will
+      report error for that peer - doesn't just look at ipsec service status.
+    . checks vars file & if IAM variables are configured, will check ipsec trafficstatus for connections
+      to the IAM Vyatta peer ip.
+    . Reports err only if 2 consecutive checks of openvpn / peer ip  fails.
+
+  ALL_PermissionCheck.sh
+    . Runs appropriate chmods/chowns on /sasg directories/files
+
+  ALL_FWcheck.sh
+    . If ipset, iptables, ip6tables services are down - will attempt restart & log error if restart fails.
+      Also logs in /sasg/logs/sasmon.log anytime a service was restarted.
+    . If ipset, iptables, ip6tables services are set to disabled - will enable the service & log a message
+      in /sasg/logs/sasmon.log.
+    . If ipset/iptables configs are zero length, the service will start but an error file is created
+      so MIST will display an alert.
+    . If ip6tables is not dropping all, an alert will be created even if the service is up.
+  
+v1-v4.4 - 30oct2018 - 30apr2019 - 
+  ALL_GenSasautoReport.sh
+    . checks JH onboard status, connectivity to JH's (on older network code), SAS code version, 
+      connectivity to external symantec antivirus liveupdate, wazuh agent install status, 
+      chef container install status, tunnel type, qradar config
+    . all goes into /sasg/logs/sasdata.xml which is pulled nightly from all servers to sasgaas &
+      compiled into automated report.

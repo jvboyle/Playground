@@ -1,0 +1,669 @@
+swagger: '2.0'
+info:
+  version: +VERSION+
+  title: SASGaaS API
+  description: |
+    The first version of the SASGaaS API is an exciting step forward towards
+    making it easier for users to have open access to network automation. We created it so that you can surface the amazing operations SASGaaS users access every time, in secure and stable ways.
+
+    Build something great!
+    
+    Once you've
+    [installed your instance](https://github.ibm.com/jinho/sasg) it's easy
+    to start requesting operations from SASGaaS.
+
+    ## Authentication
+    - Basic Authentication (IBM inernet ID/Password)
+    - API Key Authentication (X-Api-Id, X-Api-Key or X-Api-Password in the header) 
+    - NOTE: X-Api-Password only works for /service to create or retrieve the apikey
+
+host: +HOSTURL+
+schemes:
+  - https
+basePath: /
+produces:
+  - application/json
+consumes:
+  - application/json
+
+parameters:
+  username:
+    name: X-Api-Id
+    in: header
+    description: ID in the header
+    type: string
+    required: true 
+  apikey:
+    name: X-Api-Key
+    in: header
+    description: API key in the header
+    type: string
+    required: false 
+  password:
+    name: X-Api-Password
+    in: header
+    description: Password in the header
+    type: string
+    required: false
+
+paths:
+  /service:
+    get:
+      summary: Get service information
+      description: Get (read) service information (i.e., apikey)
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - $ref: '#/parameters/password'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Register a new service and get the apikey (no credentials required)
+      description: Post a new service and get the apikey (no credentials required)
+      parameters:
+        - name: body
+          in: body
+          description: Service information
+          schema:
+            $ref: '#/definitions/Service'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    delete:
+      summary: Delete a service
+      description: Delete service information
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /customer:
+    get:
+      summary: Get customers
+      description: Get (read) all customer information
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Post new customer
+      description: Post (put) new customer
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: body
+          in: body
+          description: customer vars information
+          schema:
+            $ref: '#/definitions/Customer'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    delete:
+      summary: Delete customer
+      description: Delete customer information
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: CUSTOMER_NAME
+          in: query
+          description: customer name as identifier
+          required: true
+          type: string
+          format: string
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /user:
+    get:
+      summary: Read user information
+      description: Read (get) user information with api key and ssh keys
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: A json of user
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Update user information
+      description: Update user information including ssh key
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: body
+          in: body
+          description: user informtion
+          schema:
+            $ref: '#/definitions/User'
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    delete:
+      summary: Delete user information
+      description: Delete user information including ssh key
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: KEY_NAME
+          in: query
+          description: user ssh key name
+          required: true
+          type: string
+          format: string
+      tags:
+        - Onboard
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /vyos:
+    get:
+      summary: Get vyos dump
+      description: Get (read) vyos dump
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Manipulate the vyos (i.e., configure the vyos)
+      description: Manipulate the vyos (i.e., configure the vyos)
+      parameters:
+        - name: body
+          in: body
+          description: vyos information
+          schema:
+            $ref: '#/definitions/Vyos'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /tools:
+    get:
+      summary: Get tools server routing table dump
+      description: Get (read) tools server routing table dump
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Manipulate the tools server (i.e., configure routing)
+      description: Manipulate the tools server (i.e., configure routing)
+      parameters:
+        - name: body
+          in: body
+          description: tools information
+          schema:
+            $ref: '#/definitions/Tools'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /gsniip:
+    get:
+      summary: Get registered GSNI IP addresses
+      description: Get registered GSNI IP addresses
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: SUBNET
+          in: query
+          description: GSNI subnet
+          required: true
+          type: string
+          format: string
+        - name: IP
+          in: query
+          description: GSNI IP address
+          required: true
+          type: string
+          format: string
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Register the GSNI Subnet
+      description: Register the GSNI Subnet
+      parameters:
+        - name: body
+          in: body
+          description: tools information
+          schema:
+            $ref: '#/definitions/Gsniip'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    put:
+      summary: Change the GSNI IP properties (e.g., used)
+      description: Change the GSNI IP properties (e.g., used)
+      parameters:
+        - name: body
+          in: body
+          description: tools information
+          schema:
+            $ref: '#/definitions/Gsniip_Put'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    delete:
+      summary: Delete GSNIP subnet
+      description: Delete GSNIP subnet
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: SUBNET
+          in: query
+          description: GSNI subnet
+          required: true
+          type: string
+          format: string
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+  /natip:
+    get:
+      summary: Get registered NAT IP addresses
+      description: Get registered NAT IP addresses
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    post:
+      summary: Register the GSNI Subnet
+      description: Register the GSNI Subnet
+      parameters:
+        - name: body
+          in: body
+          description: tools information
+          schema:
+            $ref: '#/definitions/Natip'
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+    delete:
+      summary: Delete NAT IP address
+      description: Delete NAT IP address
+      parameters:
+        - $ref: '#/parameters/username'
+        - $ref: '#/parameters/apikey'
+        - name: HOSTNAME
+          in: query
+          description: Server hostname
+          required: false
+          type: string
+          format: string
+        - name: SL_PRIVATE_IP
+          in: query
+          description: Server SL private IP
+          required: false
+          type: string
+          format: string
+      tags:
+        - Operation
+      responses:
+        '200':
+          description: Execution results
+          schema:
+            $ref: '#/definitions/OK'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ERROR'
+
+## Object Definitions
+definitions:
+  Service:
+    type: object
+    properties:
+      SERVICE_NAME:
+        type: string
+        description: Service name
+      SERVICE_DESC:
+        type: string
+        description: Service description
+      PASSWORD:
+        type: string
+        description: Service password
+  Customer:
+    type: object
+    properties:
+      USER_ID:
+        type: string
+        description: IBM internet ID
+      CUSTOMER_NAME:
+        type: string
+        description: Customer name
+      CUSTOMER_ID:
+        type: string
+        description: Customer ID
+      AUTO_USERNAME:
+        type: string
+        description: Automation username to access customer dedicated segment
+      AUTO_PASSKEY:
+        type: string
+        description: Automation password or key to access customer dedicated segment
+      VARS:
+        $ref: '#/definitions/VARS'
+  VARS:
+    type: object
+    properties:
+      BPM_IP:
+        type: string
+        description: BPM IP address
+      CHEF_IP:
+        type: string
+        description: Chef IP address
+      EE_IP:
+        type: string
+        description: Execution engine IP address
+      ASB_IP:
+        type: string
+        description: ASB IP address
+      TOOLS_SUBNET:
+        type: string
+        description: Tools subnet address (x.x.x.x/x)
+      BCR_IP:
+        type: string
+        description: Current GW of the server before pointing to vyos
+      PRIVATE_VYOS_IP:
+        type: string
+        description: Private vyos IP address in CDS
+      PUBLIC_VYOS_IP:
+        type: string
+        description: Public vyos IP address in CDS
+      MS_VYATTA_IP:
+        type: string
+        description: Management segment vyatta IP address
+      MINI_MS_VYATTA_IP:
+        type: string
+        description: IP address of Mini Management Segment Vyatta (if required)
+      MS_APIE_IP:
+        type: string
+        description: IP address of APIE server in management or mini-management segment
+      MS_R1SOFT_IP:
+        type: string
+        description: IP address of R1Soft backup server in management or mini-management segment
+      SASGAAS_CDS_IP:
+        type: string
+        description: IP address of SASGAAS server in management or CDS segment
+      SASGAAS_MS_IP:
+        type: string
+        description: IP address of SASGAAS server in management or MS segment
+      CUSTOMER_SUBNETS:
+        type: array                                                   
+        description: Sinlge Customer Premise Network Variable Input Section Starts at 0, muti-Premise Netork Variable Input Section starts at 1-n (comment out variables if single setup). E.g., Multi on-premise data centers ["10.100.100.0/24 10.100.200.0/24", "10.100.300.0/24"]
+        items: 
+          type: string        
+      SASG_MASQ_IP:
+        type: string
+        description: Outbound IP from Customer Premise. Add additional Variables updating Number start at 0 - N
+      PORTABLE_VTUN_CIDR:
+        type: array
+        description: Muti-Sasg , Set Public Portable IP for ipsec/openvpn to Listen, IF single Leave excluded. For example, PORTABLE_VTUN_CIDR[1]=195.196.197.198/28
+        items:
+          type: string
+      SASG_IP:
+        $ref: '#/definitions/SASG_IP'
+      SASG_VIP1:
+        type: string
+        description: 1st Virtual IP in the customer Subnet
+      SASG_NWIF:
+        type: string
+        description: Sasg Interfaces for routing traffic. If Ipsec the VPNIF is the same as NWIF. For example, eth0
+      SASG_VPNIF:
+        type: string
+        description: Sasg Interfaces for routing traffic. If Ipsec the VPNIF is the same as NWIF
+  SASG_IP:
+    type: object
+    description: For Muti SasG,Update and rerun the Sasg_1[2]iptables.sh with Updated IP values below, Pimary IP of the Sasg servers for HA. For example, vtun0
+    properties:
+      1:
+        type: string
+        description: Primary SASG's IP address
+      2:
+        type: string
+        description: Secondary SASG's IP address
+  User:
+    type: object
+    description: user object 
+    properties:
+      KEY_NAME:
+        type: string
+        description: a name to find an ssh key
+      KEY_CONTENT:
+        type: string
+        description: a content to find an ssh key
+  Vyos:
+    type: object
+    properties:
+      CUSTOMER_NAME:
+        type: string
+        description: the target customer name
+      ACTION:
+        type: string
+        description: an action to be taken (configure)
+  Tools:
+    type: object
+    properties:
+      CUSTOMER_NAME:
+        type: string
+        description: the target customer name
+      ACTION:
+        type: string
+        description: an action to be taken (configure)
+  Gsniip:
+    type: object
+    description: user object 
+    properties:
+      SUBNET:
+        type: string
+        description: a subnet address (xxx.xxx.xxx.xxx/xx)
+  Gsniip_Put:
+    type: object
+    description: user object 
+    properties:
+      GSNIIP:
+        type: string
+        description: a GSNI IP address (xxx.xxx.xxx.xxx)
+      USED:
+        type: boolean
+        description: a used state (true or false)
+  Natip:
+    type: object
+    description: user object 
+    properties:
+      CUSTOMER_NAME:
+        type: string
+        description: a customer name
+      SL_PRIVATE_IP:
+        type: string
+        description: a IP address (xxx.xxx.xxx.xxx)
+      HOSTNAME:
+        type: string
+        description: a hostname
+      SAS_ENVIRONMENT:
+        type: string
+        description: a SAS environment (PROD, DEV, TEST, or combination)
+      SERVICE_REQUEST:
+        type: string
+        description: a Service request number if any
+      ACTIONS:
+        type: string
+        description: one of reserve, configure
+  OK:
+    type: object
+    properties:
+      status:
+        type: string
+        description: 'OK'
+      message:
+        type: string
+        description: 'A short message about the execution'
+      output:
+        type: string
+        description: results if any. for example, get cutomer info or user info
+  ERROR:
+    type: object
+    properties:
+      status:
+        type: string
+        description: 'ERROR'
+      message:
+        type: string
+        description: 'A short message about the error'

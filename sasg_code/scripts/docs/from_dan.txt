@@ -1,0 +1,60 @@
+On the SASG
+wget https://ipinfo.ip/ip -qO -
+
+Update vars file
+Use Public IPs for SASG
+Put in results of wget for the MASQ IP
+Customer subnets have to be in the format CUSTOMER_SUBNET=("10.0.0.0/28" "12.0.0.0/28")
+
+
+On VyOS
+mkdir /config/Sasg
+copy the BuildScripts.tar to the /config/Sasg/ directory
+Expand it tar -xvf BuildScripts.tar
+chmod 700 ./*
+mv ./* ../
+copy modified vars file (unless it was part of the buildscripts.tar)
+./Sasg_build.sh
+spacebar
+y to commit
+conf
+set firewall group network-group VYOS_ACCESS network <your ip address or subent>
+commit, y
+Relogin using port 2222
+copy the Sasg_configs.tar to your local machine, using scp over port 2222 through the public IP of the vyos
+
+On SASG
+Run commands from the Sasg_Install_Guide.txt, found in the Sasg_configs/scripts folder from an exploded Sasg_configs.tar file
+mkdir /tmp/Sasg/
+copy Sasg_configs.tar file there and explode
+
+
+
+Helpful commands
+On VyOS
+ip addr - to show ip address
+conf - to configure VyOS
+commit - to commit VyOS config
+save - to save VyOS config
+systemctl restart network - to restart the network on the VyOS
+ip route - to show the ip routing table
+show configuration command - to 
+
+If the MASQ IP is missing when running the initial scripts, get it from the SASG, then run the following:
+run show configuration commands | grep 9.9.9.9
+set firewall group address-group SASG_MASQ_IP address '<wget ip from SASG>'
+set nat destination rule 90 source address '<wget ip from SASG>'
+commit
+save
+
+
+On the SASG
+wget https://ipinfo.ip/ip -qO -       to get your boundary firewall IP
+systemctl stop openvpn@client.service - stops openvpn
+systemctl start openvpn@client.service - starts openvpn
+openvpn --config /etc/openvpn/client.conf
+
+
+Updates required
+Add example of CUSTOMER_SUBNET with multiple subnets
+SASG_NWIF - should that be the private or public interface?

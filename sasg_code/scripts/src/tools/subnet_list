@@ -1,0 +1,57 @@
+# NA Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.149.99.229/32
+10.149.99.236/32
+10.149.99.238/32
+# AMS Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.175.8.23/32
+# MEL Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.118.186.111/32
+# TOK Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.132.239.119/32
+# MON Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+#10.140.229.188/32
+10.140.229.130/32
+# CHEN Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.162.74.153/32
+# FRA Mgmt Segment Vyatta masquerading Mgmt Segment to Ded Segment flows
+10.85.113.67/32
+# SL private network DNS
+10.0.80.11/32
+10.0.80.12/32
+# NA (fw01-02) Mgmt IP Range Vlan 886
+10.148.11.128/26
+10.148.80.0/26
+# NA Portable IP Range
+10.148.211.48/28
+10.148.250.192/26
+# EU (Ams fw03-04) Mgmt IP Range Vlan 886 858
+10.175.10.64/26
+10.175.61.168/29
+# EU Portable IP Range
+10.175.6.64/26
+10.175.18.0/26
+# AP (Mel fw05-06) Mgmt IP Range Vlan 1459
+10.118.186.128/26
+# AP Portable IP Range
+10.118.39.192/26
+10.118.187.0/26
+# Tokyo (fw07-08) Mgmt IP Range Vlan 2328
+10.133.59.0/27
+# Tokyo Portable IP Range
+10.132.175.128/26
+# Canada (Mon fw09-10) Mgmt IP Range Vlan 910
+10.141.26.0/25
+# Canada Portable IP Range
+10.141.21.0/26
+# IN (Chen fw11-12) Mgmt IP Range Vlan 1163
+10.162.135.0/26
+# IN Portable IP Range
+10.162.131.128/26
+# Frank (fw13-14) Mini Mgmt Vlan 1229
+10.85.112.192/26
+# Frank Portable IP Range
+10.85.103.32/27
+# AP Syd05 Portable
+10.195.39.64/26
+# AP Sy05 Primary
+10.195.61.0/26

@@ -1,0 +1,14 @@
+[Unit]
+Description=SAS Monitoring - Configuration and Network
+After=network.target
+
+[Service]
+ExecStart=/sasg/bin/sasmon/sasmon.sh
+User=sasauto
+Restart=always
+RestartSec=15
+StartLimitInterval=300
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target

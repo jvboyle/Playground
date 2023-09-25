@@ -1,0 +1,544 @@
+###################################################################################################
+                         AUTOMATION CHANGE SUMMARY PER VERSION (reverse historical order)
+
+Web version on wiki at: https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W2a0210b7fc4b_448c_8f18_b534f26d4f5b/page/Automation%20Version%20Information
+###################################################################################################
+###################################################################################################
+v5.08
+  406 - sasfw native listener nginx allow list fix for non-10. Jumphost VIPs.
+  405 - default sasfw LP_DEST to sasfw private ip when no SASG_LOGPUSH_IP defined.
+  407 - sasfw nat rule added to catch logpush data from older jh's when not configured with sasfw as destination ip.
+  411 - update Softlayer services/vpn subnets in ipset lists on sasfw / tools servers
+  416 - native log listener restart fix on sasfw
+  417 - sasmon monitor for native log listener added.
+###################################################################################################
+v5.07
+  313 - de-couple IAMaaS from SLA on SDS
+  365 - remove sla-tool requirement input check in sasfw install
+  368 - ensure end-to-end install doesnt break if missing any sla tool
+  373 - convert JH Log listener to native on sasfw
+  376 - fix wrong test condition in sasfw install causing error regarding switching vpn types when in update mode
+  386 - suport legacy and messaging model
+  403 - allow MS R1Soft from AMS03 to FRA SDS
+  380 - New RCP Metrics flow from AMS03 to TCP 3030 RCP servers.
+  396 - Native listener upload folder permissions fix
+  384 - duo check for proxy accounts (pre-req script)
+  
+###################################################################################################
+v5.06
+SASFW
+  365 - Hotfix - remove check for sla-tools cebw/ee/chef if sasg_ip defined - decouple sasfw.
+###################################################################################################
+v5.05
+Tools Servers
+  354 - Hotfix - If only RCP_IP set in vars, RCP Metrics Port of 443 was added vs correct port 8443
+###################################################################################################
+v5.04
+SASFW & Tools Servers
+  279 - Implement fw rules to support deployment of Zabbix Monitoring agent
+###################################################################################################
+v5.03
+SASFW
+  220 - Added missing RCP Metrics management segment to RCP servers.
+  230 - Added egress rules / dnsmasq config for SSL Certificate Validation
+  219 - Removed EE to Customer Premise (CP) LDAP flow, added CHEF to CP LDAP
+  228 - Updated sasmon monitors for all SDS servers.
+  237 - Added dl.fedoraproject.org to dnsmasq.conf egress whitelist
+  239 - Fixed openvpn server config - routes missed when customer subnets fell in range of 100-109.
+###################################################################################################
+v5.02
+SASFW
+  Issue 213 - add gts-tia-blue-integrate-docker-local.artifactory.swg-devops.com and gts-tia-sasg-dev-docker-local.artifactory.swg-devops.com to na_artifactoryr_masq  in dnsmasq.conf  and change code version to 5.02
+###################################################################################################
+v5.01
+SASFW
+  Issue 198 - if install fails on sasfw, config files are removed for vpn, iptables.
+
+  Issue 199 - if script unable to install epel, continues but ignores all other packages.
+
+  Issue 200 - CUST_JH ipset list updates fail when no 2nd JH/VIP defined.
+
+  Issue 204 - DNS nat to subnet / update to host  (prevents dnsmasq queries from being sent thru vpn)
+
+  Issue 208 - Issue with calculation mask (prevents issues with vpn routing when endpoint subnet listed with /32 CIDR)
+---------------------------------------------------------------------------------------------------
+v5.0
+  Issue 182 - Configure dnsmasq service on sasfw for egress whitelisting, update tool server resolv.conf
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.11
+  Issue fix- CHEF_PORT[] array variables not getting set correctly on CHEF server if not default 8443.
+  Issue fix - SASFW iptables exclude rules set for jumphost masq ip's if no VTUN_PORT specified even if using 1194 by default.
+  Added 9043 to allowed ports for Management segment/RAS connectivity to BPM.
+
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.10
+  Implemented fix for tool server sshd config to port change and restore of original config if sshd restart fails.
+  Support for CEBW, RCP  consolidated VMs
+  Fix for issue 126 -updated regular expression to avoid failures with older grep code causing repo routes to not be added on some servers.
+  Issue 132 - addedsupport for endpoint to EE Kafka messaging port
+  Fixes for jh onboarding / multi-sasg.
+  Change to tools server - if either ipset or iptables config changes, restart both services to avoid
+  possible corrupted ipset lists in memory.
+  
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.09
+  Updated BPM_to_CSC_Port ipset list from 443 to 9443 per SASG issue #116
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.08
+  Updated check to determine if customer ldap/dns is set & add rules accordingly on sasfw.
+  DEDICATED_SEGMENT ipset list on sasfw now list of ipset sets -  contains each sds's individual ipset name
+  Each individual sds server ipset bitmap:ip,mac range updated to only include that sds's IP.
+  Fixed copy of policy kit rule copy command for docker HA install. 
+  Updated JH container iptables rule to allow sasg physical IP icmp to sasg VIPs to prevent slave from taking
+  over as master when master was up & functioning.
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.03
+  iptable filter adds: 4.x/172.x to cci ip, 4.x/172.x to 10.0.0.0/8,  additional bpm to chef on 8443 docker-user filter
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.02
+  Multiple changes on sasfw and cds  - some outbound only rules on sasfw, specific rule numbering removed - just incrementing as rules vary per system.
+  CDS tools servers - many input rules changed to DOCKER-USER filter, some non-required input rules removed.
+
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V4.0
+  SASGaaS build updates vars with MAC address of private Network Interface for each SDS server
+  Automatic clean-up of vars files to remove unwanted extra spaces in variable definition lines
+  Added RCP_PROXY_IP variable to vars template files.
+  Filter rules on sasfw, tools servers & jumphosts all updated with latest zero-trust rulesets.
+  Dockerized jumphost.
+
+
+###################################################################################################
+---------------------------------------------------------------------------------------------------
+V3.3
+  Changes to iptables/ipset rules on SASFW, Tools Servers, JH+  to support CSC application/dedicated vm.
+  Added pipe of base64 output thru sed to eliminate double == & other characters vyatta doesnt like in it's ipsec PSK.
+  Changes to iptables/ipset rules on SASFW, JH+  to support TDI IAMaaS server.
+  Updated tools server config so main config routine called after /sasg/bin/dir and validation files get created properly.
+  Updated tools subnet route list - added new NA portable subnet 10.148.250.192/26
+  Moved ETH1-LOCAL ESTABLISHED rule so it gets set on SASFW for rcp dedicated/shared-rcp sasfw environments
+  Added timeout on wget of epel repo to avoid long install timeouts if epel repo is unreachable.
+  Fixed misspelled dir on backup.
+  Added route for tools servers to FRA02 Mini-MgmtSegment
+  Updated jumphost ipsec configuration to specify SDS Tools subnet as 2.0.0.0/8 instead of specific tools subnet to allow IAM traffic back to the IAM loadbalancer 2dot ip address which is not in SDS subnet.
+  Updated comments for IAM variables in vars template to assist with configuration.
+  Updated libreswan code supplied in jumphost package.
+  Added check in tools server setup to ensure iptables/ipset are enabled to start on reboot & are currently running even if no changes to the configurations are required.
+  Jumphost log puller sasgpuller.sh modified to work with both normal jumphost configurations and shared jumphosts.  For shared jumphosts, all directories under /sasg/clients is treated as a separate jumphost when syncing logs to logrepo on the execution engine.
+  Updates to docker_main for shared JH - watchdog code setup, permissions on clients directories created for jumphost logpuller.
+  Updated vars templates for test/prod, new management vyatta in test, updated default IPs listed for jumphosts / sasfw to avoid issues if a variable is not updated manually.  Updated list for test subnets added on tools servers to include new management vyatta and portable IP subnets.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.07
+  Updated RH7PKGS.tar.gz with latest rpms - required for JH install.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.06
+  Updated sasgpuller.sh for EE server - pulls iptables/ipset validation and current config files for IT Security compliance.
+
+  Vyatta IAM configuration statements displayed on sasfw during install did not include correct IPSec Peer IP.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.05
+  Fixed bug in dynamic add/remove of OUTPUT rules on Jumphosts to allow for on-boarding of backup Jumphosts. Affects accounts with Jumphosts where first octet of VIP1 ends in a 2.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.04
+  Removed yum -y update from CDS tools server builds - kernel updates causing boot errs on some systems.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.03
+  SLA Single VM Support - New CEBW_IP variable added to support new single vm for Chef, EE, BPM.
+  SLA Single VM Support - New RCP_IP variable added to support new single vm for RCP_BPM, RCP_ROR
+
+  IAMaaS Fixes - configure IAMaaS IPSec interface as vti0 instead of vti1 if tunnel to JH is openvpn.
+
+  Changed ipsec_psk key generation to use base64 for ipsec key generation vs xxd - xxd was still creating keys with non-printable characters on some systems.
+
+  Removed check from ipsec keepalived script to restart ipsec based on ike.authenticated value.
+ 
+  Fix if JH has multiple NICs & doesn't match default SASG_NWIF in vars was causing duplicate entries in iptables due to recent requirement for logging on all interfaces.  Now uses MACHINE_INTF determined at JH install time.
+
+  If EE server /home/sasauto/Puller directory doesn't exist, assume new install & write new sasauto key pair (can be forced also by setting OVERWRITE_SASKEY=true in vars but care must be taken with this - if key was already pushed to jumphost, generating a new key pair will break the JH logpuller!).
+
+  Update to server & client openvpn configs - added remote-cert-tls entries for key mutual authentication.
+
+  Adding new and old management vyatta VIP addresses to MANAGEMENT_SEGMENT ipset list and routes for sasfw/sds's.
+
+  Added script to switch nginx sla.conf to allow old tls protocols as well as new.  Script will allow switching back & forth & will restart nginx service.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.02
+  SASFW:
+    Fix to openvpn_server.sh to fix address/prefix added to ifcfg-eth1 if portable ip is specified.
+    Fix to always download latest epel-release rpm, remove any old one (if installed) and update with newest to ensure latest easy-rsa, openvpn, etc are retrieved.
+    
+  CDS:
+    Fix to move any existing legacy /etc/ipset/ipset config file to new standard /etc/sysconfig/ipset location, and restart ipset.  New ipset-service rpm should be installed which is configured to read from /etc/sysconfig.  Old location worked on some servers, not all.
+
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2.01
+  Updates to sasfw, cds & sasg - write out current ipset/iptables configuration in memory to a file to use for future firewall revalidations per GDPR requirements.
+  CDS - execution engine - set up jumphost firewall log pulls hourly vs daily.
+  CDS - all vm's - if run on already configured CDS server but no LOG entries exist in iptables configuration, add LOG entries and restart iptables.
+  SASG JH+ - Change to syslog to write each firewall log entry with short hostname of sasfw and ip address of the jumphost.  Also change to enable logrotate hourly for firewall logs.
+  Change to syslog - firewall and vpn logs no longer written to /sasg/logs.  Now writing to standard /var/log/messages to allow for log pushes to proper MSS ip address per GEO for security scans/storage.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.2
+  CDS tools server updates:
+    Create /sasg/bin/deploy_test.sh on Execution Engine vm to be run by UCD agent to validate connectivity to jumphost vip(s).
+       - also creates a list of jumphost virtual ips to be read by deploy_test.sh
+    Added logging to iptables filter rules - writes to /sasg/logs/Firewall/sascds.
+    Syslog / logrotate updated to enable rotating of new firewall logs.
+
+  SASFW:
+    Updated ipsec PSK generation - was creating keys with non-printable chars, now creates random 16 char hex key
+    Added install of base packages required on all sasfw's so can be used to install on base redhat image vs custom SAS image.
+    Openvpn RSA key creation updated to work with easy-rsa v3.
+    IAM rules added to iptables, ipsec config updated for IAM vpn tunnel
+    New variables added to vars for IAM configuration support
+
+  SASG:
+    IAM rules added to iptables
+    sasgcheck - fixed issue where it assumed ipsec tunnel config when client has un-used base ipsec code installed.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.1.07.02
+  sasgaas build - fixed issue with dev server routes not getting copied to correct place so prod routes were being added to dev tools servers.
+
+  sasg_client - iptables update - fix to not add entries to ipset for ldap/dns/vcenter if there was an extra variable array uncommented in vars but not assigned a value.   Could cause ipset/iptables startup failure.
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.1.07
+  sasfw - fixes/new features:
+   . ipset and iptables services now explicitly set to enabled to restart services on reboot
+   . no longer generates error if no SASG_IP is provided in vars file
+   . added processing of bandwidth limiting variables in vars file - 
+       - new BwSetup.sh script in /sasg/bin
+       - new tc_vtunX.conf  or tc_vti0.conf in /sasg/configs with BW settings.
+       - openvpn configuration, server_vtunX.conf updated with 2 new variables if BW limiting used.
+       - ipsecmon.sh updated to check for vti0 status & traffic control status & restart ipsec / reset
+         tc settings if not set (ie ipsec restart)
+   . incorrect log-prefix on few iptables entries caused log entries to be written to default 
+     /var/log/messages log vs sasfw firewall log.
+   . updated /etc/rsyslog.d/sasgfw.conf format
+   . added ETH1_LOCAL state ESTABLISHED rule to allow reply packets on internet traffic 
+     originating on sasfw
+   . build new sasg_install.sh with small sasg client config code if DOCKER_CONTAINER=YES in vars
+
+  sasg - 
+   . sasg_iptables.sh change to handle network interface names with a dot (.) in them.
+   . improved ipsec restart check on sasg 
+   . updated master-backup.sh to add/remove runtime iptables OUTPUT rules depending on keepalived
+     status to fix backup jumphost on-boarding issues.
+
+
+#############################################################################################################################
+--------------------------------------------------------------------------------------------------------------------
+V3.1.06
+  sasg fix - fixed postroute snat rule that sets source ip of sasg VIP for Nginx 3333 traffic to tools subnet - was changing first octet to 1 for non-10. sasg_vips.
+--------------------------------------------------------------------------------------------------------------------
+V3.1.05
+  sasfw fixes - 
+   . resolved defect #50- sasfw source nat rule for non-10. endpoint to CDS traffic - source/destination swapped - rule wouldn't be matched
+   . resolved defect #36- added date/timestamp in log & went back to old name of sasg_vyos_configure.log so sasfw install log can be pulled from
+     sasgaas GUI without having to change internals of sasgaas.
+   . fixed issue with tunnel being defined for 2nd sasg of just /32 CIDR if 2nd sasg not defined - fix for both SASFW & JH.
+  sasg fixes - 
+   . resolved defect #38- added Unable to establish SSL connection to wget check in sasg-check-keepalived.sh
+   . resolved defect #52- fixed ipsec config for sasg tunnels for nginx support - leftsubnet parameter in sasg config incorrectly had first 
+     octet swapped to a 1. when the sasg_ip was not a 10. address.
+   . resolved defect #49- set unicast peer in keepalived to first sasg_ip_1 if no sasg_ip_2 is defined to avoid vrrp issues with standalone JH config.
+--------------------------------------------------------------------------------------------------------------------
+V3.1.04
+  sasfw fixes - 
+    . removed ownership chg in syslog logrotate.d conf
+    . sasg_client - fixed issue in iptables template config where tunnel hooks for the filter table would break & not be updated
+      properly to vti0 if user had changed SASG_VPNIF=vtun0  variable in vars file. 
+
+--------------------------------------------------------------------------------------------------------------------
+V3.1.03
+  sasfw fixes - 
+    . If update mode selected & openvpn tunnel type selected, checks are done for openvpn listener port currently defined
+      vs what is specified in the vars file.  New code now looks at /sasg/configs directory for the server_vtunX.conf files
+      instead of /etc/openvpn/servers (old directory for openvpn configs from previous vyos to sasfw migration).
+    . Separated logrotate configs for firewall & vpn logs into separate config files.  Avoids issues with logrotations failing
+      for firewall logs should there be no VPN, ie on rcp shared environments / ipcenter only deploys.
+  sasg fixes -
+    . Fixed bug in iptables config where no ASB_IP was defined in vars but a CUSTPREM_BIGFIX_IP was, filter rule for ASB to BigFix
+      was incorrectly being added in iptables but no ipset lists were created for the ASB server ip. 
+    . Separated logrotate configs for firewall & vpn logs into separate config files to match sasfw.
+    . Added check for automate group id - if non-existent, use users group id in ownership setting in logrotate config files
+      for firewall/vpn logs.  If non-existent group id is defined, whole log rotation fails.
+--------------------------------------------------------------------------------------------------------------------
+V3.1.02
+  Fix for sasfw build - ipset config - ignore "already added" return on ipset create - resolves issue where mini management
+  segment ip is specified in vars file but is already added by default in the sasfw build.
+  Fix for nginx sla.conf - added proxy_request_buffering off;  in location stanza - fix for issue with endpoint post to EE
+  when using ipsec tunnel.
+--------------------------------------------------------------------------------------------------------------------
+V3.1.01
+  Added EE->LDAP 636 and ASB->LDAP636 (if ASB_IP defined) rules in sasg iptables/ipset.
+  Cleaned up ipset/iptables config on sasg.
+  Fixed removal of ipsec and openvpn config files on install (existing keys not removed).
+  Script - sasfwcheck on sasfw - updated to look for existence of ipsec.d/site0.conf before displaying ipsec status
+  Added default DNS_IP of 1.1.1.1 in sasg ipset list if not defined in vars.
+  LDAP_IP gets set to DNS_IP if not defined.
+
+--------------------------------------------------------------------------------------------------------------------
+V3.1
+  Added OUTPUT rules in JH iptables for onboarding of JH's.
+  Added new VCENTER_IP array in vars.
+  Added rules in JH iptables/ipset to allow ASB to vCenter if VCENTER_IP[0] defined in vars.
+  Added rules in JH iptables/ipset to allow ASB to BigFix on customer premise.
+
+--------------------------------------------------------------------------------------------------------------------
+V3.0
+  Major revisions to enable building of SAS Firewall (SASFW Redhat-based Firewall) directly through SASGAAS automation.
+  new cds_sasfw_setup.sh - configures iptables/ipset
+  all code uses common sasg_common.sh for common variables for directories/files/commands
+  ipsec/openvpn code modified to create server-side configurations /keys
+  new monitor scripts for restarting ipsec/openvpn
+  updated sasg_main script to create common directory structure, copy keys, create sasg client image, etc.
+  New sasfwcheck tool to display openvpn/ipsec status, routes, nics, cron entry issues
+
+--------------------------------------------------------------------------------------------------------------------
+V2.6.2a
+  firewall ETH1_LOCAL rule added to allow APM_IP icmp to vyos
+  updated RH7PKGS.tar with libreswan 3.20  - previous 3.21 libreswan version had bug causing tunnel issues.
+
+--------------------------------------------------------------------------------------------------------------------
+V2.6.2 
+  firewall rules added for r1soft & apm access from vyos in preparation for move to sasfw
+#
+
+--------------------------------------------------------------------------------------------------------------------
+V2.6.1  22 Sep 2017
+
+. Added var OVERWRITE_SASKEY=True 
+  Purpose - overwrite keys generated on SasGaas server which are copied to the 
+  .ssh dir on the CDS EE server to be used for SASg log pulls  - Leave commented
+  unless there's a requirement to replace the existing id_rsa & id_rsa.pub on EE server
+  in the sasauto home dir or else log pull process will BREAK!
+
+. HTTPS Proxy support for sasg-check-keepalived.sh now enabled - 
+  a) Added vyos pub ip, bpm port & https proxy name/port (if defined) to /sasg/bin/sasg_common.sh - check scripts already source in the sasg_common.sh file.
+  b) If HTTPS_PROXY is defined in vars then will configure keepalived.conf to call sasg-check-keepalived.sh with wget argument vs default of nc (netcat).
+  c) wget package now added to packages provided/installed on sasg.
+
+. Install MRTG monitoring.  Executables in /sasg/MRTG.  New cronjob calling /sasg/MRTG/scripts/generic.pl.
+
+. Install Nginx on sasg for staging of code for customer endpoints.  Nginx logs in /sasg/logs/Nginx.
+
+. logrotate for nginx logs configured.
+
+. Iptables updates to support nginx
+
+. Additional ipsec tunnels added to vyos & sasg configs for Nginx support.
+
+
+--------------------------------------------------------------------------------------------------------------------
+V2.6  18 Sep 2017
+
+. Additional filter and logging rules implemented on every interface on SASg via iptables and ipset.
+
+. Additional ipset-service package and pre-requisites bundled for RedHat 7.
+
+. Creation of openvpn, ipsec, ipset, iptables, keepalived configuration files all now done on the SASg vs Vyos.  Allows for updating config files with NIC device names defined on the sasg.
+
+. Logging all written to /sasg/logs/Firewall/sasgfw01  (or /sasg/logs/Firewall/sasgfw02 if secondary sasg).
+
+. Openvpn & IPSec log messasges now written to /sasg/logs/VPN/sasgfw01  (or /sasg/logs/VPN/sasgfw02 if secondary sasg).
+
+. Logrotate enabled to maintain / gzip logs.
+
+. Changed time string on sasg backup files - removed colon from time portion of name - caused restore issues on some systems.
+
+. Added nc argument to sasg-check-keepalived.sh in keepalived.conf to use netcat to check connectivity to public vyos ip by default instead of tcpdump method - seems to be more stable & several accounts have had to switch to this method.
+
+. Added check/create of /var/run/openvpn directory in master-backup.sh & sasg-check-keepalived.sh just before running openvpn - directory was getting removed on system reboot & openvpn would fail to start.  Now check is in there to -re-add if necessary prior to openvpn startup.
+
+. Added ssh key keypair generation & install under sasauto id for EE server log pulls from sasg.
+
+. Added rsync to list of apps installed on sasg.
+
+. JH+ compatibility changes - check if client.conf exists in /etc/openvpn & it has typical SASG in key names, then move client.conf to /sasg/backup/client.conf.<date> & stop existing openvpn process but dont stop or disable openvpn service.
+
+. New openvpn configs, auths, etc - stored in /sasg/config. All startup/monitoring scripts updated to use new config dir.   IPsec vpn still utilizes /etc/ipsec.conf, /etc/ipsec.secrets.
+
+. Set permissions on /sasg/logs to allow automate id access.
+
+--------------------------------------------------------------------------------------------------------------------
+V2.5.4  31 Jul 2017
+ 	
+
+. Vyos - support for sasauto id, nat logging enables, additional rules to allow for rcp connectivity to bigfix on customer premise
+
+. sasg - updates to support bigfix on customer premise,  keepalived fixes, rpm packaging changes.
+
+--------------------------------------------------------------------------------------------------------------------
+V2.5.3  18 Jul 2017
+
+SASG install fixes:
+  . added /var/run/openvpn dir check/create
+  . added step to set openvpn / ipsec service to disabled - in case changing tunnel types and new openvpn config is not under systemd (systemctl) control
+  . added install of ipset - required in near future release
+  . separate script for package install, included packages prev requiring downloading from web repo.  No longer asks if you want to install - will just attempt the full install & will report on specific packages that fail.
+  . Run yum only for missing packages vs just running for all packages in list.
+  . ipsec.secrets had wrong ip when no pubic ip existed on server
+  . called return vs exit on last ip check during install
+  . multi-sasg installs - 2nd/3rd/etc sites needed portable vtun ip in sasg-check-keepalived.sh not vyos pub ip.
+  . sasgcheck - wasn't showing openvpn process.  Also changed to "trim" output and not show systemctl status openvpn and fewer # of lines of logs so
+    output is easier to read.   Full output is visible by running:    sasgcheck -l
+
+   . sasgcheck now shows sasg code version on first line
+
+ 
+
+VYOS install fixes:
+  . added ETH1_IN rule for ipsec tunnel allowing cust endpt to cds
+  . added VTUN_OUT udp rule for customer premise dns port 53 queries
+  . removed invalid ETH1_LOCAL firewall rule and VYOS_ACCESS network group
+  . added DNAT to allow sasg-check-keepalived.sh to function in multi-sasg openvpn port 1194 configuration
+  . existing openvpn keys not being properly copied to sasg_client build dir.
+  . fixed issue with install fail on vyos when /config/auth/client ownership not set to automate id
+  . fixed setting of openvpn port in vtun interfaces and rport parameter in client.conf when only VTUN_PORT[0] defined in multi-sasg configuration.
+ 	
+--------------------------------------------------------------------------------------------------------------------
+V2.5.1  13 Jun 2017
+
+Fixes:
+openvpn with new keepalived  configuration on sasgs working on Redhat 6 & 7.  Automated failover both directions working.
+
+vyos backup - /config/config.boot.<date/time> - just load desired config to back out to specific time
+
+sasg backout - all backups stored in /sasg/backup.  New tool created:  /sasg/bin/sasgbackout.sh  to simplify restoring of
+
+previous sasg configuration files and cron jobs.
+
+--------------------------------------------------------------------------------------------------------------------
+V2.5.0  04 Jun 2017
+
+Added vars:
+
+######################################################################################
+# MRTG section - required - should not need to change
+#######################################################################################
+MRTG_USER=mrtg
+MRTG_DIR=/home/mrtg
+
+ 
+
+Features/fixes:
+mrtg install on vyos fixed.  Sasg new keepalived issues resolved when using openvpn on port 1194.
+
+Install on already configured CDS server doesn't restart network - only adds routes if missing & adds CDS servers to
+
+ipset based on vars.
+
+
+--------------------------------------------------------------------------------------------------------------------
+V2.1.0  19 May 2017
+
+Added option to set one or more Chef / EE ports for endpoint -> sasg communication -
+
+##########################################################################################
+# Set vars for chef/ee - endpoint to sasg communication.
+# Defaults if none specified
+# CHEF_PORT[0]="443"
+# EE_PORT[0]="3333"
+##########################################################################################
+#CHEF_PORT[0]="443"
+#CHEF_PORT[1]="8443"
+#EE_PORT[0]="3333"
+#EE_PORT[1]="3330"
+
+ 
+
+Also options that shouldn't need updating on most accts - in "No need to change" section:
+
+# APM_IP - monitoring server - shouldn't have to change
+APM_IP=159.8.20.241
+
+##############################################################################
+# settings for Traffic-Policy rules for tunnel bandwidth limiting
+# If values here are commented out or are not specifically set for additional
+# multi-sasg vtuns (ie TP_TUN_IN_BW[1]="5Mbit"), then will use
+# the values specified here as a default.
+# **Note - spaces in description will be converted to underscores
+#TP_TUN_IN_BW[0]="100Mbit"
+#TP_TUN_IN_DESCR[0]="vtunX"
+#TP_TUN_OUT_BW[0]="100Mbit"
+#TP_TUN_OUT_DEFAULT_BW[0]="50%"
+#TP_TUN_OUT_DEFAULT_CEILING[0]="100%"
+#TP_TUN_OUT_DEFAULT_QUEUETYPE[0]="fair-queue"
+
+ 
+
+Also includes update to CDS_tools.sh which gets generated/run on the CDS servers - will set up new servers as normal.  If run again on existing CDS servers, will only update ipset / iptables on the tools server if it finds a new CDS server in vars.  Prevents disruption to existing CDS servers if not required.
+
+
+--------------------------------------------------------------------------------------------------------------------
+V2.0.0  12 May 2017
+
+Automation now fully handles multi-sasg installs.  Vars template now has arrays for SASG_IP's & SASG_VIP's.
+
+Separate iptables, keepalived.conf, client.conf files are created for each SASG server under /config/auth/client on the vyos  each appended with the sasg primary IP.
+
+*Now a single sasg_install.sh is created on the vyos in /config/auth/client/Sasg.  This one self-extracting executable can run on Every SASG client - no need to manually create separate install files for each sasg or site.
+
+Fixed issue with client side vpn tunnel ip not being incremented properly in client.conf in multi-sasg setup.
+
+Added install mode to vars file:
+
+###################################################################################
+# Specify if running in new (default) or update mode
+# INSTALL_MODE=update  - won't delete & recreate vtun interfaces
+# **Leave commented or blank for new installs
+###################################################################################
+#INSTALL_MODE=update
+
+ 
+
+Added scripts to /usr/local/bin on sasg installs to aide in debugging connectivity issues.  Can just ask SASG sysadmin to run: "cksasg" or "sasgdebug".
+    cksasg - echos out to screen as well as to file in /tmp, output from typical debug cmds we ask for all the time:
+             ip addr, systemctl status openvpn@client.service, systemctl status keepalived.service, and 
+             tail -10 /etc/keepalived/COUNTER
+
+    sasgdebug - grabs same kind of status info as cksasg as well as iptables info, ip route info, selinux mode, and all 
+                necessary config files and creates a tar file in /tmp that can be sent to the SAS engineer for additional
+                debug.
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+V1.4.0  27 Oct 2016
+
+Vyos setup - logic added for proper BPM (RCP/CC) server to inbound public access,  proper routing of 443 trafifc to proper BPM, added Mini Management Segment IP
+
+--------------------------------------------------------------------------------------------------------------------
+V1.0  29 Jul 2016
+
+Original SasGaas Automation Scripts
+
+--------------------------------------------------------------------------------------------------------------------
+

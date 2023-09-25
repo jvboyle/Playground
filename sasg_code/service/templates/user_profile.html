@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<!-- Begin page content -->
+<div class="container">
+    <p class="lead">
+        User Information
+    </p>
+
+    <div class="sidebyside">
+        <label class="fixed-item">Username: </label>
+        <input type="username" class="full-item" value="{{ user_info.username }}" style="width:100%" disabled>
+    </div>
+
+    <div class="sidebyside">
+        <label class="fixed-item">API Key: </label>
+        <input type="apikey" class="full-item" value="{{ current_user.apikey }}" disabled>
+    </div>
+
+    <!--div class="sidebyside">
+        <label class="fixed-item">SSH Keys: </label>
+        <table class="table table-striped">
+            <thead>
+                <tr><td>Key Name</td><td>Created</td><td>File</td><td>Actions</td></tr>
+            </thead>
+            <tbody>
+            {% for key in meta_info['keys'] %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ meta_info['keys'][key].created }}</td>
+                    <td><a href="{{ meta_info['keys'][key].url }}" download target="_blank">Download</a></td>
+                    <td>
+                    <a class="btn btn-primary btn-xs key-delete" data-keyname="{{ key }}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">New SSH Key</button-->
+
+    <!-- Modal for New Customer -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">New Key</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form id="new_key_form" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="keyname" style="width:80px;">Key Name: &nbsp; </label>
+                                <input type="keyname" class="form-control" name="keyname" id="keyname" aria-describedby="keynameHelp" placeholder="sla-automation" required>
+                                <small id="keynameHelp" class="form-text text-muted">Provide an SSH key for the device accesses.</small>
+                            </div>
+                        </div>
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="keyfile" style="width:80px;">Key File: &nbsp; </label>
+                                <input type="file" class="form-control" name="key_file" id="target-file" aria-describedby="keyfileHelp" required> or
+                            </div>
+                        </div>
+
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group" style="width:100%">
+                                <label for="bluegroup" style="width:100%;">Groups (select multiple groups): &nbsp; </label>
+                                <select id="bluegroups" name="bluegroups" multiple class="form-control" style="width:100%;display:none;"></select>
+                            </div>
+                        </div>
+
+                        <!--div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group" style="width:100%">
+                                <label for="drag-drop">Drag-Drop: </label>
+                                <div id="file-drag-drop" class="drop-area">
+                                    <span class="drop-instructions">Drag and drop key file here</span><span class="drop-over">Drop key file here</span>
+                                </div>
+                            </div>
+                        </div-->
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a id="new_key_submit" class="btn btn-primary">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+var csrf_token = "{{ csrf_token() }}"; // DO NOT DELETE: used in global sasg.js to send csrf.
+
+// will leave lower case since this is form post.
+$('#new_key_submit').click(function(e) {
+    if( !$('#keyname').val() || !$('#target-file').val() ) {
+        alert('Provide all information');
+        return false;
+    }
+
+    show_spinner($('body'));
+
+    var formData = new FormData($('#new_key_form')[0]);
+
+    $.ajax({
+        url: '/user_gui',
+        type: 'POST',
+        data: formData,
+        async: false,
+        success: function (data) {
+            window.location.href = window.location.href;
+        },
+        error: function(data) {
+            console.log(data); // leave for debuggin.
+            hide_spinner($('body'));
+
+            var output = JSON.parse(data['responseText']);
+            display_message(output['status'], output['message']);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+
+    e.stopPropagation();
+
+    return false;
+});
+
+$('.key-delete').each(function() {
+    $(this).on("click", function(e){
+        if(!confirm('This will delete key information. Are you sure?')) {
+            return false;
+        }
+
+        show_spinner($('body'));
+        $.delete('/user?KEY_NAME=' + $(this).data('keyname'), null, function(data) {
+            window.location.href = window.location.href;
+        },'json')
+        .fail(function() {
+            hide_spinner($('body'));
+            display_message('ERROR', 'Failed to delete key');
+        });
+
+        e.stopPropagation();
+    });
+});
+
+function toggle_password(event, elem, password) {
+    if( $(elem).siblings('div').text().indexOf('********') >= 0 ) {
+        $(elem).siblings('div').text(password);
+        $(elem).text('Hide');
+    } else {
+        $(elem).siblings('div').text('********');
+        $(elem).text('Show');
+    }
+
+    event.stopPropagation();
+}
+
+
+$('#new_key').click(function() {
+    alert('show pane to collect some info at the bottom.. use the bluesight pane');
+});
+
+$(function() {
+    //enable_drag_drop();
+    password_mask();
+});
+</script>
+
+</div>
+
+{% endblock %}

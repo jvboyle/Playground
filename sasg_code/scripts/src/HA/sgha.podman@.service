@@ -1,0 +1,17 @@
+[Unit]
+Description=SGHA Service for %i
+
+[Service]
+Environment="SYSTEMD_ENV_CLIENT_PATH=/sasg/clients/%i"
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/usr/bin/bash /sasg/bin/HA/pre-start_master.sh %i
+ExecStart=/sasg/bin/HA/sasg-runner.sh
+ExecStartPost=/usr/bin/bash /sasg/bin/HA/post-start_master.sh %i
+ExecStartPost=/usr/bin/systemctl start sgha-watcher@%i.master
+ExecStop=/usr/bin/systemctl stop sgha-watcher@%i.master
+ExecStop=/sasg/bin/HA/sasg-runner.sh stop
+ExecStopPost=/usr/bin/bash /sasg/bin/HA/manage-host-only-docker-route.sh %i del
+
+[Install]
+WantedBy=multi-user.target

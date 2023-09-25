@@ -1,0 +1,1017 @@
+Welcome to Vyatta
+Version:      VSE6.7R9
+Description:  Brocade Vyatta 5415 vRouter 6.7 R9
+Copyright:    2006-2015 Vyatta, Inc.
+Last login: Tue Sep 20 12:47:52 2016 from yktgi01e0-s5.watson.ibm.com
+show nat destination rules
+sasgaas@mgmtvytfw01:~$ show nat destination rules
+Disabled rules are not shown
+Codes: X - exclude rule
+
+rule    intf              translation                                               
+----    ----              -----------                                               
+1       bond1             daddr 158.87.34.1 to 10.149.99.238                        
+        proto-ip          dport ANY                                                     
+Desc: B2Y management traffic to self
+
+7       bond1             daddr 158.87.34.9 to 10.148.11.160                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-asb-wdc04.sdad.ibm.com
+
+8       bond1             daddr 158.87.34.8 to 10.148.11.147                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-ee-wdc04.sdad.ibm.com
+
+9       bond1             daddr 158.87.34.7 to 10.148.11.187                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-chef-wdc04.sdad.ibm.com
+
+10      bond1             daddr 158.87.34.2 to 10.148.11.169                        
+        proto-ip          dport ANY                                                     
+Desc: mgmt-crtlwrk01.ibm.com
+
+11      bond1             daddr 158.87.34.6 to 10.148.11.182                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-bpm-wdc04.sdad.ibm.com
+
+12      bond1             daddr 158.87.34.3 to 10.148.11.140                        
+        proto-ip          dport ANY                                                     
+Desc: mgmt-gtsaasbuild.softlayer.com
+
+13      bond1             daddr 158.87.34.5 to 10.148.11.133                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-dr-wdc04.sdad.ibm.com
+
+14      bond1             daddr 158.87.34.4 to 10.148.11.180                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-apiaas-wdc04.sdad.ibm.com
+
+15      bond0             daddr 158.87.34.17 to 10.28.113.12                        
+        proto-tcp         dport 22 to 2222                                              
+Desc: kpssd01.ibm.com
+
+16      bond1             daddr 158.87.34.17 to 10.28.113.12                        
+        proto-tcp         dport 22 to 2222                                              
+Desc: kpssd01.ibm.com
+
+18      bond1             daddr 158.87.34.17 to 10.28.113.12                        
+        proto-all         dport ANY                                                     
+Desc: kpssd01.ibm.com-IP
+
+19      bond0             daddr 158.87.34.17 to 10.28.113.12                        
+        proto-all         dport ANY                                                     
+Desc: kpssd01.ibm.com-IP
+
+20      bond1             daddr 158.87.34.18 to 10.28.113.13                        
+        proto-ip          dport ANY                                                     
+Desc: aas-p-b001-chef-sea.sdad.ibm.com
+
+22      bond1             daddr 158.87.34.19 to 10.28.113.15                        
+        proto-ip          dport ANY                                                     
+Desc: aas-p-b001-bpm-sea.sdad.ibm.com
+
+26      bond1             daddr 158.87.34.21 to 10.28.113.23                        
+        proto-ip          dport ANY                                                     
+Desc: kpvyo01.ibm.com
+
+28      bond1             daddr 158.87.34.22 to 10.28.113.35                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-b001-asb-sea01.sdad.ibm.com
+
+30      bond1             daddr 158.87.34.23 to 10.28.113.36                        
+        proto-tcp_udp     dport 22 to 2222                                              
+Desc: kpssd02.ibm.com
+
+32      bond1             daddr 158.87.34.23 to 10.28.113.36                        
+        proto-ip          dport ANY                                                     
+Desc: kpssd02.ibm.com
+
+34      bond1             daddr 158.87.34.24 to 10.28.113.44                        
+        proto-ip          dport ANY                                                     
+Desc: kptest02.ibm.com
+
+36      bond1             daddr 158.87.34.25 to 10.28.113.48                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-kp01-asb-sea01.sdad.ibm.com
+
+38      bond1             daddr 158.87.34.26 to 10.28.113.53                        
+        proto-ip          dport ANY                                                     
+Desc: aas-p-ms-ee-sea.sdad.ibm.com
+
+40      bond1             daddr 158.87.34.27 to 10.28.113.54                        
+        proto-tcp_udp     dport 22 to 2222                                              
+Desc: sla-p-kp01-vyos-sea01.sdad.ibm.com
+
+42      bond1             daddr 158.87.34.27 to 10.28.113.54                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-kp01-vyos-sea01.sdad.ibm.com
+
+44      bond1             daddr 158.87.34.28 to 10.28.113.57                        
+        proto-ip          dport ANY                                                     
+Desc: kptest01.ibm.com
+
+48      bond1             daddr 158.87.34.30 to 10.28.113.60                        
+        proto-ip          dport ANY                                                     
+Desc: aas-p-b001-ee-sea.sdad.ibm.com
+
+50      bond1             daddr 158.87.34.31 to 10.28.113.7                         
+        proto-ip          dport ANY                                                     
+Desc: aas-p-b001-ee-sea.sdad.ibm.com
+
+52      bond1             daddr 158.87.34.32 to 10.28.113.61                        
+        proto-ip          dport ANY                                                     
+Desc: aas-p-kp01-chef-sea.sdad.ibm.com
+
+54      bond1             daddr 158.87.34.33 to 10.28.113.5                         
+        proto-ip          dport ANY                                                     
+Desc: aas-p-kp01-ee-sea.sdad.ibm.com
+
+56      bond1             daddr 158.87.34.34 to 10.28.113.59                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-a027-asb-sea01.sdad.ibm.com
+
+58      bond1             daddr 158.87.34.35 to 10.28.113.16                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-a027-bpm-sea01.sdad.ibm.com
+
+60      bond1             daddr 158.87.34.36 to 10.28.113.19                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-a027-chef-sea01.sdad.ibm.com
+
+62      bond1             daddr 158.87.34.37 to 10.28.113.31                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-a027-ee-sea01.sdad.ibm.com
+
+63      bond1             daddr 158.87.34.38 to 10.142.128.83                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na001-vyos.dal09.sdad.sl.ibm.com
+
+64      bond1             daddr 158.87.34.39 to 10.142.128.109                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na001-bpm.dal09.sdad.sl.ibm.com
+
+65      bond1             daddr 158.87.34.40 to 10.142.128.105                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na001-chef.dal09.sdad.sl.ibm.com
+
+66      bond1             daddr 158.87.34.41 to 10.142.128.103                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na001-ee.dal09.sdad.sl.ibm.com
+
+67      bond1             daddr 158.87.34.42 to 10.142.128.100                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na001-asb.dal09.sdad.sl.ibm.com
+
+68      bond1             daddr 158.87.34.43 to 10.142.128.126                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na002-vyos.dal09.sdad.sl.ibm.com
+
+69      bond1             daddr 158.87.34.44 to 10.142.128.68                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na002-bpm.dal09.sdad.sl.ibm.com
+
+70      bond1             daddr 158.87.34.45 to 10.142.128.115                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na002-chef.dal09.sdad.sl.ibm.com
+
+71      bond1             daddr 158.87.34.46 to 10.142.128.80                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na002-ee.dal09.sdad.sl.ibm.com
+
+72      bond1             daddr 158.87.34.47 to 10.142.128.114                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na002-asb.dal09.sdad.sl.ibm.com
+
+73      bond1             daddr 158.87.34.48 to 10.142.128.124                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na003-vyos.dal09.sdad.sl.ibm.com
+
+74      bond1             daddr 158.87.34.49 to 10.142.128.104                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na003-bpm.dal09.sdad.sl.ibm.com
+
+75      bond1             daddr 158.87.34.50 to 10.142.128.112                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na003-chef.dal09.sdad.sl.ibm.com
+
+76      bond1             daddr 158.87.34.51 to 10.142.128.95                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na003-ee.dal09.sdad.sl.ibm.com
+
+77      bond1             daddr 158.87.34.52 to 10.142.128.93                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na003-asb.dal09.sdad.sl.ibm.com
+
+78      bond1             daddr 158.87.34.53 to 10.113.45.234                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea001-vyos.lon02.sdad.sl.ibm.com
+
+79      bond1             daddr 158.87.34.54 to 10.113.45.220                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea001-bpm.lon02.sdad.sl.ibm.com
+
+80      bond1             daddr 158.87.34.55 to 10.113.45.233                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea001-chef.lon02.sdad.sl.ibm.com
+
+81      bond1             daddr 158.87.34.56 to 10.113.45.231                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea001-ee.lon02.sdad.sl.ibm.com
+
+82      bond1             daddr 158.87.34.57 to 10.113.45.208                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea001-asb.lon02.sdad.sl.ibm.com
+
+83      bond1             daddr 158.87.34.58 to 10.142.128.81                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na004-vyos.dal09.sdad.sl.ibm.com
+
+84      bond1             daddr 158.87.34.59 to 10.142.128.97                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na004-bpm.dal09.sdad.sl.ibm.com
+
+85      bond1             daddr 158.87.34.60 to 10.142.128.98                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na004-chef.dal09.sdad.sl.ibm.com
+
+86      bond1             daddr 158.87.34.61 to 10.142.128.120                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na004-ee.dal09.sdad.sl.ibm.com
+
+87      bond1             daddr 158.87.34.62 to 10.142.128.75                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na004-asb.dal09.sdad.sl.ibm.com
+
+88      bond1             daddr 158.87.34.63 to 10.142.128.72                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na005-vyos.dal09.sdad.sl.ibm.com
+
+89      bond1             daddr 158.87.34.64 to 10.142.128.73                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na005-bpm.dal09.sdad.sl.ibm.com
+
+90      bond1             daddr 158.87.34.65 to 10.142.128.74                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na005-chef.dal09.sdad.sl.ibm.com
+
+91      bond1             daddr 158.87.34.66 to 10.142.128.119                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na005-ee.dal09.sdad.sl.ibm.com
+
+92      bond1             daddr 158.87.34.67 to 10.142.128.71                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na005-asb.dal09.sdad.sl.ibm.com
+
+93      bond1             daddr 158.87.34.68 to 10.142.128.91                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na006-vyos.dal09.sdad.sl.ibm.com
+
+94      bond1             daddr 158.87.34.69 to 10.142.128.85                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na006-bpm.dal09.sdad.sl.ibm.com
+
+95      bond1             daddr 158.87.34.70 to 10.142.128.89                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na006-chef.dal09.sdad.sl.ibm.com
+
+96      bond1             daddr 158.87.34.71 to 10.142.128.90                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na006-ee.dal09.sdad.sl.ibm.com
+
+97      bond1             daddr 158.87.34.72 to 10.142.128.77                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na006-asb.dal09.sdad.sl.ibm.com
+
+98      bond1             daddr 158.87.34.73 to 10.142.128.110                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na008-vyos-dal09.sdad.sl.ibm.com
+
+99      bond1             daddr 158.87.34.74 to 10.142.128.123                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na008-bpm-dal09.sdad.sl.ibm.com
+
+100     bond1             daddr 158.87.34.75 to 10.142.128.79                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na008-chef-dal09.sdad.sl.ibm.com
+
+101     bond1             daddr 158.87.34.76 to 10.142.128.82                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na008-ee-dal09.sdad.sl.ibm.com
+
+102     bond1             daddr 158.87.34.77 to 10.142.128.122                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na008-asb-dal09.sdad.sl.ibm.com
+
+103     bond1             daddr 158.87.34.78 to 10.142.128.66                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na009-vyos-dal09.sdad.sl.ibm.com
+
+104     bond1             daddr 158.87.34.79 to 10.142.128.102                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na009-bpm-dal09.sdad.sl.ibm.com
+
+105     bond1             daddr 158.87.34.80 to 10.142.128.108                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na009-chef-dal09.sdad.sl.ibm.com
+
+106     bond1             daddr 158.87.34.81 to 10.142.128.113                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na009-ee-dal09.sdad.sl.ibm.com
+
+107     bond1             daddr 158.87.34.82 to 10.142.128.101                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na009-asb-dal09.sdad.sl.ibm.com
+
+108     bond1             daddr 158.87.34.83 to 10.142.128.92                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na007-vyos-dal09.sdad.sl.ibm.com
+
+109     bond1             daddr 158.87.34.84 to 10.142.128.118                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na007-bpm-dal09.sdad.sl.ibm.com
+
+110     bond1             daddr 158.87.34.85 to 10.142.128.117                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na007-chef-dal09.sdad.sl.ibm.com
+
+111     bond1             daddr 158.87.34.86 to 10.142.128.116                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na007-ee-dal09.sdad.sl.ibm.com
+
+112     bond1             daddr 158.87.34.87 to 10.142.128.121                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na007-asb-dal09.sdad.sl.ibm.com
+
+113     bond1             daddr 158.87.34.88 to 10.142.128.111                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na010-vyos-dal09.sdad.sl.ibm.com
+
+114     bond1             daddr 158.87.34.89 to 10.142.128.94                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na010-bpm-dal09.sdad.sl.ibm.com
+
+115     bond1             daddr 158.87.34.90 to 10.142.128.99                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na010-chef-dal09.sdad.sl.ibm.com
+
+116     bond1             daddr 158.87.34.91 to 10.142.128.106                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na010-ee-dal09.sdad.sl.ibm.com
+
+117     bond1             daddr 158.87.34.92 to 10.142.128.84                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na010-asb-dal09.sdad.sl.ibm.com
+
+118     bond1             daddr 158.87.34.93 to 10.142.128.87                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na011-vyos-dal09.sdad.sl.ibm.com
+
+119     bond1             daddr 158.87.34.94 to 10.142.128.76                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na011-bpm-dal09.sdad.sl.ibm.com
+
+120     bond1             daddr 158.87.34.95 to 10.142.128.78                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na011-chef-dal09.sdad.sl.ibm.com
+
+121     bond1             daddr 158.87.34.96 to 10.142.128.86                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na011-ee-dal09.sdad.sl.ibm.com
+
+122     bond1             daddr 158.87.34.97 to 10.142.128.125                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na011-asb-dal09.sdad.sl.ibm.com
+
+123     bond1             daddr 158.87.34.10 to 10.121.41.69                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na012-vyos-dal09.sdad.sl.ibm.com
+
+124     bond1             daddr 158.87.34.11 to 10.121.41.66                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na012-bpm-dal09.sdad.sl.ibm.com
+
+125     bond1             daddr 158.87.34.12 to 10.121.41.72                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na012-chef-dal09.sdad.sl.ibm.com
+
+126     bond1             daddr 158.87.34.13 to 10.121.41.110                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na012-ee-dal09.sdad.sl.ibm.com
+
+127     bond1             daddr 158.87.34.14 to 10.121.41.114                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na012-asb-dal09.sdad.sl.ibm.com
+
+128     bond1             daddr 158.87.34.15 to 10.113.45.252                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea002-vyos-lon02.sdad.sl.ibm.com
+
+129     bond1             daddr 158.87.34.16 to 10.113.45.239                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea002-bpm-lon02.sdad.sl.ibm.com
+
+130     bond1             daddr 158.87.34.98 to 10.113.45.241                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea002-chef-lon02.sdad.sl.ibm.com
+
+131     bond1             daddr 158.87.34.99 to 10.113.45.245                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea002-ee-lon02.sdad.sl.ibm.com
+
+132     bond1             daddr 158.87.34.100 to 10.113.45.247                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea002-asb-lon02.sdad.sl.ibm.com
+
+133     bond1             daddr 158.87.34.101 to 10.121.41.107                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na013-vyos-dal09.sdad.sl.ibm.com
+
+134     bond1             daddr 158.87.34.102 to 10.121.41.91                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na013-bpm-dal09.sdad.sl.ibm.com
+
+135     bond1             daddr 158.87.34.103 to 10.121.41.75                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na013-chef-dal09.sdad.sl.ibm.com
+
+136     bond1             daddr 158.87.34.104 to 10.121.41.82                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na013-ee-dal09.sdad.sl.ibm.com
+
+137     bond1             daddr 158.87.34.105 to 10.121.41.83                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na013-asb-dal09.sdad.sl.ibm.com
+
+138     bond1             daddr 158.87.34.106 to 10.117.181.176                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ap001-vyos-sng01.sdad.sl.ibm.com
+
+139     bond1             daddr 158.87.34.107 to 10.117.181.143                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ap001-bpm-sng01.sdad.sl.ibm.com
+
+140     bond1             daddr 158.87.34.108 to 10.117.181.154                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ap001-chef-sng01.sdad.sl.ibm.com
+
+141     bond1             daddr 158.87.34.109 to 10.117.181.165                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ap001-ee-sng01.sdad.sl.ibm.com
+
+142     bond1             daddr 158.87.34.110 to 10.117.181.173                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ap001-asb-sng01.sdad.sl.ibm.com
+
+143     bond1             daddr 158.87.34.111 to 10.121.41.92                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na014-vyos-dal09.sdad.sl.ibm.com
+
+144     bond1             daddr 158.87.34.112 to 10.121.41.112                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na014-bpm-dal09.sdad.sl.ibm.com
+
+145     bond1             daddr 158.87.34.113 to 10.121.41.124                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na014-chef-dal09.sdad.sl.ibm.com
+
+146     bond1             daddr 158.87.34.114 to 10.121.41.90                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na014-ee-dal09.sdad.sl.ibm.com
+
+147     bond1             daddr 158.87.34.115 to 10.121.41.78                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na014-asb-dal09.sdad.sl.ibm.com
+
+148     bond1             daddr 158.87.34.116 to 10.133.152.78                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-jp001-vyos-tok02.sdad.sl.ibm.com
+
+149     bond1             daddr 158.87.34.117 to 10.133.152.120                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-jp001-bpm-tok02.sdad.sl.ibm.com
+
+150     bond1             daddr 158.87.34.118 to 10.121.41.124                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-jp001-chef-tok02.sdad.sl.ibm.com
+
+151     bond1             daddr 158.87.34.119 to 10.133.152.123                     
+        proto-ip          dport ANY                                                     
+Desc: sla-p-jp001-ee-tok02.sdad.sl.ibm.com
+
+152     bond1             daddr 158.87.34.120 to 10.133.152.74                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-jp001-asb-tok02.sdad.sl.ibm.com
+
+153     bond1             daddr 158.87.34.121 to 10.121.41.109                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na015-vyos-dal09.sdad.sl.ibm.com
+
+154     bond1             daddr 158.87.34.122 to 10.121.41.70                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na015-bpm-dal09.sdad.sl.ibm.com
+
+155     bond1             daddr 158.87.34.123 to 10.121.41.99                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na015-chef-dal09.sdad.sl.ibm.com
+
+156     bond1             daddr 158.87.34.124 to 10.121.41.104                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na015-ee-dal09.sdad.sl.ibm.com
+
+157     bond1             daddr 158.87.34.125 to 10.121.41.108                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na015-asb-dal09.sdad.sl.ibm.com
+
+158     bond1             daddr 158.87.34.126 to 10.121.41.71                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na016-vyos-dal09.sdad.sl.ibm.com
+
+159     bond1             daddr 158.87.34.127 to 10.121.41.121                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na016-bpm-dal09.sdad.sl.ibm.com
+
+160     bond1             daddr 158.87.34.128 to 10.121.41.76                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na016-chef-dal09.sdad.sl.ibm.com
+
+161     bond1             daddr 158.87.34.129 to 10.121.41.113                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na016-ee-dal09.sdad.sl.ibm.com
+
+162     bond1             daddr 158.87.34.130 to 10.121.41.77                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na016-asb-dal09.sdad.sl.ibm.com
+
+163     bond1             daddr 158.87.34.131 to 10.121.41.87                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na017-vyos-dal09.sdad.sl.ibm.com
+
+164     bond1             daddr 158.87.34.132 to 10.121.41.105                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na017-bpm-dal09.sdad.sl.ibm.com
+
+165     bond1             daddr 158.87.34.133 to 10.121.41.125                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na017-chef-dal09.sdad.sl.ibm.com
+
+166     bond1             daddr 158.87.34.134 to 10.121.41.126                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na017-ee-dal09.sdad.sl.ibm.com
+
+167     bond1             daddr 158.87.34.135 to 10.121.41.84                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na017-asb-dal09.sdad.sl.ibm.com
+
+168     bond1             daddr 158.87.34.136 to 10.111.89.42                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-hk001-vyos-hkg02.sdad.sl.ibm.com
+
+169     bond1             daddr 158.87.34.137 to 10.111.89.6                        
+        proto-ip          dport ANY                                                     
+Desc: sla-p-hk001-bpm-hkg02.sdad.sl.ibm.com
+
+170     bond1             daddr 158.87.34.138 to 10.111.89.36                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-hk001-chef-hkg02.sdad.sl.ibm.com
+
+171     bond1             daddr 158.87.34.139 to 10.111.89.26                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-hk001-ee-hkg02.sdad.sl.ibm.com
+
+172     bond1             daddr 158.87.34.140 to 10.111.89.24                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-hk001-asb-hkg02.sdad.sl.ibm.com
+
+173     bond1             daddr 158.87.34.141 to 10.121.41.115                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na018-vyos-dal09.sdad.sl.ibm.com
+
+174     bond1             daddr 158.87.34.142 to 10.121.41.102                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na018-bpm-dal09.sdad.sl.ibm.com
+
+175     bond1             daddr 158.87.34.143 to 10.121.41.94                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na018-chef-dal09.sdad.sl.ibm.com
+
+176     bond1             daddr 158.87.34.144 to 10.121.41.103                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na018-ee-dal09.sdad.sl.ibm.com
+
+177     bond1             daddr 158.87.34.145 to 10.121.41.111                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na018-asb-dal09.sdad.sl.ibm.com
+
+178     bond1             daddr 158.87.34.146 to 10.113.45.196                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea003-vyos-lon02.sdad.sl.ibm.com
+
+179     bond1             daddr 158.87.34.147 to 10.113.45.195                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea003-bpm-lon02.sdad.sl.ibm.com
+
+180     bond1             daddr 158.87.34.148 to 10.113.45.230                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea003-chef-lon02.sdad.sl.ibm.com
+
+181     bond1             daddr 158.87.34.149 to 10.113.45.224                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea003-ee-lon02.sdad.sl.ibm.com
+
+182     bond1             daddr 158.87.34.150 to 10.113.45.218                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea003-asb-lon02.sdad.sl.ibm.com
+
+183     bond1             daddr 158.87.34.151 to 10.113.45.228                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea004-vyos-lon02.sdad.sl.ibm.com
+
+184     bond1             daddr 158.87.34.152 to 10.113.45.198                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea004-bpm-lon02.sdad.sl.ibm.com
+
+185     bond1             daddr 158.87.34.153 to 10.113.45.197                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea004-chef-lon02.sdad.sl.ibm.com
+
+186     bond1             daddr 158.87.34.154 to 10.113.45.210                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea004-ee-lon02.sdad.sl.ibm.com
+
+187     bond1             daddr 158.87.34.155 to 10.113.45.226                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea004-asb-lon02.sdad.sl.ibm.com
+
+188     bond1             daddr 158.87.34.156 to 10.113.45.213                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea005-vyos-lon02.sdad.sl.ibm.com
+
+189     bond1             daddr 158.87.34.157 to 10.113.45.199                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea005-bpm-lon02.sdad.sl.ibm.com
+
+190     bond1             daddr 158.87.34.158 to 10.113.45.200                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea005-chef-lon02.sdad.sl.ibm.com
+
+191     bond1             daddr 158.87.34.159 to 10.113.45.242                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea005-ee-lon02.sdad.sl.ibm.com
+
+192     bond1             daddr 158.87.34.160 to 10.113.45.207                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea005-asb-lon02.sdad.sl.ibm.com
+
+193     bond1             daddr 158.87.34.161 to 10.113.45.206                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea006-vyos-lon02.sdad.sl.ibm.com
+
+194     bond1             daddr 158.87.34.162 to 10.113.45.237                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea006-bpm-lon02.sdad.sl.ibm.com
+
+195     bond1             daddr 158.87.34.163 to 10.113.45.229                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea006-chef-lon02.sdad.sl.ibm.com
+
+196     bond1             daddr 158.87.34.164 to 10.113.45.236                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea006-ee-lon02.sdad.sl.ibm.com
+
+197     bond1             daddr 158.87.34.165 to 10.113.45.205                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea006-asb-lon02.sdad.sl.ibm.com
+
+198     bond1             daddr 158.87.34.166 to 10.113.45.212                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea007-vyos-lon02.sdad.sl.ibm.com
+
+199     bond1             daddr 158.87.34.167 to 10.113.45.219                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea007-bpm-lon02.sdad.sl.ibm.com
+
+200     bond1             daddr 158.87.34.168 to 10.113.45.248                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea007-chef-lon02.sdad.sl.ibm.com
+
+201     bond1             daddr 158.87.34.169 to 10.113.45.244                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea007-ee-lon02.sdad.sl.ibm.com
+
+202     bond1             daddr 158.87.34.170 to 10.113.45.202                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-emea007-asb-lon02.sdad.sl.ibm.com
+
+203     bond1             daddr 158.87.34.171 to 10.175.10.73                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-ms-apie-ams03.sdad.sl.ibm.com
+
+204     bond1             daddr 158.87.34.172 to 10.121.41.74                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na019-vyos-dal09.sdad.sl.ibm.com
+
+205     bond1             daddr 158.87.34.173 to 10.121.41.81                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na019-bpm-dal09.sdad.sl.ibm.com
+
+206     bond1             daddr 158.87.34.174 to 10.121.41.88                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na019-chef-dal09.sdad.sl.ibm.com
+
+207     bond1             daddr 158.87.34.175 to 10.121.41.79                       
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na019-ee-dal09.sdad.sl.ibm.com
+
+208     bond1             daddr 158.87.34.176 to 10.121.41.118                      
+        proto-ip          dport ANY                                                     
+Desc: sla-p-na019-asb-dal09.sdad.sl.ibm.com
+
+209     bond1             daddr 158.87.34.177 to 10.164.129.218                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea012-vyos-lon02.sdad.sl.ibm.com
+
+210     bond1             daddr 158.87.34.178 to 10.164.129.215                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea012-bpm-lon02.sdad.sl.ibm.com
+
+211     bond1             daddr 158.87.34.179 to 10.164.129.250                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea012-chef-lon02.sdad.sl.ibm.com
+
+212     bond1             daddr 158.87.34.180 to 10.164.129.245                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea012-ee-lon02.sdad.sl.ibm.com
+
+213     bond1             daddr 158.87.34.181 to 10.164.129.248                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea012-asb-lon02.sdad.sl.ibm.com
+
+214     bond1             daddr 158.87.34.182 to 10.113.45.203                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea008-vyos-lon02.sdad.sl.ibm.com
+
+215     bond1             daddr 158.87.34.183 to 10.113.45.221                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea008-bpm-lon02.sdad.sl.ibm.com
+
+216     bond1             daddr 158.87.34.184 to 10.113.45.225                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea008-chef-lon02.sdad.sl.ibm.com
+
+217     bond1             daddr 158.87.34.185 to 10.113.45.227                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea008-ee-lon02.sdad.sl.ibm.com
+
+218     bond1             daddr 158.87.34.186 to 10.113.45.253                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea008-asb-lon02.sdad.sl.ibm.com
+
+219     bond1             daddr 158.87.34.187 to 10.113.45.194                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea009-vyos-lon02.sdad.sl.ibm.com
+
+220     bond1             daddr 158.87.34.188 to 10.113.45.249                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea009-bpm-lon02.sdad.sl.ibm.com
+
+221     bond1             daddr 158.87.34.189 to 10.113.45.215                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea009-chef-lon02.sdad.sl.ibm.com
+
+222     bond1             daddr 158.87.34.190 to 10.113.45.223                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea009-ee-lon02.sdad.sl.ibm.com
+
+223     bond1             daddr 158.87.34.191 to 10.113.45.246                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea009-asb-lon02.sdad.sl.ibm.com
+
+224     bond1             daddr 158.87.34.192 to 10.113.45.250                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea010-vyos-lon02.sdad.sl.ibm.com
+
+225     bond1             daddr 158.87.34.193 to 10.113.45.201                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea010-bpm-lon02.sdad.sl.ibm.com
+
+226     bond1             daddr 158.87.34.194 to 10.113.45.243                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea010-chef-lon02.sdad.sl.ibm.com
+
+227     bond1             daddr 158.87.34.195 to 10.113.45.254                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea010-ee-lon02.sdad.sl.ibm.com
+
+228     bond1             daddr 158.87.34.196 to 10.113.45.238                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea010-asb-lon02.sdad.sl.ibm.com
+
+229     bond1             daddr 158.87.34.197 to 10.113.45.251                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea011-vyos-lon02.sdad.sl.ibm.com
+
+230     bond1             daddr 158.87.34.198 to 10.113.45.214                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea011-bpm-lon02.sdad.sl.ibm.com
+
+231     bond1             daddr 158.87.34.199 to 10.113.45.222                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea011-chef-lon02.sdad.sl.ibm.com
+
+232     bond1             daddr 158.87.34.200 to 10.113.45.209                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea011-ee-lon02.sdad.sl.ibm.com
+
+233     bond1             daddr 158.87.34.201 to 10.113.45.240                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea011-asb-lon02.sdad.sl.ibm.com
+
+234     bond1             daddr 158.87.34.202 to 10.164.129.216                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea014-vyos-lon02.sdad.sl.ibm.com
+
+235     bond1             daddr 158.87.34.203 to 10.164.129.249                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea014-bpm-lon02.sdad.sl.ibm.com
+
+236     bond1             daddr 158.87.34.204 to 10.164.129.253                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea014-chef-lon02.sdad.sl.ibm.com
+
+237     bond1             daddr 158.87.34.205 to 10.164.129.234                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea014-ee-lon02.sdad.sl.ibm.com
+
+238     bond1             daddr 158.87.34.206 to 10.164.129.201                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea014-asb-lon02.sdad.sl.ibm.com
+
+239     bond1             daddr 158.87.34.207 to 10.113.45.217                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea013-vyos-lon02.sdad.sl.ibm.com
+
+240     bond1             daddr 158.87.34.208 to 10.164.129.225                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea013-bpm-lon02.sdad.sl.ibm.com
+
+241     bond1             daddr 158.87.34.209 to 10.164.129.241                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea013-chef-lon02.sdad.sl.ibm.com
+
+242     bond1             daddr 158.87.34.210 to 10.164.129.223                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea013-ee-lon02.sdad.sl.ibm.com
+
+243     bond1             daddr 158.87.34.211 to 10.164.129.199                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea013-asb-lon02.sdad.sl.ibm.com
+
+244     bond1             daddr 158.87.34.212 to 10.164.129.231                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea015-vyos-lon02.sdad.sl.ibm.com
+
+245     bond1             daddr 158.87.34.213 to 10.164.129.246                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea015-bpm-lon02.sdad.sl.ibm.com
+
+246     bond1             daddr 158.87.34.214 to 10.164.129.238                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea015-chef-lon02.sdad.sl.ibm.com
+
+247     bond1             daddr 158.87.34.215 to 10.164.129.211                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea015-ee-lon02.sdad.sl.ibm.com
+
+248     bond1             daddr 158.87.34.216 to 10.164.129.213                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea015-asb-lon02.sdad.sl.ibm.com
+
+249     bond1             daddr 158.87.34.217 to 10.113.45.216                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea016-vyos-lon02.sdad.sl.ibm.com
+
+250     bond1             daddr 158.87.34.218 to 10.164.129.236                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea016-bpm-lon02.sdad.sl.ibm.com
+
+251     bond1             daddr 158.87.34.219 to 10.164.129.247                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea016-chef-lon02.sdad.sl.ibm.com
+
+252     bond1             daddr 158.87.34.220 to 10.164.129.242                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea016-ee-lon02.sdad.sl.ibm.com
+
+253     bond1             daddr 158.87.34.221 to 10.164.129.197                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea016-asb-lon02.sdad.sl.ibm.com
+
+254     bond1             daddr 158.87.34.222 to 10.113.45.232                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea017-vyos-lon02.sdad.sl.ibm.com
+
+255     bond1             daddr 158.87.34.223 to 10.164.129.237                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea017-bpm-lon02.sdad.sl.ibm.com
+
+256     bond1             daddr 158.87.34.224 to 10.164.129.219                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea017-chef-lon02.sdad.sl.ibm.com
+
+257     bond1             daddr 158.87.34.225 to 10.164.129.222                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea017-ee-lon02.sdad.sl.ibm.com
+
+258     bond1             daddr 158.87.34.226 to 10.164.129.209                     
+        proto-all         dport ANY                                                     
+Desc: sla-p-emea017-asb-lon02.sdad.sl.ibm.com
+
+259     bond1             daddr 158.87.34.227 to 10.121.41.101                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na020-vyos-dal09.sdad.sl.ibm.com
+
+260     bond1             daddr 158.87.34.228 to 10.121.41.80                       
+        proto-all         dport ANY                                                     
+Desc: sla-p-na020-bpm-dal09.sdad.sl.ibm.com
+
+261     bond1             daddr 158.87.34.229 to 10.121.41.68                       
+        proto-all         dport ANY                                                     
+Desc: sla-p-na020-chef-dal09.sdad.sl.ibm.com
+
+262     bond1             daddr 158.87.34.230 to 10.121.41.67                       
+        proto-all         dport ANY                                                     
+Desc: sla-p-na020-ee-dal09.sdad.sl.ibm.com
+
+263     bond1             daddr 158.87.34.231 to 10.121.41.106                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na020-asb-dal09.sdad.sl.ibm.com
+
+264     bond1             daddr 158.87.34.232 to 10.155.93.166                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na021-vyos-dal09.sdad.sl.ibm.com
+
+265     bond1             daddr 158.87.34.233 to 10.155.93.134                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na021-bpm-dal09.sdad.sl.ibm.com
+
+266     bond1             daddr 158.87.34.234 to 10.155.93.200                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na021-chef-dal09.sdad.sl.ibm.com
+
+267     bond1             daddr 158.87.34.235 to 10.155.93.189                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na021-ee-dal09.sdad.sl.ibm.com
+
+268     bond1             daddr 158.87.34.236 to 10.155.93.224                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na021-asb-dal09.sdad.sl.ibm.com
+
+269     bond1             daddr 158.87.34.237 to 10.155.93.221                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na022-vyos-dal09.sdad.sl.ibm.com
+
+270     bond1             daddr 158.87.34.238 to 10.155.93.165                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na022-bpm-dal09.sdad.sl.ibm.com
+
+271     bond1             daddr 158.87.34.239 to 10.155.93.199                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na022-chef-dal09.sdad.sl.ibm.com
+
+272     bond1             daddr 158.87.34.240 to 10.155.93.138                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na022-ee-dal09.sdad.sl.ibm.com
+
+273     bond1             daddr 158.87.34.241 to 10.155.93.137                      
+        proto-all         dport ANY                                                     
+Desc: sla-p-na022-asb-dal09.sdad.sl.ibm.com
+
+8000    bond0             daddr 10.148.211.50/32 to 9.57.182.78                     
+        proto-tcp         dport ANY                                                     
+Desc: BluepagesOutbound
+
+8001    bond0             daddr 10.148.211.51/32 to 9.17.186.253                    
+        proto-tcp         dport ANY                                                     
+Desc: BluepagesOutbound
+
+8002    bond0             daddr 10.148.211.52/32 to 9.45.126.36                     
+        proto-tcp         dport 443                                                     
+Desc: DTR-Outbound
+
+8004    bond1             daddr 10.148.11.180 to 10.142.128.99                      
+        proto-tcp         dport 8443                                                    
+Desc: Jumphost to Chef
+
+8005    bond1             daddr 10.148.11.180 to 10.142.128.106                     
+        proto-tcp         dport 3333,3330                                               
+Desc: Jumphost to EE
+
+8006    bond0.781         daddr 10.148.211.52/32 to 9.45.126.36                     
+        proto-tcp         dport 443                                                     
+Desc: DTR-Outbound
+
+8007    bond0             daddr 10.148.211.54 to 10.88.131.167                      
+        proto-tcp_udp     dport 443,52311                                               
+Desc: Dow RCP to Dow BigFix
+
+>sasgaas@mgmtvytfw01:~$ 

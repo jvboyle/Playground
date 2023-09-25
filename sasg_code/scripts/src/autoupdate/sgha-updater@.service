@@ -1,0 +1,10 @@
+[Unit]
+Description=Updater Service for %i
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStart=/sasg/bin/update/upgrade.sh %i
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,78 @@
+#Quick Guide 
+
+##########################################################################
+# Package Source 
+########################################################################## 
+mkdir /tmp/sasg
+#Copy Sasg_configs.tar from admin to /tmp/sasg 
+cd /tmp/sasg 
+tar -xvf Sasg_configs.tar
+
+##########################################################################
+#Install required packages
+##########################################################################
+
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+yum -y install epel-release-latest-7.noarch.rpm
+yum –y install openvpn
+yum –y install keepalived
+yum –y install iptables-services
+yum –y update
+#reboot
+
+####################################################################
+#Stop and disable firewalld
+####################################################################
+
+systemctl stop firewalld
+systemctl disable firewalld
+
+#####################################################################
+# Obtain customer unique client keys 
+#####################################################################
+
+mkdir /etc/openvpn/auth /etc/openvpn/status
+chmod 700 /etc/openvpn/auth /etc/openvpn/status
+cp /tmp/sasg/keys/* /etc/openvpn/auth/
+chmod 644 /etc/openvpn/auth/*
+
+#####################################################################
+# Configure OpenVPN
+#####################################################################
+
+cp /tmp/sasg/client.conf /etc/openvpn
+systemctl enable openvpn@client.service
+systemctl stop openvpn@client.service
+systemctl start openvpn@client.service
+systemctl status openvpn@client
+
+######################################################################
+##Configure Keeplived
+######################################################################
+cp /tmp/sasg/keepalived.conf /etc/keepalived/
+cp /tmp/sasg/scripts/master-backup.sh /etc/keealived/
+chmod 770 /etc/keealived/master-backup.sh
+systemctl keepalived restart
+
+######################################################################
+# Enable ip Forward 
+######################################################################
+echo “net.ipv4.ip_forward = 1” >> /etc/sysctl.conf
+root> sysctl –p /etc/sysctl.conf
+
+######################################################################
+# Configure iptables
+######################################################################
+
+systemctl enable iptables
+systemctl start iptables
+cp /etc/sysconfig/iptables /etc/sysconfig/iptables.orig
+cp /tmp/sasg/iptables.$sasgIP.conf /etc/sysconfig/iptables
+systemctl restart iptables
+
+#####################################################################
+## test
+##################################################################### 
+iptables –nvL –t nat
+#telnet 3.0.0.1 2222
+

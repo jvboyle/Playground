@@ -1,0 +1,19 @@
+[Unit]
+Description=SGHA Resiliency Service for %i
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/usr/local/bin/docker-compose down -v
+ExecStartPre=/usr/local/bin/docker-compose rm -fv
+ExecStartPre=/sasg/bin/HA/manage-host-only-docker-route.sh %i add
+ExecStart=/usr/local/bin/docker-compose up
+ExecStartPost=/usr/bin/systemctl start sgha-watcher@%i.resiliency
+ExecStop=/usr/local/bin/docker-compose down -v
+ExecStop=/usr/bin/systemctl stop sgha-watcher@%i.resiliency
+ExecStopPost=/sasg/bin/HA/manage-host-only-docker-route.sh %i del
+
+[Install]
+WantedBy=multi-user.target

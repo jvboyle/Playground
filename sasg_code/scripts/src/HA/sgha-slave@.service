@@ -1,0 +1,15 @@
+[Unit]
+Description=SGHA Slave Service for %i
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/clients/%i
+ExecStartPre=/usr/bin/bash /sasg/bin/HA/pre-start_slave.sh %i
+ExecStartPre=/usr/bin/bash /sasg/bin/HA/manage-host-only-docker-route.sh %i del
+ExecStart=/usr/bin/bash /sasg/bin/HA/watchdog_slave.sh %i
+ExecStartPost=/usr/bin/bash /sasg/bin/HA/post-start_slave.sh %i
+ExecStartPost=/usr/bin/systemctl start sgha-watcher@%i.slave
+ExecStop=/usr/bin/systemctl stop sgha-watcher@%i.slave
+
+[Install]
+WantedBy=multi-user.target

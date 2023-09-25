@@ -1,0 +1,8 @@
+// Allow SASG HA user to manage services;
+// fall back to implicit authorization otherwise.
+polkit.addRule(function(action, subject) {
+  if (action.id == "org.freedesktop.systemd1.manage-units" && 
+      subject.user == "#SASG HA USER#") {
+    return polkit.Result.YES;
+  }
+});

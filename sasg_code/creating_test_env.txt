@@ -1,0 +1,54 @@
+1. mv /etc/sysconfig/network-scripts/ifcfg-eth1 ~/ifcfg-eth1.bk
+
+2. cat /etc/sysconfig/network-scripts/ifcfg-eth0 
+# Created by cloud-init on instance boot automatically, do not edit.
+#
+BOOTPROTO=none
+DEFROUTE=yes
+GATEWAY=10.186.22.3
+DEVICE=eth0
+HWADDR=06:f1:0f:08:5d:d0
+IPADDR=10.186.22.20
+NETMASK=255.255.255.192
+ONBOOT=yes
+STARTMODE=auto
+TYPE=Ethernet
+USERCTL=no
+
+3.reboot
+
+4. useradd sgadm
+   mkdir -p /home/sgadm/.ssh
+   touch /home/sgadm/.ssh/authorized_keys
+
+5. dnf install python3
+   dnf install tar
+
+6. pip3 install ansible
+
+7.mv */sasg_install-1.1.tar.gz /
+  cd /
+  tar -xvf sasg_install-1.1.tar.gz
+
+8. Install podman and create podman cni files
+ipvlan_vip="10.186.252.101" # SASG's VIP
+ipvlan_subnet="10.186.0.0/16" # Subnet which includes VIP above
+ipvlan_device="eth0" # Device to share connection - should belong to the same subnet
+ipvlan_gateway="10.186.22.3" # Default gateway of the subnet above (same as for the device above)
+ansible-playbook   -e ipvlan_subnet="${ipvlan_subnet}"  \
+                   -e ipvlan_device="${ipvlan_device}"  \
+                   -e ipvlan_vip="${ipvlan_vip}"        \
+                   -e ipvlan_gateway="${ipvlan_gateway}"   sasg_install-1.1/install-podman.yml
+
+9. generate ssh key for root
+   ssh-keygen
+
+10. Add root public key to the /home/sgadm/.ssh/authorized_keys
+
+11. Add entry to the /etc/hosts and /etc/cloud/templates/hosts.redhat.tmpl
+    10.186.22.31 ha-peer # on the 10.186.22.20
+    10.186.22.20 ha-peer # on the 10.186.22.31 
+
+12. Add images to the /tmp
+    docker-container.checker.tgz
+    docker-container.sasgc.tgz

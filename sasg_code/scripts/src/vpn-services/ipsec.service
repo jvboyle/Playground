@@ -1,0 +1,39 @@
+[Unit]
+Description=Internet Key Exchange (IKE) Protocol Daemon for IPsec
+Wants=network-online.target
+After=network-online.target
+Documentation=man:ipsec(8) man:pluto(8) man:ipsec.conf(5)
+
+[Service]
+Type=notify
+RestartSec=5s
+Restart=always
+#RestartPreventExitStatus=137 143 SIGTERM SIGKILL
+
+# Set WatchdogSec to the amount of time (in seconds) that systemd will wait
+# before restarting an unresponsive pluto.
+# EVENT_SD_WATCHDOG updates the heartbeat every 15 seconds, recommended values
+# are 60, 90, 120. WatchdogSec=0 disables the action
+NotifyAccess=all
+WatchdogSec=200
+
+# Check configuration file
+ExecStartPre=/usr/libexec/ipsec/addconn --config /etc/ipsec.conf --checkconfig
+# Check for kernel modules
+ExecStartPre=/usr/libexec/ipsec/_stackmanager start
+# Check for nss database status and migration
+ExecStartPre=/usr/sbin/ipsec --checknss
+# Check for nflog setup
+ExecStartPre=/usr/sbin/ipsec --checknflog
+# Start the actual IKE daemon
+ExecStart=/usr/libexec/ipsec/pluto --leak-detective --config /etc/ipsec.conf --nofork
+# Enable for portexcludes support
+# ExecStartPost=/usr/libexec/ipsec/portexcludes
+ExecStop=/usr/libexec/ipsec/whack --shutdown
+ExecStopPost=/sbin/ip xfrm policy flush
+ExecStopPost=/sbin/ip xfrm state flush
+ExecStopPost=/usr/sbin/ipsec --stopnflog
+ExecReload=/usr/libexec/ipsec/whack --listen
+
+[Install]
+WantedBy=multi-user.target

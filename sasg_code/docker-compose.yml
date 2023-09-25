@@ -1,0 +1,27 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:9.5
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - /var/lib/docker/data/sasg_data/postgres:/var/lib/postgresql/data
+  sasg:
+    image: sla/sasg
+    build: .
+    ports:
+      - "443:443"
+    env_file:
+      - .env
+    volumes:
+      - /var/lib/docker/data/sasg_data:/sasg_data
+      - ${IMAGES_DIR}:/sasg_data/images
+      - /home/sasauto/sasgaas-logs:/sasg_data/logs
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    extra_hosts:
+      - "bluepages.ibm.com:9.57.182.78"

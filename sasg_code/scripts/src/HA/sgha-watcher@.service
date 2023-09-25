@@ -1,0 +1,7 @@
+[Unit]
+Description=Watcher for SGHA service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/bin/HA
+ExecStart=/sasg/bin/HA/service-watchdog.sh %i

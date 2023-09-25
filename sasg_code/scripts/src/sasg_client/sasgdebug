@@ -1,0 +1,167 @@
+#!/bin/bash
+# script to collect all required debug info for troubleshooting
+# openvpn/keepalived issues on sasg (cablebox) servers
+# Grabs copy on pertinent files and creates single tar file.
+#----------------------------------------------------------------------------
+source /sasg/bin/sasg_common.sh
+
+HNAME=`hostname -s`
+SYSTMP="/tmp"
+NAMETMP="sasgdebug.$HNAME"
+TMPDIR="$SYSTMP/$NAMETMP"
+DEBUGFILE="$TMPDIR/sasgdebug.$HNAME.log"
+DEBUGARCHIVE="/tmp/sasgdebug.$HNAME.tgz"
+RHELVERSION=$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) |cut -b1)
+
+cd /tmp
+
+if [[ -d $TMPDIR ]]; then
+  	echo -e "\n$TMPDIR already exists moving to $TMPDIR.prev"
+  	if [[ -d $TMPDIR.prev ]]; then
+  		rm -rf $TMPDIR.prev
+  	fi
+  	mv $TMPDIR $TMPDIR.prev
+  	if [ "$?" -ne 0 ]; then
+  		rm -rf $TMPDIR
+  	fi
+fi
+mkdir $TMPDIR
+
+date | tee -a $DEBUGFILE
+echo -e "\n----  Host---------------------------------------\n" | tee -a $DEBUGFILE
+if [ "X$RHELVERSION" == "X6" ]; then
+	hostname 2>&1 | tee -a $DEBUGFILE
+else
+	hostnamectl 2>&1 | tee -a $DEBUGFILE
+fi
+
+echo -e "\n----  IP Addr / NIC Info  -----------------------\n" | tee -a $DEBUGFILE
+ip addr 2>&1 | tee -a $DEBUGFILE
+
+echo -e "\n----  Openvpn  ----------------------------------\n" | tee -a $DEBUGFILE
+if [ "X$RHELVERSION" == "X6" ]; then
+	# rhel6 has old init system
+  	
+	service openvpn status 2>&1 | tee -a $DEBUGFILE
+	ss -np | head -1 | tee -a $DEBUGFILE
+	ss -np | grep openvpn 2>&1 | tee -a $DEBUGFILE
+	ps axu | grep openvpn 2>&1 | tee -a $DEBUGFILE
+	grep -i openvpn /var/log/messages |tail -n 15 | tee -a $DEBUGFILE
+else
+	# by defalt we assume that it's rhel7 with systemd
+
+	systemctl status openvpn@client.service 2>&1 | tee -a $DEBUGFILE
+fi
+
+echo -e "\n  --  Openvpn config file\n" | tee -a $DEBUGFILE
+cat ${SAS_CONFIG}/client.conf 2>&1 | tee -a $DEBUGFILE
+
+echo -e "\n----  Keepalived  -------------------------------\n" | tee -a $DEBUGFILE
+echo -e "\n  --  Keepalived status  ------------------------\n" | tee -a $DEBUGFILE
+if [ "X$RHELVERSION" == "X6" ]; then
+	# rhel6 has old init system
+  	
+	service keepalived status 2>&1 | tee -a $DEBUGFILE
+	ss -nlp | head -1 | tee -a $DEBUGFILE
+	ss -nlp | grep keepalived 2>&1 | tee -a $DEBUGFILE
+	ps axu | grep keepalived 2>&1 | tee -a $DEBUGFILE
+	grep -i keepalived /var/log/messages |tail -n 15 | tee -a $DEBUGFILE
+  	
+else
+	# by defalt we assume that it's rhel7 with systemd
+	
+	systemctl status keepalived.service 2>&1 | tee -a $DEBUGFILE
+fi
+
+echo -e "\n  --  Keepalived config file\n" | tee -a $DEBUGFILE
+cat /etc/keepalived/keepalived.conf 2>&1 | tee -a $DEBUGFILE
+echo -e "\n  --  Keepalived counter\n" | tee -a $DEBUGFILE
+if [ -e /etc/keepalived/COUNTER ]; then
+	tail -10 /etc/keepalived/COUNTER 2>&1 | tee -a $DEBUGFILE
+else
+	echo "there is no COUNTER file in /etc/keepalived/" | tee -a $DEBUGFILE
+fi
+if [ -e /var/lib/keepalived/COUNTER ]; then
+	tail -10 /var/lib/keepalived/COUNTER 2>&1 | tee -a $DEBUGFILE
+else
+	echo "there is no COUNTER file in /var/lib/keepalived/" | tee -a $DEBUGFILE
+fi
+echo
+
+ -e "\n----  Iptables    -------------------------------\n" | tee -a $DEBUGFILE
+if [ "X$RHELVERSION" == "X6" ]; then
+	# rhel6 has old init system
+  	
+	service iptables status 2>&1 | tee -a $DEBUGFILE
+else
+	# by defalt we assume that it's rhel7 with systemd
+	
+	systemctl status iptables.service 2>&1 | tee -a $DEBUGFILE
+	systemctl status firewalld.service 2>&1 | tee -a $DEBUGFILE
+fi
+
+iptables -nvL -t nat | tee -a $DEBUGFILE
+ipset list | tee -a $DEBUGFILE
+
+echo -e "\n----  IP Routes  --------------------------------\n" | tee -a $DEBUGFILE
+ip route 2>&1 | tee -a $DEBUGFILE
+
+echo -e "\n----  File Permissions  -------------------------\n" | tee -a $DEBUGFILE
+ls -lRZ /etc/keepalived 2>&1 | tee -a $DEBUGFILE
+ls -lRZ /usr/libexec/keepalived 2>&1 | tee -a $DEBUGFILE
+ls -lRZ ${SAS_CONFIG} 2>&1 | tee -a $DEBUGFILE
+ls -lZ /etc/sysconfig/iptables 2>&1 | tee -a $DEBUGFILE
+if [ -e /etc/sysconfig/ipsec.conf ]; then
+	ls -lZ /etc/sysconfig/ipsec.conf 2>&1 | tee -a $DEBUGFILE
+fi
+if [ -e /etc/ipsec.conf ]; then
+	ls -lZ /etc/ipsec.conf 2>&1 | tee -a $DEBUGFILE
+fi
+
+echo -e "\n----  SELinux  ----------------------------------\n" | tee -a $DEBUGFILE
+sestatus 2>&1 | tee -a $DEBUGFILE
+sealert -a /var/log/audit/audit.log | tee -a $DEBUGFILE
+
+echo -e "\n----  Sysctl  -----------------------------------\n" | tee -a $DEBUGFILE
+cat /etc/sysctl.conf 2>&1 | tee -a $DEBUGFILE
+
+echo -e "\n----  The End -----------------------------------\n" | tee -a $DEBUGFILE
+
+# Copy necessary files to temp dir 
+{
+	mkdir $TMPDIR/sysconfig
+	cp /etc/keepalived/COUNTER $TMPDIR
+        cp -r /usr/libexec/keepalived/master* $TMPDIR
+	cp /var/lib/keepalived/COUNTER $TMPDIR
+	cp /var/lib/keepalived/keepalived.conf $TMPDIR
+	cp /tmp/sasg_install.log* $TMPDIR
+	cp /etc/sysctl.conf $TMPDIR
+	cp /etc/sysconfig/iptables $TMPDIR/sysconfig
+	cp /etc/sysconfig/selinux $TMPDIR/sysconfig
+	cp -r ${SAS_CONFIG} $TMPDIR
+	cp /etc/sysconfig/ipsec.conf $TMPDIR/sysconfig
+	cp /etc/ipsec.conf $TMPDIR
+	cp /etc/ipsec.secrets $TMPDIR
+	cp /etc/ipset/ipset $TMPDIR
+	cp /etc/sysconfig/ipset $TMPDIR
+	cp -r /etc/keepalived $TMPDIR 
+	cp -r /sasg/bin $TMPDIR 
+	cp /etc/rsyslog.d/sasgfw.conf $TMPDIR
+	cp /etc/logrotate.d/syslog $TMPDIR
+	cp /etc/logrotate.d/sasgfw $TMPDIR
+	cp /etc/rsyslog.conf  $TMPDIR
+	# create tar file to send in to support
+	if [ -e $DEBUGARCHIVE.prev ]; then
+		rm $DEBUGARCHIVE.prev
+	fi
+	mv $DEBUGARCHIVE $DEBUGARCHIVE.prev
+  	if [ "$?" -ne 0 ]; then
+  		rm $DEBUGARCHIVE
+  	fi		
+
+	cd $SYSTMP
+	tar -czvf $DEBUGARCHIVE $NAMETMP
+	rm -rf $NAMETMP
+} &> /dev/null
+
+echo -e "Please send /tmp/sasg_debug_$HNAME.tgz to your IBM contact"

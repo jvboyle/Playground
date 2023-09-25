@@ -1,0 +1,12 @@
+[Unit]
+Description=SASG Listener service
+After=nginx.service
+Requires=nginx.service
+
+[Service]
+Restart=always
+WorkingDirectory=/sasg/listener
+ExecStart=/sasg/listener/listener-run.sh
+
+[Install]
+WantedBy=multi-user.target

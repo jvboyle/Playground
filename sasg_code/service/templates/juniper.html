@@ -1,0 +1,329 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<!-- Begin page content -->
+<div class="container">
+    <p class="lead">
+        Juniper Remote Config
+        <input id="search_box" placeholder="Search" style="float:right">
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>IP</td>
+                <td>Port</td>
+                <td>Remote User</td>
+                <td>SSH Key</td>
+                <td>Local Config</td>
+                <td>Remote Config</td>
+                <td>Diff</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for juniper in juniper_info %}
+            <!-- <tr class="row_juniper" onclick='$(this).next().toggle({ "easing": "swing" });'> -->
+            <tr class="row_juniper">
+                <td class="customer_id">{{ juniper }}</td>
+                <td class="customer_name">{{ juniper_info[juniper]['client_name'] }}</td>
+                <td class="customer_ip">{{ juniper_info[juniper]['ip'] }}</td>
+                <td class="customer_port">{{ juniper_info[juniper]['port'] }}</td>
+                <td class="customer_user">{{ juniper_info[juniper]['junusername'] }}</td>
+                <td class="customer_key">{{ juniper_info[juniper]['key'] }}</td>
+                <td class="local_config">
+                    {% if juniper_info[juniper]['local_config'] %}
+                        <a href="{{ juniper_info[juniper]['local_config'].config_url }}" download target="_blank">Download</a>
+                        ({{ juniper_info[juniper]['local_config'].ts }})
+                    {% else %}
+                        None
+                    {% endif %}
+                </td>
+                <td class="remote_config">
+                    {% if juniper_info[juniper]['remote_config'] %}
+                        <a href="{{ juniper_info[juniper]['remote_config'].config_url }}" download target="_blank">Download</a>
+                        ({{ juniper_info[juniper]['remote_config'].ts }})
+                        (<a href="{{ juniper_info[juniper]['remote_config'].header_url }}" download target="_blank">view config header</a>)
+                    {% else %}
+                        None
+                    {% endif %}
+                </td>
+                <td class="diff">
+                    {% if juniper_info[juniper]['diff_url'] == 'Empty' %}
+                        Configs are the same
+                    {% elif juniper_info[juniper]['diff_url'] %}
+                        <a href="{{ juniper_info[juniper].diff_url }}" download target="_blank">Download</a>
+                    {% else %}
+                        None
+                    {% endif %}
+                    (<a class="get-config-diff" data-customerid="{{ juniper }}">Refresh</a>)
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button id="dLabel" class="action-button btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Choose Action <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a class="btn btn-primary btn-xs align-left get-remote-juniper-config" data-customerid="{{ juniper }}">Fetch remote Juniper config</a></li>
+                            <li><a class="btn btn-primary btn-xs align-left delete-juniper" data-customerid="{{ juniper }}">Delete Juniper record</a></li>
+                            <li><a class="btn btn-primary btn-xs align-left juniper-modify" data-customerid="{{ juniper }}">Modify Juniper record</a></li>
+                            <li><a class="btn btn-primary btn-xs align-left juniper-apply" data-customerid="{{ juniper }}">Apply Juniper config</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button id="new_juniper" type="button" class="btn btn-default" data-toggle="modal" data-target="#juniperModal">New Juniper</button>
+
+    <!-- Modal for New Juniper -->
+    <div class="modal fade" id="juniperModal" tabindex="-1" role="dialog" aria-labelledby="juniperModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="juniperModalLabel">Create Juniper Record</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form id="new_juniper_form" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="junipername" style="width:80px;">Juniper Name: &nbsp; </label>
+                                <input type="junipername" class="form-control" name="junipername" id="junipername" aria-describedby="junipernameHelp" placeholder="Any Name (space allowed)" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="juniperid" style="width:80px;">Juniper ID: &nbsp; </label>
+                                <input type="juniperid" class="form-control" name="juniperid" id="juniperid" aria-describedby="juniperidHelp" placeholder="any_id (space NOT allowed)" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="ip" style="width:80px;">IP: &nbsp; </label>
+                                <input type="ip" class="form-control" name="ip" id="ip" aria-describedby="ipHelp" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="port" style="width:80px;">SSH Port: &nbsp; </label>
+                                <input type="port" class="form-control" name="port" id="port" aria-describedby="portHelp" placeholder="22" required/>
+                            </div>
+                        </div>
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="junusername" style="width:80px;">User Name: &nbsp; </label>
+                                <input type="junusername" class="form-control" name="junusername" id="junusername" aria-describedby="junusernameHelp" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="keyname" style="width:80px;">SSH Key Name: &nbsp; </label>
+                                <input type="keyname" class="form-control" name="keyname" id="keyname" aria-describedby="keynameHelp" required/>
+                            </div>
+                        </div>
+                        <div class="form-inline" style="padding-bottom:5px;">
+                            <div class="form-group">
+                                <label for="juniper_config" style="width:80px;">Juniper Config: &nbsp; </label>
+                                <input type="file" class="form-control" name="juniper_config" id="target-file" aria-describedby="juniper_configHelp" required>
+                            </div>
+                        </div>                        
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a id="new_juniper_submit" class="btn btn-primary">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+<script>
+
+var csrf_token = "{{ csrf_token() }}"; // DO NOT DELETE: used in global sasg.js to send csrf.
+
+$('#search_box').on('keyup', function (e) {
+    var box = this;
+    $('.row_juniper').each(function() {
+        if( $(box).val() == '' || $(this).text().toLowerCase().includes($(box).val().toLowerCase()) ) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+});
+
+// not sure why but needs to click twice.
+$('.action-button').click(function(e) {
+    $(this).dropdown();
+    e.stopPropagation();
+});
+
+bluegroups = {{ bluegroups|safe }};
+group_select = '';
+for(var i = 0; i < bluegroups.length; i++) {
+    group_select += '<option>' + bluegroups[i] + '</option>';
+}
+$('#bluegroups').append(group_select).show();
+
+$('#command_key').change(function() {
+    $('.command_content').hide();
+    var elem = $('#'+$(this).val() + '_content');
+    $(elem).show();
+    var tarea = $(elem).find('textarea');
+    $(tarea).height(Math.min($(tarea).prop('scrollHeight'), $(window).height()/2));
+});
+
+$('.juniper-apply').each(function() {
+    $(this).on("click", function(e){
+        if(!confirm('This will perform automated configuration of remote Juniper machine. Proceed?')) {
+            return false;
+        }
+
+        show_spinner($('body'), 'This may take several minutes....');
+        $.post('/juniper-config', { 'JUNIPER_ID': $(this).data('customerid') }, function(data) {
+            display_message(data['status'], data['message']);
+            window.location.href = window.location.href;
+        },'json')
+        .fail(function(output) {
+            console.log(output);
+            hide_spinner($('body'));
+
+            var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+            display_message('ERROR', 'Could not apply config (' + data['message'] + ')');
+        });
+
+        e.stopPropagation();
+    });
+});
+
+$('.get-remote-juniper-config').each(function() {
+    $(this).on("click", function(e){
+        if(!confirm('Juniper config will be downloaded & stored in SASGaaS. Proceed?')) {
+            return false;
+        }
+
+        show_spinner($('body'), 'This may take several minutes....');
+        $.post('/get-remote-juniper-config', { 'JUNIPER_ID': $(this).data('customerid') }, function(data) {
+            display_message(data['status'], data['message']);
+            window.location.href = window.location.href;
+        },'json')
+        .fail(function(output) {
+            console.log(output);
+            hide_spinner($('body'));
+
+            var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+            display_message('ERROR', 'Failed to submit information (' + data['message'] + ')');
+        });
+
+        e.stopPropagation();
+    });
+});
+
+$('.juniper-modify').each(function() {
+    $(this).on("click", function(e){
+        var tr = $(this).closest('tr');
+
+        $('#juniperid').val($(tr).find('.customer_id').text());
+        $('#juniperid').prop("disabled", true);
+
+        $('#junipername').val($(tr).find('.customer_name').text());
+        $('#ip').val($(tr).find('.customer_ip').text());
+        $('#port').val($(tr).find('.customer_port').text());
+        $('#junusername').val($(tr).find('.customer_user').text());
+        $('#keyname').val($(tr).find('.customer_key').text());
+
+        $('#juniperModal').modal('show');
+
+        //e.stopPropagation();
+    });
+});
+
+$('.delete-juniper').each(function() {
+    $(this).on("click", function(e){
+        if(!confirm('Juniper record will be deleted from SASGaaS. Proceed?')) {
+            return false;
+        }
+
+        show_spinner($('body'), 'This may take several minutes....');
+        $.post('/delete-juniper', { 'JUNIPER_ID': $(this).data('customerid') }, function(data) {
+            display_message(data['status'], data['message']);
+            window.location.href = window.location.href;
+        },'json')
+        .fail(function(output) {
+            console.log(output);
+            hide_spinner($('body'));
+
+            var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+            display_message('ERROR', 'Failed to delete Juniper record (' + data['message'] + ')');
+        });
+
+        e.stopPropagation();
+    });
+});
+
+$('.get-config-diff').each(function() {
+    $(this).on("click", function(e){
+        show_spinner($('body'), 'This may take several minutes....');
+        $.post('/get-config-diff', { 'JUNIPER_ID': $(this).data('customerid') }, function(data) {
+            display_message(data['status'], data['message']);
+            window.location.href = window.location.href;
+        },'json')
+        .fail(function(output) {
+            console.log(output);
+            hide_spinner($('body'));
+
+            var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+            display_message('ERROR', 'Failed to submit information (' + data['message'] + ')');
+        });
+
+        e.stopPropagation();
+    });
+});
+
+$('#new_juniper_submit').click(function(e) {
+    if( !$('#junipername').val() || !$('#juniperid').val() || !$('#junusername').val() || !$('#ip').val() || !$('#port').val() || !$('#keyname').val() ) {
+        alert('Provide all information');
+        return false;
+    }
+
+    show_spinner($('body'));
+
+    var formData = new FormData($('#new_juniper_form')[0]);
+    formData.append('juniperid', $('#juniperid').val())
+
+    $.ajax({
+        url: '/juniper_gui',
+        type: 'POST',
+        data: formData,
+        async: false,
+        success: function (data) {
+            window.location.href = window.location.href;
+        },
+        error: function(output) {
+            console.log(output); // leave for debugging.
+            hide_spinner($('body'));
+
+            var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+            display_message('ERROR', 'Failed to submit information (' + data['message'] + ')');
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+
+    e.stopPropagation();
+
+    return false;
+});
+
+</script>
+
+</div>
+
+{% endblock %}

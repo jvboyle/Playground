@@ -1,0 +1,44 @@
+version: "2"
+
+networks:
+  default:
+    external:
+      name: ipvlan
+
+services:
+  sasgc:
+    image: gts-tia-sasg-dev-docker-local.artifactory.swg-devops.com/sasg_build:v1.0-20180831_0325-60
+    read_only: true
+    tmpfs:
+      - /etc/iptables:exec
+      - /etc/ipset.d:exec
+      - /etc/nginx/conf.d:exec
+      - /sasg:exec
+      - /var:exec
+      - /tmp:exec
+      - /tmp/log:exec
+      - /run:exec
+    cap_add:
+      - NET_ADMIN
+    networks:
+      default:
+        ipv4_address: ${IP}
+    volumes:
+        - ${CLIENTDIR}/${SASFW}/vars:/opt/sasg/sasg_install/vars
+        - ${CLIENTDIR}/${SASFW}/keys:/opt/sasg/sasg_install/keys
+        - ${CLIENTDIR}/${SASFW}/logs:/sasg/logs
+        - ${CLIENTDIR}/${SASFW}/Nginx:/sasg/Nginx
+  logrotate:
+    image: logrotate:latest
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/spool/cron
+    volumes:
+      - ${CLIENTDIR}/${SASFW}/logs:/var/log
+      - ${CLIENTDIR}/${SASFW}/vars:/root/vars:ro
+    network_mode: "service:sasgc"
+    environment:
+      - CLIENT_NAME=${SASFW}
+      - CUSTOM_CRON="* */1 * * *"
+

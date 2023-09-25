@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <form class="form-signin" id="sign_form" method="post" action="{{ url_for('src.login') }}" role="form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+        <h2 id="sign_title" class="form-signin-heading">Please sign in</h2>
+
+        <label for="inputEmail" class="sr-only">IBM Email</label>
+        <input type="text" name="username" id="username" class="form-control" placeholder="Your IBM email address (e.g. jdoe@us.ibm.com)" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+
+        <select id="bluegroup" name="bluegroup" class="form-control" style="display:none"></select><br>
+
+        <!--div class="checkbox">
+            <label id="remember-me">
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+
+            <label class="pull-right">
+                <button id="signup" class="btn btn-xs btn-default">Sign Up</button>
+            </label>
+        </div-->
+        <button id="signin" data-mode="signin" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+    </form>
+
+
+
+<script>
+/*
+$('#sign_form').on('keypress', function(e) {
+    return e.which !== 13;
+});
+*/
+
+var csrf_token = "{{ csrf_token() }}"; // DO NOT DELETE: used in global sasg.js to send csrf.
+
+$('#username').focusout(function() {
+    if( $(this).val() === "" ) {
+        return false;
+    }
+    $.put('/bluegroups?USERNAME=' + $(this).val(), null, function(data) {
+        console.log(data);
+        if( data['bluegroups'].length > 1 ) {
+            var options = '';
+            for(var i in data['bluegroups']) {
+                options += '<option>' + data['bluegroups'][i] + '</option>';
+            }
+            $('#bluegroup').empty().append(options).show();
+        } else if( data['bluegroups'].length == 1 ) { 
+            var options = '<option>' + data['bluegroups'][0] + '</option>';
+            $('#bluegroup').append(options);
+        }
+    },'json')
+    .fail(function(output) {
+        var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+        //display_message('ERROR', 'Failed to submit information (' + data['message'] + '). Please try later.');
+    });
+});
+
+$('#signup').click(function(e) {
+    e.stopPropagation();
+
+    $(this).hide();
+    $('#remember-me').hide();
+    $('#sign_title').text("Please sign up");
+    $('#username').attr("placeholder", "Service name (e.g., jenkins)");
+    $('#signin').text("Sign Up").data('mode', 'signup');
+
+    return false;
+});
+
+$('#sign_form').submit(function(e) {
+    if( $('#signin').data('mode') == 'signin' ) {
+        return true;
+    }
+
+    e.stopPropagation();
+
+    show_spinner($('body'));
+    $.post('/service', { 'SERVICE_NAME': $('#username').val(), 'PASSWORD': $('#password').val() }, function(data) {
+        console.log(data); // debugging
+
+        alert(data['message']);
+
+        //hide_spinner($('body'));
+        //display_message(data['status'], data['message']);
+
+        setTimeout(function(){ window.location.href = window.location.href; }, 1000);
+    },'json')
+    .fail(function(output) {
+        console.log(output);
+        hide_spinner($('body'));
+
+        var data = output['responseText'] ? JSON.parse(output['responseText']): { 'message': '' };
+        display_message('ERROR', 'Failed to submit information (' + data['message'] + '). Please try later.');
+    });
+
+    return false;
+});
+
+</script>
+{% endblock %}

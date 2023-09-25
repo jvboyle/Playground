@@ -1,0 +1,127 @@
+##############
+#
+# Common variables and functions to be sourced into other monitor scripts
+#
+SHNAME=`hostname -s`
+SASID="sasauto"
+FQDN=`hostname`
+LOGDIR="/sasg/logs"
+ERRPREFIX="${LOGDIR}/errors"
+WARNPREFIX="${LOGDIR}/warnings"
+SERVERLIST="/home/sasauto/Puller/sasg_serverlist"
+SERVERIDFILE="/home/sasauto/Puller/sasg_id"
+JHLOGDIR="/home/sasauto/logrepo"   # top level dir where all jumphost logs are stored
+JHFWLOGDIR="$JHLOGDIR/Firewall"   # top level dir where jumphost firewall logs are stored
+# THIS=$(/usr/sbin/ip addr show dev eth0 |grep "inet "|awk '{print $2}'|cut -f1 -d'/')
+# checking via ifcfg file since some accounts have alias on private nic to support tools servers
+# that were added on a different subnet.
+THIS=$(sudo cat /etc/sysconfig/network-scripts/ifcfg-eth0 |grep -w IPADDR|awk -F'=' '{printf("%s\n",$2)}')
+LASTRUNDIR="/sasg/bin/sasmon/.lastrun"
+if [ ! -d "$LASTRUNDIR" ];then
+  mkdir $LASTRUNDIR
+fi
+
+# set default run interval for each monitor script to 5 minutes if not specified in the script
+if [ -z "$RUNINTERVAL" ];then
+  RUNINTERVAL="300"  # exit if script was run less than RUNINTERVAL secs ago
+fi
+
+##############
+
+
+##############
+# Check Last Runtime of this script - if > default interval or interval set in specific script, then 
+# just return, otherwise exit.  Allows for single script to execute all scripts in a directory but allow
+# each monitor script to run at different intervals.
+#
+RunOrExit() {
+  RF=$1
+  RI=$2
+  
+  if [ ! -f "${LASTRUNDIR}/${RF}" ];then
+    echo "First run, creating run interval tracker ${LASTRUNDIR}/${RF}."
+    touch ${LASTRUNDIR}/${RF}
+    return
+  fi
+
+  AGE=$(($(date +%s)-$(date -r ${LASTRUNDIR}/${RF} +%s)))
+  if [ $AGE -lt $RI ];then
+  #  echo -e "Hasn't been long enough yet - last run $AGE secs ago, interval: $RI\n"
+    exit 0
+  else
+    echo -e "$RF Last run $AGE secs ago, interval: $RI, running again.\n"
+    touch ${LASTRUNDIR}/${RF}
+    return
+  fi
+} # GetAgeInSecs
+
+SCRNAME=$(basename $0)
+RunOrExit "$SCRNAME" $RUNINTERVAL
+
+
+##############
+# Write error / warning msg file for MIST alerts
+# Usage:  LOGALERT "ERROR|WARNING" "Alert Suffix Name" "message to display in Mist" ["APPEND"]
+#    ie:  LOGALERT "ERROR" "jhlogpull" "Server A - Jumphost firewall log older than x seconds"
+# If called with APPEND as fourth arg, will append to an existing alert if it exists.
+##############
+LOGALERT(){
+  TYPE="$1"
+  SUFFIX="$2"
+  ERRMSG="$3"
+  APPEND="$4"
+  DATE=$(date +%Y_%m_%d_%H:%M:%S)
+
+  if [ ! -f "${LOGDIR}/${SUFFIX}.exception" ];then
+    if [ "$APPEND" == "APPEND" ];then
+       if [ "$TYPE" == "ERROR" ];then
+         echo -e "$DATE,$ERRMSG" >> ${ERRPREFIX}.${SUFFIX}
+         echo -e "$DATE,$ERRMSG,error logged"
+       else
+         echo -e "$DATE,$ERRMSG" >> ${WARNPREFIX}.${SUFFIX}
+         echo -e "$DATE,$ERRMSG,warning logged"
+       fi
+    else
+       if [ "$TYPE" == "ERROR" ];then
+         echo -e "$DATE,$ERRMSG" > ${ERRPREFIX}.${SUFFIX}
+         echo -e "$DATE,$ERRMSG,error logged"
+       else
+         echo -e "$DATE,$ERRMSG" > ${WARNPREFIX}.${SUFFIX}
+         echo -e "$DATE,$ERRMSG,warning logged"
+       fi
+    fi
+  fi
+}
+
+##############
+# Remove error / warning msg file for MIST alerts
+# Usage:  CLEARALERT "ERROR|WARNING" "Alert Suffix Name"
+#    ie:  CLEARALERT "ERROR" "jhlogpull"
+#  NOTE:  removes the file not a single entry from the file.
+##############
+CLEARALERT(){
+  TYPE="$1"
+  SUFFIX="$2"
+  if [ "$TYPE" == "ERROR" ];then
+    if [ -f "${ERRPREFIX}.${SUFFIX}" ];then
+       echo -e "Clearing ${ERRPREFIX}.${SUFFIX}"
+       rm -f ${ERRPREFIX}.${SUFFIX}
+    fi
+  else
+    if [ -f "${WARNPREFIX}.${SUFFIX}" ];then
+       echo -e "Clearing ${WARNPREFIX}.${SUFFIX}"
+      rm -f ${WARNPREFIX}.${SUFFIX}
+    fi
+  fi
+
+}
+
+##############
+# LOG - just echo out msg in consistent format for sasmon.log with date,msg
+# instead of each script calling echo commands & not writing things consistently.
+##############
+LOG(){
+  MSG="$1"
+  DATE=$(date +%Y_%m_%d_%H:%M:%S)
+  echo "$DATE,$MSG"
+}

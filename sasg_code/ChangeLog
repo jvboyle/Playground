@@ -1,0 +1,24 @@
+* Records change logs in recent first.
+
+2017-03-14 Jinho Hwang <jinho@us.ibm.com>
+SASGaaS 1.3
+    * Customer modify function (+ move customers between groups)
+
+2017-03-03 Jinho Hwang <jinho@us.ibm.com>
+SASGaaS 1.2
+    * Bluegroup based access control (naming convention: sasgaas-[name])
+    * Add Routine for RedHat6 and 7
+
+2016-12-06 Jinho Hwang <jinho@us.ibm.com>
+SASGaaS 1.1
+    * Production release with all functionalities tested.
+
+2016-10-10 Jinho Hwang <jinho@us.ibm.com>
+SASGaaS 0.1
+    * SASGaaS initial version with initial configuration for VyOS, tools servers, network test
+
+2017-03-15 Joe Boyle <jvboyle@us.ibm.com
+    * added keepalived config cleanup to avoid double entries
+    * added openvpn client.conf cleanup
+    * added iptables config cleanup
+    * CDS addroute.sh script added and removed old echo funtion

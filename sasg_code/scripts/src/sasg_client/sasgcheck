@@ -1,0 +1,123 @@
+#!/bin/bash
+# script to collect minimum info for troubleshooting
+# openvpn/keepalived issues on sasg (cablebox) servers
+#----------------------------------------------------------------------------
+source /sasg/bin/sasg_common.sh
+
+DETAIL=""
+while getopts "l" opt; do
+case ${opt} in
+  l ) # set flag to show more sasgcheck details
+      DETAIL="true"
+      ;;
+esac
+done
+
+HNAME=`hostname -s`
+DEBUGFILE="/tmp/sasgcheck.$HNAME.log"
+RHELVERSION=$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release) |cut -b1)
+
+if [[ -f $DEBUGFILE ]]; then
+	if [[ -e $DEBUGFILE.prev ]]; then
+		rm $DEBUGFILE.prev
+	fi
+  	mv $DEBUGFILE $DEBUGFILE.prev
+  	if [ "$?" -ne 0 ]; then
+  		rm -rf $DEBUGFILE
+  	fi
+fi
+
+date | tee -a $DEBUGFILE
+echo -e "\nHostname: $HNAME" | tee -a $DEBUGFILE
+VERSION="`cat /sasg/bin/VERSION`"
+echo -e "\nsasg version: $VERSION" | tee -a $DEBUGFILE
+
+# if ipsec.secrets file exists, then assume we've got an ipsec install not openvpn.
+if [ ! -f "${SAS_CONFIG}/client.conf" ];then
+  TUNNEL_TYPE="ipsec"
+fi
+
+# if -l flag, set # of lines to see in tail command higher
+if [ ! -z "$DETAIL" ];then
+  LINES=15
+  COUNTERLINES=5
+else
+  LINES=5
+  COUNTERLINES=2
+fi
+
+echo -e "\n----  IP Addr / NIC Info  -----------------------\n" | tee -a $DEBUGFILE
+if [ -z "$DETAIL" ];then
+  ip -f inet addr 2>&1 | tee -a $DEBUGFILE
+else
+  ip addr 2>&1 | tee -a $DEBUGFILE
+fi
+
+if [ "X$RHELVERSION" == "X6" ]; then
+	# rhel6 has old init system
+  	
+    if [ "$TUNNEL_TYPE" == "ipsec" ];then
+  	echo -e "\n----  IPSec Status  ---------------------------\n" | tee -a $DEBUGFILE
+	service ipsec status 2>&1 | tee -a $DEBUGFILE
+	[ ! -z "$DETAIL" ] && ss -np | grep ipsec 2>&1 | tee -a $DEBUGFILE
+	[ ! -z "$DETAIL" ] && ps axu | grep ipsec 2>&1 | tee -a $DEBUGFILE
+	grep -i ipsec /var/log/messages |tail -n $LINES | tee -a $DEBUGFILE
+    else
+  	echo -e "\n----  Openvpn Status  ---------------------------\n" | tee -a $DEBUGFILE
+	[ ! -z "$DETAIL" ] && service openvpn status 2>&1 | tee -a $DEBUGFILE
+        openvpn_process=`ps aux|grep "$SAS_CONFIG"|grep "config client.conf"|grep -v grep`
+        if [ -z "$openvpn_process" ];then
+          echo -e "\nno running openvpn process found." | tee -a $DEBUGFILE
+        else
+          echo -e "$openvpn_process" | tee -a $DEBUGFILE
+        fi
+	[ ! -z "$DETAIL" ] && ss -np | grep openvpn 2>&1 | tee -a $DEBUGFILE
+
+	grep -i openvpn /var/log/messages |tail -n $LINES | tee -a $DEBUGFILE
+    fi
+
+	echo -e "\n----  Keepalive Status  -------------------------\n" | tee -a $DEBUGFILE
+	service keepalived status 2>&1 | tee -a $DEBUGFILE
+	[ ! -z "$DETAIL" ] && ss -nlp | grep keepalived 2>&1 | tee -a $DEBUGFILE
+	ps axu | grep keepalived 2>&1 | tee -a $DEBUGFILE
+	grep -i keepalived /var/log/messages |tail -n $LINES | tee -a $DEBUGFILE
+  	
+else
+	# by default we assume that it's rhel7 with systemd
+	
+    if [ "$TUNNEL_TYPE" == "ipsec" ];then
+	echo -e "\n----  IPsec Status  ---------------------------\n" | tee -a $DEBUGFILE
+	systemctl -l status ipsec 2>&1 | tee -a $DEBUGFILE
+    else
+	echo -e "\n----  Openvpn Status  ---------------------------\n" | tee -a $DEBUGFILE
+        openvpn_process=`ps aux|grep "$SAS_CONFIG"|grep "config client.conf"|grep -v grep`
+        if [ -z "$openvpn_process" ];then
+          echo -e "\nno running openvpn process found." | tee -a $DEBUGFILE
+        else
+          echo -e "$openvpn_process" | tee -a $DEBUGFILE
+        fi
+	[ ! -z "$DETAIL" ] && systemctl -l status openvpn@client.service 2>&1 | tee -a $DEBUGFILE
+    fi
+
+	echo -e "\n----  Keepalive Status  -------------------------\n" | tee -a $DEBUGFILE
+	if [ ! -z "$DETAIL" ];then
+	  systemctl status keepalived.service 2>&1 | tee -a $DEBUGFILE
+        else
+	  systemctl status keepalived.service 2>&1|egrep -i "Loaded:|Active:|PID:" | tee -a $DEBUGFILE
+	  systemctl status keepalived.service 2>&1|egrep -i "$HNAME" |tail -n $LINES | tee -a $DEBUGFILE
+        fi
+fi
+
+echo -e "\n----  COUNTER LOG  ------------------------------\n" | tee -a $DEBUGFILE
+
+if [ -e /etc/keepalived/COUNTER ]; then
+	tail -$COUNTERLINES /etc/keepalived/COUNTER 2>&1 | tee -a $DEBUGFILE
+else
+  if [ -e /var/lib/keepalived/COUNTER ]; then
+	tail -$COUNTERLINES /var/lib/keepalived/COUNTER 2>&1 | tee -a $DEBUGFILE
+  else
+        echo -e "\nNo COUNTER log found in /etc/keepalived or /var/lib/keepalived\n" | tee -a $DEBUGFILE
+  fi
+fi
+
+echo -e "output written to $DEBUGFILE \n"

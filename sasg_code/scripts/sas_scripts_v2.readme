@@ -1,0 +1,32 @@
+Service Access Solution VYOS, Tools server, and SASG scripts
+==============================================================
+Version 2.0 10/10/2016
+-- Tools server script -- Added route to MS Big Fix, added RCP servers to CDS, added comments to eth0 and iptables config for version
+
+On your workstation:
+1. Edit the /scripts/vars file to input all required data for the environment you are configuring
+2. Run ./make.sh from the scripts folder to generate two additional scripts:
+      sasg_vyos_configure.sh
+      sasg_tools_configure.sh
+3. Copy the sasg_vyos_configure.sh to the VYOS into /home/vyos/
+4. Copy the sasg_tools_configure.sh to each of the tools servers into /root/
+
+On the VYOS:
+1. Log on as vyos
+2. Navigate to the /home/vyos directory
+3. Run ./sasg_vyos_configure.sh
+4. Receive Success message, or review log if errors were detected
+5. Once complete, a /tmp/sasg_install.sh script is created, which can be sent to the SASG System Admin to run on the primary and backup SASG
+
+On the tools servers:
+1. Log on with an ID with root privileges
+2. Navigate to the /root/ folder
+3. Run ./sasg_tools_configure.sh
+4. Receive Success message, or review log if errors were detected
+
+On the Primary and Backup SASG (order does not matter):
+1. Log on with an ID with root privileges
+2. Copy the sasg_install.sh file to a directory of your choosing
+3. Navigate to the directory containing the sasg_install.sh file
+4. Run ./sasg_install.sh
+5. Receive Success message, or review log if errors were detected
