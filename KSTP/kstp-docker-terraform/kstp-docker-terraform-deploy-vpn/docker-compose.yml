@@ -1,0 +1,18 @@
+services:
+  terraform-deploy-vpn:
+    image: kstp-docker-terraform-deploy-vpn
+    stdin_open: true # docker run -i
+    network_mode: host
+    tty: true        # docker run -t
+    privileged: true
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /SOURCE
+    environment:
+      - USER_ID=usc-tad4 # id to login to Jumphost 
+      - NSXT_MANAGER_HOST="10.211.12.200" 
+      - NSXT_USERNAME="jboyle@ag1.sp.ibm.local"
+      - NSXT_PASSWORD="PASSWORD"
+    ports:
+      - 41194

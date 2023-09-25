@@ -1,0 +1,8 @@
+[Interface]
+PrivateKey =             # your Private key 
+ListenPort = 41194
+Address = 192.168.6.1/24
+
+[Peer]
+PublicKey =              # Container Private key 
+AllowedIPs = 192.168.6.0/24, 10.0.0.0/8, 100.0.0.0/8
