@@ -1,0 +1,11 @@
+services:
+  terraform-deploy:
+    image: python_crop
+    stdin_open: true # docker run -i
+    network_mode: host
+    tty: true        # docker run -t
+    privileged: true
+    volumes:
+      - type: bind
+        source: $PWD/photos
+        target: /usr/src/myapp/photos
